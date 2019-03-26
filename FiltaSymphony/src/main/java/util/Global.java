@@ -57,7 +57,7 @@ public class Global {
 	}
 
 	public Properties readProperties() {
-		File f = new File("D:\\Symphony\\FiltaSymphony\\configs\\Configuration.properties");
+		File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\configs\\Configuration.properties");
 		try {
 			input = new FileInputStream(f);
 		} catch (FileNotFoundException e) {
