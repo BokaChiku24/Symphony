@@ -51,10 +51,68 @@ public class ForgetPassword {
 		Forgot_Password_Submit.click();
 	}
 
+	public void forgotPasswordInvalid() {
+		Forgot_Password_Username.clear();
+		Forgot_Password_Email.clear();
+		Forgot_Password_Username.sendKeys(Prop.getProperty("uname"));
+		Forgot_Password_Email.sendKeys(Prop.getProperty("Email2"));
+		Forgot_Password_Submit.click();
+	}
+
+	public void forgotPasswordInvalid2() {
+		Forgot_Password_Username.clear();
+		Forgot_Password_Email.clear();
+		Forgot_Password_Username.sendKeys("");
+		Forgot_Password_Email.sendKeys("");
+		Forgot_Password_Submit.click();
+	}
+
+	public void forgotPasswordInvalid3() {
+		Forgot_Password_Username.clear();
+		Forgot_Password_Email.clear();
+		Forgot_Password_Username.sendKeys("");
+		Forgot_Password_Email.sendKeys(Prop.getProperty("Email"));
+		Forgot_Password_Submit.click();
+
+	}
+
+	public void forgotPasswordInvalid4() {
+		Forgot_Password_Username.clear();
+		Forgot_Password_Email.clear();
+		Forgot_Password_Username.sendKeys(Prop.getProperty("uname"));
+		Forgot_Password_Email.sendKeys("");
+		Forgot_Password_Submit.click();
+
+	}
+
 	public void assertCheckValid() {
 		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Your request has been submitted."));
 		assertEquals(success_Message.getText(), Prop.getProperty("Message"));
+	}
+
+	public void assertCheckValid2() {
+		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
+				By.xpath(".//div[@id='generate_success']"), "You must specify a valid User Name and Email Address."));
+		assertEquals(success_Message.getText(), Prop.getProperty("Message2"));
+	}
+
+	public void assertCheckValid3() {
+		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
+				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
+		assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
+	}
+
+	public void assertCheckValid4() {
+		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
+				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
+		assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
+	}
+
+	public void assertCheckValid5() {
+		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
+				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
+		assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
 	}
 
 	public void closeBrowser() {
