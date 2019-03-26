@@ -33,11 +33,12 @@ public class ForgetPassword_TestCase {
 		log.info("Forgot Password Check With Valid UserName and Email");
 		forgotpassword.clickForgotPassword();
 		forgotpassword.forgotPassword();
+		forgotpassword.assertCheckValid();
 	}
 
 	@AfterMethod
 	public void afterMethod() {
 		log.info("Forgot Password Test Case Ends Here");
-		//forgotpassword.closeBrowser();
+		// forgotpassword.closeBrowser();
 	}
 }
