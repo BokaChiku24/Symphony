@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="21.317017">
+<testcase classname="Symphony Login Page Check" name="Symphony Login Page Check" time="21.317017">
+<system-out><![CDATA[Given user is on symphony page..............................................passed
+Then check language drop down...............................................passed
+Then check login page url...................................................passed
+And close the browser.......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

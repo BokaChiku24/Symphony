@@ -1,0 +1,208 @@
+[
+  {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#Author: your.email@your.domain.com"
+      },
+      {
+        "line": 2,
+        "value": "#Keywords Summary :"
+      },
+      {
+        "line": 3,
+        "value": "#Feature: List of scenarios."
+      },
+      {
+        "line": 4,
+        "value": "#Scenario: Business rule through list of steps with arguments."
+      },
+      {
+        "line": 5,
+        "value": "#Given: Some precondition step"
+      },
+      {
+        "line": 6,
+        "value": "#When: Some key actions"
+      },
+      {
+        "line": 7,
+        "value": "#Then: To observe outcomes or validation"
+      },
+      {
+        "line": 8,
+        "value": "#And,But: To enumerate more Given,When,Then steps"
+      },
+      {
+        "line": 9,
+        "value": "#Scenario Outline: List of steps for data-driven as an Examples and \u003cplaceholder\u003e"
+      },
+      {
+        "line": 10,
+        "value": "#Examples: Container for s table"
+      },
+      {
+        "line": 11,
+        "value": "#Background: List of steps run before each of the scenarios"
+      },
+      {
+        "line": 12,
+        "value": "#\"\"\" (Doc Strings)"
+      },
+      {
+        "line": 13,
+        "value": "#| (Data Tables)"
+      },
+      {
+        "line": 14,
+        "value": "#@ (Tags/Labels):To group Scenarios"
+      },
+      {
+        "line": 15,
+        "value": "#\u003c\u003e (placeholder)"
+      },
+      {
+        "line": 16,
+        "value": "#\"\""
+      },
+      {
+        "line": 17,
+        "value": "## (Comments)"
+      },
+      {
+        "line": 18,
+        "value": "#Sample Feature Definition Template"
+      }
+    ],
+    "line": 21,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5546060100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeSteps(Scenario)"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Franchisee login test scenario with valid credentials",
+        "description": "",
+        "id": "symphony-login-functionality-check;franchisee-login-test-scenario-with-valid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 262300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.afterScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 58771500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterSteps(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 40641121000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user is on symphony page",
+            "match": {
+              "location": "LoginStepDefinition.user_is_on_symphony_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 231023000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user enter valid username \"KCAutomation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "KCAutomation",
+                  "offset": 27
+                }
+              ],
+              "location": "LoginStepDefinition.user_enter_valid_username(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 226566200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user enter valid credentials \"Filtademo1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Filtademo1",
+                  "offset": 30
+                }
+              ],
+              "location": "LoginStepDefinition.user_enter_valid_credentials(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 20858125300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user should be on home page",
+            "match": {
+              "location": "LoginStepDefinition.user_should_be_on_home_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2221932600,
+              "status": "passed"
+            },
+            "output": [
+              "Test string to output in reports."
+            ],
+            "line": 29,
+            "name": "close the browser",
+            "match": {
+              "location": "LoginStepDefinition.close_the_browser()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Symphony login functionality check",
+    "description": "",
+    "id": "symphony-login-functionality-check",
+    "keyword": "Feature",
+    "uri": "D:/Framework/FiltaSymphony/src/test/resources/feature/Login.feature"
+  }
+]

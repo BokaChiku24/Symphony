@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="69.783862">
+<testcase classname="Symphony login functionality check" name="Franchisee login test scenario with valid credentials" time="69.783862">
+<system-out><![CDATA[Given user is on symphony page..............................................passed
+When user enter valid username "KCAutomation"...............................passed
+When user enter valid credentials "Filtademo1"..............................passed
+Then user should be on home page............................................passed
+And close the browser.......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
