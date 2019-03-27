@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="33277" started-at="2019-03-26T19:03:41Z" finished-at="2019-03-26T19:04:14Z">
+  <suite name="Default suite" duration-ms="34326" started-at="2019-03-27T19:49:50Z" finished-at="2019-03-27T19:50:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="33277" started-at="2019-03-26T19:03:41Z" finished-at="2019-03-26T19:04:14Z">
+    <test name="Default test" duration-ms="34326" started-at="2019-03-27T19:49:50Z" finished-at="2019-03-27T19:50:24Z">
       <class name="testCases_LoginPage.ForgetPassword_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="property" is-config="true" duration-ms="23200" started-at="2019-03-26T19:03:41Z" finished-at="2019-03-26T19:04:04Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="property" is-config="true" duration-ms="20209" started-at="2019-03-27T19:49:50Z" finished-at="2019-03-27T19:50:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="forgotpassword()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpassword" duration-ms="4201" started-at="2019-03-26T19:04:04Z" finished-at="2019-03-26T19:04:08Z">
+        <test-method status="PASS" signature="forgotpassword()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpassword" duration-ms="5067" started-at="2019-03-27T19:50:10Z" finished-at="2019-03-27T19:50:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpassword -->
-        <test-method status="PASS" signature="forgotpasswordInvalid()[pri:1, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid" duration-ms="1457" started-at="2019-03-26T19:04:08Z" finished-at="2019-03-26T19:04:10Z">
+        <test-method status="PASS" signature="forgotpasswordInvalid()[pri:1, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid" duration-ms="1978" started-at="2019-03-27T19:50:15Z" finished-at="2019-03-27T19:50:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpasswordInvalid -->
-        <test-method status="PASS" signature="forgotpasswordInvalid2()[pri:2, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid2" duration-ms="1394" started-at="2019-03-26T19:04:10Z" finished-at="2019-03-26T19:04:11Z">
+        <test-method status="PASS" signature="forgotpasswordInvalid2()[pri:2, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid2" duration-ms="2123" started-at="2019-03-27T19:50:17Z" finished-at="2019-03-27T19:50:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpasswordInvalid2 -->
-        <test-method status="PASS" signature="forgotpasswordInvalid3()[pri:3, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid3" duration-ms="361" started-at="2019-03-26T19:04:11Z" finished-at="2019-03-26T19:04:11Z">
+        <test-method status="PASS" signature="forgotpasswordInvalid3()[pri:3, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid3" duration-ms="1156" started-at="2019-03-27T19:50:19Z" finished-at="2019-03-27T19:50:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpasswordInvalid3 -->
-        <test-method status="PASS" signature="forgotpasswordInvalid4()[pri:4, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid4" duration-ms="311" started-at="2019-03-26T19:04:11Z" finished-at="2019-03-26T19:04:12Z">
+        <test-method status="PASS" signature="forgotpasswordInvalid4()[pri:4, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid4" duration-ms="882" started-at="2019-03-27T19:50:21Z" finished-at="2019-03-27T19:50:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpasswordInvalid4 -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="afterMethod" is-config="true" duration-ms="2332" started-at="2019-03-26T19:04:12Z" finished-at="2019-03-26T19:04:14Z">
+        <test-method status="PASS" signature="textboxCheck()[pri:5, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="textboxCheck" duration-ms="199" started-at="2019-03-27T19:50:21Z" finished-at="2019-03-27T19:50:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- textboxCheck -->
+        <test-method status="PASS" signature="labelCheck()[pri:6, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="labelCheck" duration-ms="575" started-at="2019-03-27T19:50:22Z" finished-at="2019-03-27T19:50:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- labelCheck -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="afterMethod" is-config="true" duration-ms="2084" started-at="2019-03-27T19:50:22Z" finished-at="2019-03-27T19:50:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
