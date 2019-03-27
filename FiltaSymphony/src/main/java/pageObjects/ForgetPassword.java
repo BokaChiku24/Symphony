@@ -15,9 +15,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import util.Global;
 
 public class ForgetPassword {
-	WebDriver driver;
-	Global global;
+	private WebDriver driver;
+	private Global global;
 	private Properties Prop;
+	private boolean uname;
+	private boolean email;
 
 	public ForgetPassword() {
 		global = new Global();
@@ -40,6 +42,15 @@ public class ForgetPassword {
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='generate_success']")
 	private WebElement success_Message;
+
+	@FindBy(how = How.XPATH, using = ".//label[@for='fp_user_name']")
+	private WebElement Uname_Label;
+
+	@FindBy(how = How.XPATH, using = ".//label[@for='fp_user_mail']")
+	private WebElement Email_Label;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='generate_pwd_button']")
+	private WebElement button;
 
 	public void clickForgotPassword() {
 		Forgot_Password.click();
@@ -113,6 +124,22 @@ public class ForgetPassword {
 		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
 		assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
+	}
+
+	public void assertCheckboxCheck() {
+		uname = Forgot_Password_Username.isEnabled();
+		email = Forgot_Password_Email.isEnabled();
+		assertEquals(uname, true);
+		assertEquals(email, true);
+
+	}
+
+	public void labelCheck() {
+		assertEquals(Uname_Label.getText(), Prop.getProperty("Label1"));
+		assertEquals(Email_Label.getText(), Prop.getProperty("Label2"));
+		assertEquals(button.getAttribute("value"), Prop.getProperty("Label4"));
+		Forgot_Password_Submit.click();
+		assertEquals(button.getAttribute("value"), Prop.getProperty("Label3"));
 	}
 
 	public void closeBrowser() {

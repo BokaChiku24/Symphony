@@ -115,4 +115,195 @@
  2019-03-27 00:34:11,421  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
  2019-03-27 00:34:11,783  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
  2019-03-27 00:34:12,094  INFO [main] Forget Password Test Case:69 - Forgot Password Test Case Ends Here
+ 2019-03-27 23:19:23,814  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-27 23:19:28,764  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-27 23:19:30,781  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-27 23:19:32,321  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-27 23:19:33,447  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-27 23:19:34,403  INFO [main] Forget Password Test Case:69 - Forgot Password Test Case Ends Here
+ 2019-03-27 23:20:24,097  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-27 23:20:29,079  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-27 23:20:31,014  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-27 23:20:32,445  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-27 23:20:33,479  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-27 23:20:34,522  INFO [main] Forget Password Test Case:69 - Forgot Password Test Case Ends Here
+ 2019-03-27 23:34:35,323  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-27 23:34:39,182  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-27 23:34:40,973  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-27 23:34:42,511  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-27 23:34:43,387  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-27 23:34:44,150  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-27 23:34:44,323  INFO [main] Forget Password Test Case:75 - Forgot Password Test Case Ends Here
+ 2019-03-27 23:38:52,064  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-27 23:38:56,227  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-27 23:38:58,331  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-27 23:38:59,765  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-27 23:39:00,854  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-27 23:39:01,475  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-27 23:39:01,581  INFO [main] Forget Password Test Case:75 - Forgot Password Test Case Ends Here
+ 2019-03-27 23:56:18,383  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-27 23:56:18,536  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-27 23:56:18,649  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-27 23:56:18,756  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-27 23:56:18,842  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-27 23:56:18,888  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-27 23:56:18,941  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-27 23:56:18,997  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-27 23:56:53,262  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-27 23:56:53,332  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-27 23:56:53,376  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-27 23:56:53,446  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-27 23:56:53,500  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-27 23:56:53,555  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-27 23:56:53,610  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-27 23:56:53,679  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-27 23:59:08,982  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-27 23:59:14,001  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-27 23:59:15,850  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-27 23:59:17,494  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-27 23:59:18,342  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-27 23:59:19,032  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-27 23:59:19,240  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-27 23:59:19,641  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:08:22,746  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:08:27,074  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:08:29,166  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:08:30,424  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:08:31,567  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:08:32,573  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:08:32,788  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:08:33,134  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:11:25,093  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:11:30,347  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:11:32,488  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:11:34,119  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:11:35,200  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:11:36,106  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:11:36,324  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:11:36,782  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:14:12,814  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:14:17,251  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:14:19,282  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:14:20,749  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:14:21,634  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:14:22,535  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:14:22,760  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:14:23,145  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:16:56,288  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:17:01,183  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:17:03,217  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:17:04,568  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:17:05,251  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:17:06,391  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:17:06,526  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:17:06,776  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:18:14,343  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:18:19,462  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:18:21,460  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:18:23,286  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:18:24,161  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:18:25,180  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:18:25,364  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:18:25,724  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:19:00,174  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:19:04,969  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:19:07,393  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:19:08,932  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:19:09,827  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:19:10,968  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:19:11,172  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:19:11,361  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:20:57,304  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:21:02,299  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:21:04,017  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:21:05,355  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:21:06,492  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:21:07,192  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:21:07,396  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:21:07,687  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:22:29,064  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:22:29,175  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:22:34,279  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:22:36,665  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:22:38,201  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:22:39,188  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:22:40,214  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:22:40,407  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:26:29,871  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:26:34,846  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:26:37,113  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:26:38,671  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:26:39,651  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:26:40,715  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:26:40,917  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:28:06,857  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:28:11,301  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:28:13,976  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:28:15,484  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:28:15,916  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:28:16,512  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:28:16,726  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:29:23,736  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:29:28,152  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:29:30,139  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:29:31,721  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:29:32,859  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:29:33,749  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:29:33,940  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:29:34,671  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:30:05,751  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:30:10,304  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:30:12,554  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:30:14,136  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:30:15,255  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:30:16,305  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:30:16,533  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:30:16,976  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:31:14,975  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:31:20,698  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:31:22,748  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:31:24,242  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:31:25,336  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:31:26,288  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:31:26,477  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:31:27,012  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:32:57,562  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:33:01,858  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:33:03,787  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:33:05,219  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:33:06,336  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:33:07,287  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:33:07,475  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:33:08,064  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:39:15,002  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:39:19,935  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:39:21,807  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:39:23,307  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:39:24,378  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:39:25,322  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:39:25,521  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:39:26,100  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 00:43:17,191  INFO [main] Sign In Test Case:47 - Test Case :check Login functionality with valid credentials
+ 2019-03-28 00:43:38,019  INFO [main] Sign In Test Case:56 - Sign In Test Case Ends Here
+ 2019-03-28 00:45:12,926  INFO [main] Sign In With Invalid Credentials Test Case:33 - Test Case :check Login functionality with invalid credentials
+ 2019-03-28 00:45:15,090  INFO [main] Sign In With Invalid Credentials Test Case:42 - Test Case :check Login functionality without credentials
+ 2019-03-28 00:45:17,226  INFO [main] Sign In With Invalid Credentials Test Case:52 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 00:45:19,760  INFO [main] Sign In With Invalid Credentials Test Case:62 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 00:45:22,158  INFO [main] Sign In With Invalid Credentials Test Case:72 - Sign In Test Case Ends Here
+ 2019-03-28 00:48:38,959  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 00:48:44,600  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 00:48:47,078  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 00:48:48,504  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 00:48:49,616  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 00:48:50,372  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 00:48:50,536  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 00:48:51,194  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
+ 2019-03-28 01:20:10,668  INFO [main] Forget Password Test Case:33 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 01:20:15,739  INFO [main] Forget Password Test Case:41 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 01:20:17,721  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 01:20:19,848  INFO [main] Forget Password Test Case:55 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 01:20:21,008  INFO [main] Forget Password Test Case:62 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 01:20:21,892  INFO [main] Forget Password Test Case:69 - Forgot Password Textbox Check
+ 2019-03-28 01:20:22,095  INFO [main] Forget Password Test Case:75 - Forgot Password Label Check
+ 2019-03-28 01:20:22,669  INFO [main] Forget Password Test Case:81 - Forgot Password Test Case Ends Here
  

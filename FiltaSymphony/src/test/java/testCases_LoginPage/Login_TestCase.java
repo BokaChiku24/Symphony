@@ -21,7 +21,7 @@ public class Login_TestCase {
 
 	public static Logger log = Logger.getLogger("Sign In Test Case");
 	static {
-		PropertyConfigurator.configure("D:\\Symphony\\FiltaSymphony\\configs\\Log4j.properties");
+		PropertyConfigurator.configure("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\configs\\Log4j.properties");
 	}
 
 	@BeforeClass

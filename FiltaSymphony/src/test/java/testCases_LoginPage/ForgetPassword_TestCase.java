@@ -64,6 +64,18 @@ public class ForgetPassword_TestCase {
 		forgotpassword.assertCheckValid5();
 	}
 
+	@Test(priority = 5)
+	public void textboxCheck() {
+		log.info("Forgot Password Textbox Check");
+		forgotpassword.assertCheckboxCheck();
+	}
+
+	@Test(priority = 6)
+	public void labelCheck() {
+		log.info("Forgot Password Label Check");
+		forgotpassword.labelCheck();
+	}
+
 	@AfterClass
 	public void afterMethod() {
 		log.info("Forgot Password Test Case Ends Here");

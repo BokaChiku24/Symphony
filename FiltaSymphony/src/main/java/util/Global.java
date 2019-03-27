@@ -26,10 +26,12 @@ public class Global {
 	private Properties prop;
 	private FileInputStream input;
 	private static int count = 1;
+	private String Workspace = "Home";
 
 	// Driver Initialization Method !!
 	public WebDriver driver() {
 		// ChromeOption will Disable Password Save Popup In Chrome
+		prop = readProperties();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--start-maximized");
 		options.addArguments("--disable-web-security");
@@ -41,25 +43,55 @@ public class Global {
 		DesiredCapabilities capablities = new DesiredCapabilities();
 		capablities.setCapability(ChromeOptions.CAPABILITY, options);
 		capablities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-		System.setProperty("webdriver.chrome.driver", "D:\\Browser Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", prop.getProperty("driver"));
 		WebDriver driver = new ChromeDriver(capablities);
-		// WebDriver driver = new FirefoxDriver();
-		prop = readProperties();
-		try {
-			prop.load(input);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		driver.get(prop.getProperty("URL2"));
 		driver.manage().window().maximize();
 		return driver;
 	}
 
 	public Properties readProperties() {
-		File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\configs\\Configuration.properties");
+		Properties Prop = readProperties2();
+		if (Workspace.equals(Prop.getProperty("Work"))) {
+			File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\configs\\Configuration.properties");
+			try {
+				input = new FileInputStream(f);
+
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			prop = new Properties();
+			try {
+				prop.load(input);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return prop;
+		} else {
+			File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\Configuration.properties");
+			try {
+				input = new FileInputStream(f);
+
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			prop = new Properties();
+			try {
+				prop.load(input);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return prop;
+		}
+	}
+
+	public Properties readProperties2() {
+		File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\src\\main\\resources\\path.properties");
 		try {
 			input = new FileInputStream(f);
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
