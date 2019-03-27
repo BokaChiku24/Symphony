@@ -2,44 +2,44 @@
 <testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34326" started-at="2019-03-27T19:49:50Z" finished-at="2019-03-27T19:50:24Z">
+  <suite name="Default suite" duration-ms="30353" started-at="2019-03-27T20:01:50Z" finished-at="2019-03-27T20:02:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34326" started-at="2019-03-27T19:49:50Z" finished-at="2019-03-27T19:50:24Z">
+    <test name="Default test" duration-ms="30353" started-at="2019-03-27T20:01:50Z" finished-at="2019-03-27T20:02:21Z">
       <class name="testCases_LoginPage.ForgetPassword_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="property" is-config="true" duration-ms="20209" started-at="2019-03-27T19:49:50Z" finished-at="2019-03-27T19:50:10Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="property" is-config="true" duration-ms="16326" started-at="2019-03-27T20:01:50Z" finished-at="2019-03-27T20:02:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="forgotpassword()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpassword" duration-ms="5067" started-at="2019-03-27T19:50:10Z" finished-at="2019-03-27T19:50:15Z">
+        <test-method status="PASS" signature="forgotpassword()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpassword" duration-ms="4985" started-at="2019-03-27T20:02:07Z" finished-at="2019-03-27T20:02:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpassword -->
-        <test-method status="PASS" signature="forgotpasswordInvalid()[pri:1, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid" duration-ms="1978" started-at="2019-03-27T19:50:15Z" finished-at="2019-03-27T19:50:17Z">
+        <test-method status="PASS" signature="forgotpasswordInvalid()[pri:1, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid" duration-ms="2505" started-at="2019-03-27T20:02:12Z" finished-at="2019-03-27T20:02:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpasswordInvalid -->
-        <test-method status="PASS" signature="forgotpasswordInvalid2()[pri:2, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid2" duration-ms="2123" started-at="2019-03-27T19:50:17Z" finished-at="2019-03-27T19:50:19Z">
+        <test-method status="PASS" signature="forgotpasswordInvalid2()[pri:2, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid2" duration-ms="1534" started-at="2019-03-27T20:02:14Z" finished-at="2019-03-27T20:02:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpasswordInvalid2 -->
-        <test-method status="PASS" signature="forgotpasswordInvalid3()[pri:3, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid3" duration-ms="1156" started-at="2019-03-27T19:50:19Z" finished-at="2019-03-27T19:50:21Z">
+        <test-method status="PASS" signature="forgotpasswordInvalid3()[pri:3, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid3" duration-ms="1098" started-at="2019-03-27T20:02:16Z" finished-at="2019-03-27T20:02:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpasswordInvalid3 -->
-        <test-method status="PASS" signature="forgotpasswordInvalid4()[pri:4, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid4" duration-ms="882" started-at="2019-03-27T19:50:21Z" finished-at="2019-03-27T19:50:21Z">
+        <test-method status="PASS" signature="forgotpasswordInvalid4()[pri:4, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid4" duration-ms="949" started-at="2019-03-27T20:02:17Z" finished-at="2019-03-27T20:02:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgotpasswordInvalid4 -->
-        <test-method status="PASS" signature="textboxCheck()[pri:5, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="textboxCheck" duration-ms="199" started-at="2019-03-27T19:50:21Z" finished-at="2019-03-27T19:50:22Z">
+        <test-method status="PASS" signature="textboxCheck()[pri:5, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="textboxCheck" duration-ms="159" started-at="2019-03-27T20:02:18Z" finished-at="2019-03-27T20:02:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- textboxCheck -->
-        <test-method status="PASS" signature="labelCheck()[pri:6, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="labelCheck" duration-ms="575" started-at="2019-03-27T19:50:22Z" finished-at="2019-03-27T19:50:22Z">
+        <test-method status="PASS" signature="labelCheck()[pri:6, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="labelCheck" duration-ms="602" started-at="2019-03-27T20:02:18Z" finished-at="2019-03-27T20:02:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- labelCheck -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="afterMethod" is-config="true" duration-ms="2084" started-at="2019-03-27T19:50:22Z" finished-at="2019-03-27T19:50:24Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="afterMethod" is-config="true" duration-ms="2143" started-at="2019-03-27T20:02:19Z" finished-at="2019-03-27T20:02:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
