@@ -2,6 +2,7 @@ package pageObjects;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -37,6 +38,18 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = ".//div[@class='login']//tbody//tr[3]//td")
 	private WebElement Textmessage;
 
+	@FindBy(how = How.XPATH, using = ".//a[@href='LICENSE.txt' and text()='AGPLv3']")
+	private WebElement link1;
+
+	@FindBy(how = How.XPATH, using = ".//a[@href='LICENSE.txt' and text()=' GNU Affero General Public License version 3']")
+	private WebElement link2;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
+	private WebElement Uname;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='user_password']")
+	private WebElement Pword;
+
 	public void dropDown() {
 		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));
 		for (int i = 0; i < list.size(); i++) {
@@ -47,9 +60,12 @@ public class LoginPage {
 		assertEquals(list.get(1).getText(), Prop.getProperty("german"));
 
 	}
-	
+
 	public void checkText() {
-		System.out.println("Footer => " + Footer.getText());
+		if (Footer.getText().startsWith("Server response time") && Footer.getText().endsWith(
+				"All other company and product names may be trademarks of the respective companies with which they are associated.")) {
+			System.out.println("Footer Test Pass ");
+		}
 	}
 
 	public void checkText2() {
@@ -58,7 +74,24 @@ public class LoginPage {
 	}
 
 	public void checkURL() {
+		link1.click();
+		ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(handles.get(1));
+		assertEquals(driver.getCurrentUrl(), Prop.getProperty("CheckURL1"));
+		closebrowser();
+		driver.switchTo().window(handles.get(0));
+		link2.click();
+		ArrayList<String> handles2 = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(handles2.get(1));
+		assertEquals(driver.getCurrentUrl(), Prop.getProperty("CheckURL2"));
+		closebrowser();
+		driver.switchTo().window(handles2.get(0));
 
+	}
+
+	public void checkTextBoxAssert() {
+		assertEquals(Uname.isEnabled(), true);
+		assertEquals(Pword.isEnabled(), true);
 	}
 
 	public void closebrowser() {

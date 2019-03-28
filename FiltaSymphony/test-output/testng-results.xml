@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12614" started-at="2019-03-28T10:47:10Z" finished-at="2019-03-28T10:47:23Z">
+  <suite name="Default suite" duration-ms="13954" started-at="2019-03-28T13:08:56Z" finished-at="2019-03-28T13:09:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12614" started-at="2019-03-28T10:47:10Z" finished-at="2019-03-28T10:47:23Z">
+    <test name="Default test" duration-ms="13954" started-at="2019-03-28T13:08:56Z" finished-at="2019-03-28T13:09:10Z">
       <class name="testCases_LoginPage.LoginPage_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="property" is-config="true" duration-ms="10129" started-at="2019-03-28T10:47:10Z" finished-at="2019-03-28T10:47:20Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="property" is-config="true" duration-ms="10480" started-at="2019-03-28T13:08:56Z" finished-at="2019-03-28T13:09:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checktext()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checktext" duration-ms="57" started-at="2019-03-28T10:47:21Z" finished-at="2019-03-28T10:47:21Z">
+        <test-method status="PASS" signature="checktext()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checktext" duration-ms="51" started-at="2019-03-28T13:09:07Z" finished-at="2019-03-28T13:09:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checktext -->
-        <test-method status="PASS" signature="checkDropDown()[pri:1, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkDropDown" duration-ms="83" started-at="2019-03-28T10:47:21Z" finished-at="2019-03-28T10:47:21Z">
+        <test-method status="PASS" signature="checkDropDown()[pri:1, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkDropDown" duration-ms="76" started-at="2019-03-28T13:09:07Z" finished-at="2019-03-28T13:09:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDropDown -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="closeBrowser" is-config="true" duration-ms="2312" started-at="2019-03-28T10:47:21Z" finished-at="2019-03-28T10:47:23Z">
+        <test-method status="PASS" signature="footerCheck()[pri:2, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="footerCheck" duration-ms="54" started-at="2019-03-28T13:09:07Z" finished-at="2019-03-28T13:09:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- footerCheck -->
+        <test-method status="PASS" signature="checkURL()[pri:3, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkURL" duration-ms="865" started-at="2019-03-28T13:09:07Z" finished-at="2019-03-28T13:09:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkURL -->
+        <test-method status="PASS" signature="checkTextBox()[pri:4, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkTextBox" duration-ms="85" started-at="2019-03-28T13:09:08Z" finished-at="2019-03-28T13:09:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTextBox -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="closeBrowser" is-config="true" duration-ms="2314" started-at="2019-03-28T13:09:08Z" finished-at="2019-03-28T13:09:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

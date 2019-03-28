@@ -142,7 +142,7 @@ public class Global {
 
 	public void sleepMethod() {
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			System.out.println("We are in Catch Block !!");
 			e.printStackTrace();
