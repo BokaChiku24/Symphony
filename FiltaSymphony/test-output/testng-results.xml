@@ -1,49 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30353" started-at="2019-03-27T20:01:50Z" finished-at="2019-03-27T20:02:21Z">
+  <suite name="Default suite" duration-ms="25423" started-at="2019-03-28T05:05:50Z" finished-at="2019-03-28T05:06:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30353" started-at="2019-03-27T20:01:50Z" finished-at="2019-03-27T20:02:21Z">
-      <class name="testCases_LoginPage.ForgetPassword_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="property" is-config="true" duration-ms="16326" started-at="2019-03-27T20:01:50Z" finished-at="2019-03-27T20:02:07Z">
+    <test name="Default test" duration-ms="25423" started-at="2019-03-28T05:05:50Z" finished-at="2019-03-28T05:06:16Z">
+      <class name="testCases_LoginPage.Login_TestCase">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.Login_TestCase@210366b4]" name="property" is-config="true" duration-ms="11569" started-at="2019-03-28T05:05:50Z" finished-at="2019-03-28T05:06:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="forgotpassword()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpassword" duration-ms="4985" started-at="2019-03-27T20:02:07Z" finished-at="2019-03-27T20:02:12Z">
+        <test-method status="PASS" signature="SignInTesting(java.lang.String, java.lang.String)[pri:0, instance:testCases_LoginPage.Login_TestCase@210366b4]" name="SignInTesting" duration-ms="10908" started-at="2019-03-28T05:06:02Z" data-provider="getData" finished-at="2019-03-28T05:06:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[KCAutomation]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Filtademo1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forgotpassword -->
-        <test-method status="PASS" signature="forgotpasswordInvalid()[pri:1, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid" duration-ms="2505" started-at="2019-03-27T20:02:12Z" finished-at="2019-03-27T20:02:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotpasswordInvalid -->
-        <test-method status="PASS" signature="forgotpasswordInvalid2()[pri:2, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid2" duration-ms="1534" started-at="2019-03-27T20:02:14Z" finished-at="2019-03-27T20:02:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotpasswordInvalid2 -->
-        <test-method status="PASS" signature="forgotpasswordInvalid3()[pri:3, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid3" duration-ms="1098" started-at="2019-03-27T20:02:16Z" finished-at="2019-03-27T20:02:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotpasswordInvalid3 -->
-        <test-method status="PASS" signature="forgotpasswordInvalid4()[pri:4, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="forgotpasswordInvalid4" duration-ms="949" started-at="2019-03-27T20:02:17Z" finished-at="2019-03-27T20:02:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotpasswordInvalid4 -->
-        <test-method status="PASS" signature="textboxCheck()[pri:5, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="textboxCheck" duration-ms="159" started-at="2019-03-27T20:02:18Z" finished-at="2019-03-27T20:02:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- textboxCheck -->
-        <test-method status="PASS" signature="labelCheck()[pri:6, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="labelCheck" duration-ms="602" started-at="2019-03-27T20:02:18Z" finished-at="2019-03-27T20:02:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- labelCheck -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@6f1fba17]" name="afterMethod" is-config="true" duration-ms="2143" started-at="2019-03-27T20:02:19Z" finished-at="2019-03-27T20:02:21Z">
+        </test-method> <!-- SignInTesting -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_LoginPage.Login_TestCase@210366b4]" name="afterMethod" is-config="true" duration-ms="2317" started-at="2019-03-28T05:06:13Z" finished-at="2019-03-28T05:06:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testCases_LoginPage.ForgetPassword_TestCase -->
+      </class> <!-- testCases_LoginPage.Login_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,7 +1,5 @@
 package testCases_LoginPage;
 
-//import java.util.Properties;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.testng.annotations.AfterClass;
@@ -9,22 +7,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pageObjects.ForgetPassword;
-//import util.Global;
 
 public class ForgetPassword_TestCase {
-	// private Global global;
-	// private Properties Prop;
 	private ForgetPassword forgotpassword;
 
 	public static Logger log = Logger.getLogger("Forget Password Test Case");
 	static {
-		PropertyConfigurator.configure("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\configs\\Log4j.properties");
+		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
 	@BeforeClass
 	public void property() {
-		// global = new Global();
-		// Prop = global.readProperties();
 		forgotpassword = new ForgetPassword();
 	}
 

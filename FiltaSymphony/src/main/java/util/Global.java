@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
@@ -26,7 +27,6 @@ public class Global {
 	private Properties prop;
 	private FileInputStream input;
 	private static int count = 1;
-	private String Workspace = "Home";
 
 	// Driver Initialization Method !!
 	public WebDriver driver() {
@@ -51,9 +51,8 @@ public class Global {
 	}
 
 	public Properties readProperties() {
-		Properties Prop = readProperties2();
-		if (Workspace.equals(Prop.getProperty("Work"))) {
-			File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\configs\\Configuration.properties");
+		File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\configs\\Configuration.properties");
+		if (f.exists() == true) {
 			try {
 				input = new FileInputStream(f);
 
@@ -69,9 +68,10 @@ public class Global {
 			}
 			return prop;
 		} else {
-			File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\Configuration.properties");
+			File file = new File(
+					"C:\\Users\\kunal\\git\\Symphony\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
 			try {
-				input = new FileInputStream(f);
+				input = new FileInputStream(file);
 
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -85,24 +85,6 @@ public class Global {
 			}
 			return prop;
 		}
-	}
-
-	public Properties readProperties2() {
-		File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\src\\main\\resources\\path.properties");
-		try {
-			input = new FileInputStream(f);
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		prop = new Properties();
-		try {
-			prop.load(input);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return prop;
 	}
 
 	public void screenShot(WebDriver driver) {
@@ -165,6 +147,10 @@ public class Global {
 			System.out.println("We are in Catch Block !!");
 			e.printStackTrace();
 		}
+	}
+
+	public void implicityWait(WebDriver driver) {
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 	}
 
 	public String url(WebDriver driver) {

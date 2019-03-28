@@ -93,7 +93,6 @@ public class ForgetPassword implements ForgotPasswordInterface {
 		Forgot_Password_Username.sendKeys(Prop.getProperty("uname"));
 		Forgot_Password_Email.sendKeys("");
 		Forgot_Password_Submit.click();
-
 	}
 
 	public void assertCheckValid() {
@@ -137,6 +136,7 @@ public class ForgetPassword implements ForgotPasswordInterface {
 	public void labelCheck() {
 		assertEquals(Uname_Label.getText(), Prop.getProperty("Label1"));
 		assertEquals(Email_Label.getText(), Prop.getProperty("Label2"));
+		global.wait(driver).until(ExpectedConditions.textToBePresentInElementValue(button, "Submit"));
 		assertEquals(button.getAttribute("value"), Prop.getProperty("Label4"));
 		Forgot_Password_Submit.click();
 		assertEquals(button.getAttribute("value"), Prop.getProperty("Label3"));
