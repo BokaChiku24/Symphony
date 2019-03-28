@@ -373,4 +373,7 @@
  2019-03-28 10:36:13,870  INFO [main] Sign In Test Case:56 - Sign In Test Case Ends Here
  2019-03-28 13:59:05,106  INFO [main] Sign In Test Case:29 - Text Check on Login Page
  2019-03-28 13:59:05,156  INFO [main] Sign In Test Case:35 - Login Page test case Ends Here
+ 2019-03-28 16:17:21,015  INFO [main] Sign In Test Case:29 - Text Check on Login Page
+ 2019-03-28 16:17:21,068  INFO [main] Sign In Test Case:35 - Drop Down Check on Login Page
+ 2019-03-28 16:17:21,151  INFO [main] Sign In Test Case:41 - Login Page test case Ends Here
  

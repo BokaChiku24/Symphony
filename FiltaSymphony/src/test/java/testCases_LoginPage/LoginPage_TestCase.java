@@ -30,6 +30,12 @@ public class LoginPage_TestCase {
 		loginpage.checkText2();
 	}
 
+	@Test(priority = 1)
+	public void checkDropDown() {
+		log.info("Drop Down Check on Login Page");
+		loginpage.dropDown();
+	}
+
 	@AfterClass
 	public void closeBrowser() {
 		log.info("Login Page test case Ends Here");

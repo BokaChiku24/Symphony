@@ -43,15 +43,11 @@ public class LoginPage {
 			System.out.println(list.get(i).getText());
 		}
 
-		// assertCheck(list.get(0).getText(), configFileReader.english());
-		// assertCheck(list.get(1).getText(), configFileReader.german());
+		assertEquals(list.get(0).getText(), Prop.getProperty("english"));
+		assertEquals(list.get(1).getText(), Prop.getProperty("german"));
 
 	}
-
-	public void assertCheck(String ActualMessage, String ExpectedMessage) {
-		// Assert.assertEquals(ActualMessage, ExpectedMessage);
-	}
-
+	
 	public void checkText() {
 		System.out.println("Footer => " + Footer.getText());
 	}

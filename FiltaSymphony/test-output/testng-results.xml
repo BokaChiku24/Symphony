@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10690" started-at="2019-03-28T08:28:54Z" finished-at="2019-03-28T08:29:05Z">
+  <suite name="Default suite" duration-ms="12614" started-at="2019-03-28T10:47:10Z" finished-at="2019-03-28T10:47:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10690" started-at="2019-03-28T08:28:54Z" finished-at="2019-03-28T08:29:05Z">
+    <test name="Default test" duration-ms="12614" started-at="2019-03-28T10:47:10Z" finished-at="2019-03-28T10:47:23Z">
       <class name="testCases_LoginPage.LoginPage_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="property" is-config="true" duration-ms="10447" started-at="2019-03-28T08:28:54Z" finished-at="2019-03-28T08:29:05Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="property" is-config="true" duration-ms="10129" started-at="2019-03-28T10:47:10Z" finished-at="2019-03-28T10:47:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checktext()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checktext" duration-ms="59" started-at="2019-03-28T08:29:05Z" finished-at="2019-03-28T08:29:05Z">
+        <test-method status="PASS" signature="checktext()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checktext" duration-ms="57" started-at="2019-03-28T10:47:21Z" finished-at="2019-03-28T10:47:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checktext -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="closeBrowser" is-config="true" duration-ms="156" started-at="2019-03-28T08:29:05Z" finished-at="2019-03-28T08:29:05Z">
+        <test-method status="PASS" signature="checkDropDown()[pri:1, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkDropDown" duration-ms="83" started-at="2019-03-28T10:47:21Z" finished-at="2019-03-28T10:47:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDropDown -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="closeBrowser" is-config="true" duration-ms="2312" started-at="2019-03-28T10:47:21Z" finished-at="2019-03-28T10:47:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
