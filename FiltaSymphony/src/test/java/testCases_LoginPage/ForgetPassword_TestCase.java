@@ -6,7 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageObjects.ForgetPassword;
+import pageObjects_LoginPage.ForgetPassword;
 
 public class ForgetPassword_TestCase {
 	private ForgetPassword forgotpassword;

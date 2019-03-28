@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import pageObjects.Login;
+import pageObjects_LoginPage.Login;
 import util.Global;
 import util.ReadExcelData;
 

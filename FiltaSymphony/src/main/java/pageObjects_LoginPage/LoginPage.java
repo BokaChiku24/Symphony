@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects_LoginPage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -57,6 +57,9 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = ".//tbody//tr[7]//td[@scope='row']")
 	private WebElement Language_Label;
 
+	@FindBy(how = How.XPATH, using = ".//input[@title='Log In']")
+	private WebElement Login_Label;
+
 	public void dropDown() {
 		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));
 		for (int i = 0; i < list.size(); i++) {
@@ -105,7 +108,7 @@ public class LoginPage {
 		assertEquals(Uname_Label.getText(), Prop.getProperty("LoginUnameLabel"));
 		assertEquals(Pword_Label.getText(), Prop.getProperty("LoginPwordLabel"));
 		assertEquals(Language_Label.getText(), Prop.getProperty("LoginLanguageLabel"));
-
+		assertEquals(Login_Label.getAttribute("value"), Prop.getProperty("LoginLabel"));
 	}
 
 	public void closebrowser() {

@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects_LoginPage;
 
 import java.util.Properties;
 

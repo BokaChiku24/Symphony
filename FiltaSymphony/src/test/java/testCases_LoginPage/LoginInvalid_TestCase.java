@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageObjects.Login;
+import pageObjects_LoginPage.Login;
 import util.Global;
 
 public class LoginInvalid_TestCase {

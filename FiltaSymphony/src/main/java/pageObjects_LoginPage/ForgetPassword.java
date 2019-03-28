@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects_LoginPage;
 
 import static org.testng.Assert.assertEquals;
 

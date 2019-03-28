@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13610" started-at="2019-03-28T13:28:37Z" finished-at="2019-03-28T13:28:51Z">
+  <suite name="Default suite" duration-ms="13605" started-at="2019-03-28T13:33:46Z" finished-at="2019-03-28T13:34:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13610" started-at="2019-03-28T13:28:37Z" finished-at="2019-03-28T13:28:51Z">
+    <test name="Default test" duration-ms="13605" started-at="2019-03-28T13:33:46Z" finished-at="2019-03-28T13:34:00Z">
       <class name="testCases_LoginPage.LoginPage_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="property" is-config="true" duration-ms="10125" started-at="2019-03-28T13:28:37Z" finished-at="2019-03-28T13:28:48Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="property" is-config="true" duration-ms="10125" started-at="2019-03-28T13:33:46Z" finished-at="2019-03-28T13:33:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checktext()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checktext" duration-ms="52" started-at="2019-03-28T13:28:48Z" finished-at="2019-03-28T13:28:48Z">
+        <test-method status="PASS" signature="checktext()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checktext" duration-ms="50" started-at="2019-03-28T13:33:56Z" finished-at="2019-03-28T13:33:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checktext -->
-        <test-method status="PASS" signature="checkDropDown()[pri:1, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkDropDown" duration-ms="159" started-at="2019-03-28T13:28:48Z" finished-at="2019-03-28T13:28:48Z">
+        <test-method status="PASS" signature="checkDropDown()[pri:1, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkDropDown" duration-ms="155" started-at="2019-03-28T13:33:56Z" finished-at="2019-03-28T13:33:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDropDown -->
-        <test-method status="PASS" signature="footerCheck()[pri:2, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="footerCheck" duration-ms="59" started-at="2019-03-28T13:28:48Z" finished-at="2019-03-28T13:28:48Z">
+        <test-method status="PASS" signature="footerCheck()[pri:2, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="footerCheck" duration-ms="58" started-at="2019-03-28T13:33:56Z" finished-at="2019-03-28T13:33:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- footerCheck -->
-        <test-method status="PASS" signature="checkURL()[pri:3, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkURL" duration-ms="692" started-at="2019-03-28T13:28:48Z" finished-at="2019-03-28T13:28:48Z">
+        <test-method status="PASS" signature="checkURL()[pri:3, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkURL" duration-ms="686" started-at="2019-03-28T13:33:56Z" finished-at="2019-03-28T13:33:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkURL -->
-        <test-method status="PASS" signature="checkTextBox()[pri:4, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkTextBox" duration-ms="69" started-at="2019-03-28T13:28:48Z" finished-at="2019-03-28T13:28:49Z">
+        <test-method status="PASS" signature="checkTextBox()[pri:4, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkTextBox" duration-ms="63" started-at="2019-03-28T13:33:57Z" finished-at="2019-03-28T13:33:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTextBox -->
-        <test-method status="PASS" signature="checkLabel()[pri:5, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkLabel" duration-ms="102" started-at="2019-03-28T13:28:49Z" finished-at="2019-03-28T13:28:49Z">
+        <test-method status="PASS" signature="checkLabel()[pri:5, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="checkLabel" duration-ms="127" started-at="2019-03-28T13:33:57Z" finished-at="2019-03-28T13:33:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkLabel -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="closeBrowser" is-config="true" duration-ms="2322" started-at="2019-03-28T13:28:49Z" finished-at="2019-03-28T13:28:51Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@67784306]" name="closeBrowser" is-config="true" duration-ms="2309" started-at="2019-03-28T13:33:57Z" finished-at="2019-03-28T13:34:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

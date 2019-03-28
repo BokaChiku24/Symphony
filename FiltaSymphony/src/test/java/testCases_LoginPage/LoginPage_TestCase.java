@@ -6,7 +6,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pageObjects.LoginPage;
+import pageObjects_LoginPage.LoginPage;
 
 public class LoginPage_TestCase {
 	private LoginPage loginpage;

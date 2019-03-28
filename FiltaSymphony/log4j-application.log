@@ -534,4 +534,11 @@
  2019-03-28 18:58:48,987  INFO [main] Sign In Test Case:50 - Check Login Page TextBox Enabled Or Not
  2019-03-28 18:58:49,057  INFO [main] Sign In Test Case:56 - Check Login Page TextBox Label
  2019-03-28 18:58:49,159  INFO [main] Sign In Test Case:62 - Login Page test case Ends Here
+ 2019-03-28 19:03:56,555  INFO [main] Sign In Test Case:26 - Text Check on Login Page
+ 2019-03-28 19:03:56,603  INFO [main] Sign In Test Case:32 - Drop Down Check on Login Page
+ 2019-03-28 19:03:56,758  INFO [main] Sign In Test Case:38 - Footer Check on Login Page
+ 2019-03-28 19:03:56,819  INFO [main] Sign In Test Case:44 - URL Check on Login Page
+ 2019-03-28 19:03:57,508  INFO [main] Sign In Test Case:50 - Check Login Page TextBox Enabled Or Not
+ 2019-03-28 19:03:57,573  INFO [main] Sign In Test Case:56 - Check Login Page TextBox Label
+ 2019-03-28 19:03:57,699  INFO [main] Sign In Test Case:62 - Login Page test case Ends Here
  
