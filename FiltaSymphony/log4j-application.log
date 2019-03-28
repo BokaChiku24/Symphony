@@ -541,4 +541,178 @@
  2019-03-28 19:03:57,508  INFO [main] Sign In Test Case:50 - Check Login Page TextBox Enabled Or Not
  2019-03-28 19:03:57,573  INFO [main] Sign In Test Case:56 - Check Login Page TextBox Label
  2019-03-28 19:03:57,699  INFO [main] Sign In Test Case:62 - Login Page test case Ends Here
+ 2019-03-28 22:36:58,587  INFO [main] Forget Password Test Case:26 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 22:37:03,398  INFO [main] Forget Password Test Case:34 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 22:37:05,337  INFO [main] Forget Password Test Case:41 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 22:37:07,012  INFO [main] Forget Password Test Case:48 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 22:37:07,646  INFO [main] Forget Password Test Case:55 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 22:37:08,236  INFO [main] Forget Password Test Case:62 - Forgot Password Textbox Check
+ 2019-03-28 22:37:08,367  INFO [main] Forget Password Test Case:68 - Forgot Password Label Check
+ 2019-03-28 22:37:08,788  INFO [main] Forget Password Test Case:74 - Forgot Password Test Case Ends Here
+ 2019-03-28 22:45:52,668  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 22:59:18,641  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:01:56,969  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:04:24,434  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:09:45,768  INFO [main] Forget Password Test Case:27 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:10:50,812  INFO [main] Forget Password Test Case:27 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:10:55,015  INFO [main] Forget Password Test Case:35 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 23:10:56,295  INFO [main] Forget Password Test Case:42 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 23:10:57,938  INFO [main] Forget Password Test Case:49 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 23:10:58,639  INFO [main] Forget Password Test Case:56 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 23:10:59,228  INFO [main] Forget Password Test Case:63 - Forgot Password Textbox Check
+ 2019-03-28 23:10:59,338  INFO [main] Forget Password Test Case:69 - Forgot Password Label Check
+ 2019-03-28 23:10:59,778  INFO [main] Forget Password Test Case:75 - Forgot Password Test Case Ends Here
+ 2019-03-28 23:20:17,950  INFO [main] Forget Password Test Case:27 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:20:22,765  INFO [main] Forget Password Test Case:35 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 23:20:24,635  INFO [main] Forget Password Test Case:42 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 23:20:26,284  INFO [main] Forget Password Test Case:49 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 23:20:26,912  INFO [main] Forget Password Test Case:56 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 23:20:27,502  INFO [main] Forget Password Test Case:63 - Forgot Password Textbox Check
+ 2019-03-28 23:20:27,612  INFO [main] Forget Password Test Case:69 - Forgot Password Label Check
+ 2019-03-28 23:20:28,063  INFO [main] Forget Password Test Case:75 - Forgot Password Test Case Ends Here
+ 2019-03-28 23:25:03,019  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:25:08,897  INFO [main] Forget Password Test Case:49 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 23:25:10,830  INFO [main] Forget Password Test Case:56 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 23:25:12,477  INFO [main] Forget Password Test Case:63 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 23:25:13,098  INFO [main] Forget Password Test Case:70 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 23:25:13,695  INFO [main] Forget Password Test Case:77 - Forgot Password Textbox Check
+ 2019-03-28 23:25:13,802  INFO [main] Forget Password Test Case:84 - Forgot Password Label Check
+ 2019-03-28 23:25:14,249  INFO [main] Forget Password Test Case:99 - Forgot Password Test Case Ends Here
+ 2019-03-28 23:26:27,694  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:26:32,497  INFO [main] Forget Password Test Case:49 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 23:26:34,341  INFO [main] Forget Password Test Case:56 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 23:26:36,003  INFO [main] Forget Password Test Case:63 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 23:26:36,657  INFO [main] Forget Password Test Case:70 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 23:26:37,261  INFO [main] Forget Password Test Case:77 - Forgot Password Textbox Check
+ 2019-03-28 23:26:37,377  INFO [main] Forget Password Test Case:84 - Forgot Password Label Check
+ 2019-03-28 23:26:37,802  INFO [main] Forget Password Test Case:99 - Forgot Password Test Case Ends Here
+ 2019-03-28 23:28:49,204  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:28:53,438  INFO [main] Forget Password Test Case:49 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 23:28:55,320  INFO [main] Forget Password Test Case:56 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 23:28:56,995  INFO [main] Forget Password Test Case:63 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 23:28:57,640  INFO [main] Forget Password Test Case:70 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 23:28:58,231  INFO [main] Forget Password Test Case:77 - Forgot Password Textbox Check
+ 2019-03-28 23:28:58,932  INFO [main] Forget Password Test Case:84 - Forgot Password Label Check
+ 2019-03-28 23:28:59,336  INFO [main] Forget Password Test Case:99 - Forgot Password Test Case Ends Here
+ 2019-03-28 23:30:31,298  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-28 23:30:35,495  INFO [main] Forget Password Test Case:49 - Forgot Password Check With InValid UserName and Email
+ 2019-03-28 23:30:37,371  INFO [main] Forget Password Test Case:56 - Forgot Password Check WithOut UserName and Email
+ 2019-03-28 23:30:39,051  INFO [main] Forget Password Test Case:63 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-28 23:30:39,689  INFO [main] Forget Password Test Case:70 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-28 23:30:40,277  INFO [main] Forget Password Test Case:77 - Forgot Password Textbox Check
+ 2019-03-28 23:30:40,989  INFO [main] Forget Password Test Case:84 - Forgot Password Label Check
+ 2019-03-28 23:30:41,389  INFO [main] Forget Password Test Case:99 - Forgot Password Test Case Ends Here
+ 2019-03-28 23:43:14,332  INFO [main] Sign In With Invalid Credentials Test Case:35 - Test Case :check Login functionality with invalid credentials
+ 2019-03-28 23:43:16,728  INFO [main] Sign In With Invalid Credentials Test Case:44 - Test Case :check Login functionality without credentials
+ 2019-03-28 23:43:18,893  INFO [main] Sign In With Invalid Credentials Test Case:54 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 23:43:21,090  INFO [main] Sign In With Invalid Credentials Test Case:64 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 23:43:23,347  INFO [main] Sign In With Invalid Credentials Test Case:74 - Sign In Test Case Ends Here
+ 2019-03-28 23:46:55,909  INFO [main] Sign In Test Case:58 - Test Case :check Login functionality with valid credentials
+ 2019-03-28 23:47:18,274  INFO [main] Sign In Test Case:76 - Sign In Test Case Ends Here
+ 2019-03-28 23:48:31,888  INFO [main] Sign In With Invalid Credentials Test Case:43 - Test Case :check Login functionality with invalid credentials
+ 2019-03-28 23:48:34,099  INFO [main] Sign In With Invalid Credentials Test Case:52 - Test Case :check Login functionality without credentials
+ 2019-03-28 23:48:36,312  INFO [main] Sign In With Invalid Credentials Test Case:62 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 23:48:38,506  INFO [main] Sign In With Invalid Credentials Test Case:72 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 23:48:40,670  INFO [main] Sign In With Invalid Credentials Test Case:91 - Sign In Test Case Ends Here
+ 2019-03-28 23:50:32,078  INFO [main] Sign In With Invalid Credentials Test Case:43 - Test Case :check Login functionality with invalid credentials
+ 2019-03-28 23:50:34,237  INFO [main] Sign In With Invalid Credentials Test Case:52 - Test Case :check Login functionality without credentials
+ 2019-03-28 23:50:36,444  INFO [main] Sign In With Invalid Credentials Test Case:62 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 23:50:38,566  INFO [main] Sign In With Invalid Credentials Test Case:72 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 23:50:40,682  INFO [main] Sign In With Invalid Credentials Test Case:91 - Sign In Test Case Ends Here
+ 2019-03-28 23:51:53,208  INFO [main] Sign In With Invalid Credentials Test Case:43 - Test Case :check Login functionality with invalid credentials
+ 2019-03-28 23:51:56,016  INFO [main] Sign In With Invalid Credentials Test Case:52 - Test Case :check Login functionality without credentials
+ 2019-03-28 23:51:58,678  INFO [main] Sign In With Invalid Credentials Test Case:62 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 23:52:01,441  INFO [main] Sign In With Invalid Credentials Test Case:72 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-28 23:52:04,104  INFO [main] Sign In With Invalid Credentials Test Case:91 - Sign In Test Case Ends Here
+ 2019-03-28 23:55:53,108  INFO [main] Sign In Test Case:32 - Text Check on Login Page
+ 2019-03-28 23:55:53,210  INFO [main] Sign In Test Case:38 - Drop Down Check on Login Page
+ 2019-03-28 23:55:53,688  INFO [main] Sign In Test Case:44 - Footer Check on Login Page
+ 2019-03-28 23:55:53,859  INFO [main] Sign In Test Case:50 - URL Check on Login Page
+ 2019-03-28 23:55:56,583  INFO [main] Sign In Test Case:56 - Check Login Page TextBox Enabled Or Not
+ 2019-03-28 23:55:56,649  INFO [main] Sign In Test Case:62 - Check Login Page TextBox Label
+ 2019-03-28 23:55:56,699  INFO [main] Sign In Test Case:68 - Login Page test case Ends Here
+ 2019-03-28 23:57:33,935  INFO [main] Sign In Test Case:32 - Text Check on Login Page
+ 2019-03-28 23:57:34,048  INFO [main] Sign In Test Case:38 - Drop Down Check on Login Page
+ 2019-03-28 23:57:34,489  INFO [main] Sign In Test Case:44 - Footer Check on Login Page
+ 2019-03-28 23:57:34,640  INFO [main] Sign In Test Case:50 - URL Check on Login Page
+ 2019-03-28 23:57:37,320  INFO [main] Sign In Test Case:56 - Check Login Page TextBox Enabled Or Not
+ 2019-03-28 23:57:37,383  INFO [main] Sign In Test Case:62 - Check Login Page TextBox Label
+ 2019-03-28 23:57:37,431  INFO [main] Sign In Test Case:68 - Login Page test case Ends Here
+ 2019-03-28 23:58:26,557  INFO [main] Sign In Test Case:32 - Text Check on Login Page
+ 2019-03-28 23:58:26,684  INFO [main] Sign In Test Case:38 - Drop Down Check on Login Page
+ 2019-03-28 23:58:27,141  INFO [main] Sign In Test Case:44 - Footer Check on Login Page
+ 2019-03-28 23:58:27,296  INFO [main] Sign In Test Case:50 - URL Check on Login Page
+ 2019-03-28 23:58:30,014  INFO [main] Sign In Test Case:56 - Check Login Page TextBox Enabled Or Not
+ 2019-03-28 23:58:30,157  INFO [main] Sign In Test Case:62 - Check Login Page TextBox Label
+ 2019-03-28 23:58:30,471  INFO [main] Sign In Test Case:68 - Login Page test case Ends Here
+ 2019-03-28 23:58:59,733  INFO [main] Sign In Test Case:32 - Text Check on Login Page
+ 2019-03-28 23:58:59,832  INFO [main] Sign In Test Case:38 - Drop Down Check on Login Page
+ 2019-03-28 23:59:00,278  INFO [main] Sign In Test Case:44 - Footer Check on Login Page
+ 2019-03-28 23:59:00,435  INFO [main] Sign In Test Case:50 - URL Check on Login Page
+ 2019-03-28 23:59:03,194  INFO [main] Sign In Test Case:56 - Check Login Page TextBox Enabled Or Not
+ 2019-03-28 23:59:03,319  INFO [main] Sign In Test Case:62 - Check Login Page TextBox Label
+ 2019-03-28 23:59:03,621  INFO [main] Sign In Test Case:68 - Login Page test case Ends Here
+ 2019-03-29 00:01:18,066  INFO [main] Sign In Test Case:41 - Text Check on Login Page
+ 2019-03-29 00:01:18,797  INFO [main] Sign In Test Case:47 - Drop Down Check on Login Page
+ 2019-03-29 00:01:19,240  INFO [main] Sign In Test Case:53 - Footer Check on Login Page
+ 2019-03-29 00:01:19,407  INFO [main] Sign In Test Case:59 - URL Check on Login Page
+ 2019-03-29 00:01:22,182  INFO [main] Sign In Test Case:65 - Check Login Page TextBox Enabled Or Not
+ 2019-03-29 00:01:22,334  INFO [main] Sign In Test Case:71 - Check Login Page TextBox Label
+ 2019-03-29 00:01:22,649  INFO [main] Sign In Test Case:86 - Login Page test case Ends Here
+ 2019-03-29 00:04:23,326  INFO [main] Sign In Test Case:41 - Text Check on Login Page
+ 2019-03-29 00:04:23,438  INFO [main] Sign In Test Case:47 - Drop Down Check on Login Page
+ 2019-03-29 00:04:23,906  INFO [main] Sign In Test Case:53 - Footer Check on Login Page
+ 2019-03-29 00:04:24,065  INFO [main] Sign In Test Case:59 - URL Check on Login Page
+ 2019-03-29 00:04:26,911  INFO [main] Sign In Test Case:65 - Check Login Page TextBox Enabled Or Not
+ 2019-03-29 00:04:27,216  INFO [main] Sign In Test Case:71 - Check Login Page TextBox Label
+ 2019-03-29 00:04:27,555  INFO [main] Sign In Test Case:86 - Login Page test case Ends Here
+ 2019-03-29 00:05:04,541  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-29 00:05:26,500  INFO [main] Sign In With Invalid Credentials Test Case:43 - Test Case :check Login functionality with invalid credentials
+ 2019-03-29 00:05:48,224  INFO [main] Sign In Test Case:41 - Text Check on Login Page
+ 2019-03-29 00:06:05,991  INFO [main] Sign In Test Case:58 - Test Case :check Login functionality with valid credentials
+ 2019-03-29 00:06:24,943  INFO [main] Sign In Test Case:76 - Sign In Test Case Ends Here
+ 2019-03-29 00:07:09,561  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-29 00:07:33,298  INFO [main] Sign In With Invalid Credentials Test Case:43 - Test Case :check Login functionality with invalid credentials
+ 2019-03-29 00:07:53,984  INFO [main] Sign In Test Case:41 - Text Check on Login Page
+ 2019-03-29 00:08:14,260  INFO [main] Sign In Test Case:58 - Test Case :check Login functionality with valid credentials
+ 2019-03-29 00:08:31,711  INFO [main] Sign In Test Case:76 - Sign In Test Case Ends Here
+ 2019-03-29 00:09:38,123  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-29 00:09:42,347  INFO [main] Forget Password Test Case:49 - Forgot Password Check With InValid UserName and Email
+ 2019-03-29 00:09:43,644  INFO [main] Forget Password Test Case:56 - Forgot Password Check WithOut UserName and Email
+ 2019-03-29 00:09:45,325  INFO [main] Forget Password Test Case:63 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-29 00:09:45,950  INFO [main] Forget Password Test Case:70 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-29 00:09:46,539  INFO [main] Forget Password Test Case:77 - Forgot Password Textbox Check
+ 2019-03-29 00:09:46,645  INFO [main] Forget Password Test Case:84 - Forgot Password Label Check
+ 2019-03-29 00:09:47,072  INFO [main] Forget Password Test Case:99 - Forgot Password Test Case Ends Here
+ 2019-03-29 00:23:53,230  INFO [main] Sign In Test Case:58 - Test Case :check Login functionality with valid credentials
+ 2019-03-29 00:24:11,571  INFO [main] Sign In Test Case:76 - Sign In Test Case Ends Here
+ 2019-03-29 00:24:52,053  INFO [main] Sign In Test Case:58 - Test Case :check Login functionality with valid credentials
+ 2019-03-29 00:25:10,651  INFO [main] Sign In Test Case:76 - Sign In Test Case Ends Here
+ 2019-03-29 00:27:07,953  INFO [main] Sign In Test Case:58 - Test Case :check Login functionality with valid credentials
+ 2019-03-29 00:27:27,396  INFO [main] Sign In Test Case:76 - Sign In Test Case Ends Here
+ 2019-03-29 00:27:47,633  INFO [main] Sign In Test Case:41 - Text Check on Login Page
+ 2019-03-29 00:28:03,730  INFO [main] Sign In With Invalid Credentials Test Case:43 - Test Case :check Login functionality with invalid credentials
+ 2019-03-29 00:28:25,551  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-29 00:29:26,666  INFO [main] Sign In Test Case:58 - Test Case :check Login functionality with valid credentials
+ 2019-03-29 00:29:41,314  INFO [main] Sign In Test Case:76 - Sign In Test Case Ends Here
+ 2019-03-29 00:30:01,376  INFO [main] Sign In Test Case:41 - Text Check on Login Page
+ 2019-03-29 00:30:01,461  INFO [main] Sign In Test Case:47 - Drop Down Check on Login Page
+ 2019-03-29 00:30:01,828  INFO [main] Sign In Test Case:53 - Footer Check on Login Page
+ 2019-03-29 00:30:01,948  INFO [main] Sign In Test Case:59 - URL Check on Login Page
+ 2019-03-29 00:30:04,713  INFO [main] Sign In Test Case:65 - Check Login Page TextBox Enabled Or Not
+ 2019-03-29 00:30:04,877  INFO [main] Sign In Test Case:71 - Check Login Page TextBox Label
+ 2019-03-29 00:30:05,181  INFO [main] Sign In Test Case:86 - Login Page test case Ends Here
+ 2019-03-29 00:30:26,077  INFO [main] Sign In With Invalid Credentials Test Case:43 - Test Case :check Login functionality with invalid credentials
+ 2019-03-29 00:30:28,208  INFO [main] Sign In With Invalid Credentials Test Case:52 - Test Case :check Login functionality without credentials
+ 2019-03-29 00:30:30,325  INFO [main] Sign In With Invalid Credentials Test Case:62 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-29 00:30:32,562  INFO [main] Sign In With Invalid Credentials Test Case:72 - Test Case :check Login functionality withInvalid credentials
+ 2019-03-29 00:30:34,788  INFO [main] Sign In With Invalid Credentials Test Case:91 - Sign In Test Case Ends Here
+ 2019-03-29 00:30:53,145  INFO [main] Forget Password Test Case:41 - Forgot Password Check With Valid UserName and Email
+ 2019-03-29 00:30:57,347  INFO [main] Forget Password Test Case:49 - Forgot Password Check With InValid UserName and Email
+ 2019-03-29 00:30:59,234  INFO [main] Forget Password Test Case:56 - Forgot Password Check WithOut UserName and Email
+ 2019-03-29 00:31:00,911  INFO [main] Forget Password Test Case:63 - Forgot Password Check WithOut UserName and With Email
+ 2019-03-29 00:31:01,576  INFO [main] Forget Password Test Case:70 - Forgot Password Check With UserName and WithOut Email
+ 2019-03-29 00:31:02,201  INFO [main] Forget Password Test Case:77 - Forgot Password Textbox Check
+ 2019-03-29 00:31:02,302  INFO [main] Forget Password Test Case:84 - Forgot Password Label Check
+ 2019-03-29 00:31:02,725  INFO [main] Forget Password Test Case:99 - Forgot Password Test Case Ends Here
  

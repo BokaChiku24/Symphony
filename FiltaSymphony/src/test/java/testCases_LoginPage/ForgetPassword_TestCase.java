@@ -1,15 +1,28 @@
 package testCases_LoginPage;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Arrays;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import pageObjects_LoginPage.ForgetPassword;
+import util.Global;
 
 public class ForgetPassword_TestCase {
 	private ForgetPassword forgotpassword;
+	private Global global;
+	private WebDriver driver;
 
 	public static Logger log = Logger.getLogger("Forget Password Test Case");
 	static {
@@ -18,7 +31,9 @@ public class ForgetPassword_TestCase {
 
 	@BeforeClass
 	public void property() {
-		forgotpassword = new ForgetPassword();
+		global = new Global();
+		driver = global.driver();
+		forgotpassword = new ForgetPassword(driver);
 	}
 
 	@Test
@@ -62,13 +77,23 @@ public class ForgetPassword_TestCase {
 		log.info("Forgot Password Textbox Check");
 		forgotpassword.assertCheckboxCheck();
 	}
-
+	
+	
 	@Test(priority = 6)
 	public void labelCheck() {
 		log.info("Forgot Password Label Check");
 		forgotpassword.labelCheck();
 	}
 
+	@AfterMethod 
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException { 
+		if (testResult.getStatus() == ITestResult.FAILURE) { 
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); 
+			FileUtils.copyFile(scrFile, new File("ForgotPassword_errorScreenshots\\" + testResult.getName() + "-" 
+					+ Arrays.toString(testResult.getParameters()) +  ".jpg"));
+		} 
+	}
+	
 	@AfterClass
 	public void afterMethod() {
 		log.info("Forgot Password Test Case Ends Here");

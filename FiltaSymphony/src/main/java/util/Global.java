@@ -53,6 +53,9 @@ public class Global {
 
 	public Properties readProperties() {
 		File f = new File("C:\\Users\\Kunal\\git\\repository\\FiltaSymphony\\configs\\Configuration.properties");
+		File file = new File("C:\\Users\\kunal\\git\\Symphony\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
+		File File_ = new File(
+				"C:\\Users\\Boka_Chiku\\git\\Symphony\\FiltaSymphony\\configs\\HomePC_Configuration.properties");
 		if (f.exists() == true) {
 			try {
 				input = new FileInputStream(f);
@@ -68,9 +71,8 @@ public class Global {
 				e.printStackTrace();
 			}
 			return prop;
-		} else {
-			File file = new File(
-					"C:\\Users\\kunal\\git\\Symphony\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
+		} else if (file.exists() == true) {
+
 			try {
 				input = new FileInputStream(file);
 
@@ -85,7 +87,23 @@ public class Global {
 				e.printStackTrace();
 			}
 			return prop;
+		} else if (File_.exists() == true) {
+			try {
+				input = new FileInputStream(File_);
+
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			prop = new Properties();
+			try {
+				prop.load(input);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
+		return prop;
+
 	}
 
 	public void screenShot(WebDriver driver) {
@@ -110,7 +128,7 @@ public class Global {
 		Select select = new Select(element);
 		return select;
 	}
-	
+
 	public WebDriverWait wait(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 2500);
 		return wait;
@@ -193,4 +211,5 @@ public class Global {
 		alert.accept();
 		return Message;
 	}
+
 }

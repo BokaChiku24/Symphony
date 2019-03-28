@@ -18,9 +18,9 @@ public class Login {
 	Global global;
 	private Properties Prop;
 
-	public Login() {
+	public Login(WebDriver driver) {
 		global = new Global();
-		driver = global.driver();
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		Prop = global.readProperties();
 	}
@@ -65,6 +65,7 @@ public class Login {
 		UserName.clear();
 		Password.clear();
 	}
+
 	public void driverClose() {
 		driver.close();
 	}

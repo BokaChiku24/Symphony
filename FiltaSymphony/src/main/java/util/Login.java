@@ -8,20 +8,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class logIn {
+public class Login {
 	public WebDriver driver;
 	private Global global;
 	private Properties prop;
 
-	public WebDriver url() {
+	public Login(WebDriver driver) {
+		this.driver = driver;
 		global = new Global();
-		driver = global.driver();
-		return driver;
+		prop = global.readProperties();
 	}
 
 	public WebDriver credentials() {
-		url();
-		prop = global.readProperties();
+		//prop = global.readProperties();
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		WebElement element = wait.until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath(".//input[@placeholder='User Name' and @ng-model='username']")));

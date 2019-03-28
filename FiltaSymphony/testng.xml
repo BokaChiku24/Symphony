@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Symphony Testing" verbose="1" parallel="tests" thread-count="1" configfailurepolicy="continue">
-	<test name="testngTest" annotations="JDK" preserve-order="true">
+<suite name="Symphony Testing">
+	<test thread-count="5" name="testngTest">
 		<classes>
-			<class name="testCase.Login_TestCase" />
+			<class name="testCases_LoginPage.Login_TestCase"/>
+			<class name="testCases_LoginPage.LoginPage_TestCase"/>
+			<class name="testCases_LoginPage.LoginInvalid_TestCase"/>
+			<class name="testCases_LoginPage.ForgetPassword_TestCase"/>
 		</classes>
 	</test>
 </suite>
+
+

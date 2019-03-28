@@ -20,9 +20,9 @@ public class LoginPage {
 	private Properties Prop;
 	private Global global;
 
-	public LoginPage() {
+	public LoginPage(WebDriver driver) {
 		global = new Global();
-		driver = global.driver();
+		this.driver = driver;
 		Prop = global.readProperties();
 		PageFactory.initElements(driver, this);
 	}

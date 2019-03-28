@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import helper.ForgotPasswordInterface;
 import util.Global;
 
@@ -21,9 +22,9 @@ public class ForgetPassword implements ForgotPasswordInterface {
 	private boolean uname;
 	private boolean email;
 
-	public ForgetPassword() {
+	public ForgetPassword(WebDriver driver) {
 		global = new Global();
-		driver = global.driver();
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		Prop = global.readProperties();
 	}
