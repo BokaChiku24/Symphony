@@ -6,8 +6,8 @@
       <class name="testCases_LoginPage.LoginPage_TestCase">
         <methods>
           <include name="property"/>
-          <include name="checkURL"/>
           <include name="closeBrowser"/>
+          <include name="checkDropDown"/>
         </methods>
       </class> <!-- testCases_LoginPage.LoginPage_TestCase -->
     </classes>

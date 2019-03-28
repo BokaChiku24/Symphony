@@ -21,6 +21,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Global {
@@ -105,6 +106,11 @@ public class Global {
 		return element;
 	}
 
+	public Select select(WebElement element) {
+		Select select = new Select(element);
+		return select;
+	}
+	
 	public WebDriverWait wait(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver, 2500);
 		return wait;

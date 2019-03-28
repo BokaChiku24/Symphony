@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-//import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +14,6 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import util.Global;
-//import org.openqa.selenium.support.ui.Select;
 
 public class LoginPage {
 	private WebDriver driver;
@@ -50,15 +48,24 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = ".//input[@id='user_password']")
 	private WebElement Pword;
 
+	@FindBy(how = How.XPATH, using = ".//label[@for='user_name']")
+	private WebElement Uname_Label;
+
+	@FindBy(how = How.XPATH, using = ".//label[@for='user_password']")
+	private WebElement Pword_Label;
+
+	@FindBy(how = How.XPATH, using = ".//tbody//tr[7]//td[@scope='row']")
+	private WebElement Language_Label;
+
 	public void dropDown() {
 		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).getText());
 		}
-
 		assertEquals(list.get(0).getText(), Prop.getProperty("english"));
 		assertEquals(list.get(1).getText(), Prop.getProperty("german"));
-
+		assertEquals(list.size(), Integer.parseInt(Prop.getProperty("LanguageSize")));
+		assertEquals(global.select(Language).getFirstSelectedOption().getText(), Prop.getProperty("english"));
 	}
 
 	public void checkText() {
@@ -94,11 +101,15 @@ public class LoginPage {
 		assertEquals(Pword.isEnabled(), true);
 	}
 
+	public void checktextBoxLabel() {
+		assertEquals(Uname_Label.getText(), Prop.getProperty("LoginUnameLabel"));
+		assertEquals(Pword_Label.getText(), Prop.getProperty("LoginPwordLabel"));
+		assertEquals(Language_Label.getText(), Prop.getProperty("LoginLanguageLabel"));
+
+	}
+
 	public void closebrowser() {
 		driver.close();
 	}
-	/*
-	 * private Select select(WebElement element) { Select select = new
-	 * Select(element); return select; }
-	 */
+
 }

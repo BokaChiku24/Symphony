@@ -51,6 +51,12 @@ public class LoginPage_TestCase {
 		loginpage.checkTextBoxAssert();
 	}
 
+	@Test(priority = 5)
+	public void checkLabel() {
+		log.info("Check Login Page TextBox Label");
+		loginpage.checktextBoxLabel();
+	}
+
 	@AfterClass
 	public void closeBrowser() {
 		log.info("Login Page test case Ends Here");
