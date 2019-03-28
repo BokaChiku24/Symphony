@@ -371,4 +371,6 @@
  2019-03-28 10:34:41,330  INFO [main] Forget Password Test Case:74 - Forgot Password Test Case Ends Here
  2019-03-28 10:36:02,965  INFO [main] Sign In Test Case:47 - Test Case :check Login functionality with valid credentials
  2019-03-28 10:36:13,870  INFO [main] Sign In Test Case:56 - Sign In Test Case Ends Here
+ 2019-03-28 13:59:05,106  INFO [main] Sign In Test Case:29 - Text Check on Login Page
+ 2019-03-28 13:59:05,156  INFO [main] Sign In Test Case:35 - Login Page test case Ends Here
  
