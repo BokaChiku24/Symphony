@@ -1,6 +1,6 @@
 package pageObjects_LoginPage;
 
-import static org.testng.Assert.assertEquals;
+import org.testng.Assert;
 
 import java.util.Properties;
 
@@ -99,48 +99,48 @@ public class ForgetPassword implements ForgotPasswordInterface {
 	public void assertCheckValid() {
 		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Your request has been submitted."));
-		assertEquals(success_Message.getText(), Prop.getProperty("Message"));
+		Assert.assertEquals(success_Message.getText(), Prop.getProperty("Message"));
 	}
 
 	public void assertCheckValid2() {
 		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "You must specify a valid User Name and Email Address."));
-		assertEquals(success_Message.getText(), Prop.getProperty("Message2"));
+		Assert.assertEquals(success_Message.getText(), Prop.getProperty("Message2"));
 	}
 
 	public void assertCheckValid3() {
 		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
-		assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
+		Assert.assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
 	}
 
 	public void assertCheckValid4() {
 		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
-		assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
+		Assert.assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
 	}
 
 	public void assertCheckValid5() {
 		global.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
-		assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
+		Assert.assertEquals(success_Message.getText(), Prop.getProperty("Message3"));
 	}
 
 	public void assertCheckboxCheck() {
 		uname = Forgot_Password_Username.isEnabled();
 		email = Forgot_Password_Email.isEnabled();
-		assertEquals(uname, true);
-		assertEquals(email, true);
+		Assert.assertEquals(uname, true);
+		Assert.assertEquals(email, true);
 
 	}
 
 	public void labelCheck() {
-		assertEquals(Uname_Label.getText(), Prop.getProperty("Label1"));
-		assertEquals(Email_Label.getText(), Prop.getProperty("Label2"));
+		Assert.assertEquals(Uname_Label.getText(), Prop.getProperty("Label1"));
+		Assert.assertEquals(Email_Label.getText(), Prop.getProperty("Label2"));
 		global.wait(driver).until(ExpectedConditions.textToBePresentInElementValue(button, "Submit"));
-		assertEquals(button.getAttribute("value"), Prop.getProperty("Label4"));
+		Assert.assertEquals(button.getAttribute("value"), Prop.getProperty("Label4"));
 		Forgot_Password_Submit.click();
-		assertEquals(button.getAttribute("value"), Prop.getProperty("Label3"));
+		Assert.assertEquals(button.getAttribute("value"), Prop.getProperty("Label3"));
 	}
 
 	public void closeBrowser() {

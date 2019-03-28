@@ -1,6 +1,6 @@
 package pageObjects_LoginPage;
 
-import static org.testng.Assert.assertEquals;
+import org.testng.Assert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,10 +65,10 @@ public class LoginPage {
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).getText());
 		}
-		assertEquals(list.get(0).getText(), Prop.getProperty("english"));
-		assertEquals(list.get(1).getText(), Prop.getProperty("german"));
-		assertEquals(list.size(), Integer.parseInt(Prop.getProperty("LanguageSize")));
-		assertEquals(global.select(Language).getFirstSelectedOption().getText(), Prop.getProperty("english"));
+		Assert.assertEquals(list.get(0).getText(), Prop.getProperty("english"));
+		Assert.assertEquals(list.get(1).getText(), Prop.getProperty("german"));
+		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("LanguageSize")));
+		Assert.assertEquals(global.select(Language).getFirstSelectedOption().getText(), Prop.getProperty("english"));
 	}
 
 	public void checkText() {
@@ -80,35 +80,35 @@ public class LoginPage {
 
 	public void checkText2() {
 
-		assertEquals(Textmessage.getText(), Prop.getProperty("TextLoginPage"));
+		Assert.assertEquals(Textmessage.getText(), Prop.getProperty("TextLoginPage"));
 	}
 
 	public void checkURL() {
 		link1.click();
 		ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(handles.get(1));
-		assertEquals(driver.getCurrentUrl(), Prop.getProperty("CheckURL1"));
+		Assert.assertEquals(driver.getCurrentUrl(), Prop.getProperty("CheckURL1"));
 		closebrowser();
 		driver.switchTo().window(handles.get(0));
 		link2.click();
 		ArrayList<String> handles2 = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(handles2.get(1));
-		assertEquals(driver.getCurrentUrl(), Prop.getProperty("CheckURL2"));
+		Assert.assertEquals(driver.getCurrentUrl(), Prop.getProperty("CheckURL2"));
 		closebrowser();
 		driver.switchTo().window(handles2.get(0));
 
 	}
 
 	public void checkTextBoxAssert() {
-		assertEquals(Uname.isEnabled(), true);
-		assertEquals(Pword.isEnabled(), true);
+		Assert.assertEquals(Uname.isEnabled(), true);
+		Assert.assertEquals(Pword.isEnabled(), true);
 	}
 
 	public void checktextBoxLabel() {
-		assertEquals(Uname_Label.getText(), Prop.getProperty("LoginUnameLabel"));
-		assertEquals(Pword_Label.getText(), Prop.getProperty("LoginPwordLabel"));
-		assertEquals(Language_Label.getText(), Prop.getProperty("LoginLanguageLabel"));
-		assertEquals(Login_Label.getAttribute("value"), Prop.getProperty("LoginLabel"));
+		Assert.assertEquals(Uname_Label.getText(), Prop.getProperty("LoginUnameLabel"));
+		Assert.assertEquals(Pword_Label.getText(), Prop.getProperty("LoginPwordLabel"));
+		Assert.assertEquals(Language_Label.getText(), Prop.getProperty("LoginLanguageLabel"));
+		Assert.assertEquals(Login_Label.getAttribute("value"), Prop.getProperty("LoginLabel"));
 	}
 
 	public void closebrowser() {
