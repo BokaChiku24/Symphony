@@ -1,36 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25809" started-at="2019-03-29T05:26:25Z" finished-at="2019-03-29T05:26:50Z">
+  <suite name="Default suite" duration-ms="22360" started-at="2019-03-29T14:08:13Z" finished-at="2019-03-29T14:08:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25809" started-at="2019-03-29T05:26:25Z" finished-at="2019-03-29T05:26:50Z">
-      <class name="testCases_HomePage.HomePage_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca]" name="property" is-config="true" duration-ms="23160" started-at="2019-03-29T05:26:25Z" finished-at="2019-03-29T05:26:48Z">
+    <test name="Default test" duration-ms="22360" started-at="2019-03-29T14:08:13Z" finished-at="2019-03-29T14:08:35Z">
+      <class name="testCases_HomePageFranchisee.HomePage_TestCase">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="property" is-config="true" duration-ms="15035" started-at="2019-03-29T14:08:13Z" finished-at="2019-03-29T14:08:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checkMenubar()[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca]" name="checkMenubar" duration-ms="308" started-at="2019-03-29T05:26:48Z" finished-at="2019-03-29T05:26:48Z">
+        <test-method status="PASS" signature="checkMenubar()[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="checkMenubar" duration-ms="226" started-at="2019-03-29T14:08:28Z" finished-at="2019-03-29T14:08:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkMenubar -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-03-29T05:26:48Z" finished-at="2019-03-29T05:26:48Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-03-29T14:08:28Z" finished-at="2019-03-29T14:08:28Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkMenubar status=SUCCESS method=HomePage_TestCase.checkMenubar()[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca] output={null}]]]>
+                <![CDATA[[TestResult name=checkMenubar status=SUCCESS method=HomePage_TestCase.checkMenubar()[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca]" name="afterMethod" is-config="true" duration-ms="2315" started-at="2019-03-29T05:26:48Z" finished-at="2019-03-29T05:26:50Z">
+        <test-method status="PASS" signature="menuScreenCheck()[pri:1, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="menuScreenCheck" duration-ms="3753" started-at="2019-03-29T14:08:28Z" finished-at="2019-03-29T14:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- menuScreenCheck -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-03-29T14:08:32Z" finished-at="2019-03-29T14:08:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=menuScreenCheck status=SUCCESS method=HomePage_TestCase.menuScreenCheck()[pri:1, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="checkText()[pri:2, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="checkText" duration-ms="336" started-at="2019-03-29T14:08:32Z" finished-at="2019-03-29T14:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkText -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-03-29T14:08:32Z" finished-at="2019-03-29T14:08:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkText status=SUCCESS method=HomePage_TestCase.checkText()[pri:2, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="checkTable()[pri:3, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="checkTable" duration-ms="812" started-at="2019-03-29T14:08:32Z" finished-at="2019-03-29T14:08:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTable -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-03-29T14:08:33Z" finished-at="2019-03-29T14:08:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkTable status=SUCCESS method=HomePage_TestCase.checkTable()[pri:3, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="checkToolTip()[pri:4, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="checkToolTip" duration-ms="106" started-at="2019-03-29T14:08:33Z" finished-at="2019-03-29T14:08:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkToolTip -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-03-29T14:08:33Z" finished-at="2019-03-29T14:08:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkToolTip status=SUCCESS method=HomePage_TestCase.checkToolTip()[pri:4, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_HomePageFranchisee.HomePage_TestCase@335eadca]" name="afterMethod" is-config="true" duration-ms="2059" started-at="2019-03-29T14:08:33Z" finished-at="2019-03-29T14:08:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testCases_HomePage.HomePage_TestCase -->
+      </class> <!-- testCases_HomePageFranchisee.HomePage_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

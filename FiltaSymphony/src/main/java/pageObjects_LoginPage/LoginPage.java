@@ -22,13 +22,6 @@ public class LoginPage implements LoginPage_Interface {
 	private Properties Prop;
 	private Global global;
 
-	public LoginPage(WebDriver driver) {
-		global = new Global();
-		this.driver = driver;
-		Prop = global.readProperties();
-		PageFactory.initElements(driver, this);
-	}
-
 	@FindBy(how = How.XPATH, using = ".//select[@name='login_language']")
 	private WebElement Language;
 
@@ -61,6 +54,13 @@ public class LoginPage implements LoginPage_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//input[@title='Log In']")
 	private WebElement Login_Label;
+
+	public LoginPage(WebDriver driver) {
+		global = new Global();
+		this.driver = driver;
+		Prop = global.readProperties();
+		PageFactory.initElements(driver, this);
+	}
 
 	public void dropDown() {
 		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));

@@ -22,13 +22,6 @@ public class ForgetPassword implements ForgotPassword_Interface {
 	private boolean uname;
 	private boolean email;
 
-	public ForgetPassword(WebDriver driver) {
-		global = new Global();
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-		Prop = global.readProperties();
-	}
-
 	@FindBy(how = How.LINK_TEXT, using = "Forgot Password?")
 	private WebElement Forgot_Password;
 
@@ -52,6 +45,13 @@ public class ForgetPassword implements ForgotPassword_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='generate_pwd_button']")
 	private WebElement button;
+
+	public ForgetPassword(WebDriver driver) {
+		global = new Global();
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+		Prop = global.readProperties();
+	}
 
 	public void clickForgotPassword() {
 		Forgot_Password.click();

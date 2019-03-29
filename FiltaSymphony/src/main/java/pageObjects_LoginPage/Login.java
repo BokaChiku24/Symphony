@@ -19,13 +19,6 @@ public class Login implements Login_Interface {
 	Global global;
 	private Properties Prop;
 
-	public Login(WebDriver driver) {
-		global = new Global();
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-		Prop = global.readProperties();
-	}
-
 	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
 	private WebElement UserName;
 
@@ -37,6 +30,13 @@ public class Login implements Login_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='login']//tbody//tr[2]")
 	private WebElement ErrorMessage;
+
+	public Login(WebDriver driver) {
+		global = new Global();
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+		Prop = global.readProperties();
+	}
 
 	public void enterUserName(String Username) {
 		UserName.sendKeys(Username);

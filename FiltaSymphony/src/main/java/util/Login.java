@@ -13,6 +13,15 @@ public class Login {
 	private Global global;
 	private Properties prop;
 
+	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
+	private WebElement UserName;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='user_password']")
+	private WebElement Password;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
+	private WebElement Log_In;
+
 	public Login(WebDriver driver) {
 		this.driver = driver;
 		global = new Global();
@@ -21,17 +30,8 @@ public class Login {
 
 	}
 
-	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
-	private WebElement UserName;
-
-	@FindBy(how = How.XPATH, using = ".//input[@id='user_password']")
-	private WebElement Password;
-	
-	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
-	private WebElement Log_In;
-	
 	public void credentials() {
-		//prop = global.readProperties();
+		// prop = global.readProperties();
 		UserName.sendKeys(prop.getProperty("uname"));
 		Password.sendKeys(prop.getProperty("password"));
 		Log_In.click();
