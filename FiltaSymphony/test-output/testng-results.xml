@@ -1,111 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Symphony Testing" duration-ms="98463" started-at="2019-03-28T19:10:06Z" finished-at="2019-03-28T19:11:45Z">
+  <suite name="Default suite" duration-ms="25809" started-at="2019-03-29T05:26:25Z" finished-at="2019-03-29T05:26:50Z">
     <groups>
     </groups>
-    <test name="testngTest" duration-ms="98463" started-at="2019-03-28T19:10:06Z" finished-at="2019-03-28T19:11:45Z">
-      <class name="testCases_LoginPage.Login_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.Login_TestCase@57536d79]" name="property" is-config="true" duration-ms="18587" started-at="2019-03-28T19:10:06Z" finished-at="2019-03-28T19:10:25Z">
+    <test name="Default test" duration-ms="25809" started-at="2019-03-29T05:26:25Z" finished-at="2019-03-29T05:26:50Z">
+      <class name="testCases_HomePage.HomePage_TestCase">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca]" name="property" is-config="true" duration-ms="23160" started-at="2019-03-29T05:26:25Z" finished-at="2019-03-29T05:26:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="SignInTesting(java.lang.String, java.lang.String)[pri:0, instance:testCases_LoginPage.Login_TestCase@57536d79]" name="SignInTesting" duration-ms="18416" started-at="2019-03-28T19:10:25Z" data-provider="getData" finished-at="2019-03-28T19:10:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[KCAutomation]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Filtademo1]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="checkMenubar()[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca]" name="checkMenubar" duration-ms="308" started-at="2019-03-29T05:26:48Z" finished-at="2019-03-29T05:26:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SignInTesting -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_LoginPage.Login_TestCase@57536d79]" name="takeScreenShotOnFailure" is-config="true" duration-ms="3" started-at="2019-03-28T19:10:44Z" finished-at="2019-03-28T19:10:44Z">
+        </test-method> <!-- checkMenubar -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-03-29T05:26:48Z" finished-at="2019-03-29T05:26:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SignInTesting status=SUCCESS method=Login_TestCase.SignInTesting(java.lang.String, java.lang.String)[pri:0, instance:testCases_LoginPage.Login_TestCase@57536d79] output={null}]]]>
+                <![CDATA[[TestResult name=checkMenubar status=SUCCESS method=HomePage_TestCase.checkMenubar()[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_LoginPage.Login_TestCase@57536d79]" name="afterMethod" is-config="true" duration-ms="2147" started-at="2019-03-28T19:10:44Z" finished-at="2019-03-28T19:10:46Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_HomePage.HomePage_TestCase@335eadca]" name="afterMethod" is-config="true" duration-ms="2315" started-at="2019-03-29T05:26:48Z" finished-at="2019-03-29T05:26:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testCases_LoginPage.Login_TestCase -->
-      <class name="testCases_LoginPage.ForgetPassword_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@4b4523f8]" name="property" is-config="true" duration-ms="17798" started-at="2019-03-28T19:11:23Z" finished-at="2019-03-28T19:11:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- property -->
-        <test-method status="PASS" signature="forgotpassword()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@4b4523f8]" name="forgotpassword" duration-ms="4313" started-at="2019-03-28T19:11:40Z" finished-at="2019-03-28T19:11:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotpassword -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@4b4523f8]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-03-28T19:11:45Z" finished-at="2019-03-28T19:11:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=forgotpassword status=SUCCESS method=ForgetPassword_TestCase.forgotpassword()[pri:0, instance:testCases_LoginPage.ForgetPassword_TestCase@4b4523f8] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-      </class> <!-- testCases_LoginPage.ForgetPassword_TestCase -->
-      <class name="testCases_LoginPage.LoginInvalid_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.LoginInvalid_TestCase@5a8e6209]" name="property" is-config="true" duration-ms="17107" started-at="2019-03-28T19:11:04Z" finished-at="2019-03-28T19:11:21Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- property -->
-        <test-method status="PASS" signature="signInWithInvalidCredentails()[pri:0, instance:testCases_LoginPage.LoginInvalid_TestCase@5a8e6209]" name="signInWithInvalidCredentails" duration-ms="1678" started-at="2019-03-28T19:11:21Z" finished-at="2019-03-28T19:11:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signInWithInvalidCredentails -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_LoginPage.LoginInvalid_TestCase@5a8e6209]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-03-28T19:11:23Z" finished-at="2019-03-28T19:11:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=signInWithInvalidCredentails status=SUCCESS method=LoginInvalid_TestCase.signInWithInvalidCredentails()[pri:0, instance:testCases_LoginPage.LoginInvalid_TestCase@5a8e6209] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-      </class> <!-- testCases_LoginPage.LoginInvalid_TestCase -->
-      <class name="testCases_LoginPage.LoginPage_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@3b0143d3]" name="property" is-config="true" duration-ms="17938" started-at="2019-03-28T19:10:46Z" finished-at="2019-03-28T19:11:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- property -->
-        <test-method status="PASS" signature="checktext()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@3b0143d3]" name="checktext" duration-ms="46" started-at="2019-03-28T19:11:04Z" finished-at="2019-03-28T19:11:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checktext -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@3b0143d3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-03-28T19:11:04Z" finished-at="2019-03-28T19:11:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checktext status=SUCCESS method=LoginPage_TestCase.checktext()[pri:0, instance:testCases_LoginPage.LoginPage_TestCase@3b0143d3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-      </class> <!-- testCases_LoginPage.LoginPage_TestCase -->
-    </test> <!-- testngTest -->
-  </suite> <!-- Symphony Testing -->
+      </class> <!-- testCases_HomePage.HomePage_TestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

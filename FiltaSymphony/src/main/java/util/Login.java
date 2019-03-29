@@ -2,11 +2,11 @@ package util;
 
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 public class Login {
 	public WebDriver driver;
@@ -17,20 +17,23 @@ public class Login {
 		this.driver = driver;
 		global = new Global();
 		prop = global.readProperties();
+		PageFactory.initElements(driver, this);
+
 	}
 
-	public WebDriver credentials() {
-		//prop = global.readProperties();
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement element = wait.until(ExpectedConditions
-				.visibilityOfElementLocated(By.xpath(".//input[@placeholder='User Name' and @ng-model='username']")));
-		element.sendKeys(prop.getProperty("UserName"));
-		WebElement element2 = driver
-				.findElement(By.xpath(".//input[@placeholder='Password' and @ng-model='password']"));
-		element2.sendKeys(prop.getProperty("Password"));
-		WebElement element3 = driver.findElement(By.xpath(".//button[@ng-href='#/dashboard' and @href='#/dashboard']"));
-		element3.click();
-		return driver;
+	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
+	private WebElement UserName;
 
+	@FindBy(how = How.XPATH, using = ".//input[@id='user_password']")
+	private WebElement Password;
+	
+	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
+	private WebElement Log_In;
+	
+	public void credentials() {
+		//prop = global.readProperties();
+		UserName.sendKeys(prop.getProperty("uname"));
+		Password.sendKeys(prop.getProperty("password"));
+		Log_In.click();
 	}
 }

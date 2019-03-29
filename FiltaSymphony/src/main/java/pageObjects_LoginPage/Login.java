@@ -11,9 +11,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
+import helper.Login_Interface;
 import util.Global;
 
-public class Login {
+public class Login implements Login_Interface {
 	WebDriver driver;
 	Global global;
 	private Properties Prop;

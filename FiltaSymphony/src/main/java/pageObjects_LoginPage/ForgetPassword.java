@@ -12,10 +12,10 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import helper.ForgotPasswordInterface;
+import helper.ForgotPassword_Interface;
 import util.Global;
 
-public class ForgetPassword implements ForgotPasswordInterface {
+public class ForgetPassword implements ForgotPassword_Interface {
 	private WebDriver driver;
 	private Global global;
 	private Properties Prop;

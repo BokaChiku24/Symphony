@@ -5,10 +5,15 @@
     <classes>
       <class name="testCases_LoginPage.LoginPage_TestCase">
         <methods>
+          <include name="checkLabel"/>
           <include name="property"/>
+          <include name="checkTextBox"/>
+          <include name="checkURL"/>
           <include name="closeBrowser"/>
+          <include name="footerCheck"/>
           <include name="takeScreenShotOnFailure"/>
           <include name="checktext"/>
+          <include name="checkDropDown"/>
         </methods>
       </class> <!-- testCases_LoginPage.LoginPage_TestCase -->
     </classes>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Symphony Testing]">
+  <test thread-count="5" name="testngTest(failed)">
+    <classes>
+      <class name="testCases_LoginPage.ForgetPassword_TestCase">
+        <methods>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="property"/>
+          <include name="forgotpassword"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases_LoginPage.ForgetPassword_TestCase -->
+      <class name="testCases_LoginPage.LoginPage_TestCase">
+        <methods>
+          <include name="property"/>
+          <include name="closeBrowser"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="checktext"/>
+        </methods>
+      </class> <!-- testCases_LoginPage.LoginPage_TestCase -->
+      <class name="testCases_LoginPage.LoginInvalid_TestCase">
+        <methods>
+          <include name="signInWithInvalidCredentails"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="property"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- testCases_LoginPage.LoginInvalid_TestCase -->
+    </classes>
+  </test> <!-- testngTest(failed) -->
+</suite> <!-- Failed suite [Symphony Testing] -->

@@ -2,6 +2,8 @@ package pageObjects_LoginPage;
 
 import org.testng.Assert;
 
+import helper.LoginPage_Interface;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -15,7 +17,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import util.Global;
 
-public class LoginPage {
+public class LoginPage implements LoginPage_Interface {
 	private WebDriver driver;
 	private Properties Prop;
 	private Global global;
