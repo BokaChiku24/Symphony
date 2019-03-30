@@ -114,6 +114,27 @@ public class HomePage implements HomePage_Interface {
 	@FindBy(how = How.XPATH, using = ".//a[@id='chartCategoryAnchor']")
 	private WebElement tapNameWidget2;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='searchResults']//h4")
+	private WebElement searchResult;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='searchResults']//h4//i")
+	private WebElement searchResultTwo;
+
+	@FindBy(how = How.XPATH, using = ".//a[@class='mbLBLL' and text()='1k Reported Volumes']")
+	private WebElement searchResult2;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='dashletsDialogHeader']")
+	private WebElement addLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='moduleDashlets']//h3")
+	private WebElement ModuleLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='chartDashlets']//h3")
+	private WebElement basicChartlabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='searchResults']//h4")
+	private WebElement basicChartSearchResult;
+
 	public HomePage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -232,7 +253,7 @@ public class HomePage implements HomePage_Interface {
 	public void checkText() {
 		Assert.assertEquals(email_summary.getText(), Prop.getProperty("HomeText1"));
 		Assert.assertEquals(email_summary2.getText(), Prop.getProperty("HomeText2"));
-		System.out.println("Test => " + email_summary3.getText());
+//		System.out.println("Test => " + email_summary3.getText());
 		Assert.assertEquals(email_summary3.getText(), Prop.getProperty("HomeText3"));
 		Assert.assertEquals(homeText.getText(), Prop.getProperty("HomeText4"));
 		Assert.assertEquals(Customerlabel.getText(), Prop.getProperty("HomeCustomerLabel"));
@@ -320,6 +341,44 @@ public class HomePage implements HomePage_Interface {
 		for (int i = 0; i < list.size(); i++) {
 			Assert.assertEquals(list.get(i).getText(), " " + Prop.getProperty("Module" + i));
 		}
+		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("Modules")));
+
+		searchButton.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(searchResult));
+
+//		To scroll till any element
+		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
+		Assert.assertEquals(searchResult.getText(), Prop.getProperty("SearchResult"));
+		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchWidet);
+		searchWidet.sendKeys(Prop.getProperty("SearchModule"));
+		searchButton.click();
+		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
+		global.wait(driver).until(ExpectedConditions.visibilityOf(searchResultTwo));
+//		System.out.println(searchResult.getText());
+		Assert.assertEquals(searchResult.getText(), Prop.getProperty("SearchResult2"));
+		Assert.assertEquals(searchResult2.getText(), Prop.getProperty("SearchModule"));
+		Assert.assertEquals(searchResult2.isDisplayed(), true);
+		Assert.assertEquals(addLabel.getText().replace(" ", ""), Prop.getProperty("AddLabel"));
+		Assert.assertEquals(ModuleLabel.getText(), Prop.getProperty("ModuleLabel"));
+
+		tapNameWidget2.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(basicChartlabel));
+		Assert.assertEquals(basicChartlabel.getText().replaceFirst(" ", ""), Prop.getProperty("BasicChartlabel"));
+		list = driver.findElements(By.xpath(".//div[@id='basicChartDashletsList']//tr//td//a[2]"));
+//		for (int i = 0; i < list.size(); i++) {
+//			System.out.println(list.get(i).getText());
+//		}
+		for (int i = 0; i < list.size(); i++) {
+			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("BasicChart" + i));
+		}
+		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("BasicChartSize")));
+		searchButton.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(basicChartSearchResult));
+		Assert.assertEquals(basicChartSearchResult.getText(), Prop.getProperty("SearchResultChart"));
+		tapNameWidget2.click();
+		searchWidet.sendKeys(Prop.getProperty("SearchBasicChart"));
+		searchButton.click();
+
 	}
 
 	public void waitLoader() {
