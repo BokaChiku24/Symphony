@@ -77,6 +77,12 @@ public class HomePage_TestCase {
 		Homepage.toolTipCheck();
 	}
 
+	@Test(priority = 5)
+	public void checkWidget() {
+		log.info("Check Widget On Home Page");
+		Homepage.widgetTesting();
+	}
+
 	@AfterMethod
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
@@ -89,6 +95,6 @@ public class HomePage_TestCase {
 	@AfterClass
 	public void afterMethod() {
 		log.info("Home Page Test Case Ends Here");
-		Homepage.closeBrowser();
+		// Homepage.closeBrowser();
 	}
 }

@@ -87,6 +87,33 @@ public class HomePage implements HomePage_Interface {
 	@FindBy(how = How.XPATH, using = ".//a[@href='index.php?module=IM_NCA&action=frindex']")
 	private WebElement myFranchiseelabel;
 
+	@FindBy(how = How.XPATH, using = ".//a[@href='index.php?module=Home&action=index&type=widget']")
+	private WebElement homeDashletlabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='main']//div[@id='content']//tr/td//div[@id='pageNum_0_div'][1]/table/tbody/tr[1]/td[3]/span[5]/a[2]")
+	private WebElement homeDashletlabel2;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='main']//div[@id='content']//tr/td//div[@id='pageNum_0_div'][1]/table/tbody/tr[1]/td[3]/span[1]")
+	private WebElement homeDashletlabel3;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='dashletsDialog']")
+	private WebElement dashletDialog;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='search_string']")
+	private WebElement searchWidet;
+
+	@FindBy(how = How.XPATH, using = ".//input[@value='Search']")
+	private WebElement searchButton;
+
+	@FindBy(how = How.XPATH, using = ".//input[@value='Clear']")
+	private WebElement clearButton;
+
+	@FindBy(how = How.XPATH, using = ".//a[@id='moduleCategoryAnchor']")
+	private WebElement tapNameWidget1;
+
+	@FindBy(how = How.XPATH, using = ".//a[@id='chartCategoryAnchor']")
+	private WebElement tapNameWidget2;
+
 	public HomePage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -205,22 +232,25 @@ public class HomePage implements HomePage_Interface {
 	public void checkText() {
 		Assert.assertEquals(email_summary.getText(), Prop.getProperty("HomeText1"));
 		Assert.assertEquals(email_summary2.getText(), Prop.getProperty("HomeText2"));
-		// System.out.println("Test => " + email_summary3.getText());
+		System.out.println("Test => " + email_summary3.getText());
 		Assert.assertEquals(email_summary3.getText(), Prop.getProperty("HomeText3"));
 		Assert.assertEquals(homeText.getText(), Prop.getProperty("HomeText4"));
 		Assert.assertEquals(Customerlabel.getText(), Prop.getProperty("HomeCustomerLabel"));
 		Assert.assertEquals(NCALabel.getText(), Prop.getProperty("HomeNCALabel"));
 		Assert.assertEquals(Leadlabel.getText(), Prop.getProperty("HomeLeadLabel"));
 		Assert.assertEquals(FiltaBiolabel.getText(), Prop.getProperty("HomeFiltaBioLabel"));
-		Assert.assertEquals(Techhiringlabel.getText() + " ", Prop.getProperty("HomeTechLabel"));
-		Assert.assertEquals(filtaGoldlabel.getText() + " ", Prop.getProperty("HomeFiltaGoldlabel"));
+		Assert.assertEquals(Techhiringlabel.getText(), Prop.getProperty("HomeTechLabel"));
+		Assert.assertEquals(filtaGoldlabel.getText(), Prop.getProperty("HomeFiltaGoldlabel"));
 		Assert.assertEquals(myFranchiseelabel.getText(), Prop.getProperty("HomeMyFranchiseelabel"));
+		Assert.assertEquals(homeDashletlabel.getText(), Prop.getProperty("HomeDashletlabel"));
 
 	}
 
 	public void tableTest() {
 		List<WebElement> list = driver.findElements(By.xpath(".//table[@id='campaignerData']//tbody//tr"));
 		List<WebElement> list2 = driver.findElements(By.xpath(".//table[@id='campaignerData']//tbody//tr[1]//th"));
+		global.wait(driver).until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath(".//table[@id='campaignerData']//tbody//tr")));
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("HomeTable1Rows")));
 		Assert.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("HomeTable1Column")));
 
@@ -264,6 +294,32 @@ public class HomePage implements HomePage_Interface {
 		Assert.assertEquals(leadToolTip3.getAttribute("title"), Prop.getProperty("HomeLeadTooltip3"));
 		Assert.assertEquals(leadToolTip4.getAttribute("title"), Prop.getProperty("HomeLeadTooltip4"));
 		Assert.assertEquals(filtagoldToolTip.getAttribute("title"), Prop.getProperty("HomeFiltaGoldToolTip1"));
+	}
+
+	public void widgetTesting() {
+		driver.get("https://dev.filtasymphony.com/index.php?module=Home&action=index&type=widget");
+		Assert.assertEquals(homeDashletlabel2.getText(), Prop.getProperty("HomeDashletlabel2"));
+		Assert.assertEquals(homeDashletlabel2.isDisplayed(), true);
+		Assert.assertEquals(homeDashletlabel3.getText(), Prop.getProperty("HomeDashletlabel3"));
+		Assert.assertEquals(homeDashletlabel3.isDisplayed(), true);
+		homeDashletlabel2.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(dashletDialog));
+		Assert.assertEquals(searchWidet.isEnabled(), true);
+		Assert.assertEquals(searchButton.getAttribute("value"), Prop.getProperty("HomeDashletSearchButtonLabel"));
+		Assert.assertEquals(clearButton.getAttribute("value"), Prop.getProperty("HomeDashletClearButtonLabel"));
+		Assert.assertEquals(searchButton.isDisplayed(), true);
+		Assert.assertEquals(clearButton.isDisplayed(), true);
+		Assert.assertEquals(tapNameWidget1.getText(), Prop.getProperty("tapNameWidget1"));
+		Assert.assertEquals(tapNameWidget2.getText(), Prop.getProperty("tapNameWidget2"));
+		List<WebElement> list = driver.findElements(By.xpath(
+				".//div[@class='yui-panel-container yui-dialog shadow']//div[@id='moduleDashletsList']//tbody//tr//td"));
+//		for (int i = 0; i < list.size(); i++) {
+//			System.out.println(list.get(i).getText());
+//		}
+
+		for (int i = 0; i < list.size(); i++) {
+			Assert.assertEquals(list.get(i).getText(), " " + Prop.getProperty("Module" + i));
+		}
 	}
 
 	public void waitLoader() {
