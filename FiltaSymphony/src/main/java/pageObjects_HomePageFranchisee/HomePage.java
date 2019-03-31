@@ -23,6 +23,7 @@ public class HomePage implements HomePage_Interface {
 	private WebDriver driver;
 	private Properties Prop;
 	private Login login;
+	private StringBuffer BottomTextReplace;
 
 	@FindBy(how = How.XPATH, using = ".//select[@name='login_language']")
 	private WebElement Language;
@@ -134,6 +135,39 @@ public class HomePage implements HomePage_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='searchResults']//h4")
 	private WebElement basicChartSearchResult;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='searchResults']//h4//i")
+	private WebElement basicChartSearchResult2;
+
+	@FindBy(how = How.XPATH, using = ".//div[@class='container-close']")
+	private WebElement closeWidget;
+
+	@FindBy(how = How.XPATH, using = ".//p[@class='error']")
+	private WebElement redColor;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='bottomLinks']//a[1 and text()=' Print']")
+	private WebElement bottomText1;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='bottomLinks']//a[2 and text()=' Back to top']")
+	private WebElement bottomText2;
+
+	@FindBy(how = How.XPATH, using = ".//a[@href='LICENSE.txt' and text()='AGPLv3']")
+	private WebElement link1;
+
+	@FindBy(how = How.XPATH, using = ".//a[@href='LICENSE.txt' and text()=' GNU Affero General Public License version 3']")
+	private WebElement link2;
+
+	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
+	private WebElement topText1;
+
+	@FindBy(how = How.XPATH, using = ".//a[@id='filtastore_link']")
+	private WebElement topText2;
+
+	@FindBy(how = How.XPATH, using = ".//a[@id='admin_link']")
+	private WebElement topText3;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='ajaxHeader']//div[@id='lastView']//b")
+	private WebElement lastViewText;
 
 	public HomePage(WebDriver driver) {
 		global = new Global();
@@ -264,7 +298,13 @@ public class HomePage implements HomePage_Interface {
 		Assert.assertEquals(filtaGoldlabel.getText(), Prop.getProperty("HomeFiltaGoldlabel"));
 		Assert.assertEquals(myFranchiseelabel.getText(), Prop.getProperty("HomeMyFranchiseelabel"));
 		Assert.assertEquals(homeDashletlabel.getText(), Prop.getProperty("HomeDashletlabel"));
-
+		Assert.assertEquals(bottomText1.getText().replace(" ", ""), Prop.getProperty("BttomText"));
+		BottomTextReplace = new StringBuffer(bottomText2.getText());
+		Assert.assertEquals(BottomTextReplace.replace(0, 0, "").toString(), Prop.getProperty("BttomText2"));
+		Assert.assertEquals(topText1.getText(), Prop.getProperty("topText1"));
+		Assert.assertEquals(topText2.getText(), Prop.getProperty("topText2"));
+		Assert.assertEquals(topText3.getText(), Prop.getProperty("topText3"));
+		Assert.assertEquals(lastViewText.getText(), Prop.getProperty("lastViewText") + "  ");
 	}
 
 	public void tableTest() {
@@ -352,14 +392,19 @@ public class HomePage implements HomePage_Interface {
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchWidet);
 		searchWidet.sendKeys(Prop.getProperty("SearchModule"));
 		searchButton.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(searchResult));
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
-		global.wait(driver).until(ExpectedConditions.visibilityOf(searchResultTwo));
-//		System.out.println(searchResult.getText());
+		global.wait(driver)
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@id='searchResults']//h4//i")));
 		Assert.assertEquals(searchResult.getText(), Prop.getProperty("SearchResult2"));
 		Assert.assertEquals(searchResult2.getText(), Prop.getProperty("SearchModule"));
 		Assert.assertEquals(searchResult2.isDisplayed(), true);
 		Assert.assertEquals(addLabel.getText().replace(" ", ""), Prop.getProperty("AddLabel"));
 		Assert.assertEquals(ModuleLabel.getText(), Prop.getProperty("ModuleLabel"));
+		if (searchWidet.getAttribute("value").isEmpty() == false) {
+			searchWidet.clear();
+			Assert.assertEquals(searchWidet.getText().isEmpty(), true);
+		}
 
 		tapNameWidget2.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(basicChartlabel));
@@ -378,6 +423,27 @@ public class HomePage implements HomePage_Interface {
 		tapNameWidget2.click();
 		searchWidet.sendKeys(Prop.getProperty("SearchBasicChart"));
 		searchButton.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(basicChartSearchResult2));
+		Assert.assertEquals(basicChartSearchResult.getText(), Prop.getProperty("SearchBasicChartResult"));
+		if (searchWidet.getAttribute("value").isEmpty() == false) {
+			searchWidet.clear();
+			Assert.assertEquals(searchWidet.getText().isEmpty(), true);
+		}
+		closeWidget.click();
+	}
+
+	public void colorCheck() {
+		Assert.assertEquals(redColor.getCssValue("color"), Prop.getProperty("TextColor"));
+		Assert.assertEquals(bottomText1.getCssValue("color"), Prop.getProperty("BottomTextColor"));
+		Assert.assertEquals(bottomText2.getCssValue("color"), Prop.getProperty("BottomTextColor"));
+		Assert.assertEquals(link1.getCssValue("color"), Prop.getProperty("LinkColor"));
+		Assert.assertEquals(topText1.getCssValue("color"), Prop.getProperty("LinkColor"));
+		Assert.assertEquals(topText2.getCssValue("color"), Prop.getProperty("LinkColor"));
+		Assert.assertEquals(topText3.getCssValue("color"), Prop.getProperty("LinkColor"));
+		Assert.assertEquals(lastViewText.getCssValue("color"), Prop.getProperty("LastViewColor"));
+	}
+
+	public void checkUserNameOnHomePage() {
 
 	}
 

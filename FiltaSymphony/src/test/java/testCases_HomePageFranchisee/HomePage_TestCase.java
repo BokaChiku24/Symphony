@@ -83,6 +83,17 @@ public class HomePage_TestCase {
 		Homepage.widgetTesting();
 	}
 
+	@Test(priority = 6)
+	public void checkColor() {
+		log.info("Check Color On Home Page");
+		Homepage.colorCheck();
+	}
+
+	@Test(priority = 7)
+	public void checkUserNameOnHomePage() {
+
+	}
+
 	@AfterMethod
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {

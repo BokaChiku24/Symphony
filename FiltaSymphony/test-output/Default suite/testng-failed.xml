@@ -6,9 +6,9 @@
       <class name="testCases_HomePageFranchisee.HomePage_TestCase">
         <methods>
           <include name="takeScreenShotOnFailure"/>
-          <include name="checkWidget"/>
           <include name="afterMethod"/>
           <include name="property"/>
+          <include name="checkText"/>
         </methods>
       </class> <!-- testCases_HomePageFranchisee.HomePage_TestCase -->
     </classes>
