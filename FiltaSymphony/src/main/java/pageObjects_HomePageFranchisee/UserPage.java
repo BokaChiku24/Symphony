@@ -225,6 +225,16 @@ public class UserPage implements UserPage_Interface {
 		// }
 		for (int i = 0; i < list.size(); i++) {
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("TabOnEditPage" + i));
+			if (list.get(i).getAttribute("class").equals(Prop.getProperty("userPageClass"))) {
+				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorBlue"));
+			} else if (list.get(i).getAttribute("class").equals("")
+					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey2"))) {
+				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey2"));
+			} else if (list.get(i).getAttribute("class").equals("")
+					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey"))) {
+				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
+			}
+			//System.out.println(i + " => " + list.get(i).getCssValue("color"));
 		}
 		// Count of tabs Assertion
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("TabOnEditPageCount")));
@@ -235,6 +245,11 @@ public class UserPage implements UserPage_Interface {
 
 		for (int i = 0; i < list2.size(); i++) {
 			Assert.assertEquals(list2.get(i).getText(), Prop.getProperty("TabOnUserPage" + i));
+			if (list2.get(i).getAttribute("class").equals(Prop.getProperty("userPageClass"))) {
+				Assert.assertEquals(list2.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorBlue"));
+			} else if (list2.get(i).getAttribute("class").equals("")) {
+				Assert.assertEquals(list2.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
+			}
 		}
 		Assert.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("TabOnUserPageCount")));
 
