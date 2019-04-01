@@ -91,7 +91,8 @@ public class HomePage_TestCase {
 
 	@Test(priority = 7)
 	public void checkUserNameOnHomePage() {
-
+		log.info("Check User Name On Home Page");
+		Homepage.checkUserNameOnHomePage();
 	}
 
 	@AfterMethod
@@ -106,6 +107,6 @@ public class HomePage_TestCase {
 	@AfterClass
 	public void afterMethod() {
 		log.info("Home Page Test Case Ends Here");
-		// Homepage.closeBrowser();
+		Homepage.closeBrowser();
 	}
 }

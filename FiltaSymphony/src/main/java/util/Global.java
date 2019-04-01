@@ -19,6 +19,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -211,6 +212,11 @@ public class Global {
 		String Message = alert.getText();
 		alert.accept();
 		return Message;
+	}
+
+	public Actions action(WebDriver driver) {
+		Actions action = new Actions(driver);
+		return action;
 	}
 
 	public JavascriptExecutor jsReturn(WebDriver driver) {

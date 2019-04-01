@@ -24,6 +24,7 @@ public class HomePage implements HomePage_Interface {
 	private Properties Prop;
 	private Login login;
 	private StringBuffer BottomTextReplace;
+	private String UserNameOnUserPage;
 
 	@FindBy(how = How.XPATH, using = ".//select[@name='login_language']")
 	private WebElement Language;
@@ -169,6 +170,12 @@ public class HomePage implements HomePage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='ajaxHeader']//div[@id='lastView']//b")
 	private WebElement lastViewText;
 
+	@FindBy(how = How.XPATH, using = ".//div[@class='moduleTitle']//h2")
+	private WebElement getUserName;
+
+	@FindBy(how = How.XPATH, using = ".//div[@class='user']")
+	private WebElement getHomeUserName;
+
 	public HomePage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -287,7 +294,7 @@ public class HomePage implements HomePage_Interface {
 	public void checkText() {
 		Assert.assertEquals(email_summary.getText(), Prop.getProperty("HomeText1"));
 		Assert.assertEquals(email_summary2.getText(), Prop.getProperty("HomeText2"));
-//		System.out.println("Test => " + email_summary3.getText());
+		// System.out.println("Test => " + email_summary3.getText());
 		Assert.assertEquals(email_summary3.getText(), Prop.getProperty("HomeText3"));
 		Assert.assertEquals(homeText.getText(), Prop.getProperty("HomeText4"));
 		Assert.assertEquals(Customerlabel.getText(), Prop.getProperty("HomeCustomerLabel"));
@@ -374,9 +381,9 @@ public class HomePage implements HomePage_Interface {
 		Assert.assertEquals(tapNameWidget2.getText(), Prop.getProperty("tapNameWidget2"));
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@class='yui-panel-container yui-dialog shadow']//div[@id='moduleDashletsList']//tbody//tr//td"));
-//		for (int i = 0; i < list.size(); i++) {
-//			System.out.println(list.get(i).getText());
-//		}
+		// for (int i = 0; i < list.size(); i++) {
+		// System.out.println(list.get(i).getText());
+		// }
 
 		for (int i = 0; i < list.size(); i++) {
 			Assert.assertEquals(list.get(i).getText(), " " + Prop.getProperty("Module" + i));
@@ -386,7 +393,7 @@ public class HomePage implements HomePage_Interface {
 		searchButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(searchResult));
 
-//		To scroll till any element
+		// To scroll till any element
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
 		Assert.assertEquals(searchResult.getText(), Prop.getProperty("SearchResult"));
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchWidet);
@@ -410,9 +417,9 @@ public class HomePage implements HomePage_Interface {
 		global.wait(driver).until(ExpectedConditions.visibilityOf(basicChartlabel));
 		Assert.assertEquals(basicChartlabel.getText().replaceFirst(" ", ""), Prop.getProperty("BasicChartlabel"));
 		list = driver.findElements(By.xpath(".//div[@id='basicChartDashletsList']//tr//td//a[2]"));
-//		for (int i = 0; i < list.size(); i++) {
-//			System.out.println(list.get(i).getText());
-//		}
+		// for (int i = 0; i < list.size(); i++) {
+		// System.out.println(list.get(i).getText());
+		// }
 		for (int i = 0; i < list.size(); i++) {
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("BasicChart" + i));
 		}
@@ -444,7 +451,16 @@ public class HomePage implements HomePage_Interface {
 	}
 
 	public void checkUserNameOnHomePage() {
-
+		topText1.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		UserNameOnUserPage = getUserName.getText();
+		driver.navigate().back();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(getHomeUserName));
+		// System.out.println(getHomeUserName.getText());
+		// System.out.println(Prop.getProperty("Welcome") + " " + UserNameOnUserPage + "
+		// ! " + Prop.getProperty("Logout"));
+		Assert.assertEquals(getHomeUserName.getText(),
+				Prop.getProperty("Welcome") + " " + UserNameOnUserPage + " !  " + Prop.getProperty("Logout"));
 	}
 
 	public void waitLoader() {
