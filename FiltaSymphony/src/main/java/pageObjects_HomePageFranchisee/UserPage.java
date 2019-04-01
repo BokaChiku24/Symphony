@@ -9,18 +9,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-import helper.HomePage_Interface;
 import helper.UserPage_Interface;
 import util.Login;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import util.Global;
-import org.openqa.selenium.WebDriver;
-
-import util.Global;
-import util.Login;
 
 public class UserPage implements UserPage_Interface {
 	private Global global;
@@ -225,8 +219,25 @@ public class UserPage implements UserPage_Interface {
 	}
 
 	public void tabnamesCheck() {
-		Assert.assertEquals(Tab1OnEditPage.getText(), Prop.getProperty("TabOnEditPage"));
-		System.out.println(Tab1OnEditPage.getCssValue("color"));
+		List<WebElement> list = driver.findElements(By.xpath(".//ul[@class='yui-nav']//li//a//em"));
+		// for (int i = 0; i < list.size(); i++) {
+		// System.out.println(list.get(i).getText());
+		// }
+		for (int i = 0; i < list.size(); i++) {
+			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("TabOnEditPage" + i));
+		}
+		// Count of tabs Assertion
+		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("TabOnEditPageCount")));
+		CancelButtonHeader.click();
+		global.wait(driver)
+				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//ul[@class='yui-nav']//li")));
+		List<WebElement> list2 = driver.findElements(By.xpath(".//ul[@class='yui-nav']//li"));
+
+		for (int i = 0; i < list2.size(); i++) {
+			Assert.assertEquals(list2.get(i).getText(), Prop.getProperty("TabOnUserPage" + i));
+		}
+		Assert.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("TabOnUserPageCount")));
+
 	}
 
 	public void closeBrowser() {
