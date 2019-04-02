@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases_HomePageFranchisee.UserPage_TestCase">
+      <class name="testCases_LoginPage.LoginPage_TestCase">
         <methods>
-          <include name="afterMethod"/>
           <include name="property"/>
-          <include name="tabnamesCheck"/>
+          <include name="closeBrowser"/>
           <include name="takeScreenShotOnFailure"/>
+          <include name="checktext"/>
         </methods>
-      </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
+      </class> <!-- testCases_LoginPage.LoginPage_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

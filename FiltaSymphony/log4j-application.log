@@ -2023,4 +2023,146 @@
  2019-04-01 23:13:24,679  INFO [main] User Page Test Case:66 - Check Button ToolTip On User Page
  2019-04-01 23:13:27,629  INFO [main] User Page Test Case:72 - Check Tab Name On User Page
  2019-04-01 23:13:31,665  INFO [main] User Page Test Case:87 - User Page Test Case Ends Here
+ 2019-04-02 09:34:05,786  INFO [main] User Page Test Case:42 - Check URL Of User Page
+ 2019-04-02 09:36:40,618  INFO [main] User Page Test Case:42 - Check URL Of User Page
+ 2019-04-02 09:38:35,570  INFO [main] User Page Test Case:48 - Check Button Name On User Page
+ 2019-04-02 09:38:38,311  INFO [main] User Page Test Case:54 - Check Button Color Without Mouse Overview On User Page
+ 2019-04-02 09:38:40,655  INFO [main] User Page Test Case:60 - Check Button Color With Mouse Overview On User Page
+ 2019-04-02 09:38:43,016  INFO [main] User Page Test Case:66 - Check Button ToolTip On User Page
+ 2019-04-02 09:38:44,866  INFO [main] User Page Test Case:72 - Check Tab Name On User Page
+ 2019-04-02 09:38:47,320  INFO [main] User Page Test Case:87 - User Page Test Case Ends Here
+ 2019-04-02 09:54:28,354  INFO [main] Sign In Test Case:70 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 09:54:35,390  INFO [main] Sign In Test Case:89 - Sign In Test Case Ends Here
+ 2019-04-02 10:14:12,160  INFO [main] Sign In Test Case:84 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 10:14:14,198  INFO [main] Sign In Test Case:120 - Sign In Test Case Ends Here
+ 2019-04-02 10:18:38,945  INFO [main] Sign In Test Case:84 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 10:18:40,874  INFO [main] Sign In Test Case:120 - Sign In Test Case Ends Here
+ 2019-04-02 10:20:04,159  INFO [main] Sign In Test Case:84 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 10:20:06,340  INFO [main] Sign In Test Case:120 - Sign In Test Case Ends Here
+ 2019-04-02 10:24:39,712  INFO [main] Sign In Test Case:84 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 10:51:17,481  INFO [main] Sign In Test Case:91 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 10:51:20,138  INFO [main] Sign In Test Case:127 - Sign In Test Case Ends Here
+ 2019-04-02 10:57:21,924  INFO [main] Sign In Test Case:91 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 10:57:24,403  INFO [main] Sign In Test Case:127 - Sign In Test Case Ends Here
+ 2019-04-02 10:59:13,790  INFO [main] Sign In Test Case:91 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:00:36,306  INFO [main] Sign In Test Case:91 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:08:22,351  INFO [main] Sign In Test Case:90 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:08:25,247  INFO [main] Sign In Test Case:125 - Sign In Test Case Ends Here
+ 2019-04-02 11:11:38,459  INFO [main] Sign In Test Case:90 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:11:40,470  INFO [main] Sign In Test Case:125 - Sign In Test Case Ends Here
+ 2019-04-02 11:22:31,299  INFO [main] Sign In Test Case:90 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:22:33,306  INFO [main] Sign In Test Case:125 - Sign In Test Case Ends Here
+ 2019-04-02 11:24:20,139  INFO [main] Sign In Test Case:90 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:24:22,151  INFO [main] Sign In Test Case:125 - Sign In Test Case Ends Here
+ 2019-04-02 11:26:47,604  INFO [main] Sign In Test Case:90 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:26:49,559  INFO [main] Sign In Test Case:125 - Sign In Test Case Ends Here
+ 2019-04-02 11:28:00,627  INFO [main] Sign In Test Case:90 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:28:02,570  INFO [main] Sign In Test Case:125 - Sign In Test Case Ends Here
+ 2019-04-02 11:32:37,381  INFO [main] Sign In Test Case:90 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:32:39,309  INFO [main] Sign In Test Case:125 - Sign In Test Case Ends Here
+ 2019-04-02 11:42:27,665  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:42:29,752  INFO [main] Sign In Test Case:122 - Sign In Test Case Ends Here
+ 2019-04-02 11:44:32,551  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:44:34,547  INFO [main] Sign In Test Case:122 - Sign In Test Case Ends Here
+ 2019-04-02 11:56:12,345  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:56:14,284  INFO [main] Sign In Test Case:123 - Sign In Test Case Ends Here
+ 2019-04-02 11:57:40,842  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:57:42,813  INFO [main] Sign In Test Case:123 - Sign In Test Case Ends Here
+ 2019-04-02 11:59:02,896  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 11:59:04,891  INFO [main] Sign In Test Case:123 - Sign In Test Case Ends Here
+ 2019-04-02 12:13:22,701  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 12:13:24,883  INFO [main] Sign In Test Case:123 - Sign In Test Case Ends Here
+ 2019-04-02 12:15:19,225  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 12:15:21,415  INFO [main] Sign In Test Case:123 - Sign In Test Case Ends Here
+ 2019-04-02 12:17:11,517  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 12:17:14,394  INFO [main] Sign In Test Case:123 - Sign In Test Case Ends Here
+ 2019-04-02 12:22:27,178  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 12:22:29,308  INFO [main] Sign In Test Case:122 - Sign In Test Case Ends Here
+ 2019-04-02 12:50:16,573  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 12:50:19,192  INFO [main] Sign In Test Case:124 - Sign In Test Case Ends Here
+ 2019-04-02 12:52:38,052  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 12:52:39,953  INFO [main] Sign In Test Case:124 - Sign In Test Case Ends Here
+ 2019-04-02 12:58:41,103  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 12:58:43,269  INFO [main] Sign In Test Case:124 - Sign In Test Case Ends Here
+ 2019-04-02 13:05:04,225  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 13:05:06,161  INFO [main] Sign In Test Case:124 - Sign In Test Case Ends Here
+ 2019-04-02 13:06:31,257  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 13:06:33,217  INFO [main] Sign In Test Case:124 - Sign In Test Case Ends Here
+ 2019-04-02 13:42:25,807  INFO [main] Sign In Test Case:87 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 13:42:27,704  INFO [main] Sign In Test Case:124 - Sign In Test Case Ends Here
+ 2019-04-02 13:54:29,726  INFO [main] Sign In Test Case:98 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 13:54:31,696  INFO [main] Sign In Test Case:148 - Sign In Test Case Ends Here
+ 2019-04-02 13:57:05,362  INFO [main] Sign In Test Case:98 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 13:57:07,501  INFO [main] Sign In Test Case:148 - Sign In Test Case Ends Here
+ 2019-04-02 13:59:37,814  INFO [main] Sign In Test Case:98 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 13:59:39,780  INFO [main] Sign In Test Case:149 - Sign In Test Case Ends Here
+ 2019-04-02 14:00:42,912  INFO [main] Sign In Test Case:98 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 14:00:44,856  INFO [main] Sign In Test Case:149 - Sign In Test Case Ends Here
+ 2019-04-02 14:03:18,830  INFO [main] Sign In Test Case:98 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 14:03:20,782  INFO [main] Sign In Test Case:149 - Sign In Test Case Ends Here
+ 2019-04-02 14:05:06,204  INFO [main] Sign In Test Case:98 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 14:05:08,157  INFO [main] Sign In Test Case:147 - Sign In Test Case Ends Here
+ 2019-04-02 14:24:24,980  INFO [main] Sign In With Invalid Credentials Test Case:70 - Test Case :check Login functionality with invalid credentials
+ 2019-04-02 14:24:26,988  INFO [main] Sign In With Invalid Credentials Test Case:80 - Test Case :check Login functionality without credentials
+ 2019-04-02 14:24:28,917  INFO [main] Sign In With Invalid Credentials Test Case:91 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:24:32,081  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:24:34,019  INFO [main] Sign In With Invalid Credentials Test Case:136 - Sign In Test Case Ends Here
+ 2019-04-02 14:27:19,354  INFO [main] Sign In With Invalid Credentials Test Case:70 - Test Case :check Login functionality with invalid credentials
+ 2019-04-02 14:27:21,407  INFO [main] Sign In With Invalid Credentials Test Case:80 - Test Case :check Login functionality without credentials
+ 2019-04-02 14:27:23,322  INFO [main] Sign In With Invalid Credentials Test Case:91 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:27:25,244  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:27:27,275  INFO [main] Sign In With Invalid Credentials Test Case:135 - Sign In Test Case Ends Here
+ 2019-04-02 14:28:42,487  INFO [main] Sign In With Invalid Credentials Test Case:70 - Test Case :check Login functionality with invalid credentials
+ 2019-04-02 14:28:44,484  INFO [main] Sign In With Invalid Credentials Test Case:80 - Test Case :check Login functionality without credentials
+ 2019-04-02 14:28:46,365  INFO [main] Sign In With Invalid Credentials Test Case:91 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:28:48,323  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:28:50,316  INFO [main] Sign In With Invalid Credentials Test Case:135 - Sign In Test Case Ends Here
+ 2019-04-02 14:30:46,064  INFO [main] Sign In With Invalid Credentials Test Case:70 - Test Case :check Login functionality with invalid credentials
+ 2019-04-02 14:30:48,070  INFO [main] Sign In With Invalid Credentials Test Case:80 - Test Case :check Login functionality without credentials
+ 2019-04-02 14:30:49,939  INFO [main] Sign In With Invalid Credentials Test Case:91 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:30:51,915  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:30:53,836  INFO [main] Sign In With Invalid Credentials Test Case:135 - Sign In Test Case Ends Here
+ 2019-04-02 14:32:41,871  INFO [main] Sign In With Invalid Credentials Test Case:70 - Test Case :check Login functionality with invalid credentials
+ 2019-04-02 14:32:44,071  INFO [main] Sign In With Invalid Credentials Test Case:80 - Test Case :check Login functionality without credentials
+ 2019-04-02 14:32:46,505  INFO [main] Sign In With Invalid Credentials Test Case:91 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:32:49,130  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:32:51,251  INFO [main] Sign In With Invalid Credentials Test Case:135 - Sign In Test Case Ends Here
+ 2019-04-02 14:34:59,865  INFO [main] Sign In With Invalid Credentials Test Case:70 - Test Case :check Login functionality with invalid credentials
+ 2019-04-02 14:35:01,861  INFO [main] Sign In With Invalid Credentials Test Case:80 - Test Case :check Login functionality without credentials
+ 2019-04-02 14:35:03,808  INFO [main] Sign In With Invalid Credentials Test Case:91 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:35:05,747  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:35:07,802  INFO [main] Sign In With Invalid Credentials Test Case:136 - Sign In Test Case Ends Here
+ 2019-04-02 14:46:57,384  INFO [main] Sign In Test Case:84 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 14:51:34,183  INFO [main] Sign In Test Case:84 - Test Case :check Login functionality with valid credentials
+ 2019-04-02 14:51:36,259  INFO [main] Sign In Test Case:117 - Sign In Test Case Ends Here
+ 2019-04-02 14:53:00,806  INFO [main] Sign In With Invalid Credentials Test Case:70 - Test Case :check Login functionality with invalid credentials
+ 2019-04-02 14:53:02,909  INFO [main] Sign In With Invalid Credentials Test Case:80 - Test Case :check Login functionality without credentials
+ 2019-04-02 14:53:04,921  INFO [main] Sign In With Invalid Credentials Test Case:91 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:53:06,901  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case :check Login functionality withInvalid credentials
+ 2019-04-02 14:53:08,884  INFO [main] Sign In With Invalid Credentials Test Case:136 - Sign In Test Case Ends Here
+ 2019-04-02 15:03:13,578  INFO [main] Sign In Test Case:66 - Text Check on Login Page
+ 2019-04-02 15:03:13,996  INFO [main] Sign In Test Case:73 - Drop Down Check on Login Page
+ 2019-04-02 15:03:14,155  INFO [main] Sign In Test Case:80 - Footer Check on Login Page
+ 2019-04-02 15:03:14,210  INFO [main] Sign In Test Case:87 - URL Check on Login Page
+ 2019-04-02 15:03:15,232  INFO [main] Sign In Test Case:94 - Check Login Page TextBox Enabled Or Not
+ 2019-04-02 15:03:15,300  INFO [main] Sign In Test Case:101 - Check Login Page TextBox Label
+ 2019-04-02 15:03:15,424  INFO [main] Sign In Test Case:131 - Login Page test case Ends Here
+ 2019-04-02 15:38:22,602  INFO [main] Home Page Test Case:71 - Check Menubar Of Home Page
+ 2019-04-02 15:38:22,896  INFO [main] Home Page Test Case:78 - Check Menu Screen On Home Page
+ 2019-04-02 15:38:26,682  INFO [main] Home Page Test Case:91 - Check Text On Home Page
+ 2019-04-02 15:38:27,222  INFO [main] Home Page Test Case:98 - Check Table On Home Page
+ 2019-04-02 15:38:28,096  INFO [main] Home Page Test Case:105 - Check Tooltip on Home Page
+ 2019-04-02 15:38:28,221  INFO [main] Home Page Test Case:112 - Check Widget On Home Page
+ 2019-04-02 15:38:41,159  INFO [main] Home Page Test Case:119 - Check Color On Home Page
+ 2019-04-02 15:38:41,371  INFO [main] Home Page Test Case:126 - Check User Name On Home Page
+ 2019-04-02 15:38:47,311  INFO [main] Home Page Test Case:156 - Home Page Test Case Ends Here
+ 2019-04-02 15:45:42,289  INFO [main] Home Page Test Case:71 - Check Menubar Of Home Page
+ 2019-04-02 15:45:42,593  INFO [main] Home Page Test Case:78 - Check Menu Screen On Home Page
+ 2019-04-02 15:45:46,997  INFO [main] Home Page Test Case:91 - Check Text On Home Page
+ 2019-04-02 15:45:47,559  INFO [main] Home Page Test Case:98 - Check Table On Home Page
+ 2019-04-02 15:45:48,421  INFO [main] Home Page Test Case:105 - Check Tooltip on Home Page
+ 2019-04-02 15:45:48,540  INFO [main] Home Page Test Case:112 - Check Widget On Home Page
+ 2019-04-02 15:46:01,537  INFO [main] Home Page Test Case:119 - Check Color On Home Page
+ 2019-04-02 15:46:01,750  INFO [main] Home Page Test Case:126 - Check User Name On Home Page
+ 2019-04-02 15:46:14,703  INFO [main] Home Page Test Case:156 - Home Page Test Case Ends Here
  
