@@ -21,6 +21,26 @@ public class UserPage implements UserPage_Interface {
 	private WebDriver driver;
 	private Properties Prop;
 	private Login login;
+	private String User_Name;
+	private String First_Name;
+	private String Last_Name;
+	private String Filta_User_Type;
+	private String Status;
+	private String User_Type;
+	private boolean Send_Remainder;
+	private String Employee_Status;
+	private String Title;
+	private String Department;
+	private String[] IM_Type;
+	private String Address_Street;
+	private String Address_State;
+	private String Address_Country;
+	private String StandardRate;
+	private String Description;
+	private boolean Display_Employee_Record;
+	private String Work_Phone;
+	private String Mobile;
+	private String Other_Phone;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
@@ -57,6 +77,63 @@ public class UserPage implements UserPage_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='tab1']//em")
 	private WebElement Tab1OnEditPage;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
+	private WebElement editUname;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='first_name']")
+	private WebElement editFirstName;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='last_name']")
+	private WebElement editLastName;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][3]//td[@class='edit-table-row1'][4]")
+	private WebElement editFiltaUserType;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][2]//td[@class='edit-table-row1'][2]")
+	private WebElement editStatus;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][3]//td[@class='edit-table-row1'][2]")
+	private WebElement editUserType;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][5]//td[@class='edit-table-row1'][2]")
+	private WebElement editSendRemainder;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][1]//td[@class='edit-table-row1'][2]")
+	private WebElement editEmployeeStatus;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][2]//td[@class='edit-table-row1'][2]")
+	private WebElement editTitle;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][3]//td[@class='edit-table-row1'][2]")
+	private WebElement editDepartment;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][7]//td[@class='edit-table-row1'][2]")
+	private WebElement editAddressStreet;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][8]//td[@class='edit-table-row1'][2]")
+	private WebElement editAddressState;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][2]")
+	private WebElement editAddressCountry;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][10]//td[@class='edit-table-row1'][2]")
+	private WebElement editStandardRate;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][11]//td[@class='edit-table-row1'][2]")
+	private WebElement editDescription;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][1]//td[@class='edit-table-row1'][4]")
+	private WebElement editDisplayEmployeeRecord;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][2]//td[@class='edit-table-row1'][4]")
+	private WebElement editWorkPhone;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][3]//td[@class='edit-table-row1'][4]")
+	private WebElement editMobile;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][4]//td[@class='edit-table-row1'][4]")
+	private WebElement editOtherPhone;
 
 	public UserPage(WebDriver driver) {
 		global = new Global();
@@ -234,7 +311,7 @@ public class UserPage implements UserPage_Interface {
 					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey"))) {
 				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
 			}
-			//System.out.println(i + " => " + list.get(i).getCssValue("color"));
+			// System.out.println(i + " => " + list.get(i).getCssValue("color"));
 		}
 		// Count of tabs Assertion
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("TabOnEditPageCount")));
@@ -253,6 +330,36 @@ public class UserPage implements UserPage_Interface {
 		}
 		Assert.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("TabOnUserPageCount")));
 
+	}
+
+	public void getDataFromEditPageUserProfile() {
+		EditButton.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		User_Name = editUname.getAttribute("value");
+		First_Name = editFirstName.getAttribute("value");
+		Last_Name = editLastName.getAttribute("value");
+		Filta_User_Type = editFiltaUserType.getText();
+		Status = editStatus.getText();
+		User_Type = editUserType.getText();
+		Send_Remainder = editSendRemainder.isSelected();
+		Employee_Status = editEmployeeStatus.getText();
+		Title = editTitle.getText();
+		Department = editDepartment.getText();
+		List<WebElement> list = driver.findElements(By.xpath(
+				".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][6]//td[@class='edit-table-row1'][2]//select//option"));
+		IM_Type = new String[list.size()];
+		for (int i = 0; i < list.size(); i++) {
+			IM_Type[i] = list.get(i).getText();
+		}
+		Address_Street = editAddressStreet.getAttribute("value");
+		Address_State = editAddressState.getAttribute("value");
+		Address_Country = editAddressCountry.getAttribute("value");
+		StandardRate = editStandardRate.getAttribute("value");
+		Description = editDescription.getAttribute("value");
+		Display_Employee_Record = editDisplayEmployeeRecord.isSelected();
+		Work_Phone = editWorkPhone.getAttribute("value");
+		Mobile = editMobile.getAttribute("value");
+		Other_Phone = editOtherPhone.getAttribute("value");
 	}
 
 	public void closeBrowser() {

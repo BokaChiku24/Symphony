@@ -66,6 +66,7 @@ public class UserPage_TestCase {
 	@Test(priority = 0)
 	public void checkURL() {
 		log.info("Check URL Of User Page");
+		logger = extent.createTest("Test Case 0: Check URL Of User Page");
 		UserPageObject.urlCheck();
 	}
 
@@ -117,6 +118,7 @@ public class UserPage_TestCase {
 					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
+			
 		} else if (testResult.getStatus() == ITestResult.SKIP) {
 			logger.log(Status.SKIP,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
@@ -130,6 +132,6 @@ public class UserPage_TestCase {
 	public void afterMethod() {
 		log.info("User Page Test Case Ends Here");
 		extent.flush();
-		// UserPageObject.closeBrowser();
+		//UserPageObject.closeBrowser();
 	}
 }
