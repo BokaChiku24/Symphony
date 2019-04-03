@@ -35,12 +35,25 @@ public class UserPage implements UserPage_Interface {
 	private String Address_Street;
 	private String Address_State;
 	private String Address_Country;
-	private String StandardRate;
+	private double StandardRate;
 	private String Description;
 	private boolean Display_Employee_Record;
 	private String Work_Phone;
 	private String Mobile;
 	private String Other_Phone;
+	private String Fax;
+	private String IM_Name;
+	private String Address_City;
+	private String AddressPostalZipCodel;
+	private int WeeklyStandardHours;
+	private int[] WeeklyStandardHoursMin;
+	private String DefaultWeeklyStandardHoursMin;
+	private double OverTimeRate;
+	private String EmailAddress1;
+	private boolean PrimaryRadio1;
+	private boolean PrimaryReplyTo;
+	private String[] EmailClient;
+	private String DefaultEmailClient;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
@@ -134,6 +147,39 @@ public class UserPage implements UserPage_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][4]//td[@class='edit-table-row1'][4]")
 	private WebElement editOtherPhone;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][5]//td[@class='edit-table-row1'][4]")
+	private WebElement editFax;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][6]//td[@class='edit-table-row1'][4]")
+	private WebElement editIMName;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][7]//td[@class='edit-table-row1'][4]")
+	private WebElement editAddressCity;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][8]//td[@class='edit-table-row1'][4]")
+	private WebElement editAddressPostalZipCode;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][4]//input")
+	private WebElement editWeeklyStandardHours;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][10]//td[@class='edit-table-row1'][4]")
+	private WebElement editOverTimerate;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//table[@class='emailaddresses_span']//tr[@id='Users0emailAddressRow0']//input[@id='Users0emailAddress0']")
+	private WebElement editEmailAddress1;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//table[@class='emailaddresses_span']//input[@type='radio' and @id='Users0emailAddressPrimaryFlag0']")
+	private WebElement editPrimaryRadio;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//table[@class='emailaddresses_span']//input[@type='radio' and @id='Users0emailAddressReplyToFlag0']")
+	private WebElement editPrimaryReplyToRadio;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][4]//select")
+	private WebElement editDefaultMin;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//select[@id='email_link_type']")
+	private WebElement editDefaultEmailClient;
 
 	public UserPage(WebDriver driver) {
 		global = new Global();
@@ -354,12 +400,36 @@ public class UserPage implements UserPage_Interface {
 		Address_Street = editAddressStreet.getAttribute("value");
 		Address_State = editAddressState.getAttribute("value");
 		Address_Country = editAddressCountry.getAttribute("value");
-		StandardRate = editStandardRate.getAttribute("value");
+		StandardRate = Double.parseDouble(editStandardRate.getAttribute("value"));
 		Description = editDescription.getAttribute("value");
 		Display_Employee_Record = editDisplayEmployeeRecord.isSelected();
 		Work_Phone = editWorkPhone.getAttribute("value");
 		Mobile = editMobile.getAttribute("value");
 		Other_Phone = editOtherPhone.getAttribute("value");
+		Fax = editFax.getAttribute("value");
+		IM_Name = editIMName.getAttribute("value");
+		Address_City = editAddressCity.getAttribute("value");
+		AddressPostalZipCodel = editAddressPostalZipCode.getAttribute("value");
+		WeeklyStandardHours = Integer.parseInt(editWeeklyStandardHours.getAttribute("value"));
+		List<WebElement> list2 = driver.findElements(By.xpath(
+				".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][4]//select//option"));
+		WeeklyStandardHoursMin = new int[list2.size()];
+		for (int i = 0; i < list2.size(); i++) {
+			WeeklyStandardHoursMin[i] = Integer.parseInt(list2.get(i).getText());
+		}
+		DefaultWeeklyStandardHoursMin = global.select(editDefaultMin).getFirstSelectedOption().getText();
+		OverTimeRate = Double.parseDouble(editOverTimerate.getAttribute("value"));
+		EmailAddress1 = editEmailAddress1.getAttribute("value");
+		PrimaryRadio1 = editPrimaryRadio.isSelected();
+		PrimaryReplyTo = editPrimaryReplyToRadio.isSelected();
+		List<WebElement> list3 = driver
+				.findElements(By.xpath(".//div[@id='email_options']//select[@id='email_link_type']//option"));
+		EmailClient = new String[list3.size()];
+		for (int i = 0; i < list3.size(); i++) {
+			EmailClient[i] = list3.get(i).getText();
+		}
+		DefaultEmailClient = global.select(editDefaultEmailClient).getFirstSelectedOption().getText();
+
 	}
 
 	public void closeBrowser() {
