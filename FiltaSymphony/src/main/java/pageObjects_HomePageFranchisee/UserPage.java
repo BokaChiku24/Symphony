@@ -12,6 +12,8 @@ import org.testng.Assert;
 import helper.UserPage_Interface;
 import util.Login;
 
+import static org.testng.Assert.assertEquals;
+
 import java.util.List;
 import java.util.Properties;
 import util.Global;
@@ -130,7 +132,7 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][2]")
 	private WebElement editAddressCountry;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][10]//td[@class='edit-table-row1'][2]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][10]//td[@class='edit-table-row1'][2]//input")
 	private WebElement editStandardRate;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][11]//td[@class='edit-table-row1'][2]")
@@ -163,8 +165,8 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][4]//input")
 	private WebElement editWeeklyStandardHours;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][10]//td[@class='edit-table-row1'][4]")
-	private WebElement editOverTimerate;
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][10]//td[@class='edit-table-row1'][4]//input")
+	private WebElement editOverTimeRate;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//table[@class='emailaddresses_span']//tr[@id='Users0emailAddressRow0']//input[@id='Users0emailAddress0']")
 	private WebElement editEmailAddress1;
@@ -180,6 +182,42 @@ public class UserPage implements UserPage_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//select[@id='email_link_type']")
 	private WebElement editDefaultEmailClient;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[1]//td[2]//span")
+	private WebElement UserProfile_Fullname;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[1]//td[4]//span")
+	private WebElement UserProfile_Username;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[2]//td[2]")
+	private WebElement UserProfile_Status;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[2]//td[4]//span")
+	private WebElement UserProfile_UserType;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[3]//td[2]")
+	private WebElement UserProfile_FiltaUserType;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[4]//td[2]//input")
+	private WebElement UserProfile_StoreAccess;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[5]//td[2]//input")
+	private WebElement UserProfile_SendRemainder;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[1]//td[2]//span")
+	private WebElement UserProfile_EmployeeStatus;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[1]//td[4]//input")
+	private WebElement UserProfile_DisplayEmployeeRecord;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[2]//td[2]//span")
+	private WebElement UserProfile_Title;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[2]//td[4]")
+	private WebElement UserProfile_WorkPhone;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[3]//td[2]")
+	private WebElement UserProfile_Department;
 
 	public UserPage(WebDriver driver) {
 		global = new Global();
@@ -214,6 +252,7 @@ public class UserPage implements UserPage_Interface {
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooter"));
 		Assert.assertEquals(ResetHomePageButtonFooter.getAttribute("value"),
 				Prop.getProperty("UserPageResetHomepageButtonFooter"));
+
 		CancelButtonHeader.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
 		Assert.assertEquals(EditButton.getAttribute("value"), Prop.getProperty("UserPageEditButton"));
@@ -418,7 +457,7 @@ public class UserPage implements UserPage_Interface {
 			WeeklyStandardHoursMin[i] = Integer.parseInt(list2.get(i).getText());
 		}
 		DefaultWeeklyStandardHoursMin = global.select(editDefaultMin).getFirstSelectedOption().getText();
-		OverTimeRate = Double.parseDouble(editOverTimerate.getAttribute("value"));
+		OverTimeRate = Double.parseDouble(editOverTimeRate.getAttribute("value"));
 		EmailAddress1 = editEmailAddress1.getAttribute("value");
 		PrimaryRadio1 = editPrimaryRadio.isSelected();
 		PrimaryReplyTo = editPrimaryReplyToRadio.isSelected();
@@ -430,6 +469,24 @@ public class UserPage implements UserPage_Interface {
 		}
 		DefaultEmailClient = global.select(editDefaultEmailClient).getFirstSelectedOption().getText();
 
+	}
+
+	public void verifyDataOfUserProfile() {
+		CancelButtonHeader.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
+		Assert.assertEquals(UserProfile_Fullname.getText(), First_Name + " " + Last_Name);
+		Assert.assertEquals(UserProfile_Username.getText(), User_Name);
+		Assert.assertEquals(UserProfile_Status.getText(), Status);
+		Assert.assertTrue(UserProfile_UserType.getText().startsWith(User_Type.substring(0, 12)));
+		Assert.assertEquals(UserProfile_FiltaUserType.getText(), Filta_User_Type);
+		Assert.assertEquals(UserProfile_StoreAccess.isSelected(),
+				Boolean.parseBoolean(Prop.getProperty("StoreAccess")));
+		Assert.assertTrue(UserProfile_SendRemainder.isSelected());
+		Assert.assertEquals(UserProfile_EmployeeStatus.getText(), Employee_Status);
+		Assert.assertEquals(UserProfile_DisplayEmployeeRecord.isSelected(), Display_Employee_Record);
+		Assert.assertEquals(UserProfile_Title.getText(), Title);
+		Assert.assertEquals(UserProfile_WorkPhone.getText(), Work_Phone);
+		Assert.assertEquals(UserProfile_Department.getText(), Department);
 	}
 
 	public void closeBrowser() {
