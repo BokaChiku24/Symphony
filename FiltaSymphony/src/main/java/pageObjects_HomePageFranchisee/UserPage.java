@@ -56,7 +56,8 @@ public class UserPage implements UserPage_Interface {
 	private boolean PrimaryReplyTo;
 	private String[] EmailClient;
 	private String DefaultEmailClient;
-
+	private ReadExcelData data;
+	
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
 
@@ -273,12 +274,26 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//tbody//tr[3]//td[2]")
 	private WebElement UserProfile_SugarClient;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//h4")
+	private WebElement UserProfile_UserLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//h4")
+	private WebElement UserProfile_EmployeeLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//h4")
+	private WebElement UserProfile_EmailLabel;
+
+	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//a")
+	private WebElement UserProfile_AllLabel;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
 		PageFactory.initElements(driver, this);
+		data = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
+
 	}
 
 	public void login() {
@@ -452,6 +467,7 @@ public class UserPage implements UserPage_Interface {
 			}
 			// System.out.println(i + " => " + list.get(i).getCssValue("color"));
 		}
+
 		// Count of tabs Assertion
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("TabOnEditPageCount")));
 		CancelButtonHeader.click();
@@ -474,6 +490,16 @@ public class UserPage implements UserPage_Interface {
 	public void getDataFromEditPageUserProfile() {
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+
+		// To Check Label on User Profile Page
+		Assert.assertEquals(UserProfile_UserLabel.getText(), Prop.getProperty("UserProfileLabel1"));
+		Assert.assertEquals(UserProfile_UserLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(UserProfile_EmployeeLabel.getText(), Prop.getProperty("UserProfileLabel2"));
+		Assert.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(UserProfile_EmailLabel.getText(), Prop.getProperty("UserProfileLabel3"));
+		Assert.assertEquals(UserProfile_EmailLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+
+		// To Get Data From Edit User Page
 		User_Name = editUname.getAttribute("value");
 		First_Name = editFirstName.getAttribute("value");
 		Last_Name = editLastName.getAttribute("value");
@@ -523,7 +549,8 @@ public class UserPage implements UserPage_Interface {
 			EmailClient[i] = list3.get(i).getText();
 		}
 		DefaultEmailClient = global.select(editDefaultEmailClient).getFirstSelectedOption().getText();
-		ReadExcelData data = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
+
+		// To Verify Edit Page Data From "UserPage.xlsx" sheet
 		int totalRows = data.getTotalRows();
 		int totalColumn = data.getTotalColumns();
 		String[][] array = new String[totalRows][totalColumn];
@@ -556,6 +583,18 @@ public class UserPage implements UserPage_Interface {
 	public void verifyDataOfUserProfile() {
 		CancelButtonHeader.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
+
+		// To Check Label on User Profile Page
+		Assert.assertEquals(UserProfile_UserLabel.getText(), Prop.getProperty("UserProfileLabel1"));
+		Assert.assertEquals(UserProfile_UserLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(UserProfile_EmployeeLabel.getText(), Prop.getProperty("UserProfileLabel2"));
+		Assert.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(UserProfile_EmailLabel.getText(), Prop.getProperty("UserProfileLabel3"));
+		Assert.assertEquals(UserProfile_EmailLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(UserProfile_AllLabel.getText(), Prop.getProperty("UserProfileLabel4"));
+		Assert.assertEquals(UserProfile_AllLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+
+		// Verify Data On User profile Page
 		Assert.assertEquals(UserProfile_Fullname.getText(), First_Name + " " + Last_Name);
 		Assert.assertEquals(UserProfile_Username.getText(), User_Name);
 		Assert.assertEquals(UserProfile_Status.getText(), Status);

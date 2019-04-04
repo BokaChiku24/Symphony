@@ -2665,4 +2665,62 @@
  2019-04-04 16:39:45,443  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
  2019-04-04 16:39:48,568  INFO [main] User Page Test Case:110 - Test Case 6: Check Data Name On User Page
  2019-04-04 16:39:55,386  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
+ 2019-04-04 17:06:00,338  INFO [main] User Page Test Case:68 - Check URL Of User Page
+ 2019-04-04 17:06:04,076  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-04 17:06:07,034  INFO [main] User Page Test Case:82 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-04-04 17:06:09,209  INFO [main] User Page Test Case:89 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-04-04 17:06:12,044  INFO [main] User Page Test Case:96 - Test Case 4: Check Button ToolTip On User Page
+ 2019-04-04 17:06:13,786  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
+ 2019-04-04 17:06:16,392  INFO [main] User Page Test Case:110 - Test Case 6: Check Data Name On User Page
+ 2019-04-04 17:06:22,905  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
+ 2019-04-04 17:20:42,524  INFO [main] User Page Test Case:68 - Check URL Of User Page
+ 2019-04-04 17:20:46,236  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-04 17:20:49,106  INFO [main] User Page Test Case:82 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-04-04 17:20:51,466  INFO [main] User Page Test Case:89 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-04-04 17:20:54,211  INFO [main] User Page Test Case:96 - Test Case 4: Check Button ToolTip On User Page
+ 2019-04-04 17:20:56,206  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
+ 2019-04-04 17:20:58,805  INFO [main] User Page Test Case:110 - Test Case 6: Check Data Name On User Page
+ 2019-04-04 17:21:05,084  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
+ 2019-04-04 17:23:02,705  INFO [main] User Page Test Case:68 - Check URL Of User Page
+ 2019-04-04 17:23:06,411  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-04 17:23:09,417  INFO [main] User Page Test Case:82 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-04-04 17:23:11,626  INFO [main] User Page Test Case:89 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-04-04 17:23:14,247  INFO [main] User Page Test Case:96 - Test Case 4: Check Button ToolTip On User Page
+ 2019-04-04 17:23:16,186  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
+ 2019-04-04 17:23:18,719  INFO [main] User Page Test Case:110 - Test Case 6: Check Data Name On User Page
+ 2019-04-04 17:23:25,009  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
+ 2019-04-04 17:24:33,853  INFO [main] User Page Test Case:68 - Check URL Of User Page
+ 2019-04-04 17:24:37,827  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-04 17:24:40,892  INFO [main] User Page Test Case:82 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-04-04 17:24:43,194  INFO [main] User Page Test Case:89 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-04-04 17:24:45,854  INFO [main] User Page Test Case:96 - Test Case 4: Check Button ToolTip On User Page
+ 2019-04-04 17:24:47,842  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
+ 2019-04-04 17:24:50,505  INFO [main] User Page Test Case:110 - Test Case 6: Check Data Name On User Page
+ 2019-04-04 17:24:57,425  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
+ 2019-04-04 17:31:07,464  INFO [main] User Page Test Case:68 - Check URL Of User Page
+ 2019-04-04 17:31:11,426  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-04 17:31:14,393  INFO [main] User Page Test Case:82 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-04-04 17:31:16,614  INFO [main] User Page Test Case:89 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-04-04 17:31:19,354  INFO [main] User Page Test Case:96 - Test Case 4: Check Button ToolTip On User Page
+ 2019-04-04 17:31:21,237  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
+ 2019-04-04 17:31:23,744  INFO [main] User Page Test Case:110 - Test Case 6: Check Data Name On User Page
+ 2019-04-04 17:31:30,536  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
+ 2019-04-04 18:05:15,515  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-04 18:05:16,041  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
+ 2019-04-04 18:06:10,747  INFO [main] User Page Test Case:68 - Check URL Of User Page
+ 2019-04-04 18:06:14,166  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-04 18:06:17,346  INFO [main] User Page Test Case:82 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-04-04 18:06:19,544  INFO [main] User Page Test Case:89 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-04-04 18:06:22,275  INFO [main] User Page Test Case:96 - Test Case 4: Check Button ToolTip On User Page
+ 2019-04-04 18:06:23,938  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
+ 2019-04-04 18:06:26,676  INFO [main] User Page Test Case:110 - Test Case 6: Check Data Name On User Page
+ 2019-04-04 18:06:33,657  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
+ 2019-04-04 18:13:34,189  INFO [main] User Page Test Case:68 - Check URL Of User Page
+ 2019-04-04 18:13:38,558  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-04 18:13:42,010  INFO [main] User Page Test Case:82 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-04-04 18:13:44,296  INFO [main] User Page Test Case:89 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-04-04 18:13:47,189  INFO [main] User Page Test Case:96 - Test Case 4: Check Button ToolTip On User Page
+ 2019-04-04 18:13:49,122  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
+ 2019-04-04 18:13:51,842  INFO [main] User Page Test Case:110 - Test Case 6: Check Data Name On User Page
+ 2019-04-04 18:13:58,781  INFO [main] User Page Test Case:141 - User Page Test Case Ends Here
  
