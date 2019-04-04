@@ -11,8 +11,7 @@ import org.testng.Assert;
 
 import helper.UserPage_Interface;
 import util.Login;
-
-import static org.testng.Assert.assertEquals;
+import util.ReadExcelData;
 
 import java.util.List;
 import java.util.Properties;
@@ -34,10 +33,11 @@ public class UserPage implements UserPage_Interface {
 	private String Title;
 	private String Department;
 	private String[] IM_Type;
+	private String Default_IM_Type;
 	private String Address_Street;
 	private String Address_State;
 	private String Address_Country;
-	private double StandardRate;
+	private String StandardRate;
 	private String Description;
 	private boolean Display_Employee_Record;
 	private String Work_Phone;
@@ -47,10 +47,10 @@ public class UserPage implements UserPage_Interface {
 	private String IM_Name;
 	private String Address_City;
 	private String AddressPostalZipCodel;
-	private int WeeklyStandardHours;
-	private int[] WeeklyStandardHoursMin;
+	private String WeeklyStandardHours;
+	private String[] WeeklyStandardHoursMin;
 	private String DefaultWeeklyStandardHoursMin;
-	private double OverTimeRate;
+	private String OverTimeRate;
 	private String EmailAddress1;
 	private boolean PrimaryRadio1;
 	private boolean PrimaryReplyTo;
@@ -123,43 +123,43 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][3]//td[@class='edit-table-row1'][2]")
 	private WebElement editDepartment;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][7]//td[@class='edit-table-row1'][2]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][7]//td[@class='edit-table-row1'][2]//input")
 	private WebElement editAddressStreet;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][8]//td[@class='edit-table-row1'][2]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][8]//td[@class='edit-table-row1'][2]//input")
 	private WebElement editAddressState;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][2]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][2]//input")
 	private WebElement editAddressCountry;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][10]//td[@class='edit-table-row1'][2]//input")
 	private WebElement editStandardRate;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][11]//td[@class='edit-table-row1'][2]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][11]//td[@class='edit-table-row1'][2]//textarea")
 	private WebElement editDescription;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][1]//td[@class='edit-table-row1'][4]")
 	private WebElement editDisplayEmployeeRecord;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][2]//td[@class='edit-table-row1'][4]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][2]//td[@class='edit-table-row1'][4]//input")
 	private WebElement editWorkPhone;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][3]//td[@class='edit-table-row1'][4]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][3]//td[@class='edit-table-row1'][4]//input")
 	private WebElement editMobile;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][4]//td[@class='edit-table-row1'][4]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][4]//td[@class='edit-table-row1'][4]//input")
 	private WebElement editOtherPhone;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][5]//td[@class='edit-table-row1'][4]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][5]//td[@class='edit-table-row1'][4]//input")
 	private WebElement editFax;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][6]//td[@class='edit-table-row1'][4]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][6]//td[@class='edit-table-row1'][4]//input")
 	private WebElement editIMName;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][7]//td[@class='edit-table-row1'][4]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][7]//td[@class='edit-table-row1'][4]//input")
 	private WebElement editAddressCity;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][8]//td[@class='edit-table-row1'][4]")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][8]//td[@class='edit-table-row1'][4]//input")
 	private WebElement editAddressPostalZipCode;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][4]//input")
@@ -198,7 +198,7 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[3]//td[2]")
 	private WebElement UserProfile_FiltaUserType;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[4]//td[2]//input")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[4]//td[2]")
 	private WebElement UserProfile_StoreAccess;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[5]//td[2]//input")
@@ -207,7 +207,7 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[1]//td[2]//span")
 	private WebElement UserProfile_EmployeeStatus;
 
-	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[1]//td[4]//input")
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[1]//td[4]")
 	private WebElement UserProfile_DisplayEmployeeRecord;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[2]//td[2]//span")
@@ -218,6 +218,60 @@ public class UserPage implements UserPage_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[3]//td[2]")
 	private WebElement UserProfile_Department;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[3]//td[4]")
+	private WebElement UserProfile_Mobile;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[4]//td[2]//span")
+	private WebElement UserProfile_ReportsTo;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[4]//td[4]")
+	private WebElement UserProfile_OtherPhone;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[5]//td[4]")
+	private WebElement UserProfile_Fax;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[6]//td[2]")
+	private WebElement UserProfile_IMType;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][6]//td[@class='edit-table-row1'][2]//select")
+	private WebElement editDefaultIMType;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[6]//td[4]//span")
+	private WebElement UserProfile_IMName;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[7]//td[2]//span")
+	private WebElement UserPRofile_AddressStreet;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[7]//td[4]//span")
+	private WebElement UserProfile_AddressCity;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[8]//td[2]//span")
+	private WebElement UserProfile_AddressState;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[9]//td[2]//span")
+	private WebElement UserProfile_AddressCounty;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[9]//td[4]//span")
+	private WebElement UserProfile_WeeklyStandardHours;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[8]//td[4]//span")
+	private WebElement UserProfile_AddressPostalZipCode;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[10]//td[2]//span")
+	private WebElement UserProfile_StandardRate;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[10]//td[4]//span")
+	private WebElement UserProfile_OverTimeRate;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[11]//td[2]//span")
+	private WebElement UserPRofile_Description;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//tbody//tr[2]//a")
+	private WebElement UserProfile_PrimaryEmail;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//tbody//tr[3]//td[2]")
+	private WebElement UserProfile_SugarClient;
 
 	public UserPage(WebDriver driver) {
 		global = new Global();
@@ -436,10 +490,11 @@ public class UserPage implements UserPage_Interface {
 		for (int i = 0; i < list.size(); i++) {
 			IM_Type[i] = list.get(i).getText();
 		}
+		Default_IM_Type = global.select(editDefaultIMType).getFirstSelectedOption().getText();
 		Address_Street = editAddressStreet.getAttribute("value");
 		Address_State = editAddressState.getAttribute("value");
 		Address_Country = editAddressCountry.getAttribute("value");
-		StandardRate = Double.parseDouble(editStandardRate.getAttribute("value"));
+		StandardRate = editStandardRate.getAttribute("value");
 		Description = editDescription.getAttribute("value");
 		Display_Employee_Record = editDisplayEmployeeRecord.isSelected();
 		Work_Phone = editWorkPhone.getAttribute("value");
@@ -449,15 +504,15 @@ public class UserPage implements UserPage_Interface {
 		IM_Name = editIMName.getAttribute("value");
 		Address_City = editAddressCity.getAttribute("value");
 		AddressPostalZipCodel = editAddressPostalZipCode.getAttribute("value");
-		WeeklyStandardHours = Integer.parseInt(editWeeklyStandardHours.getAttribute("value"));
+		WeeklyStandardHours = editWeeklyStandardHours.getAttribute("value");
 		List<WebElement> list2 = driver.findElements(By.xpath(
 				".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][4]//select//option"));
-		WeeklyStandardHoursMin = new int[list2.size()];
+		WeeklyStandardHoursMin = new String[list2.size()];
 		for (int i = 0; i < list2.size(); i++) {
-			WeeklyStandardHoursMin[i] = Integer.parseInt(list2.get(i).getText());
+			WeeklyStandardHoursMin[i] = list2.get(i).getText();
 		}
 		DefaultWeeklyStandardHoursMin = global.select(editDefaultMin).getFirstSelectedOption().getText();
-		OverTimeRate = Double.parseDouble(editOverTimeRate.getAttribute("value"));
+		OverTimeRate = editOverTimeRate.getAttribute("value");
 		EmailAddress1 = editEmailAddress1.getAttribute("value");
 		PrimaryRadio1 = editPrimaryRadio.isSelected();
 		PrimaryReplyTo = editPrimaryReplyToRadio.isSelected();
@@ -468,7 +523,34 @@ public class UserPage implements UserPage_Interface {
 			EmailClient[i] = list3.get(i).getText();
 		}
 		DefaultEmailClient = global.select(editDefaultEmailClient).getFirstSelectedOption().getText();
-
+		ReadExcelData data = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
+		int totalRows = data.getTotalRows();
+		int totalColumn = data.getTotalColumns();
+		String[][] array = new String[totalRows][totalColumn];
+		Assert.assertEquals(First_Name + " " + Last_Name, data.getCellData(1, 0));
+		Assert.assertEquals(User_Name, data.getCellData(1, 1));
+		Assert.assertEquals(Status, data.getCellData(1, 2));
+		Assert.assertEquals(User_Type.substring(0, 12), data.getCellData(1, 3));
+		Assert.assertEquals(Filta_User_Type, data.getCellData(1, 4));
+		Assert.assertEquals(Employee_Status, data.getCellData(1, 5));
+		Assert.assertEquals(Title, data.getCellData(1, 6));
+		Assert.assertEquals(Work_Phone, data.getCellData(1, 7));
+		Assert.assertEquals(Mobile, data.getCellData(1, 8));
+		Assert.assertEquals(data.getCellData(1, 9), Prop.getProperty("Reports_To"));
+		Assert.assertEquals(Other_Phone, data.getCellData(1, 10));
+		Assert.assertEquals(Fax, data.getCellData(1, 11));
+		Assert.assertEquals(Default_IM_Type, data.getCellData(1, 12));
+		Assert.assertEquals(IM_Name, data.getCellData(1, 13));
+		Assert.assertEquals(Address_Street, data.getCellData(1, 14));
+		Assert.assertEquals(Address_City, data.getCellData(1, 15));
+		Assert.assertEquals(Address_State, data.getCellData(1, 16));
+		Assert.assertEquals(AddressPostalZipCodel, data.getCellData(1, 17));
+		Assert.assertEquals(Address_Country, data.getCellData(1, 18));
+		Assert.assertEquals(StandardRate, String.valueOf(data.getCellDataInt(1, 19)));
+		Assert.assertEquals(OverTimeRate, String.valueOf(data.getCellDataInt(1, 20)));
+		Assert.assertEquals(Description, data.getCellData(1, 21));
+		Assert.assertEquals(EmailAddress1, data.getCellData(1, 22));
+		Assert.assertEquals(DefaultEmailClient, data.getCellData(1, 23));
 	}
 
 	public void verifyDataOfUserProfile() {
@@ -483,10 +565,29 @@ public class UserPage implements UserPage_Interface {
 				Boolean.parseBoolean(Prop.getProperty("StoreAccess")));
 		Assert.assertTrue(UserProfile_SendRemainder.isSelected());
 		Assert.assertEquals(UserProfile_EmployeeStatus.getText(), Employee_Status);
-		Assert.assertEquals(UserProfile_DisplayEmployeeRecord.isSelected(), Display_Employee_Record);
+		Assert.assertEquals(UserProfile_DisplayEmployeeRecord.isSelected(),
+				Boolean.parseBoolean("DisplayEmployeeRecords"));
 		Assert.assertEquals(UserProfile_Title.getText(), Title);
-		Assert.assertEquals(UserProfile_WorkPhone.getText(), Work_Phone);
+		Assert.assertEquals(UserProfile_WorkPhone.getText().replace("  ", ""), Work_Phone);
 		Assert.assertEquals(UserProfile_Department.getText(), Department);
+		Assert.assertEquals(UserProfile_Mobile.getText().replace("  ", ""), Mobile);
+		Assert.assertEquals(UserProfile_ReportsTo.getText().replace(" ", ""), Prop.getProperty("Reports_To"));
+		Assert.assertEquals(UserProfile_OtherPhone.getText().replace("  ", ""), Other_Phone);
+		Assert.assertEquals(UserProfile_Fax.getText().replace("  ", ""), Fax);
+		Assert.assertEquals(UserProfile_IMType.getText(), Default_IM_Type);
+		Assert.assertEquals(UserProfile_IMName.getText(), IM_Name);
+		Assert.assertEquals(UserPRofile_AddressStreet.getText(), Address_Street);
+		Assert.assertEquals(UserProfile_AddressCity.getText(), Address_City);
+		Assert.assertEquals(UserProfile_AddressState.getText(), Address_State);
+		Assert.assertEquals(UserProfile_AddressCounty.getText(), Address_Country);
+		Assert.assertEquals(UserProfile_WeeklyStandardHours.getText(),
+				WeeklyStandardHours + " : " + DefaultWeeklyStandardHoursMin);
+		Assert.assertEquals(UserProfile_AddressPostalZipCode.getText(), AddressPostalZipCodel);
+		Assert.assertEquals(UserProfile_StandardRate.getText(), StandardRate);
+		Assert.assertEquals(UserProfile_OverTimeRate.getText(), OverTimeRate);
+		Assert.assertEquals(UserPRofile_Description.getText(), Description);
+		Assert.assertEquals(UserProfile_PrimaryEmail.getText(), EmailAddress1);
+		Assert.assertEquals(UserProfile_SugarClient.getText(), DefaultEmailClient);
 	}
 
 	public void closeBrowser() {

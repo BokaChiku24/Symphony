@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -47,7 +48,8 @@ public class ReadExcelData {
 	}
 
 	public int getTotalRows() {
-		int totlaRows = sheet1.getLastRowNum() + 1;
+		// For Only One Row Use: int totlaRows = sheet1.getLastRowNum() + 1;
+		int totlaRows = sheet1.getLastRowNum();
 		return totlaRows;
 	}
 
@@ -58,5 +60,9 @@ public class ReadExcelData {
 
 	public String getCellData(int rowNum, int colNum) {
 		return sheet1.getRow(rowNum).getCell(colNum).getStringCellValue();
+	}
+
+	public double getCellDataInt(int rowNum, int colNum) {
+		return sheet1.getRow(rowNum).getCell(colNum).getNumericCellValue();
 	}
 }

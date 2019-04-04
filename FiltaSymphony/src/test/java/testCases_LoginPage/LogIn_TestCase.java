@@ -75,8 +75,8 @@ public class LogIn_TestCase {
 		int totalRows = data.getTotalRows();
 		int totalColumn = data.getTotalColumns();
 		String[][] array = new String[totalRows][totalColumn];
-		array[0][0] = data.getCellData(0, 0);
-		array[0][1] = data.getCellData(0, 1);
+		array[0][0] = data.getCellData(1, 0);
+		array[0][1] = data.getCellData(1, 1);
 		return array;
 	}
 
