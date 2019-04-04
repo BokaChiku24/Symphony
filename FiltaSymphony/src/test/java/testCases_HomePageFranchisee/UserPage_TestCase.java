@@ -108,9 +108,16 @@ public class UserPage_TestCase {
 	@Test(priority = 3)
 	public void checkDataOfUserProfile() {
 		log.info("Test Case 6: Check Data Name On User Page");
-		logger = extent.createTest("Test Case 5: Check Data On User Page");
+		logger = extent.createTest("Test Case 6: Check Data On User Page");
 		UserPageObject.getDataFromEditPageUserProfile();
 		UserPageObject.verifyDataOfUserProfile();
+	}
+
+	@Test(priority = 4)
+	public void checkPasswordPageOnEdit() {
+		log.info("Test Case 7: Check Password Field On Edit Page");
+		logger = extent.createTest("Test Case 7: Check Password Field On Edit Page");
+		UserPageObject.checkPasswordPage();
 	}
 
 	@AfterMethod

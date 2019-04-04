@@ -57,7 +57,7 @@ public class UserPage implements UserPage_Interface {
 	private String[] EmailClient;
 	private String DefaultEmailClient;
 	private ReadExcelData data;
-	
+
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
 
@@ -285,6 +285,9 @@ public class UserPage implements UserPage_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//a")
 	private WebElement UserProfile_AllLabel;
+
+	@FindBy(how = How.XPATH, using = ".//a[@id='tab2']//em")
+	private WebElement Tab2OnEditPage;
 
 	public UserPage(WebDriver driver) {
 		global = new Global();
@@ -627,6 +630,15 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(UserPRofile_Description.getText(), Description);
 		Assert.assertEquals(UserProfile_PrimaryEmail.getText(), EmailAddress1);
 		Assert.assertEquals(UserProfile_SugarClient.getText(), DefaultEmailClient);
+	}
+
+	public void checkPasswordPage() {
+		EditButton.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		
+		// Click On Password Tab
+		Tab2OnEditPage.click();
+		Assert.assertEquals(Tab2OnEditPage.getCssValue("color"), Prop.getProperty("EditPagePasswordColor"));
 	}
 
 	public void closeBrowser() {
