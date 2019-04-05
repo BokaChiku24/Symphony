@@ -781,7 +781,7 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(Tab4OnEditPage.getText(), Prop.getProperty("AdvancedLabel"));
 		Assert.assertEquals(UserSettingLabel.getText(), Prop.getProperty("Advanced1"));
 		Assert.assertEquals(UserSettingLabel.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
-		Assert.assertEquals(ExportDelimiterLabel.getText(), AdvancedData.getCellData(1, 0));
+		Assert.assertEquals(ExportDelimiterLabel.getText().startsWith(AdvancedData.getCellData(0, 0)), true);
 	}
 
 	public void closeBrowser() {

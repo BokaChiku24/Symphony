@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="testCases_HomePageFranchisee.UserPage_TestCase">
         <methods>
           <include name="afterMethod"/>
           <include name="property"/>
-          <include name="checkThemesPageOnEdit"/>
+          <include name="checkAdvancedOfUserProfile"/>
           <include name="takeScreenShotOnFailure"/>
         </methods>
       </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
