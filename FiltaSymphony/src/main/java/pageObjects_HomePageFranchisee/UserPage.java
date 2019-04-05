@@ -56,7 +56,8 @@ public class UserPage implements UserPage_Interface {
 	private boolean PrimaryReplyTo;
 	private String[] EmailClient;
 	private String DefaultEmailClient;
-	private ReadExcelData data;
+	private ReadExcelData UserData;
+	private ReadExcelData PasswordData;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
@@ -289,14 +290,29 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//a[@id='tab2']//em")
 	private WebElement Tab2OnEditPage;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='generate_password']//h4")
+	private WebElement PasswordPage_PasswordLabel;
+
+	@FindBy(how = How.CSS, using = "#generate_password_old_password > table > tbody > tr > td:nth-child(1)")
+	private WebElement PasswordPage_CurrentPasswordLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='generate_password']//table[2]//tbody//tr[1]//td[1]")
+	private WebElement PasswordPage_NewPasswordLabel;
+
+	@FindBy(how = How.CSS, using = "#generate_password > table > tbody > tr > td > table:nth-child(3) > tbody > tr:nth-child(2) > td:nth-child(1)")
+	private WebElement PasswordPage_ConfirmPassword;
+
+	@FindBy(how = How.CSS, using = "#generate_password > table > tbody > tr > td > table:nth-child(3) > tbody > tr:nth-child(3) > td")
+	private WebElement PasswordPage_Note;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
 		PageFactory.initElements(driver, this);
-		data = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
-
+		UserData = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
+		PasswordData = new ReadExcelData(Prop.getProperty("Path1"), "Password");
 	}
 
 	public void login() {
@@ -554,33 +570,30 @@ public class UserPage implements UserPage_Interface {
 		DefaultEmailClient = global.select(editDefaultEmailClient).getFirstSelectedOption().getText();
 
 		// To Verify Edit Page Data From "UserPage.xlsx" sheet
-		int totalRows = data.getTotalRows();
-		int totalColumn = data.getTotalColumns();
-		String[][] array = new String[totalRows][totalColumn];
-		Assert.assertEquals(First_Name + " " + Last_Name, data.getCellData(1, 0));
-		Assert.assertEquals(User_Name, data.getCellData(1, 1));
-		Assert.assertEquals(Status, data.getCellData(1, 2));
-		Assert.assertEquals(User_Type.substring(0, 12), data.getCellData(1, 3));
-		Assert.assertEquals(Filta_User_Type, data.getCellData(1, 4));
-		Assert.assertEquals(Employee_Status, data.getCellData(1, 5));
-		Assert.assertEquals(Title, data.getCellData(1, 6));
-		Assert.assertEquals(Work_Phone, data.getCellData(1, 7));
-		Assert.assertEquals(Mobile, data.getCellData(1, 8));
-		Assert.assertEquals(data.getCellData(1, 9), Prop.getProperty("Reports_To"));
-		Assert.assertEquals(Other_Phone, data.getCellData(1, 10));
-		Assert.assertEquals(Fax, data.getCellData(1, 11));
-		Assert.assertEquals(Default_IM_Type, data.getCellData(1, 12));
-		Assert.assertEquals(IM_Name, data.getCellData(1, 13));
-		Assert.assertEquals(Address_Street, data.getCellData(1, 14));
-		Assert.assertEquals(Address_City, data.getCellData(1, 15));
-		Assert.assertEquals(Address_State, data.getCellData(1, 16));
-		Assert.assertEquals(AddressPostalZipCodel, data.getCellData(1, 17));
-		Assert.assertEquals(Address_Country, data.getCellData(1, 18));
-		Assert.assertEquals(StandardRate, String.valueOf(data.getCellDataInt(1, 19)));
-		Assert.assertEquals(OverTimeRate, String.valueOf(data.getCellDataInt(1, 20)));
-		Assert.assertEquals(Description, data.getCellData(1, 21));
-		Assert.assertEquals(EmailAddress1, data.getCellData(1, 22));
-		Assert.assertEquals(DefaultEmailClient, data.getCellData(1, 23));
+		Assert.assertEquals(First_Name + " " + Last_Name, UserData.getCellData(1, 0));
+		Assert.assertEquals(User_Name, UserData.getCellData(1, 1));
+		Assert.assertEquals(Status, UserData.getCellData(1, 2));
+		Assert.assertEquals(User_Type.substring(0, 12), UserData.getCellData(1, 3));
+		Assert.assertEquals(Filta_User_Type, UserData.getCellData(1, 4));
+		Assert.assertEquals(Employee_Status, UserData.getCellData(1, 5));
+		Assert.assertEquals(Title, UserData.getCellData(1, 6));
+		Assert.assertEquals(Work_Phone, UserData.getCellData(1, 7));
+		Assert.assertEquals(Mobile, UserData.getCellData(1, 8));
+		Assert.assertEquals(UserData.getCellData(1, 9), Prop.getProperty("Reports_To"));
+		Assert.assertEquals(Other_Phone, UserData.getCellData(1, 10));
+		Assert.assertEquals(Fax, UserData.getCellData(1, 11));
+		Assert.assertEquals(Default_IM_Type, UserData.getCellData(1, 12));
+		Assert.assertEquals(IM_Name, UserData.getCellData(1, 13));
+		Assert.assertEquals(Address_Street, UserData.getCellData(1, 14));
+		Assert.assertEquals(Address_City, UserData.getCellData(1, 15));
+		Assert.assertEquals(Address_State, UserData.getCellData(1, 16));
+		Assert.assertEquals(AddressPostalZipCodel, UserData.getCellData(1, 17));
+		Assert.assertEquals(Address_Country, UserData.getCellData(1, 18));
+		Assert.assertEquals(StandardRate, String.valueOf(UserData.getCellDataInt(1, 19)));
+		Assert.assertEquals(OverTimeRate, String.valueOf(UserData.getCellDataInt(1, 20)));
+		Assert.assertEquals(Description, UserData.getCellData(1, 21));
+		Assert.assertEquals(EmailAddress1, UserData.getCellData(1, 22));
+		Assert.assertEquals(DefaultEmailClient, UserData.getCellData(1, 23));
 	}
 
 	public void verifyDataOfUserProfile() {
@@ -635,10 +648,19 @@ public class UserPage implements UserPage_Interface {
 	public void checkPasswordPage() {
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
-		
+
 		// Click On Password Tab
 		Tab2OnEditPage.click();
 		Assert.assertEquals(Tab2OnEditPage.getCssValue("color"), Prop.getProperty("EditPagePasswordColor"));
+
+		// Verify Password Data With The Help Of "UserPage.xlsx" sheet
+		Assert.assertEquals(PasswordPage_PasswordLabel.getText(), PasswordData.getCellData(0, 4));
+		Assert.assertEquals(PasswordPage_PasswordLabel.getCssValue("color"), PasswordData.getCellData(1, 4));
+		Assert.assertEquals(PasswordPage_CurrentPasswordLabel.getText(), PasswordData.getCellData(0, 0));
+		Assert.assertEquals(PasswordPage_NewPasswordLabel.getText(), PasswordData.getCellData(0, 1));
+		Assert.assertEquals(PasswordPage_ConfirmPassword.getText(), PasswordData.getCellData(0, 2));
+		Assert.assertEquals(PasswordPage_Note.getText(),
+				PasswordData.getCellData(0, 3) + " " + PasswordData.getCellData(1, 3));
 	}
 
 	public void closeBrowser() {

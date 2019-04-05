@@ -6,10 +6,8 @@
       <class name="testCases_HomePageFranchisee.UserPage_TestCase">
         <methods>
           <include name="afterMethod"/>
-          <include name="checkButtonName"/>
           <include name="property"/>
-          <include name="buttonBackGroundWithoutMouseOverview"/>
-          <include name="buttonBackGroundWithMouseOverview"/>
+          <include name="checkPasswordPageOnEdit"/>
           <include name="takeScreenShotOnFailure"/>
         </methods>
       </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
