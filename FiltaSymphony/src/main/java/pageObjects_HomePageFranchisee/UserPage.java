@@ -58,6 +58,8 @@ public class UserPage implements UserPage_Interface {
 	private String DefaultEmailClient;
 	private ReadExcelData UserData;
 	private ReadExcelData PasswordData;
+	private String Alert1;
+	private String Alert2;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
@@ -304,6 +306,27 @@ public class UserPage implements UserPage_Interface {
 
 	@FindBy(how = How.CSS, using = "#generate_password > table > tbody > tr > td > table:nth-child(3) > tbody > tr:nth-child(3) > td")
 	private WebElement PasswordPage_Note;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='old_password']")
+	private WebElement CurrentpasswordInput;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='new_password']")
+	private WebElement NewPasswordInput;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='confirm_pwd']")
+	private WebElement ConfirmPasswordInput;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='comfirm_pwd_match']")
+	private WebElement PasswordValidation;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='sugarMsgWindow']//div[@id='sugarMsgWindow_h']")
+	private WebElement PasswordUpdatedLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='sugarMsgWindow']//div[@class='bd']")
+	private WebElement PasswordUpdatedLabel2;
+
+	@FindBy(how = How.XPATH, using = ".//span[@id='error_pwd']")
+	private WebElement PasswordErrorMessage;
 
 	public UserPage(WebDriver driver) {
 		global = new Global();
@@ -661,6 +684,59 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(PasswordPage_ConfirmPassword.getText(), PasswordData.getCellData(0, 2));
 		Assert.assertEquals(PasswordPage_Note.getText(),
 				PasswordData.getCellData(0, 3) + " " + PasswordData.getCellData(1, 3));
+
+		// verify Alert and Validation Message On Alert
+		CurrentpasswordInput.sendKeys(PasswordData.getCellData(0, 1));
+		SaveButtonHeader.click();
+
+		// Handling Alert1
+		Alert1 = global.alert(driver);
+		Assert.assertEquals(Alert1, PasswordData.getCellData(1, 5));
+		NewPasswordInput.sendKeys(PasswordData.getCellData(0, 2));
+		SaveButtonHeader.click();
+
+		// Handling Alert2
+		Alert2 = global.alert(driver);
+		Assert.assertEquals(Alert2, PasswordData.getCellData(1, 6));
+		SaveButtonHeader.click();
+		global.alertAccept(driver);
+
+		// Check Validation Message At Confirmation Message
+		ConfirmPasswordInput.sendKeys("KC");
+		global.wait(driver)
+				.until(ExpectedConditions.textToBePresentInElement(PasswordValidation, "The passwords do not match."));
+		Assert.assertEquals(PasswordValidation.getText(), PasswordData.getCellData(2, 2));
+
+		// Clear Text For NewPasswordInput And ConfirmPasswordInput And Pass Valid
+		// Password
+		NewPasswordInput.clear();
+		NewPasswordInput.sendKeys(PasswordData.getCellData(1, 1));
+		ConfirmPasswordInput.clear();
+		ConfirmPasswordInput.sendKeys(PasswordData.getCellData(1, 2));
+		SaveButtonHeader.click();
+
+		Tab2OnEditPage.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(PasswordErrorMessage));
+		Assert.assertEquals(PasswordErrorMessage.getText(),
+				PasswordData.getCellData(1, 9) + " " + User_Name + PasswordData.getCellData(1, 10));
+
+		// Check Sugar Dashlet Message
+		// global.wait(driver)
+		// .until(ExpectedConditions.textToBePresentInElement(PasswordUpdatedLabel,
+		// "Password Updated"));
+		// Assert.assertEquals(PasswordUpdatedLabel.getText(),
+		// PasswordData.getCellData(1, 7));
+		// Assert.assertEquals(PasswordUpdatedLabel2.getText(),
+		// PasswordData.getCellData(1, 8));
+
+		// if (CurrentpasswordInput.getAttribute("value").length() == 0
+		// && NewPasswordInput.getAttribute("value").length() == 0
+		// && ConfirmPasswordInput.getAttribute("value").length() == 0) {
+		// SaveButtonHeader.click();
+		// System.out.println("Textboxes Are Empty");
+		// } else {
+		// System.out.println("Textboxes Are Not Empty");
+		// }
 	}
 
 	public void closeBrowser() {

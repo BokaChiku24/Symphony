@@ -214,6 +214,12 @@ public class Global {
 		return Message;
 	}
 
+	public void alertAccept(WebDriver driver) {
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+
+	}
+
 	public Actions action(WebDriver driver) {
 		Actions action = new Actions(driver);
 		return action;
