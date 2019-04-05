@@ -59,6 +59,7 @@ public class UserPage implements UserPage_Interface {
 	private ReadExcelData UserData;
 	private ReadExcelData PasswordData;
 	private ReadExcelData ThemeData;
+	private ReadExcelData AdvancedData;
 	private String Alert1;
 	private String Alert2;
 
@@ -341,6 +342,15 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//select[@name='user_theme']")
 	private WebElement DefaultTheme;
 
+	@FindBy(how = How.XPATH, using = ".//a[@id='tab4']")
+	private WebElement Tab4OnEditPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//h4")
+	private WebElement UserSettingLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[2]//td[1]")
+	private WebElement ExportDelimiterLabel;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -350,6 +360,7 @@ public class UserPage implements UserPage_Interface {
 		UserData = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
 		PasswordData = new ReadExcelData(Prop.getProperty("Path1"), "Password");
 		ThemeData = new ReadExcelData(Prop.getProperty("Path1"), "Theme");
+		AdvancedData = new ReadExcelData(Prop.getProperty("Path1"), "Advanced");
 	}
 
 	public void login() {
@@ -762,6 +773,15 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(list.size(), (int) (ThemeData.getCellDataInt(1, 2)));
 		Assert.assertEquals(global.select(DefaultTheme).getFirstSelectedOption().getText(),
 				ThemeData.getCellData(1, 1));
+	}
+
+	public void getDataFromEditPageAdvanced() {
+		Tab4OnEditPage.click();
+		Assert.assertEquals(Tab4OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
+		Assert.assertEquals(Tab4OnEditPage.getText(), Prop.getProperty("AdvancedLabel"));
+		Assert.assertEquals(UserSettingLabel.getText(), Prop.getProperty("Advanced1"));
+		Assert.assertEquals(UserSettingLabel.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
+		Assert.assertEquals(ExportDelimiterLabel.getText(), AdvancedData.getCellData(1, 0));
 	}
 
 	public void closeBrowser() {

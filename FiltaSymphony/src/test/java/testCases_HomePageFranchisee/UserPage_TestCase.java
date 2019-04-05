@@ -127,6 +127,14 @@ public class UserPage_TestCase {
 		UserPageObject.checkThemesPage();
 	}
 
+	@Test(priority = 6)
+	public void checkAdvancedOfUserProfile() {
+		log.info("Test Case 9: Check Advanced On User Page");
+		logger = extent.createTest("Test Case 9: Check Advanced On User Page");
+		UserPageObject.getDataFromEditPageAdvanced();
+//		UserPageObject.verifyDataOfAdvanced();
+	}
+	
 	@AfterMethod
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
 		if (testResult.getStatus() == ITestResult.FAILURE) {
