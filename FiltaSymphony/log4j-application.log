@@ -3173,4 +3173,46 @@
  2019-04-06 00:58:41,223  INFO [main] User Page Test Case:125 - Test Case 8: Check Themes Page On Edit
  2019-04-06 00:58:44,323  INFO [main] User Page Test Case:132 - Test Case 9: Check Advanced On User Page
  2019-04-06 00:58:44,886  INFO [main] User Page Test Case:163 - User Page Test Case Ends Here
+ 2019-04-06 02:18:15,870  INFO [main] Sign In Test Case:85 - Test Case 1: Check Login functionality with valid credentials
+ 2019-04-06 02:18:25,396  INFO [main] Sign In Test Case:118 - Sign In Test Case Ends Here
+ 2019-04-06 02:19:01,653  INFO [main] Sign In With Invalid Credentials Test Case:70 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-04-06 02:19:03,922  INFO [main] Sign In With Invalid Credentials Test Case:80 - Test Case 2: Check Login functionality without credentials
+ 2019-04-06 02:19:06,110  INFO [main] Sign In With Invalid Credentials Test Case:91 - Test Case 3: Check Login functionality withInvalid credentials
+ 2019-04-06 02:19:08,496  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case 4: Check Login functionality withInvalid credentials
+ 2019-04-06 02:19:10,844  INFO [main] Sign In With Invalid Credentials Test Case:136 - Sign In Test Case Ends Here
+ 2019-04-06 02:20:39,029  INFO [main] LogInPage Test Case:67 - Test Case 1: Text Check on Login Page
+ 2019-04-06 02:20:39,141  INFO [main] LogInPage Test Case:74 - Test Case 2: Drop Down Check on Login Page
+ 2019-04-06 02:20:39,509  INFO [main] LogInPage Test Case:81 - Test Case 3: Footer Check on Login Page
+ 2019-04-06 02:20:39,650  INFO [main] LogInPage Test Case:88 - Test Case 4: URL Check on Login Page
+ 2019-04-06 02:20:42,481  INFO [main] LogInPage Test Case:95 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2019-04-06 02:20:42,589  INFO [main] LogInPage Test Case:102 - Test Case 6: Check Login Page TextBox Label
+ 2019-04-06 02:20:43,011  INFO [main] LogInPage Test Case:132 - Login Page test case Ends Here
+ 2019-04-06 02:21:12,856  INFO [main] Forget Password Test Case:67 - Test Case 1: Forgot Password Check With Valid UserName and Email
+ 2019-04-06 02:21:18,676  INFO [main] Forget Password Test Case:76 - Test Case 2: Forgot Password Check With InValid UserName and Email
+ 2019-04-06 02:21:20,427  INFO [main] Forget Password Test Case:84 - Test Case 3: Forgot Password Check WithOut UserName and Email
+ 2019-04-06 02:21:21,956  INFO [main] Forget Password Test Case:92 - Test Case 4: Forgot Password Check WithOut UserName and With Email
+ 2019-04-06 02:21:22,713  INFO [main] Forget Password Test Case:100 - Test Case 5: Forgot Password Check With UserName and WithOut Email
+ 2019-04-06 02:21:23,353  INFO [main] Forget Password Test Case:108 - Test Case 6: Forgot Password Textbox Check
+ 2019-04-06 02:21:23,454  INFO [main] Forget Password Test Case:115 - Test Case 7: Forgot Password Label Check
+ 2019-04-06 02:21:25,015  INFO [main] Forget Password Test Case:145 - Forgot Password Test Case Ends Here
+ 2019-04-06 02:23:12,926  INFO [main] Home Page Test Case:71 - Check Menubar Of Home Page
+ 2019-04-06 02:23:13,549  INFO [main] Home Page Test Case:78 - Check Menu Screen On Home Page
+ 2019-04-06 02:23:18,974  INFO [main] Home Page Test Case:91 - Check Text On Home Page
+ 2019-04-06 02:23:20,400  INFO [main] Home Page Test Case:98 - Check Table On Home Page
+ 2019-04-06 02:23:22,916  INFO [main] Home Page Test Case:105 - Check Tooltip on Home Page
+ 2019-04-06 02:23:23,399  INFO [main] Home Page Test Case:112 - Check Widget On Home Page
+ 2019-04-06 02:23:49,648  INFO [main] Home Page Test Case:119 - Check Color On Home Page
+ 2019-04-06 02:23:50,374  INFO [main] Home Page Test Case:126 - Check User Name On Home Page
+ 2019-04-06 02:23:59,513  INFO [main] Home Page Test Case:156 - Home Page Test Case Ends Here
+ 2019-04-06 02:25:53,467  INFO [main] User Page Test Case:68 - Check URL Of User Page
+ 2019-04-06 02:26:00,396  INFO [main] User Page Test Case:75 - Test Case 1: Check Button Name On User Page
+ 2019-04-06 02:26:04,384  INFO [main] User Page Test Case:82 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-04-06 02:26:08,699  INFO [main] User Page Test Case:89 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-04-06 02:26:13,151  INFO [main] User Page Test Case:96 - Test Case 4: Check Button ToolTip On User Page
+ 2019-04-06 02:26:16,028  INFO [main] User Page Test Case:103 - Test Case 5: Check Tab Name On User Page
+ 2019-04-06 02:26:19,663  INFO [main] User Page Test Case:110 - Test Case 6: Check Data On User Page
+ 2019-04-06 02:26:32,768  INFO [main] User Page Test Case:118 - Test Case 7: Check Password Field On Edit Page
+ 2019-04-06 02:26:47,742  INFO [main] User Page Test Case:125 - Test Case 8: Check Themes Page On Edit
+ 2019-04-06 02:26:50,831  INFO [main] User Page Test Case:132 - Test Case 9: Check Advanced On User Page
+ 2019-04-06 02:26:51,497  INFO [main] User Page Test Case:163 - User Page Test Case Ends Here
  
