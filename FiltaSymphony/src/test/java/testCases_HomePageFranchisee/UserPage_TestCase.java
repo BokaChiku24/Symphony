@@ -107,7 +107,7 @@ public class UserPage_TestCase {
 
 	@Test(priority = 3)
 	public void checkDataOfUserProfile() {
-		log.info("Test Case 6: Check Data Name On User Page");
+		log.info("Test Case 6: Check Data On User Page");
 		logger = extent.createTest("Test Case 6: Check Data On User Page");
 		UserPageObject.getDataFromEditPageUserProfile();
 		UserPageObject.verifyDataOfUserProfile();
@@ -118,6 +118,13 @@ public class UserPage_TestCase {
 		log.info("Test Case 7: Check Password Field On Edit Page");
 		logger = extent.createTest("Test Case 7: Check Password Field On Edit Page");
 		UserPageObject.checkPasswordPage();
+	}
+
+	@Test(priority = 5)
+	public void checkThemesPageOnEdit() {
+		log.info("Test Case 8: Check Themes Page On Edit");
+		logger = extent.createTest("Test Case 8: Check Themes Page On Edit");
+		UserPageObject.checkThemesPage();
 	}
 
 	@AfterMethod

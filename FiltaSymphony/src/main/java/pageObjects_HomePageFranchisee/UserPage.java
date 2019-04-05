@@ -58,6 +58,7 @@ public class UserPage implements UserPage_Interface {
 	private String DefaultEmailClient;
 	private ReadExcelData UserData;
 	private ReadExcelData PasswordData;
+	private ReadExcelData ThemeData;
 	private String Alert1;
 	private String Alert2;
 
@@ -328,6 +329,18 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//span[@id='error_pwd']")
 	private WebElement PasswordErrorMessage;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='sugarMsgWindow']//a[@class='container-close']")
+	private WebElement SugarDashletClose;
+
+	@FindBy(how = How.XPATH, using = ".//a[@id='tab3']")
+	private WebElement Tab3OnEditPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='themepicker']//h4")
+	private WebElement ThemeLabel;
+
+	@FindBy(how = How.XPATH, using = ".//select[@name='user_theme']")
+	private WebElement DefaultTheme;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -336,6 +349,7 @@ public class UserPage implements UserPage_Interface {
 		PageFactory.initElements(driver, this);
 		UserData = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
 		PasswordData = new ReadExcelData(Prop.getProperty("Path1"), "Password");
+		ThemeData = new ReadExcelData(Prop.getProperty("Path1"), "Theme");
 	}
 
 	public void login() {
@@ -721,22 +735,33 @@ public class UserPage implements UserPage_Interface {
 				PasswordData.getCellData(1, 9) + " " + User_Name + PasswordData.getCellData(1, 10));
 
 		// Check Sugar Dashlet Message
-		// global.wait(driver)
-		// .until(ExpectedConditions.textToBePresentInElement(PasswordUpdatedLabel,
-		// "Password Updated"));
-		// Assert.assertEquals(PasswordUpdatedLabel.getText(),
-		// PasswordData.getCellData(1, 7));
-		// Assert.assertEquals(PasswordUpdatedLabel2.getText(),
-		// PasswordData.getCellData(1, 8));
 
-		// if (CurrentpasswordInput.getAttribute("value").length() == 0
-		// && NewPasswordInput.getAttribute("value").length() == 0
-		// && ConfirmPasswordInput.getAttribute("value").length() == 0) {
-		// SaveButtonHeader.click();
-		// System.out.println("Textboxes Are Empty");
-		// } else {
-		// System.out.println("Textboxes Are Not Empty");
-		// }
+		CurrentpasswordInput.sendKeys(PasswordData.getCellData(1, 0));
+		NewPasswordInput.sendKeys(PasswordData.getCellData(1, 1));
+		ConfirmPasswordInput.sendKeys(PasswordData.getCellData(1, 2));
+		SaveButtonHeader.click();
+		global.wait(driver)
+				.until(ExpectedConditions.textToBePresentInElement(PasswordUpdatedLabel, "Password Updated"));
+		Assert.assertEquals(PasswordUpdatedLabel.getText(), PasswordData.getCellData(1, 7));
+		Assert.assertEquals(PasswordUpdatedLabel2.getText(), PasswordData.getCellData(1, 8));
+		SugarDashletClose.click();
+	}
+
+	public void checkThemesPage() {
+		EditButton.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		Tab3OnEditPage.click();
+		Assert.assertEquals(Tab3OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
+		Assert.assertEquals(ThemeLabel.getText(), Prop.getProperty("ThemeLabel"));
+
+		// Check List Of Themes And Count Of Themes
+		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='user_theme']//option"));
+		for (int i = 0; i < list.size(); i++) {
+			Assert.assertEquals(list.get(i).getText(), ThemeData.getCellData(1, i));
+		}
+		Assert.assertEquals(list.size(), (int) (ThemeData.getCellDataInt(1, 2)));
+		Assert.assertEquals(global.select(DefaultTheme).getFirstSelectedOption().getText(),
+				ThemeData.getCellData(1, 1));
 	}
 
 	public void closeBrowser() {
