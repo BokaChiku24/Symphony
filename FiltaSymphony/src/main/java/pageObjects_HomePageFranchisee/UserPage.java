@@ -351,6 +351,21 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[2]//td[1]")
 	private WebElement ExportDelimiterLabel;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[2]//td[2]//input")
+	private WebElement ExportDelimiterlabelTextbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[2]//td[3]")
+	private WebElement NotifyOnAssignment;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[2]//td[4]//input")
+	private WebElement NotifyOnAssignmentCheckBox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[1]")
+	private WebElement ImportExportLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[2]//select")
+	private WebElement DefaultSelectedImportExport;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -775,13 +790,24 @@ public class UserPage implements UserPage_Interface {
 				ThemeData.getCellData(1, 1));
 	}
 
-	public void getDataFromEditPageAdvanced() {
+	public void checkDataFromEditPageAdvanced() {
 		Tab4OnEditPage.click();
 		Assert.assertEquals(Tab4OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
 		Assert.assertEquals(Tab4OnEditPage.getText(), Prop.getProperty("AdvancedLabel"));
 		Assert.assertEquals(UserSettingLabel.getText(), Prop.getProperty("Advanced1"));
 		Assert.assertEquals(UserSettingLabel.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
 		Assert.assertEquals(ExportDelimiterLabel.getText().startsWith(AdvancedData.getCellData(0, 0)), true);
+		Assert.assertEquals(ExportDelimiterlabelTextbox.getAttribute("value"), AdvancedData.getCellData(2, 0));
+		Assert.assertEquals(NotifyOnAssignment.getText().startsWith(AdvancedData.getCellData(0, 3)), true);
+		Assert.assertTrue(NotifyOnAssignmentCheckBox.isSelected());
+		Assert.assertTrue(ImportExportLabel.getText().startsWith(AdvancedData.getCellData(0, 1)));
+		Assert.assertEquals(global.select(DefaultSelectedImportExport).getFirstSelectedOption().getText(),
+				AdvancedData.getCellData(2, 1));
+		List<WebElement> list = driver.findElements(By.xpath(".//div[@id='settings']//tr[3]//td[2]//select//option"));
+		for (int i = 0; i < list.size(); i++) {
+//			System.out.println(list.get(i).getText());
+			Assert.assertEquals(list.get(i).getText(), AdvancedData.getCellData(i, 6));
+		}
 	}
 
 	public void closeBrowser() {

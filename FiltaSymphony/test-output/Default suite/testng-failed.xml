@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases_LoginPage.LogIn_TestCase">
+      <class name="testCases_HomePageFranchisee.UserPage_TestCase">
         <methods>
           <include name="afterMethod"/>
           <include name="property"/>
-          <include name="SignInTesting"/>
+          <include name="checkAdvancedOfUserProfile"/>
           <include name="takeScreenShotOnFailure"/>
         </methods>
-      </class> <!-- testCases_LoginPage.LogIn_TestCase -->
+      </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
