@@ -62,6 +62,7 @@ public class UserPage implements UserPage_Interface {
 	private ReadExcelData PasswordData;
 	private ReadExcelData ThemeData;
 	private ReadExcelData AdvancedData;
+	private ReadExcelData LayoutData;
 	private String Alert1;
 	private String Alert2;
 
@@ -392,6 +393,18 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[4]//td[4]//input")
 	private WebElement DefaultMailMergeCheckBox;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//tbody[1]//tr//th//h4")
+	private WebElement LayoutOption;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//tbody[1]//tr[@id='use_group_tabs_row']//span")
+	private WebElement ModuleMenuLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//tbody[1]//tr[@id='use_group_tabs_row']//input[2]")
+	private WebElement ModuleMenuLabelCheckbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//table//tbody//tr[3]//h4")
+	private WebElement SelectModule;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -402,6 +415,7 @@ public class UserPage implements UserPage_Interface {
 		PasswordData = new ReadExcelData(Prop.getProperty("Path1"), "Password");
 		ThemeData = new ReadExcelData(Prop.getProperty("Path1"), "Theme");
 		AdvancedData = new ReadExcelData(Prop.getProperty("Path1"), "Advanced");
+		LayoutData = new ReadExcelData(Prop.getProperty("Path1"), "Layout");
 	}
 
 	public void login() {
@@ -843,6 +857,12 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(ShowFullName.getText().startsWith(AdvancedData.getCellData(0, 2)), true);
 		assertTrue(DefaultShowFullameCheckbox.isSelected());
 		Assert.assertEquals(DefaultMailMergeCheckBox.isSelected(), false);
+		Assert.assertEquals(LayoutOption.getText(), LayoutData.getCellData(0, 0));
+		Assert.assertEquals(LayoutOption.getText(), LayoutData.getCellData(0, 0));
+		Assert.assertEquals(LayoutOption.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
+		Assert.assertEquals(ModuleMenuLabel.getText(), LayoutData.getCellData(0, 1));
+		assertTrue(ModuleMenuLabelCheckbox.isSelected());
+		Assert.assertEquals(SelectModule.getText(), LayoutData.getCellData(0, 6));
 	}
 
 	public void closeBrowser() {
