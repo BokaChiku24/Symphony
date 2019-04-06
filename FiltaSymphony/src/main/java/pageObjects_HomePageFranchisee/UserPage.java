@@ -13,6 +13,8 @@ import helper.UserPage_Interface;
 import util.Login;
 import util.ReadExcelData;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 import java.util.Properties;
 import util.Global;
@@ -365,6 +367,30 @@ public class UserPage implements UserPage_Interface {
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[2]//select")
 	private WebElement DefaultSelectedImportExport;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[3]")
+	private WebElement RemainderLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[4]//div[1]//div[1]")
+	private WebElement Popup;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[4]//div[1]//input[2]")
+	private WebElement DefaultPopupCheckbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[4]//div[2]//input[2]")
+	private WebElement DefaultEmailCheckBox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[4]//div[2]/div[1]")
+	private WebElement Email;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[4]//td[1]")
+	private WebElement ShowFullName;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[4]//td[2]//input")
+	private WebElement DefaultShowFullameCheckbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[4]//td[4]//input")
+	private WebElement DefaultMailMergeCheckBox;
 
 	public UserPage(WebDriver driver) {
 		global = new Global();
@@ -808,6 +834,15 @@ public class UserPage implements UserPage_Interface {
 //			System.out.println(list.get(i).getText());
 			Assert.assertEquals(list.get(i).getText(), AdvancedData.getCellData(i, 6));
 		}
+		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("CharachterSetCount")));
+		Assert.assertEquals(RemainderLabel.getText().startsWith(AdvancedData.getCellData(0, 4)), true);
+		Assert.assertEquals(Popup.getText(), AdvancedData.getCellData(1, 4));
+		Assert.assertEquals(DefaultPopupCheckbox.isSelected(), false);
+		Assert.assertEquals(DefaultEmailCheckBox.isSelected(), false);
+		Assert.assertEquals(Email.getText(), AdvancedData.getCellData(2, 4));
+		Assert.assertEquals(ShowFullName.getText().startsWith(AdvancedData.getCellData(0, 2)), true);
+		assertTrue(DefaultShowFullameCheckbox.isSelected());
+		Assert.assertEquals(DefaultMailMergeCheckBox.isSelected(), false);
 	}
 
 	public void closeBrowser() {
