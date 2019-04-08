@@ -678,9 +678,9 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(Status, UserData.getCellData(1, 2));
 		Assert.assertEquals(User_Type.substring(0, 12), UserData.getCellData(1, 3));
 		Assert.assertEquals(Filta_User_Type, UserData.getCellData(1, 4));
-		Assert.assertTrue(Send_Remainder);
+		Assert.assertEquals(Send_Remainder, false);
 		Assert.assertEquals(Employee_Status, UserData.getCellData(1, 5));
-		Assert.assertTrue(Display_Employee_Record);
+		Assert.assertEquals(Display_Employee_Record, false);
 		Assert.assertEquals(Title, UserData.getCellData(1, 6));
 		Assert.assertEquals(Work_Phone, UserData.getCellData(1, 7));
 		Assert.assertEquals(Mobile, UserData.getCellData(1, 8));

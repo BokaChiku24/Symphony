@@ -6,16 +6,11 @@
       <class name="testCases_HomePageFranchisee.UserPage_TestCase">
         <methods>
           <include name="checkDataOfUserProfile"/>
-          <include name="checkButtonName"/>
+          <include name="afterMethod"/>
           <include name="property"/>
-          <include name="checkAdvancedOfUserProfile"/>
-          <include name="buttonBackGroundWithoutMouseOverview"/>
-          <include name="tabnamesCheck"/>
-          <include name="checkURL"/>
-          <include name="buttonBackGroundWithMouseOverview"/>
           <include name="checkPasswordPageOnEdit"/>
           <include name="checkThemesPageOnEdit"/>
-          <include name="buttonToolTipCheck"/>
+          <include name="takeScreenShotOnFailure"/>
         </methods>
       </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
     </classes>
