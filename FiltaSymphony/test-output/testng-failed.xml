@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+  <test name="Default test(failed)">
     <classes>
       <class name="testCases_HomePageFranchisee.UserPage_TestCase">
         <methods>
-          <include name="afterMethod"/>
+          <include name="checkDataOfUserProfile"/>
+          <include name="checkButtonName"/>
           <include name="property"/>
           <include name="checkAdvancedOfUserProfile"/>
-          <include name="takeScreenShotOnFailure"/>
+          <include name="buttonBackGroundWithoutMouseOverview"/>
+          <include name="tabnamesCheck"/>
+          <include name="checkURL"/>
+          <include name="buttonBackGroundWithMouseOverview"/>
+          <include name="checkPasswordPageOnEdit"/>
+          <include name="checkThemesPageOnEdit"/>
+          <include name="buttonToolTipCheck"/>
         </methods>
       </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
     </classes>

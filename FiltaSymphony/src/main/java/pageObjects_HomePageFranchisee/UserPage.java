@@ -678,7 +678,9 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(Status, UserData.getCellData(1, 2));
 		Assert.assertEquals(User_Type.substring(0, 12), UserData.getCellData(1, 3));
 		Assert.assertEquals(Filta_User_Type, UserData.getCellData(1, 4));
+		Assert.assertTrue(Send_Remainder);
 		Assert.assertEquals(Employee_Status, UserData.getCellData(1, 5));
+		Assert.assertTrue(Display_Employee_Record);
 		Assert.assertEquals(Title, UserData.getCellData(1, 6));
 		Assert.assertEquals(Work_Phone, UserData.getCellData(1, 7));
 		Assert.assertEquals(Mobile, UserData.getCellData(1, 8));
@@ -696,6 +698,8 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(OverTimeRate, String.valueOf(UserData.getCellDataInt(1, 20)));
 		Assert.assertEquals(Description, UserData.getCellData(1, 21));
 		Assert.assertEquals(EmailAddress1, UserData.getCellData(1, 22));
+		assertTrue(PrimaryRadio1);
+		Assert.assertEquals(PrimaryReplyTo, false);
 		Assert.assertEquals(DefaultEmailClient, UserData.getCellData(1, 23));
 	}
 
@@ -845,7 +849,7 @@ public class UserPage implements UserPage_Interface {
 				AdvancedData.getCellData(2, 1));
 		List<WebElement> list = driver.findElements(By.xpath(".//div[@id='settings']//tr[3]//td[2]//select//option"));
 		for (int i = 0; i < list.size(); i++) {
-//			System.out.println(list.get(i).getText());
+			// System.out.println(list.get(i).getText());
 			Assert.assertEquals(list.get(i).getText(), AdvancedData.getCellData(i, 6));
 		}
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("CharachterSetCount")));
