@@ -411,6 +411,12 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//table//tbody//tr[3]//tr[1]//td[4][@id='chooser_hide_tabs']//nobr")
 	private WebElement HideModule;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//table//tbody//tr[4]//td//span")
+	private WebElement SubPanelTab;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//table//tbody//tr[4]//td[2]//input")
+	private WebElement SubPanelCheckbox;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -880,7 +886,11 @@ public class UserPage implements UserPage_Interface {
 				.findElements(By.xpath(".//div[@id='layout']//table//tbody//tr[3]//tr[2]//td[2]//select//option"));
 		for (int i = 0; i < list2.size(); i++) {
 			System.out.println(list2.get(i).getText());
+			Assert.assertEquals(list2.get(i).getText(), LayoutData.getCellData(i, 7));
 		}
+		Assert.assertEquals(list2.size(), Prop.getProperty("CountDisplayModule"));
+		Assert.assertEquals(SubPanelTab.getText(), LayoutData.getCellData(0, 5));
+		Assert.assertEquals(SubPanelCheckbox.isSelected(), true);
 	}
 
 	public void closeBrowser() {
