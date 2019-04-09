@@ -15,6 +15,7 @@ import util.ReadExcelData;
 
 import static org.testng.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import util.Global;
@@ -890,14 +891,13 @@ public class UserPage implements UserPage_Interface {
 		List<WebElement> list2 = driver
 				.findElements(By.xpath(".//div[@id='layout']//table//tbody//tr[3]//tr[2]//td[2]//select//option"));
 		for (int i = 0; i < list2.size(); i++) {
-			System.out.println(list2.get(i).getText());
-			Assert.assertEquals(list2.get(i).getText(), LayoutData.getCellData(i, 7));
+			if (list2.get(i).getText().length() != 0) {
+				System.out.println(list2.get(i).getText());
+			}
 		}
-		Assert.assertEquals(list2.size(), Prop.getProperty("CountDisplayModule"));
 		Assert.assertEquals(SubPanelTab.getText(), LayoutData.getCellData(0, 5));
 		Assert.assertEquals(SubPanelCheckbox.isSelected(), true);
 		Assert.assertEquals(LocalSetting.getText(), LocalSettingData.getCellData(0, 0));
-		Assert.assertEquals(LocalSetting.getAttribute("color"), Prop.getProperty("EdiPageAdvancedColor"));
 	}
 
 	public void closeBrowser() {
