@@ -405,6 +405,12 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//table//tbody//tr[3]//h4")
 	private WebElement SelectModule;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//table//tbody//tr[3]//tr[1]//td[2][@id='chooser_display_tabs_text']//nobr")
+	private WebElement DisplayModule;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//table//tbody//tr[3]//tr[1]//td[4][@id='chooser_hide_tabs']//nobr")
+	private WebElement HideModule;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -867,6 +873,14 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(ModuleMenuLabel.getText(), LayoutData.getCellData(0, 1));
 		assertTrue(ModuleMenuLabelCheckbox.isSelected());
 		Assert.assertEquals(SelectModule.getText(), LayoutData.getCellData(0, 6));
+		Assert.assertEquals(DisplayModule.getText(), LayoutData.getCellData(0, 3));
+		Assert.assertEquals(HideModule.getText(), LayoutData.getCellData(0, 4));
+
+		List<WebElement> list2 = driver
+				.findElements(By.xpath(".//div[@id='layout']//table//tbody//tr[3]//tr[2]//td[2]//select//option"));
+		for (int i = 0; i < list2.size(); i++) {
+			System.out.println(list2.get(i).getText());
+		}
 	}
 
 	public void closeBrowser() {
