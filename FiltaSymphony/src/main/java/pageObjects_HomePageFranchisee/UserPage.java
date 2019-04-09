@@ -63,6 +63,7 @@ public class UserPage implements UserPage_Interface {
 	private ReadExcelData ThemeData;
 	private ReadExcelData AdvancedData;
 	private ReadExcelData LayoutData;
+	private ReadExcelData LocalSettingData;
 	private String Alert1;
 	private String Alert2;
 
@@ -417,6 +418,9 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//table//tbody//tr[4]//td[2]//input")
 	private WebElement SubPanelCheckbox;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[1]//h4//slot")
+	private WebElement LocalSetting;
+
 	public UserPage(WebDriver driver) {
 		global = new Global();
 		Prop = global.readProperties();
@@ -428,6 +432,7 @@ public class UserPage implements UserPage_Interface {
 		ThemeData = new ReadExcelData(Prop.getProperty("Path1"), "Theme");
 		AdvancedData = new ReadExcelData(Prop.getProperty("Path1"), "Advanced");
 		LayoutData = new ReadExcelData(Prop.getProperty("Path1"), "Layout");
+		LocalSettingData = new ReadExcelData(Prop.getProperty("Path1"), "Locale Settings");
 	}
 
 	public void login() {
@@ -891,6 +896,8 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(list2.size(), Prop.getProperty("CountDisplayModule"));
 		Assert.assertEquals(SubPanelTab.getText(), LayoutData.getCellData(0, 5));
 		Assert.assertEquals(SubPanelCheckbox.isSelected(), true);
+		Assert.assertEquals(LocalSetting.getText(), LocalSettingData.getCellData(0, 0));
+		Assert.assertEquals(LocalSetting.getAttribute("color"), Prop.getProperty("EdiPageAdvancedColor"));
 	}
 
 	public void closeBrowser() {
