@@ -890,11 +890,77 @@ public class UserPage implements UserPage_Interface {
 
 		List<WebElement> list2 = driver
 				.findElements(By.xpath(".//div[@id='layout']//table//tbody//tr[3]//tr[2]//td[2]//select//option"));
+		List<String> list3 = new ArrayList<String>();
 		for (int i = 0; i < list2.size(); i++) {
 			if (list2.get(i).getText().length() != 0) {
-				System.out.println(list2.get(i).getText());
+				// System.out.println(list2.get(i).getText());
+				list3.add(list2.get(i).getText());
 			}
 		}
+//		for (int i = 0; i < list3.size(); i++) {
+//			System.out.println(list3.get(i));
+//		}
+
+		List<String> list4 = new ArrayList<String>();
+		list4.add("Home");
+		list4.add("Customers");
+		list4.add("Contacts");
+		list4.add("Leads");
+		list4.add("Calendar");
+		list4.add("Documents");
+		list4.add("Emails");
+		list4.add("Calls");
+		list4.add("Tech App");
+		list4.add("Accounts");
+		list4.add("Site-Evaluations");
+		list4.add("Tasks");
+		list4.add("Notes");
+		list4.add("FIM Accounts");
+		list4.add("Targets");
+		list4.add("Collections");
+		list4.add("Collectors");
+		list4.add("Franchisee");
+		list4.add("Jacobsen");
+		list4.add("FiltaBio Reported Volumes");
+		list4.add("Routes");
+		list4.add("Invoices");
+		list4.add("Reports");
+		list4.add("Timesheets");
+		list4.add("Worksheets");
+		list4.add("Oil Transfers");
+		list4.add("Routes");
+		list4.add("Coolers");
+		list4.add("Vans");
+		list4.add("Tanks");
+		list4.add("Invoice Settings");
+		list4.add("Jobs");
+		list4.add("Fryers");
+		list4.add("Schedule Infos");
+		list4.add("Postal/Zip Code");
+		list4.add("Territory");
+		list4.add("FiltaFry Invoices");
+		list4.add("Machines");
+		list4.add("FiltaCool Panels");
+		list4.add("Archive Reports");
+		list4.add("NCA Outgoing Payments");
+		list4.add("Discount & Rebate");
+		list4.add("QB Invoices");
+		list4.add("Allocate Unapplied Payments");
+		list4.add("Invoices");
+		list4.add("NCA Payments");
+		list4.add("Franchisee Credit-Debit");
+		list4.add("Franchisee Payments");
+		list4.add("QB Invoice Line Items");
+		list4.add("NCA Group");
+		list4.add("Rebate Payments");
+		list4.add("NCA Chain");
+		list4.add("Unapplied Payments");
+		list4.add("WO Storage Location");
+		list4.add("Advertisement Spends");
+		list4.add("Knowledge Base");
+		list4.add("Buyers");
+		
+		assertTrue((list3.containsAll(list4)));
 		Assert.assertEquals(SubPanelTab.getText(), LayoutData.getCellData(0, 5));
 		Assert.assertEquals(SubPanelCheckbox.isSelected(), true);
 		Assert.assertEquals(LocalSetting.getText(), LocalSettingData.getCellData(0, 0));
