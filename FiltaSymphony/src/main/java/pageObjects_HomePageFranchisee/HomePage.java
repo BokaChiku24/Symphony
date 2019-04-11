@@ -17,7 +17,8 @@ import java.util.List;
 import java.util.Properties;
 import util.Global;
 
-public class HomePage implements HomePage_Interface {
+public class HomePage implements HomePage_Interface
+{
 
 	private Global global;
 	private WebDriver driver;
@@ -176,7 +177,9 @@ public class HomePage implements HomePage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@class='user']")
 	private WebElement getHomeUserName;
 
-	public HomePage(WebDriver driver) {
+
+	public HomePage(WebDriver driver)
+	{
 		global = new Global();
 		Prop = global.readProperties();
 		this.driver = driver;
@@ -184,11 +187,15 @@ public class HomePage implements HomePage_Interface {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void login() {
+
+	public void login()
+	{
 		login.credentials();
 	}
 
-	public void menuBar() {
+
+	public void menuBar()
+	{
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul[@class='last']/li//span/a"));
 
@@ -196,12 +203,15 @@ public class HomePage implements HomePage_Interface {
 		// System.out.println(list.get(i).getText());
 		// }
 
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("FranchiseeMenu" + i));
 		}
 	}
 
-	public void urlCheck() {
+
+	public void urlCheck()
+	{
 		driver.get(
 				"https://dev.filtasymphony.com/index.php?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26type%3Dmenu");
 		waitLoader();
@@ -213,7 +223,9 @@ public class HomePage implements HomePage_Interface {
 		driver.switchTo().window(Array.get(0));
 	}
 
-	public void customers() {
+
+	public void customers()
+	{
 		driver.get(
 				"https://dev.filtasymphony.com/index.php?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26type%3Dmenu");
 		waitLoader();
@@ -224,12 +236,15 @@ public class HomePage implements HomePage_Interface {
 		// System.out.println(list.get(i).getText());
 		// }
 
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("FranchiseeCustomerMenuScreen" + i));
 		}
 	}
 
-	public void leads() {
+
+	public void leads()
+	{
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@class='left-panel'][1]//div[@class='left-panel-national'][2]//div[@class='left-panel-national-block-link clearfix']//ul//li"));
 
@@ -237,12 +252,15 @@ public class HomePage implements HomePage_Interface {
 		// System.out.println(list.get(i).getText());
 		// }
 
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("FranchiseeLeadsMenuScreen" + i));
 		}
 	}
 
-	public void nca() {
+
+	public void nca()
+	{
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@class='main-wrapper clearfix']//div[@class='left-panel'][2]//div[@class='left-panel-national'][1]//ul//li"));
 
@@ -250,12 +268,15 @@ public class HomePage implements HomePage_Interface {
 		// System.out.println(list.get(i).getText());
 		// }
 
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("FranchiseeNCAMenuScreen" + i));
 		}
 	}
 
-	public void filtaBio() {
+
+	public void filtaBio()
+	{
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@class='main-wrapper clearfix']//div[@class='left-panel'][2]//div[@class='left-panel-national'][2]//ul//li"));
 
@@ -263,17 +284,22 @@ public class HomePage implements HomePage_Interface {
 		// System.out.println(list.get(i).getText());
 		// }
 
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("FranchiseeFiltaBioMenuScreen" + i));
 		}
 	}
 
-	public void techHiring() {
+
+	public void techHiring()
+	{
 		Assert.assertEquals(tech.getText(), Prop.getProperty("FranchiseeTechMenuScreen0"));
 
 	}
 
-	public void myFranchisee() {
+
+	public void myFranchisee()
+	{
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@class='main-wrapper clearfix']//div[@class='left-panel'][3]//div[@class='left-panel-national'][1]//ul//li"));
 		//
@@ -281,17 +307,22 @@ public class HomePage implements HomePage_Interface {
 		// System.out.println(list.get(i).getText());
 		// }
 
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("MyFranchiseeMenuScreen" + i));
 		}
 	}
 
-	public void filtaGold() {
+
+	public void filtaGold()
+	{
 		Assert.assertEquals(filtagold.getText(), Prop.getProperty("FiltaGoldMenuScreen"));
 
 	}
 
-	public void checkText() {
+
+	public void checkText()
+	{
 		Assert.assertEquals(email_summary.getText(), Prop.getProperty("HomeText1"));
 		Assert.assertEquals(email_summary2.getText(), Prop.getProperty("HomeText2"));
 		// System.out.println("Test => " + email_summary3.getText());
@@ -314,11 +345,13 @@ public class HomePage implements HomePage_Interface {
 		Assert.assertEquals(lastViewText.getText(), Prop.getProperty("lastViewText") + "  ");
 	}
 
-	public void tableTest() {
+
+	public void tableTest()
+	{
 		List<WebElement> list = driver.findElements(By.xpath(".//table[@id='campaignerData']//tbody//tr"));
 		List<WebElement> list2 = driver.findElements(By.xpath(".//table[@id='campaignerData']//tbody//tr[1]//th"));
-		global.wait(driver).until(
-				ExpectedConditions.visibilityOfElementLocated(By.xpath(".//table[@id='campaignerData']//tbody//tr")));
+		global.wait(driver).until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath(".//table[@id='campaignerData']//tbody//tr")));
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("HomeTable1Rows")));
 		Assert.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("HomeTable1Column")));
 
@@ -328,34 +361,44 @@ public class HomePage implements HomePage_Interface {
 		// }
 
 		// Checks the Column Names
-		for (int i = 0; i < list2.size(); i++) {
-			if (i != 0) {
+		for (int i = 0; i < list2.size(); i++)
+		{
+			if (i != 0)
+			{
 				Assert.assertEquals(list2.get(i).getText(), Prop.getProperty("Hometable1ColumnHeading" + i));
 			}
 		}
 
 		// Checks the Row Names
-		for (int i = 2; i < list.size(); i++) {
-			Assert.assertEquals(driver
-					.findElement(By.xpath(".//table[@id='campaignerData']//tbody//tr[" + i + "]//td[1]")).getText(),
+		for (int i = 2; i < list.size(); i++)
+		{
+			Assert.assertEquals(
+					driver.findElement(By.xpath(".//table[@id='campaignerData']//tbody//tr[" + i + "]//td[1]"))
+							.getText(),
 					Prop.getProperty("HomeTabale1RowName" + i));
 		}
 
 		// Checks Table Column Data
-		for (int i = 2; i < list.size(); i++) {
-			Assert.assertEquals(driver
-					.findElement(By.xpath(".//table[@id='campaignerData']//tbody//tr[" + i + "]//td[2]")).getText(),
+		for (int i = 2; i < list.size(); i++)
+		{
+			Assert.assertEquals(
+					driver.findElement(By.xpath(".//table[@id='campaignerData']//tbody//tr[" + i + "]//td[2]"))
+							.getText(),
 					Prop.getProperty("HomeTableRow1Data"));
-			Assert.assertEquals(driver
-					.findElement(By.xpath(".//table[@id='campaignerData']//tbody//tr[" + i + "]//td[3]")).getText(),
+			Assert.assertEquals(
+					driver.findElement(By.xpath(".//table[@id='campaignerData']//tbody//tr[" + i + "]//td[3]"))
+							.getText(),
 					Prop.getProperty("HomeTableRow1Data"));
-			Assert.assertEquals(driver
-					.findElement(By.xpath(".//table[@id='campaignerData']//tbody//tr[" + i + "]//td[4]")).getText(),
+			Assert.assertEquals(
+					driver.findElement(By.xpath(".//table[@id='campaignerData']//tbody//tr[" + i + "]//td[4]"))
+							.getText(),
 					Prop.getProperty("HomeTableRow1Data"));
 		}
 	}
 
-	public void toolTipCheck() {
+
+	public void toolTipCheck()
+	{
 		Assert.assertEquals(noteToolTip.getAttribute("title"), Prop.getProperty("HomeCustomerTooltip"));
 		Assert.assertEquals(leadToolTip1.getAttribute("title"), Prop.getProperty("HomeLeadTooltip1"));
 		Assert.assertEquals(leadToolTip2.getAttribute("title"), Prop.getProperty("HomeLeadTooltip2"));
@@ -364,7 +407,9 @@ public class HomePage implements HomePage_Interface {
 		Assert.assertEquals(filtagoldToolTip.getAttribute("title"), Prop.getProperty("HomeFiltaGoldToolTip1"));
 	}
 
-	public void widgetTesting() {
+
+	public void widgetTesting()
+	{
 		driver.get("https://dev.filtasymphony.com/index.php?module=Home&action=index&type=widget");
 		Assert.assertEquals(homeDashletlabel2.getText(), Prop.getProperty("HomeDashletlabel2"));
 		Assert.assertEquals(homeDashletlabel2.isDisplayed(), true);
@@ -385,7 +430,8 @@ public class HomePage implements HomePage_Interface {
 		// System.out.println(list.get(i).getText());
 		// }
 
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), " " + Prop.getProperty("Module" + i));
 		}
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("Modules")));
@@ -401,14 +447,15 @@ public class HomePage implements HomePage_Interface {
 		searchButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(searchResult));
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
-		global.wait(driver)
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@id='searchResults']//h4//i")));
+		global.wait(driver).until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@id='searchResults']//h4//i")));
 		Assert.assertEquals(searchResult.getText(), Prop.getProperty("SearchResult2"));
 		Assert.assertEquals(searchResult2.getText(), Prop.getProperty("SearchModule"));
 		Assert.assertEquals(searchResult2.isDisplayed(), true);
 		Assert.assertEquals(addLabel.getText().replace(" ", ""), Prop.getProperty("AddLabel"));
 		Assert.assertEquals(ModuleLabel.getText(), Prop.getProperty("ModuleLabel"));
-		if (searchWidet.getAttribute("value").isEmpty() == false) {
+		if (searchWidet.getAttribute("value").isEmpty() == false)
+		{
 			searchWidet.clear();
 			Assert.assertEquals(searchWidet.getText().isEmpty(), true);
 		}
@@ -420,7 +467,8 @@ public class HomePage implements HomePage_Interface {
 		// for (int i = 0; i < list.size(); i++) {
 		// System.out.println(list.get(i).getText());
 		// }
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("BasicChart" + i));
 		}
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("BasicChartSize")));
@@ -432,14 +480,17 @@ public class HomePage implements HomePage_Interface {
 		searchButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(basicChartSearchResult2));
 		Assert.assertEquals(basicChartSearchResult.getText(), Prop.getProperty("SearchBasicChartResult"));
-		if (searchWidet.getAttribute("value").isEmpty() == false) {
+		if (searchWidet.getAttribute("value").isEmpty() == false)
+		{
 			searchWidet.clear();
 			Assert.assertEquals(searchWidet.getText().isEmpty(), true);
 		}
 		closeWidget.click();
 	}
 
-	public void colorCheck() {
+
+	public void colorCheck()
+	{
 		Assert.assertEquals(redColor.getCssValue("color"), Prop.getProperty("TextColor"));
 		Assert.assertEquals(bottomText1.getCssValue("color"), Prop.getProperty("BottomTextColor"));
 		Assert.assertEquals(bottomText2.getCssValue("color"), Prop.getProperty("BottomTextColor"));
@@ -450,7 +501,9 @@ public class HomePage implements HomePage_Interface {
 		Assert.assertEquals(lastViewText.getCssValue("color"), Prop.getProperty("LastViewColor"));
 	}
 
-	public void checkUserNameOnHomePage() {
+
+	public void checkUserNameOnHomePage()
+	{
 		topText1.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		UserNameOnUserPage = getUserName.getText();
@@ -463,12 +516,16 @@ public class HomePage implements HomePage_Interface {
 				Prop.getProperty("Welcome") + " " + UserNameOnUserPage + " !  " + Prop.getProperty("Logout"));
 	}
 
-	public void waitLoader() {
+
+	public void waitLoader()
+	{
 		global.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(".//div[@id='ajaxloading_mask']")));
 	}
 
-	public void closeBrowser() {
+
+	public void closeBrowser()
+	{
 		driver.close();
 	}
 }

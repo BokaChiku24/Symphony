@@ -31,7 +31,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.testng.ITestResult;
 import util.Global;
 
-public class HomePage_TestCase {
+public class HomePage_TestCase
+{
 
 	private HomePage Homepage;
 	private Global global;
@@ -42,12 +43,15 @@ public class HomePage_TestCase {
 	private String screenshotPath;
 
 	public static Logger log = Logger.getLogger("Home Page Test Case");
-	static {
+	static
+	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
+
 	@BeforeClass
-	public void property() {
+	public void property()
+	{
 		global = new Global();
 		driver = global.driver();
 		Homepage = new HomePage(driver);
@@ -66,15 +70,19 @@ public class HomePage_TestCase {
 		htmlReporter.loadXMLConfig("./extent-config.xml");
 	}
 
+
 	@Test(priority = 0)
-	public void checkMenubar() {
+	public void checkMenubar()
+	{
 		log.info("Check Menubar Of Home Page");
 		logger = extent.createTest("Test Case 1: Check Menubar Of Home Page");
 		Homepage.menuBar();
 	}
 
+
 	@Test(priority = 1)
-	public void menuScreenCheck() {
+	public void menuScreenCheck()
+	{
 		log.info("Check Menu Screen On Home Page");
 		logger = extent.createTest("Test Case 2: Check Menu Screen On Home Page");
 		Homepage.customers();
@@ -86,51 +94,66 @@ public class HomePage_TestCase {
 		Homepage.filtaGold();
 	}
 
+
 	@Test(priority = 2)
-	public void checkText() {
+	public void checkText()
+	{
 		log.info("Check Text On Home Page");
 		logger = extent.createTest("Test Case 3: Check Text On Home Page");
 		Homepage.checkText();
 	}
 
+
 	@Test(priority = 3)
-	public void checkTable() {
+	public void checkTable()
+	{
 		log.info("Check Table On Home Page");
 		logger = extent.createTest("Test Case 4: Check Table On Home Page");
 		Homepage.tableTest();
 	}
 
+
 	@Test(priority = 4)
-	public void checkToolTip() {
+	public void checkToolTip()
+	{
 		log.info("Check Tooltip on Home Page");
 		logger = extent.createTest("Test Case 5: Check Tooltip on Home Page");
 		Homepage.toolTipCheck();
 	}
 
+
 	@Test(priority = 5)
-	public void checkWidget() {
+	public void checkWidget()
+	{
 		log.info("Check Widget On Home Page");
 		logger = extent.createTest("Test Case 6: Check Widget On Home Page");
 		Homepage.widgetTesting();
 	}
 
+
 	@Test(priority = 6)
-	public void checkColor() {
+	public void checkColor()
+	{
 		log.info("Check Color On Home Page");
 		logger = extent.createTest("Test Case 7: Check Color On Home Page");
 		Homepage.colorCheck();
 	}
 
+
 	@Test(priority = 7)
-	public void checkUserNameOnHomePage() {
+	public void checkUserNameOnHomePage()
+	{
 		log.info("Check User Name On Home Page");
 		logger = extent.createTest("Test Case 8: Check User Name On Home Page");
 		Homepage.checkUserNameOnHomePage();
 	}
 
+
 	@AfterMethod
-	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-		if (testResult.getStatus() == ITestResult.FAILURE) {
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
+	{
+		if (testResult.getStatus() == ITestResult.FAILURE)
+		{
 			logger.log(Status.FAIL,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
 			logger.log(Status.FAIL,
@@ -142,17 +165,23 @@ public class HomePage_TestCase {
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
 
-		} else if (testResult.getStatus() == ITestResult.SKIP) {
+		}
+		else if (testResult.getStatus() == ITestResult.SKIP)
+		{
 			logger.log(Status.SKIP,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
-		} else if (testResult.getStatus() == ITestResult.SUCCESS) {
+		}
+		else if (testResult.getStatus() == ITestResult.SUCCESS)
+		{
 			logger.log(Status.PASS,
 					MarkupHelper.createLabel(testResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
 		}
 	}
 
+
 	@AfterClass
-	public void afterMethod() {
+	public void afterMethod()
+	{
 		log.info("Home Page Test Case Ends Here");
 		extent.flush();
 		Homepage.closeBrowser();

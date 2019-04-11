@@ -29,7 +29,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import pageObjects_LoginPage.LoginPage;
 import util.Global;
 
-public class LogInPage_TestCase {
+public class LogInPage_TestCase
+{
 	private LoginPage loginpage;
 	private WebDriver driver;
 	private Global global;
@@ -39,12 +40,15 @@ public class LogInPage_TestCase {
 	private String screenshotPath;
 
 	public static Logger log = Logger.getLogger("LogInPage Test Case");
-	static {
+	static
+	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
+
 	@BeforeClass
-	public void property() {
+	public void property()
+	{
 		global = new Global();
 		driver = global.driver();
 		loginpage = new LoginPage(driver);
@@ -62,51 +66,66 @@ public class LogInPage_TestCase {
 		htmlReporter.loadXMLConfig("./extent-config.xml");
 	}
 
+
 	@Test
-	public void checktext() {
+	public void checktext()
+	{
 		log.info("Test Case 1: Text Check on Login Page");
 		logger = extent.createTest("Test Case 1: Text Check on Login Page");
 		loginpage.checkText2();
 	}
 
+
 	@Test(priority = 1)
-	public void checkDropDown() {
+	public void checkDropDown()
+	{
 		log.info("Test Case 2: Drop Down Check on Login Page");
 		logger = extent.createTest("Test Case 2: Drop Down Check on Login Page");
 		loginpage.dropDown();
 	}
 
+
 	@Test(priority = 2)
-	public void footerCheck() {
+	public void footerCheck()
+	{
 		log.info("Test Case 3: Footer Check on Login Page");
 		logger = extent.createTest("Test Case 3: Footer Check on Login Page");
 		loginpage.checkText();
 	}
 
+
 	@Test(priority = 3)
-	public void checkURL() {
+	public void checkURL()
+	{
 		log.info("Test Case 4: URL Check on Login Page");
 		logger = extent.createTest("Test Case 4: URL Check on Login Page");
 		loginpage.checkURL();
 	}
 
+
 	@Test(priority = 4)
-	public void checkTextBox() {
+	public void checkTextBox()
+	{
 		log.info("Test Case 5: Check Login Page TextBox Enabled Or Not");
 		logger = extent.createTest("Test Case 5: Check Login Page TextBox Enabled Or Not");
 		loginpage.checkTextBoxAssert();
 	}
 
+
 	@Test(priority = 5)
-	public void checkLabel() {
+	public void checkLabel()
+	{
 		log.info("Test Case 6: Check Login Page TextBox Label");
 		logger = extent.createTest("Test Case 6: Check Login Page TextBox Label");
 		loginpage.checktextBoxLabel();
 	}
 
+
 	@AfterMethod
-	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-		if (testResult.getStatus() == ITestResult.FAILURE) {
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
+	{
+		if (testResult.getStatus() == ITestResult.FAILURE)
+		{
 			logger.log(Status.FAIL,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
 			logger.log(Status.FAIL,
@@ -117,18 +136,24 @@ public class LogInPage_TestCase {
 					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
-		} else if (testResult.getStatus() == ITestResult.SKIP) {
+		}
+		else if (testResult.getStatus() == ITestResult.SKIP)
+		{
 			logger.log(Status.SKIP,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
-		} else if (testResult.getStatus() == ITestResult.SUCCESS) {
+		}
+		else if (testResult.getStatus() == ITestResult.SUCCESS)
+		{
 			logger.log(Status.PASS,
 					MarkupHelper.createLabel(testResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
 		}
 
 	}
 
+
 	@AfterClass
-	public void closeBrowser() {
+	public void closeBrowser()
+	{
 		log.info("Login Page test case Ends Here");
 		extent.flush();
 		loginpage.closebrowser();

@@ -8,7 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login {
+public class Login
+{
 	public WebDriver driver;
 	private Global global;
 	private Properties prop;
@@ -22,7 +23,9 @@ public class Login {
 	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
 	private WebElement Log_In;
 
-	public Login(WebDriver driver) {
+
+	public Login(WebDriver driver)
+	{
 		this.driver = driver;
 		global = new Global();
 		prop = global.readProperties();
@@ -30,7 +33,9 @@ public class Login {
 
 	}
 
-	public void credentials() {
+
+	public void credentials()
+	{
 		// prop = global.readProperties();
 		UserName.sendKeys(prop.getProperty("uname"));
 		Password.sendKeys(prop.getProperty("password"));

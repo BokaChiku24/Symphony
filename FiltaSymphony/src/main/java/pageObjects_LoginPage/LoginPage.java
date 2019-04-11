@@ -17,7 +17,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import util.Global;
 
-public class LoginPage implements LoginPage_Interface {
+public class LoginPage implements LoginPage_Interface
+{
 	private WebDriver driver;
 	private Properties Prop;
 	private Global global;
@@ -55,16 +56,21 @@ public class LoginPage implements LoginPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//input[@title='Log In']")
 	private WebElement Login_Label;
 
-	public LoginPage(WebDriver driver) {
+
+	public LoginPage(WebDriver driver)
+	{
 		global = new Global();
 		this.driver = driver;
 		Prop = global.readProperties();
 		PageFactory.initElements(driver, this);
 	}
 
-	public void dropDown() {
+
+	public void dropDown()
+	{
 		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			System.out.println(list.get(i).getText());
 		}
 		Assert.assertEquals(list.get(0).getText(), Prop.getProperty("english"));
@@ -73,19 +79,26 @@ public class LoginPage implements LoginPage_Interface {
 		Assert.assertEquals(global.select(Language).getFirstSelectedOption().getText(), Prop.getProperty("english"));
 	}
 
-	public void checkText() {
+
+	public void checkText()
+	{
 		if (Footer.getText().startsWith("Server response time") && Footer.getText().endsWith(
-				"All other company and product names may be trademarks of the respective companies with which they are associated.")) {
+				"All other company and product names may be trademarks of the respective companies with which they are associated."))
+		{
 			System.out.println("Footer Test Pass ");
 		}
 	}
 
-	public void checkText2() {
+
+	public void checkText2()
+	{
 
 		Assert.assertEquals(Textmessage.getText(), Prop.getProperty("TextLoginPage"));
 	}
 
-	public void checkURL() {
+
+	public void checkURL()
+	{
 		link1.click();
 		ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(handles.get(1));
@@ -101,19 +114,25 @@ public class LoginPage implements LoginPage_Interface {
 
 	}
 
-	public void checkTextBoxAssert() {
+
+	public void checkTextBoxAssert()
+	{
 		Assert.assertEquals(Uname.isEnabled(), true);
 		Assert.assertEquals(Pword.isEnabled(), true);
 	}
 
-	public void checktextBoxLabel() {
+
+	public void checktextBoxLabel()
+	{
 		Assert.assertEquals(Uname_Label.getText(), Prop.getProperty("LoginUnameLabel"));
 		Assert.assertEquals(Pword_Label.getText(), Prop.getProperty("LoginPwordLabel"));
 		Assert.assertEquals(Language_Label.getText(), Prop.getProperty("LoginLanguageLabel"));
 		Assert.assertEquals(Login_Label.getAttribute("value"), Prop.getProperty("LoginLabel"));
 	}
 
-	public void closebrowser() {
+
+	public void closebrowser()
+	{
 		driver.close();
 	}
 

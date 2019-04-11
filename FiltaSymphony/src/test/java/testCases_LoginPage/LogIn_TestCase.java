@@ -32,7 +32,8 @@ import pageObjects_LoginPage.Login;
 import util.Global;
 import util.ReadExcelData;
 
-public class LogIn_TestCase {
+public class LogIn_TestCase
+{
 
 	private Login login;
 	private Global global;
@@ -42,14 +43,17 @@ public class LogIn_TestCase {
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentTest logger;
 	private String screenshotPath;
-	
+
 	public static Logger log = Logger.getLogger("Sign In Test Case");
-	static {
+	static
+	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
+
 	@BeforeClass
-	public void property() {
+	public void property()
+	{
 		global = new Global();
 		driver = global.driver();
 		Prop = global.readProperties();
@@ -69,8 +73,10 @@ public class LogIn_TestCase {
 
 	}
 
+
 	@DataProvider(name = "getData")
-	public String[][] getDataFromExcel() {
+	public String[][] getDataFromExcel()
+	{
 		ReadExcelData data = new ReadExcelData(Prop.getProperty("Path"), "Valid");
 		int totalRows = data.getTotalRows();
 		int totalColumn = data.getTotalColumns();
@@ -80,8 +86,10 @@ public class LogIn_TestCase {
 		return array;
 	}
 
+
 	@Test(dataProvider = "getData")
-	public void SignInTesting(String Uname, String Password) {
+	public void SignInTesting(String Uname, String Password)
+	{
 		log.info("Test Case 1: Check Login functionality with valid credentials");
 		logger = extent.createTest("Test Case 1: Check Login functionality with valid credentials");
 		login.enterUserName(Uname);
@@ -90,9 +98,12 @@ public class LogIn_TestCase {
 		login.assertCheck();
 	}
 
+
 	@AfterMethod
-	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-		if (testResult.getStatus() == ITestResult.FAILURE) {
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
+	{
+		if (testResult.getStatus() == ITestResult.FAILURE)
+		{
 			logger.log(Status.FAIL,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
 			logger.log(Status.FAIL,
@@ -103,18 +114,24 @@ public class LogIn_TestCase {
 					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
-		} else if (testResult.getStatus() == ITestResult.SKIP) {
+		}
+		else if (testResult.getStatus() == ITestResult.SKIP)
+		{
 			logger.log(Status.SKIP,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
-		} else if (testResult.getStatus() == ITestResult.SUCCESS) {
+		}
+		else if (testResult.getStatus() == ITestResult.SUCCESS)
+		{
 			logger.log(Status.PASS,
 					MarkupHelper.createLabel(testResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
 		}
 
 	}
 
+
 	@AfterClass
-	public void afterMethod() {
+	public void afterMethod()
+	{
 		log.info("Sign In Test Case Ends Here");
 		extent.flush();
 		login.driverClose();

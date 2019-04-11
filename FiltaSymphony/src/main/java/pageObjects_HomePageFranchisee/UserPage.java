@@ -20,7 +20,8 @@ import java.util.List;
 import java.util.Properties;
 import util.Global;
 
-public class UserPage implements UserPage_Interface {
+public class UserPage implements UserPage_Interface
+{
 	private Global global;
 	private WebDriver driver;
 	private Properties Prop;
@@ -422,7 +423,12 @@ public class UserPage implements UserPage_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[1]//h4//slot")
 	private WebElement LocalSetting;
 
-	public UserPage(WebDriver driver) {
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[2]//td[1]//slot")
+	private WebElement DataFormatLabel;
+
+
+	public UserPage(WebDriver driver)
+	{
 		global = new Global();
 		Prop = global.readProperties();
 		this.driver = driver;
@@ -436,17 +442,23 @@ public class UserPage implements UserPage_Interface {
 		LocalSettingData = new ReadExcelData(Prop.getProperty("Path1"), "Locale Settings");
 	}
 
-	public void login() {
+
+	public void login()
+	{
 		login.credentials();
 	}
 
-	public void urlCheck() {
+
+	public void urlCheck()
+	{
 		topText1.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		Assert.assertEquals(driver.getCurrentUrl(), Prop.getProperty("UserPageURL"));
 	}
 
-	public void buttonCheck() {
+
+	public void buttonCheck()
+	{
 		Assert.assertEquals(SaveButtonHeader.getAttribute("value"), Prop.getProperty("UserPageSaveButtonNameHeader"));
 		Assert.assertEquals(CancelButtonHeader.getAttribute("value"),
 				Prop.getProperty("UserPageCancelButtonNameHeader"));
@@ -461,7 +473,6 @@ public class UserPage implements UserPage_Interface {
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooter"));
 		Assert.assertEquals(ResetHomePageButtonFooter.getAttribute("value"),
 				Prop.getProperty("UserPageResetHomepageButtonFooter"));
-
 		CancelButtonHeader.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
 		Assert.assertEquals(EditButton.getAttribute("value"), Prop.getProperty("UserPageEditButton"));
@@ -471,21 +482,21 @@ public class UserPage implements UserPage_Interface {
 				Prop.getProperty("UserPageResetHomepageButtonHeader"));
 	}
 
-	public void buttonBackGroundWithoutMouseOverview() {
+
+	public void buttonBackGroundWithoutMouseOverview()
+	{
 		Assert.assertEquals(EditButton.getCssValue("background"),
 				Prop.getProperty("UserPageEditButtonBackGroundColorBlue"));
 		Assert.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("background"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonBackGroundColorBlue"));
 		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("background"),
 				Prop.getProperty("UserPageResetHomePageButtonBackGroundColorBlue"));
-
 		// Text Color Assertion
 		Assert.assertEquals(EditButton.getCssValue("color"), Prop.getProperty("UserPageEditButtonTextWhite"));
 		Assert.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("color"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonTextWhite"));
 		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("color"),
 				Prop.getProperty("UserPageResetHomePageButtonTextWhite"));
-
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		Assert.assertEquals(SaveButtonHeader.getCssValue("background"),
@@ -504,7 +515,6 @@ public class UserPage implements UserPage_Interface {
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooterBackGroundColorBlue"));
 		Assert.assertEquals(ResetHomePageButtonFooter.getCssValue("background"),
 				Prop.getProperty("UserPageResetHomePageButtonFooterBackGroundColorBlue"));
-
 		// Text Color Assertion
 		Assert.assertEquals(SaveButtonHeader.getCssValue("color"),
 				Prop.getProperty("UserPageSaveButtonHeaderTextWhite"));
@@ -524,7 +534,9 @@ public class UserPage implements UserPage_Interface {
 				Prop.getProperty("UserPageResetHomePageButtonFooterTextWhite"));
 	}
 
-	public void buttonBackGroundWithMouseOverview() {
+
+	public void buttonBackGroundWithMouseOverview()
+	{
 		global.action(driver).moveToElement(SaveButtonHeader).build().perform();
 		Assert.assertEquals(SaveButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageSaveButtonHeaderBackGroundColorGreen"));
@@ -560,10 +572,11 @@ public class UserPage implements UserPage_Interface {
 		global.action(driver).moveToElement(ResetHomePageButtonHeader).build().perform();
 		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageResetHomePageButtonBackGroundColorGreen"));
-
 	}
 
-	public void buttonToolTipCheck() {
+
+	public void buttonToolTipCheck()
+	{
 		Assert.assertEquals(EditButton.getAttribute("title"), Prop.getProperty("UserPageEditButtonToolTip"));
 		Assert.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("title"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonToolTip"));
@@ -589,56 +602,66 @@ public class UserPage implements UserPage_Interface {
 				Prop.getProperty("UserPageResetHomePageButtonFooterToolTip"));
 	}
 
-	public void tabnamesCheck() {
+
+	public void tabnamesCheck()
+	{
 		List<WebElement> list = driver.findElements(By.xpath(".//ul[@class='yui-nav']//li//a//em"));
 		// for (int i = 0; i < list.size(); i++) {
 		// System.out.println(list.get(i).getText());
 		// }
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("TabOnEditPage" + i));
-			if (list.get(i).getAttribute("class").equals(Prop.getProperty("userPageClass"))) {
+			if (list.get(i).getAttribute("class").equals(Prop.getProperty("userPageClass")))
+			{
 				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorBlue"));
-			} else if (list.get(i).getAttribute("class").equals("")
-					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey2"))) {
+			}
+			else if (list.get(i).getAttribute("class").equals("")
+					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey2")))
+			{
 				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey2"));
-			} else if (list.get(i).getAttribute("class").equals("")
-					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey"))) {
+			}
+			else if (list.get(i).getAttribute("class").equals("")
+					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey")))
+			{
 				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
 			}
 			// System.out.println(i + " => " + list.get(i).getCssValue("color"));
 		}
-
 		// Count of tabs Assertion
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("TabOnEditPageCount")));
 		CancelButtonHeader.click();
-		global.wait(driver)
-				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//ul[@class='yui-nav']//li")));
+		global.wait(driver).until(
+				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//ul[@class='yui-nav']//li")));
 		List<WebElement> list2 = driver.findElements(By.xpath(".//ul[@class='yui-nav']//li"));
-
-		for (int i = 0; i < list2.size(); i++) {
+		for (int i = 0; i < list2.size(); i++)
+		{
 			Assert.assertEquals(list2.get(i).getText(), Prop.getProperty("TabOnUserPage" + i));
-			if (list2.get(i).getAttribute("class").equals(Prop.getProperty("userPageClass"))) {
+			if (list2.get(i).getAttribute("class").equals(Prop.getProperty("userPageClass")))
+			{
 				Assert.assertEquals(list2.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorBlue"));
-			} else if (list2.get(i).getAttribute("class").equals("")) {
+			}
+			else if (list2.get(i).getAttribute("class").equals(""))
+			{
 				Assert.assertEquals(list2.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
 			}
 		}
 		Assert.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("TabOnUserPageCount")));
-
 	}
 
-	public void getDataFromEditPageUserProfile() {
+
+	public void getDataFromEditPageUserProfile()
+	{
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
-
 		// To Check Label on User Profile Page
 		Assert.assertEquals(UserProfile_UserLabel.getText(), Prop.getProperty("UserProfileLabel1"));
 		Assert.assertEquals(UserProfile_UserLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
 		Assert.assertEquals(UserProfile_EmployeeLabel.getText(), Prop.getProperty("UserProfileLabel2"));
-		Assert.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"),
+				Prop.getProperty("UserProfileLabelColor"));
 		Assert.assertEquals(UserProfile_EmailLabel.getText(), Prop.getProperty("UserProfileLabel3"));
 		Assert.assertEquals(UserProfile_EmailLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
-
 		// To Get Data From Edit User Page
 		User_Name = editUname.getAttribute("value");
 		First_Name = editFirstName.getAttribute("value");
@@ -653,7 +676,8 @@ public class UserPage implements UserPage_Interface {
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][6]//td[@class='edit-table-row1'][2]//select//option"));
 		IM_Type = new String[list.size()];
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			IM_Type[i] = list.get(i).getText();
 		}
 		Default_IM_Type = global.select(editDefaultIMType).getFirstSelectedOption().getText();
@@ -674,7 +698,8 @@ public class UserPage implements UserPage_Interface {
 		List<WebElement> list2 = driver.findElements(By.xpath(
 				".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][9]//td[@class='edit-table-row1'][4]//select//option"));
 		WeeklyStandardHoursMin = new String[list2.size()];
-		for (int i = 0; i < list2.size(); i++) {
+		for (int i = 0; i < list2.size(); i++)
+		{
 			WeeklyStandardHoursMin[i] = list2.get(i).getText();
 		}
 		DefaultWeeklyStandardHoursMin = global.select(editDefaultMin).getFirstSelectedOption().getText();
@@ -685,11 +710,11 @@ public class UserPage implements UserPage_Interface {
 		List<WebElement> list3 = driver
 				.findElements(By.xpath(".//div[@id='email_options']//select[@id='email_link_type']//option"));
 		EmailClient = new String[list3.size()];
-		for (int i = 0; i < list3.size(); i++) {
+		for (int i = 0; i < list3.size(); i++)
+		{
 			EmailClient[i] = list3.get(i).getText();
 		}
 		DefaultEmailClient = global.select(editDefaultEmailClient).getFirstSelectedOption().getText();
-
 		// To Verify Edit Page Data From "UserPage.xlsx" sheet
 		Assert.assertEquals(First_Name + " " + Last_Name, UserData.getCellData(1, 0));
 		Assert.assertEquals(User_Name, UserData.getCellData(1, 1));
@@ -721,20 +746,21 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(DefaultEmailClient, UserData.getCellData(1, 23));
 	}
 
-	public void verifyDataOfUserProfile() {
+
+	public void verifyDataOfUserProfile()
+	{
 		CancelButtonHeader.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
-
 		// To Check Label on User Profile Page
 		Assert.assertEquals(UserProfile_UserLabel.getText(), Prop.getProperty("UserProfileLabel1"));
 		Assert.assertEquals(UserProfile_UserLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
 		Assert.assertEquals(UserProfile_EmployeeLabel.getText(), Prop.getProperty("UserProfileLabel2"));
-		Assert.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"),
+				Prop.getProperty("UserProfileLabelColor"));
 		Assert.assertEquals(UserProfile_EmailLabel.getText(), Prop.getProperty("UserProfileLabel3"));
 		Assert.assertEquals(UserProfile_EmailLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
 		Assert.assertEquals(UserProfile_AllLabel.getText(), Prop.getProperty("UserProfileLabel4"));
 		Assert.assertEquals(UserProfile_AllLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
-
 		// Verify Data On User profile Page
 		Assert.assertEquals(UserProfile_Fullname.getText(), First_Name + " " + Last_Name);
 		Assert.assertEquals(UserProfile_Username.getText(), User_Name);
@@ -770,14 +796,14 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(UserProfile_SugarClient.getText(), DefaultEmailClient);
 	}
 
-	public void checkPasswordPage() {
+
+	public void checkPasswordPage()
+	{
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
-
 		// Click On Password Tab
 		Tab2OnEditPage.click();
 		Assert.assertEquals(Tab2OnEditPage.getCssValue("color"), Prop.getProperty("EditPagePasswordColor"));
-
 		// Verify Password Data With The Help Of "UserPage.xlsx" sheet
 		Assert.assertEquals(PasswordPage_PasswordLabel.getText(), PasswordData.getCellData(0, 4));
 		Assert.assertEquals(PasswordPage_PasswordLabel.getCssValue("color"), PasswordData.getCellData(1, 4));
@@ -786,29 +812,24 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(PasswordPage_ConfirmPassword.getText(), PasswordData.getCellData(0, 2));
 		Assert.assertEquals(PasswordPage_Note.getText(),
 				PasswordData.getCellData(0, 3) + " " + PasswordData.getCellData(1, 3));
-
 		// verify Alert and Validation Message On Alert
 		CurrentpasswordInput.sendKeys(PasswordData.getCellData(0, 1));
 		SaveButtonHeader.click();
-
 		// Handling Alert1
 		Alert1 = global.alert(driver);
 		Assert.assertEquals(Alert1, PasswordData.getCellData(1, 5));
 		NewPasswordInput.sendKeys(PasswordData.getCellData(0, 2));
 		SaveButtonHeader.click();
-
 		// Handling Alert2
 		Alert2 = global.alert(driver);
 		Assert.assertEquals(Alert2, PasswordData.getCellData(1, 6));
 		SaveButtonHeader.click();
 		global.alertAccept(driver);
-
 		// Check Validation Message At Confirmation Message
 		ConfirmPasswordInput.sendKeys("KC");
-		global.wait(driver)
-				.until(ExpectedConditions.textToBePresentInElement(PasswordValidation, "The passwords do not match."));
+		global.wait(driver).until(
+				ExpectedConditions.textToBePresentInElement(PasswordValidation, "The passwords do not match."));
 		Assert.assertEquals(PasswordValidation.getText(), PasswordData.getCellData(2, 2));
-
 		// Clear Text For NewPasswordInput And ConfirmPasswordInput And Pass Valid
 		// Password
 		NewPasswordInput.clear();
@@ -816,14 +837,11 @@ public class UserPage implements UserPage_Interface {
 		ConfirmPasswordInput.clear();
 		ConfirmPasswordInput.sendKeys(PasswordData.getCellData(1, 2));
 		SaveButtonHeader.click();
-
 		Tab2OnEditPage.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(PasswordErrorMessage));
 		Assert.assertEquals(PasswordErrorMessage.getText(),
 				PasswordData.getCellData(1, 9) + " " + User_Name + PasswordData.getCellData(1, 10));
-
 		// Check Sugar Dashlet Message
-
 		CurrentpasswordInput.sendKeys(PasswordData.getCellData(1, 0));
 		NewPasswordInput.sendKeys(PasswordData.getCellData(1, 1));
 		ConfirmPasswordInput.sendKeys(PasswordData.getCellData(1, 2));
@@ -835,16 +853,18 @@ public class UserPage implements UserPage_Interface {
 		SugarDashletClose.click();
 	}
 
-	public void checkThemesPage() {
+
+	public void checkThemesPage()
+	{
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		Tab3OnEditPage.click();
 		Assert.assertEquals(Tab3OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
 		Assert.assertEquals(ThemeLabel.getText(), Prop.getProperty("ThemeLabel"));
-
 		// Check List Of Themes And Count Of Themes
 		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='user_theme']//option"));
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			Assert.assertEquals(list.get(i).getText(), ThemeData.getCellData(1, i));
 		}
 		Assert.assertEquals(list.size(), (int) (ThemeData.getCellDataInt(1, 2)));
@@ -852,7 +872,9 @@ public class UserPage implements UserPage_Interface {
 				ThemeData.getCellData(1, 1));
 	}
 
-	public void checkDataFromEditPageAdvanced() {
+
+	public void checkDataFromEditPageAdvanced()
+	{
 		Tab4OnEditPage.click();
 		Assert.assertEquals(Tab4OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
 		Assert.assertEquals(Tab4OnEditPage.getText(), Prop.getProperty("AdvancedLabel"));
@@ -866,7 +888,8 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(global.select(DefaultSelectedImportExport).getFirstSelectedOption().getText(),
 				AdvancedData.getCellData(2, 1));
 		List<WebElement> list = driver.findElements(By.xpath(".//div[@id='settings']//tr[3]//td[2]//select//option"));
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i < list.size(); i++)
+		{
 			// System.out.println(list.get(i).getText());
 			Assert.assertEquals(list.get(i).getText(), AdvancedData.getCellData(i, 6));
 		}
@@ -887,12 +910,13 @@ public class UserPage implements UserPage_Interface {
 		Assert.assertEquals(SelectModule.getText(), LayoutData.getCellData(0, 6));
 		Assert.assertEquals(DisplayModule.getText(), LayoutData.getCellData(0, 3));
 		Assert.assertEquals(HideModule.getText(), LayoutData.getCellData(0, 4));
-
 		List<WebElement> list2 = driver
 				.findElements(By.xpath(".//div[@id='layout']//table//tbody//tr[3]//tr[2]//td[2]//select//option"));
 		List<String> list3 = new ArrayList<String>();
-		for (int i = 0; i < list2.size(); i++) {
-			if (list2.get(i).getText().length() != 0) {
+		for (int i = 0; i < list2.size(); i++)
+		{
+			if (list2.get(i).getText().length() != 0)
+			{
 				// System.out.println(list2.get(i).getText());
 				list3.add(list2.get(i).getText());
 			}
@@ -900,7 +924,6 @@ public class UserPage implements UserPage_Interface {
 //		for (int i = 0; i < list3.size(); i++) {
 //			System.out.println(list3.get(i));
 //		}
-
 		List<String> list4 = new ArrayList<String>();
 		list4.add("Home");
 		list4.add("Customers");
@@ -959,14 +982,23 @@ public class UserPage implements UserPage_Interface {
 		list4.add("Advertisement Spends");
 		list4.add("Knowledge Base");
 		list4.add("Buyers");
-		
 		assertTrue((list3.containsAll(list4)));
 		Assert.assertEquals(SubPanelTab.getText(), LayoutData.getCellData(0, 5));
 		Assert.assertEquals(SubPanelCheckbox.isSelected(), true);
 		Assert.assertEquals(LocalSetting.getText(), LocalSettingData.getCellData(0, 0));
+		Assert.assertEquals(DataFormatLabel.getText(), LocalSettingData.getCellData(0, 1));
+		List<WebElement> list5 = driver
+				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[2]//select//option"));
+		for (int i = 0; i < list5.size(); i++)
+		{
+			System.out.println(list5.get(i).getText());
+		}
+
 	}
 
-	public void closeBrowser() {
+
+	public void closeBrowser()
+	{
 		driver.close();
 	}
 }

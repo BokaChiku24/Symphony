@@ -14,7 +14,8 @@ import org.testng.Assert;
 import helper.Login_Interface;
 import util.Global;
 
-public class Login implements Login_Interface {
+public class Login implements Login_Interface
+{
 	WebDriver driver;
 	Global global;
 	private Properties Prop;
@@ -31,43 +32,59 @@ public class Login implements Login_Interface {
 	@FindBy(how = How.XPATH, using = ".//div[@class='login']//tbody//tr[2]")
 	private WebElement ErrorMessage;
 
-	public Login(WebDriver driver) {
+
+	public Login(WebDriver driver)
+	{
 		global = new Global();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		Prop = global.readProperties();
 	}
 
-	public void enterUserName(String Username) {
+
+	public void enterUserName(String Username)
+	{
 		UserName.sendKeys(Username);
 	}
 
-	public void enterPassword(String password) {
+
+	public void enterPassword(String password)
+	{
 		Password.sendKeys(password);
 	}
 
-	public void clickSubmit() {
+
+	public void clickSubmit()
+	{
 		Log_In.click();
 	}
 
-	public void assertCheck() {
+
+	public void assertCheck()
+	{
 		String actualMsg = driver.getCurrentUrl();
 		Assert.assertEquals(actualMsg, Prop.getProperty("URLAssert"));
 	}
 
-	public void assertCheck2() {
-		global.wait(driver)
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@class='login']//tbody//tr[2]")));
+
+	public void assertCheck2()
+	{
+		global.wait(driver).until(
+				ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@class='login']//tbody//tr[2]")));
 		String actualMsg = ErrorMessage.getText();
 		Assert.assertEquals(actualMsg, Prop.getProperty("Validation1"));
 	}
 
-	public void clearText() {
+
+	public void clearText()
+	{
 		UserName.clear();
 		Password.clear();
 	}
 
-	public void driverClose() {
+
+	public void driverClose()
+	{
 		driver.close();
 	}
 }

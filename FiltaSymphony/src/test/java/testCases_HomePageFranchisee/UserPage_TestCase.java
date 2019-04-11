@@ -29,7 +29,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import pageObjects_HomePageFranchisee.UserPage;
 import util.Global;
 
-public class UserPage_TestCase {
+public class UserPage_TestCase
+{
 	private UserPage UserPageObject;
 	private Global global;
 	private WebDriver driver;
@@ -37,14 +38,15 @@ public class UserPage_TestCase {
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentTest logger;
 	private String screenshotPath;
-
 	public static Logger log = Logger.getLogger("User Page Test Case");
-	static {
+	static
+	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
 	@BeforeClass
-	public void property() {
+	public void property()
+	{
 		global = new Global();
 		driver = global.driver();
 		UserPageObject = new UserPage(driver);
@@ -64,49 +66,56 @@ public class UserPage_TestCase {
 	}
 
 	@Test(priority = 0)
-	public void checkURL() {
+	public void checkURL()
+	{
 		log.info("Check URL Of User Page");
 		logger = extent.createTest("Test Case 0: Check URL Of User Page");
 		UserPageObject.urlCheck();
 	}
 
 	@Test(priority = 1)
-	public void checkButtonName() {
+	public void checkButtonName()
+	{
 		log.info("Test Case 1: Check Button Name On User Page");
 		logger = extent.createTest("Test Case 1: Check Button Name On User Page");
 		UserPageObject.buttonCheck();
 	}
 
 	@Test(priority = 1, dependsOnMethods = "checkButtonName")
-	public void buttonBackGroundWithoutMouseOverview() {
+	public void buttonBackGroundWithoutMouseOverview()
+	{
 		log.info("Test Case 2: Check Button Color Without Mouse Overview On User Page");
 		logger = extent.createTest("Test Case 2: Check Button Color Without Mouse Overview On User Page");
 		UserPageObject.buttonBackGroundWithoutMouseOverview();
 	}
 
 	@Test(priority = 1, dependsOnMethods = "buttonBackGroundWithoutMouseOverview")
-	public void buttonBackGroundWithMouseOverview() {
+	public void buttonBackGroundWithMouseOverview()
+	{
 		log.info("Test Case 3: Check Button Color With Mouse Overview On User Page");
 		logger = extent.createTest("Test Case 3: Check Button Color With Mouse Overview On User Page");
 		UserPageObject.buttonBackGroundWithMouseOverview();
 	}
 
 	@Test(priority = 1, dependsOnMethods = "buttonBackGroundWithMouseOverview")
-	public void buttonToolTipCheck() {
+	public void buttonToolTipCheck()
+	{
 		log.info("Test Case 4: Check Button ToolTip On User Page");
 		logger = extent.createTest("Test Case 4: Check Button ToolTip On User Page");
 		UserPageObject.buttonToolTipCheck();
 	}
 
 	@Test(priority = 2)
-	public void tabnamesCheck() {
+	public void tabnamesCheck()
+	{
 		log.info("Test Case 5: Check Tab Name On User Page");
 		logger = extent.createTest("Test Case 5: Check Tab Name On User Page");
 		UserPageObject.tabnamesCheck();
 	}
 
 	@Test(priority = 3)
-	public void checkDataOfUserProfile() {
+	public void checkDataOfUserProfile()
+	{
 		log.info("Test Case 6: Check Data On User Page");
 		logger = extent.createTest("Test Case 6: Check Data On User Page");
 		UserPageObject.getDataFromEditPageUserProfile();
@@ -114,21 +123,24 @@ public class UserPage_TestCase {
 	}
 
 	@Test(priority = 4)
-	public void checkPasswordPageOnEdit() {
+	public void checkPasswordPageOnEdit()
+	{
 		log.info("Test Case 7: Check Password Field On Edit Page");
 		logger = extent.createTest("Test Case 7: Check Password Field On Edit Page");
 		UserPageObject.checkPasswordPage();
 	}
 
 	@Test(priority = 5)
-	public void checkThemesPageOnEdit() {
+	public void checkThemesPageOnEdit()
+	{
 		log.info("Test Case 8: Check Themes Page On Edit");
 		logger = extent.createTest("Test Case 8: Check Themes Page On Edit");
 		UserPageObject.checkThemesPage();
 	}
 
 	@Test(priority = 6)
-	public void checkAdvancedOfUserProfile() {
+	public void checkAdvancedOfUserProfile()
+	{
 		log.info("Test Case 9: Check Advanced On User Page");
 		logger = extent.createTest("Test Case 9: Check Advanced On User Page");
 		UserPageObject.checkDataFromEditPageAdvanced();
@@ -136,8 +148,10 @@ public class UserPage_TestCase {
 	}
 
 	@AfterMethod
-	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-		if (testResult.getStatus() == ITestResult.FAILURE) {
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
+	{
+		if (testResult.getStatus() == ITestResult.FAILURE)
+		{
 			logger.log(Status.FAIL,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
 			logger.log(Status.FAIL,
@@ -148,18 +162,22 @@ public class UserPage_TestCase {
 					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
-
-		} else if (testResult.getStatus() == ITestResult.SKIP) {
+		}
+		else if (testResult.getStatus() == ITestResult.SKIP)
+		{
 			logger.log(Status.SKIP,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
-		} else if (testResult.getStatus() == ITestResult.SUCCESS) {
+		}
+		else if (testResult.getStatus() == ITestResult.SUCCESS)
+		{
 			logger.log(Status.PASS,
 					MarkupHelper.createLabel(testResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
 		}
 	}
 
 	@AfterClass
-	public void afterMethod() {
+	public void afterMethod()
+	{
 		log.info("User Page Test Case Ends Here");
 		extent.flush();
 		// UserPageObject.closeBrowser();

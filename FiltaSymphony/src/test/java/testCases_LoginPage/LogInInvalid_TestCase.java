@@ -30,7 +30,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import pageObjects_LoginPage.Login;
 import util.Global;
 
-public class LogInInvalid_TestCase {
+public class LogInInvalid_TestCase
+{
 	private Login login;
 	private Global global;
 	private Properties Prop;
@@ -41,12 +42,15 @@ public class LogInInvalid_TestCase {
 	private String screenshotPath;
 
 	public static Logger log = Logger.getLogger("Sign In With Invalid Credentials Test Case");
-	static {
+	static
+	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
+
 	@BeforeClass
-	public void property() {
+	public void property()
+	{
 		global = new Global();
 		driver = global.driver();
 		Prop = global.readProperties();
@@ -65,8 +69,10 @@ public class LogInInvalid_TestCase {
 		htmlReporter.loadXMLConfig("./extent-config.xml");
 	}
 
+
 	@Test(priority = 0)
-	public void signInWithInvalidCredentails() {
+	public void signInWithInvalidCredentails()
+	{
 		log.info("Test Case 1: Check Login functionality with invalid credentials");
 		logger = extent.createTest("Test Case 1: Check Login functionality with invalid credentials");
 		login.enterUserName(Prop.getProperty("InvalidUname1"));
@@ -75,8 +81,10 @@ public class LogInInvalid_TestCase {
 		login.assertCheck2();
 	}
 
+
 	@Test(priority = 1)
-	public void signInWithInvalidCredentails2() {
+	public void signInWithInvalidCredentails2()
+	{
 		log.info("Test Case 2: Check Login functionality without credentials");
 		logger = extent.createTest("Test Case 2: Check Login functionality without credentials");
 		login.clearText();
@@ -86,8 +94,10 @@ public class LogInInvalid_TestCase {
 		login.assertCheck2();
 	}
 
+
 	@Test(priority = 2)
-	public void signInWithInvalidCredentails3() {
+	public void signInWithInvalidCredentails3()
+	{
 		log.info("Test Case 3: Check Login functionality withInvalid credentials");
 		logger = extent.createTest("Test Case 3: Check Login functionality withInvalid credentials");
 		login.clearText();
@@ -97,8 +107,10 @@ public class LogInInvalid_TestCase {
 		login.assertCheck2();
 	}
 
+
 	@Test(priority = 2)
-	public void signInWithInvalidCredentails4() {
+	public void signInWithInvalidCredentails4()
+	{
 		log.info("Test Case 4: Check Login functionality withInvalid credentials");
 		logger = extent.createTest("Test Case 4: Check Login functionality withInvalid credentials");
 		login.clearText();
@@ -108,31 +120,40 @@ public class LogInInvalid_TestCase {
 		login.assertCheck2();
 	}
 
+
 	@AfterMethod
-	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException {
-		if (testResult.getStatus() == ITestResult.FAILURE) {
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
+	{
+		if (testResult.getStatus() == ITestResult.FAILURE)
+		{
 			logger.log(Status.FAIL,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
 			logger.log(Status.FAIL,
 					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			String dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			screenshotPath = System.getProperty("user.dir") + "/LoginInValid_errorScreenshots/" + testResult.getName()
-					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
+			screenshotPath = System.getProperty("user.dir") + "/LoginInValid_errorScreenshots/"
+					+ testResult.getName() + dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
 
-		} else if (testResult.getStatus() == ITestResult.SKIP) {
+		}
+		else if (testResult.getStatus() == ITestResult.SKIP)
+		{
 			logger.log(Status.SKIP,
 					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
-		} else if (testResult.getStatus() == ITestResult.SUCCESS) {
+		}
+		else if (testResult.getStatus() == ITestResult.SUCCESS)
+		{
 			logger.log(Status.PASS,
 					MarkupHelper.createLabel(testResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
 		}
 	}
 
+
 	@AfterClass
-	public void afterMethod() {
+	public void afterMethod()
+	{
 		log.info("Sign In Test Case Ends Here");
 		extent.flush();
 		login.driverClose();
