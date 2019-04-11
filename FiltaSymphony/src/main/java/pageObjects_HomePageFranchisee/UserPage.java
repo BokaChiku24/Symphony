@@ -13,6 +13,7 @@ import helper.UserPage_Interface;
 import util.Login;
 import util.ReadExcelData;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -425,6 +426,9 @@ public class UserPage implements UserPage_Interface
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[2]//td[1]//slot")
 	private WebElement DataFormatLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[2]//td[3]//slot")
+	private WebElement CurrencyLabel;
 
 
 	public UserPage(WebDriver driver)
@@ -992,8 +996,17 @@ public class UserPage implements UserPage_Interface
 		for (int i = 0; i < list5.size(); i++)
 		{
 			System.out.println(list5.get(i).getText());
+//			Assert.assertEquals("\"" + list5.get(i).getText() + "\"", LocalSettingData.getCellData(i + 1, 1));
 		}
+		Assert.assertEquals(CurrencyLabel.getText(), LocalSettingData.getCellData(0, 2));
+		List<WebElement> list6 = driver
+				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[4]//select//option"));
+		for (int i = 0; i < list6.size(); i++)
+		{
+//			System.out.println(list6.get(i).getText());
+			Assert.assertEquals(list6.get(i).getText(), LocalSettingData.getCellData(i + 1, 2));
 
+		}
 	}
 
 
