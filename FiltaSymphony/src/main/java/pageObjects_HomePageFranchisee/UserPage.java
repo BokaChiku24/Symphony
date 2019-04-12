@@ -995,8 +995,8 @@ public class UserPage implements UserPage_Interface
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[2]//select//option"));
 		for (int i = 0; i < list5.size(); i++)
 		{
-			System.out.println(list5.get(i).getText());
-//			Assert.assertEquals("\"" + list5.get(i).getText() + "\"", LocalSettingData.getCellData(i + 1, 1));
+//			System.out.println(list5.get(i).getText());
+			Assert.assertEquals("\"" + list5.get(i).getText() + "\"", LocalSettingData.getCellData(i + 1, 1));
 		}
 		Assert.assertEquals(CurrencyLabel.getText(), LocalSettingData.getCellData(0, 2));
 		List<WebElement> list6 = driver
