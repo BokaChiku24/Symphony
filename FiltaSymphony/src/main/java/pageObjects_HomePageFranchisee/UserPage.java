@@ -430,6 +430,21 @@ public class UserPage implements UserPage_Interface
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[2]//td[3]//slot")
 	private WebElement CurrencyLabel;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[3]//td[1]//slot")
+	private WebElement TimeFormatLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[3]//td[3]//slot")
+	private WebElement CurrencySignificantDigitsLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[2]//td[2]//select")
+	private WebElement DefaultDateFormat;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[2]//td[4]//select")
+	private WebElement DefaultCurrency;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[3]//td[2]//select")
+	private WebElement DefaultTimeFormat;
+
 
 	public UserPage(WebDriver driver)
 	{
@@ -993,6 +1008,8 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(DataFormatLabel.getText(), LocalSettingData.getCellData(0, 1));
 		List<WebElement> list5 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[2]//select//option"));
+		Assert.assertEquals("\"" + global.select(DefaultDateFormat).getFirstSelectedOption().getText() + "\"",
+				LocalSettingData.getCellData(5, 1));
 		for (int i = 0; i < list5.size(); i++)
 		{
 //			System.out.println(list5.get(i).getText());
@@ -1001,11 +1018,49 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(CurrencyLabel.getText(), LocalSettingData.getCellData(0, 2));
 		List<WebElement> list6 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[4]//select//option"));
+		Assert.assertEquals(global.select(DefaultCurrency).getFirstSelectedOption().getText(),
+				LocalSettingData.getCellData(1, 2));
 		for (int i = 0; i < list6.size(); i++)
 		{
 //			System.out.println(list6.get(i).getText());
 			Assert.assertEquals(list6.get(i).getText(), LocalSettingData.getCellData(i + 1, 2));
 
+		}
+		Assert.assertEquals(TimeFormatLabel.getText(), LocalSettingData.getCellData(0, 3));
+		List<WebElement> list7 = driver
+				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[3]//td[2]//select//option"));
+
+		List<String> list8 = new ArrayList<String>();
+		for (int i = 0; i < list7.size(); i++)
+		{
+			if (list2.get(i).getText().length() != 0)
+			{
+				System.out.println(list7.get(i).getText());
+				list8.add(list7.get(i).getText());
+			}
+
+		}
+		List<String> list9 = new ArrayList<String>();
+		list9.add("23:00");
+		list9.add("11:00pm");
+		list9.add("11:00PM");
+		list9.add("11:00 pm");
+		list9.add("11:00 PM");
+		list9.add("23.00");
+		list9.add("11.00pm");
+		list9.add("11.00PM");
+		list9.add("11.00 pm");
+		list9.add("11.00 PM");
+		Assert.assertEquals(global.select(DefaultTimeFormat).getFirstSelectedOption().getText(), list9.get(0));
+		assertTrue(list8.containsAll(list9));
+		Assert.assertEquals(CurrencySignificantDigitsLabel.getText(), LocalSettingData.getCellData(0, 4));
+
+		List<WebElement> list10 = driver
+				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[3]//td[4]//select//option"));
+		for (int i = 0; i < list10.size(); i++)
+		{
+			Assert.assertEquals(Integer.parseInt(list10.get(i).getText()),
+					(int) LocalSettingData.getCellDataInt(i + 1, 4));
 		}
 	}
 
