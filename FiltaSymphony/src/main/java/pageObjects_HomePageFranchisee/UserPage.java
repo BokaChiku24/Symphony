@@ -13,7 +13,6 @@ import helper.UserPage_Interface;
 import util.Login;
 import util.ReadExcelData;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -69,6 +68,12 @@ public class UserPage implements UserPage_Interface
 	private ReadExcelData LocalSettingData;
 	private String Alert1;
 	private String Alert2;
+	private String Number = null;
+	private int countZero;
+	private int countDollar;
+	private int countComma;
+	private int countDecimal;
+	private int countNumber;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
@@ -444,6 +449,27 @@ public class UserPage implements UserPage_Interface
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[3]//td[2]//select")
 	private WebElement DefaultTimeFormat;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[3]//td[4]//select")
+	private WebElement DefaultCurrencySignificantDigits;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[4]//td[1]//slot")
+	private WebElement TimeZoneLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[4]//td[3]//slot")
+	private WebElement ExampleLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[4]//td[4]//slot//input")
+	private WebElement ExampleTextbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[5]//td[3]//slot")
+	private WebElement separatorLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[5]//td[4]//slot//input")
+	private WebElement sepratorTextbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[6]//td[1]")
+	private WebElement NameDisplayFormatLabel;
 
 
 	public UserPage(WebDriver driver)
@@ -1035,7 +1061,7 @@ public class UserPage implements UserPage_Interface
 		{
 			if (list2.get(i).getText().length() != 0)
 			{
-				System.out.println(list7.get(i).getText());
+//				System.out.println(list7.get(i).getText());
 				list8.add(list7.get(i).getText());
 			}
 
@@ -1062,6 +1088,311 @@ public class UserPage implements UserPage_Interface
 			Assert.assertEquals(Integer.parseInt(list10.get(i).getText()),
 					(int) LocalSettingData.getCellDataInt(i + 1, 4));
 		}
+		Assert.assertEquals(
+				Integer.parseInt(
+						global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()),
+				(int) LocalSettingData.getCellDataInt(3, 4));
+		Assert.assertEquals(TimeZoneLabel.getText(), LocalSettingData.getCellData(0, 5));
+		List<WebElement> list11 = driver
+				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[4]//td[2]//select//option"));
+		for (int i = 0; i < list11.size(); i++)
+		{
+//			System.out.println(list11.get(i).getText());
+			Assert.assertEquals(list11.get(i).getText(), LocalSettingData.getCellData(i + 1, 5));
+		}
+		Assert.assertEquals(ExampleLabel.getText(), LocalSettingData.getCellData(0, 6));
+		Assert.assertEquals(ExampleTextbox.isEnabled(), false);
+		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 2)
+		{
+//			System.out.println(ExampleTextbox.getAttribute("value"));
+			Number = ExampleTextbox.getAttribute("value");
+			countZero = 0;
+			countDollar = 0;
+			countComma = 0;
+			countDecimal = 0;
+			countNumber = 0;
+			for (int i = 0; i < Number.length(); i++)
+			{
+				if (Number.charAt(i) == '0')
+				{
+					countZero++;
+				}
+				if (Number.charAt(i) == '$')
+				{
+					countDollar++;
+				}
+				if (Number.charAt(i) == ',')
+				{
+					countComma++;
+				}
+				if (Number.charAt(i) == '.')
+				{
+					countDecimal++;
+				}
+				if (Number.charAt(i) == '1' || Number.charAt(i) == '2' || Number.charAt(i) == '3'
+						|| Number.charAt(i) == '4' || Number.charAt(i) == '5' || Number.charAt(i) == '6'
+						|| Number.charAt(i) == '7' || Number.charAt(i) == '8' || Number.charAt(i) == '9')
+				{
+					countNumber++;
+				}
+			}
+			Assert.assertEquals(countZero, Integer
+					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+		}
+		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("0");
+		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 0)
+		{
+			Number = ExampleTextbox.getAttribute("value");
+			countZero = 0;
+			countDollar = 0;
+			countComma = 0;
+			countDecimal = 0;
+			countNumber = 0;
+			for (int i = 0; i < Number.length(); i++)
+			{
+				if (Number.charAt(i) == '0')
+				{
+					countZero++;
+				}
+				if (Number.charAt(i) == '$')
+				{
+					countDollar++;
+				}
+				if (Number.charAt(i) == ',')
+				{
+					countComma++;
+				}
+				if (Number.charAt(i) == '.')
+				{
+					countDecimal++;
+				}
+				if (Number.charAt(i) == '1' || Number.charAt(i) == '2' || Number.charAt(i) == '3'
+						|| Number.charAt(i) == '4' || Number.charAt(i) == '5' || Number.charAt(i) == '6'
+						|| Number.charAt(i) == '7' || Number.charAt(i) == '8' || Number.charAt(i) == '9')
+				{
+					countNumber++;
+				}
+			}
+			Assert.assertEquals(countZero, Integer
+					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(1, 9));
+			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+
+		}
+		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("1");
+		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 1)
+		{
+			Number = ExampleTextbox.getAttribute("value");
+			countZero = 0;
+			countDollar = 0;
+			countComma = 0;
+			countDecimal = 0;
+			countNumber = 0;
+			for (int i = 0; i < Number.length(); i++)
+			{
+				if (Number.charAt(i) == '0')
+				{
+					countZero++;
+				}
+				if (Number.charAt(i) == '$')
+				{
+					countDollar++;
+				}
+				if (Number.charAt(i) == ',')
+				{
+					countComma++;
+				}
+				if (Number.charAt(i) == '.')
+				{
+					countDecimal++;
+				}
+				if (Number.charAt(i) == '1' || Number.charAt(i) == '2' || Number.charAt(i) == '3'
+						|| Number.charAt(i) == '4' || Number.charAt(i) == '5' || Number.charAt(i) == '6'
+						|| Number.charAt(i) == '7' || Number.charAt(i) == '8' || Number.charAt(i) == '9')
+				{
+					countNumber++;
+				}
+			}
+			Assert.assertEquals(countZero, Integer
+					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+		}
+		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("3");
+		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 3)
+		{
+			Number = ExampleTextbox.getAttribute("value");
+			countZero = 0;
+			countDollar = 0;
+			countComma = 0;
+			countDecimal = 0;
+			countNumber = 0;
+			for (int i = 0; i < Number.length(); i++)
+			{
+				if (Number.charAt(i) == '0')
+				{
+					countZero++;
+				}
+				if (Number.charAt(i) == '$')
+				{
+					countDollar++;
+				}
+				if (Number.charAt(i) == ',')
+				{
+					countComma++;
+				}
+				if (Number.charAt(i) == '.')
+				{
+					countDecimal++;
+				}
+				if (Number.charAt(i) == '1' || Number.charAt(i) == '2' || Number.charAt(i) == '3'
+						|| Number.charAt(i) == '4' || Number.charAt(i) == '5' || Number.charAt(i) == '6'
+						|| Number.charAt(i) == '7' || Number.charAt(i) == '8' || Number.charAt(i) == '9')
+				{
+					countNumber++;
+				}
+			}
+			Assert.assertEquals(countZero, Integer
+					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+		}
+		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("4");
+		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 4)
+		{
+			Number = ExampleTextbox.getAttribute("value");
+			countZero = 0;
+			countDollar = 0;
+			countComma = 0;
+			countDecimal = 0;
+			countNumber = 0;
+			for (int i = 0; i < Number.length(); i++)
+			{
+				if (Number.charAt(i) == '0')
+				{
+					countZero++;
+				}
+				if (Number.charAt(i) == '$')
+				{
+					countDollar++;
+				}
+				if (Number.charAt(i) == ',')
+				{
+					countComma++;
+				}
+				if (Number.charAt(i) == '.')
+				{
+					countDecimal++;
+				}
+				if (Number.charAt(i) == '1' || Number.charAt(i) == '2' || Number.charAt(i) == '3'
+						|| Number.charAt(i) == '4' || Number.charAt(i) == '5' || Number.charAt(i) == '6'
+						|| Number.charAt(i) == '7' || Number.charAt(i) == '8' || Number.charAt(i) == '9')
+				{
+					countNumber++;
+				}
+			}
+			Assert.assertEquals(countZero, Integer
+					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+		}
+		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("5");
+		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 5)
+		{
+			Number = ExampleTextbox.getAttribute("value");
+			countZero = 0;
+			countDollar = 0;
+			countComma = 0;
+			countDecimal = 0;
+			countNumber = 0;
+			for (int i = 0; i < Number.length(); i++)
+			{
+				if (Number.charAt(i) == '0')
+				{
+					countZero++;
+				}
+				if (Number.charAt(i) == '$')
+				{
+					countDollar++;
+				}
+				if (Number.charAt(i) == ',')
+				{
+					countComma++;
+				}
+				if (Number.charAt(i) == '.')
+				{
+					countDecimal++;
+				}
+				if (Number.charAt(i) == '1' || Number.charAt(i) == '2' || Number.charAt(i) == '3'
+						|| Number.charAt(i) == '4' || Number.charAt(i) == '5' || Number.charAt(i) == '6'
+						|| Number.charAt(i) == '7' || Number.charAt(i) == '8' || Number.charAt(i) == '9')
+				{
+					countNumber++;
+				}
+			}
+			Assert.assertEquals(countZero, Integer
+					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+		}
+		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("6");
+		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 6)
+		{
+			Number = ExampleTextbox.getAttribute("value");
+			countZero = 0;
+			countDollar = 0;
+			countComma = 0;
+			countDecimal = 0;
+			countNumber = 0;
+			for (int i = 0; i < Number.length(); i++)
+			{
+				if (Number.charAt(i) == '0')
+				{
+					countZero++;
+				}
+				if (Number.charAt(i) == '$')
+				{
+					countDollar++;
+				}
+				if (Number.charAt(i) == ',')
+				{
+					countComma++;
+				}
+				if (Number.charAt(i) == '.')
+				{
+					countDecimal++;
+				}
+				if (Number.charAt(i) == '1' || Number.charAt(i) == '2' || Number.charAt(i) == '3'
+						|| Number.charAt(i) == '4' || Number.charAt(i) == '5' || Number.charAt(i) == '6'
+						|| Number.charAt(i) == '7' || Number.charAt(i) == '8' || Number.charAt(i) == '9')
+				{
+					countNumber++;
+				}
+			}
+			Assert.assertEquals(countZero, Integer
+					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+		}
+		Assert.assertEquals(separatorLabel.getText(), LocalSettingData.getCellData(1, 11));
+		Assert.assertEquals(sepratorTextbox.getAttribute("value"), LocalSettingData.getCellData(2, 11));
+		Assert.assertEquals(NameDisplayFormatLabel.getText(), LocalSettingData.getCellData(0, 12));
 	}
 
 
