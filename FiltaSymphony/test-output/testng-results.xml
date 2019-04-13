@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="151974" started-at="2019-04-13T08:03:22Z" finished-at="2019-04-13T08:05:54Z">
+  <suite name="Default suite" duration-ms="155043" started-at="2019-04-13T08:27:25Z" finished-at="2019-04-13T08:30:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="151974" started-at="2019-04-13T08:03:22Z" finished-at="2019-04-13T08:05:54Z">
+    <test name="Default test" duration-ms="155043" started-at="2019-04-13T08:27:25Z" finished-at="2019-04-13T08:30:00Z">
       <class name="testCases_HomePageFranchisee.UserPage_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="property" is-config="true" duration-ms="42836" started-at="2019-04-13T08:03:22Z" finished-at="2019-04-13T08:04:05Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="property" is-config="true" duration-ms="49008" started-at="2019-04-13T08:27:25Z" finished-at="2019-04-13T08:28:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checkURL()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkURL" duration-ms="9821" started-at="2019-04-13T08:04:05Z" finished-at="2019-04-13T08:04:15Z">
+        <test-method status="PASS" signature="checkURL()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkURL" duration-ms="6541" started-at="2019-04-13T08:28:14Z" finished-at="2019-04-13T08:28:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkURL -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="44" started-at="2019-04-13T08:04:15Z" finished-at="2019-04-13T08:04:15Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="47" started-at="2019-04-13T08:28:21Z" finished-at="2019-04-13T08:28:21Z">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkButtonName()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkButtonName" duration-ms="4438" started-at="2019-04-13T08:04:15Z" finished-at="2019-04-13T08:04:19Z">
+        <test-method status="PASS" signature="checkButtonName()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkButtonName" duration-ms="4210" started-at="2019-04-13T08:28:21Z" finished-at="2019-04-13T08:28:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkButtonName -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-04-13T08:04:19Z" finished-at="2019-04-13T08:04:19Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-04-13T08:28:25Z" finished-at="2019-04-13T08:28:25Z">
           <params>
             <param index="0">
               <value>
@@ -41,11 +41,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="buttonBackGroundWithoutMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithoutMouseOverview" duration-ms="5194" started-at="2019-04-13T08:04:19Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.checkButtonName" finished-at="2019-04-13T08:04:24Z">
+        <test-method status="PASS" signature="buttonBackGroundWithoutMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithoutMouseOverview" duration-ms="4219" started-at="2019-04-13T08:28:25Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.checkButtonName" finished-at="2019-04-13T08:28:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buttonBackGroundWithoutMouseOverview -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="4" started-at="2019-04-13T08:04:24Z" finished-at="2019-04-13T08:04:24Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="4" started-at="2019-04-13T08:28:29Z" finished-at="2019-04-13T08:28:29Z">
           <params>
             <param index="0">
               <value>
@@ -56,11 +56,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="buttonBackGroundWithMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithMouseOverview" duration-ms="4632" started-at="2019-04-13T08:04:24Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.buttonBackGroundWithoutMouseOverview" finished-at="2019-04-13T08:04:29Z">
+        <test-method status="PASS" signature="buttonBackGroundWithMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithMouseOverview" duration-ms="4543" started-at="2019-04-13T08:28:29Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.buttonBackGroundWithoutMouseOverview" finished-at="2019-04-13T08:28:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buttonBackGroundWithMouseOverview -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="4" started-at="2019-04-13T08:04:29Z" finished-at="2019-04-13T08:04:29Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-04-13T08:28:34Z" finished-at="2019-04-13T08:28:34Z">
           <params>
             <param index="0">
               <value>
@@ -71,11 +71,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="buttonToolTipCheck()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonToolTipCheck" duration-ms="3032" started-at="2019-04-13T08:04:29Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.buttonBackGroundWithMouseOverview" finished-at="2019-04-13T08:04:32Z">
+        <test-method status="PASS" signature="buttonToolTipCheck()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonToolTipCheck" duration-ms="2970" started-at="2019-04-13T08:28:34Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.buttonBackGroundWithMouseOverview" finished-at="2019-04-13T08:28:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buttonToolTipCheck -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-04-13T08:04:32Z" finished-at="2019-04-13T08:04:32Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-04-13T08:28:37Z" finished-at="2019-04-13T08:28:37Z">
           <params>
             <param index="0">
               <value>
@@ -86,11 +86,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="tabnamesCheck()[pri:2, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="tabnamesCheck" duration-ms="3957" started-at="2019-04-13T08:04:32Z" finished-at="2019-04-13T08:04:36Z">
+        <test-method status="PASS" signature="tabnamesCheck()[pri:2, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="tabnamesCheck" duration-ms="3815" started-at="2019-04-13T08:28:37Z" finished-at="2019-04-13T08:28:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tabnamesCheck -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-04-13T08:04:36Z" finished-at="2019-04-13T08:04:36Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-04-13T08:28:41Z" finished-at="2019-04-13T08:28:41Z">
           <params>
             <param index="0">
               <value>
@@ -101,11 +101,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkDataOfUserProfile()[pri:3, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkDataOfUserProfile" duration-ms="14196" started-at="2019-04-13T08:04:36Z" finished-at="2019-04-13T08:04:50Z">
+        <test-method status="PASS" signature="checkDataOfUserProfile()[pri:3, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkDataOfUserProfile" duration-ms="13519" started-at="2019-04-13T08:28:41Z" finished-at="2019-04-13T08:28:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDataOfUserProfile -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-04-13T08:04:50Z" finished-at="2019-04-13T08:04:50Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-04-13T08:28:54Z" finished-at="2019-04-13T08:28:54Z">
           <params>
             <param index="0">
               <value>
@@ -116,11 +116,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkPasswordPageOnEdit()[pri:4, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkPasswordPageOnEdit" duration-ms="16047" started-at="2019-04-13T08:04:50Z" finished-at="2019-04-13T08:05:06Z">
+        <test-method status="PASS" signature="checkPasswordPageOnEdit()[pri:4, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkPasswordPageOnEdit" duration-ms="18000" started-at="2019-04-13T08:28:54Z" finished-at="2019-04-13T08:29:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkPasswordPageOnEdit -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-04-13T08:05:06Z" finished-at="2019-04-13T08:05:06Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-04-13T08:29:12Z" finished-at="2019-04-13T08:29:12Z">
           <params>
             <param index="0">
               <value>
@@ -131,11 +131,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkThemesPageOnEdit()[pri:5, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkThemesPageOnEdit" duration-ms="3104" started-at="2019-04-13T08:05:06Z" finished-at="2019-04-13T08:05:09Z">
+        <test-method status="PASS" signature="checkThemesPageOnEdit()[pri:5, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkThemesPageOnEdit" duration-ms="3155" started-at="2019-04-13T08:29:12Z" finished-at="2019-04-13T08:29:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkThemesPageOnEdit -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="3" started-at="2019-04-13T08:05:09Z" finished-at="2019-04-13T08:05:09Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-04-13T08:29:15Z" finished-at="2019-04-13T08:29:15Z">
           <params>
             <param index="0">
               <value>
@@ -146,11 +146,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkAdvancedOfUserProfile()[pri:6, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkAdvancedOfUserProfile" duration-ms="44270" started-at="2019-04-13T08:05:09Z" finished-at="2019-04-13T08:05:54Z">
+        <test-method status="PASS" signature="checkAdvancedOfUserProfile()[pri:6, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkAdvancedOfUserProfile" duration-ms="44686" started-at="2019-04-13T08:29:15Z" finished-at="2019-04-13T08:30:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkAdvancedOfUserProfile -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-04-13T08:05:54Z" finished-at="2019-04-13T08:05:54Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-04-13T08:30:00Z" finished-at="2019-04-13T08:30:00Z">
           <params>
             <param index="0">
               <value>
@@ -161,7 +161,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="afterMethod" is-config="true" duration-ms="324" started-at="2019-04-13T08:05:54Z" finished-at="2019-04-13T08:05:54Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="afterMethod" is-config="true" duration-ms="270" started-at="2019-04-13T08:30:00Z" finished-at="2019-04-13T08:30:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
