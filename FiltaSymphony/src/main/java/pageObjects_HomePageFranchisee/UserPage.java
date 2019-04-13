@@ -1390,9 +1390,9 @@ public class UserPage implements UserPage_Interface
 			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
 			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 		}
-		Assert.assertEquals(separatorLabel.getText(), LocalSettingData.getCellData(1, 11));
-		Assert.assertEquals(sepratorTextbox.getAttribute("value"), LocalSettingData.getCellData(2, 11));
-		Assert.assertEquals(NameDisplayFormatLabel.getText(), LocalSettingData.getCellData(0, 12));
+		Assert.assertEquals(separatorLabel.getText(), LocalSettingData.getCellData(0, 11));
+		Assert.assertEquals(sepratorTextbox.getAttribute("value"), LocalSettingData.getCellData(1, 11));
+		Assert.assertEquals(NameDisplayFormatLabel.getText(), LocalSettingData.getCellData(0, 12) + " ");
 		
 	}
 
