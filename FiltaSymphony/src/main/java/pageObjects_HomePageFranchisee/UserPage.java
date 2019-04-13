@@ -1393,6 +1393,7 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(separatorLabel.getText(), LocalSettingData.getCellData(1, 11));
 		Assert.assertEquals(sepratorTextbox.getAttribute("value"), LocalSettingData.getCellData(2, 11));
 		Assert.assertEquals(NameDisplayFormatLabel.getText(), LocalSettingData.getCellData(0, 12));
+		
 	}
 
 
