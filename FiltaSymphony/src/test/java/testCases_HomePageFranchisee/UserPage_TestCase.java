@@ -144,7 +144,7 @@ public class UserPage_TestCase
 		log.info("Test Case 9: Check Advanced On User Page");
 		logger = extent.createTest("Test Case 9: Check Advanced On User Page");
 		UserPageObject.checkDataFromEditPageAdvanced();
-//		UserPageObject.verifyDataOfAdvanced();
+		UserPageObject.verifyDataOfAdvanced();
 	}
 
 	@AfterMethod

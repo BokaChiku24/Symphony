@@ -66,6 +66,8 @@ public class UserPage implements UserPage_Interface
 	private ReadExcelData AdvancedData;
 	private ReadExcelData LayoutData;
 	private ReadExcelData LocalSettingData;
+	private ReadExcelData CalendarOptionData;
+
 	private String Alert1;
 	private String Alert2;
 	private String Number = null;
@@ -74,6 +76,28 @@ public class UserPage implements UserPage_Interface
 	private int countComma;
 	private int countDecimal;
 	private int countNumber;
+
+	private String ExportDelimiter;
+	private String ImportExportCharSet;
+	private boolean ShowFullNameValue;
+	private boolean NotifyOnAssignmentvalue;
+	private String DateFormat;
+	private String TimeFormat;
+	private String TimeZone;
+	private String Currency;
+	private int CurrencySignificantDigit;
+	private String ThousandsSeparator;
+	private String DecimalSymbol;
+	private String Name;
+	private String PublishAtMyLocationValue;
+	private String SearchLocation;
+	private String iCalValue;
+	private String FirstDayOfWeek;
+	private boolean RemainEmailTextbox;
+	private boolean RemainderPopupTextbox;
+	private boolean MailMergetextBox;
+	private String PopupEditPage;
+	private String EmailEditPage;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
@@ -471,6 +495,144 @@ public class UserPage implements UserPage_Interface
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[6]//td[1]")
 	private WebElement NameDisplayFormatLabel;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[6]//td[3]//slot")
+	private WebElement DecimalSymbolLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[6]//td[4]//slot//input")
+	private WebElement DecimalSymbolTextbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//h4")
+	private WebElement CalendarOptionLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[2]//td[1]//slot")
+	private WebElement PublishKeyLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[2]//td[2]//slot//input")
+	private WebElement PublishKeyTextbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[3]//td[1]//slot")
+	private WebElement PublishAtMyLocation;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[3]//td[2]//slot")
+	private WebElement PublishAtMyLocationText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[4]//td[1]//slot")
+	private WebElement SearchLocationLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[4]//td[2]//slot")
+	private WebElement SearchLocationText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[5]//td[1]//slot")
+	private WebElement iCalintegrationURLLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[5]//td[2]//slot")
+	private WebElement iCalintegrationText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[6]//td[1]//slot")
+	private WebElement FirstDayOfWeekLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[6]//td[2]//slot//select")
+	private WebElement DefaultFirstdayOfWeek;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[4]//td[2]//select")
+	private WebElement DefaultTimeZone;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tbody//tr[6]//td[2]//select")
+	private WebElement DefaultName;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='user_detailview_tabs']//ul[1]//li[2]")
+	private WebElement AdvancedTab;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='user_detailview_tabs']//ul[1]//li[2]//em")
+	private WebElement AdvancedTabLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//h4//slot")
+	private WebElement UserSettingUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[2]//td[1]//slot")
+	private WebElement NotifyOnAssignmentUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[2]//td[2]//slot")
+	private WebElement NotifyOnAssignmentValueUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[2]//td[3]//slot")
+	private WebElement NotifyOnAssignmentTextUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[1]//slot")
+	private WebElement RemainderUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[2]//slot//div[1]//input")
+	private WebElement PopupCheckBoxUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[2]//slot//div[2]//input")
+	private WebElement EmailCheckBoxUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[2]//slot//div[1]")
+	private WebElement PopupUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[2]//slot//div[2]")
+	private WebElement EmailUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[3]//td[3]//slot")
+	private WebElement RemainderText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[4]//td[1]//slot")
+	private WebElement MailMergeuserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[4]//td[2]//slot//input")
+	private WebElement MailMergeUserPageCheckBox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[4]//td[3]//slot")
+	private WebElement MailMergeTextUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[5]//td[1]//slot")
+	private WebElement URLUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[5]//td[2]//slot")
+	private WebElement URLUserPage2;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[5]//td[3]//slot")
+	private WebElement URLUserPage3;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[6]//td[1]//slot")
+	private WebElement ExportDelimiterUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[6]//td[2]//slot")
+	private WebElement ExportDelimiterTextboxUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[6]//td[3]//slot")
+	private WebElement ExportDelimiterText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[7]//td[1]//slot")
+	private WebElement ImportExportUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[7]//td[2]//slot")
+	private WebElement ImportExportText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[7]//td[3]//slot")
+	private WebElement ImportExportTextUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[8]//td[1]//slot")
+	private WebElement ShowFullNamesTextUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[8]//td[2]//slot//input")
+	private WebElement ShowFullNameTextBox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='settings']//tr[8]//td[3]//slot")
+	private WebElement ShowFullNameUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//h4//slot")
+	private WebElement LocaleUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[2]//td[1]//slot")
+	private WebElement DataFormatUserPageLabel;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[2]//td[2]//slot")
+	private WebElement DataFormatText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[2]//td[3]//slot")
+	private WebElement DataFormatTextUserPage;
+
 
 	public UserPage(WebDriver driver)
 	{
@@ -485,6 +647,7 @@ public class UserPage implements UserPage_Interface
 		AdvancedData = new ReadExcelData(Prop.getProperty("Path1"), "Advanced");
 		LayoutData = new ReadExcelData(Prop.getProperty("Path1"), "Layout");
 		LocalSettingData = new ReadExcelData(Prop.getProperty("Path1"), "Locale Settings");
+		CalendarOptionData = new ReadExcelData(Prop.getProperty("Path1"), "Calrendar");
 	}
 
 
@@ -926,12 +1089,14 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(UserSettingLabel.getText(), Prop.getProperty("Advanced1"));
 		Assert.assertEquals(UserSettingLabel.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
 		Assert.assertEquals(ExportDelimiterLabel.getText().startsWith(AdvancedData.getCellData(0, 0)), true);
-		Assert.assertEquals(ExportDelimiterlabelTextbox.getAttribute("value"), AdvancedData.getCellData(2, 0));
+		ExportDelimiter = ExportDelimiterlabelTextbox.getAttribute("value");
+		Assert.assertEquals(ExportDelimiter, AdvancedData.getCellData(2, 0));
 		Assert.assertEquals(NotifyOnAssignment.getText().startsWith(AdvancedData.getCellData(0, 3)), true);
-		Assert.assertTrue(NotifyOnAssignmentCheckBox.isSelected());
+		NotifyOnAssignmentvalue = NotifyOnAssignmentCheckBox.isSelected();
+		Assert.assertTrue(NotifyOnAssignmentvalue);
 		Assert.assertTrue(ImportExportLabel.getText().startsWith(AdvancedData.getCellData(0, 1)));
-		Assert.assertEquals(global.select(DefaultSelectedImportExport).getFirstSelectedOption().getText(),
-				AdvancedData.getCellData(2, 1));
+		ImportExportCharSet = global.select(DefaultSelectedImportExport).getFirstSelectedOption().getText();
+		Assert.assertEquals(ImportExportCharSet, AdvancedData.getCellData(2, 1));
 		List<WebElement> list = driver.findElements(By.xpath(".//div[@id='settings']//tr[3]//td[2]//select//option"));
 		for (int i = 0; i < list.size(); i++)
 		{
@@ -940,13 +1105,19 @@ public class UserPage implements UserPage_Interface
 		}
 		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("CharachterSetCount")));
 		Assert.assertEquals(RemainderLabel.getText().startsWith(AdvancedData.getCellData(0, 4)), true);
-		Assert.assertEquals(Popup.getText(), AdvancedData.getCellData(1, 4));
-		Assert.assertEquals(DefaultPopupCheckbox.isSelected(), false);
-		Assert.assertEquals(DefaultEmailCheckBox.isSelected(), false);
-		Assert.assertEquals(Email.getText(), AdvancedData.getCellData(2, 4));
+		PopupEditPage = Popup.getText();
+		Assert.assertEquals(PopupEditPage, AdvancedData.getCellData(1, 4));
+		RemainEmailTextbox = DefaultEmailCheckBox.isSelected();
+		RemainderPopupTextbox = DefaultPopupCheckbox.isSelected();
+		Assert.assertEquals(RemainderPopupTextbox, false);
+		Assert.assertEquals(RemainEmailTextbox, false);
+		EmailEditPage = Email.getText();
+		Assert.assertEquals(EmailEditPage, AdvancedData.getCellData(2, 4));
 		Assert.assertEquals(ShowFullName.getText().startsWith(AdvancedData.getCellData(0, 2)), true);
-		assertTrue(DefaultShowFullameCheckbox.isSelected());
-		Assert.assertEquals(DefaultMailMergeCheckBox.isSelected(), false);
+		ShowFullNameValue = DefaultShowFullameCheckbox.isSelected();
+		assertTrue(ShowFullNameValue);
+		MailMergetextBox = DefaultMailMergeCheckBox.isSelected();
+		Assert.assertEquals(MailMergetextBox, false);
 		Assert.assertEquals(LayoutOption.getText(), LayoutData.getCellData(0, 0));
 		Assert.assertEquals(LayoutOption.getText(), LayoutData.getCellData(0, 0));
 		Assert.assertEquals(LayoutOption.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
@@ -1034,8 +1205,8 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(DataFormatLabel.getText(), LocalSettingData.getCellData(0, 1));
 		List<WebElement> list5 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[2]//select//option"));
-		Assert.assertEquals("\"" + global.select(DefaultDateFormat).getFirstSelectedOption().getText() + "\"",
-				LocalSettingData.getCellData(5, 1));
+		DateFormat = global.select(DefaultDateFormat).getFirstSelectedOption().getText();
+		Assert.assertEquals("\"" + DateFormat + "\"", LocalSettingData.getCellData(5, 1));
 		for (int i = 0; i < list5.size(); i++)
 		{
 //			System.out.println(list5.get(i).getText());
@@ -1044,8 +1215,8 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(CurrencyLabel.getText(), LocalSettingData.getCellData(0, 2));
 		List<WebElement> list6 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[4]//select//option"));
-		Assert.assertEquals(global.select(DefaultCurrency).getFirstSelectedOption().getText(),
-				LocalSettingData.getCellData(1, 2));
+		Currency = global.select(DefaultCurrency).getFirstSelectedOption().getText();
+		Assert.assertEquals(Currency, LocalSettingData.getCellData(1, 2));
 		for (int i = 0; i < list6.size(); i++)
 		{
 //			System.out.println(list6.get(i).getText());
@@ -1077,7 +1248,8 @@ public class UserPage implements UserPage_Interface
 		list9.add("11.00PM");
 		list9.add("11.00 pm");
 		list9.add("11.00 PM");
-		Assert.assertEquals(global.select(DefaultTimeFormat).getFirstSelectedOption().getText(), list9.get(0));
+		TimeFormat = global.select(DefaultTimeFormat).getFirstSelectedOption().getText();
+		Assert.assertEquals(TimeFormat, list9.get(0));
 		assertTrue(list8.containsAll(list9));
 		Assert.assertEquals(CurrencySignificantDigitsLabel.getText(), LocalSettingData.getCellData(0, 4));
 
@@ -1088,13 +1260,15 @@ public class UserPage implements UserPage_Interface
 			Assert.assertEquals(Integer.parseInt(list10.get(i).getText()),
 					(int) LocalSettingData.getCellDataInt(i + 1, 4));
 		}
-		Assert.assertEquals(
-				Integer.parseInt(
-						global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()),
-				(int) LocalSettingData.getCellDataInt(3, 4));
+		CurrencySignificantDigit = Integer
+				.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText());
+		Assert.assertEquals(CurrencySignificantDigit, (int) LocalSettingData.getCellDataInt(3, 4));
+
 		Assert.assertEquals(TimeZoneLabel.getText(), LocalSettingData.getCellData(0, 5));
 		List<WebElement> list11 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[4]//td[2]//select//option"));
+		TimeZone = global.select(DefaultTimeZone).getFirstSelectedOption().getText();
+		Assert.assertEquals(TimeZone, LocalSettingData.getCellData(327 + 1, 5));
 		for (int i = 0; i < list11.size(); i++)
 		{
 //			System.out.println(list11.get(i).getText());
@@ -1391,9 +1565,97 @@ public class UserPage implements UserPage_Interface
 			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 		}
 		Assert.assertEquals(separatorLabel.getText(), LocalSettingData.getCellData(0, 11));
-		Assert.assertEquals(sepratorTextbox.getAttribute("value"), LocalSettingData.getCellData(1, 11));
+		ThousandsSeparator = sepratorTextbox.getAttribute("value");
+		Assert.assertEquals(ThousandsSeparator, LocalSettingData.getCellData(1, 11));
 		Assert.assertEquals(NameDisplayFormatLabel.getText(), LocalSettingData.getCellData(0, 12) + " ");
-		
+		List<WebElement> list12 = driver
+				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[6]//td[2]//select//option"));
+		Name = global.select(DefaultName).getFirstSelectedOption().getText();
+		Assert.assertEquals(Name, LocalSettingData.getCellData(1, 13));
+		for (int i = 0; i < list12.size(); i++)
+		{
+//			System.out.println(list12.get(i).getText());
+			Assert.assertEquals(list12.get(i).getText(), LocalSettingData.getCellData(i + 1, 13));
+		}
+		Assert.assertEquals(DecimalSymbolLabel.getText(), LocalSettingData.getCellData(0, 14));
+		DecimalSymbol = DecimalSymbolTextbox.getAttribute("value");
+		Assert.assertEquals(DecimalSymbol, LocalSettingData.getCellData(1, 14));
+		Assert.assertEquals(CalendarOptionLabel.getText(), CalendarOptionData.getCellData(0, 0));
+		Assert.assertEquals(CalendarOptionLabel.getCssValue("color"), CalendarOptionData.getCellData(1, 0));
+		Assert.assertEquals(PublishKeyLabel.getText(), CalendarOptionData.getCellData(0, 1));
+		Assert.assertEquals(PublishKeyTextbox.getText().isEmpty(), true);
+		PublishAtMyLocationValue = PublishAtMyLocation.getText();
+		Assert.assertEquals(PublishAtMyLocationValue, CalendarOptionData.getCellData(0, 2));
+		if (!PublishAtMyLocationText.getText().contains("&email="))
+		{
+			Assert.assertEquals(PublishAtMyLocationText.getText(),
+					CalendarOptionData.getCellData(1, 2) + EmailAddress1);
+		}
+		else if (PublishAtMyLocationText.getText().contains("&email="))
+		{
+			Assert.assertEquals(PublishAtMyLocationText.getText(),
+					CalendarOptionData.getCellData(2, 2) + EmailAddress1);
+		}
+		Assert.assertEquals(SearchLocationLabel.getText(), CalendarOptionData.getCellData(0, 3));
+		SearchLocation = SearchLocationText.getText();
+		Assert.assertEquals(SearchLocation, CalendarOptionData.getCellData(1, 3));
+		Assert.assertEquals(iCalintegrationURLLabel.getText(), CalendarOptionData.getCellData(0, 4));
+		iCalValue = iCalintegrationText.getText();
+		Assert.assertEquals(iCalValue, CalendarOptionData.getCellData(1, 4));
+		Assert.assertEquals(FirstDayOfWeekLabel.getText(), CalendarOptionData.getCellData(0, 5));
+		List<WebElement> list13 = driver
+				.findElements(By.xpath(".//div[@id='calendar_options']//tr[6]//td[2]//slot//select//option"));
+		for (int i = 0; i < list13.size(); i++)
+		{
+//			System.out.println(list13.get(i).getText());
+			Assert.assertEquals(list13.get(i).getText(), CalendarOptionData.getCellData(i + 1, 5));
+		}
+		FirstDayOfWeek = global.select(DefaultFirstdayOfWeek).getFirstSelectedOption().getText();
+		Assert.assertEquals(FirstDayOfWeek, CalendarOptionData.getCellData(1, 5));
+	}
+
+
+	public void verifyDataOfAdvanced()
+	{
+		CancelButtonHeader.click();
+		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
+		AdvancedTab.click();
+		Assert.assertEquals(AdvancedTabLabel.getText(), AdvancedData.getCellData(0, 7));
+		Assert.assertEquals(AdvancedTabLabel.getCssValue("color"), AdvancedData.getCellData(1, 7));
+		Assert.assertEquals(UserSettingUserPage.getText(), AdvancedData.getCellData(0, 8));
+		Assert.assertEquals(UserSettingUserPage.getCssValue("color"), AdvancedData.getCellData(1, 8));
+		Assert.assertEquals(NotifyOnAssignmentUserPage.getText(), AdvancedData.getCellData(0, 9));
+//		Assert.assertEquals(NotifyOnAssignmentValueUserPage.isSelected(), NotifyOnAssignmentvalue);
+		Assert.assertEquals(NotifyOnAssignmentTextUserPage.getText(), AdvancedData.getCellData(1, 9) + " ");
+		Assert.assertEquals(RemainderUserPage.getText(), AdvancedData.getCellData(0, 10));
+		Assert.assertEquals(PopupCheckBoxUserPage.isSelected(), RemainderPopupTextbox);
+		Assert.assertEquals(PopupCheckBoxUserPage.isEnabled(), false);
+		Assert.assertEquals(EmailCheckBoxUserPage.isSelected(), RemainEmailTextbox);
+		Assert.assertEquals(EmailCheckBoxUserPage.isEnabled(), false);
+		Assert.assertEquals(PopupUserPage.getText(), PopupEditPage);
+		Assert.assertEquals(EmailUserPage.getText(), EmailEditPage);
+		Assert.assertEquals(RemainderText.getText(), AdvancedData.getCellData(3, 4) + " ");
+		Assert.assertEquals(MailMergeuserPage.getText(), AdvancedData.getCellData(0, 5));
+		Assert.assertEquals(MailMergeUserPageCheckBox.isSelected(), MailMergetextBox);
+		Assert.assertEquals(MailMergeUserPageCheckBox.isEnabled(), false);
+		Assert.assertEquals(MailMergeTextUserPage.getText(), AdvancedData.getCellData(1, 5) + " ");
+		Assert.assertEquals(URLUserPage.getText(), AdvancedData.getCellData(0, 11));
+		Assert.assertEquals(URLUserPage2.getText(), AdvancedData.getCellData(1, 11));
+		Assert.assertEquals(URLUserPage3.getText(), AdvancedData.getCellData(2, 11) + " ");
+		Assert.assertEquals(ExportDelimiterUserPage.getText(), AdvancedData.getCellData(0, 0));
+		Assert.assertEquals(ExportDelimiterTextboxUserPage.getText(), ExportDelimiter);
+		Assert.assertEquals(ExportDelimiterText.getText(), AdvancedData.getCellData(1, 0));
+		Assert.assertEquals(ImportExportUserPage.getText(), AdvancedData.getCellData(0, 1));
+		Assert.assertEquals(ImportExportText.getText(), AdvancedData.getCellData(2, 1));
+		Assert.assertEquals(ImportExportTextUserPage.getText(), AdvancedData.getCellData(1, 1));
+		Assert.assertEquals(ShowFullNamesTextUserPage.getText(), AdvancedData.getCellData(0, 2));
+		Assert.assertEquals(ShowFullNameTextBox.isEnabled(), false);
+		Assert.assertEquals(ShowFullNameUserPage.getText(), AdvancedData.getCellData(1, 2));
+
+		Assert.assertEquals(LocaleUserPage.getText(), LocalSettingData.getCellData(0, 0));
+		Assert.assertEquals(LocaleUserPage.getCssValue("color"), LocalSettingData.getCellData(1, 0));
+		Assert.assertEquals(DataFormatUserPageLabel.getText(), LocalSettingData.getCellData(0, 1));
+		Assert.assertEquals(DataFormatTextUserPage.getText(), LocalSettingData.getCellData(10, 1) + " ");
 	}
 
 
