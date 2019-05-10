@@ -633,7 +633,81 @@ public class UserPage implements UserPage_Interface
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[2]//td[3]//slot")
 	private WebElement DataFormatTextUserPage;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[3]//td[1]//slot")
+	private WebElement TimeFormatUserPage;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[3]//td[2]//slot")
+	private WebElement TimeFormatValueUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[3]//td[3]//slot")
+	private WebElement TimeFormatText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[4]//td[1]//slot")
+	private WebElement TimeZoneUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[4]//td[2]//slot")
+	private WebElement TimeZoneValueUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[5]//td[1]//slot")
+	private WebElement CurrencyUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[5]//td[2]//slot")
+	private WebElement CurrencyValueUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[5]//td[3]//slot")
+	private WebElement CurrencyText;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[6]//td[1]//slot")
+	private WebElement CurrencyDigitUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[6]//td[2]//slot")
+	private WebElement CurrencyDigitValueUserpage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[6]//td[3]//slot")
+	private WebElement CurrencyDigitTextUserpage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[7]//td[1]//slot")
+	private WebElement ThousandsUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[7]//td[2]//slot")
+	private WebElement ThousandsValueUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[7]//td[3]//slot")
+	private WebElement ThousandsTextValueUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[8]//td[1]//slot")
+	private WebElement DecimalUserPage;
+	
+	@FindBy(how = How.XPATH , using = ".//div[@id='locale']//tr[8]//td[2]//slot")
+	private WebElement DecilamlValueUserPage;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[8]//td[3]")
+	private WebElement DeciamlTextUserPage;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[1]//slot")
+	private WebElement NameDisplayUserPage;
+	
+	@FindBy(how = How.XPATH, using =".//div[@id='locale']//tr[9]//td[2]//slot//i[1]")
+	private WebElement NameDisplayValueOneUserPage;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[2]")
+	private WebElement NameDisplayValueSecondUserPage;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[3]")
+	private WebElement NameDisplayValueThirdUserPage;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[4]")
+	private WebElement NameDisplayValueForthUserPage;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[5]")
+	private WebElement NameDisplayValueFifthUserPage;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[6]")
+	private WebElement NameDisplayValueSixthUserPage;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[3]//slot")
+	private WebElement NameDisplayTextUserPage;
+	
 	public UserPage(WebDriver driver)
 	{
 		global = new Global();
@@ -1656,6 +1730,32 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(LocaleUserPage.getCssValue("color"), LocalSettingData.getCellData(1, 0));
 		Assert.assertEquals(DataFormatUserPageLabel.getText(), LocalSettingData.getCellData(0, 1));
 		Assert.assertEquals(DataFormatTextUserPage.getText(), LocalSettingData.getCellData(10, 1) + " ");
+		Assert.assertEquals(TimeFormatUserPage.getText(), LocalSettingData.getCellData(0, 3));
+		Assert.assertEquals(TimeFormatValueUserPage.getText(), TimeFormat + " ");
+		Assert.assertEquals(TimeFormatText.getText(), LocalSettingData.getCellData(11, 3) + " ");
+		Assert.assertEquals(TimeZoneUserPage.getText(), LocalSettingData.getCellData(0, 5));
+		Assert.assertEquals(TimeZoneValueUserPage.getText(), LocalSettingData.getCellData(327 + 1, 5) + " ");
+		Assert.assertEquals(CurrencyUserPage.getText(), LocalSettingData.getCellData(0, 2));
+		Assert.assertEquals(CurrencyValueUserPage.getText().contains("USD"), true);
+		Assert.assertEquals(CurrencyText.getText(), LocalSettingData.getCellData(5, 2) + " ");
+		Assert.assertEquals(CurrencyDigitUserPage.getText(), LocalSettingData.getCellData(0, 4));
+		Assert.assertEquals(Integer.parseInt(CurrencyDigitValueUserpage.getText().replace(" ", "")),
+				CurrencySignificantDigit);
+		Assert.assertEquals(CurrencyDigitTextUserpage.getText(), LocalSettingData.getCellData(8, 4) + " ");
+		Assert.assertEquals(ThousandsUserPage.getText(), LocalSettingData.getCellData(0, 11));
+		Assert.assertEquals(ThousandsValueUserPage.getText().replace(" ", ""), LocalSettingData.getCellData(1, 11));
+		Assert.assertEquals(ThousandsTextValueUserPage.getText().contains(LocalSettingData.getCellData(2, 11)), true);
+		Assert.assertEquals(DecimalUserPage.getText(), LocalSettingData.getCellData(0, 14));
+		Assert.assertEquals(DecilamlValueUserPage.getText().replace(" ", ""), LocalSettingData.getCellData(1, 14));
+		Assert.assertEquals(DeciamlTextUserPage.getText(), LocalSettingData.getCellData(2, 14) + " ");
+		Assert.assertEquals(NameDisplayUserPage.getText(), LocalSettingData.getCellData(0, 12));
+		Assert.assertEquals(NameDisplayValueOneUserPage.getText(), LocalSettingData.getCellData(1, 12));
+		Assert.assertEquals(NameDisplayValueSecondUserPage.getText(),  LocalSettingData.getCellData(2, 12));
+		Assert.assertEquals(NameDisplayValueThirdUserPage.getText(), LocalSettingData.getCellData(3, 12));
+		Assert.assertEquals(NameDisplayValueForthUserPage.getText(), LocalSettingData.getCellData(4, 12));
+		Assert.assertEquals(NameDisplayValueFifthUserPage.getText(), LocalSettingData.getCellData(5, 12));
+		Assert.assertEquals(NameDisplayValueSixthUserPage.getText(), LocalSettingData.getCellData(6, 12));
+		Assert.assertEquals(NameDisplayTextUserPage.getText(), LocalSettingData.getCellData(7, 12));
 	}
 
 
