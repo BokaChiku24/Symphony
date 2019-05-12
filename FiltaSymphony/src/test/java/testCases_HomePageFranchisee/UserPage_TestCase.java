@@ -44,6 +44,7 @@ public class UserPage_TestCase
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
+
 	@BeforeClass
 	public void property()
 	{
@@ -65,6 +66,7 @@ public class UserPage_TestCase
 		htmlReporter.loadXMLConfig("./extent-config.xml");
 	}
 
+
 	@Test(priority = 0)
 	public void checkURL()
 	{
@@ -72,6 +74,7 @@ public class UserPage_TestCase
 		logger = extent.createTest("Test Case 0: Check URL Of User Page");
 		UserPageObject.urlCheck();
 	}
+
 
 	@Test(priority = 1)
 	public void checkButtonName()
@@ -81,6 +84,7 @@ public class UserPage_TestCase
 		UserPageObject.buttonCheck();
 	}
 
+
 	@Test(priority = 1, dependsOnMethods = "checkButtonName")
 	public void buttonBackGroundWithoutMouseOverview()
 	{
@@ -88,6 +92,7 @@ public class UserPage_TestCase
 		logger = extent.createTest("Test Case 2: Check Button Color Without Mouse Overview On User Page");
 		UserPageObject.buttonBackGroundWithoutMouseOverview();
 	}
+
 
 	@Test(priority = 1, dependsOnMethods = "buttonBackGroundWithoutMouseOverview")
 	public void buttonBackGroundWithMouseOverview()
@@ -97,6 +102,7 @@ public class UserPage_TestCase
 		UserPageObject.buttonBackGroundWithMouseOverview();
 	}
 
+
 	@Test(priority = 1, dependsOnMethods = "buttonBackGroundWithMouseOverview")
 	public void buttonToolTipCheck()
 	{
@@ -105,6 +111,7 @@ public class UserPage_TestCase
 		UserPageObject.buttonToolTipCheck();
 	}
 
+
 	@Test(priority = 2)
 	public void tabnamesCheck()
 	{
@@ -112,6 +119,7 @@ public class UserPage_TestCase
 		logger = extent.createTest("Test Case 5: Check Tab Name On User Page");
 		UserPageObject.tabnamesCheck();
 	}
+
 
 	@Test(priority = 3)
 	public void checkDataOfUserProfile()
@@ -122,6 +130,7 @@ public class UserPage_TestCase
 		UserPageObject.verifyDataOfUserProfile();
 	}
 
+
 	@Test(priority = 4)
 	public void checkPasswordPageOnEdit()
 	{
@@ -129,6 +138,7 @@ public class UserPage_TestCase
 		logger = extent.createTest("Test Case 7: Check Password Field On Edit Page");
 		UserPageObject.checkPasswordPage();
 	}
+
 
 	@Test(priority = 5)
 	public void checkThemesPageOnEdit()
@@ -138,6 +148,7 @@ public class UserPage_TestCase
 		UserPageObject.checkThemesPage();
 	}
 
+
 	@Test(priority = 6)
 	public void checkAdvancedOfUserProfile()
 	{
@@ -146,6 +157,16 @@ public class UserPage_TestCase
 		UserPageObject.checkDataFromEditPageAdvanced();
 		UserPageObject.verifyDataOfAdvanced();
 	}
+
+
+	@Test(priority = 7)
+	public void checkAccessOfUser()
+	{
+		log.info("Test Case 10: Check The User Access");
+		logger = extent.createTest("Test Case 10: Check The User Access");
+		UserPageObject.accessCheck();
+	}
+
 
 	@AfterMethod
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
@@ -174,6 +195,7 @@ public class UserPage_TestCase
 					MarkupHelper.createLabel(testResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
 		}
 	}
+
 
 	@AfterClass
 	public void afterMethod()

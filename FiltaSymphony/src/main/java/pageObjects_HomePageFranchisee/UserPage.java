@@ -7,13 +7,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import helper.UserPage_Interface;
 import util.Login;
 import util.ReadExcelData;
-
-import static org.testng.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +65,7 @@ public class UserPage implements UserPage_Interface
 	private ReadExcelData LayoutData;
 	private ReadExcelData LocalSettingData;
 	private ReadExcelData CalendarOptionData;
+	private ReadExcelData AccessData;
 
 	private String Alert1;
 	private String Alert2;
@@ -98,6 +97,11 @@ public class UserPage implements UserPage_Interface
 	private boolean MailMergetextBox;
 	private String PopupEditPage;
 	private String EmailEditPage;
+
+	private SoftAssert sa;
+
+	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
+	private WebElement containerClose;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='user_link_link']")
 	private WebElement topText1;
@@ -677,36 +681,108 @@ public class UserPage implements UserPage_Interface
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[8]//td[1]//slot")
 	private WebElement DecimalUserPage;
-	
-	@FindBy(how = How.XPATH , using = ".//div[@id='locale']//tr[8]//td[2]//slot")
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[8]//td[2]//slot")
 	private WebElement DecilamlValueUserPage;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[8]//td[3]")
 	private WebElement DeciamlTextUserPage;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[1]//slot")
 	private WebElement NameDisplayUserPage;
-	
-	@FindBy(how = How.XPATH, using =".//div[@id='locale']//tr[9]//td[2]//slot//i[1]")
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[1]")
 	private WebElement NameDisplayValueOneUserPage;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[2]")
 	private WebElement NameDisplayValueSecondUserPage;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[3]")
 	private WebElement NameDisplayValueThirdUserPage;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[4]")
 	private WebElement NameDisplayValueForthUserPage;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[5]")
 	private WebElement NameDisplayValueFifthUserPage;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[2]//slot//i[6]")
 	private WebElement NameDisplayValueSixthUserPage;
-	
-	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[3]//slot")
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='locale']//tr[9]//td[3]")
 	private WebElement NameDisplayTextUserPage;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//h4//slot")
+	private WebElement CalendarOption;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[2]//td[1]//slot")
+	private WebElement Publish_Key;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[2]//td[2]//slot")
+	private WebElement Publish_Key_Text;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[3]//td[1]//slot")
+	private WebElement Publish_at_my_location;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[3]//td[2]//slot")
+	private WebElement Publish_at_my_location_text;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[4]//td[1]//slot")
+	private WebElement Search_Location;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[4]//td[2]//slot")
+	private WebElement Search_Location_Text;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[5]//td[1]//slot")
+	private WebElement iCal;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[5]//td[2]//slot")
+	private WebElement iCal_Text;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[6]//td[1]//slot")
+	private WebElement First_Day_Of_Week;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[6]//td[2]//slot")
+	private WebElement First_Day_Of_Week_Text;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//h4//slot")
+	private WebElement Layout_Option;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[2]//td[1]//slot")
+	private WebElement Module_Menu_Filter;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[2]//td[2]//slot")
+	private WebElement Module_Menu_Filter_Checkbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[2]//td[3]//slot")
+	private WebElement Module_Menu_Filter_text;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[3]//td[1]//slot")
+	private WebElement SubPanel_Tab;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[3]//td[2]//slot")
+	private WebElement SubPanel_Tab_Checkbox;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[3]//td[3]//slot")
+	private WebElement SubPanel_Tab_Text;
+
+	@FindBy(how = How.XPATH, using = ".//li[@id='All_sp_tab']//a")
+	private WebElement All;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='user_detailview_tabs']//ul[@class='yui-nav']//li[3]//a")
+	private WebElement Access;
+
+	@FindBy(how = How.XPATH, using = ".//div[@class='table-responsive-edit']//table//tbody//tr[2]//td[2]")
+	private WebElement EnabledColor;
+
+	@FindBy(how = How.XPATH, using = ".//div[@class='table-responsive-edit']//table//tbody//tr[2]//td[3]")
+	private WebElement NoneColor;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@class='table-responsive-edit']//table//tbody//tr[3]//td[3]")
+	private WebElement AllColor;
+	
+	@FindBy(how = How.XPATH, using = ".//div[@class='table-responsive-edit']//table//tbody//tr[6]//td[3]")
+	private WebElement OwnerColor;
 	
 	public UserPage(WebDriver driver)
 	{
@@ -714,6 +790,7 @@ public class UserPage implements UserPage_Interface
 		Prop = global.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
+		sa = new SoftAssert();
 		PageFactory.initElements(driver, this);
 		UserData = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
 		PasswordData = new ReadExcelData(Prop.getProperty("Path1"), "Password");
@@ -722,6 +799,7 @@ public class UserPage implements UserPage_Interface
 		LayoutData = new ReadExcelData(Prop.getProperty("Path1"), "Layout");
 		LocalSettingData = new ReadExcelData(Prop.getProperty("Path1"), "Locale Settings");
 		CalendarOptionData = new ReadExcelData(Prop.getProperty("Path1"), "Calrendar");
+		AccessData = new ReadExcelData(Prop.getProperty("Path1"), "Access");
 	}
 
 
@@ -733,155 +811,156 @@ public class UserPage implements UserPage_Interface
 
 	public void urlCheck()
 	{
+		global.wait(driver).until(ExpectedConditions.visibilityOf(containerClose));
+		containerClose.click();
 		topText1.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
-		Assert.assertEquals(driver.getCurrentUrl(), Prop.getProperty("UserPageURL"));
+		sa.assertEquals(driver.getCurrentUrl(), Prop.getProperty("UserPageURL"));
+		sa.assertAll();
 	}
 
 
 	public void buttonCheck()
 	{
-		Assert.assertEquals(SaveButtonHeader.getAttribute("value"), Prop.getProperty("UserPageSaveButtonNameHeader"));
-		Assert.assertEquals(CancelButtonHeader.getAttribute("value"),
-				Prop.getProperty("UserPageCancelButtonNameHeader"));
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("value"),
+		sa.assertEquals(SaveButtonHeader.getAttribute("value"), Prop.getProperty("UserPageSaveButtonNameHeader"));
+		sa.assertEquals(CancelButtonHeader.getAttribute("value"), Prop.getProperty("UserPageCancelButtonNameHeader"));
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("value"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonHeader"));
-		Assert.assertEquals(ResetHomePageButtonHeader.getAttribute("value"),
+		sa.assertEquals(ResetHomePageButtonHeader.getAttribute("value"),
 				Prop.getProperty("UserPageResetHomepageButtonHeader"));
-		Assert.assertEquals(SaveButtonFooter.getAttribute("value"), Prop.getProperty("UserPageSaveButtonNameFooter"));
-		Assert.assertEquals(CancelButtonFooter.getAttribute("value"),
-				Prop.getProperty("UserPageCancelButtonNameFooter"));
-		Assert.assertEquals(ResetUserPreferencesButtonFooter.getAttribute("value"),
+		sa.assertEquals(SaveButtonFooter.getAttribute("value"), Prop.getProperty("UserPageSaveButtonNameFooter"));
+		sa.assertEquals(CancelButtonFooter.getAttribute("value"), Prop.getProperty("UserPageCancelButtonNameFooter"));
+		sa.assertEquals(ResetUserPreferencesButtonFooter.getAttribute("value"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooter"));
-		Assert.assertEquals(ResetHomePageButtonFooter.getAttribute("value"),
+		sa.assertEquals(ResetHomePageButtonFooter.getAttribute("value"),
 				Prop.getProperty("UserPageResetHomepageButtonFooter"));
 		CancelButtonHeader.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
-		Assert.assertEquals(EditButton.getAttribute("value"), Prop.getProperty("UserPageEditButton"));
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("value"),
+		sa.assertEquals(EditButton.getAttribute("value"), Prop.getProperty("UserPageEditButton"));
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("value"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonHeader"));
-		Assert.assertEquals(ResetHomePageButtonHeader.getAttribute("value"),
+		sa.assertEquals(ResetHomePageButtonHeader.getAttribute("value"),
 				Prop.getProperty("UserPageResetHomepageButtonHeader"));
+		sa.assertAll();
 	}
 
 
 	public void buttonBackGroundWithoutMouseOverview()
 	{
-		Assert.assertEquals(EditButton.getCssValue("background"),
+		sa.assertEquals(EditButton.getCssValue("background"),
 				Prop.getProperty("UserPageEditButtonBackGroundColorBlue"));
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("background"),
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("background"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonBackGroundColorBlue"));
-		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("background"),
+		sa.assertEquals(ResetHomePageButtonHeader.getCssValue("background"),
 				Prop.getProperty("UserPageResetHomePageButtonBackGroundColorBlue"));
 		// Text Color Assertion
-		Assert.assertEquals(EditButton.getCssValue("color"), Prop.getProperty("UserPageEditButtonTextWhite"));
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("color"),
+		sa.assertEquals(EditButton.getCssValue("color"), Prop.getProperty("UserPageEditButtonTextWhite"));
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("color"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonTextWhite"));
-		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("color"),
+		sa.assertEquals(ResetHomePageButtonHeader.getCssValue("color"),
 				Prop.getProperty("UserPageResetHomePageButtonTextWhite"));
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
-		Assert.assertEquals(SaveButtonHeader.getCssValue("background"),
+		sa.assertEquals(SaveButtonHeader.getCssValue("background"),
 				Prop.getProperty("UserPageSaveButtonHeaderBackGroundColorBlue"));
-		Assert.assertEquals(CancelButtonHeader.getCssValue("background"),
+		sa.assertEquals(CancelButtonHeader.getCssValue("background"),
 				Prop.getProperty("UserPageCancelButtonHeaderBackGroundColorBlue"));
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("background"),
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("background"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonHeaderBackGroundColorBlue"));
-		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("background"),
+		sa.assertEquals(ResetHomePageButtonHeader.getCssValue("background"),
 				Prop.getProperty("UserPageResetHomePageButtonHeaderBackGroundColorBlue"));
-		Assert.assertEquals(SaveButtonFooter.getCssValue("background"),
+		sa.assertEquals(SaveButtonFooter.getCssValue("background"),
 				Prop.getProperty("UserPageSaveButtonFooterBackGroundColorBlue"));
-		Assert.assertEquals(CancelButtonFooter.getCssValue("background"),
+		sa.assertEquals(CancelButtonFooter.getCssValue("background"),
 				Prop.getProperty("UserPageCancelButtonFooterBackGroundColorBlue"));
-		Assert.assertEquals(ResetUserPreferencesButtonFooter.getCssValue("background"),
+		sa.assertEquals(ResetUserPreferencesButtonFooter.getCssValue("background"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooterBackGroundColorBlue"));
-		Assert.assertEquals(ResetHomePageButtonFooter.getCssValue("background"),
+		sa.assertEquals(ResetHomePageButtonFooter.getCssValue("background"),
 				Prop.getProperty("UserPageResetHomePageButtonFooterBackGroundColorBlue"));
 		// Text Color Assertion
-		Assert.assertEquals(SaveButtonHeader.getCssValue("color"),
-				Prop.getProperty("UserPageSaveButtonHeaderTextWhite"));
-		Assert.assertEquals(CancelButtonHeader.getCssValue("color"),
+		sa.assertEquals(SaveButtonHeader.getCssValue("color"), Prop.getProperty("UserPageSaveButtonHeaderTextWhite"));
+		sa.assertEquals(CancelButtonHeader.getCssValue("color"),
 				Prop.getProperty("UserPageCancelButtonHeaderTextWhite"));
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("color"),
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("color"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonHeaderTextWhite"));
-		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("color"),
+		sa.assertEquals(ResetHomePageButtonHeader.getCssValue("color"),
 				Prop.getProperty("UserPageResetHomePageButtonHeaderTextWhite"));
-		Assert.assertEquals(SaveButtonFooter.getCssValue("color"),
-				Prop.getProperty("UserPageSaveButtonFooterTextWhite"));
-		Assert.assertEquals(CancelButtonFooter.getCssValue("color"),
+		sa.assertEquals(SaveButtonFooter.getCssValue("color"), Prop.getProperty("UserPageSaveButtonFooterTextWhite"));
+		sa.assertEquals(CancelButtonFooter.getCssValue("color"),
 				Prop.getProperty("UserPageCancelButtonFooterTextWhite"));
-		Assert.assertEquals(ResetUserPreferencesButtonFooter.getCssValue("color"),
+		sa.assertEquals(ResetUserPreferencesButtonFooter.getCssValue("color"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooterTextWhite"));
-		Assert.assertEquals(ResetHomePageButtonFooter.getCssValue("color"),
+		sa.assertEquals(ResetHomePageButtonFooter.getCssValue("color"),
 				Prop.getProperty("UserPageResetHomePageButtonFooterTextWhite"));
+		sa.assertAll();
 	}
 
 
 	public void buttonBackGroundWithMouseOverview()
 	{
 		global.action(driver).moveToElement(SaveButtonHeader).build().perform();
-		Assert.assertEquals(SaveButtonHeader.getCssValue("border-color"),
+		sa.assertEquals(SaveButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageSaveButtonHeaderBackGroundColorGreen"));
 		global.action(driver).moveToElement(CancelButtonHeader).build().perform();
-		Assert.assertEquals(CancelButtonHeader.getCssValue("border-color"),
+		sa.assertEquals(CancelButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageCancelButtonHeaderBackGroundColorGreen"));
 		global.action(driver).moveToElement(ResetUserPreferencesButtonHeader).build().perform();
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("border-color"),
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonHeaderBackGroundColorGreen"));
 		global.action(driver).moveToElement(ResetHomePageButtonHeader).build().perform();
-		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("border-color"),
+		sa.assertEquals(ResetHomePageButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageResetHomePageButtonHeaderBackGroundColorGreen"));
 		global.action(driver).moveToElement(SaveButtonFooter).build().perform();
-		Assert.assertEquals(SaveButtonFooter.getCssValue("border-color"),
+		sa.assertEquals(SaveButtonFooter.getCssValue("border-color"),
 				Prop.getProperty("UserPageSaveButtonFooterBackGroundColorGreen"));
 		global.action(driver).moveToElement(CancelButtonFooter).build().perform();
-		Assert.assertEquals(CancelButtonFooter.getCssValue("border-color"),
+		sa.assertEquals(CancelButtonFooter.getCssValue("border-color"),
 				Prop.getProperty("UserPageCancelButtonFooterBackGroundColorGreen"));
 		global.action(driver).moveToElement(ResetUserPreferencesButtonFooter).build().perform();
-		Assert.assertEquals(ResetUserPreferencesButtonFooter.getCssValue("border-color"),
+		sa.assertEquals(ResetUserPreferencesButtonFooter.getCssValue("border-color"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooterBackGroundColorGreen"));
 		global.action(driver).moveToElement(ResetHomePageButtonFooter).build().perform();
-		Assert.assertEquals(ResetHomePageButtonFooter.getCssValue("border-color"),
+		sa.assertEquals(ResetHomePageButtonFooter.getCssValue("border-color"),
 				Prop.getProperty("UserPageResetHomePageButtonFooterBackGroundColorGreen"));
 		CancelButtonFooter.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
 		global.action(driver).moveToElement(EditButton).build().perform();
-		Assert.assertEquals(EditButton.getCssValue("border-color"),
+		sa.assertEquals(EditButton.getCssValue("border-color"),
 				Prop.getProperty("UserPageEditButtonBackGroundColorGreen"));
 		global.action(driver).moveToElement(ResetUserPreferencesButtonHeader).build().perform();
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("border-color"),
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonBackGroundColorGreen"));
 		global.action(driver).moveToElement(ResetHomePageButtonHeader).build().perform();
-		Assert.assertEquals(ResetHomePageButtonHeader.getCssValue("border-color"),
+		sa.assertEquals(ResetHomePageButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageResetHomePageButtonBackGroundColorGreen"));
+		sa.assertAll();
 	}
 
 
 	public void buttonToolTipCheck()
 	{
-		Assert.assertEquals(EditButton.getAttribute("title"), Prop.getProperty("UserPageEditButtonToolTip"));
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("title"),
+		sa.assertEquals(EditButton.getAttribute("title"), Prop.getProperty("UserPageEditButtonToolTip"));
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("title"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonToolTip"));
-		Assert.assertEquals(ResetHomePageButtonHeader.getAttribute("title"),
+		sa.assertEquals(ResetHomePageButtonHeader.getAttribute("title"),
 				Prop.getProperty("UserPageResetHomePageButtonToolTip"));
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
-		Assert.assertEquals(SaveButtonHeader.getAttribute("title"),
-				Prop.getProperty("UserPageSaveButtonHeaderToolTip"));
-		Assert.assertEquals(CancelButtonHeader.getAttribute("title"),
+		sa.assertEquals(SaveButtonHeader.getAttribute("title"), Prop.getProperty("UserPageSaveButtonHeaderToolTip"));
+		sa.assertEquals(CancelButtonHeader.getAttribute("title"),
 				Prop.getProperty("UserPageCancelButtonHeaderToolTip"));
-		Assert.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("title"),
+		sa.assertEquals(ResetUserPreferencesButtonHeader.getAttribute("title"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonHeaderToolTip"));
-		Assert.assertEquals(ResetHomePageButtonHeader.getAttribute("title"),
+		sa.assertEquals(ResetHomePageButtonHeader.getAttribute("title"),
 				Prop.getProperty("UserPageResetHomePageButtonHeaderToolTip"));
-		Assert.assertEquals(SaveButtonFooter.getAttribute("title"),
-				Prop.getProperty("UserPageSaveButtonFooterToolTip"));
-		Assert.assertEquals(CancelButtonFooter.getAttribute("title"),
+		sa.assertEquals(SaveButtonFooter.getAttribute("title"), Prop.getProperty("UserPageSaveButtonFooterToolTip"));
+		sa.assertEquals(CancelButtonFooter.getAttribute("title"),
 				Prop.getProperty("UserPageCancelButtonFooterToolTip"));
-		Assert.assertEquals(ResetUserPreferencesButtonFooter.getAttribute("title"),
+		sa.assertEquals(ResetUserPreferencesButtonFooter.getAttribute("title"),
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooterToolTip"));
-		Assert.assertEquals(ResetHomePageButtonFooter.getAttribute("title"),
+		sa.assertEquals(ResetHomePageButtonFooter.getAttribute("title"),
 				Prop.getProperty("UserPageResetHomePageButtonFooterToolTip"));
+		sa.assertAll();
 	}
 
 
@@ -893,42 +972,43 @@ public class UserPage implements UserPage_Interface
 		// }
 		for (int i = 0; i < list.size(); i++)
 		{
-			Assert.assertEquals(list.get(i).getText(), Prop.getProperty("TabOnEditPage" + i));
+			sa.assertEquals(list.get(i).getText(), Prop.getProperty("TabOnEditPage" + i));
 			if (list.get(i).getAttribute("class").equals(Prop.getProperty("userPageClass")))
 			{
-				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorBlue"));
+				sa.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorBlue"));
 			}
 			else if (list.get(i).getAttribute("class").equals("")
 					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey2")))
 			{
-				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey2"));
+				sa.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey2"));
 			}
 			else if (list.get(i).getAttribute("class").equals("")
 					&& list.get(i).getCssValue("color").equals(Prop.getProperty("TabOnUserPageColorGrey")))
 			{
-				Assert.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
+				sa.assertEquals(list.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
 			}
 			// System.out.println(i + " => " + list.get(i).getCssValue("color"));
 		}
 		// Count of tabs Assertion
-		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("TabOnEditPageCount")));
+		sa.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("TabOnEditPageCount")));
 		CancelButtonHeader.click();
 		global.wait(driver).until(
 				ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(".//ul[@class='yui-nav']//li")));
 		List<WebElement> list2 = driver.findElements(By.xpath(".//ul[@class='yui-nav']//li"));
 		for (int i = 0; i < list2.size(); i++)
 		{
-			Assert.assertEquals(list2.get(i).getText(), Prop.getProperty("TabOnUserPage" + i));
+			sa.assertEquals(list2.get(i).getText(), Prop.getProperty("TabOnUserPage" + i));
 			if (list2.get(i).getAttribute("class").equals(Prop.getProperty("userPageClass")))
 			{
-				Assert.assertEquals(list2.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorBlue"));
+				sa.assertEquals(list2.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorBlue"));
 			}
 			else if (list2.get(i).getAttribute("class").equals(""))
 			{
-				Assert.assertEquals(list2.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
+				sa.assertEquals(list2.get(i).getCssValue("color"), Prop.getProperty("TabOnUserPageColorGrey"));
 			}
 		}
-		Assert.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("TabOnUserPageCount")));
+		sa.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("TabOnUserPageCount")));
+		sa.assertAll();
 	}
 
 
@@ -937,13 +1017,12 @@ public class UserPage implements UserPage_Interface
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		// To Check Label on User Profile Page
-		Assert.assertEquals(UserProfile_UserLabel.getText(), Prop.getProperty("UserProfileLabel1"));
-		Assert.assertEquals(UserProfile_UserLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(UserProfile_EmployeeLabel.getText(), Prop.getProperty("UserProfileLabel2"));
-		Assert.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"),
-				Prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(UserProfile_EmailLabel.getText(), Prop.getProperty("UserProfileLabel3"));
-		Assert.assertEquals(UserProfile_EmailLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		sa.assertEquals(UserProfile_UserLabel.getText(), Prop.getProperty("UserProfileLabel1"));
+		sa.assertEquals(UserProfile_UserLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		sa.assertEquals(UserProfile_EmployeeLabel.getText(), Prop.getProperty("UserProfileLabel2"));
+		sa.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		sa.assertEquals(UserProfile_EmailLabel.getText(), Prop.getProperty("UserProfileLabel3"));
+		sa.assertEquals(UserProfile_EmailLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
 		// To Get Data From Edit User Page
 		User_Name = editUname.getAttribute("value");
 		First_Name = editFirstName.getAttribute("value");
@@ -998,34 +1077,35 @@ public class UserPage implements UserPage_Interface
 		}
 		DefaultEmailClient = global.select(editDefaultEmailClient).getFirstSelectedOption().getText();
 		// To Verify Edit Page Data From "UserPage.xlsx" sheet
-		Assert.assertEquals(First_Name + " " + Last_Name, UserData.getCellData(1, 0));
-		Assert.assertEquals(User_Name, UserData.getCellData(1, 1));
-		Assert.assertEquals(Status, UserData.getCellData(1, 2));
-		Assert.assertEquals(User_Type.substring(0, 12), UserData.getCellData(1, 3));
-		Assert.assertEquals(Filta_User_Type, UserData.getCellData(1, 4));
-		Assert.assertEquals(Send_Remainder, false);
-		Assert.assertEquals(Employee_Status, UserData.getCellData(1, 5));
-		Assert.assertEquals(Display_Employee_Record, false);
-		Assert.assertEquals(Title, UserData.getCellData(1, 6));
-		Assert.assertEquals(Work_Phone, UserData.getCellData(1, 7));
-		Assert.assertEquals(Mobile, UserData.getCellData(1, 8));
-		Assert.assertEquals(UserData.getCellData(1, 9), Prop.getProperty("Reports_To"));
-		Assert.assertEquals(Other_Phone, UserData.getCellData(1, 10));
-		Assert.assertEquals(Fax, UserData.getCellData(1, 11));
-		Assert.assertEquals(Default_IM_Type, UserData.getCellData(1, 12));
-		Assert.assertEquals(IM_Name, UserData.getCellData(1, 13));
-		Assert.assertEquals(Address_Street, UserData.getCellData(1, 14));
-		Assert.assertEquals(Address_City, UserData.getCellData(1, 15));
-		Assert.assertEquals(Address_State, UserData.getCellData(1, 16));
-		Assert.assertEquals(AddressPostalZipCodel, UserData.getCellData(1, 17));
-		Assert.assertEquals(Address_Country, UserData.getCellData(1, 18));
-		Assert.assertEquals(StandardRate, String.valueOf(UserData.getCellDataInt(1, 19)));
-		Assert.assertEquals(OverTimeRate, String.valueOf(UserData.getCellDataInt(1, 20)));
-		Assert.assertEquals(Description, UserData.getCellData(1, 21));
-		Assert.assertEquals(EmailAddress1, UserData.getCellData(1, 22));
-		assertTrue(PrimaryRadio1);
-		Assert.assertEquals(PrimaryReplyTo, false);
-		Assert.assertEquals(DefaultEmailClient, UserData.getCellData(1, 23));
+		sa.assertEquals(First_Name + " " + Last_Name, UserData.getCellData(1, 0));
+		sa.assertEquals(User_Name, UserData.getCellData(1, 1));
+		sa.assertEquals(Status, UserData.getCellData(1, 2));
+		sa.assertEquals(User_Type.substring(0, 12), UserData.getCellData(1, 3));
+		sa.assertEquals(Filta_User_Type, UserData.getCellData(1, 4));
+		sa.assertEquals(Send_Remainder, false);
+		sa.assertEquals(Employee_Status, UserData.getCellData(1, 5));
+		sa.assertEquals(Display_Employee_Record, false);
+		sa.assertEquals(Title, UserData.getCellData(1, 6));
+		sa.assertEquals(Work_Phone, UserData.getCellData(1, 7));
+		sa.assertEquals(Mobile, UserData.getCellData(1, 8));
+		sa.assertEquals(UserData.getCellData(1, 9), Prop.getProperty("Reports_To"));
+		sa.assertEquals(Other_Phone, UserData.getCellData(1, 10));
+		sa.assertEquals(Fax, UserData.getCellData(1, 11));
+		sa.assertEquals(Default_IM_Type, UserData.getCellData(1, 12));
+		sa.assertEquals(IM_Name, UserData.getCellData(1, 13));
+		sa.assertEquals(Address_Street, UserData.getCellData(1, 14));
+		sa.assertEquals(Address_City, UserData.getCellData(1, 15));
+		sa.assertEquals(Address_State, UserData.getCellData(1, 16));
+		sa.assertEquals(AddressPostalZipCodel, UserData.getCellData(1, 17));
+		sa.assertEquals(Address_Country, UserData.getCellData(1, 18));
+		sa.assertEquals(StandardRate, String.valueOf(UserData.getCellDataInt(1, 19)));
+		sa.assertEquals(OverTimeRate, String.valueOf(UserData.getCellDataInt(1, 20)));
+		sa.assertEquals(Description, UserData.getCellData(1, 21));
+		sa.assertEquals(EmailAddress1, UserData.getCellData(1, 22));
+		sa.assertTrue(PrimaryRadio1);
+		sa.assertEquals(PrimaryReplyTo, false);
+		sa.assertEquals(DefaultEmailClient, UserData.getCellData(1, 23));
+		sa.assertAll();
 	}
 
 
@@ -1034,48 +1114,47 @@ public class UserPage implements UserPage_Interface
 		CancelButtonHeader.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
 		// To Check Label on User Profile Page
-		Assert.assertEquals(UserProfile_UserLabel.getText(), Prop.getProperty("UserProfileLabel1"));
-		Assert.assertEquals(UserProfile_UserLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(UserProfile_EmployeeLabel.getText(), Prop.getProperty("UserProfileLabel2"));
-		Assert.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"),
-				Prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(UserProfile_EmailLabel.getText(), Prop.getProperty("UserProfileLabel3"));
-		Assert.assertEquals(UserProfile_EmailLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(UserProfile_AllLabel.getText(), Prop.getProperty("UserProfileLabel4"));
-		Assert.assertEquals(UserProfile_AllLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		sa.assertEquals(UserProfile_UserLabel.getText(), Prop.getProperty("UserProfileLabel1"));
+		sa.assertEquals(UserProfile_UserLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		sa.assertEquals(UserProfile_EmployeeLabel.getText(), Prop.getProperty("UserProfileLabel2"));
+		sa.assertEquals(UserProfile_EmployeeLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		sa.assertEquals(UserProfile_EmailLabel.getText(), Prop.getProperty("UserProfileLabel3"));
+		sa.assertEquals(UserProfile_EmailLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
+		sa.assertEquals(UserProfile_AllLabel.getText(), Prop.getProperty("UserProfileLabel4"));
+		sa.assertEquals(UserProfile_AllLabel.getCssValue("color"), Prop.getProperty("UserProfileLabelColor"));
 		// Verify Data On User profile Page
-		Assert.assertEquals(UserProfile_Fullname.getText(), First_Name + " " + Last_Name);
-		Assert.assertEquals(UserProfile_Username.getText(), User_Name);
-		Assert.assertEquals(UserProfile_Status.getText(), Status);
-		Assert.assertTrue(UserProfile_UserType.getText().startsWith(User_Type.substring(0, 12)));
-		Assert.assertEquals(UserProfile_FiltaUserType.getText(), Filta_User_Type);
-		Assert.assertEquals(UserProfile_StoreAccess.isSelected(),
-				Boolean.parseBoolean(Prop.getProperty("StoreAccess")));
-		Assert.assertTrue(UserProfile_SendRemainder.isSelected());
-		Assert.assertEquals(UserProfile_EmployeeStatus.getText(), Employee_Status);
-		Assert.assertEquals(UserProfile_DisplayEmployeeRecord.isSelected(),
+		sa.assertEquals(UserProfile_Fullname.getText(), First_Name + " " + Last_Name);
+		sa.assertEquals(UserProfile_Username.getText(), User_Name);
+		sa.assertEquals(UserProfile_Status.getText(), Status);
+		sa.assertTrue(UserProfile_UserType.getText().startsWith(User_Type.substring(0, 12)));
+		sa.assertEquals(UserProfile_FiltaUserType.getText(), Filta_User_Type);
+		sa.assertEquals(UserProfile_StoreAccess.isSelected(), Boolean.parseBoolean(Prop.getProperty("StoreAccess")));
+		sa.assertTrue(UserProfile_SendRemainder.isSelected());
+		sa.assertEquals(UserProfile_EmployeeStatus.getText(), Employee_Status);
+		sa.assertEquals(UserProfile_DisplayEmployeeRecord.isSelected(),
 				Boolean.parseBoolean("DisplayEmployeeRecords"));
-		Assert.assertEquals(UserProfile_Title.getText(), Title);
-		Assert.assertEquals(UserProfile_WorkPhone.getText().replace("  ", ""), Work_Phone);
-		Assert.assertEquals(UserProfile_Department.getText(), Department);
-		Assert.assertEquals(UserProfile_Mobile.getText().replace("  ", ""), Mobile);
-		Assert.assertEquals(UserProfile_ReportsTo.getText().replace(" ", ""), Prop.getProperty("Reports_To"));
-		Assert.assertEquals(UserProfile_OtherPhone.getText().replace("  ", ""), Other_Phone);
-		Assert.assertEquals(UserProfile_Fax.getText().replace("  ", ""), Fax);
-		Assert.assertEquals(UserProfile_IMType.getText(), Default_IM_Type);
-		Assert.assertEquals(UserProfile_IMName.getText(), IM_Name);
-		Assert.assertEquals(UserPRofile_AddressStreet.getText(), Address_Street);
-		Assert.assertEquals(UserProfile_AddressCity.getText(), Address_City);
-		Assert.assertEquals(UserProfile_AddressState.getText(), Address_State);
-		Assert.assertEquals(UserProfile_AddressCounty.getText(), Address_Country);
-		Assert.assertEquals(UserProfile_WeeklyStandardHours.getText(),
+		sa.assertEquals(UserProfile_Title.getText(), Title);
+		sa.assertEquals(UserProfile_WorkPhone.getText().replace("  ", ""), Work_Phone);
+		sa.assertEquals(UserProfile_Department.getText(), Department);
+		sa.assertEquals(UserProfile_Mobile.getText().replace("  ", ""), Mobile);
+		sa.assertEquals(UserProfile_ReportsTo.getText().replace(" ", ""), Prop.getProperty("Reports_To"));
+		sa.assertEquals(UserProfile_OtherPhone.getText().replace("  ", ""), Other_Phone);
+		sa.assertEquals(UserProfile_Fax.getText().replace("  ", ""), Fax);
+		sa.assertEquals(UserProfile_IMType.getText(), Default_IM_Type);
+		sa.assertEquals(UserProfile_IMName.getText(), IM_Name);
+		sa.assertEquals(UserPRofile_AddressStreet.getText(), Address_Street);
+		sa.assertEquals(UserProfile_AddressCity.getText(), Address_City);
+		sa.assertEquals(UserProfile_AddressState.getText(), Address_State);
+		sa.assertEquals(UserProfile_AddressCounty.getText(), Address_Country);
+		sa.assertEquals(UserProfile_WeeklyStandardHours.getText(),
 				WeeklyStandardHours + " : " + DefaultWeeklyStandardHoursMin);
-		Assert.assertEquals(UserProfile_AddressPostalZipCode.getText(), AddressPostalZipCodel);
-		Assert.assertEquals(UserProfile_StandardRate.getText(), StandardRate);
-		Assert.assertEquals(UserProfile_OverTimeRate.getText(), OverTimeRate);
-		Assert.assertEquals(UserPRofile_Description.getText(), Description);
-		Assert.assertEquals(UserProfile_PrimaryEmail.getText(), EmailAddress1);
-		Assert.assertEquals(UserProfile_SugarClient.getText(), DefaultEmailClient);
+		sa.assertEquals(UserProfile_AddressPostalZipCode.getText(), AddressPostalZipCodel);
+		sa.assertEquals(UserProfile_StandardRate.getText(), StandardRate);
+		sa.assertEquals(UserProfile_OverTimeRate.getText(), OverTimeRate);
+		sa.assertEquals(UserPRofile_Description.getText(), Description);
+		sa.assertEquals(UserProfile_PrimaryEmail.getText(), EmailAddress1);
+		sa.assertEquals(UserProfile_SugarClient.getText(), DefaultEmailClient);
+		sa.assertAll();
 	}
 
 
@@ -1085,33 +1164,33 @@ public class UserPage implements UserPage_Interface
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		// Click On Password Tab
 		Tab2OnEditPage.click();
-		Assert.assertEquals(Tab2OnEditPage.getCssValue("color"), Prop.getProperty("EditPagePasswordColor"));
+		sa.assertEquals(Tab2OnEditPage.getCssValue("color"), Prop.getProperty("EditPagePasswordColor"));
 		// Verify Password Data With The Help Of "UserPage.xlsx" sheet
-		Assert.assertEquals(PasswordPage_PasswordLabel.getText(), PasswordData.getCellData(0, 4));
-		Assert.assertEquals(PasswordPage_PasswordLabel.getCssValue("color"), PasswordData.getCellData(1, 4));
-		Assert.assertEquals(PasswordPage_CurrentPasswordLabel.getText(), PasswordData.getCellData(0, 0));
-		Assert.assertEquals(PasswordPage_NewPasswordLabel.getText(), PasswordData.getCellData(0, 1));
-		Assert.assertEquals(PasswordPage_ConfirmPassword.getText(), PasswordData.getCellData(0, 2));
-		Assert.assertEquals(PasswordPage_Note.getText(),
+		sa.assertEquals(PasswordPage_PasswordLabel.getText(), PasswordData.getCellData(0, 4));
+		sa.assertEquals(PasswordPage_PasswordLabel.getCssValue("color"), PasswordData.getCellData(1, 4));
+		sa.assertEquals(PasswordPage_CurrentPasswordLabel.getText(), PasswordData.getCellData(0, 0));
+		sa.assertEquals(PasswordPage_NewPasswordLabel.getText(), PasswordData.getCellData(0, 1));
+		sa.assertEquals(PasswordPage_ConfirmPassword.getText(), PasswordData.getCellData(0, 2));
+		sa.assertEquals(PasswordPage_Note.getText(),
 				PasswordData.getCellData(0, 3) + " " + PasswordData.getCellData(1, 3));
 		// verify Alert and Validation Message On Alert
 		CurrentpasswordInput.sendKeys(PasswordData.getCellData(0, 1));
 		SaveButtonHeader.click();
 		// Handling Alert1
 		Alert1 = global.alert(driver);
-		Assert.assertEquals(Alert1, PasswordData.getCellData(1, 5));
+		sa.assertEquals(Alert1, PasswordData.getCellData(1, 5));
 		NewPasswordInput.sendKeys(PasswordData.getCellData(0, 2));
 		SaveButtonHeader.click();
 		// Handling Alert2
 		Alert2 = global.alert(driver);
-		Assert.assertEquals(Alert2, PasswordData.getCellData(1, 6));
+		sa.assertEquals(Alert2, PasswordData.getCellData(1, 6));
 		SaveButtonHeader.click();
 		global.alertAccept(driver);
 		// Check Validation Message At Confirmation Message
 		ConfirmPasswordInput.sendKeys("KC");
 		global.wait(driver).until(
 				ExpectedConditions.textToBePresentInElement(PasswordValidation, "The passwords do not match."));
-		Assert.assertEquals(PasswordValidation.getText(), PasswordData.getCellData(2, 2));
+		sa.assertEquals(PasswordValidation.getText(), PasswordData.getCellData(2, 2));
 		// Clear Text For NewPasswordInput And ConfirmPasswordInput And Pass Valid
 		// Password
 		NewPasswordInput.clear();
@@ -1121,7 +1200,7 @@ public class UserPage implements UserPage_Interface
 		SaveButtonHeader.click();
 		Tab2OnEditPage.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(PasswordErrorMessage));
-		Assert.assertEquals(PasswordErrorMessage.getText(),
+		sa.assertEquals(PasswordErrorMessage.getText(),
 				PasswordData.getCellData(1, 9) + " " + User_Name + PasswordData.getCellData(1, 10));
 		// Check Sugar Dashlet Message
 		CurrentpasswordInput.sendKeys(PasswordData.getCellData(1, 0));
@@ -1130,8 +1209,9 @@ public class UserPage implements UserPage_Interface
 		SaveButtonHeader.click();
 		global.wait(driver)
 				.until(ExpectedConditions.textToBePresentInElement(PasswordUpdatedLabel, "Password Updated"));
-		Assert.assertEquals(PasswordUpdatedLabel.getText(), PasswordData.getCellData(1, 7));
-		Assert.assertEquals(PasswordUpdatedLabel2.getText(), PasswordData.getCellData(1, 8));
+		sa.assertEquals(PasswordUpdatedLabel.getText(), PasswordData.getCellData(1, 7));
+		sa.assertEquals(PasswordUpdatedLabel2.getText(), PasswordData.getCellData(1, 8));
+		sa.assertAll();
 		SugarDashletClose.click();
 	}
 
@@ -1141,65 +1221,65 @@ public class UserPage implements UserPage_Interface
 		EditButton.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		Tab3OnEditPage.click();
-		Assert.assertEquals(Tab3OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
-		Assert.assertEquals(ThemeLabel.getText(), Prop.getProperty("ThemeLabel"));
+		sa.assertEquals(Tab3OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
+		sa.assertEquals(ThemeLabel.getText(), Prop.getProperty("ThemeLabel"));
 		// Check List Of Themes And Count Of Themes
 		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='user_theme']//option"));
 		for (int i = 0; i < list.size(); i++)
 		{
-			Assert.assertEquals(list.get(i).getText(), ThemeData.getCellData(1, i));
+			sa.assertEquals(list.get(i).getText(), ThemeData.getCellData(1, i));
 		}
-		Assert.assertEquals(list.size(), (int) (ThemeData.getCellDataInt(1, 2)));
-		Assert.assertEquals(global.select(DefaultTheme).getFirstSelectedOption().getText(),
-				ThemeData.getCellData(1, 1));
+		sa.assertEquals(list.size(), (int) (ThemeData.getCellDataInt(1, 2)));
+		sa.assertEquals(global.select(DefaultTheme).getFirstSelectedOption().getText(), ThemeData.getCellData(1, 1));
+		sa.assertAll();
 	}
 
 
 	public void checkDataFromEditPageAdvanced()
 	{
 		Tab4OnEditPage.click();
-		Assert.assertEquals(Tab4OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
-		Assert.assertEquals(Tab4OnEditPage.getText(), Prop.getProperty("AdvancedLabel"));
-		Assert.assertEquals(UserSettingLabel.getText(), Prop.getProperty("Advanced1"));
-		Assert.assertEquals(UserSettingLabel.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
-		Assert.assertEquals(ExportDelimiterLabel.getText().startsWith(AdvancedData.getCellData(0, 0)), true);
+		sa.assertEquals(Tab4OnEditPage.getCssValue("color"), Prop.getProperty("EditPageThemeColor"));
+		sa.assertEquals(Tab4OnEditPage.getText(), Prop.getProperty("AdvancedLabel"));
+		sa.assertEquals(UserSettingLabel.getText(), Prop.getProperty("Advanced1"));
+		sa.assertEquals(UserSettingLabel.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
+		sa.assertEquals(ExportDelimiterLabel.getText().startsWith(AdvancedData.getCellData(0, 0)), true);
 		ExportDelimiter = ExportDelimiterlabelTextbox.getAttribute("value");
-		Assert.assertEquals(ExportDelimiter, AdvancedData.getCellData(2, 0));
-		Assert.assertEquals(NotifyOnAssignment.getText().startsWith(AdvancedData.getCellData(0, 3)), true);
+		sa.assertEquals(ExportDelimiter, AdvancedData.getCellData(2, 0));
+		sa.assertEquals(NotifyOnAssignment.getText().startsWith(AdvancedData.getCellData(0, 3)), true);
 		NotifyOnAssignmentvalue = NotifyOnAssignmentCheckBox.isSelected();
-		Assert.assertTrue(NotifyOnAssignmentvalue);
-		Assert.assertTrue(ImportExportLabel.getText().startsWith(AdvancedData.getCellData(0, 1)));
+		sa.assertTrue(NotifyOnAssignmentvalue);
+		sa.assertTrue(ImportExportLabel.getText().startsWith(AdvancedData.getCellData(0, 1)));
 		ImportExportCharSet = global.select(DefaultSelectedImportExport).getFirstSelectedOption().getText();
-		Assert.assertEquals(ImportExportCharSet, AdvancedData.getCellData(2, 1));
+		sa.assertEquals(ImportExportCharSet, AdvancedData.getCellData(2, 1));
 		List<WebElement> list = driver.findElements(By.xpath(".//div[@id='settings']//tr[3]//td[2]//select//option"));
 		for (int i = 0; i < list.size(); i++)
 		{
 			// System.out.println(list.get(i).getText());
-			Assert.assertEquals(list.get(i).getText(), AdvancedData.getCellData(i, 6));
+			sa.assertEquals(list.get(i).getText(), AdvancedData.getCellData(i, 6));
 		}
-		Assert.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("CharachterSetCount")));
-		Assert.assertEquals(RemainderLabel.getText().startsWith(AdvancedData.getCellData(0, 4)), true);
+		sa.assertEquals(list.size(), Integer.parseInt(Prop.getProperty("CharachterSetCount")));
+		sa.assertEquals(RemainderLabel.getText().startsWith(AdvancedData.getCellData(0, 4)), true);
 		PopupEditPage = Popup.getText();
-		Assert.assertEquals(PopupEditPage, AdvancedData.getCellData(1, 4));
+		sa.assertEquals(PopupEditPage, AdvancedData.getCellData(1, 4));
 		RemainEmailTextbox = DefaultEmailCheckBox.isSelected();
 		RemainderPopupTextbox = DefaultPopupCheckbox.isSelected();
-		Assert.assertEquals(RemainderPopupTextbox, false);
-		Assert.assertEquals(RemainEmailTextbox, false);
+		sa.assertEquals(RemainderPopupTextbox, false);
+		sa.assertEquals(RemainEmailTextbox, false);
 		EmailEditPage = Email.getText();
-		Assert.assertEquals(EmailEditPage, AdvancedData.getCellData(2, 4));
-		Assert.assertEquals(ShowFullName.getText().startsWith(AdvancedData.getCellData(0, 2)), true);
+		sa.assertEquals(EmailEditPage, AdvancedData.getCellData(2, 4));
+		sa.assertEquals(ShowFullName.getText().startsWith(AdvancedData.getCellData(0, 2)), true);
 		ShowFullNameValue = DefaultShowFullameCheckbox.isSelected();
-		assertTrue(ShowFullNameValue);
+		sa.assertTrue(ShowFullNameValue);
 		MailMergetextBox = DefaultMailMergeCheckBox.isSelected();
-		Assert.assertEquals(MailMergetextBox, false);
-		Assert.assertEquals(LayoutOption.getText(), LayoutData.getCellData(0, 0));
-		Assert.assertEquals(LayoutOption.getText(), LayoutData.getCellData(0, 0));
-		Assert.assertEquals(LayoutOption.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
-		Assert.assertEquals(ModuleMenuLabel.getText(), LayoutData.getCellData(0, 1));
-		assertTrue(ModuleMenuLabelCheckbox.isSelected());
-		Assert.assertEquals(SelectModule.getText(), LayoutData.getCellData(0, 6));
-		Assert.assertEquals(DisplayModule.getText(), LayoutData.getCellData(0, 3));
-		Assert.assertEquals(HideModule.getText(), LayoutData.getCellData(0, 4));
+		sa.assertEquals(MailMergetextBox, false);
+		sa.assertEquals(LayoutOption.getText(), LayoutData.getCellData(0, 0));
+		sa.assertEquals(LayoutOption.getText(), LayoutData.getCellData(0, 0));
+		sa.assertEquals(LayoutOption.getCssValue("color"), Prop.getProperty("EdiPageAdvancedColor"));
+		sa.assertEquals(ModuleMenuLabel.getText(), LayoutData.getCellData(0, 1));
+		sa.assertTrue(ModuleMenuLabelCheckbox.isSelected());
+		sa.assertEquals(SelectModule.getText(), LayoutData.getCellData(0, 6));
+		sa.assertEquals(DisplayModule.getText(), LayoutData.getCellData(0, 3));
+		sa.assertEquals(HideModule.getText(), LayoutData.getCellData(0, 4));
 		List<WebElement> list2 = driver
 				.findElements(By.xpath(".//div[@id='layout']//table//tbody//tr[3]//tr[2]//td[2]//select//option"));
 		List<String> list3 = new ArrayList<String>();
@@ -1272,32 +1352,32 @@ public class UserPage implements UserPage_Interface
 		list4.add("Advertisement Spends");
 		list4.add("Knowledge Base");
 		list4.add("Buyers");
-		assertTrue((list3.containsAll(list4)));
-		Assert.assertEquals(SubPanelTab.getText(), LayoutData.getCellData(0, 5));
-		Assert.assertEquals(SubPanelCheckbox.isSelected(), true);
-		Assert.assertEquals(LocalSetting.getText(), LocalSettingData.getCellData(0, 0));
-		Assert.assertEquals(DataFormatLabel.getText(), LocalSettingData.getCellData(0, 1));
+		sa.assertTrue((list3.containsAll(list4)));
+		sa.assertEquals(SubPanelTab.getText(), LayoutData.getCellData(0, 5));
+		sa.assertEquals(SubPanelCheckbox.isSelected(), true);
+		sa.assertEquals(LocalSetting.getText(), LocalSettingData.getCellData(0, 0));
+		sa.assertEquals(DataFormatLabel.getText(), LocalSettingData.getCellData(0, 1));
 		List<WebElement> list5 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[2]//select//option"));
 		DateFormat = global.select(DefaultDateFormat).getFirstSelectedOption().getText();
-		Assert.assertEquals("\"" + DateFormat + "\"", LocalSettingData.getCellData(5, 1));
+		sa.assertEquals("\"" + DateFormat + "\"", LocalSettingData.getCellData(5, 1));
 		for (int i = 0; i < list5.size(); i++)
 		{
 //			System.out.println(list5.get(i).getText());
-			Assert.assertEquals("\"" + list5.get(i).getText() + "\"", LocalSettingData.getCellData(i + 1, 1));
+			sa.assertEquals("\"" + list5.get(i).getText() + "\"", LocalSettingData.getCellData(i + 1, 1));
 		}
-		Assert.assertEquals(CurrencyLabel.getText(), LocalSettingData.getCellData(0, 2));
+		sa.assertEquals(CurrencyLabel.getText(), LocalSettingData.getCellData(0, 2));
 		List<WebElement> list6 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[4]//select//option"));
 		Currency = global.select(DefaultCurrency).getFirstSelectedOption().getText();
-		Assert.assertEquals(Currency, LocalSettingData.getCellData(1, 2));
+		sa.assertEquals(Currency, LocalSettingData.getCellData(1, 2));
 		for (int i = 0; i < list6.size(); i++)
 		{
 //			System.out.println(list6.get(i).getText());
-			Assert.assertEquals(list6.get(i).getText(), LocalSettingData.getCellData(i + 1, 2));
+			sa.assertEquals(list6.get(i).getText(), LocalSettingData.getCellData(i + 1, 2));
 
 		}
-		Assert.assertEquals(TimeFormatLabel.getText(), LocalSettingData.getCellData(0, 3));
+		sa.assertEquals(TimeFormatLabel.getText(), LocalSettingData.getCellData(0, 3));
 		List<WebElement> list7 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[3]//td[2]//select//option"));
 
@@ -1323,33 +1403,33 @@ public class UserPage implements UserPage_Interface
 		list9.add("11.00 pm");
 		list9.add("11.00 PM");
 		TimeFormat = global.select(DefaultTimeFormat).getFirstSelectedOption().getText();
-		Assert.assertEquals(TimeFormat, list9.get(0));
-		assertTrue(list8.containsAll(list9));
-		Assert.assertEquals(CurrencySignificantDigitsLabel.getText(), LocalSettingData.getCellData(0, 4));
+		sa.assertEquals(TimeFormat, list9.get(0));
+		sa.assertTrue(list8.containsAll(list9));
+		sa.assertEquals(CurrencySignificantDigitsLabel.getText(), LocalSettingData.getCellData(0, 4));
 
 		List<WebElement> list10 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[3]//td[4]//select//option"));
 		for (int i = 0; i < list10.size(); i++)
 		{
-			Assert.assertEquals(Integer.parseInt(list10.get(i).getText()),
+			sa.assertEquals(Integer.parseInt(list10.get(i).getText()),
 					(int) LocalSettingData.getCellDataInt(i + 1, 4));
 		}
 		CurrencySignificantDigit = Integer
 				.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText());
-		Assert.assertEquals(CurrencySignificantDigit, (int) LocalSettingData.getCellDataInt(3, 4));
+		sa.assertEquals(CurrencySignificantDigit, (int) LocalSettingData.getCellDataInt(3, 4));
 
-		Assert.assertEquals(TimeZoneLabel.getText(), LocalSettingData.getCellData(0, 5));
+		sa.assertEquals(TimeZoneLabel.getText(), LocalSettingData.getCellData(0, 5));
 		List<WebElement> list11 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[4]//td[2]//select//option"));
 		TimeZone = global.select(DefaultTimeZone).getFirstSelectedOption().getText();
-		Assert.assertEquals(TimeZone, LocalSettingData.getCellData(327 + 1, 5));
+		sa.assertEquals(TimeZone, LocalSettingData.getCellData(327 + 1, 5));
 		for (int i = 0; i < list11.size(); i++)
 		{
 //			System.out.println(list11.get(i).getText());
-			Assert.assertEquals(list11.get(i).getText(), LocalSettingData.getCellData(i + 1, 5));
+			sa.assertEquals(list11.get(i).getText(), LocalSettingData.getCellData(i + 1, 5));
 		}
-		Assert.assertEquals(ExampleLabel.getText(), LocalSettingData.getCellData(0, 6));
-		Assert.assertEquals(ExampleTextbox.isEnabled(), false);
+		sa.assertEquals(ExampleLabel.getText(), LocalSettingData.getCellData(0, 6));
+		sa.assertEquals(ExampleTextbox.isEnabled(), false);
 		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 2)
 		{
 //			System.out.println(ExampleTextbox.getAttribute("value"));
@@ -1384,12 +1464,12 @@ public class UserPage implements UserPage_Interface
 					countNumber++;
 				}
 			}
-			Assert.assertEquals(countZero, Integer
+			sa.assertEquals(countZero, Integer
 					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
-			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
-			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
-			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
-			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+			sa.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			sa.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			sa.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			sa.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 		}
 		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("0");
 		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 0)
@@ -1425,12 +1505,12 @@ public class UserPage implements UserPage_Interface
 					countNumber++;
 				}
 			}
-			Assert.assertEquals(countZero, Integer
+			sa.assertEquals(countZero, Integer
 					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
-			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
-			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
-			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(1, 9));
-			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+			sa.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			sa.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			sa.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(1, 9));
+			sa.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 
 		}
 		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("1");
@@ -1467,12 +1547,12 @@ public class UserPage implements UserPage_Interface
 					countNumber++;
 				}
 			}
-			Assert.assertEquals(countZero, Integer
+			sa.assertEquals(countZero, Integer
 					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
-			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
-			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
-			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
-			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+			sa.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			sa.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			sa.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			sa.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 		}
 		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("3");
 		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 3)
@@ -1508,12 +1588,12 @@ public class UserPage implements UserPage_Interface
 					countNumber++;
 				}
 			}
-			Assert.assertEquals(countZero, Integer
+			sa.assertEquals(countZero, Integer
 					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
-			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
-			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
-			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
-			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+			sa.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			sa.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			sa.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			sa.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 		}
 		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("4");
 		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 4)
@@ -1549,12 +1629,12 @@ public class UserPage implements UserPage_Interface
 					countNumber++;
 				}
 			}
-			Assert.assertEquals(countZero, Integer
+			sa.assertEquals(countZero, Integer
 					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
-			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
-			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
-			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
-			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+			sa.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			sa.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			sa.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			sa.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 		}
 		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("5");
 		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 5)
@@ -1590,12 +1670,12 @@ public class UserPage implements UserPage_Interface
 					countNumber++;
 				}
 			}
-			Assert.assertEquals(countZero, Integer
+			sa.assertEquals(countZero, Integer
 					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
-			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
-			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
-			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
-			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+			sa.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			sa.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			sa.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			sa.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 		}
 		global.select(DefaultCurrencySignificantDigits).selectByVisibleText("6");
 		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 6)
@@ -1631,131 +1711,224 @@ public class UserPage implements UserPage_Interface
 					countNumber++;
 				}
 			}
-			Assert.assertEquals(countZero, Integer
+			sa.assertEquals(countZero, Integer
 					.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
-			Assert.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
-			Assert.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
-			Assert.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
-			Assert.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
+			sa.assertEquals(countDollar, (int) LocalSettingData.getCellDataInt(1, 7));
+			sa.assertEquals(countComma, (int) LocalSettingData.getCellDataInt(1, 8));
+			sa.assertEquals(countDecimal, (int) LocalSettingData.getCellDataInt(2, 9));
+			sa.assertEquals(countNumber, (int) LocalSettingData.getCellDataInt(1, 10));
 		}
-		Assert.assertEquals(separatorLabel.getText(), LocalSettingData.getCellData(0, 11));
+		sa.assertEquals(separatorLabel.getText(), LocalSettingData.getCellData(0, 11));
 		ThousandsSeparator = sepratorTextbox.getAttribute("value");
-		Assert.assertEquals(ThousandsSeparator, LocalSettingData.getCellData(1, 11));
-		Assert.assertEquals(NameDisplayFormatLabel.getText(), LocalSettingData.getCellData(0, 12) + " ");
+		sa.assertEquals(ThousandsSeparator, LocalSettingData.getCellData(1, 11));
+		sa.assertEquals(NameDisplayFormatLabel.getText(), LocalSettingData.getCellData(0, 12) + " ");
 		List<WebElement> list12 = driver
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[6]//td[2]//select//option"));
 		Name = global.select(DefaultName).getFirstSelectedOption().getText();
-		Assert.assertEquals(Name, LocalSettingData.getCellData(1, 13));
+		sa.assertEquals(Name, LocalSettingData.getCellData(1, 13));
 		for (int i = 0; i < list12.size(); i++)
 		{
 //			System.out.println(list12.get(i).getText());
-			Assert.assertEquals(list12.get(i).getText(), LocalSettingData.getCellData(i + 1, 13));
+			sa.assertEquals(list12.get(i).getText(), LocalSettingData.getCellData(i + 1, 13));
 		}
-		Assert.assertEquals(DecimalSymbolLabel.getText(), LocalSettingData.getCellData(0, 14));
+		sa.assertEquals(DecimalSymbolLabel.getText(), LocalSettingData.getCellData(0, 14));
 		DecimalSymbol = DecimalSymbolTextbox.getAttribute("value");
-		Assert.assertEquals(DecimalSymbol, LocalSettingData.getCellData(1, 14));
-		Assert.assertEquals(CalendarOptionLabel.getText(), CalendarOptionData.getCellData(0, 0));
-		Assert.assertEquals(CalendarOptionLabel.getCssValue("color"), CalendarOptionData.getCellData(1, 0));
-		Assert.assertEquals(PublishKeyLabel.getText(), CalendarOptionData.getCellData(0, 1));
-		Assert.assertEquals(PublishKeyTextbox.getText().isEmpty(), true);
+		sa.assertEquals(DecimalSymbol, LocalSettingData.getCellData(1, 14));
+		sa.assertEquals(CalendarOptionLabel.getText(), CalendarOptionData.getCellData(0, 0));
+		sa.assertEquals(CalendarOptionLabel.getCssValue("color"), CalendarOptionData.getCellData(1, 0));
+		sa.assertEquals(PublishKeyLabel.getText(), CalendarOptionData.getCellData(0, 1));
+		sa.assertEquals(PublishKeyTextbox.getText().isEmpty(), true);
 		PublishAtMyLocationValue = PublishAtMyLocation.getText();
-		Assert.assertEquals(PublishAtMyLocationValue, CalendarOptionData.getCellData(0, 2));
+		sa.assertEquals(PublishAtMyLocationValue, CalendarOptionData.getCellData(0, 2));
 		if (!PublishAtMyLocationText.getText().contains("&email="))
 		{
-			Assert.assertEquals(PublishAtMyLocationText.getText(),
-					CalendarOptionData.getCellData(1, 2) + EmailAddress1);
+			sa.assertEquals(PublishAtMyLocationText.getText(), CalendarOptionData.getCellData(1, 2) + EmailAddress1);
 		}
 		else if (PublishAtMyLocationText.getText().contains("&email="))
 		{
-			Assert.assertEquals(PublishAtMyLocationText.getText(),
-					CalendarOptionData.getCellData(2, 2) + EmailAddress1);
+			sa.assertEquals(PublishAtMyLocationText.getText(), CalendarOptionData.getCellData(2, 2) + EmailAddress1);
 		}
-		Assert.assertEquals(SearchLocationLabel.getText(), CalendarOptionData.getCellData(0, 3));
+		sa.assertEquals(SearchLocationLabel.getText(), CalendarOptionData.getCellData(0, 3));
 		SearchLocation = SearchLocationText.getText();
-		Assert.assertEquals(SearchLocation, CalendarOptionData.getCellData(1, 3));
-		Assert.assertEquals(iCalintegrationURLLabel.getText(), CalendarOptionData.getCellData(0, 4));
+		sa.assertEquals(SearchLocation, CalendarOptionData.getCellData(1, 3));
+		sa.assertEquals(iCalintegrationURLLabel.getText(), CalendarOptionData.getCellData(0, 4));
 		iCalValue = iCalintegrationText.getText();
-		Assert.assertEquals(iCalValue, CalendarOptionData.getCellData(1, 4));
-		Assert.assertEquals(FirstDayOfWeekLabel.getText(), CalendarOptionData.getCellData(0, 5));
+		sa.assertEquals(iCalValue, CalendarOptionData.getCellData(1, 4));
+		sa.assertEquals(FirstDayOfWeekLabel.getText(), CalendarOptionData.getCellData(0, 5));
 		List<WebElement> list13 = driver
 				.findElements(By.xpath(".//div[@id='calendar_options']//tr[6]//td[2]//slot//select//option"));
 		for (int i = 0; i < list13.size(); i++)
 		{
 //			System.out.println(list13.get(i).getText());
-			Assert.assertEquals(list13.get(i).getText(), CalendarOptionData.getCellData(i + 1, 5));
+			sa.assertEquals(list13.get(i).getText(), CalendarOptionData.getCellData(i + 1, 5));
 		}
 		FirstDayOfWeek = global.select(DefaultFirstdayOfWeek).getFirstSelectedOption().getText();
-		Assert.assertEquals(FirstDayOfWeek, CalendarOptionData.getCellData(1, 5));
+		sa.assertEquals(FirstDayOfWeek, CalendarOptionData.getCellData(1, 5));
+		sa.assertAll();
 	}
 
 
 	public void verifyDataOfAdvanced()
 	{
+		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", CancelButtonHeader);
 		CancelButtonHeader.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
 		AdvancedTab.click();
-		Assert.assertEquals(AdvancedTabLabel.getText(), AdvancedData.getCellData(0, 7));
-		Assert.assertEquals(AdvancedTabLabel.getCssValue("color"), AdvancedData.getCellData(1, 7));
-		Assert.assertEquals(UserSettingUserPage.getText(), AdvancedData.getCellData(0, 8));
-		Assert.assertEquals(UserSettingUserPage.getCssValue("color"), AdvancedData.getCellData(1, 8));
-		Assert.assertEquals(NotifyOnAssignmentUserPage.getText(), AdvancedData.getCellData(0, 9));
-//		Assert.assertEquals(NotifyOnAssignmentValueUserPage.isSelected(), NotifyOnAssignmentvalue);
-		Assert.assertEquals(NotifyOnAssignmentTextUserPage.getText(), AdvancedData.getCellData(1, 9) + " ");
-		Assert.assertEquals(RemainderUserPage.getText(), AdvancedData.getCellData(0, 10));
-		Assert.assertEquals(PopupCheckBoxUserPage.isSelected(), RemainderPopupTextbox);
-		Assert.assertEquals(PopupCheckBoxUserPage.isEnabled(), false);
-		Assert.assertEquals(EmailCheckBoxUserPage.isSelected(), RemainEmailTextbox);
-		Assert.assertEquals(EmailCheckBoxUserPage.isEnabled(), false);
-		Assert.assertEquals(PopupUserPage.getText(), PopupEditPage);
-		Assert.assertEquals(EmailUserPage.getText(), EmailEditPage);
-		Assert.assertEquals(RemainderText.getText(), AdvancedData.getCellData(3, 4) + " ");
-		Assert.assertEquals(MailMergeuserPage.getText(), AdvancedData.getCellData(0, 5));
-		Assert.assertEquals(MailMergeUserPageCheckBox.isSelected(), MailMergetextBox);
-		Assert.assertEquals(MailMergeUserPageCheckBox.isEnabled(), false);
-		Assert.assertEquals(MailMergeTextUserPage.getText(), AdvancedData.getCellData(1, 5) + " ");
-		Assert.assertEquals(URLUserPage.getText(), AdvancedData.getCellData(0, 11));
-		Assert.assertEquals(URLUserPage2.getText(), AdvancedData.getCellData(1, 11));
-		Assert.assertEquals(URLUserPage3.getText(), AdvancedData.getCellData(2, 11) + " ");
-		Assert.assertEquals(ExportDelimiterUserPage.getText(), AdvancedData.getCellData(0, 0));
-		Assert.assertEquals(ExportDelimiterTextboxUserPage.getText(), ExportDelimiter);
-		Assert.assertEquals(ExportDelimiterText.getText(), AdvancedData.getCellData(1, 0));
-		Assert.assertEquals(ImportExportUserPage.getText(), AdvancedData.getCellData(0, 1));
-		Assert.assertEquals(ImportExportText.getText(), AdvancedData.getCellData(2, 1));
-		Assert.assertEquals(ImportExportTextUserPage.getText(), AdvancedData.getCellData(1, 1));
-		Assert.assertEquals(ShowFullNamesTextUserPage.getText(), AdvancedData.getCellData(0, 2));
-		Assert.assertEquals(ShowFullNameTextBox.isEnabled(), false);
-		Assert.assertEquals(ShowFullNameUserPage.getText(), AdvancedData.getCellData(1, 2));
+		sa.assertEquals(AdvancedTabLabel.getText(), AdvancedData.getCellData(0, 7));
+		sa.assertEquals(AdvancedTabLabel.getCssValue("color"), AdvancedData.getCellData(1, 7));
+		sa.assertEquals(UserSettingUserPage.getText(), AdvancedData.getCellData(0, 8));
+		sa.assertEquals(UserSettingUserPage.getCssValue("color"), AdvancedData.getCellData(1, 8));
+		sa.assertEquals(NotifyOnAssignmentUserPage.getText(), AdvancedData.getCellData(0, 9));
+//		sa.assertEquals(NotifyOnAssignmentValueUserPage.isSelected(), NotifyOnAssignmentvalue);
+		sa.assertEquals(NotifyOnAssignmentTextUserPage.getText(), AdvancedData.getCellData(1, 9) + " ");
+		sa.assertEquals(RemainderUserPage.getText(), AdvancedData.getCellData(0, 10));
+		sa.assertEquals(PopupCheckBoxUserPage.isSelected(), RemainderPopupTextbox);
+		sa.assertEquals(PopupCheckBoxUserPage.isEnabled(), false);
+		sa.assertEquals(EmailCheckBoxUserPage.isSelected(), RemainEmailTextbox);
+		sa.assertEquals(EmailCheckBoxUserPage.isEnabled(), false);
+		sa.assertEquals(PopupUserPage.getText(), PopupEditPage);
+		sa.assertEquals(EmailUserPage.getText(), EmailEditPage);
+		sa.assertEquals(RemainderText.getText(), AdvancedData.getCellData(3, 4) + " ");
+		sa.assertEquals(MailMergeuserPage.getText(), AdvancedData.getCellData(0, 5));
+		sa.assertEquals(MailMergeUserPageCheckBox.isSelected(), MailMergetextBox);
+		sa.assertEquals(MailMergeUserPageCheckBox.isEnabled(), false);
+		sa.assertEquals(MailMergeTextUserPage.getText(), AdvancedData.getCellData(1, 5) + " ");
+		sa.assertEquals(URLUserPage.getText(), AdvancedData.getCellData(0, 11));
+		sa.assertEquals(URLUserPage2.getText(), AdvancedData.getCellData(1, 11));
+		sa.assertEquals(URLUserPage3.getText(), AdvancedData.getCellData(2, 11) + " ");
+		sa.assertEquals(ExportDelimiterUserPage.getText(), AdvancedData.getCellData(0, 0));
+		sa.assertEquals(ExportDelimiterTextboxUserPage.getText(), ExportDelimiter);
+		sa.assertEquals(ExportDelimiterText.getText(), AdvancedData.getCellData(1, 0));
+		sa.assertEquals(ImportExportUserPage.getText(), AdvancedData.getCellData(0, 1));
+		sa.assertEquals(ImportExportText.getText(), AdvancedData.getCellData(2, 1));
+		sa.assertEquals(ImportExportTextUserPage.getText(), AdvancedData.getCellData(1, 1));
+		sa.assertEquals(ShowFullNamesTextUserPage.getText(), AdvancedData.getCellData(0, 2));
+		sa.assertEquals(ShowFullNameTextBox.isEnabled(), false);
+		sa.assertEquals(ShowFullNameUserPage.getText(), AdvancedData.getCellData(1, 2));
 
-		Assert.assertEquals(LocaleUserPage.getText(), LocalSettingData.getCellData(0, 0));
-		Assert.assertEquals(LocaleUserPage.getCssValue("color"), LocalSettingData.getCellData(1, 0));
-		Assert.assertEquals(DataFormatUserPageLabel.getText(), LocalSettingData.getCellData(0, 1));
-		Assert.assertEquals(DataFormatTextUserPage.getText(), LocalSettingData.getCellData(10, 1) + " ");
-		Assert.assertEquals(TimeFormatUserPage.getText(), LocalSettingData.getCellData(0, 3));
-		Assert.assertEquals(TimeFormatValueUserPage.getText(), TimeFormat + " ");
-		Assert.assertEquals(TimeFormatText.getText(), LocalSettingData.getCellData(11, 3) + " ");
-		Assert.assertEquals(TimeZoneUserPage.getText(), LocalSettingData.getCellData(0, 5));
-		Assert.assertEquals(TimeZoneValueUserPage.getText(), LocalSettingData.getCellData(327 + 1, 5) + " ");
-		Assert.assertEquals(CurrencyUserPage.getText(), LocalSettingData.getCellData(0, 2));
-		Assert.assertEquals(CurrencyValueUserPage.getText().contains("USD"), true);
-		Assert.assertEquals(CurrencyText.getText(), LocalSettingData.getCellData(5, 2) + " ");
-		Assert.assertEquals(CurrencyDigitUserPage.getText(), LocalSettingData.getCellData(0, 4));
-		Assert.assertEquals(Integer.parseInt(CurrencyDigitValueUserpage.getText().replace(" ", "")),
+		sa.assertEquals(LocaleUserPage.getText(), LocalSettingData.getCellData(0, 0));
+		sa.assertEquals(LocaleUserPage.getCssValue("color"), LocalSettingData.getCellData(1, 0));
+		sa.assertEquals(DataFormatUserPageLabel.getText(), LocalSettingData.getCellData(0, 1));
+		sa.assertEquals(DataFormatTextUserPage.getText(), LocalSettingData.getCellData(10, 1) + " ");
+		sa.assertEquals(TimeFormatUserPage.getText(), LocalSettingData.getCellData(0, 3));
+		sa.assertEquals(TimeFormatValueUserPage.getText(), TimeFormat + " ");
+		sa.assertEquals(TimeFormatText.getText(), LocalSettingData.getCellData(11, 3) + " ");
+		sa.assertEquals(TimeZoneUserPage.getText(), LocalSettingData.getCellData(0, 5));
+		sa.assertEquals(TimeZoneValueUserPage.getText(), LocalSettingData.getCellData(327 + 1, 5) + " ");
+		sa.assertEquals(CurrencyUserPage.getText(), LocalSettingData.getCellData(0, 2));
+		sa.assertEquals(CurrencyValueUserPage.getText().contains("USD"), true);
+		sa.assertEquals(CurrencyText.getText(), LocalSettingData.getCellData(5, 2) + " ");
+		sa.assertEquals(CurrencyDigitUserPage.getText(), LocalSettingData.getCellData(0, 4));
+		sa.assertEquals(Integer.parseInt(CurrencyDigitValueUserpage.getText().replace(" ", "")),
 				CurrencySignificantDigit);
-		Assert.assertEquals(CurrencyDigitTextUserpage.getText(), LocalSettingData.getCellData(8, 4) + " ");
-		Assert.assertEquals(ThousandsUserPage.getText(), LocalSettingData.getCellData(0, 11));
-		Assert.assertEquals(ThousandsValueUserPage.getText().replace(" ", ""), LocalSettingData.getCellData(1, 11));
-		Assert.assertEquals(ThousandsTextValueUserPage.getText().contains(LocalSettingData.getCellData(2, 11)), true);
-		Assert.assertEquals(DecimalUserPage.getText(), LocalSettingData.getCellData(0, 14));
-		Assert.assertEquals(DecilamlValueUserPage.getText().replace(" ", ""), LocalSettingData.getCellData(1, 14));
-		Assert.assertEquals(DeciamlTextUserPage.getText(), LocalSettingData.getCellData(2, 14) + " ");
-		Assert.assertEquals(NameDisplayUserPage.getText(), LocalSettingData.getCellData(0, 12));
-		Assert.assertEquals(NameDisplayValueOneUserPage.getText(), LocalSettingData.getCellData(1, 12));
-		Assert.assertEquals(NameDisplayValueSecondUserPage.getText(),  LocalSettingData.getCellData(2, 12));
-		Assert.assertEquals(NameDisplayValueThirdUserPage.getText(), LocalSettingData.getCellData(3, 12));
-		Assert.assertEquals(NameDisplayValueForthUserPage.getText(), LocalSettingData.getCellData(4, 12));
-		Assert.assertEquals(NameDisplayValueFifthUserPage.getText(), LocalSettingData.getCellData(5, 12));
-		Assert.assertEquals(NameDisplayValueSixthUserPage.getText(), LocalSettingData.getCellData(6, 12));
-		Assert.assertEquals(NameDisplayTextUserPage.getText(), LocalSettingData.getCellData(7, 12));
+		sa.assertEquals(CurrencyDigitTextUserpage.getText(), LocalSettingData.getCellData(8, 4) + " ");
+		sa.assertEquals(ThousandsUserPage.getText(), LocalSettingData.getCellData(0, 11));
+		sa.assertEquals(ThousandsValueUserPage.getText().replace(" ", ""), LocalSettingData.getCellData(1, 11));
+		sa.assertEquals(ThousandsTextValueUserPage.getText().contains(LocalSettingData.getCellData(2, 11)), true);
+		sa.assertEquals(DecimalUserPage.getText(), LocalSettingData.getCellData(0, 14));
+		sa.assertEquals(DecilamlValueUserPage.getText().replace(" ", ""), LocalSettingData.getCellData(1, 14));
+		sa.assertEquals(DeciamlTextUserPage.getText(), LocalSettingData.getCellData(2, 14) + " ");
+		sa.assertEquals(NameDisplayUserPage.getText(), LocalSettingData.getCellData(0, 12));
+		sa.assertEquals(NameDisplayValueOneUserPage.getText(), LocalSettingData.getCellData(1, 12));
+		sa.assertEquals(NameDisplayValueSecondUserPage.getText(), LocalSettingData.getCellData(2, 12));
+		sa.assertEquals(NameDisplayValueThirdUserPage.getText(), LocalSettingData.getCellData(3, 12));
+		sa.assertEquals(NameDisplayValueForthUserPage.getText(), LocalSettingData.getCellData(4, 12));
+		sa.assertEquals(NameDisplayValueFifthUserPage.getText(), LocalSettingData.getCellData(5, 12));
+		sa.assertEquals(NameDisplayValueSixthUserPage.getText(), LocalSettingData.getCellData(6, 12));
+		sa.assertEquals(NameDisplayTextUserPage.getText(), LocalSettingData.getCellData(7, 12) + " ");
+		sa.assertEquals(CalendarOption.getText(), CalendarOptionData.getCellData(0, 0));
+		sa.assertEquals(CalendarOption.getCssValue("color"), CalendarOptionData.getCellData(1, 0));
+		sa.assertEquals(Publish_Key.getText(), CalendarOptionData.getCellData(0, 1));
+		sa.assertEquals(Publish_Key_Text.getText(), CalendarOptionData.getCellData(1, 1) + " ");
+		sa.assertEquals(Publish_at_my_location.getText(), CalendarOptionData.getCellData(0, 2));
+		if (Publish_at_my_location_text.getText().contains("&email="))
+		{
+			sa.assertEquals(Publish_at_my_location_text.getText(),
+					CalendarOptionData.getCellData(2, 2) + EmailAddress1);
+		}
+		else
+		{
+			sa.assertEquals(Publish_at_my_location_text.getText(), CalendarOptionData.getCellData(1, 2));
+		}
+		sa.assertEquals(Search_Location.getText(), CalendarOptionData.getCellData(0, 3));
+		sa.assertEquals(Search_Location_Text.getText(), CalendarOptionData.getCellData(1, 3));
+		sa.assertEquals(iCal.getText(), CalendarOptionData.getCellData(0, 4));
+		sa.assertEquals(iCal_Text.getText(), CalendarOptionData.getCellData(1, 4));
+		sa.assertEquals(First_Day_Of_Week.getText(), CalendarOptionData.getCellData(0, 5));
+		sa.assertTrue(First_Day_Of_Week_Text.getText().contains(FirstDayOfWeek));
+		sa.assertTrue(First_Day_Of_Week_Text.getText().contains(CalendarOptionData.getCellData(8, 5)));
+		sa.assertEquals(Layout_Option.getText(), LayoutData.getCellData(0, 0));
+		sa.assertEquals(Layout_Option.getCssValue("color"), LayoutData.getCellData(1, 0));
+		sa.assertEquals(Module_Menu_Filter.getText(), LayoutData.getCellData(0, 1));
+		sa.assertEquals(Module_Menu_Filter_text.getText(), LayoutData.getCellData(1, 1) + " ");
+		sa.assertEquals(SubPanel_Tab.getText(), LayoutData.getCellData(0, 5));
+		sa.assertEquals(SubPanel_Tab_Text.getText(), LayoutData.getCellData(1, 5) + " ");
+		sa.assertEquals(All.getText(), LayoutData.getCellData(0, 8));
+		sa.assertEquals(All.getCssValue("color"), LayoutData.getCellData(1, 8));
+		sa.assertAll();
+	}
+
+
+	public void accessCheck()
+	{
+		global.wait(driver).until(ExpectedConditions.visibilityOf(Access));
+		Access.click();
+		List<WebElement> list = driver
+				.findElements(By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr"));
+//		System.out.println(list.size());
+//		for (int i = 0; i < list.size(); i++)
+//		{
+//			System.out.println(list.get(i).getText());
+//		}
+		for (int i = 0; i < list.size(); i++)
+		{
+			if (driver.findElement(
+					By.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[" + (i + 1) + "]//td[1]"))
+					.getText().equals(" ") != true)
+			{
+				sa.assertEquals(driver.findElement(By
+						.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[" + (i + 1) + "]//td[1]"))
+						.getText(), AccessData.getCellData(i, 0));
+			}
+		}
+		List<WebElement> list2 = driver
+				.findElements(By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr[1]//td"));
+		for (int i = 0; i < list2.size(); i++)
+		{
+			if (driver.findElement(
+					By.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[1]//td[" + (i + 1) + "]"))
+					.getText().equals(" ") != true)
+			{
+				sa.assertEquals(driver.findElement(By
+						.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[1]//td[" + (i + 1) + "]"))
+						.getText(), AccessData.getCellData(i, 0));
+			}
+		}
+		for (int i = 1; i < list.size(); i++)
+		{
+			if (driver.findElement(
+					By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[2]"))
+					.getText().equals(AccessData.getCellData(0, 9)))
+			{
+				sa.assertEquals(driver.findElement(By.xpath(
+						".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[2]"))
+						.getText(), AccessData.getCellData(1, 9));
+				sa.assertEquals(driver.findElement(By.xpath(
+						".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[2]"))
+						.getText(), AccessData.getCellData(i, 1));
+			}
+		}
+//		List<WebElement> list3 = driver.findElements(By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr[2]//td[3]"));
+		for (int i = 1; i < list.size(); i++)
+		{
+			sa.assertEquals(
+					driver.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]")),
+					AccessData.getCellData(i, 2));
+		}
+		System.out.println(NoneColor.getCssValue("color"));
+		System.out.println(AllColor.getCssValue("color"));
+		System.out.println(OwnerColor.getCssValue("color"));
 	}
 
 

@@ -5,9 +5,18 @@
     <classes>
       <class name="testCases_HomePageFranchisee.UserPage_TestCase">
         <methods>
+          <include name="checkDataOfUserProfile"/>
           <include name="afterMethod"/>
+          <include name="checkAccessOfUser"/>
+          <include name="buttonBackGroundWithoutMouseOverview"/>
+          <include name="checkPasswordPageOnEdit"/>
+          <include name="buttonToolTipCheck"/>
+          <include name="checkButtonName"/>
           <include name="property"/>
           <include name="checkAdvancedOfUserProfile"/>
+          <include name="tabnamesCheck"/>
+          <include name="buttonBackGroundWithMouseOverview"/>
+          <include name="checkThemesPageOnEdit"/>
           <include name="takeScreenShotOnFailure"/>
         </methods>
       </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
