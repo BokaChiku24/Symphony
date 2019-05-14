@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import util.Global;
+import util.Logout;
 
 public class UserPage implements UserPage_Interface
 {
@@ -97,7 +98,7 @@ public class UserPage implements UserPage_Interface
 	private boolean MailMergetextBox;
 	private String PopupEditPage;
 	private String EmailEditPage;
-
+	private Logout logout;
 	private SoftAssert sa;
 
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
@@ -777,19 +778,39 @@ public class UserPage implements UserPage_Interface
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='table-responsive-edit']//table//tbody//tr[2]//td[3]")
 	private WebElement NoneColor;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@class='table-responsive-edit']//table//tbody//tr[3]//td[3]")
 	private WebElement AllColor;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@class='table-responsive-edit']//table//tbody//tr[6]//td[3]")
 	private WebElement OwnerColor;
-	
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_title_aclroles']//table//tbody//h3/span[1]")
+	private WebElement Roles;
+
+	@FindBy(how = How.XPATH, using = ".//div[@class='detail-table-overflow']//table//tr[2]//th[1]//a")
+	private WebElement Roles_Name;
+
+	@FindBy(how = How.XPATH, using = ".//div[@class='detail-table-overflow']//table//tr[2]//th[2]//span")
+	private WebElement Roles_Description;
+
+	@FindBy(how = How.XPATH, using = ".//div[@class='detail-table-overflow']//table//tr[3]//td[1]//span")
+	private WebElement Roles_Franchisee;
+
+	@FindBy(how = How.XPATH, using = ".//div[@class='detail-table-overflow']//table//tr[3]//td[2]//span")
+	private WebElement Roles_Not_Delete;
+
+	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//li//a")
+	private WebElement Roles_ALL;
+
+
 	public UserPage(WebDriver driver)
 	{
 		global = new Global();
 		Prop = global.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
+		logout = new Logout(driver);
 		sa = new SoftAssert();
 		PageFactory.initElements(driver, this);
 		UserData = new ReadExcelData(Prop.getProperty("Path1"), "UserProfile");
@@ -1423,11 +1444,11 @@ public class UserPage implements UserPage_Interface
 				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[4]//td[2]//select//option"));
 		TimeZone = global.select(DefaultTimeZone).getFirstSelectedOption().getText();
 		sa.assertEquals(TimeZone, LocalSettingData.getCellData(327 + 1, 5));
-		for (int i = 0; i < list11.size(); i++)
-		{
-//			System.out.println(list11.get(i).getText());
-			sa.assertEquals(list11.get(i).getText(), LocalSettingData.getCellData(i + 1, 5));
-		}
+//		for (int i = 0; i < list11.size(); i++)
+//		{
+//		System.out.println(list11.get(i).getText());
+//			sa.assertEquals(list11.get(i).getText(), LocalSettingData.getCellData(i + 1, 5));
+//		}
 		sa.assertEquals(ExampleLabel.getText(), LocalSettingData.getCellData(0, 6));
 		sa.assertEquals(ExampleTextbox.isEnabled(), false);
 		if (Integer.parseInt(global.select(DefaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 2)
@@ -1764,14 +1785,14 @@ public class UserPage implements UserPage_Interface
 		}
 		FirstDayOfWeek = global.select(DefaultFirstdayOfWeek).getFirstSelectedOption().getText();
 		sa.assertEquals(FirstDayOfWeek, CalendarOptionData.getCellData(1, 5));
+		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", CancelButtonFooter);
+		CancelButtonFooter.click();
 		sa.assertAll();
 	}
 
 
 	public void verifyDataOfAdvanced()
 	{
-		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", CancelButtonHeader);
-		CancelButtonHeader.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(EditButton));
 		AdvancedTab.click();
 		sa.assertEquals(AdvancedTabLabel.getText(), AdvancedData.getCellData(0, 7));
@@ -1884,7 +1905,7 @@ public class UserPage implements UserPage_Interface
 		{
 			if (driver.findElement(
 					By.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[" + (i + 1) + "]//td[1]"))
-					.getText().equals(" ") != true)
+					.getText().equals(AccessData.getCellData(i, 0)) == true)
 			{
 				sa.assertEquals(driver.findElement(By
 						.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[" + (i + 1) + "]//td[1]"))
@@ -1893,47 +1914,109 @@ public class UserPage implements UserPage_Interface
 		}
 		List<WebElement> list2 = driver
 				.findElements(By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr[1]//td"));
-		for (int i = 0; i < list2.size(); i++)
-		{
-			if (driver.findElement(
-					By.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[1]//td[" + (i + 1) + "]"))
-					.getText().equals(" ") != true)
-			{
-				sa.assertEquals(driver.findElement(By
-						.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[1]//td[" + (i + 1) + "]"))
-						.getText(), AccessData.getCellData(i, 0));
-			}
-		}
+//		for (int i = 0; i < list2.size(); i++)
+//		{
+//			System.out.println(driver.findElement(
+//					By.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[1]//td[" + (i + 1) + "]"))
+//					.getText());
+//			if (driver.findElement(
+//					By.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[1]//td[" + (i + 1) + "]"))
+//					.getText().equals(" ") == true)
+//			{
+//				System.out.println("Blank Value");
+//			}
+//			else {
+//				sa.assertEquals(driver.findElement(By
+//						.xpath(".//div[@class='table-responsive-edit']//table//tbody/tr[1]//td[" + (i + 1) + "]"))
+//						.getText(), AccessData.getCellData(i, 0));
+//			}
+//		}
+
+//		List<WebElement> list3 = driver.findElements(By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr[2]//td[3]"));
 		for (int i = 1; i < list.size(); i++)
 		{
+			sa.assertEquals(driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]"))
+					.getText(), AccessData.getCellData(i, 2));
+			sa.assertEquals(driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[4]"))
+					.getText(), AccessData.getCellData(i, 3));
+			sa.assertEquals(driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[5]"))
+					.getText(), AccessData.getCellData(i, 4));
+			sa.assertEquals(driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[6]"))
+					.getText(), AccessData.getCellData(i, 5));
+			sa.assertEquals(driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[7]"))
+					.getText(), AccessData.getCellData(i, 6));
+			sa.assertEquals(driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[8]"))
+					.getText(), AccessData.getCellData(i, 7));
+			sa.assertEquals(driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[9]"))
+					.getText(), AccessData.getCellData(i, 8));
 			if (driver.findElement(
 					By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[2]"))
 					.getText().equals(AccessData.getCellData(0, 9)))
 			{
 				sa.assertEquals(driver.findElement(By.xpath(
 						".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[2]"))
-						.getText(), AccessData.getCellData(1, 9));
+						.getCssValue("color"), AccessData.getCellData(1, 9));
+			}
+			if (driver.findElement(
+					By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]"))
+					.getText().equals(AccessData.getCellData(0, 10)))
+			{
 				sa.assertEquals(driver.findElement(By.xpath(
-						".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[2]"))
-						.getText(), AccessData.getCellData(i, 1));
+						".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]"))
+						.getCssValue("color"), AccessData.getCellData(1, 10));
+			}
+			else if (driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]"))
+					.getText().equals(AccessData.getCellData(0, 11)))
+			{
+				sa.assertEquals(driver.findElement(By.xpath(
+						".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]"))
+						.getCssValue("color"), AccessData.getCellData(1, 11));
+			}
+			else if (driver
+					.findElement(By.xpath(
+							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]"))
+					.getText().equals(AccessData.getCellData(0, 12)))
+			{
+				sa.assertEquals(driver.findElement(By.xpath(
+						".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]"))
+						.getCssValue("color"), AccessData.getCellData(1, 12));
 			}
 		}
-//		List<WebElement> list3 = driver.findElements(By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr[2]//td[3]"));
-		for (int i = 1; i < list.size(); i++)
-		{
-			sa.assertEquals(
-					driver.findElement(By.xpath(
-							".//div[@class='table-responsive-edit']//table//tbody//tr[" + (i + 1) + "]//td[3]")),
-					AccessData.getCellData(i, 2));
-		}
-		System.out.println(NoneColor.getCssValue("color"));
-		System.out.println(AllColor.getCssValue("color"));
-		System.out.println(OwnerColor.getCssValue("color"));
+//		System.out.println(NoneColor.getCssValue("color"));
+//		System.out.println(AllColor.getCssValue("color"));
+//		System.out.println(OwnerColor.getCssValue("color"));
+//		System.out.println(
+//				driver.findElement(By.xpath(".//div[@id='subpanel_title_aclroles']//table//tbody//h3/span[1]"))
+//						.getText());
+		sa.assertEquals(Roles.getText(), AccessData.getCellData(0, 13));
+		sa.assertEquals(Roles_Name.getText(), AccessData.getCellData(0, 14));
+		sa.assertEquals(Roles_Description.getText(), AccessData.getCellData(0, 15));
+		sa.assertEquals(Roles_Franchisee.getText(), AccessData.getCellData(0, 16));
+		sa.assertEquals(Roles_Not_Delete.getText(), AccessData.getCellData(0, 17));
+		sa.assertEquals(Roles_ALL.getText(), AccessData.getCellData(0, 18));
+		sa.assertAll();
 	}
 
 
 	public void closeBrowser()
 	{
+		logout.logout();
 		driver.close();
 	}
 }

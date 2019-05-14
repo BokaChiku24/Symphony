@@ -202,6 +202,6 @@ public class UserPage_TestCase
 	{
 		log.info("User Page Test Case Ends Here");
 		extent.flush();
-		// UserPageObject.closeBrowser();
+		UserPageObject.closeBrowser();
 	}
 }

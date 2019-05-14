@@ -5142,4 +5142,241 @@
  2019-05-11 22:50:54,000  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
  2019-05-11 22:52:18,935  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
  2019-05-11 22:53:24,135  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 11:34:30,978  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 11:34:41,051  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 11:34:45,371  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 11:34:48,700  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 11:34:52,011  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 11:34:54,415  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 11:34:57,794  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 11:35:07,607  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 11:35:21,092  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 11:35:23,907  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 11:35:49,637  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 11:51:11,834  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 11:51:21,341  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 11:51:27,270  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 11:51:31,205  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 11:51:34,625  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 11:51:37,157  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 11:51:40,830  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 11:51:51,715  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 11:52:05,529  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 11:52:08,837  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 11:52:44,694  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 11:55:51,154  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 11:56:04,267  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 11:56:08,726  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 11:56:12,838  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 11:56:16,236  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 11:56:18,806  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 11:56:22,772  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 11:56:35,205  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 11:56:48,756  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 11:56:51,778  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 11:57:26,795  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 11:59:21,156  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 11:59:42,013  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 11:59:45,858  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 11:59:50,721  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 11:59:55,109  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 11:59:58,225  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 12:00:03,356  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 12:00:15,728  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 12:00:30,998  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 12:00:34,325  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 12:01:12,889  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 12:01:42,182  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 12:05:55,371  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 12:06:02,685  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 12:06:08,757  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 12:06:12,670  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 12:06:16,487  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 12:06:19,550  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 12:06:26,683  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 12:06:41,148  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 12:07:00,487  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 12:07:05,286  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 12:07:36,321  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 12:08:05,533  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 12:15:57,871  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 12:16:05,771  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 12:16:10,265  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 12:16:14,726  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 12:16:18,299  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 12:16:20,862  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 12:16:24,456  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 12:16:34,882  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 12:16:48,006  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 12:16:51,300  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 12:17:24,773  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 12:17:56,636  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 12:37:57,739  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 12:38:11,093  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 12:38:18,364  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 12:38:21,818  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 12:38:25,610  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 12:38:28,866  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 12:38:36,530  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 12:38:47,978  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 12:39:03,294  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 12:39:06,386  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 12:39:36,256  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 12:40:23,118  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 13:12:25,113  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 13:12:40,208  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 13:12:44,619  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 13:12:49,103  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 13:12:53,307  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 13:12:56,569  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 13:13:02,409  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 13:13:14,433  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 13:13:33,081  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 13:13:37,382  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 13:14:04,023  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 13:14:58,848  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 14:01:37,822  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 14:01:50,576  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 14:01:56,133  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 14:02:04,894  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 14:02:11,325  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 14:02:15,898  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 14:02:21,738  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 14:02:39,035  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 14:03:01,119  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 14:03:06,605  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 14:04:00,162  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 14:06:08,529  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 14:20:10,869  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 14:20:20,889  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 14:20:27,963  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 14:20:34,928  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 14:20:42,906  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 14:20:47,620  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 14:20:53,736  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 14:21:13,590  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 14:21:35,439  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 14:21:39,983  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 14:22:41,845  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 14:25:12,603  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 15:16:53,065  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 15:17:08,047  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 15:17:14,887  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 15:17:21,617  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 15:17:28,597  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 15:17:33,361  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 15:17:39,133  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 15:17:55,317  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 15:18:15,099  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 15:18:19,175  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 15:19:11,144  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 15:21:18,682  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 15:38:41,554  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 15:38:52,672  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 15:38:57,399  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 15:39:04,948  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 15:39:11,969  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 15:39:15,873  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 15:39:21,257  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 15:39:36,583  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 15:39:56,390  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 15:40:00,917  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 15:40:51,099  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 15:42:46,674  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 15:44:43,259  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 15:44:56,130  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 15:45:01,485  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 15:45:07,492  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 15:45:14,423  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 15:45:19,344  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 15:45:25,164  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 15:45:43,943  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 15:46:04,547  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 15:46:09,020  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 15:47:01,766  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 15:49:15,714  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 15:55:43,992  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 15:55:52,679  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 15:55:58,212  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 15:56:04,017  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 15:56:10,144  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 15:56:14,177  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 15:56:18,680  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 15:56:34,174  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 15:56:52,476  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 15:56:56,371  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 15:57:46,134  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 15:59:50,319  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 16:05:26,266  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 16:05:38,788  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 16:05:45,666  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 16:05:52,183  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 16:05:58,431  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 16:06:02,366  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 16:06:08,553  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 16:06:27,830  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 16:06:50,983  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 16:06:55,817  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 16:07:45,360  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 16:09:54,290  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 21:24:40,740  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 21:25:08,619  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 21:25:23,934  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 21:25:30,565  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 21:25:37,431  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 21:25:44,184  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 21:25:51,188  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 21:26:12,804  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 21:26:45,668  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 21:26:51,310  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 21:27:45,459  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 21:29:55,705  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 21:35:42,371  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 21:36:05,612  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 21:36:28,091  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 21:36:36,116  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 21:36:43,683  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 21:36:48,683  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 21:36:54,858  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 21:37:15,408  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 21:37:44,266  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 21:37:50,846  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 21:38:43,328  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 21:40:55,255  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-12 21:46:23,417  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-12 21:46:56,291  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-12 21:47:10,590  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-12 21:47:17,246  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-12 21:47:25,285  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-12 21:47:31,102  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-12 21:47:38,370  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-12 21:48:06,900  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-12 21:48:34,050  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-12 21:48:40,529  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-12 21:49:57,677  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-12 21:52:51,606  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-14 20:41:28,388  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-14 20:41:55,681  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-14 20:42:01,395  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-14 20:42:07,147  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-14 20:42:13,163  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-14 20:42:16,893  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-14 20:42:24,040  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-14 20:42:40,597  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-14 20:43:00,826  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-14 20:43:08,396  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-14 20:43:59,911  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-14 20:45:49,571  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-05-14 20:51:34,628  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-05-14 20:51:44,633  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-05-14 20:51:52,471  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-05-14 20:51:58,183  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-05-14 20:52:04,770  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-05-14 20:52:09,011  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-05-14 20:52:14,966  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-05-14 20:52:32,465  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-05-14 20:52:53,160  INFO [main] User Page Test Case:146 - Test Case 8: Check Themes Page On Edit
+ 2019-05-14 20:53:00,077  INFO [main] User Page Test Case:155 - Test Case 9: Check Advanced On User Page
+ 2019-05-14 20:53:58,221  INFO [main] User Page Test Case:165 - Test Case 10: Check The User Access
+ 2019-05-14 20:56:16,252  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
  
