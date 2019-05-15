@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class Login
 {
@@ -36,7 +37,6 @@ public class Login
 
 	public void credentials()
 	{
-		// prop = global.readProperties();
 		UserName.sendKeys(prop.getProperty("uname"));
 		Password.sendKeys(prop.getProperty("password"));
 		Log_In.click();
