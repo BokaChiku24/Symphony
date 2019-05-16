@@ -24,7 +24,7 @@ public class PerFryerCustomerPage
 	private SoftAssert sa;
 	private String Customer_URL;
 	private ReadExcelData PerFryerData;
-	
+
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
 	private WebElement containerClose;
 
@@ -35,279 +35,284 @@ public class PerFryerCustomerPage
 	public WebElement Customer;
 
 	@FindBy(how = How.LINK_TEXT, using = "Create")
-	public WebElement Create_Customer;
+	private WebElement Create_Customer;
 
 	@FindBy(how = How.CSS, using = "#name")
-	public WebElement KeyContact;
+	private WebElement KeyContact;
 
 	@FindBy(how = How.CSS, using = "#title")
-	public WebElement Title;
+	private WebElement Title;
 
 	@FindBy(how = How.CSS, using = "#company_name")
-	public WebElement CompanyName;
+	private WebElement CompanyName;
 
 	@FindBy(how = How.CSS, using = "#nca_chain")
-	public WebElement NCAChain;
+	private WebElement NCAChain;
 
 	@FindBy(how = How.CSS, using = "#nca_unit_code")
-	public WebElement ncaUnitCode;
+	private WebElement NcaUnitCode;
 
 	@FindBy(how = How.CSS, using = "#account_number")
-	public WebElement Account;
+	private WebElement Account;
 
 	@FindBy(how = How.CSS, using = "#Accounts0emailAddress0")
-	public WebElement primaryEmail;
+	private WebElement PrimaryEmail;
 
 	@FindBy(how = How.CSS, using = "#billing_address_street")
-	public WebElement Site_Street;
+	private WebElement Site_Street;
 
 	@FindBy(how = How.CSS, using = "#billing_address_city")
-	public WebElement Site_City;
+	private WebElement Site_City;
 
 	@FindBy(how = How.CSS, using = "#billing_address_state")
-	public WebElement Site_State;
+	private WebElement Site_State;
 
 	@FindBy(how = How.CSS, using = "#billing_address_postalcode")
-	public WebElement SIte_PostalCode;
+	private WebElement Site_PostalCode;
 
 	@FindBy(how = How.CSS, using = "#billing_address_country")
-	public WebElement Site_Country;
+	private WebElement Site_Country;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='phone_office']")
-	public WebElement Office_Phone;
+	private WebElement Office_Phone;
 
 	@FindBy(how = How.CSS, using = "#ext_no")
-	public WebElement Ext;
+	private WebElement Ext;
 
 	@FindBy(how = How.CSS, using = "#operations_notes")
-	public WebElement ArrivalNotes;
+	private WebElement ArrivalNotes;
 
 	@FindBy(how = How.CSS, using = "#description")
-	public WebElement departure;
+	private WebElement DepartureNotes;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='phone_mobile']")
-	public WebElement mobile;
+	private WebElement Mobile;
 
 	@FindBy(how = How.CSS, using = "#nca_supplier_number")
-	public WebElement nca_supplier;
+	private WebElement Nca_Supplier;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_street")
-	public WebElement invoiceStreet;
+	private WebElement InvoiceStreet;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_city")
-	public WebElement invoicecity;
+	private WebElement InvoiceCity;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_state")
-	public WebElement invoiceState;
+	private WebElement InvoiceState;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_postalcode")
-	public WebElement invoicePostal;
+	private WebElement InvoicePostal;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_country")
-	public WebElement invoiceCountry;
+	private WebElement InvoiceCountry;
 
 	@FindBy(how = How.CSS, using = "#survey_frequency")
-	public WebElement service_frequency;
+	private WebElement Service_Frequency;
 
 	@FindBy(how = How.LINK_TEXT, using = "Pricing & Estimating Info")
-	public WebElement Pricing;
+	private WebElement Pricing;
 
 	@FindBy(how = How.CSS, using = "#default_pricing")
-	public WebElement defaultPricing;
+	private WebElement DefaultPricing;
 
 	@FindBy(how = How.CSS, using = "#service_filtafry")
-	public WebElement FiltaFry;
+	private WebElement FiltaFry;
 
 	@FindBy(how = How.CSS, using = "#ajaxloading_mask")
-	public WebElement lodar;
+	private WebElement Lodar;
 
 	@FindBy(how = How.CSS, using = "#charge_type")
-	public WebElement pricing_model;
+	private WebElement Pricing_model;
 
 	@FindBy(how = How.CSS, using = "#filtacool")
-	public WebElement FiltaCool;
+	private WebElement FiltaCool;
 
 	@FindBy(how = How.CSS, using = "#filtacool_frequency")
-	public WebElement FiltaCool_Frequency;
+	private WebElement FiltaCool_Frequency;
 
 	@FindBy(how = How.CSS, using = "#rental_rate")
-	public WebElement RentalRate;
+	private WebElement RentalRate;
 
 	@FindBy(how = How.CSS, using = "#filtabio")
-	public WebElement FiltaBio;
+	private WebElement FiltaBio;
 
 	@FindBy(how = How.CSS, using = "#pay_customer")
-	public WebElement PayCustomer;
+	private WebElement PayCustomer;
 
 	@FindBy(how = How.CSS, using = "#service_filtanewoil")
-	public WebElement FiltaGold;
+	private WebElement FiltaGold;
 
 	@FindBy(how = How.CSS, using = "#number_of_tanks")
-	public WebElement NoOfTank;
+	private WebElement NoOfTank;
 
 	@FindBy(how = How.CSS, using = "#tank_rental")
-	public WebElement tankRent;
+	private WebElement TankRent;
 
 	@FindBy(how = How.CSS, using = "#oil_charge")
-	public WebElement oil_Charge;
+	private WebElement Oil_Charge;
 
 	@FindBy(how = How.CSS, using = "#price_per_box")
-	public WebElement PriceperBox;
+	private WebElement PriceperBox;
 
 	@FindBy(how = How.CSS, using = "#service_drainfoam")
-	public WebElement DrainFoam;
+	private WebElement DrainFoam;
 
 	@FindBy(how = How.CSS, using = "#set_drainfoam")
-	public WebElement Charge;
+	private WebElement Charge;
 
 	@FindBy(how = How.CSS, using = "#inv_period")
-	public WebElement Inv_Period;
+	private WebElement Inv_Period;
 
 	@FindBy(how = How.XPATH, using = ".//td[@class='edit-table-row1']//label[1]//input[@type='radio' and @id='review_before_sending_inv']")
-	public WebElement PerJob_Yes;
+	private WebElement PerJob_Yes;
 
 	@FindBy(how = How.XPATH, using = ".//td[@class='edit-table-row1']//label[2]//input[@type='radio' and @id='review_before_sending_inv']")
-	public WebElement PerJob_No;
+	private WebElement PerJob_No;
 
 	@FindBy(how = How.CSS, using = "#payment_term")
-	public WebElement Payement;
+	private WebElement Payement;
 
 	@FindBy(how = How.LINK_TEXT, using = "Marketing & Categories")
-	public WebElement Marketing_Categories;
+	private WebElement Marketing_Categories;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='type-input']")
-	public WebElement TypeMarketing;
+	private WebElement TypeMarketing;
 
 	@FindBy(how = How.XPATH, using = ".//li[@data-text='Amusement Park']")
-	public WebElement AmusementPark;
+	private WebElement AmusementPark;
 
 	@FindBy(how = How.XPATH, using = ".//li[@data-text='Casinos']")
-	public WebElement Casinos;
+	private WebElement Casinos;
 
 	@FindBy(how = How.XPATH, using = ".//li[@data-text='A&W Restaurants']")
-	public WebElement A_W;
+	private WebElement A_W;
 
 	@FindBy(how = How.CSS, using = "#sub_type")
-	public WebElement Sub_Type;
+	private WebElement Sub_Type;
 
 	@FindBy(how = How.CSS, using = "#contract_caterers")
-	public WebElement Contract;
+	private WebElement Contract;
 
 	@FindBy(how = How.CSS, using = "#btn_assigned_user_name")
-	public WebElement salespersonselect;
+	private WebElement Salespersonselect;
 
 	@FindBy(how = How.CSS, using = "#affiliation")
-	public WebElement affiliation;
+	private WebElement Affiliation;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='chain-input']")
-	public WebElement chaininput;
+	private WebElement Chaininput;
 
 	@FindBy(how = How.CSS, using = "#nca")
-	public WebElement NCASelection;
+	private WebElement NCASelection;
 
 	@FindBy(how = How.CSS, using = "#region_name")
-	public WebElement Region;
+	private WebElement Region;
 
 	@FindBy(how = How.CSS, using = "#btn_territory")
-	public WebElement Territory;
+	private WebElement Territory;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation_Sales")
-	public WebElement Automation_Sales;
+	private WebElement Automation_Sales;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation")
-	public WebElement Automation;
+	private WebElement Automation;
 
 	@FindBy(how = How.LINK_TEXT, using = "Unit Data")
-	public WebElement UnitData;
+	private WebElement UnitData;
 
 	@FindBy(how = How.CSS, using = "#type_of_oil")
-	public WebElement TypeOfOil;
+	private WebElement TypeOfOil;
 
 	@FindBy(how = How.CSS, using = "#dump_fre")
-	public WebElement QTY;
+	private WebElement QTY;
 
 	@FindBy(how = How.CSS, using = "#waste_oil")
-	public WebElement WasteOil;
+	private WebElement WasteOil;
 
 	@FindBy(how = How.CSS, using = "#rti")
-	public WebElement RTI;
+	private WebElement RTI;
 
 	@FindBy(how = How.CSS, using = "#available_service_times")
-	public WebElement AvailableServiceTime;
+	private WebElement AvailableServiceTime;
 
 	@FindBy(how = How.CSS, using = "#dump_fre_description")
-	public WebElement dump_fre_description;
+	private WebElement Dump_fre_description;
 
 	@FindBy(how = How.CSS, using = "#waste_oil_renewal_date_trigger")
-	public WebElement WasteOilRenewal;
+	private WebElement WasteOilRenewal;
 
 	@FindBy(how = How.LINK_TEXT, using = "Today")
-	public WebElement today;
+	private WebElement Today;
 
 	@FindBy(how = How.CSS, using = "#waste_oil_renewal_date")
-	public WebElement Renewaldate;
+	private WebElement Renewaldate;
 
 	@FindBy(how = How.CSS, using = "#rti_renewal_date_trigger")
-	public WebElement RTIRenewalDate;
+	private WebElement RTIRenewalDate;
 
 	@FindBy(how = How.CSS, using = "#rti_renewal_date")
-	public WebElement RTIDate;
+	private WebElement RTIDate;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='buttons']//input[@id='SAVE_HEADER']")
-	public WebElement Save;
+	private WebElement Save;
 
 	@FindBy(how = How.CSS, using = "#customers_fryer_locations_create_button")
-	public WebElement locationCreate;
+	private WebElement LocationCreate;
 
 	@FindBy(how = How.XPATH, using = ".//input[@type='text']")
-	public WebElement LocationName;
+	private WebElement LocationName;
 
 	@FindBy(how = How.XPATH, using = ".//textarea[@name='description']")
-	public WebElement LocationDescription;
+	private WebElement LocationDescription;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fryer_locations_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='FR_FryerLocation_subpanel_save_button']")
-	public WebElement locationSave;
+	private WebElement LocationSave;
 
 	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//li[4]")
-	public WebElement Fryers;
+	private WebElement Fryers;
 
 	@FindBy(how = How.CSS, using = "#customers_fr_fryers_create_button")
-	public WebElement CreateFryer;
+	private WebElement CreateFryer;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='name']")
-	public WebElement Fryer;
+	private WebElement Fryer;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='size']")
-	public WebElement FryerSize;
+	private WebElement FryerSize;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='sort_order']")
-	public WebElement FryerSort;
+	private WebElement FryerSort;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='charge']")
-	public WebElement FryerCharge;
+	private WebElement FryerCharge;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='dump_clean_charges']")
-	public WebElement FryerCleanOnly;
+	private WebElement FryerCleanOnly;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='location_name']")
-	public WebElement Fryer_Location;
+	private WebElement Fryer_Location;
 
 	@FindBy(how = How.XPATH, using = ".//li[text()='Location1']")
-	public WebElement LocationNameSelect;
+	private WebElement LocationNameSelect;
 
 	@FindBy(how = How.XPATH, using = ".//textarea[@id='description']")
-	public WebElement FryerDescription;
+	private WebElement FryerDescription;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fr_fryers_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='Fr_Fryers_subpanel_save_button']")
-	public WebElement FryerSave;
+	private WebElement FryerSave;
 
 	@FindBy(how = How.CSS, using = "#btn_location_name")
-	public WebElement LocationSelect;
+	private WebElement LocationSelect;
 
 	@FindBy(how = How.LINK_TEXT, using = "Location1")
-	public WebElement Locationname;
+	private WebElement Locationname;
+	
+	@FindBy(how = How.XPATH, using = ".//input[@id='send_service_survey']")
+	private WebElement SendServiceSurvey;
 
-
+	@FindBy(how = How.XPATH, using = ".//input[@id='eir']")
+	private WebElement SendEIR;
+	
 	public PerFryerCustomerPage(WebDriver driver)
 	{
 		global = new Global();
@@ -341,10 +346,42 @@ public class PerFryerCustomerPage
 		sa.assertEquals(Customer_URL, PerFryerData.getCellData(1, 0));
 		sa.assertAll();
 	}
-	
+
+
 	public void createCustomer()
 	{
 		Create_Customer.click();
+	}
+
+
+	public void basicInfo()
+	{
+		KeyContact.sendKeys(PerFryerData.getCellData(1, 1) + " " + PerFryerData.getCellData(1, 2));
+		Title.sendKeys(PerFryerData.getCellData(1, 3));
+		CompanyName.sendKeys(PerFryerData.getCellData(1, 4));
+		NCAChain.sendKeys(PerFryerData.getCellData(1, 5));
+		NcaUnitCode.sendKeys((int) PerFryerData.getCellDataInt(1, 6) + "");
+		Account.sendKeys((int) PerFryerData.getCellDataInt(1, 7) + "");
+		SendServiceSurvey.click();
+		SendEIR.click();
+		PrimaryEmail.sendKeys(PerFryerData.getCellData(1, 8));
+		Site_Street.sendKeys(PerFryerData.getCellData(1, 9));
+		Site_City.sendKeys(PerFryerData.getCellData(1, 10));
+		Site_State.sendKeys(PerFryerData.getCellData(1, 11));
+		Site_PostalCode.sendKeys((int) PerFryerData.getCellDataInt(1, 12) + "");
+		Site_Country.sendKeys(PerFryerData.getCellData(1, 13));
+		Office_Phone.sendKeys((int) PerFryerData.getCellDataInt(1, 14) + "");
+		Ext.sendKeys((int) PerFryerData.getCellDataInt(1, 15) + "");
+		ArrivalNotes.sendKeys(PerFryerData.getCellData(1, 16));
+		DepartureNotes.sendKeys(PerFryerData.getCellData(1, 17));
+		Mobile.sendKeys((int) PerFryerData.getCellDataInt(1, 18) + "");
+		Nca_Supplier.sendKeys((int) PerFryerData.getCellDataInt(1, 19) + "");
+		InvoiceStreet.sendKeys(PerFryerData.getCellData(1, 20));
+		InvoiceCity.sendKeys(PerFryerData.getCellData(1, 21));
+		InvoiceState.sendKeys(PerFryerData.getCellData(1, 22));
+		InvoicePostal.sendKeys((int)PerFryerData.getCellDataInt(1, 23) + "");
+		InvoiceCountry.sendKeys(PerFryerData.getCellData(1, 24));
+		global.select(Service_Frequency).selectByVisibleText(PerFryerData.getCellData(1, 25));
 	}
 
 

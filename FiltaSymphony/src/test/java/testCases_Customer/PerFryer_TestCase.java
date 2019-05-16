@@ -86,6 +86,7 @@ public class PerFryer_TestCase
 		log.info("Check Create Customer Basic info");
 		logger = extent.createTest("Test Case 7: Check Create Customer Basic info");
 		PerFryer_Cyustomer.createCustomer();
+		PerFryer_Cyustomer.basicInfo();
 	}
 
 	@AfterMethod
