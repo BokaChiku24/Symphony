@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="107354" started-at="2019-05-15T18:24:02Z" finished-at="2019-05-15T18:25:49Z">
+  <suite name="Default suite" duration-ms="125886" started-at="2019-05-16T17:33:22Z" finished-at="2019-05-16T17:35:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="107354" started-at="2019-05-15T18:24:02Z" finished-at="2019-05-15T18:25:49Z">
+    <test name="Default test" duration-ms="125886" started-at="2019-05-16T17:33:22Z" finished-at="2019-05-16T17:35:27Z">
       <class name="testCases_Customer.PerFryer_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="property" is-config="true" duration-ms="76541" started-at="2019-05-15T18:24:02Z" finished-at="2019-05-15T18:25:18Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="property" is-config="true" duration-ms="88870" started-at="2019-05-16T17:33:22Z" finished-at="2019-05-16T17:34:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checkCustomerURL()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerURL" duration-ms="5331" started-at="2019-05-15T18:25:18Z" finished-at="2019-05-15T18:25:24Z">
+        <test-method status="PASS" signature="checkCustomerURL()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerURL" duration-ms="5131" started-at="2019-05-16T17:34:50Z" finished-at="2019-05-16T17:34:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCustomerURL -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="20" started-at="2019-05-15T18:25:24Z" finished-at="2019-05-15T18:25:24Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="30" started-at="2019-05-16T17:34:56Z" finished-at="2019-05-16T17:34:56Z">
           <params>
             <param index="0">
               <value>
@@ -26,11 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkCustomerBasicInfo()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerBasicInfo" duration-ms="24965" started-at="2019-05-15T18:25:24Z" depends-on-methods="testCases_Customer.PerFryer_TestCase.checkCustomerURL" finished-at="2019-05-15T18:25:49Z">
+        <test-method status="PASS" signature="checkCustomerBasicInfo()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerBasicInfo" duration-ms="31368" started-at="2019-05-16T17:34:56Z" depends-on-methods="testCases_Customer.PerFryer_TestCase.checkCustomerURL" finished-at="2019-05-16T17:35:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCustomerBasicInfo -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-05-15T18:25:49Z" finished-at="2019-05-15T18:25:49Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="11" started-at="2019-05-16T17:35:27Z" finished-at="2019-05-16T17:35:27Z">
           <params>
             <param index="0">
               <value>
@@ -41,7 +41,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="afterMethod" is-config="true" duration-ms="468" started-at="2019-05-15T18:25:49Z" finished-at="2019-05-15T18:25:49Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="afterMethod" is-config="true" duration-ms="452" started-at="2019-05-16T17:35:27Z" finished-at="2019-05-16T17:35:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

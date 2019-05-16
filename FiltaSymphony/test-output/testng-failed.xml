@@ -6,6 +6,7 @@
       <class name="testCases_Customer.PerFryer_TestCase">
         <methods>
           <include name="checkCustomerURL"/>
+          <include name="checkCustomerBasicInfo"/>
           <include name="takeScreenShotOnFailure"/>
           <include name="property"/>
           <include name="afterMethod"/>
