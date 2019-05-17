@@ -304,7 +304,16 @@ public class Global
 		return action;
 	}
 
-
+	public String alert(String Input, WebDriver driver) {
+		Alert alert = driver.switchTo().alert();
+		String Message = alert.getText();
+		if (Input.equalsIgnoreCase("accept"))
+			alert.accept();
+		else if (Input.equalsIgnoreCase("dismiss"))
+			alert.dismiss();
+		return Message;
+	}
+	
 	public JavascriptExecutor jsReturn(WebDriver driver)
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;

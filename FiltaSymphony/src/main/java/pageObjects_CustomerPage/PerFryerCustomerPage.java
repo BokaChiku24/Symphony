@@ -1,5 +1,6 @@
 package pageObjects_CustomerPage;
 
+import java.util.ArrayList;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -23,7 +24,11 @@ public class PerFryerCustomerPage
 	private Login login;
 	private SoftAssert sa;
 	private String Customer_URL;
+	private String ActualPerFryerInformativeMessage = " ";
 	private ReadExcelData PerFryerData;
+	private ReadExcelData PricingData;
+	private ReadExcelData UnitDataExcel;
+	private ReadExcelData MarketingData;
 
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
 	private WebElement containerClose;
@@ -122,7 +127,7 @@ public class PerFryerCustomerPage
 	private WebElement Lodar;
 
 	@FindBy(how = How.CSS, using = "#charge_type")
-	private WebElement Pricing_model;
+	private WebElement Pricing_Model;
 
 	@FindBy(how = How.CSS, using = "#filtacool")
 	private WebElement FiltaCool;
@@ -236,7 +241,7 @@ public class PerFryerCustomerPage
 	private WebElement AvailableServiceTime;
 
 	@FindBy(how = How.CSS, using = "#dump_fre_description")
-	private WebElement Dump_fre_description;
+	private WebElement Dump_Fre_Description;
 
 	@FindBy(how = How.CSS, using = "#waste_oil_renewal_date_trigger")
 	private WebElement WasteOilRenewal;
@@ -306,13 +311,14 @@ public class PerFryerCustomerPage
 
 	@FindBy(how = How.LINK_TEXT, using = "Location1")
 	private WebElement Locationname;
-	
+
 	@FindBy(how = How.XPATH, using = ".//input[@id='send_service_survey']")
 	private WebElement SendServiceSurvey;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='eir']")
 	private WebElement SendEIR;
-	
+
+
 	public PerFryerCustomerPage(WebDriver driver)
 	{
 		global = new Global();
@@ -321,6 +327,9 @@ public class PerFryerCustomerPage
 		login = new Login(driver);
 		sa = new SoftAssert();
 		PerFryerData = new ReadExcelData(Prop.getProperty("Path2"), "PerFryer");
+		PricingData = new ReadExcelData(Prop.getProperty("Path2"), "Pricing");
+		UnitDataExcel = new ReadExcelData(Prop.getProperty("Path2"), "UnitData");
+		MarketingData = new ReadExcelData(Prop.getProperty("Path2"), "Marketing");
 		PageFactory.initElements(driver, this);
 	}
 
@@ -379,9 +388,163 @@ public class PerFryerCustomerPage
 		InvoiceStreet.sendKeys(PerFryerData.getCellData(1, 20));
 		InvoiceCity.sendKeys(PerFryerData.getCellData(1, 21));
 		InvoiceState.sendKeys(PerFryerData.getCellData(1, 22));
-		InvoicePostal.sendKeys((int)PerFryerData.getCellDataInt(1, 23) + "");
+		InvoicePostal.sendKeys((int) PerFryerData.getCellDataInt(1, 23) + "");
 		InvoiceCountry.sendKeys(PerFryerData.getCellData(1, 24));
 		global.select(Service_Frequency).selectByVisibleText(PerFryerData.getCellData(1, 25));
+	}
+
+
+	public void pricing()
+	{
+		Pricing.click();
+		global.select(DefaultPricing).selectByVisibleText(PricingData.getCellData(1, 4));
+
+		sa.assertEquals(Prop.getProperty("FiltaFryCheckBox"), FiltaFry.isSelected());
+		if (FiltaFry.isSelected() == false)
+		{
+			FiltaFry.click();
+			lodar();
+			global.select(Pricing_Model).selectByVisibleText("Per Fryer");
+			ActualPerFryerInformativeMessage = global.alert("accept", driver);
+			lodar();
+			sa.assertEquals(ActualPerFryerInformativeMessage, PricingData.getCellData(2, 0));
+		}
+		else
+		{
+			System.out.println("FiltaFry Already Checked");
+		}
+
+		sa.assertEquals(Prop.getProperty("FiltaCoolCheckBox"), FiltaCool.isSelected());
+		if (FiltaCool.isSelected() == false)
+		{
+			FiltaCool.click();
+			global.wait(driver)
+					.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#rental_rate")));
+			lodar();
+			global.select(FiltaCool_Frequency).selectByVisibleText(PricingData.getCellData(1, 1));
+			if (RentalRate.getAttribute("value").equals(""))
+			{
+				RentalRate.sendKeys((int) PricingData.getCellDataInt(2, 1) + "");
+			}
+		}
+
+		sa.assertEquals(Prop.getProperty("FiltaBioCheckBox"), FiltaBio.isSelected());
+		if (FiltaBio.isSelected() == false)
+		{
+			FiltaBio.click();
+			lodar();
+			if (PayCustomer.getAttribute("value").equals(""))
+			{
+				PayCustomer.sendKeys((int) PricingData.getCellDataInt(1, 2) + "");
+			}
+		}
+
+		sa.assertEquals(Prop.getProperty("FiltaGoldCheckBox"), FiltaGold.isSelected());
+		if (FiltaGold.isSelected() == false)
+		{
+			FiltaGold.click();
+			lodar();
+			if (NoOfTank.getAttribute("value").equals(""))
+			{
+				NoOfTank.sendKeys((int) PricingData.getCellDataInt(1, 3) + "");
+			}
+			if (TankRent.getAttribute("value").equals(""))
+			{
+				TankRent.sendKeys((int) PricingData.getCellDataInt(2, 3) + "");
+			}
+			if (Oil_Charge.getAttribute("value").equals(""))
+			{
+				Oil_Charge.sendKeys((int) PricingData.getCellDataInt(3, 3) + "");
+			}
+			if (PriceperBox.getAttribute("value").equals(""))
+			{
+				PriceperBox.sendKeys((int) PricingData.getCellDataInt(4, 3) + "");
+			}
+		}
+
+		sa.assertEquals(Prop.getProperty("DrainFoamCheckBox"), DrainFoam.isSelected());
+		if (DrainFoam.isSelected() == false)
+		{
+			DrainFoam.click();
+			lodar();
+			if (Charge.getAttribute("value").equals(""))
+			{
+				Charge.sendKeys((int) PricingData.getCellDataInt(1, 5) + "");
+			}
+		}
+
+		global.select(Inv_Period).selectByVisibleText(PricingData.getCellData(1, 6));
+		if (global.select(Inv_Period).getFirstSelectedOption().getText().equals(PricingData.getCellData(1, 6)))
+		{
+			sa.assertEquals(true, PerJob_Yes.isEnabled());
+			sa.assertEquals(true, PerJob_No.isEnabled());
+			sa.assertEquals(true, PerJob_Yes.isSelected());
+		}
+		else
+		{
+			System.out.println("It's not Per Job");
+		}
+		global.select(Payement).selectByVisibleText(PricingData.getCellData(1, 7));
+	}
+
+
+	public void marketing()
+	{
+		Marketing_Categories.click();
+		TypeMarketing.click();
+		global.action(driver).moveToElement(AmusementPark).click().build().perform();
+		global.action(driver).moveToElement(Casinos).click().build().perform();
+		TypeMarketing.click();
+		Sub_Type.sendKeys(MarketingData.getCellData(1, 0));
+		global.select(Contract).selectByVisibleText("American Food and Vending");
+		Salespersonselect.click();
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		Automation_Sales.click();
+		driver.switchTo().window(tabs.get(0));
+		Affiliation.sendKeys(MarketingData.getCellData(1, 1));
+		Chaininput.sendKeys(MarketingData.getCellData(1, 2));
+		global.wait(driver).until(ExpectedConditions.visibilityOf(A_W));
+		global.action(driver).moveToElement(A_W).click().build().perform();
+		global.select(NCASelection).selectByVisibleText(MarketingData.getCellData(1, 3));
+		Region.sendKeys(MarketingData.getCellData(1, 4));
+		Territory.click();
+		ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs2.get(1));
+		Automation.click();
+		driver.switchTo().window(tabs2.get(0));
+	}
+
+
+	public void unit_Data()
+	{
+		UnitData.click();
+		TypeOfOil.sendKeys(UnitDataExcel.getCellData(1, 0));
+		QTY.sendKeys((int) UnitDataExcel.getCellDataInt(1, 1) + "");
+		WasteOil.sendKeys(UnitDataExcel.getCellData(1, 2));
+		RTI.sendKeys(UnitDataExcel.getCellData(1, 3));
+		AvailableServiceTime.sendKeys(UnitDataExcel.getCellData(1, 4));
+		Dump_Fre_Description.sendKeys(UnitDataExcel.getCellData(1, 5));
+		WasteOilRenewal.click();
+		Today.click();
+		Renewaldate.click();
+		RTIRenewalDate.click();
+		Today.click();
+		RTIDate.click();
+	}
+
+
+	public void save()
+	{
+		Save.click();
+		lodar();
+	}
+
+
+	private void lodar()
+	{
+		global.wait(driver)
+				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxloading_mask")));
 	}
 
 

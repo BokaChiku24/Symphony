@@ -74,21 +74,49 @@ public class PerFryer_TestCase
 	@Test(priority = 0)
 	public void checkCustomerURL()
 	{
-		log.info("Check Customer Page URL");
-		logger = extent.createTest("Test Case 7: Check Customer Page URL");
+		log.info("Test Case1: Check Customer Page URL");
+		logger = extent.createTest("Test Case 1: Check Customer Page URL");
 		PerFryer_Cyustomer.goToCustomer();
 		PerFryer_Cyustomer.checkCustomerURL();
 	}
 
-	@Test(priority = 0, dependsOnMethods = "checkCustomerURL")
+
+	@Test(priority = 1, dependsOnMethods = "checkCustomerURL")
 	public void checkCustomerBasicInfo()
 	{
-		log.info("Check Create Customer Basic info");
-		logger = extent.createTest("Test Case 7: Check Create Customer Basic info");
+		log.info("Create Customer Basic info");
+//		logger = extent.createTest("Test Case 2:Create Customer Basic info");
 		PerFryer_Cyustomer.createCustomer();
 		PerFryer_Cyustomer.basicInfo();
 	}
 
+
+	@Test(priority = 1, dependsOnMethods = "checkCustomerBasicInfo")
+	public void pricing_EstimatingInfo()
+	{
+		log.info("Create Customer Pricing and Estimating Info");
+		logger = extent.createTest(
+				"Test Case 2: Check Customer Pricing and Estimating Checkboxes And Default Dropdown Values");
+		PerFryer_Cyustomer.pricing();
+	}
+
+
+	@Test(priority = 1, dependsOnMethods = "pricing_EstimatingInfo")
+	public void marketingInfo()
+	{
+		log.info("Create Customer Marketing Info");
+		PerFryer_Cyustomer.marketing();
+	}
+
+
+	@Test(priority = 1, dependsOnMethods = "marketingInfo")
+	public void unitInfo()
+	{
+		log.info("Create Customer Unit Info");
+		PerFryer_Cyustomer.unit_Data();
+	}
+
+	
 	@AfterMethod
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
 	{
