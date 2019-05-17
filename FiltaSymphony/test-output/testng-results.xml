@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="125886" started-at="2019-05-16T17:33:22Z" finished-at="2019-05-16T17:35:27Z">
+  <suite name="Default suite" duration-ms="73619" started-at="2019-05-17T02:32:00Z" finished-at="2019-05-17T02:33:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="125886" started-at="2019-05-16T17:33:22Z" finished-at="2019-05-16T17:35:27Z">
+    <test name="Default test" duration-ms="73619" started-at="2019-05-17T02:32:00Z" finished-at="2019-05-17T02:33:14Z">
       <class name="testCases_Customer.PerFryer_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="property" is-config="true" duration-ms="88870" started-at="2019-05-16T17:33:22Z" finished-at="2019-05-16T17:34:50Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="property" is-config="true" duration-ms="36791" started-at="2019-05-17T02:32:00Z" finished-at="2019-05-17T02:32:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checkCustomerURL()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerURL" duration-ms="5131" started-at="2019-05-16T17:34:50Z" finished-at="2019-05-16T17:34:56Z">
+        <test-method status="PASS" signature="checkCustomerURL()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerURL" duration-ms="2960" started-at="2019-05-17T02:32:37Z" finished-at="2019-05-17T02:32:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCustomerURL -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="30" started-at="2019-05-16T17:34:56Z" finished-at="2019-05-16T17:34:56Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="11" started-at="2019-05-17T02:32:40Z" finished-at="2019-05-17T02:32:40Z">
           <params>
             <param index="0">
               <value>
@@ -26,22 +26,67 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkCustomerBasicInfo()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerBasicInfo" duration-ms="31368" started-at="2019-05-16T17:34:56Z" depends-on-methods="testCases_Customer.PerFryer_TestCase.checkCustomerURL" finished-at="2019-05-16T17:35:27Z">
+        <test-method status="PASS" signature="checkCustomerBasicInfo()[pri:1, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerBasicInfo" duration-ms="16505" started-at="2019-05-17T02:32:40Z" depends-on-methods="testCases_Customer.PerFryer_TestCase.checkCustomerURL" finished-at="2019-05-17T02:32:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkCustomerBasicInfo -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="11" started-at="2019-05-16T17:35:27Z" finished-at="2019-05-16T17:35:27Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-17T02:32:57Z" finished-at="2019-05-17T02:32:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkCustomerBasicInfo status=SUCCESS method=PerFryer_TestCase.checkCustomerBasicInfo()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
+                <![CDATA[[TestResult name=checkCustomerBasicInfo status=SUCCESS method=PerFryer_TestCase.checkCustomerBasicInfo()[pri:1, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="afterMethod" is-config="true" duration-ms="452" started-at="2019-05-16T17:35:27Z" finished-at="2019-05-16T17:35:27Z">
+        <test-method status="PASS" signature="pricing_EstimatingInfo()[pri:1, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="pricing_EstimatingInfo" duration-ms="7223" started-at="2019-05-17T02:32:57Z" depends-on-methods="testCases_Customer.PerFryer_TestCase.checkCustomerBasicInfo" finished-at="2019-05-17T02:33:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pricing_EstimatingInfo -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-17T02:33:04Z" finished-at="2019-05-17T02:33:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=pricing_EstimatingInfo status=SUCCESS method=PerFryer_TestCase.pricing_EstimatingInfo()[pri:1, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="marketingInfo()[pri:1, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="marketingInfo" duration-ms="7508" started-at="2019-05-17T02:33:04Z" depends-on-methods="testCases_Customer.PerFryer_TestCase.pricing_EstimatingInfo" finished-at="2019-05-17T02:33:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- marketingInfo -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-17T02:33:11Z" finished-at="2019-05-17T02:33:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=marketingInfo status=SUCCESS method=PerFryer_TestCase.marketingInfo()[pri:1, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="unitInfo()[pri:1, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="unitInfo" duration-ms="2377" started-at="2019-05-17T02:33:11Z" depends-on-methods="testCases_Customer.PerFryer_TestCase.marketingInfo" finished-at="2019-05-17T02:33:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unitInfo -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-17T02:33:14Z" finished-at="2019-05-17T02:33:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=unitInfo status=SUCCESS method=PerFryer_TestCase.unitInfo()[pri:1, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="afterMethod" is-config="true" duration-ms="220" started-at="2019-05-17T02:33:14Z" finished-at="2019-05-17T02:33:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

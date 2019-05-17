@@ -5,6 +5,8 @@
     <classes>
       <class name="testCases_Customer.PerFryer_TestCase">
         <methods>
+          <include name="marketingInfo"/>
+          <include name="pricing_EstimatingInfo"/>
           <include name="checkCustomerURL"/>
           <include name="checkCustomerBasicInfo"/>
           <include name="takeScreenShotOnFailure"/>
