@@ -72,36 +72,35 @@ public class PerFryer_TestCase
 
 
 	@Test(priority = 0)
-	public void checkCustomerURL()
+	public void checkDefaultPricingOfFranchisee()
 	{
+		log.info("Check Franchisee Default Pricing");
 		log.info("Test Case1: Check Customer Page URL");
-		logger = extent.createTest("Test Case 1: Check Customer Page URL");
-		PerFryer_Cyustomer.goToCustomer();
-		PerFryer_Cyustomer.checkCustomerURL();
+		logger = extent.createTest("Test Case 2: Check Customer Page URL");
+		PerFryer_Cyustomer.defaultPricingFranchiseeLevel();
 	}
-
-
-	@Test(priority = 1, dependsOnMethods = "checkCustomerURL")
+	
+	@Test(priority = 2)
 	public void checkCustomerBasicInfo()
 	{
 		log.info("Create Customer Basic info");
-//		logger = extent.createTest("Test Case 2:Create Customer Basic info");
+		logger = extent.createTest("Test Case 3:Create Customer Basic info");
 		PerFryer_Cyustomer.createCustomer();
 		PerFryer_Cyustomer.basicInfo();
 	}
 
 
-	@Test(priority = 1, dependsOnMethods = "checkCustomerBasicInfo")
+	@Test(priority = 3)
 	public void pricing_EstimatingInfo()
 	{
 		log.info("Create Customer Pricing and Estimating Info");
 		logger = extent.createTest(
-				"Test Case 2: Check Customer Pricing and Estimating Checkboxes And Default Dropdown Values");
+				"Test Case 4: Check Customer Pricing and Estimating Checkboxes And Default Dropdown Values");
 		PerFryer_Cyustomer.pricing();
 	}
 
 
-	@Test(priority = 1, dependsOnMethods = "pricing_EstimatingInfo")
+	@Test(priority = 4)
 	public void marketingInfo()
 	{
 		log.info("Create Customer Marketing Info");
@@ -109,14 +108,14 @@ public class PerFryer_TestCase
 	}
 
 
-	@Test(priority = 1, dependsOnMethods = "marketingInfo")
+	@Test(priority = 5)
 	public void unitInfo()
 	{
 		log.info("Create Customer Unit Info");
 		PerFryer_Cyustomer.unit_Data();
 	}
 
-	
+
 	@AfterMethod
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
 	{
@@ -128,7 +127,7 @@ public class PerFryer_TestCase
 					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			String dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			screenshotPath = System.getProperty("user.dir") + "/HomePage_errorScreenshots/" + testResult.getName()
+			screenshotPath = System.getProperty("user.dir") + "/PerFryer_TestCase/" + testResult.getName()
 					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
