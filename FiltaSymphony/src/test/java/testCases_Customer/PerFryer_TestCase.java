@@ -42,7 +42,8 @@ public class PerFryer_TestCase
 	private ExtentTest logger;
 	private String screenshotPath;
 	private Properties Prop;
-
+	private String ActualCustomer;
+	
 	public static Logger log = Logger.getLogger("Per Fryer Test Case");
 	static
 	{
@@ -70,7 +71,7 @@ public class PerFryer_TestCase
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
-		String ActualCustomer = checkDefaultPricingOfFranchisee();
+		ActualCustomer = checkDefaultPricingOfFranchisee();
 		if (ActualCustomer.equals(Prop.getProperty("Customer1")))
 		{
 			afterMethod();
@@ -105,7 +106,7 @@ public class PerFryer_TestCase
 		log.info("Check Franchisee Default Pricing");
 		log.info("Test Case1: Check Customer Page URL");
 		logger = extent.createTest("Test Case 2: Check Customer Page URL");
-		String ActualCustomer = PerFryer_Cyustomer.defaultPricingFranchiseeLevel();
+		ActualCustomer = PerFryer_Cyustomer.defaultPricingFranchiseeLevel();
 		return ActualCustomer;
 	}
 

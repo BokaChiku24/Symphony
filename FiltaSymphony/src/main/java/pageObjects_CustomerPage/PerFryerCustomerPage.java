@@ -612,7 +612,6 @@ public class PerFryerCustomerPage
 		}
 		System.out.println(ActualCustomer);
 		return ActualCustomer;
-
 	}
 
 
