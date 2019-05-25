@@ -598,15 +598,9 @@ public class PerFryerCustomerPage
 			}
 		}
 
-		for (int i = 0; i < Array.length;)
+		for (int i = 0; i < Array.length; i++)
 		{
-
-			if (Array[i].equals(Prop.getProperty("Customer0")))
-			{
-				ActualCustomer = Array[i];
-				break;
-			}
-			else if (Array[i].equals(Prop.getProperty("Customer1")))
+			if (Array[i].equals(Prop.getProperty("Customer1")))
 			{
 				ActualCustomer = Array[i];
 				break;
@@ -616,7 +610,7 @@ public class PerFryerCustomerPage
 				ActualCustomer = Array[i];
 			}
 		}
-
+		System.out.println(ActualCustomer);
 		return ActualCustomer;
 
 	}

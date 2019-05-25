@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="110194" started-at="2019-05-25T12:56:33Z" finished-at="2019-05-25T12:58:23Z">
+  <suite name="Default suite" duration-ms="55131" started-at="2019-05-25T13:26:58Z" finished-at="2019-05-25T13:27:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="110194" started-at="2019-05-25T12:56:33Z" finished-at="2019-05-25T12:58:23Z">
+    <test name="Default test" duration-ms="55131" started-at="2019-05-25T13:26:58Z" finished-at="2019-05-25T13:27:53Z">
       <class name="testCases_Customer.PerLb_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="property" is-config="true" duration-ms="110119" started-at="2019-05-25T12:56:33Z" finished-at="2019-05-25T12:58:23Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="property" is-config="true" duration-ms="55080" started-at="2019-05-25T13:26:58Z" finished-at="2019-05-25T13:27:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="test()[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="test" duration-ms="12" started-at="2019-05-25T12:58:23Z" finished-at="2019-05-25T12:58:23Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="test" duration-ms="10" started-at="2019-05-25T13:27:53Z" finished-at="2019-05-25T13:27:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="takeScreenShotOnFailure" is-config="true" duration-ms="24" started-at="2019-05-25T12:58:23Z" finished-at="2019-05-25T12:58:23Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="takeScreenShotOnFailure" is-config="true" duration-ms="9" started-at="2019-05-25T13:27:53Z" finished-at="2019-05-25T13:27:53Z">
           <params>
             <param index="0">
               <value>

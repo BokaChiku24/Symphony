@@ -608,16 +608,12 @@ public class PerLbCustomerPage
 				ActualCustomer = Array[i];
 				break;
 			}
-			else if (Array[i].equals(Prop.getProperty("Customer1")))
-			{
-				ActualCustomer = Array[i];
-				break;
-			}
 			else
 			{
 				ActualCustomer = Array[i];
 			}
 		}
+		System.out.println(ActualCustomer);
 		return ActualCustomer;
 	}
 
