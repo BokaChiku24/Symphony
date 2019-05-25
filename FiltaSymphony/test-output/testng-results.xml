@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="75062" started-at="2019-05-25T09:21:27Z" finished-at="2019-05-25T09:22:42Z">
+  <suite name="Default suite" duration-ms="110194" started-at="2019-05-25T12:56:33Z" finished-at="2019-05-25T12:58:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="75062" started-at="2019-05-25T09:21:27Z" finished-at="2019-05-25T09:22:42Z">
-      <class name="testCases_Customer.PerFryer_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="property" is-config="true" duration-ms="74960" started-at="2019-05-25T09:21:27Z" finished-at="2019-05-25T09:22:42Z">
+    <test name="Default test" duration-ms="110194" started-at="2019-05-25T12:56:33Z" finished-at="2019-05-25T12:58:23Z">
+      <class name="testCases_Customer.PerLb_TestCase">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="property" is-config="true" duration-ms="110119" started-at="2019-05-25T12:56:33Z" finished-at="2019-05-25T12:58:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="test()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="test" duration-ms="25" started-at="2019-05-25T09:22:42Z" finished-at="2019-05-25T09:22:42Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="test" duration-ms="12" started-at="2019-05-25T12:58:23Z" finished-at="2019-05-25T12:58:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="takeScreenShotOnFailure" is-config="true" duration-ms="13" started-at="2019-05-25T09:22:42Z" finished-at="2019-05-25T09:22:42Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a]" name="takeScreenShotOnFailure" is-config="true" duration-ms="24" started-at="2019-05-25T12:58:23Z" finished-at="2019-05-25T12:58:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=PerFryer_TestCase.test()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=PerLb_TestCase.test()[pri:0, instance:testCases_Customer.PerLb_TestCase@67b92f0a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-      </class> <!-- testCases_Customer.PerFryer_TestCase -->
+      </class> <!-- testCases_Customer.PerLb_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

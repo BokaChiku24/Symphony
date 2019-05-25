@@ -5,8 +5,8 @@
     <classes>
       <class name="testCases_Customer.PerFryer_TestCase">
         <methods>
-          <include name="performTest"/>
           <include name="takeScreenShotOnFailure"/>
+          <include name="test"/>
           <include name="property"/>
         </methods>
       </class> <!-- testCases_Customer.PerFryer_TestCase -->
