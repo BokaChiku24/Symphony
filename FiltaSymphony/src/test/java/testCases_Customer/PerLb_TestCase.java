@@ -1,12 +1,5 @@
 package testCases_Customer;
 
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
-
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -15,9 +8,15 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -27,22 +26,22 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import org.testng.ITestResult;
+import pageObjects_CustomerPage.PerLbCustomerPage;
 import util.Global;
 
-import pageObjects_CustomerPage.PerFryerCustomerPage;
-
-public class PerFryer_TestCase
+public class PerLb_TestCase
 {
-	private PerFryerCustomerPage PerFryer_Cyustomer;
+	private PerLbCustomerPage PerLb_Customer;
 	private Global global;
 	private WebDriver driver;
 	private ExtentReports extent;
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentTest logger;
 	private String screenshotPath;
+	private String CheckCustomerName;
+	private String CustomerName;
 	private Properties Prop;
-
+	
 	public static Logger log = Logger.getLogger("Per Fryer Test Case");
 	static
 	{
@@ -56,8 +55,8 @@ public class PerFryer_TestCase
 		global = new Global();
 		driver = global.driver();
 		Prop = global.readProperties();
-		PerFryer_Cyustomer = new PerFryerCustomerPage(driver);
-		PerFryer_Cyustomer.login();
+		PerLb_Customer = new PerLbCustomerPage(driver);
+		PerLb_Customer.login();
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/PerFryer_TestCase.html");
 		extent = new ExtentReports();
@@ -70,8 +69,8 @@ public class PerFryer_TestCase
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
-		String ActualCustomer = checkDefaultPricingOfFranchisee();
-		if (ActualCustomer.equals(Prop.getProperty("Customer1")))
+		CheckCustomerName = checkDefaultPricingOfFranchisee();
+		if (CheckCustomerName.equals(Prop.getProperty("Customer0")))
 		{
 			afterMethod();
 		}
@@ -87,9 +86,8 @@ public class PerFryer_TestCase
 	@Test
 	public void test()
 	{
-		System.out.println("Per Fryer Customer Test!!");
+		System.out.println("Per Lb Customer Test!!");
 	}
-
 
 	public void performTest()
 	{
@@ -105,8 +103,8 @@ public class PerFryer_TestCase
 		log.info("Check Franchisee Default Pricing");
 		log.info("Test Case1: Check Customer Page URL");
 		logger = extent.createTest("Test Case 2: Check Customer Page URL");
-		String ActualCustomer = PerFryer_Cyustomer.defaultPricingFranchiseeLevel();
-		return ActualCustomer;
+		CustomerName = PerLb_Customer.defaultPricingFranchiseeLevel();
+		return CustomerName;
 	}
 
 
@@ -114,8 +112,8 @@ public class PerFryer_TestCase
 	{
 		log.info("Create Customer Basic info");
 		logger = extent.createTest("Test Case 3:Create Customer Basic info");
-		PerFryer_Cyustomer.createCustomer();
-		PerFryer_Cyustomer.basicInfo();
+		PerLb_Customer.createCustomer();
+		PerLb_Customer.basicInfo();
 	}
 
 
@@ -124,21 +122,21 @@ public class PerFryer_TestCase
 		log.info("Create Customer Pricing and Estimating Info");
 		logger = extent.createTest(
 				"Test Case 4: Check Customer Pricing and Estimating Checkboxes And Default Dropdown Values");
-		PerFryer_Cyustomer.pricing();
+		PerLb_Customer.pricing();
 	}
 
 
 	public void marketingInfo()
 	{
 		log.info("Create Customer Marketing Info");
-		PerFryer_Cyustomer.marketing();
+		PerLb_Customer.marketing();
 	}
 
 
 	public void unitInfo()
 	{
 		log.info("Create Customer Unit Info");
-		PerFryer_Cyustomer.unit_Data();
+		PerLb_Customer.unit_Data();
 	}
 
 
@@ -153,7 +151,7 @@ public class PerFryer_TestCase
 					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			String dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			screenshotPath = System.getProperty("user.dir") + "/PerFryer_TestCase/" + testResult.getName() + dateName
+			screenshotPath = System.getProperty("user.dir") + "/PerLb_TestCase/" + testResult.getName() + dateName
 					+ "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
@@ -176,6 +174,6 @@ public class PerFryer_TestCase
 	{
 		log.info("Per Fryer Page Test Case Ends Here");
 		extent.flush();
-		PerFryer_Cyustomer.closeBrowser();
+		PerLb_Customer.closeBrowser();
 	}
 }

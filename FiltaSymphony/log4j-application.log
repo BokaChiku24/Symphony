@@ -5672,4 +5672,142 @@
  2019-05-25 14:52:24,123  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
  2019-05-25 14:52:24,131  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
  2019-05-25 14:52:41,136  INFO [main] Per Fryer Test Case:178 - Per Fryer Page Test Case Ends Here
+ 2019-05-25 15:13:46,206  INFO [main] Per Fryer Test Case:102 - Check Franchisee Default Pricing
+ 2019-05-25 15:13:46,209  INFO [main] Per Fryer Test Case:103 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:14:02,849  INFO [main] Per Fryer Test Case:174 - Per Fryer Page Test Case Ends Here
+ 2019-05-25 15:15:54,573  INFO [main] Per Fryer Test Case:102 - Check Franchisee Default Pricing
+ 2019-05-25 15:15:54,576  INFO [main] Per Fryer Test Case:103 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:16:10,805  INFO [main] Per Fryer Test Case:174 - Per Fryer Page Test Case Ends Here
+ 2019-05-25 15:19:35,356  INFO [main] Per Fryer Test Case:102 - Check Franchisee Default Pricing
+ 2019-05-25 15:19:35,360  INFO [main] Per Fryer Test Case:103 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:19:51,764  INFO [main] Per Fryer Test Case:112 - Create Customer Basic info
+ 2019-05-25 15:20:16,248  INFO [main] Per Fryer Test Case:121 - Create Customer Pricing and Estimating Info
+ 2019-05-25 15:22:57,356  INFO [main] Per Fryer Test Case:102 - Check Franchisee Default Pricing
+ 2019-05-25 15:22:57,358  INFO [main] Per Fryer Test Case:103 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:23:13,131  INFO [main] Per Fryer Test Case:112 - Create Customer Basic info
+ 2019-05-25 15:23:38,627  INFO [main] Per Fryer Test Case:121 - Create Customer Pricing and Estimating Info
+ 2019-05-25 15:34:04,385  INFO [main] Per Fryer Test Case:102 - Check Franchisee Default Pricing
+ 2019-05-25 15:34:04,392  INFO [main] Per Fryer Test Case:103 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:34:23,779  INFO [main] Per Fryer Test Case:112 - Create Customer Basic info
+ 2019-05-25 15:34:52,745  INFO [main] Per Fryer Test Case:121 - Create Customer Pricing and Estimating Info
+ 2019-05-25 15:40:20,994  INFO [main] Per Fryer Test Case:103 - Check Franchisee Default Pricing
+ 2019-05-25 15:40:21,001  INFO [main] Per Fryer Test Case:104 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:40:38,206  INFO [main] Per Fryer Test Case:113 - Create Customer Basic info
+ 2019-05-25 15:41:07,439  INFO [main] Per Fryer Test Case:122 - Create Customer Pricing and Estimating Info
+ 2019-05-25 15:41:20,754  INFO [main] Per Fryer Test Case:131 - Create Customer Marketing Info
+ 2019-05-25 15:41:32,873  INFO [main] Per Fryer Test Case:138 - Create Customer Unit Info
+ 2019-05-25 15:43:25,981  INFO [main] Per Fryer Test Case:103 - Check Franchisee Default Pricing
+ 2019-05-25 15:43:25,985  INFO [main] Per Fryer Test Case:104 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:43:42,919  INFO [main] Per Fryer Test Case:113 - Create Customer Basic info
+ 2019-05-25 15:44:12,492  INFO [main] Per Fryer Test Case:122 - Create Customer Pricing and Estimating Info
+ 2019-05-25 15:44:25,847  INFO [main] Per Fryer Test Case:131 - Create Customer Marketing Info
+ 2019-05-25 15:44:37,665  INFO [main] Per Fryer Test Case:138 - Create Customer Unit Info
+ 2019-05-25 15:46:57,235  INFO [main] Per Fryer Test Case:103 - Check Franchisee Default Pricing
+ 2019-05-25 15:46:57,242  INFO [main] Per Fryer Test Case:104 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:47:18,016  INFO [main] Per Fryer Test Case:175 - Per Fryer Page Test Case Ends Here
+ 2019-05-25 15:57:26,898  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 15:57:26,900  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 15:57:42,284  INFO [main] Per Fryer Test Case:116 - Create Customer Basic info
+ 2019-05-25 15:58:02,701  INFO [main] Per Fryer Test Case:125 - Create Customer Pricing and Estimating Info
+ 2019-05-25 15:58:11,128  INFO [main] Per Fryer Test Case:134 - Create Customer Marketing Info
+ 2019-05-25 15:58:18,959  INFO [main] Per Fryer Test Case:141 - Create Customer Unit Info
+ 2019-05-25 16:26:12,801  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 16:26:12,802  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 16:28:35,272  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 16:28:35,277  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 16:28:53,105  INFO [main] Per Fryer Test Case:116 - Create Customer Basic info
+ 2019-05-25 16:30:17,305  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 16:30:17,310  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 16:30:34,542  INFO [main] Per Fryer Test Case:116 - Create Customer Basic info
+ 2019-05-25 16:37:39,085  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 16:37:39,086  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 16:37:56,817  INFO [main] Per Fryer Test Case:116 - Create Customer Basic info
+ 2019-05-25 16:40:03,138  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 16:40:03,144  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 16:40:20,668  INFO [main] Per Fryer Test Case:116 - Create Customer Basic info
+ 2019-05-25 16:40:44,358  INFO [main] Per Fryer Test Case:125 - Create Customer Pricing and Estimating Info
+ 2019-05-25 16:40:55,074  INFO [main] Per Fryer Test Case:134 - Create Customer Marketing Info
+ 2019-05-25 16:41:06,788  INFO [main] Per Fryer Test Case:141 - Create Customer Unit Info
+ 2019-05-25 16:41:59,986  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 16:41:59,990  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 16:42:18,278  INFO [main] Per Fryer Test Case:116 - Create Customer Basic info
+ 2019-05-25 16:50:29,881  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 16:50:29,883  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 16:57:42,402  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-25 16:57:42,405  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-25 16:57:55,298  INFO [main] Per Fryer Test Case:116 - Create Customer Basic info
+ 2019-05-25 16:58:15,300  INFO [main] Per Fryer Test Case:125 - Create Customer Pricing and Estimating Info
+ 2019-05-25 16:58:23,011  INFO [main] Per Fryer Test Case:134 - Create Customer Marketing Info
+ 2019-05-25 16:58:31,306  INFO [main] Per Fryer Test Case:141 - Create Customer Unit Info
+ 2019-05-25 16:58:36,002  INFO [main] Per Fryer Test Case:116 - Create Customer Basic info
+ 2019-05-25 17:00:10,838  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-05-25 17:00:10,840  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:00:23,818  INFO [main] Per Fryer Test Case:120 - Create Customer Basic info
+ 2019-05-25 17:00:41,174  INFO [main] Per Fryer Test Case:129 - Create Customer Pricing and Estimating Info
+ 2019-05-25 17:16:09,772  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:16:09,778  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:17:44,743  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:17:44,745  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:19:00,677  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:19:00,685  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:20:22,553  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:20:22,555  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:22:39,923  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:22:39,929  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:24:15,352  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:24:15,361  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:26:35,530  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:26:35,532  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:28:08,925  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:28:08,926  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:29:30,022  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:29:30,026  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:31:51,008  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:31:51,009  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:36:30,152  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:36:30,157  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:38:02,320  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:38:02,324  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:39:36,951  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:39:36,957  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:41:39,610  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:41:39,615  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:46:06,041  INFO [main] Per Fryer Test Case:111 - Check Franchisee Default Pricing
+ 2019-05-25 17:46:06,048  INFO [main] Per Fryer Test Case:112 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:48:48,718  INFO [main] Per Fryer Test Case:105 - Check Franchisee Default Pricing
+ 2019-05-25 17:48:48,723  INFO [main] Per Fryer Test Case:106 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:49:05,018  INFO [main] Per Fryer Test Case:177 - Per Fryer Page Test Case Ends Here
+ 2019-05-25 17:54:51,596  INFO [main] Per Fryer Test Case:102 - Check Franchisee Default Pricing
+ 2019-05-25 17:54:51,600  INFO [main] Per Fryer Test Case:103 - Test Case1: Check Customer Page URL
+ 2019-05-25 17:55:08,721  INFO [main] Per Fryer Test Case:174 - Per Fryer Page Test Case Ends Here
+ 2019-05-25 18:00:34,464  INFO [main] Per Fryer Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-25 18:00:34,469  INFO [main] Per Fryer Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-25 18:05:44,628  INFO [main] Per Fryer Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-25 18:05:44,634  INFO [main] Per Fryer Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-25 18:09:06,354  INFO [main] Per Fryer Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-25 18:09:06,357  INFO [main] Per Fryer Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-25 18:11:54,577  INFO [main] Per Fryer Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-25 18:11:54,583  INFO [main] Per Fryer Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-25 18:12:11,271  INFO [main] Per Fryer Test Case:114 - Create Customer Basic info
+ 2019-05-25 18:12:40,458  INFO [main] Per Fryer Test Case:123 - Create Customer Pricing and Estimating Info
+ 2019-05-25 18:12:52,156  INFO [main] Per Fryer Test Case:132 - Create Customer Marketing Info
+ 2019-05-25 18:13:03,468  INFO [main] Per Fryer Test Case:139 - Create Customer Unit Info
+ 2019-05-25 18:15:06,926  INFO [main] Per Fryer Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-25 18:15:06,933  INFO [main] Per Fryer Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-25 18:15:24,181  INFO [main] Per Fryer Test Case:114 - Create Customer Basic info
+ 2019-05-25 18:15:48,844  INFO [main] Per Fryer Test Case:123 - Create Customer Pricing and Estimating Info
+ 2019-05-25 18:15:58,969  INFO [main] Per Fryer Test Case:132 - Create Customer Marketing Info
+ 2019-05-25 18:16:09,208  INFO [main] Per Fryer Test Case:139 - Create Customer Unit Info
+ 2019-05-25 18:17:09,355  INFO [main] Per Fryer Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-25 18:17:09,359  INFO [main] Per Fryer Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-25 18:17:26,071  INFO [main] Per Fryer Test Case:176 - Per Fryer Page Test Case Ends Here
+ 2019-05-25 18:25:41,226  INFO [main] Per Fryer Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-25 18:25:41,230  INFO [main] Per Fryer Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-25 18:26:00,225  INFO [main] Per Fryer Test Case:176 - Per Fryer Page Test Case Ends Here
+ 2019-05-25 18:27:08,279  INFO [main] Per Fryer Test Case:102 - Check Franchisee Default Pricing
+ 2019-05-25 18:27:08,285  INFO [main] Per Fryer Test Case:103 - Test Case1: Check Customer Page URL
+ 2019-05-25 18:27:25,950  INFO [main] Per Fryer Test Case:112 - Create Customer Basic info
+ 2019-05-25 18:27:50,576  INFO [main] Per Fryer Test Case:121 - Create Customer Pricing and Estimating Info
+ 2019-05-25 18:28:02,803  INFO [main] Per Fryer Test Case:130 - Create Customer Marketing Info
+ 2019-05-25 18:28:14,281  INFO [main] Per Fryer Test Case:137 - Create Customer Unit Info
  

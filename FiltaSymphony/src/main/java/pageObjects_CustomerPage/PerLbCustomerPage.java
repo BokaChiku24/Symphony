@@ -1,7 +1,6 @@
 package pageObjects_CustomerPage;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -17,7 +16,7 @@ import util.Global;
 import util.Login;
 import util.ReadExcelData;
 
-public class PerFryerCustomerPage
+public class PerLbCustomerPage
 {
 	private Global global;
 	private Properties Prop;
@@ -25,8 +24,7 @@ public class PerFryerCustomerPage
 	private Login login;
 	private SoftAssert sa;
 	private String Customer_URL;
-	private String ActualPerFryerInformativeMessage = " ";
-	private ReadExcelData PerFryerData;
+	private ReadExcelData PerLbData;
 	private ReadExcelData PricingData;
 	private ReadExcelData UnitDataExcel;
 	private ReadExcelData MarketingData;
@@ -156,11 +154,11 @@ public class PerFryerCustomerPage
 	@FindBy(how = How.CSS, using = "#service_filtafry")
 	private WebElement FiltaFry;
 
-	@FindBy(how = How.CSS, using = "#ajaxloading_mask")
-	private WebElement Lodar;
-
 	@FindBy(how = How.CSS, using = "#charge_type")
 	private WebElement Pricing_Model;
+
+	@FindBy(how = How.CSS, using = "#ajaxloading_mask")
+	private WebElement Lodar;
 
 	@FindBy(how = How.CSS, using = "#filtacool")
 	private WebElement FiltaCool;
@@ -438,21 +436,27 @@ public class PerFryerCustomerPage
 	@FindBy(how = How.XPATH, using = ".//table[@id='ListTable']//tr[3]//td[3]")
 	private WebElement Customername;
 
-	@FindBy(how = How.XPATH, using = ".//table[@id='ListTable']//tr[4]//td[3]")
-	private WebElement Customername2;
+	@FindBy(how = How.XPATH, using = ".//input[@id='lavel1_charge']")
+	private WebElement ActualLevel1Charge;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='lavel1']")
+	private WebElement ActualFirst;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='additional_charge']")
+	private WebElement ActualAdditionalRate;
 
 	@FindBy(how = How.XPATH, using = ".//input[@title='Select all' and @id='massall_top']")
 	private WebElement SelectAll;
 
 
-	public PerFryerCustomerPage(WebDriver driver)
+	public PerLbCustomerPage(WebDriver driver)
 	{
 		global = new Global();
 		Prop = global.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
 		sa = new SoftAssert();
-		PerFryerData = new ReadExcelData(Prop.getProperty("Path2"), "PerFryer");
+		PerLbData = new ReadExcelData(Prop.getProperty("Path2"), "PerLb");
 		PricingData = new ReadExcelData(Prop.getProperty("Path2"), "Pricing");
 		UnitDataExcel = new ReadExcelData(Prop.getProperty("Path2"), "UnitData");
 		MarketingData = new ReadExcelData(Prop.getProperty("Path2"), "Marketing");
@@ -566,8 +570,8 @@ public class PerFryerCustomerPage
 		Default_PaymentDefault = global.select(DefaultPayment).getFirstSelectedOption().getText();
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", SaveHeader);
 		SaveHeader.click();
-		String ActualCustomer = goToCustomer();
-		return ActualCustomer;
+		String CustomerName = goToCustomer();
+		return CustomerName;
 	}
 
 
@@ -577,7 +581,7 @@ public class PerFryerCustomerPage
 		global.action(driver).moveToElement(Customer).click().build().perform();
 		global.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
 		Customer_URL = driver.getCurrentUrl();
-		sa.assertEquals(Customer_URL, PerFryerData.getCellData(1, 0));
+		sa.assertEquals(Customer_URL, PerLbData.getCellData(1, 0));
 		SelectAll.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
 				".//table[@class='paginationTable']//td[@class='paginationActionButtons']//span[@id='selectedRecordsTop' and @class='show']")));
@@ -597,10 +601,8 @@ public class PerFryerCustomerPage
 						.getText();
 			}
 		}
-
-		for (int i = 0; i < Array.length;)
+		for (int i = 0; i < Array.length; i++)
 		{
-
 			if (Array[i].equals(Prop.getProperty("Customer0")))
 			{
 				ActualCustomer = Array[i];
@@ -616,9 +618,7 @@ public class PerFryerCustomerPage
 				ActualCustomer = Array[i];
 			}
 		}
-
 		return ActualCustomer;
-
 	}
 
 
@@ -630,32 +630,32 @@ public class PerFryerCustomerPage
 
 	public void basicInfo()
 	{
-		KeyContact.sendKeys(PerFryerData.getCellData(1, 1) + " " + PerFryerData.getCellData(1, 2));
-		Title.sendKeys(PerFryerData.getCellData(1, 3));
-		CompanyName.sendKeys(PerFryerData.getCellData(1, 4));
-		NCAChain.sendKeys(PerFryerData.getCellData(1, 5));
-		NcaUnitCode.sendKeys((int) PerFryerData.getCellDataInt(1, 6) + "");
-		Account.sendKeys((int) PerFryerData.getCellDataInt(1, 7) + "");
+		KeyContact.sendKeys(PerLbData.getCellData(1, 1) + " " + PerLbData.getCellData(1, 2));
+		Title.sendKeys(PerLbData.getCellData(1, 3));
+		CompanyName.sendKeys(PerLbData.getCellData(1, 4));
+		NCAChain.sendKeys(PerLbData.getCellData(1, 5));
+		NcaUnitCode.sendKeys((int) PerLbData.getCellDataInt(1, 6) + "");
+		Account.sendKeys((int) PerLbData.getCellDataInt(1, 7) + "");
 		SendServiceSurvey.click();
 		SendEIR.click();
-		PrimaryEmail.sendKeys(PerFryerData.getCellData(1, 8));
-		Site_Street.sendKeys(PerFryerData.getCellData(1, 9));
-		Site_City.sendKeys(PerFryerData.getCellData(1, 10));
-		Site_State.sendKeys(PerFryerData.getCellData(1, 11));
-		Site_PostalCode.sendKeys((int) PerFryerData.getCellDataInt(1, 12) + "");
-		Site_Country.sendKeys(PerFryerData.getCellData(1, 13));
+		PrimaryEmail.sendKeys(PerLbData.getCellData(1, 8));
+		Site_Street.sendKeys(PerLbData.getCellData(1, 9));
+		Site_City.sendKeys(PerLbData.getCellData(1, 10));
+		Site_State.sendKeys(PerLbData.getCellData(1, 11));
+		Site_PostalCode.sendKeys((int) PerLbData.getCellDataInt(1, 12) + "");
+		Site_Country.sendKeys(PerLbData.getCellData(1, 13));
 //		Office_Phone.sendKeys(PerFryerData.getCellData(1, 14));
-		Ext.sendKeys((int) PerFryerData.getCellDataInt(1, 15) + "");
-		ArrivalNotes.sendKeys(PerFryerData.getCellData(1, 16));
-		DepartureNotes.sendKeys(PerFryerData.getCellData(1, 17));
+		Ext.sendKeys((int) PerLbData.getCellDataInt(1, 15) + "");
+		ArrivalNotes.sendKeys(PerLbData.getCellData(1, 16));
+		DepartureNotes.sendKeys(PerLbData.getCellData(1, 17));
 //		Mobile.sendKeys((int) PerFryerData.getCellDataInt(1, 18) + "");
-		Nca_Supplier.sendKeys((int) PerFryerData.getCellDataInt(1, 19) + "");
-		InvoiceStreet.sendKeys(PerFryerData.getCellData(1, 20));
-		InvoiceCity.sendKeys(PerFryerData.getCellData(1, 21));
-		InvoiceState.sendKeys(PerFryerData.getCellData(1, 22));
-		InvoicePostal.sendKeys((int) PerFryerData.getCellDataInt(1, 23) + "");
-		InvoiceCountry.sendKeys(PerFryerData.getCellData(1, 24));
-		global.select(Service_Frequency).selectByVisibleText(PerFryerData.getCellData(1, 25));
+		Nca_Supplier.sendKeys((int) PerLbData.getCellDataInt(1, 19) + "");
+		InvoiceStreet.sendKeys(PerLbData.getCellData(1, 20));
+		InvoiceCity.sendKeys(PerLbData.getCellData(1, 21));
+		InvoiceState.sendKeys(PerLbData.getCellData(1, 22));
+		InvoicePostal.sendKeys((int) PerLbData.getCellDataInt(1, 23) + "");
+		InvoiceCountry.sendKeys(PerLbData.getCellData(1, 24));
+		global.select(Service_Frequency).selectByVisibleText(PerLbData.getCellData(1, 25));
 	}
 
 
@@ -669,10 +669,11 @@ public class PerFryerCustomerPage
 		{
 			FiltaFry.click();
 			lodar();
-			global.select(Pricing_Model).selectByVisibleText("Per Fryer");
-			ActualPerFryerInformativeMessage = global.alert("accept", driver);
+			global.select(Pricing_Model).selectByVisibleText("Per lb");
 			lodar();
-			sa.assertEquals(ActualPerFryerInformativeMessage, PricingData.getCellData(2, 0));
+			sa.assertEquals(ActualLevel1Charge.getAttribute("value"), Default_Level1Charge);
+			sa.assertEquals(ActualFirst.getAttribute("value"), Default_First);
+			sa.assertEquals(ActualAdditionalRate.getAttribute("value"), Default_AdditionalRate);
 		}
 		else
 		{
@@ -826,4 +827,5 @@ public class PerFryerCustomerPage
 	{
 		driver.close();
 	}
+
 }
