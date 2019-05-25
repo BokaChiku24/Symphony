@@ -1,7 +1,6 @@
 package testCases_Customer;
 
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
@@ -13,6 +12,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -41,7 +41,10 @@ public class PerFryer_TestCase
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentTest logger;
 	private String screenshotPath;
-
+	private String CheckCustomerName;
+	private String CustomerName;
+	private Properties Prop;
+	
 	public static Logger log = Logger.getLogger("Per Fryer Test Case");
 	static
 	{
@@ -54,6 +57,7 @@ public class PerFryer_TestCase
 	{
 		global = new Global();
 		driver = global.driver();
+		Prop = global.readProperties();
 		PerFryer_Cyustomer = new PerFryerCustomerPage(driver);
 		PerFryer_Cyustomer.login();
 		htmlReporter = new ExtentHtmlReporter(
@@ -68,19 +72,45 @@ public class PerFryer_TestCase
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
+		CheckCustomerName = checkDefaultPricingOfFranchisee();
+		if (CheckCustomerName.equals(Prop.getProperty("PerfryerCustomer")))
+		{
+			afterMethod();
+		}
+		else
+		{
+			performTest();
+		}
+
 	}
 
 
-	@Test(priority = 0)
-	public void checkDefaultPricingOfFranchisee()
+	@Test
+	public void test()
+	{
+		System.out.println("Per Fryer Customer Test!!");
+	}
+
+
+	public void performTest()
+	{
+		checkCustomerBasicInfo();
+		pricing_EstimatingInfo();
+		marketingInfo();
+		unitInfo();
+	}
+
+
+	public String checkDefaultPricingOfFranchisee()
 	{
 		log.info("Check Franchisee Default Pricing");
 		log.info("Test Case1: Check Customer Page URL");
 		logger = extent.createTest("Test Case 2: Check Customer Page URL");
-		PerFryer_Cyustomer.defaultPricingFranchiseeLevel();
+		CustomerName = PerFryer_Cyustomer.defaultPricingFranchiseeLevel();
+		return CustomerName;
 	}
-	
-	@Test(priority = 2)
+
+
 	public void checkCustomerBasicInfo()
 	{
 		log.info("Create Customer Basic info");
@@ -90,7 +120,6 @@ public class PerFryer_TestCase
 	}
 
 
-	@Test(priority = 3)
 	public void pricing_EstimatingInfo()
 	{
 		log.info("Create Customer Pricing and Estimating Info");
@@ -100,7 +129,6 @@ public class PerFryer_TestCase
 	}
 
 
-	@Test(priority = 4)
 	public void marketingInfo()
 	{
 		log.info("Create Customer Marketing Info");
@@ -108,7 +136,6 @@ public class PerFryer_TestCase
 	}
 
 
-	@Test(priority = 5)
 	public void unitInfo()
 	{
 		log.info("Create Customer Unit Info");
@@ -127,8 +154,8 @@ public class PerFryer_TestCase
 					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			String dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			screenshotPath = System.getProperty("user.dir") + "/PerFryer_TestCase/" + testResult.getName()
-					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
+			screenshotPath = System.getProperty("user.dir") + "/PerFryer_TestCase/" + testResult.getName() + dateName
+					+ "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
 
@@ -146,11 +173,10 @@ public class PerFryer_TestCase
 	}
 
 
-	@AfterClass
 	public void afterMethod()
 	{
 		log.info("Per Fryer Page Test Case Ends Here");
 		extent.flush();
-//		PerFryer_Cyustomer.closeBrowser();
+		PerFryer_Cyustomer.closeBrowser();
 	}
 }

@@ -1,7 +1,6 @@
 package pageObjects_CustomerPage;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -50,7 +49,9 @@ public class PerFryerCustomerPage
 	private String Default_DrainFoamDefault;
 	private String Default_FCValue;
 	private String Default_EstPeriodValue;
-	
+	private String Default_PaymentDefault;
+	private String ActualPayment;
+
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
 	private WebElement containerClose;
 
@@ -426,6 +427,15 @@ public class PerFryerCustomerPage
 	@FindBy(how = How.XPATH, using = ".//div[@id='ajaxHeader']//div[@id='moduleList']//a[@id='grouptab_2']")
 	private WebElement CustomerTab;
 
+	@FindBy(how = How.XPATH, using = ".//select[@id='payment_term']")
+	private WebElement DefaultPayment;
+
+	@FindBy(how = How.XPATH, using = ".//input[@id='SAVE_HEADER']")
+	private WebElement Save_Header;
+
+	@FindBy(how = How.XPATH, using = ".//table[@id='ListTable']//tr[3]//td[3]")
+	private WebElement Customername;
+
 
 	public PerFryerCustomerPage(WebDriver driver)
 	{
@@ -449,162 +459,7 @@ public class PerFryerCustomerPage
 		containerClose.click();
 	}
 
-
-//
-//	public void defaultPricingFranchiseeLevel()
-//	{
-//		Admin.click();
-//		ManageInvoice.click();
-//		global.wait(driver).until(ExpectedConditions.visibilityOf(DefaultPricingTab));
-//		DefaultPricingTab.click();
-//
-//		// FiltaFry Per Lb
-//		if (Level1Charge.getAttribute("value").equals(""))
-//		{
-//			Level1Charge.sendKeys(DefaultPricingData.getCellDataInt(1, 0) + "");
-//		}
-//		Default_Level1Charge = Level1Charge.getAttribute("value");
-//		if (AdditionalRate.getAttribute("value").equals(""))
-//		{
-//			AdditionalRate.sendKeys(DefaultPricingData.getCellDataInt(2, 0) + "");
-//		}
-//		Default_AdditionalRate = AdditionalRate.getAttribute("value");
-//		if (First.getAttribute("value").equals("") || First.getText().equals("0"))
-//		{
-//			First.sendKeys((int) DefaultPricingData.getCellDataInt(2, 0) + "");
-//		}
-//		Default_First = First.getAttribute("value");
-//
-//		// FiltaFry Per Fryer
-//		if (FryerSize1.getAttribute("value").equals(""))
-//		{
-//			FryerSize1.sendKeys((int) DefaultPricingData.getCellDataInt(1, 1) + "");
-//		}
-//		Default_FryerSize1 = FryerSize1.getAttribute("value");
-//		if (FryerChargeDefault.getAttribute("value").equals(""))
-//		{
-//			FryerChargeDefault.sendKeys(DefaultPricingData.getCellDataInt(2, 1) + "");
-//		}
-//		Default_FryerChargeDefault = FryerChargeDefault.getAttribute("value");
-//		if (FryerCleanOnlyCharge.getAttribute("value").equals(""))
-//		{
-//			FryerCleanOnlyCharge.sendKeys(DefaultPricingData.getCellDataInt(3, 1) + "");
-//		}
-//		Default_FryerCleanOnlyCharge = FryerCleanOnlyCharge.getAttribute("value");
-//		AddMore.click();
-//		if (FryerSize2.getAttribute("value").equals(""))
-//		{
-//			FryerSize2.sendKeys(DefaultPricingData.getCellDataInt(3, 1) + "");
-//		}
-//		else
-//		{
-//			FryerSize2.clear();
-//			FryerSize2.sendKeys(DefaultPricingData.getCellDataInt(3, 1) + "");
-//		}
-//		Default_FryerSize2 = FryerSize2.getAttribute("value");
-//		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", SaveHeader);
-//		SaveHeader.click();
-//		global.wait(driver).until(ExpectedConditions.visibilityOf(ChargeValidation));
-//		sa.assertEquals(ChargeValidation.getText(), DefaultPricingData.getCellData(4, 1));
-//		FryerChargeDefault2.sendKeys(DefaultPricingData.getCellDataInt(5, 1) + "");
-//		Default_FryerChargeDefault2 = FryerChargeDefault2.getAttribute("value");
-//		if (FryerCleanOnlyCharge0.getAttribute("value").equals(""))
-//		{
-//			FryerCleanOnlyCharge0.sendKeys(DefaultPricingData.getCellDataInt(5, 1) + "");
-//		}
-//		Default_FryerCleanOnlyCharge0 = FryerCleanOnlyCharge0.getAttribute("value");
-//
-//		// Set/Fixed Charge
-//		if (FixedCostCharge.getAttribute("value").equals(""))
-//		{
-//			FixedCostCharge.sendKeys(DefaultPricingData.getCellDataInt(1, 2) + "");
-//		}
-//		Default_FixedCostCharge = FixedCostCharge.getAttribute("value");
-//
-//		// FiltaCool
-//		if (FCMonthly.getAttribute("value").equals(""))
-//		{
-//			FCMonthly.sendKeys(DefaultPricingData.getCellDataInt(1, 3) + "");
-//		}
-//		Default_FCMonthly = FCMonthly.getAttribute("value");
-//		if (FCWeekly.getAttribute("value").equals(""))
-//		{
-//			FCWeekly.sendKeys(DefaultPricingData.getCellDataInt(2, 3) + "");
-//		}
-//		Default_FCWeekly = FCWeekly.getAttribute("value");
-//		List<WebElement> list = driver.findElements(By.xpath(".//select[@id='filtacool_frequency']//option"));
-//
-//		for (int i = 0; i < list.size(); i++)
-//		{
-//			sa.assertEquals(list.get(i).getText(), DefaultPricingData.getCellData(i + 1, 9));
-//		}
-//		sa.assertEquals(global.select(DefaultBillingPeriod).getFirstSelectedOption().getText(),
-//				DefaultPricingData.getCellData(1, 9));
-//
-//		// FiltaBio
-//
-//		if (FiltaBioDefault.getAttribute("value").equals(""))
-//		{
-//			FiltaBioDefault.sendKeys(DefaultPricingData.getCellDataInt(1, 4) + "");
-//		}
-//		Default_FiltaBioDefault = FiltaBioDefault.getAttribute("value");
-//
-//		// FiltaGold
-//		if (FGOilCharge.getAttribute("value").equals(""))
-//		{
-//			FGOilCharge.sendKeys(DefaultPricingData.getCellDataInt(1, 5) + "");
-//		}
-//		Default_FGOilCharge = FGOilCharge.getAttribute("value");
-//		if (FGPerBox.getAttribute("value").equals(""))
-//		{
-//			FGPerBox.sendKeys(DefaultPricingData.getCellDataInt(2, 5) + "");
-//		}
-//		Default_FGPerBox = FGPerBox.getAttribute("value");
-//		if (FGTankRental.getAttribute("value").equals(""))
-//		{
-//			FGTankRental.sendKeys(DefaultPricingData.getCellDataInt(3, 5) + "");
-//		}
-//		Default_FGTankRental = FGTankRental.getAttribute("value");
-//
-//		// DrainFoam
-//		if (DrainFoamDefault.getAttribute("value").equals(""))
-//		{
-//			DrainFoamDefault.sendKeys(DefaultPricingData.getCellDataInt(1, 6) + "");
-//		}
-//		Default_DrainFoamDefault = DrainFoamDefault.getAttribute("value");
-//
-//		// EstPeriod
-//		List<WebElement> list2 = driver.findElements(By.xpath(".//select[@id='inv_period']//option"));
-//		for (int i = 1; i < list2.size(); i++)
-//		{
-//			sa.assertEquals(list2.get(i).getText(), DefaultPricingData.getCellData(i, 7));
-//		}
-//		sa.assertEquals(global.select(DefaultEstPeriod).getFirstSelectedOption().getText(),
-//				DefaultPricingData.getCellData(1, 7));
-//		if (global.select(DefaultEstPeriod).getFirstSelectedOption().getText()
-//				.equals(DefaultPricingData.getCellData(1, 7)))
-//		{
-//			sa.assertTrue(ReviewDefaultYes.isEnabled());
-//			sa.assertTrue(ReviewDefaultYes.isSelected());
-//			sa.assertEquals(ReviewDefaultNo.isSelected(), false);
-//			sa.assertTrue(ReviewDefaultNo.isEnabled());
-//
-//		}
-//
-//		// Payment Term
-//		List<WebElement> list3 = driver.findElements(By.xpath(".//select[@id='payment_term']//option"));
-//		for (int i = 0; i < list3.size(); i++)
-//		{
-//			sa.assertEquals(list3.get(i).getText(), DefaultPricingData.getCellData(i + 1, 8));
-//
-//		}
-//		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", SaveHeader);
-//		SaveHeader.click();
-//		goToCustomer();
-//	}
-//
-
-	public void defaultPricingFranchiseeLevel()
+	public String defaultPricingFranchiseeLevel()
 	{
 		Admin.click();
 		ManageInvoice.click();
@@ -699,21 +554,26 @@ public class PerFryerCustomerPage
 
 		// EstPeriod
 		Default_EstPeriodValue = global.select(DefaultEstPeriod).getFirstSelectedOption().getText();
-
+		Default_PaymentDefault = global.select(DefaultPayment).getFirstSelectedOption().getText();
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", SaveHeader);
 		SaveHeader.click();
-		goToCustomer();
+		String CustomerName = goToCustomer();
+		return CustomerName;
 	}
 
 
-	public void goToCustomer()
+	public String goToCustomer()
 	{
 		global.action(driver).moveToElement(CustomerTab).build().perform();
 		global.action(driver).moveToElement(Customer).click().build().perform();
 		global.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
 		Customer_URL = driver.getCurrentUrl();
 		sa.assertEquals(Customer_URL, PerFryerData.getCellData(1, 0));
+		return Customername.getText();
 	}
+
+	
+
 
 	public void createCustomer()
 	{
@@ -737,11 +597,11 @@ public class PerFryerCustomerPage
 		Site_State.sendKeys(PerFryerData.getCellData(1, 11));
 		Site_PostalCode.sendKeys((int) PerFryerData.getCellDataInt(1, 12) + "");
 		Site_Country.sendKeys(PerFryerData.getCellData(1, 13));
-		Office_Phone.sendKeys((int) PerFryerData.getCellDataInt(1, 14) + "");
+//		Office_Phone.sendKeys(PerFryerData.getCellData(1, 14));
 		Ext.sendKeys((int) PerFryerData.getCellDataInt(1, 15) + "");
 		ArrivalNotes.sendKeys(PerFryerData.getCellData(1, 16));
 		DepartureNotes.sendKeys(PerFryerData.getCellData(1, 17));
-		Mobile.sendKeys((int) PerFryerData.getCellDataInt(1, 18) + "");
+//		Mobile.sendKeys((int) PerFryerData.getCellDataInt(1, 18) + "");
 		Nca_Supplier.sendKeys((int) PerFryerData.getCellDataInt(1, 19) + "");
 		InvoiceStreet.sendKeys(PerFryerData.getCellData(1, 20));
 		InvoiceCity.sendKeys(PerFryerData.getCellData(1, 21));
@@ -784,6 +644,7 @@ public class PerFryerCustomerPage
 			{
 				RentalRate.sendKeys((int) PricingData.getCellDataInt(2, 1) + "");
 			}
+			sa.assertEquals(RentalRate, Default_FCWeekly);
 		}
 
 		sa.assertEquals(Prop.getProperty("FiltaBioCheckBox"), FiltaBio.isSelected());
@@ -796,6 +657,7 @@ public class PerFryerCustomerPage
 				PayCustomer.sendKeys((int) PricingData.getCellDataInt(1, 2) + "");
 			}
 		}
+		sa.assertEquals(PayCustomer, Default_FiltaBioDefault);
 
 		sa.assertEquals(Prop.getProperty("FiltaGoldCheckBox"), FiltaGold.isSelected());
 		if (FiltaGold.isSelected() == false)
@@ -810,14 +672,18 @@ public class PerFryerCustomerPage
 			{
 				TankRent.sendKeys((int) PricingData.getCellDataInt(2, 3) + "");
 			}
+			sa.assertEquals(TankRent, Default_FGTankRental);
 			if (Oil_Charge.getAttribute("value").equals(""))
 			{
 				Oil_Charge.sendKeys((int) PricingData.getCellDataInt(3, 3) + "");
 			}
+
+			sa.assertEquals(Oil_Charge, Default_FGOilCharge);
 			if (PriceperBox.getAttribute("value").equals(""))
 			{
 				PriceperBox.sendKeys((int) PricingData.getCellDataInt(4, 3) + "");
 			}
+			sa.assertEquals(PriceperBox, Default_FGPerBox);
 		}
 
 		sa.assertEquals(Prop.getProperty("DrainFoamCheckBox"), DrainFoam.isSelected());
@@ -830,7 +696,7 @@ public class PerFryerCustomerPage
 				Charge.sendKeys((int) PricingData.getCellDataInt(1, 5) + "");
 			}
 		}
-
+		sa.assertEquals(Charge, Default_DrainFoamDefault);
 		global.select(Inv_Period).selectByVisibleText(PricingData.getCellData(1, 6));
 		if (global.select(Inv_Period).getFirstSelectedOption().getText().equals(PricingData.getCellData(1, 6)))
 		{
@@ -843,6 +709,8 @@ public class PerFryerCustomerPage
 			System.out.println("It's not Per Job");
 		}
 		global.select(Payement).selectByVisibleText(PricingData.getCellData(1, 7));
+		ActualPayment = driver.findElement(By.xpath(".//select[@id='payment_term']//option[1]")).getText();
+		sa.assertEquals(ActualPayment, Default_PaymentDefault);
 	}
 
 
@@ -889,6 +757,7 @@ public class PerFryerCustomerPage
 		RTIRenewalDate.click();
 		Today.click();
 		RTIDate.click();
+		Save_Header.click();
 	}
 
 

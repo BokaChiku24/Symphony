@@ -1,95 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="107525" started-at="2019-05-23T03:24:53Z" finished-at="2019-05-23T03:26:41Z">
+  <suite name="Default suite" duration-ms="75062" started-at="2019-05-25T09:21:27Z" finished-at="2019-05-25T09:22:42Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="107525" started-at="2019-05-23T03:24:53Z" finished-at="2019-05-23T03:26:41Z">
+    <test name="Default test" duration-ms="75062" started-at="2019-05-25T09:21:27Z" finished-at="2019-05-25T09:22:42Z">
       <class name="testCases_Customer.PerFryer_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="property" is-config="true" duration-ms="37156" started-at="2019-05-23T03:24:53Z" finished-at="2019-05-23T03:25:30Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="property" is-config="true" duration-ms="74960" started-at="2019-05-25T09:21:27Z" finished-at="2019-05-25T09:22:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checkDefaultPricingOfFranchisee()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkDefaultPricingOfFranchisee" duration-ms="16220" started-at="2019-05-23T03:25:30Z" finished-at="2019-05-23T03:25:47Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="test" duration-ms="25" started-at="2019-05-25T09:22:42Z" finished-at="2019-05-25T09:22:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkDefaultPricingOfFranchisee -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="126" started-at="2019-05-23T03:25:47Z" finished-at="2019-05-23T03:25:47Z">
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="takeScreenShotOnFailure" is-config="true" duration-ms="13" started-at="2019-05-25T09:22:42Z" finished-at="2019-05-25T09:22:42Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkDefaultPricingOfFranchisee status=SUCCESS method=PerFryer_TestCase.checkDefaultPricingOfFranchisee()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=PerFryer_TestCase.test()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkCustomerBasicInfo()[pri:2, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="checkCustomerBasicInfo" duration-ms="26170" started-at="2019-05-23T03:25:47Z" finished-at="2019-05-23T03:26:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkCustomerBasicInfo -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="4" started-at="2019-05-23T03:26:13Z" finished-at="2019-05-23T03:26:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkCustomerBasicInfo status=SUCCESS method=PerFryer_TestCase.checkCustomerBasicInfo()[pri:2, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="pricing_EstimatingInfo()[pri:3, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="pricing_EstimatingInfo" duration-ms="9710" started-at="2019-05-23T03:26:13Z" finished-at="2019-05-23T03:26:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pricing_EstimatingInfo -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-05-23T03:26:23Z" finished-at="2019-05-23T03:26:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=pricing_EstimatingInfo status=SUCCESS method=PerFryer_TestCase.pricing_EstimatingInfo()[pri:3, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="marketingInfo()[pri:4, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="marketingInfo" duration-ms="12851" started-at="2019-05-23T03:26:23Z" finished-at="2019-05-23T03:26:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- marketingInfo -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-05-23T03:26:35Z" finished-at="2019-05-23T03:26:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=marketingInfo status=SUCCESS method=PerFryer_TestCase.marketingInfo()[pri:4, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="unitInfo()[pri:5, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="unitInfo" duration-ms="4329" started-at="2019-05-23T03:26:35Z" finished-at="2019-05-23T03:26:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- unitInfo -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-23T03:26:40Z" finished-at="2019-05-23T03:26:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=unitInfo status=SUCCESS method=PerFryer_TestCase.unitInfo()[pri:5, instance:testCases_Customer.PerFryer_TestCase@2b9627bc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_Customer.PerFryer_TestCase@2b9627bc]" name="afterMethod" is-config="true" duration-ms="918" started-at="2019-05-23T03:26:40Z" finished-at="2019-05-23T03:26:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
       </class> <!-- testCases_Customer.PerFryer_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
