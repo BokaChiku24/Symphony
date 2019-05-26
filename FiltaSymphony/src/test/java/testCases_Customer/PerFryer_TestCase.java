@@ -34,7 +34,7 @@ import pageObjects_CustomerPage.PerFryerCustomerPage;
 
 public class PerFryer_TestCase
 {
-	private PerFryerCustomerPage PerFryer_Cyustomer;
+	private PerFryerCustomerPage PerFryer_Customer;
 	private Global global;
 	private WebDriver driver;
 	private ExtentReports extent;
@@ -57,8 +57,8 @@ public class PerFryer_TestCase
 		global = new Global();
 		driver = global.driver();
 		Prop = global.readProperties();
-		PerFryer_Cyustomer = new PerFryerCustomerPage(driver);
-		PerFryer_Cyustomer.login();
+		PerFryer_Customer = new PerFryerCustomerPage(driver);
+		PerFryer_Customer.login();
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/PerFryer_TestCase.html");
 		extent = new ExtentReports();
@@ -72,7 +72,7 @@ public class PerFryer_TestCase
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
 		ActualCustomer = checkDefaultPricingOfFranchisee();
-		if (ActualCustomer.equals(Prop.getProperty("Customer1")))
+		if (ActualCustomer.equals(Prop.getProperty("Customer2")))
 		{
 			afterMethod();
 		}
@@ -106,7 +106,7 @@ public class PerFryer_TestCase
 		log.info("Check Franchisee Default Pricing");
 		log.info("Test Case1: Check Customer Page URL");
 		logger = extent.createTest("Test Case 2: Check Customer Page URL");
-		ActualCustomer = PerFryer_Cyustomer.defaultPricingFranchiseeLevel();
+		ActualCustomer = PerFryer_Customer.defaultPricingFranchiseeLevel();
 		return ActualCustomer;
 	}
 
@@ -115,8 +115,8 @@ public class PerFryer_TestCase
 	{
 		log.info("Create Customer Basic info");
 		logger = extent.createTest("Test Case 3:Create Customer Basic info");
-		PerFryer_Cyustomer.createCustomer();
-		PerFryer_Cyustomer.basicInfo();
+		PerFryer_Customer.createCustomer();
+		PerFryer_Customer.basicInfo();
 	}
 
 
@@ -125,21 +125,21 @@ public class PerFryer_TestCase
 		log.info("Create Customer Pricing and Estimating Info");
 		logger = extent.createTest(
 				"Test Case 4: Check Customer Pricing and Estimating Checkboxes And Default Dropdown Values");
-		PerFryer_Cyustomer.pricing();
+		PerFryer_Customer.pricing();
 	}
 
 
 	public void marketingInfo()
 	{
 		log.info("Create Customer Marketing Info");
-		PerFryer_Cyustomer.marketing();
+		PerFryer_Customer.marketing();
 	}
 
 
 	public void unitInfo()
 	{
 		log.info("Create Customer Unit Info");
-		PerFryer_Cyustomer.unit_Data();
+		PerFryer_Customer.unit_Data();
 	}
 
 
@@ -177,6 +177,6 @@ public class PerFryer_TestCase
 	{
 		log.info("Per Fryer Page Test Case Ends Here");
 		extent.flush();
-		PerFryer_Cyustomer.closeBrowser();
+		PerFryer_Customer.closeBrowser();
 	}
 }

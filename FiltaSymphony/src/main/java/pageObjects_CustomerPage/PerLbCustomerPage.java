@@ -589,21 +589,43 @@ public class PerLbCustomerPage
 				".//table[@class='paginationTable']//td[@class='paginationActionButtons']//span[@id='selectedRecordsTop' and @class='show']//input"))
 				.getAttribute("value"));
 		String Array[] = new String[count];
-		for (int i = count, j = 0; i <= count + (count - 1); i++, j++)
+		if (count == 1)
 		{
-			if (count == 1 || count == 2)
+			for (int i = 0, j = 3; i < count; i++, j++)
 			{
-				Array[j] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[3]//td[3]")).getText();
+				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
+						.getText();
+				System.out.println(Array[i]);
 			}
-			else
+		}
+		if (count == 2)
+		{
+			for (int i = 0, j = 3; i < count; i++, j++)
 			{
-				Array[j] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + i + "]//td[3]"))
+				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
+						.getText();
+				System.out.println(Array[i]);
+			}
+		}
+		if (count == 3)
+		{
+			for (int i = 0, j = 3; i < count; i++, j++)
+			{
+				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
+						.getText();
+			}
+		}
+		if (count == 4)
+		{
+			for (int i = 0, j = 3; i < count; i++, j++)
+			{
+				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
 						.getText();
 			}
 		}
 		for (int i = 0; i < Array.length; i++)
 		{
-			if (Array[i].equals(Prop.getProperty("Customer0")))
+			if (Array[i].equals(Prop.getProperty("Customer1")))
 			{
 				ActualCustomer = Array[i];
 				break;

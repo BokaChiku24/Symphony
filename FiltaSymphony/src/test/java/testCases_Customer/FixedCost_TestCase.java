@@ -26,37 +26,36 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import pageObjects_CustomerPage.PerLbCustomerPage;
+import pageObjects_CustomerPage.FixedCostCustomerPage;
+import pageObjects_CustomerPage.PerFryerCustomerPage;
 import util.Global;
 
-public class PerLb_TestCase
+public class FixedCost_TestCase
 {
-	private PerLbCustomerPage PerLb_Customer;
+	private FixedCostCustomerPage FixedCost_Customer;
 	private Global global;
 	private WebDriver driver;
 	private ExtentReports extent;
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentTest logger;
 	private String screenshotPath;
-	private String CheckCustomerName;
-	private String CustomerName;
 	private Properties Prop;
+	private String ActualCustomer;
 	
-	public static Logger log = Logger.getLogger("Per Fryer Test Case");
+	public static Logger log = Logger.getLogger("Fixed Cost Test Case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
-
-
+	
 	@BeforeClass
 	public void property()
 	{
 		global = new Global();
 		driver = global.driver();
 		Prop = global.readProperties();
-		PerLb_Customer = new PerLbCustomerPage(driver);
-		PerLb_Customer.login();
+		FixedCost_Customer = new FixedCostCustomerPage(driver);
+		FixedCost_Customer.login();
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/PerFryer_TestCase.html");
 		extent = new ExtentReports();
@@ -69,8 +68,8 @@ public class PerLb_TestCase
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
-		CheckCustomerName = checkDefaultPricingOfFranchisee();
-		if (CheckCustomerName.equals(Prop.getProperty("Customer1")))
+		ActualCustomer = checkDefaultPricingOfFranchisee();
+		if (ActualCustomer.equals(Prop.getProperty("Customer0")))
 		{
 			afterMethod();
 		}
@@ -81,13 +80,13 @@ public class PerLb_TestCase
 		}
 
 	}
-
-
+	
 	@Test
 	public void test()
 	{
-		System.out.println("Per Lb Customer Test!!");
+		System.out.println("Fixed Cost Customer Test!!");
 	}
+
 
 	public void performTest()
 	{
@@ -103,8 +102,8 @@ public class PerLb_TestCase
 		log.info("Check Franchisee Default Pricing");
 		log.info("Test Case1: Check Customer Page URL");
 		logger = extent.createTest("Test Case 2: Check Customer Page URL");
-		CustomerName = PerLb_Customer.defaultPricingFranchiseeLevel();
-		return CustomerName;
+		ActualCustomer = FixedCost_Customer.defaultPricingFranchiseeLevel();
+		return ActualCustomer;
 	}
 
 
@@ -112,8 +111,8 @@ public class PerLb_TestCase
 	{
 		log.info("Create Customer Basic info");
 		logger = extent.createTest("Test Case 3:Create Customer Basic info");
-		PerLb_Customer.createCustomer();
-		PerLb_Customer.basicInfo();
+		FixedCost_Customer.createCustomer();
+		FixedCost_Customer.basicInfo();
 	}
 
 
@@ -122,21 +121,21 @@ public class PerLb_TestCase
 		log.info("Create Customer Pricing and Estimating Info");
 		logger = extent.createTest(
 				"Test Case 4: Check Customer Pricing and Estimating Checkboxes And Default Dropdown Values");
-		PerLb_Customer.pricing();
+		FixedCost_Customer.pricing();
 	}
 
 
 	public void marketingInfo()
 	{
 		log.info("Create Customer Marketing Info");
-		PerLb_Customer.marketing();
+		FixedCost_Customer.marketing();
 	}
 
 
 	public void unitInfo()
 	{
 		log.info("Create Customer Unit Info");
-		PerLb_Customer.unit_Data();
+		FixedCost_Customer.unit_Data();
 	}
 
 
@@ -151,7 +150,7 @@ public class PerLb_TestCase
 					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			String dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			screenshotPath = System.getProperty("user.dir") + "/PerLb_TestCase/" + testResult.getName() + dateName
+			screenshotPath = System.getProperty("user.dir") + "/FixedCost_TestCase/" + testResult.getName() + dateName
 					+ "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
@@ -172,8 +171,8 @@ public class PerLb_TestCase
 
 	public void afterMethod()
 	{
-		log.info("Per Fryer Page Test Case Ends Here");
+		log.info("Fixed Cost Page Test Case Ends Here");
 		extent.flush();
-		PerLb_Customer.closeBrowser();
+		FixedCost_Customer.closeBrowser();
 	}
 }
