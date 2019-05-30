@@ -13,6 +13,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -71,7 +72,10 @@ public class FixedCost_TestCase
 		ActualCustomer = checkDefaultPricingOfFranchisee();
 		if (ActualCustomer.equals(Prop.getProperty("Customer0")))
 		{
-			afterMethod();
+			FixedCost_Customer.clickingWebElement();
+			FixedCost_Customer.location();
+			FixedCost_Customer.fryer();
+//			afterMethod();
 		}
 		else
 		{
@@ -168,11 +172,10 @@ public class FixedCost_TestCase
 		}
 	}
 
-
 	public void afterMethod()
 	{
 		log.info("Fixed Cost Page Test Case Ends Here");
 		extent.flush();
-		FixedCost_Customer.closeBrowser();
+//		FixedCost_Customer.closeBrowser();
 	}
 }

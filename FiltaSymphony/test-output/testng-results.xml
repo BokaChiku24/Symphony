@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50304" started-at="2019-05-26T17:16:25Z" finished-at="2019-05-26T17:17:16Z">
+  <suite name="Default suite" duration-ms="73732" started-at="2019-05-30T18:07:04Z" finished-at="2019-05-30T18:08:18Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50304" started-at="2019-05-26T17:16:25Z" finished-at="2019-05-26T17:17:16Z">
+    <test name="Default test" duration-ms="73732" started-at="2019-05-30T18:07:04Z" finished-at="2019-05-30T18:08:18Z">
       <class name="testCases_Customer.FixedCost_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.FixedCost_TestCase@67b92f0a]" name="property" is-config="true" duration-ms="50283" started-at="2019-05-26T17:16:25Z" finished-at="2019-05-26T17:17:16Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.FixedCost_TestCase@67b92f0a]" name="property" is-config="true" duration-ms="73675" started-at="2019-05-30T18:07:04Z" finished-at="2019-05-30T18:08:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="test()[pri:0, instance:testCases_Customer.FixedCost_TestCase@67b92f0a]" name="test" duration-ms="0" started-at="2019-05-26T17:17:16Z" finished-at="2019-05-26T17:17:16Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:testCases_Customer.FixedCost_TestCase@67b92f0a]" name="test" duration-ms="8" started-at="2019-05-30T18:08:18Z" finished-at="2019-05-30T18:08:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.FixedCost_TestCase@67b92f0a]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-05-26T17:17:16Z" finished-at="2019-05-26T17:17:16Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.FixedCost_TestCase@67b92f0a]" name="takeScreenShotOnFailure" is-config="true" duration-ms="16" started-at="2019-05-30T18:08:18Z" finished-at="2019-05-30T18:08:18Z">
           <params>
             <param index="0">
               <value>

@@ -6069,4 +6069,77 @@
  2019-05-26 22:47:00,749  INFO [main] Fixed Cost Test Case:102 - Check Franchisee Default Pricing
  2019-05-26 22:47:00,753  INFO [main] Fixed Cost Test Case:103 - Test Case1: Check Customer Page URL
  2019-05-26 22:47:13,965  INFO [main] Fixed Cost Test Case:174 - Fixed Cost Page Test Case Ends Here
+ 2019-05-29 22:17:11,602  INFO [main] Fixed Cost Test Case:102 - Check Franchisee Default Pricing
+ 2019-05-29 22:17:11,671  INFO [main] Fixed Cost Test Case:103 - Test Case1: Check Customer Page URL
+ 2019-05-29 22:17:28,619  INFO [main] Fixed Cost Test Case:174 - Fixed Cost Page Test Case Ends Here
+ 2019-05-29 22:25:59,402  INFO [main] Fixed Cost Test Case:103 - Check Franchisee Default Pricing
+ 2019-05-29 22:25:59,406  INFO [main] Fixed Cost Test Case:104 - Test Case1: Check Customer Page URL
+ 2019-05-29 22:26:18,178  INFO [main] Fixed Cost Test Case:175 - Fixed Cost Page Test Case Ends Here
+ 2019-05-29 22:30:11,089  INFO [main] Fixed Cost Test Case:103 - Check Franchisee Default Pricing
+ 2019-05-29 22:30:11,094  INFO [main] Fixed Cost Test Case:104 - Test Case1: Check Customer Page URL
+ 2019-05-29 22:30:29,781  INFO [main] Fixed Cost Test Case:175 - Fixed Cost Page Test Case Ends Here
+ 2019-05-29 23:08:48,725  INFO [main] Fixed Cost Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-29 23:08:48,728  INFO [main] Fixed Cost Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-29 23:21:37,606  INFO [main] Fixed Cost Test Case:104 - Check Franchisee Default Pricing
+ 2019-05-29 23:21:37,609  INFO [main] Fixed Cost Test Case:105 - Test Case1: Check Customer Page URL
+ 2019-05-29 23:26:59,229  INFO [main] Fixed Cost Test Case:105 - Check Franchisee Default Pricing
+ 2019-05-29 23:26:59,233  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
+ 2019-05-29 23:51:48,612  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-29 23:51:48,616  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-29 23:56:29,225  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-29 23:56:29,227  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 00:00:36,617  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 00:00:36,622  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 01:04:07,142  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 01:04:07,148  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 01:06:57,319  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 01:06:57,325  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:23:47,855  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:23:47,897  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:25:14,963  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:25:14,965  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:28:29,136  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:28:29,140  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:29:57,494  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:29:57,495  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:34:31,127  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:34:31,129  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:40:47,891  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:40:47,893  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:47:29,113  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:47:29,115  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:49:26,209  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:49:26,211  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:51:01,341  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:51:01,343  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:53:57,085  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:53:57,087  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 22:57:45,829  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 22:57:45,831  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:00:14,297  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:00:14,303  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:02:41,978  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:02:41,982  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:04:14,266  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:04:14,268  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:06:01,954  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:06:01,957  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:07:43,089  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:07:43,092  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:10:55,598  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:10:55,601  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:23:04,885  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:23:04,891  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:26:35,590  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:26:35,593  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:30:26,774  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:30:26,776  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:32:03,293  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:32:03,297  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:33:43,298  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:33:43,300  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:35:26,704  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:35:26,706  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-05-30 23:37:45,150  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-05-30 23:37:45,153  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
  

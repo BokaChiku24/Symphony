@@ -304,7 +304,9 @@ public class Global
 		return action;
 	}
 
-	public String alert(String Input, WebDriver driver) {
+
+	public String alert(String Input, WebDriver driver)
+	{
 		Alert alert = driver.switchTo().alert();
 		String Message = alert.getText();
 		if (Input.equalsIgnoreCase("accept"))
@@ -313,10 +315,14 @@ public class Global
 			alert.dismiss();
 		return Message;
 	}
-	
+
+
 	public JavascriptExecutor jsReturn(WebDriver driver)
 	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		return js;
 	}
+
+
+	
 }

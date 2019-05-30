@@ -51,6 +51,7 @@ public class FixedCostCustomerPage
 	private String Default_PaymentDefault;
 	private String ActualPayment;
 	private String ActualCustomer;
+	private WebElement webelement;
 
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
 	private WebElement containerClose;
@@ -451,6 +452,18 @@ public class FixedCostCustomerPage
 	@FindBy(how = How.XPATH, using = ".//input[@id='set_charge']")
 	private WebElement ActualFixedCharge;
 
+	@FindBy(how = How.CSS, using = "#customers_fryer_locations_create_button")
+	public WebElement locationCreate;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fryer_locations_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='FR_FryerLocation_subpanel_save_button']")
+	public WebElement locationSave;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fryer_locations']//table[@class='list view']//tbody//tr//tbody//tr//td[2]//span")
+	public WebElement LocationCheck;
+
+	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[9]")
+	public WebElement Other;
+
 
 	public FixedCostCustomerPage(WebDriver driver)
 	{
@@ -593,33 +606,16 @@ public class FixedCostCustomerPage
 				.getAttribute("value"));
 		System.out.println(count);
 		String Array[] = new String[count];
-		if (count == 1)
+
+		for (int i = 0, j = 3; i < count; i++, j++)
 		{
-			for (int i = 0, j = 3; i < count; i++, j++)
+			Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]")).getText();
+			if (driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]")).getText()
+					.equals(Prop.getProperty("Customer0")))
 			{
-				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
-						.getText();
-				System.out.println(Array[i]);
+				webelement = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"));
 			}
 		}
-		if (count == 2)
-		{
-			for (int i = 0, j = 3; i < count; i++, j++)
-			{
-				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
-						.getText();
-				System.out.println(Array[i]);
-			}
-		}
-		if (count == 3)
-		{
-			for (int i = 0, j = 3; i < count; i++, j++)
-			{
-				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
-						.getText();
-			}
-		}
-		if (count == 4)
 		{
 			for (int i = 0, j = 3; i < count; i++, j++)
 			{
@@ -831,6 +827,107 @@ public class FixedCostCustomerPage
 	}
 
 
+	public void location()
+	{
+		global.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Other")));
+		try
+		{
+			Thread.sleep(2000);
+		}
+		catch (InterruptedException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Other.click();
+		try
+		{
+			Thread.sleep(4000);
+		}
+		catch (InterruptedException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(LocationCheck.getText());
+
+		if (LocationCheck.getText().contains("(0 - 0 of 0)"))
+		{
+			locationCreate.click();
+			loadar2();
+			LocationName.sendKeys("Location1");
+			LocationDescription.sendKeys("Location Added for the Customer..");
+			locationSave.click();
+		}
+		else 
+		{
+			System.out.println("Location Already Added !!");
+		}
+
+	}
+
+
+	public void fryer()
+	{
+		global.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fryers")));
+		// Fryers.click();
+		global.action(driver).moveToElement(Fryers).click().build().perform();
+		// action().moveToElement(Fryers).click().build().perform();
+		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", CreateFryer);
+		CreateFryer.click();
+		loadar2();
+		try
+		{
+			Thread.sleep(2000);
+		}
+		catch (InterruptedException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Fryer.sendKeys("F1");
+		FryerSize.sendKeys("50");
+		FryerSort.click();
+		lodar();
+		FryerSort.sendKeys("1");
+		LocationSelect.click();
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		Locationname.click();
+		driver.switchTo().window(tabs.get(0));
+		FryerDescription.sendKeys("Fryer One");
+		FryerSave.click();
+//		CreateFryer.click();
+		/*
+		 * Fryer.sendKeys("F2"); FryerSize.sendKeys("100"); FryerSort.click(); lodar();
+		 * FryerSort.sendKeys("2"); // FryerCharge.sendKeys("20.36"); //
+		 * FryerCleanOnly.sendKeys("05.25"); LocationSelect.click(); ArrayList<String>
+		 * tabs2 = new ArrayList<String>(driver.getWindowHandles());
+		 * driver.switchTo().window(tabs2.get(1)); Locationname.click();
+		 * driver.switchTo().window(tabs2.get(0));
+		 * FryerDescription.sendKeys("Fryer Two "); FryerSave.click();
+		 * CreateFryer.click();
+		 * 
+		 * Fryer.sendKeys("F3"); FryerSize.sendKeys("100"); FryerSort.click(); lodar();
+		 * FryerSort.sendKeys("3"); // FryerCharge.sendKeys("36.25"); //
+		 * FryerCleanOnly.sendKeys("21.56"); LocationSelect.click(); ArrayList<String>
+		 * tabs3 = new ArrayList<String>(driver.getWindowHandles());
+		 * driver.switchTo().window(tabs3.get(1)); Locationname.click();
+		 * driver.switchTo().window(tabs3.get(0));
+		 * FryerDescription.sendKeys("Fryer Three"); FryerSave.click();
+		 * CreateFryer.click();
+		 * 
+		 * Fryer.sendKeys("F4"); FryerSize.sendKeys("150"); FryerSort.click(); lodar();
+		 * FryerSort.sendKeys("4"); // FryerCharge.sendKeys("40.25"); //
+		 * FryerCleanOnly.sendKeys("90.25"); LocationSelect.click(); ArrayList<String>
+		 * tabs4 = new ArrayList<String>(driver.getWindowHandles());
+		 * driver.switchTo().window(tabs4.get(1)); Locationname.click();
+		 * driver.switchTo().window(tabs4.get(0));
+		 * FryerDescription.sendKeys("Fryer Four"); FryerSave.click();
+		 */
+	}
+
+
 	public void save()
 	{
 		Save.click();
@@ -842,6 +939,18 @@ public class FixedCostCustomerPage
 	{
 		global.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxloading_mask")));
+	}
+
+
+	public void loadar2()
+	{
+		global.wait(driver).until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
+	}
+
+
+	public void clickingWebElement()
+	{
+		webelement.click();
 	}
 
 
