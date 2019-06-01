@@ -464,6 +464,9 @@ public class FixedCostCustomerPage
 	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[9]")
 	public WebElement Other;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fr_fryers']//table//table//tbody//tr//td[2]//span")
+	public WebElement FryersCheck;
+
 
 	public FixedCostCustomerPage(WebDriver driver)
 	{
@@ -840,15 +843,7 @@ public class FixedCostCustomerPage
 			e.printStackTrace();
 		}
 		Other.click();
-		try
-		{
-			Thread.sleep(4000);
-		}
-		catch (InterruptedException e)
-		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		loadar2();
 		System.out.println(LocationCheck.getText());
 
 		if (LocationCheck.getText().contains("(0 - 0 of 0)"))
@@ -859,7 +854,7 @@ public class FixedCostCustomerPage
 			LocationDescription.sendKeys("Location Added for the Customer..");
 			locationSave.click();
 		}
-		else 
+		else
 		{
 			System.out.println("Location Already Added !!");
 		}
@@ -872,59 +867,84 @@ public class FixedCostCustomerPage
 		global.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fryers")));
 		// Fryers.click();
 		global.action(driver).moveToElement(Fryers).click().build().perform();
-		// action().moveToElement(Fryers).click().build().perform();
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", CreateFryer);
-		CreateFryer.click();
-		loadar2();
-		try
+		if (FryersCheck.getText().contains("(0 - 0 of 0)"))
 		{
-			Thread.sleep(2000);
+			CreateFryer.click();
+			loadar2();
+			lodar();
+			Fryer.sendKeys("F1");
+			FryerSize.sendKeys("50");
+			FryerSort.click();
+			lodar();
+			FryerSort.sendKeys("1");
+			LocationSelect.click();
+			ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(1));
+			Locationname.click();
+			driver.switchTo().window(tabs.get(0));
+			FryerDescription.sendKeys("Fryer One");
+			FryerSave.click();
 		}
-		catch (InterruptedException e)
+		else if (FryersCheck.getText().contains("(1 - 1 of 1)"))
 		{
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			CreateFryer.click();
+			loadar2();
+			lodar();
+			Fryer.sendKeys("F2");
+			FryerSize.sendKeys("100");
+			FryerSort.click();
+			lodar();
+			FryerSort.sendKeys("2");
+			LocationSelect.click();
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			Locationname.click();
+			driver.switchTo().window(tabs2.get(0));
+			FryerDescription.sendKeys("Fryer Two ");
+			FryerSave.click();
 		}
-		Fryer.sendKeys("F1");
-		FryerSize.sendKeys("50");
-		FryerSort.click();
-		lodar();
-		FryerSort.sendKeys("1");
-		LocationSelect.click();
-		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(tabs.get(1));
-		Locationname.click();
-		driver.switchTo().window(tabs.get(0));
-		FryerDescription.sendKeys("Fryer One");
-		FryerSave.click();
-//		CreateFryer.click();
-		/*
-		 * Fryer.sendKeys("F2"); FryerSize.sendKeys("100"); FryerSort.click(); lodar();
-		 * FryerSort.sendKeys("2"); // FryerCharge.sendKeys("20.36"); //
-		 * FryerCleanOnly.sendKeys("05.25"); LocationSelect.click(); ArrayList<String>
-		 * tabs2 = new ArrayList<String>(driver.getWindowHandles());
-		 * driver.switchTo().window(tabs2.get(1)); Locationname.click();
-		 * driver.switchTo().window(tabs2.get(0));
-		 * FryerDescription.sendKeys("Fryer Two "); FryerSave.click();
-		 * CreateFryer.click();
-		 * 
-		 * Fryer.sendKeys("F3"); FryerSize.sendKeys("100"); FryerSort.click(); lodar();
-		 * FryerSort.sendKeys("3"); // FryerCharge.sendKeys("36.25"); //
-		 * FryerCleanOnly.sendKeys("21.56"); LocationSelect.click(); ArrayList<String>
-		 * tabs3 = new ArrayList<String>(driver.getWindowHandles());
-		 * driver.switchTo().window(tabs3.get(1)); Locationname.click();
-		 * driver.switchTo().window(tabs3.get(0));
-		 * FryerDescription.sendKeys("Fryer Three"); FryerSave.click();
-		 * CreateFryer.click();
-		 * 
-		 * Fryer.sendKeys("F4"); FryerSize.sendKeys("150"); FryerSort.click(); lodar();
-		 * FryerSort.sendKeys("4"); // FryerCharge.sendKeys("40.25"); //
-		 * FryerCleanOnly.sendKeys("90.25"); LocationSelect.click(); ArrayList<String>
-		 * tabs4 = new ArrayList<String>(driver.getWindowHandles());
-		 * driver.switchTo().window(tabs4.get(1)); Locationname.click();
-		 * driver.switchTo().window(tabs4.get(0));
-		 * FryerDescription.sendKeys("Fryer Four"); FryerSave.click();
-		 */
+		else if (FryersCheck.getText().contains("(1 - 2 of 2)"))
+		{
+			CreateFryer.click();
+			loadar2();
+			lodar();
+			Fryer.sendKeys("F3");
+			FryerSize.sendKeys("100");
+			FryerSort.click();
+			lodar();
+			FryerSort.sendKeys("3");
+			LocationSelect.click();
+			ArrayList<String> tabs3 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs3.get(1));
+			Locationname.click();
+			driver.switchTo().window(tabs3.get(0));
+			FryerDescription.sendKeys("Fryer Three");
+			FryerSave.click();
+		}
+		else if (FryersCheck.getText().contains("(1 - 3 of 3)"))
+		{
+			CreateFryer.click();
+			loadar2();
+			lodar();
+			Fryer.sendKeys("F4");
+			FryerSize.sendKeys("150");
+			FryerSort.click();
+			lodar();
+			FryerSort.sendKeys("4");
+			LocationSelect.click();
+			ArrayList<String> tabs4 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs4.get(1));
+			Locationname.click();
+			driver.switchTo().window(tabs4.get(0));
+			FryerDescription.sendKeys("Fryer Four");
+			FryerSave.click();
+		}
+		else
+		{
+			System.out.println("Fryers Are Already Added..");
+		}
+
 	}
 
 
