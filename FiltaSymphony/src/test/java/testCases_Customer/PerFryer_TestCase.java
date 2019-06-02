@@ -43,7 +43,7 @@ public class PerFryer_TestCase
 	private String screenshotPath;
 	private Properties Prop;
 	private String ActualCustomer;
-	
+
 	public static Logger log = Logger.getLogger("Per Fryer Test Case");
 	static
 	{
@@ -74,6 +74,9 @@ public class PerFryer_TestCase
 		ActualCustomer = checkDefaultPricingOfFranchisee();
 		if (ActualCustomer.equals(Prop.getProperty("Customer2")))
 		{
+			PerFryer_Customer.clickingWebElement();
+			PerFryer_Customer.location();
+			PerFryer_Customer.fryer();
 			afterMethod();
 		}
 		else
@@ -177,6 +180,6 @@ public class PerFryer_TestCase
 	{
 		log.info("Per Fryer Page Test Case Ends Here");
 		extent.flush();
-		PerFryer_Customer.closeBrowser();
+//		PerFryer_Customer.closeBrowser();
 	}
 }

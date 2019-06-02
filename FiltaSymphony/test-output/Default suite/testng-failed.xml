@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases_Customer.FixedCost_TestCase">
+      <class name="testCases_Customer.PerFryer_TestCase">
         <methods>
+          <include name="takeScreenShotOnFailure"/>
           <include name="test"/>
           <include name="property"/>
-          <include name="takeScreenShotOnFailure"/>
         </methods>
-      </class> <!-- testCases_Customer.FixedCost_TestCase -->
+      </class> <!-- testCases_Customer.PerFryer_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

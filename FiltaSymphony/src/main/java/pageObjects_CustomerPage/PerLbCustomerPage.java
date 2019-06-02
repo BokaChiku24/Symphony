@@ -51,7 +51,8 @@ public class PerLbCustomerPage
 	private String Default_PaymentDefault;
 	private String ActualPayment;
 	private String ActualCustomer;
-
+	private WebElement webelement;
+	
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
 	private WebElement containerClose;
 
@@ -448,7 +449,21 @@ public class PerLbCustomerPage
 	@FindBy(how = How.XPATH, using = ".//input[@title='Select all' and @id='massall_top']")
 	private WebElement SelectAll;
 
+	@FindBy(how = How.CSS, using = "#customers_fryer_locations_create_button")
+	public WebElement locationCreate;
 
+	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fryer_locations_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='FR_FryerLocation_subpanel_save_button']")
+	public WebElement locationSave;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fryer_locations']//table[@class='list view']//tbody//tr//tbody//tr//td[2]//span")
+	public WebElement LocationCheck;
+
+	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[9]")
+	public WebElement Other;
+
+	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fr_fryers']//table//table//tbody//tr//td[2]//span")
+	public WebElement FryersCheck;
+	
 	public PerLbCustomerPage(WebDriver driver)
 	{
 		global = new Global();
@@ -589,38 +604,13 @@ public class PerLbCustomerPage
 				".//table[@class='paginationTable']//td[@class='paginationActionButtons']//span[@id='selectedRecordsTop' and @class='show']//input"))
 				.getAttribute("value"));
 		String Array[] = new String[count];
-		if (count == 1)
+		for (int i = 0, j = 3; i < count; i++, j++)
 		{
-			for (int i = 0, j = 3; i < count; i++, j++)
+			Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]")).getText();
+			if (driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]")).getText()
+					.equals(Prop.getProperty("Customer1")))
 			{
-				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
-						.getText();
-				System.out.println(Array[i]);
-			}
-		}
-		if (count == 2)
-		{
-			for (int i = 0, j = 3; i < count; i++, j++)
-			{
-				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
-						.getText();
-				System.out.println(Array[i]);
-			}
-		}
-		if (count == 3)
-		{
-			for (int i = 0, j = 3; i < count; i++, j++)
-			{
-				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
-						.getText();
-			}
-		}
-		if (count == 4)
-		{
-			for (int i = 0, j = 3; i < count; i++, j++)
-			{
-				Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"))
-						.getText();
+				webelement = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"));
 			}
 		}
 		for (int i = 0; i < Array.length; i++)
@@ -827,6 +817,123 @@ public class PerLbCustomerPage
 	}
 
 
+	public void location()
+	{
+		global.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Other")));
+		try
+		{
+			Thread.sleep(2000);
+		}
+		catch (InterruptedException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Other.click();
+		loadar2();
+		System.out.println(LocationCheck.getText());
+
+		if (LocationCheck.getText().contains("(0 - 0 of 0)"))
+		{
+			locationCreate.click();
+			loadar2();
+			LocationName.sendKeys("Location1");
+			LocationDescription.sendKeys("Location Added for the Customer..");
+			locationSave.click();
+		}
+		else
+		{
+			System.out.println("Location Already Added !!");
+		}
+
+	}
+
+	public void fryer()
+	{
+		global.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fryers")));
+		// Fryers.click();
+		global.action(driver).moveToElement(Fryers).click().build().perform();
+		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", CreateFryer);
+		if (FryersCheck.getText().contains("(0 - 0 of 0)"))
+		{
+			CreateFryer.click();
+			loadar2();
+			lodar();
+			global.wait(driver).until(ExpectedConditions.visibilityOf(Fryer));
+			Fryer.sendKeys("F1");
+			FryerSize.sendKeys("50");
+			FryerSort.click();
+			lodar();
+			FryerSort.sendKeys("1");
+			LocationSelect.click();
+			ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(1));
+			Locationname.click();
+			driver.switchTo().window(tabs.get(0));
+			FryerDescription.sendKeys("Fryer One");
+			FryerSave.click();
+		}
+		else if (FryersCheck.getText().contains("(1 - 1 of 1)"))
+		{
+			CreateFryer.click();
+			loadar2();
+			lodar();
+			Fryer.sendKeys("F2");
+			FryerSize.sendKeys("100");
+			FryerSort.click();
+			lodar();
+			FryerSort.sendKeys("2");
+			LocationSelect.click();
+			ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs2.get(1));
+			Locationname.click();
+			driver.switchTo().window(tabs2.get(0));
+			FryerDescription.sendKeys("Fryer Two ");
+			FryerSave.click();
+		}
+		else if (FryersCheck.getText().contains("(1 - 2 of 2)"))
+		{
+			CreateFryer.click();
+			loadar2();
+			lodar();
+			Fryer.sendKeys("F3");
+			FryerSize.sendKeys("100");
+			FryerSort.click();
+			lodar();
+			FryerSort.sendKeys("3");
+			LocationSelect.click();
+			ArrayList<String> tabs3 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs3.get(1));
+			Locationname.click();
+			driver.switchTo().window(tabs3.get(0));
+			FryerDescription.sendKeys("Fryer Three");
+			FryerSave.click();
+		}
+		else if (FryersCheck.getText().contains("(1 - 3 of 3)"))
+		{
+			CreateFryer.click();
+			loadar2();
+			lodar();
+			Fryer.sendKeys("F4");
+			FryerSize.sendKeys("150");
+			FryerSort.click();
+			lodar();
+			FryerSort.sendKeys("4");
+			LocationSelect.click();
+			ArrayList<String> tabs4 = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs4.get(1));
+			Locationname.click();
+			driver.switchTo().window(tabs4.get(0));
+			FryerDescription.sendKeys("Fryer Four");
+			FryerSave.click();
+		}
+		else
+		{
+			System.out.println("Fryers Are Already Added..");
+		}
+
+	}
+
 	public void save()
 	{
 		Save.click();
@@ -838,6 +945,18 @@ public class PerLbCustomerPage
 	{
 		global.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxloading_mask")));
+	}
+
+
+	public void loadar2()
+	{
+		global.wait(driver).until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
+	}
+
+
+	public void clickingWebElement()
+	{
+		webelement.click();
 	}
 
 

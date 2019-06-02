@@ -72,6 +72,9 @@ public class PerLb_TestCase
 		CheckCustomerName = checkDefaultPricingOfFranchisee();
 		if (CheckCustomerName.equals(Prop.getProperty("Customer1")))
 		{
+			PerLb_Customer.clickingWebElement();
+			PerLb_Customer.location();
+			PerLb_Customer.fryer();
 			afterMethod();
 		}
 		else
@@ -174,6 +177,6 @@ public class PerLb_TestCase
 	{
 		log.info("Per Fryer Page Test Case Ends Here");
 		extent.flush();
-		PerLb_Customer.closeBrowser();
+//		PerLb_Customer.closeBrowser();
 	}
 }
