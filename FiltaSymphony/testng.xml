@@ -3,10 +3,16 @@
 <suite name="Symphony Testing">
 	<test thread-count="5" name="testngTest">
 		<classes>
-			<class name="testCases_LoginPage.Login_TestCase"/>
-			<class name="testCases_LoginPage.LoginPage_TestCase"/>
-			<class name="testCases_LoginPage.LoginInvalid_TestCase"/>
+			<class name="testCases_LoginPage.LogIn_TestCase"/>
+			<class name="testCases_LoginPage.LogInPage_TestCase"/>
+			<class name="testCases_LoginPage.LogInInvalid_TestCase"/>
 			<class name="testCases_LoginPage.ForgetPassword_TestCase"/>
+			<class name="testCases_Customer.FixedCost_TestCase"/>
+			<class name="testCases_Customer.PerFryer_TestCase"/>
+			<class name="testCases_Customer.PerLb_TestCase"/>
+			<class name="testCases_Customer.PerFryer_TestCase"/>
+			<class name="testCases_HomePageFranchisee.HomePage_TestCase"/>
+			<class name="testCases_HomePageFranchisee.UserPage_TestCase"/>
 		</classes>
 	</test>
 </suite>

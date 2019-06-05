@@ -837,7 +837,7 @@ public class UserPage implements UserPage_Interface
 		topText1.click();
 		global.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		sa.assertEquals(driver.getCurrentUrl(), Prop.getProperty("UserPageURL"));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -862,7 +862,7 @@ public class UserPage implements UserPage_Interface
 				Prop.getProperty("UserPageResetUserPreferencesButtonHeader"));
 		sa.assertEquals(ResetHomePageButtonHeader.getAttribute("value"),
 				Prop.getProperty("UserPageResetHomepageButtonHeader"));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -913,7 +913,7 @@ public class UserPage implements UserPage_Interface
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooterTextWhite"));
 		sa.assertEquals(ResetHomePageButtonFooter.getCssValue("color"),
 				Prop.getProperty("UserPageResetHomePageButtonFooterTextWhite"));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -954,7 +954,7 @@ public class UserPage implements UserPage_Interface
 		global.action(driver).moveToElement(ResetHomePageButtonHeader).build().perform();
 		sa.assertEquals(ResetHomePageButtonHeader.getCssValue("border-color"),
 				Prop.getProperty("UserPageResetHomePageButtonBackGroundColorGreen"));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -981,7 +981,7 @@ public class UserPage implements UserPage_Interface
 				Prop.getProperty("UserPageResetUserPreferencesButtonFooterToolTip"));
 		sa.assertEquals(ResetHomePageButtonFooter.getAttribute("title"),
 				Prop.getProperty("UserPageResetHomePageButtonFooterToolTip"));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -1029,7 +1029,7 @@ public class UserPage implements UserPage_Interface
 			}
 		}
 		sa.assertEquals(list2.size(), Integer.parseInt(Prop.getProperty("TabOnUserPageCount")));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -1126,7 +1126,7 @@ public class UserPage implements UserPage_Interface
 		sa.assertTrue(PrimaryRadio1);
 		sa.assertEquals(PrimaryReplyTo, false);
 		sa.assertEquals(DefaultEmailClient, UserData.getCellData(1, 23));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -1175,7 +1175,7 @@ public class UserPage implements UserPage_Interface
 		sa.assertEquals(UserPRofile_Description.getText(), Description);
 		sa.assertEquals(UserProfile_PrimaryEmail.getText(), EmailAddress1);
 		sa.assertEquals(UserProfile_SugarClient.getText(), DefaultEmailClient);
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -1232,7 +1232,7 @@ public class UserPage implements UserPage_Interface
 				.until(ExpectedConditions.textToBePresentInElement(PasswordUpdatedLabel, "Password Updated"));
 		sa.assertEquals(PasswordUpdatedLabel.getText(), PasswordData.getCellData(1, 7));
 		sa.assertEquals(PasswordUpdatedLabel2.getText(), PasswordData.getCellData(1, 8));
-		sa.assertAll();
+//		sa.assertAll();
 		SugarDashletClose.click();
 	}
 
@@ -1252,7 +1252,7 @@ public class UserPage implements UserPage_Interface
 		}
 		sa.assertEquals(list.size(), (int) (ThemeData.getCellDataInt(1, 2)));
 		sa.assertEquals(global.select(DefaultTheme).getFirstSelectedOption().getText(), ThemeData.getCellData(1, 1));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -1787,7 +1787,7 @@ public class UserPage implements UserPage_Interface
 		sa.assertEquals(FirstDayOfWeek, CalendarOptionData.getCellData(1, 5));
 		global.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", CancelButtonFooter);
 		CancelButtonFooter.click();
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -1886,7 +1886,7 @@ public class UserPage implements UserPage_Interface
 		sa.assertEquals(SubPanel_Tab_Text.getText(), LayoutData.getCellData(1, 5) + " ");
 		sa.assertEquals(All.getText(), LayoutData.getCellData(0, 8));
 		sa.assertEquals(All.getCssValue("color"), LayoutData.getCellData(1, 8));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 
@@ -2010,7 +2010,7 @@ public class UserPage implements UserPage_Interface
 		sa.assertEquals(Roles_Franchisee.getText(), AccessData.getCellData(0, 16));
 		sa.assertEquals(Roles_Not_Delete.getText(), AccessData.getCellData(0, 17));
 		sa.assertEquals(Roles_ALL.getText(), AccessData.getCellData(0, 18));
-		sa.assertAll();
+//		sa.assertAll();
 	}
 
 

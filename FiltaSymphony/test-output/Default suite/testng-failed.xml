@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases_Customer.PerFryer_TestCase">
+      <class name="testCases_HomePageFranchisee.UserPage_TestCase">
         <methods>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="test"/>
+          <include name="afterMethod"/>
           <include name="property"/>
+          <include name="checkAccessOfUser"/>
+          <include name="takeScreenShotOnFailure"/>
         </methods>
-      </class> <!-- testCases_Customer.PerFryer_TestCase -->
+      </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

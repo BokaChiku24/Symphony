@@ -1,32 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="82552" started-at="2019-06-02T16:19:24Z" finished-at="2019-06-02T16:20:46Z">
+  <suite name="Default suite" duration-ms="320031" started-at="2019-06-05T02:14:07Z" finished-at="2019-06-05T02:19:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="82552" started-at="2019-06-02T16:19:24Z" finished-at="2019-06-02T16:20:46Z">
-      <class name="testCases_Customer.PerFryer_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="property" is-config="true" duration-ms="82511" started-at="2019-06-02T16:19:24Z" finished-at="2019-06-02T16:20:46Z">
+    <test name="Default test" duration-ms="320031" started-at="2019-06-05T02:14:07Z" finished-at="2019-06-05T02:19:27Z">
+      <class name="testCases_HomePageFranchisee.UserPage_TestCase">
+        <test-method status="PASS" signature="property()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="property" is-config="true" duration-ms="51875" started-at="2019-06-05T02:14:07Z" finished-at="2019-06-05T02:14:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="test()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="test" duration-ms="9" started-at="2019-06-02T16:20:46Z" finished-at="2019-06-02T16:20:46Z">
+        <test-method status="PASS" signature="checkURL()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkURL" duration-ms="8914" started-at="2019-06-05T02:14:59Z" finished-at="2019-06-05T02:15:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a]" name="takeScreenShotOnFailure" is-config="true" duration-ms="8" started-at="2019-06-02T16:20:46Z" finished-at="2019-06-02T16:20:46Z">
+        </test-method> <!-- checkURL -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="89" started-at="2019-06-05T02:15:08Z" finished-at="2019-06-05T02:15:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=PerFryer_TestCase.test()[pri:0, instance:testCases_Customer.PerFryer_TestCase@67b92f0a] output={null}]]]>
+                <![CDATA[[TestResult name=checkURL status=SUCCESS method=UserPage_TestCase.checkURL()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-      </class> <!-- testCases_Customer.PerFryer_TestCase -->
+        <test-method status="PASS" signature="checkButtonName()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkButtonName" duration-ms="5039" started-at="2019-06-05T02:15:08Z" finished-at="2019-06-05T02:15:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkButtonName -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-06-05T02:15:13Z" finished-at="2019-06-05T02:15:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkButtonName status=SUCCESS method=UserPage_TestCase.checkButtonName()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="buttonBackGroundWithoutMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithoutMouseOverview" duration-ms="5650" started-at="2019-06-05T02:15:13Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.checkButtonName" finished-at="2019-06-05T02:15:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buttonBackGroundWithoutMouseOverview -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-06-05T02:15:19Z" finished-at="2019-06-05T02:15:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buttonBackGroundWithoutMouseOverview status=SUCCESS method=UserPage_TestCase.buttonBackGroundWithoutMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="buttonBackGroundWithMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithMouseOverview" duration-ms="5629" started-at="2019-06-05T02:15:19Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.buttonBackGroundWithoutMouseOverview" finished-at="2019-06-05T02:15:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buttonBackGroundWithMouseOverview -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-06-05T02:15:25Z" finished-at="2019-06-05T02:15:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buttonBackGroundWithMouseOverview status=SUCCESS method=UserPage_TestCase.buttonBackGroundWithMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="buttonToolTipCheck()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonToolTipCheck" duration-ms="3702" started-at="2019-06-05T02:15:25Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.buttonBackGroundWithMouseOverview" finished-at="2019-06-05T02:15:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buttonToolTipCheck -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-06-05T02:15:28Z" finished-at="2019-06-05T02:15:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buttonToolTipCheck status=SUCCESS method=UserPage_TestCase.buttonToolTipCheck()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="tabnamesCheck()[pri:2, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="tabnamesCheck" duration-ms="5328" started-at="2019-06-05T02:15:28Z" finished-at="2019-06-05T02:15:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tabnamesCheck -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-06-05T02:15:34Z" finished-at="2019-06-05T02:15:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tabnamesCheck status=SUCCESS method=UserPage_TestCase.tabnamesCheck()[pri:2, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="checkDataOfUserProfile()[pri:3, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkDataOfUserProfile" duration-ms="16288" started-at="2019-06-05T02:15:34Z" finished-at="2019-06-05T02:15:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDataOfUserProfile -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-06-05T02:15:50Z" finished-at="2019-06-05T02:15:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkDataOfUserProfile status=SUCCESS method=UserPage_TestCase.checkDataOfUserProfile()[pri:3, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="checkPasswordPageOnEdit()[pri:4, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkPasswordPageOnEdit" duration-ms="19093" started-at="2019-06-05T02:15:50Z" finished-at="2019-06-05T02:16:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPasswordPageOnEdit -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-06-05T02:16:09Z" finished-at="2019-06-05T02:16:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkPasswordPageOnEdit status=SUCCESS method=UserPage_TestCase.checkPasswordPageOnEdit()[pri:4, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="checkThemesPageOnEdit()[pri:5, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkThemesPageOnEdit" duration-ms="3892" started-at="2019-06-05T02:16:09Z" finished-at="2019-06-05T02:16:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkThemesPageOnEdit -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-06-05T02:16:13Z" finished-at="2019-06-05T02:16:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkThemesPageOnEdit status=SUCCESS method=UserPage_TestCase.checkThemesPageOnEdit()[pri:5, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="checkAdvancedOfUserProfile()[pri:6, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkAdvancedOfUserProfile" duration-ms="51535" started-at="2019-06-05T02:16:13Z" finished-at="2019-06-05T02:17:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAdvancedOfUserProfile -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-06-05T02:17:04Z" finished-at="2019-06-05T02:17:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkAdvancedOfUserProfile status=SUCCESS method=UserPage_TestCase.checkAdvancedOfUserProfile()[pri:6, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="checkAccessOfUser()[pri:7, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkAccessOfUser" duration-ms="138220" started-at="2019-06-05T02:17:04Z" finished-at="2019-06-05T02:19:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAccessOfUser -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-06-05T02:19:23Z" finished-at="2019-06-05T02:19:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkAccessOfUser status=SUCCESS method=UserPage_TestCase.checkAccessOfUser()[pri:7, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="afterMethod" is-config="true" duration-ms="4689" started-at="2019-06-05T02:19:23Z" finished-at="2019-06-05T02:19:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
