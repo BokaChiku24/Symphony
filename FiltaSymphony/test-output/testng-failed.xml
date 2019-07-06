@@ -7,7 +7,7 @@
         <methods>
           <include name="afterMethod"/>
           <include name="property"/>
-          <include name="checkAccessOfUser"/>
+          <include name="checkThemesPageOnEdit"/>
           <include name="takeScreenShotOnFailure"/>
         </methods>
       </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
