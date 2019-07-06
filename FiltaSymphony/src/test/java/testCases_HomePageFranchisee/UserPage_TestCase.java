@@ -140,32 +140,32 @@ public class UserPage_TestCase
 	}
 
 
-	@Test(priority = 5)
-	public void checkThemesPageOnEdit()
-	{
-		log.info("Test Case 8: Check Themes Page On Edit");
-		logger = extent.createTest("Test Case 8: Check Themes Page On Edit");
-		UserPageObject.checkThemesPage();
-	}
-
-
-	@Test(priority = 6)
-	public void checkAdvancedOfUserProfile()
-	{
-		log.info("Test Case 9: Check Advanced On User Page");
-		logger = extent.createTest("Test Case 9: Check Advanced On User Page");
-		UserPageObject.checkDataFromEditPageAdvanced();
-		UserPageObject.verifyDataOfAdvanced();
-	}
-
-
-	@Test(priority = 7)
-	public void checkAccessOfUser()
-	{
-		log.info("Test Case 10: Check The User Access");
-		logger = extent.createTest("Test Case 10: Check The User Access");
-		UserPageObject.accessCheck();
-	}
+//	@Test(priority = 5)
+//	public void checkThemesPageOnEdit()
+//	{
+//		log.info("Test Case 8: Check Themes Page On Edit");
+//		logger = extent.createTest("Test Case 8: Check Themes Page On Edit");
+//		UserPageObject.checkThemesPage();
+//	}
+//
+//
+//	@Test(priority = 6)
+//	public void checkAdvancedOfUserProfile()
+//	{
+//		log.info("Test Case 9: Check Advanced On User Page");
+//		logger = extent.createTest("Test Case 9: Check Advanced On User Page");
+//		UserPageObject.checkDataFromEditPageAdvanced();
+//		UserPageObject.verifyDataOfAdvanced();
+//	}
+//
+//
+//	@Test(priority = 7)
+//	public void checkAccessOfUser()
+//	{
+//		log.info("Test Case 10: Check The User Access");
+//		logger = extent.createTest("Test Case 10: Check The User Access");
+//		UserPageObject.accessCheck();
+//	}
 
 
 	@AfterMethod
