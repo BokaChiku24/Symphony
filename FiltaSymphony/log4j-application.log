@@ -6651,4 +6651,196 @@
  2019-07-06 21:29:10,912  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
  2019-07-06 21:29:25,856  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
  2019-07-06 21:29:44,240  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-07-06 21:40:35,465  INFO [main] Sign In Test Case:93 - Test Case 1: Check Login functionality with valid credentials
+ 2019-07-06 21:40:57,724  INFO [main] Sign In Test Case:135 - Sign In Test Case Ends Here
+ 2019-07-06 21:41:21,185  INFO [main] LogInPage Test Case:73 - Test Case 1: Text Check on Login Page
+ 2019-07-06 21:41:21,317  INFO [main] LogInPage Test Case:82 - Test Case 2: Drop Down Check on Login Page
+ 2019-07-06 21:41:21,784  INFO [main] LogInPage Test Case:91 - Test Case 3: Footer Check on Login Page
+ 2019-07-06 21:41:21,945  INFO [main] LogInPage Test Case:100 - Test Case 4: URL Check on Login Page
+ 2019-07-06 21:41:24,988  INFO [main] LogInPage Test Case:109 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2019-07-06 21:41:25,218  INFO [main] LogInPage Test Case:118 - Test Case 6: Check Login Page TextBox Label
+ 2019-07-06 21:41:25,643  INFO [main] LogInPage Test Case:157 - Login Page test case Ends Here
+ 2019-07-06 21:41:45,901  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-07-06 21:41:48,374  INFO [main] Sign In With Invalid Credentials Test Case:88 - Test Case 2: Check Login functionality without credentials
+ 2019-07-06 21:41:50,780  INFO [main] Sign In With Invalid Credentials Test Case:101 - Test Case 3: Check Login functionality withInvalid credentials
+ 2019-07-06 21:41:53,419  INFO [main] Sign In With Invalid Credentials Test Case:114 - Test Case 4: Check Login functionality withInvalid credentials
+ 2019-07-06 21:41:55,276  INFO [main] Sign In With Invalid Credentials Test Case:157 - Sign In Test Case Ends Here
+ 2019-07-06 21:42:15,246  INFO [main] Forget Password Test Case:73 - Test Case 1: Forgot Password Check With Valid UserName and Email
+ 2019-07-06 21:42:19,221  INFO [main] Forget Password Test Case:84 - Test Case 2: Forgot Password Check With InValid UserName and Email
+ 2019-07-06 21:42:21,342  INFO [main] Forget Password Test Case:94 - Test Case 3: Forgot Password Check WithOut UserName and Email
+ 2019-07-06 21:42:23,200  INFO [main] Forget Password Test Case:104 - Test Case 4: Forgot Password Check WithOut UserName and With Email
+ 2019-07-06 21:42:24,000  INFO [main] Forget Password Test Case:114 - Test Case 5: Forgot Password Check With UserName and WithOut Email
+ 2019-07-06 21:42:24,779  INFO [main] Forget Password Test Case:124 - Test Case 6: Forgot Password Textbox Check
+ 2019-07-06 21:42:24,897  INFO [main] Forget Password Test Case:133 - Test Case 7: Forgot Password Label Check
+ 2019-07-06 21:42:25,940  INFO [main] Forget Password Test Case:172 - Forgot Password Test Case Ends Here
+ 2019-07-06 21:43:04,161  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-07-06 21:43:04,162  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-07-06 21:44:07,969  INFO [main] Per Fryer Test Case:109 - Check Franchisee Default Pricing
+ 2019-07-06 21:44:07,969  INFO [main] Per Fryer Test Case:110 - Test Case1: Check Customer Page URL
+ 2019-07-06 21:44:32,896  INFO [main] Per Fryer Test Case:181 - Per Fryer Page Test Case Ends Here
+ 2019-07-06 21:45:14,541  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-07-06 21:45:14,542  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-07-06 21:45:43,468  INFO [main] Per Fryer Test Case:178 - Per Fryer Page Test Case Ends Here
+ 2019-07-06 21:46:42,472  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-07-06 21:46:42,779  INFO [main] Home Page Test Case:86 - Check Menu Screen On Home Page
+ 2019-07-06 21:46:47,683  INFO [main] Home Page Test Case:101 - Check Text On Home Page
+ 2019-07-06 21:46:49,659  INFO [main] Home Page Test Case:110 - Check Table On Home Page
+ 2019-07-06 21:46:52,055  INFO [main] Home Page Test Case:119 - Check Tooltip on Home Page
+ 2019-07-06 21:46:52,557  INFO [main] Home Page Test Case:128 - Check Widget On Home Page
+ 2019-07-06 21:47:11,804  INFO [main] Home Page Test Case:137 - Check Color On Home Page
+ 2019-07-06 21:47:12,394  INFO [main] Home Page Test Case:146 - Check User Name On Home Page
+ 2019-07-06 21:47:23,478  INFO [main] Home Page Test Case:185 - Home Page Test Case Ends Here
+ 2019-07-06 21:48:07,735  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-06 21:48:16,214  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-07-06 21:48:20,916  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-07-06 21:48:22,034  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-07-06 21:48:35,397  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-07-06 21:48:52,412  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-07-06 21:48:57,434  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-07-06 21:49:02,261  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-07-06 21:49:07,043  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-07-06 21:54:08,035  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-06 21:54:15,368  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-07-06 21:54:20,213  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-07-06 21:54:25,310  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-07-06 21:54:30,176  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-07-06 21:54:36,166  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-07-06 21:54:39,744  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-07-06 21:54:54,279  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-07-06 21:55:13,932  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-07-06 21:56:39,956  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-08 11:15:12,658  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-08 11:15:24,534  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-07-08 11:15:28,767  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-07-08 11:15:32,377  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-07-08 11:15:35,395  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-07-08 11:15:37,899  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-07-08 11:15:41,118  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-07-08 11:15:50,451  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-07-08 11:16:05,469  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-07-08 11:17:12,302  INFO [main] Sign In Test Case:93 - Test Case 1: Check Login functionality with valid credentials
+ 2019-07-08 11:17:58,928  INFO [main] Sign In Test Case:135 - Sign In Test Case Ends Here
+ 2019-07-08 11:18:22,947  INFO [main] LogInPage Test Case:73 - Test Case 1: Text Check on Login Page
+ 2019-07-08 11:18:23,002  INFO [main] LogInPage Test Case:82 - Test Case 2: Drop Down Check on Login Page
+ 2019-07-08 11:18:23,217  INFO [main] LogInPage Test Case:91 - Test Case 3: Footer Check on Login Page
+ 2019-07-08 11:18:23,293  INFO [main] LogInPage Test Case:100 - Test Case 4: URL Check on Login Page
+ 2019-07-08 11:18:26,625  INFO [main] LogInPage Test Case:109 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2019-07-08 11:18:26,717  INFO [main] LogInPage Test Case:118 - Test Case 6: Check Login Page TextBox Label
+ 2019-07-08 11:18:26,875  INFO [main] LogInPage Test Case:157 - Login Page test case Ends Here
+ 2019-07-08 11:18:52,880  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-07-08 11:18:54,677  INFO [main] Sign In With Invalid Credentials Test Case:88 - Test Case 2: Check Login functionality without credentials
+ 2019-07-08 11:18:56,731  INFO [main] Sign In With Invalid Credentials Test Case:101 - Test Case 3: Check Login functionality withInvalid credentials
+ 2019-07-08 11:18:58,543  INFO [main] Sign In With Invalid Credentials Test Case:114 - Test Case 4: Check Login functionality withInvalid credentials
+ 2019-07-08 11:19:00,597  INFO [main] Sign In With Invalid Credentials Test Case:157 - Sign In Test Case Ends Here
+ 2019-07-08 11:19:26,874  INFO [main] Forget Password Test Case:73 - Test Case 1: Forgot Password Check With Valid UserName and Email
+ 2019-07-08 11:19:31,100  INFO [main] Forget Password Test Case:84 - Test Case 2: Forgot Password Check With InValid UserName and Email
+ 2019-07-08 11:19:32,568  INFO [main] Forget Password Test Case:94 - Test Case 3: Forgot Password Check WithOut UserName and Email
+ 2019-07-08 11:19:33,940  INFO [main] Forget Password Test Case:104 - Test Case 4: Forgot Password Check WithOut UserName and With Email
+ 2019-07-08 11:19:34,327  INFO [main] Forget Password Test Case:114 - Test Case 5: Forgot Password Check With UserName and WithOut Email
+ 2019-07-08 11:19:34,655  INFO [main] Forget Password Test Case:124 - Test Case 6: Forgot Password Textbox Check
+ 2019-07-08 11:19:34,721  INFO [main] Forget Password Test Case:133 - Test Case 7: Forgot Password Label Check
+ 2019-07-08 11:19:35,472  INFO [main] Forget Password Test Case:172 - Forgot Password Test Case Ends Here
+ 2019-07-08 11:20:48,207  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-07-08 11:20:48,207  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-07-08 11:22:06,755  INFO [main] Per Fryer Test Case:109 - Check Franchisee Default Pricing
+ 2019-07-08 11:22:06,755  INFO [main] Per Fryer Test Case:110 - Test Case1: Check Customer Page URL
+ 2019-07-08 11:22:42,930  INFO [main] Per Fryer Test Case:181 - Per Fryer Page Test Case Ends Here
+ 2019-07-08 11:23:36,366  INFO [main] Per Fryer Test Case:106 - Check Franchisee Default Pricing
+ 2019-07-08 11:23:36,366  INFO [main] Per Fryer Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-07-08 11:24:06,810  INFO [main] Per Fryer Test Case:178 - Per Fryer Page Test Case Ends Here
+ 2019-07-08 11:25:14,844  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-07-08 11:25:15,141  INFO [main] Home Page Test Case:86 - Check Menu Screen On Home Page
+ 2019-07-08 11:25:22,100  INFO [main] Home Page Test Case:101 - Check Text On Home Page
+ 2019-07-08 11:25:22,876  INFO [main] Home Page Test Case:110 - Check Table On Home Page
+ 2019-07-08 11:25:24,086  INFO [main] Home Page Test Case:119 - Check Tooltip on Home Page
+ 2019-07-08 11:25:24,281  INFO [main] Home Page Test Case:128 - Check Widget On Home Page
+ 2019-07-08 11:25:39,677  INFO [main] Home Page Test Case:137 - Check Color On Home Page
+ 2019-07-08 11:25:40,010  INFO [main] Home Page Test Case:146 - Check User Name On Home Page
+ 2019-07-08 11:25:52,910  INFO [main] Home Page Test Case:185 - Home Page Test Case Ends Here
+ 2019-07-08 11:26:57,034  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-08 11:27:11,224  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-07-08 11:27:17,059  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-07-08 11:27:17,903  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-07-08 11:27:28,145  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-07-08 11:27:48,657  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-07-08 11:27:53,159  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-07-08 11:27:56,578  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-07-08 11:27:59,500  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-07-08 11:34:19,254  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-08 11:34:33,958  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-07-08 11:34:39,437  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-07-08 11:34:44,065  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-07-08 11:34:47,337  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-07-08 11:34:50,415  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-07-08 11:34:53,745  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-07-08 11:35:05,856  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-07-08 11:35:23,287  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-07-08 13:00:48,813  INFO [main] Sign In Test Case:98 - Test Case 1: Check Login functionality with valid credentials
+ 2019-07-08 13:01:11,354  INFO [main] Sign In Test Case:140 - Sign In Test Case Ends Here
+ 2019-07-08 13:01:34,357  INFO [main] LogInPage Test Case:72 - Test Case 1: Text Check on Login Page
+ 2019-07-08 13:01:34,413  INFO [main] LogInPage Test Case:81 - Test Case 2: Drop Down Check on Login Page
+ 2019-07-08 13:01:34,646  INFO [main] LogInPage Test Case:90 - Test Case 3: Footer Check on Login Page
+ 2019-07-08 13:01:34,731  INFO [main] LogInPage Test Case:99 - Test Case 4: URL Check on Login Page
+ 2019-07-08 13:01:37,234  INFO [main] LogInPage Test Case:108 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2019-07-08 13:01:37,327  INFO [main] LogInPage Test Case:117 - Test Case 6: Check Login Page TextBox Label
+ 2019-07-08 13:01:37,494  INFO [main] LogInPage Test Case:156 - Login Page test case Ends Here
+ 2019-07-08 13:01:56,728  INFO [main] Sign In With Invalid Credentials Test Case:77 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-07-08 13:01:58,529  INFO [main] Sign In With Invalid Credentials Test Case:89 - Test Case 2: Check Login functionality without credentials
+ 2019-07-08 13:02:00,347  INFO [main] Sign In With Invalid Credentials Test Case:115 - Test Case 4: Check Login functionality withInvalid credentials
+ 2019-07-08 13:02:02,154  INFO [main] Sign In With Invalid Credentials Test Case:102 - Test Case 3: Check Login functionality withInvalid credentials
+ 2019-07-08 13:02:03,980  INFO [main] Sign In With Invalid Credentials Test Case:158 - Sign In Test Case Ends Here
+ 2019-07-08 13:02:28,400  INFO [main] Forget Password Test Case:80 - Test Case 1: Forgot Password Check With Valid UserName and Email
+ 2019-07-08 13:02:32,045  INFO [main] Forget Password Test Case:91 - Test Case 2: Forgot Password Check With InValid UserName and Email
+ 2019-07-08 13:02:33,518  INFO [main] Forget Password Test Case:101 - Test Case 3: Forgot Password Check WithOut UserName and Email
+ 2019-07-08 13:02:34,891  INFO [main] Forget Password Test Case:111 - Test Case 4: Forgot Password Check WithOut UserName and With Email
+ 2019-07-08 13:02:35,231  INFO [main] Forget Password Test Case:121 - Test Case 5: Forgot Password Check With UserName and WithOut Email
+ 2019-07-08 13:02:35,538  INFO [main] Forget Password Test Case:131 - Test Case 6: Forgot Password Textbox Check
+ 2019-07-08 13:02:35,601  INFO [main] Forget Password Test Case:140 - Test Case 7: Forgot Password Label Check
+ 2019-07-08 13:02:36,390  INFO [main] Forget Password Test Case:179 - Forgot Password Test Case Ends Here
+ 2019-07-08 13:03:15,723  INFO [main] Fixed Cost Test Case:105 - Check Franchisee Default Pricing
+ 2019-07-08 13:03:15,723  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
+ 2019-07-08 13:03:38,706  INFO [main] Fixed Cost Test Case:176 - Fixed Cost Page Test Case Ends Here
+ 2019-07-08 13:03:40,832  INFO [main] Fixed Cost Test Case:90 - Fixed Cost Customer Test!!
+ 2019-07-08 13:04:17,438  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-07-08 13:04:17,438  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-07-08 13:04:38,590  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-07-08 13:04:40,706  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-07-08 13:05:23,375  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-07-08 13:05:23,376  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-07-08 13:05:44,477  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-07-08 13:05:46,587  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
+ 2019-07-08 13:06:21,350  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-07-08 13:06:21,612  INFO [main] Home Page Test Case:86 - Check Menu Screen On Home Page
+ 2019-07-08 13:06:25,953  INFO [main] Home Page Test Case:101 - Check Text On Home Page
+ 2019-07-08 13:06:26,687  INFO [main] Home Page Test Case:110 - Check Table On Home Page
+ 2019-07-08 13:06:27,842  INFO [main] Home Page Test Case:119 - Check Tooltip on Home Page
+ 2019-07-08 13:06:28,088  INFO [main] Home Page Test Case:128 - Check Widget On Home Page
+ 2019-07-08 13:06:41,974  INFO [main] Home Page Test Case:137 - Check Color On Home Page
+ 2019-07-08 13:06:42,283  INFO [main] Home Page Test Case:146 - Check User Name On Home Page
+ 2019-07-08 13:06:52,250  INFO [main] Home Page Test Case:185 - Home Page Test Case Ends Here
+ 2019-07-08 13:07:28,716  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-08 13:07:36,112  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-07-08 13:07:40,001  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-07-08 13:07:40,505  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-07-08 13:07:45,637  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-07-08 13:07:46,007  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-07-08 13:07:46,381  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-07-08 13:10:50,234  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-08 13:10:58,837  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-07-08 13:11:02,590  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-07-08 13:11:05,969  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-07-08 13:11:08,973  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-07-08 13:11:11,616  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-07-08 13:11:14,077  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-07-08 13:11:23,086  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-07-08 13:11:36,496  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-07-08 13:12:49,180  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-07-08 13:12:55,466  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-07-08 13:12:59,165  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-07-08 13:13:02,454  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Color With Mouse Overview On User Page
+ 2019-07-08 13:13:05,560  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-07-08 13:13:08,257  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-07-08 13:13:10,963  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-07-08 13:13:19,490  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-07-08 13:13:33,413  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
  

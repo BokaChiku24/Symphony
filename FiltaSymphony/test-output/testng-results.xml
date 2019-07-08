@@ -2,140 +2,140 @@
 <testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="111406" started-at="2019-07-06T15:57:56Z" finished-at="2019-07-06T15:59:47Z">
+  <suite name="Default suite" duration-ms="82783" started-at="2019-07-08T07:42:13Z" finished-at="2019-07-08T07:43:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="111406" started-at="2019-07-06T15:57:56Z" finished-at="2019-07-06T15:59:47Z">
-      <class name="testCases_HomePageFranchisee.UserPage_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="property" is-config="true" duration-ms="40728" started-at="2019-07-06T15:57:56Z" finished-at="2019-07-06T15:58:36Z">
+    <test name="Default test" duration-ms="82783" started-at="2019-07-08T07:42:13Z" finished-at="2019-07-08T07:43:36Z">
+      <class name="com.filta.qa.home_franchisee_test.UserPage_TestCase">
+        <test-method status="PASS" signature="property()[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="property" is-config="true" duration-ms="35521" started-at="2019-07-08T07:42:13Z" finished-at="2019-07-08T07:42:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="checkURL()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkURL" duration-ms="9229" started-at="2019-07-06T15:58:36Z" finished-at="2019-07-06T15:58:46Z">
+        <test-method status="PASS" signature="checkURL()[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="checkURL" duration-ms="6277" started-at="2019-07-08T07:42:49Z" finished-at="2019-07-08T07:42:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkURL -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="31" started-at="2019-07-06T15:58:46Z" finished-at="2019-07-06T15:58:46Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="10" started-at="2019-07-08T07:42:55Z" finished-at="2019-07-08T07:42:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkURL status=SUCCESS method=UserPage_TestCase.checkURL()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+                <![CDATA[[TestResult name=checkURL status=SUCCESS method=UserPage_TestCase.checkURL()[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkButtonName()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkButtonName" duration-ms="5265" started-at="2019-07-06T15:58:46Z" finished-at="2019-07-06T15:58:51Z">
+        <test-method status="PASS" signature="checkButtonName()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="checkButtonName" duration-ms="3697" started-at="2019-07-08T07:42:55Z" finished-at="2019-07-08T07:42:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkButtonName -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-07-06T15:58:51Z" finished-at="2019-07-06T15:58:51Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-07-08T07:42:59Z" finished-at="2019-07-08T07:42:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkButtonName status=SUCCESS method=UserPage_TestCase.checkButtonName()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+                <![CDATA[[TestResult name=checkButtonName status=SUCCESS method=UserPage_TestCase.checkButtonName()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="buttonBackGroundWithoutMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithoutMouseOverview" duration-ms="6938" started-at="2019-07-06T15:58:51Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.checkButtonName" finished-at="2019-07-06T15:58:58Z">
+        <test-method status="PASS" signature="buttonBackGroundWithoutMouseOverview()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithoutMouseOverview" duration-ms="3287" started-at="2019-07-08T07:42:59Z" depends-on-methods="com.filta.qa.home_franchisee_test.UserPage_TestCase.checkButtonName" finished-at="2019-07-08T07:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buttonBackGroundWithoutMouseOverview -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-07-06T15:58:58Z" finished-at="2019-07-06T15:58:58Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-07-08T07:43:02Z" finished-at="2019-07-08T07:43:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=buttonBackGroundWithoutMouseOverview status=SUCCESS method=UserPage_TestCase.buttonBackGroundWithoutMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+                <![CDATA[[TestResult name=buttonBackGroundWithoutMouseOverview status=SUCCESS method=UserPage_TestCase.buttonBackGroundWithoutMouseOverview()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="buttonBackGroundWithMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithMouseOverview" duration-ms="5193" started-at="2019-07-06T15:58:58Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.buttonBackGroundWithoutMouseOverview" finished-at="2019-07-06T15:59:03Z">
+        <test-method status="PASS" signature="buttonBackGroundWithMouseOverview()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="buttonBackGroundWithMouseOverview" duration-ms="3104" started-at="2019-07-08T07:43:02Z" depends-on-methods="com.filta.qa.home_franchisee_test.UserPage_TestCase.buttonBackGroundWithoutMouseOverview" finished-at="2019-07-08T07:43:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buttonBackGroundWithMouseOverview -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-07-06T15:59:03Z" finished-at="2019-07-06T15:59:03Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-07-08T07:43:05Z" finished-at="2019-07-08T07:43:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=buttonBackGroundWithMouseOverview status=SUCCESS method=UserPage_TestCase.buttonBackGroundWithMouseOverview()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+                <![CDATA[[TestResult name=buttonBackGroundWithMouseOverview status=SUCCESS method=UserPage_TestCase.buttonBackGroundWithMouseOverview()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="buttonToolTipCheck()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="buttonToolTipCheck" duration-ms="4053" started-at="2019-07-06T15:59:03Z" depends-on-methods="testCases_HomePageFranchisee.UserPage_TestCase.buttonBackGroundWithMouseOverview" finished-at="2019-07-06T15:59:07Z">
+        <test-method status="PASS" signature="buttonToolTipCheck()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="buttonToolTipCheck" duration-ms="2695" started-at="2019-07-08T07:43:05Z" depends-on-methods="com.filta.qa.home_franchisee_test.UserPage_TestCase.buttonBackGroundWithMouseOverview" finished-at="2019-07-08T07:43:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- buttonToolTipCheck -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-07-06T15:59:07Z" finished-at="2019-07-06T15:59:07Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-07-08T07:43:08Z" finished-at="2019-07-08T07:43:08Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=buttonToolTipCheck status=SUCCESS method=UserPage_TestCase.buttonToolTipCheck()[pri:1, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+                <![CDATA[[TestResult name=buttonToolTipCheck status=SUCCESS method=UserPage_TestCase.buttonToolTipCheck()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="tabnamesCheck()[pri:2, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="tabnamesCheck" duration-ms="3280" started-at="2019-07-06T15:59:07Z" finished-at="2019-07-06T15:59:10Z">
+        <test-method status="PASS" signature="tabnamesCheck()[pri:2, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="tabnamesCheck" duration-ms="2705" started-at="2019-07-08T07:43:08Z" finished-at="2019-07-08T07:43:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tabnamesCheck -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-07-06T15:59:10Z" finished-at="2019-07-06T15:59:10Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-07-08T07:43:10Z" finished-at="2019-07-08T07:43:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=tabnamesCheck status=SUCCESS method=UserPage_TestCase.tabnamesCheck()[pri:2, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+                <![CDATA[[TestResult name=tabnamesCheck status=SUCCESS method=UserPage_TestCase.tabnamesCheck()[pri:2, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkDataOfUserProfile()[pri:3, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkDataOfUserProfile" duration-ms="14940" started-at="2019-07-06T15:59:10Z" finished-at="2019-07-06T15:59:25Z">
+        <test-method status="PASS" signature="checkDataOfUserProfile()[pri:3, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="checkDataOfUserProfile" duration-ms="8526" started-at="2019-07-08T07:43:10Z" finished-at="2019-07-08T07:43:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkDataOfUserProfile -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-07-06T15:59:25Z" finished-at="2019-07-06T15:59:25Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-07-08T07:43:19Z" finished-at="2019-07-08T07:43:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkDataOfUserProfile status=SUCCESS method=UserPage_TestCase.checkDataOfUserProfile()[pri:3, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+                <![CDATA[[TestResult name=checkDataOfUserProfile status=SUCCESS method=UserPage_TestCase.checkDataOfUserProfile()[pri:3, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="checkPasswordPageOnEdit()[pri:4, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="checkPasswordPageOnEdit" duration-ms="18384" started-at="2019-07-06T15:59:25Z" finished-at="2019-07-06T15:59:44Z">
+        <test-method status="PASS" signature="checkPasswordPageOnEdit()[pri:4, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="checkPasswordPageOnEdit" duration-ms="13922" started-at="2019-07-08T07:43:19Z" finished-at="2019-07-08T07:43:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkPasswordPageOnEdit -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-07-06T15:59:44Z" finished-at="2019-07-06T15:59:44Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="afterMethod" is-config="true" duration-ms="3012" started-at="2019-07-08T07:43:33Z" finished-at="2019-07-08T07:43:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-07-08T07:43:33Z" finished-at="2019-07-08T07:43:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkPasswordPageOnEdit status=SUCCESS method=UserPage_TestCase.checkPasswordPageOnEdit()[pri:4, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3] output={null}]]]>
+                <![CDATA[[TestResult name=checkPasswordPageOnEdit status=SUCCESS method=UserPage_TestCase.checkPasswordPageOnEdit()[pri:4, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@65e2dbf3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testCases_HomePageFranchisee.UserPage_TestCase@65e2dbf3]" name="afterMethod" is-config="true" duration-ms="3315" started-at="2019-07-06T15:59:44Z" finished-at="2019-07-06T15:59:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- testCases_HomePageFranchisee.UserPage_TestCase -->
+      </class> <!-- com.filta.qa.home_franchisee_test.UserPage_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
