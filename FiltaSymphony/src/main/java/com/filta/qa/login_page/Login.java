@@ -16,76 +16,76 @@ import com.filta.qa.util.Global;
 
 public class Login implements Login_Interface
 {
-	private WebDriver Driver;
-	private Global Global_Obj;
-	private Properties Prop;
-	private String ActualMsg;
+	private WebDriver driver;
+	private Global global_Obj;
+	private Properties prop;
+	private String actualMsg;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
-	private WebElement UserName;
+	private WebElement userName;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='user_password']")
-	private WebElement Password;
+	private WebElement passWord;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
-	private WebElement Log_In;
+	private WebElement log_In;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='login']//tbody//tr[2]")
-	private WebElement ErrorMessage;
+	private WebElement errorMessage;
 
 
-	public Login(WebDriver Driver)
+	public Login(WebDriver driver)
 	{
-		Global_Obj = new Global();
-		this.Driver = Driver;
-		PageFactory.initElements(Driver, this);
-		Prop = Global_Obj.readProperties();
+		global_Obj = new Global();
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+		prop = global_Obj.readProperties();
 	}
 
 
 	public void enterUserName(String Username)
 	{
-		UserName.sendKeys(Username);
+		userName.sendKeys(Username);
 	}
 
 
 	public void enterPassword(String Password_String)
 	{
-		Password.sendKeys(Password_String);
+		passWord.sendKeys(Password_String);
 	}
 
 
 	public void clickSubmit()
 	{
-		Log_In.click();
+		log_In.click();
 	}
 
 
 	public void assertCheck()
 	{
-		ActualMsg = Driver.getCurrentUrl();
-		Assert.assertEquals(ActualMsg, Prop.getProperty("URLAssert"));
+		actualMsg = driver.getCurrentUrl();
+		Assert.assertEquals(actualMsg, prop.getProperty("URLAssert"));
 	}
 
 
 	public void assertCheck2()
 	{
-		Global_Obj.wait(Driver).until(
+		global_Obj.wait(driver).until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@class='login']//tbody//tr[2]")));
-	     ActualMsg = ErrorMessage.getText();
-		Assert.assertEquals(ActualMsg, Prop.getProperty("Validation1"));
+		actualMsg = errorMessage.getText();
+		Assert.assertEquals(actualMsg, prop.getProperty("Validation1"));
 	}
 
 
 	public void clearText()
 	{
-		UserName.clear();
-		Password.clear();
+		userName.clear();
+		passWord.clear();
 	}
 
 
 	public void driverClose()
 	{
-		Driver.close();
+		driver.close();
 	}
 }

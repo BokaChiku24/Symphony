@@ -6843,4 +6843,7 @@
  2019-07-08 13:13:10,963  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
  2019-07-08 13:13:19,490  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
  2019-07-08 13:13:33,413  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-09-06 23:08:48,656  INFO [main] Sign In Test Case:140 - Sign In Test Case Ends Here
+ 2019-09-06 23:12:03,264  INFO [main] Sign In Test Case:98 - Test Case 1: Check Login functionality with valid credentials
+ 2019-09-06 23:12:25,257  INFO [main] Sign In Test Case:140 - Sign In Test Case Ends Here
  

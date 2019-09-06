@@ -75,7 +75,7 @@ public class Global
 
 	public Properties readProperties()
 	{
-		F = new File("C:\\Users\\Kunal\\git\\Symphony\\FiltaSymphony\\configs\\Configuration.properties");
+		F = new File("E:\\Work\\Symphony\\FiltaSymphony\\configs\\Configuration.properties");
 		File_Obj = new File(
 				"C:\\Users\\kunal\\git\\Repository\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
 		File_ = new File(
