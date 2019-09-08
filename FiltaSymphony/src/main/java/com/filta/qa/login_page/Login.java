@@ -1,5 +1,9 @@
 package com.filta.qa.login_page;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -43,15 +47,124 @@ public class Login implements Login_Interface
 	}
 
 
-	public void enterUserName(String Username)
+	public void availableLinks()
 	{
-		userName.sendKeys(Username);
+		List<WebElement> list = driver.findElements(By.tagName("a"));
+		for (int i = 0; i < list.size(); i++)
+		{
+			System.out.println("URL name => " + list.get(i).getText());
+		}
 	}
 
 
-	public void enterPassword(String Password_String)
+	public List<WebElement> findAllLinks(WebDriver driver)
+
 	{
-		passWord.sendKeys(Password_String);
+
+		List<WebElement> elementList = driver.findElements(By.tagName("a"));
+
+		elementList.addAll(driver.findElements(By.tagName("img")));
+
+		List<WebElement> finalList = new ArrayList<WebElement>();
+
+		for (WebElement element : elementList)
+
+		{
+
+			if (element.getAttribute("href") != null)
+
+			{
+
+				finalList.add(element);
+
+			}
+
+		}
+
+		return finalList;
+
+	}
+
+
+	public static String isLinkBroken(URL url) throws Exception
+
+	{
+
+		// url = new URL("https://yahoo.com");
+
+		String response = "";
+
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+		try
+
+		{
+
+			connection.connect();
+
+			response = connection.getResponseMessage();
+
+			connection.disconnect();
+
+			return response;
+
+		}
+
+		catch (Exception exp)
+
+		{
+
+			return exp.getMessage();
+
+		}
+
+	}
+
+
+	public void brokenLink()
+	{
+		List<WebElement> allLinks = findAllLinks(driver);
+
+		System.out.println("Total number of elements found " + allLinks.size());
+
+		for (WebElement element : allLinks)
+		{
+
+			try
+
+			{
+
+				System.out.println("URL: " + element.getAttribute("href") + " returned "
+						+ isLinkBroken(new URL(element.getAttribute("href"))));
+
+				// System.out.println("URL: " + element.getAttribute("outerhtml")+ " returned "
+				// + isLinkBroken(new URL(element.getAttribute("href"))));
+
+			}
+
+			catch (Exception exp)
+
+			{
+
+				System.out.println("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; "
+						+ exp.getMessage());
+
+			}
+
+		}
+
+	}
+
+
+	public void enterUserName(String userName)
+	{
+		this.userName.sendKeys(userName);
+	}
+
+
+	public void enterPassword(String password_String)
+	{
+		passWord.sendKeys(password_String);
 	}
 
 

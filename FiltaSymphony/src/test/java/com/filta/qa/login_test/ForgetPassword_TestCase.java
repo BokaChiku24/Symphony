@@ -36,17 +36,17 @@ import com.filta.qa.util.Global;
 
 public class ForgetPassword_TestCase
 {
-	private WebDriver Driver;
-	private ForgetPassword ForgotPassword;
-	private Global Global_Obj;
-	private ExtentReports Extent;
-	private ExtentHtmlReporter HtmlReporter;
-	private ExtentTest ExtentLogger;
-	private String ScreenshotPath;
-	private String DateName;
-	private File ScrFile;
+	private WebDriver driver;
+	private ForgetPassword forgotPassword;
+	private Global global_Obj;
+	private ExtentReports extent;
+	private ExtentHtmlReporter htmlReporter;
+	private ExtentTest extentLogger;
+	private String screenshotPath;
+	private String dateName;
+	private File scrFile;
 
-	public static Logger Log = Logger.getLogger("Forget Password Test Case");
+	public static Logger log = Logger.getLogger("Forget password test case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
@@ -54,130 +54,140 @@ public class ForgetPassword_TestCase
 
 
 	@BeforeClass
-	public void property()
+	public void beforeClass()
 	{
-		Global_Obj = new Global();
-		Driver = Global_Obj.driver();
-		ForgotPassword = new ForgetPassword(Driver);
-		HtmlReporter = new ExtentHtmlReporter(
+		global_Obj = new Global();
+		driver = global_Obj.driver();
+		forgotPassword = new ForgetPassword(driver);
+		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/HomePage/ForgetPassword_TestCase.html");
-		Extent = new ExtentReports();
-		Extent.attachReporter(HtmlReporter);
-		Extent.setSystemInfo("OS", "Windows 7 64 Bit");
-		Extent.setSystemInfo("Browser", "Google Chrome");
-		Extent.setSystemInfo("Author:", "Kunal Chavan");
-		Extent.setSystemInfo("Testing:", "Functional Testing");
-		HtmlReporter.config().setReportName("Forgot Password Functionality Test Case");
-		HtmlReporter.config().setTheme(Theme.STANDARD);
-		HtmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
-		HtmlReporter.loadXMLConfig("./extent-config.xml");
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		extent.setSystemInfo("OS", "Windows 7 64 Bit");
+		extent.setSystemInfo("Browser", "Google Chrome");
+		extent.setSystemInfo("Author:", "Kunal Chavan");
+		extent.setSystemInfo("Testing:", "Functional Testing");
+		htmlReporter.config().setReportName("Forgot password functionality test case");
+		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
+		htmlReporter.loadXMLConfig("./extent-config.xml");
 	}
 
 
-	@Test
-	public void forgotpassword()
+	@Test(priority = 0)
+	public void checkLink()
 	{
-		Log.info("Test Case 1: Forgot Password Check With Valid UserName and Email");
-		ExtentLogger = Extent.createTest("Test Case 1: Forgot Password Check With Valid UserName and Email");
-		ForgotPassword.clickForgotPassword();
-		ForgotPassword.forgotPassword();
-		ForgotPassword.assertCheckValid();
+		log.info("Test case 0: Get all URL names");
+		extentLogger = extent.createTest("Test case 0: Get all URL names");
+		forgotPassword.getURL();
+	}
+
+
+	@Test (dependsOnMethods = "checkLink")
+	public void forgotPassWord()
+	{
+		log.info("Test case 1: Forgot password check with valid username and email");
+		extentLogger = extent.createTest("Test case 1: Forgot password check with valid username and email");
+		forgotPassword.clickForgotPassword();
+		forgotPassword.forgotPassword();
+		forgotPassword.assertCheckValid();
 	}
 
 
 	@Test(priority = 1)
-	public void forgotpasswordInvalid()
+	public void forgotPassWordInvalid()
 	{
-		Log.info("Test Case 2: Forgot Password Check With InValid UserName and Email");
-		ExtentLogger = Extent.createTest("Test Case 2: Forgot Password Check With InValid UserName and Email");
-		ForgotPassword.forgotPasswordInvalid();
-		ForgotPassword.assertCheckValid2();
+		log.info("Test case 2: Forgot password check with invalid username and email");
+		extentLogger = extent.createTest("Test case 2: Forgot password check with invalid username and email");
+		forgotPassword.forgotPasswordInvalid();
+		forgotPassword.assertCheckValid2();
 	}
 
 
 	@Test(priority = 2)
-	public void forgotpasswordInvalid2()
+	public void forgotPassWordInvalid2()
 	{
-		Log.info("Test Case 3: Forgot Password Check WithOut UserName and Email");
-		ExtentLogger = Extent.createTest("Test Case 3: Forgot Password Check WithOut UserName and Email");
-		ForgotPassword.forgotPasswordInvalid2();
-		ForgotPassword.assertCheckValid3();
+		log.info("Test case 3: Forgot password check without username and email");
+		extentLogger = extent.createTest("Test case 3: Forgot password check without username and email");
+		forgotPassword.forgotPasswordInvalid2();
+		forgotPassword.assertCheckValid3();
 	}
 
 
 	@Test(priority = 3)
-	public void forgotpasswordInvalid3()
+	public void forgotPassWordInvalid3()
 	{
-		Log.info("Test Case 4: Forgot Password Check WithOut UserName and With Email");
-		ExtentLogger = Extent.createTest("Test Case 4: Forgot Password Check WithOut UserName and With Email");
-		ForgotPassword.forgotPasswordInvalid3();
-		ForgotPassword.assertCheckValid4();
+		log.info("Test case 4: Forgot password check without username and with email");
+		extentLogger = extent.createTest("Test case 4: Forgot password check without username and with email");
+		forgotPassword.forgotPasswordInvalid3();
+		forgotPassword.assertCheckValid4();
 	}
 
 
 	@Test(priority = 4)
-	public void forgotpasswordInvalid4()
+	public void forgotPassWordInvalid4()
 	{
-		Log.info("Test Case 5: Forgot Password Check With UserName and WithOut Email");
-		ExtentLogger = Extent.createTest("Test Case 5: Forgot Password Check WithOut UserName and With Email");
-		ForgotPassword.forgotPasswordInvalid4();
-		ForgotPassword.assertCheckValid5();
+		log.info("Test case 5: Forgot password check with username and without email");
+		extentLogger = extent.createTest("Test case 5: Forgot password check with username and without email");
+		forgotPassword.forgotPasswordInvalid4();
+		forgotPassword.assertCheckValid5();
 	}
 
 
 	@Test(priority = 5)
 	public void textboxCheck()
 	{
-		Log.info("Test Case 6: Forgot Password Textbox Check");
-		ExtentLogger = Extent.createTest("Test Case 6: Forgot Password Textbox Check");
-		ForgotPassword.assertCheckboxCheck();
+		log.info("Test case 6: Forgot password textbox check");
+		extentLogger = extent.createTest("Test case 6: Forgot password textbox check");
+		forgotPassword.assertCheckboxCheck();
 	}
 
 
 	@Test(priority = 6)
 	public void labelCheck()
 	{
-		Log.info("Test Case 7: Forgot Password Label Check");
-		ExtentLogger = Extent.createTest("Test Case 7: Forgot Password Label Check");
-		ForgotPassword.labelCheck();
+		log.info("Test case 7: Forgot password label check");
+		extentLogger = extent.createTest("Test case 7: Forgot password label check");
+		forgotPassword.labelCheck();
 	}
 
 
 	@AfterMethod
-	public void takeScreenShotOnFailure(ITestResult TestResult) throws IOException
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
 	{
-		if (TestResult.getStatus() == ITestResult.FAILURE)
+		if (testResult.getStatus() == ITestResult.FAILURE)
 		{
-			ExtentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Failed", ExtentColor.RED));
-			ExtentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(TestResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-			DateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
-			ScrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
-			ScreenshotPath = System.getProperty("user.dir") + "/ForgotPassword_errorScreenshots/"
-					+ TestResult.getName() + DateName + "_" + Arrays.toString(TestResult.getParameters()) + ".png";
-			FileUtils.copyFile(ScrFile, new File(ScreenshotPath));
-			ExtentLogger.fail("Test Case Failed Snapshot is below " + ExtentLogger.addScreenCaptureFromPath(ScreenshotPath));
+			extentLogger.log(Status.FAIL,
+					MarkupHelper.createLabel(testResult.getName() + " - Test case failed", ExtentColor.RED));
+			extentLogger.log(Status.FAIL,
+					MarkupHelper.createLabel(testResult.getThrowable() + " - Test case failed", ExtentColor.RED));
+			dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
+			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			screenshotPath = System.getProperty("user.dir") + "/ForgotPassword_errorScreenshots/"
+					+ testResult.getName() + dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
+			FileUtils.copyFile(scrFile, new File(screenshotPath));
+			extentLogger.fail(
+					"Test case failed snapshot is below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
 
 		}
-		else if (TestResult.getStatus() == ITestResult.SKIP)
+		else if (testResult.getStatus() == ITestResult.SKIP)
 		{
-			ExtentLogger.log(Status.SKIP,
-					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
+			extentLogger.log(Status.SKIP,
+					MarkupHelper.createLabel(testResult.getName() + " - Test case skipped", ExtentColor.ORANGE));
 		}
-		else if (TestResult.getStatus() == ITestResult.SUCCESS)
+		else if (testResult.getStatus() == ITestResult.SUCCESS)
 		{
-			ExtentLogger.log(Status.PASS,
-					MarkupHelper.createLabel(TestResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
+			extentLogger.log(Status.PASS,
+					MarkupHelper.createLabel(testResult.getName() + " - Test case passed", ExtentColor.GREEN));
 		}
 	}
 
 
 	@AfterClass
-	public void afterMethod()
+	public void afterClass()
 	{
-		Log.info("Forgot Password Test Case Ends Here");
-		Extent.flush();
-		ForgotPassword.closeBrowser();
+		log.info("Forgot password test case ends here");
+		extent.flush();
+		forgotPassword.closeBrowser();
 	}
 }

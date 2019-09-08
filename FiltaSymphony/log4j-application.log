@@ -6846,4 +6846,59 @@
  2019-09-06 23:08:48,656  INFO [main] Sign In Test Case:140 - Sign In Test Case Ends Here
  2019-09-06 23:12:03,264  INFO [main] Sign In Test Case:98 - Test Case 1: Check Login functionality with valid credentials
  2019-09-06 23:12:25,257  INFO [main] Sign In Test Case:140 - Sign In Test Case Ends Here
+ 2019-09-06 23:31:19,322  INFO [main] Sign In Test Case:98 - Test Case 1: Check Login functionality with valid credentials
+ 2019-09-06 23:31:37,683  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2019-09-07 00:41:06,979  INFO [main] Forget password test case:80 - Test case 0: Get all URl names
+ 2019-09-07 00:44:37,411  INFO [main] Forget password test case:80 - Test case 0: Get all URl names
+ 2019-09-07 00:46:38,365  INFO [main] Forget password test case:80 - Test case 0: Get all URl names
+ 2019-09-07 00:46:38,691  INFO [main] Forget password test case:89 - Test case 1: Forgot password check with valid userName and email
+ 2019-09-07 00:46:42,801  INFO [main] Forget password test case:100 - Test case 2: Forgot password check with inValid userName and email
+ 2019-09-07 00:46:44,834  INFO [main] Forget password test case:110 - Test case 3: Forgot password check withOut userName and email
+ 2019-09-07 00:46:46,587  INFO [main] Forget password test case:120 - Test case 4: Forgot password check withOut userName and with email
+ 2019-09-07 00:46:47,379  INFO [main] Forget password test case:130 - Test case 5: Forgot password check with uerName and withOut email
+ 2019-09-07 00:46:48,108  INFO [main] Forget password test case:140 - Test case 6: Forgot password textbox check
+ 2019-09-07 00:46:48,218  INFO [main] Forget password test case:149 - Test case 7: Forgot password label check
+ 2019-09-07 00:46:49,216  INFO [main] Forget password test case:189 - Forgot password test case ends here
+ 2019-09-07 00:55:03,799  INFO [main] Forget password test case:80 - Test case 0: Get all URL names
+ 2019-09-07 00:55:04,142  INFO [main] Forget password test case:89 - Test case 1: Forgot password check with valid username and email
+ 2019-09-07 00:55:08,324  INFO [main] Forget password test case:100 - Test case 2: Forgot password check with invalid username and email
+ 2019-09-07 00:55:10,542  INFO [main] Forget password test case:110 - Test case 3: Forgot password check without username and email
+ 2019-09-07 00:55:12,243  INFO [main] Forget password test case:120 - Test case 4: Forgot password check without username and with email
+ 2019-09-07 00:55:13,056  INFO [main] Forget password test case:130 - Test case 5: Forgot password check with username and without email
+ 2019-09-07 00:55:13,597  INFO [main] Forget password test case:140 - Test case 6: Forgot password textbox check
+ 2019-09-07 00:55:13,706  INFO [main] Forget password test case:149 - Test case 7: Forgot password label check
+ 2019-09-07 00:55:14,043  INFO [main] Forget password test case:189 - Forgot password test case ends here
+ 2019-09-07 01:14:39,322  INFO [main] Sign in test case:98 - Test case 1: Check login functionality with valid credentials
+ 2019-09-07 01:15:02,735  INFO [main] Sign in test case:144 - Sign in test case ends here
+ 2019-09-07 21:46:40,635  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-09-07 21:46:40,741  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-09-07 21:46:40,976  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-09-07 21:46:41,037  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-09-07 21:46:49,576  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-09-07 21:46:49,644  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-09-07 21:46:49,759  INFO [main] LogInPage test case:156 - Login Page test case Ends Here
+ 2019-09-08 08:52:04,075  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-09-08 08:52:04,235  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-09-08 08:52:04,779  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-09-08 08:52:04,939  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-09-08 08:52:13,833  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-09-08 08:52:13,943  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-09-08 08:52:14,176  INFO [main] LogInPage test case:126 - Test case 7: Get all login URL
+ 2019-09-08 08:52:14,409  INFO [main] LogInPage test case:166 - Login Page test case Ends Here
+ 2019-09-08 09:03:35,047  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-09-08 09:03:35,169  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-09-08 09:03:35,618  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-09-08 09:03:35,722  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-09-08 09:03:44,583  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-09-08 09:03:44,722  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-09-08 09:03:45,038  INFO [main] LogInPage test case:126 - Test case 7: Get all login URL
+ 2019-09-08 09:03:45,314  INFO [main] LogInPage test case:135 - Test case 8: Get all broken URL
+ 2019-09-08 09:03:48,029  INFO [main] LogInPage test case:175 - Login Page test case Ends Here
+ 2019-09-08 09:19:14,762  INFO [main] Sign in with invalid credentials test case:77 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-09-08 09:19:17,333  INFO [main] Sign in with invalid credentials test case:89 - Test case 2: Check login functionality without credentials
+ 2019-09-08 09:19:19,451  INFO [main] Sign in with invalid credentials test case:102 - Test case 3: Check login functionality withInvalid credentials
+ 2019-09-08 09:19:21,921  INFO [main] Sign in with invalid credentials test case:115 - Test case 4: Check login functionality withInvalid credentials
+ 2019-09-08 09:19:24,151  INFO [main] Sign in with invalid credentials test case:128 - Test case 7: Get all login URL
+ 2019-09-08 09:19:24,383  INFO [main] Sign in with invalid credentials test case:137 - Test case 8: Get all broken URL
+ 2019-09-08 09:19:27,185  INFO [main] Sign in with invalid credentials test case:175 - Sign in test case ends here
  

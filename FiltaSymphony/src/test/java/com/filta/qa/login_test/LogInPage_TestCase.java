@@ -30,15 +30,15 @@ import com.filta.qa.util.Global;
 
 public class LogInPage_TestCase
 {
-	private WebDriver Driver;
-	private LoginPage LoginPageObj;
-	private Global Global_Obj;
-	private ExtentReports Extent;
-	private ExtentHtmlReporter HtmlReporter;
-	private ExtentTest ExtentLogger;
-	private String ScreenshotPath;
+	private WebDriver driver;
+	private LoginPage loginPageObj;
+	private Global global_Obj;
+	private ExtentReports extent;
+	private ExtentHtmlReporter htmlReporter;
+	private ExtentTest extentLogger;
+	private String screenshotPath;
 
-	public static Logger Log = Logger.getLogger("LogInPage Test Case");
+	public static Logger log = Logger.getLogger("LogInPage test case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
@@ -48,75 +48,93 @@ public class LogInPage_TestCase
 	@BeforeClass
 	public void property()
 	{
-		Global_Obj = new Global();
-		Driver = Global_Obj.driver();
-		LoginPageObj = new LoginPage(Driver);
-		HtmlReporter = new ExtentHtmlReporter(
+		global_Obj = new Global();
+		driver = global_Obj.driver();
+		loginPageObj = new LoginPage(driver);
+		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/HomePage/LoginPage_TestCase.html");
-		Extent = new ExtentReports();
-		Extent.attachReporter(HtmlReporter);
-		Extent.setSystemInfo("OS", "Windows 7 64 Bit");
-		Extent.setSystemInfo("Browser", "Google Chrome");
-		Extent.setSystemInfo("Author:", "Kunal Chavan");
-		Extent.setSystemInfo("Testing:", "Functional Testing");
-		HtmlReporter.config().setReportName("Login Page Functionality Test Case");
-		HtmlReporter.config().setTheme(Theme.STANDARD);
-		HtmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
-		HtmlReporter.loadXMLConfig("./extent-config.xml");
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		extent.setSystemInfo("OS", "Windows 7 64 Bit");
+		extent.setSystemInfo("Browser", "Google Chrome");
+		extent.setSystemInfo("Author:", "Kunal Chavan");
+		extent.setSystemInfo("Testing:", "Functional Testing");
+		htmlReporter.config().setReportName("Login page functionality test case");
+		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
+		htmlReporter.loadXMLConfig("./extent-config.xml");
 	}
 
 
 	@Test
 	public void checktext()
 	{
-		Log.info("Test Case 1: Text Check on Login Page");
-		ExtentLogger = Extent.createTest("Test Case 1: Text Check on Login Page");
-		LoginPageObj.checkText2();
+		log.info("Test case 1: Text check on login page");
+		extentLogger = extent.createTest("Test case 1: Text check on login page");
+		loginPageObj.checkText2();
 	}
 
 
 	@Test(priority = 1)
 	public void checkDropDown()
 	{
-		Log.info("Test Case 2: Drop Down Check on Login Page");
-		ExtentLogger = Extent.createTest("Test Case 2: Drop Down Check on Login Page");
-		LoginPageObj.dropDown();
+		log.info("Test case 2: Drop down check on login page");
+		extentLogger = extent.createTest("Test case 2: Drop down check on login page");
+		loginPageObj.dropDown();
 	}
 
 
 	@Test(priority = 2)
 	public void footerCheck()
 	{
-		Log.info("Test Case 3: Footer Check on Login Page");
-		ExtentLogger = Extent.createTest("Test Case 3: Footer Check on Login Page");
-		LoginPageObj.checkText();
+		log.info("Test case 3: Footer check on login page");
+		extentLogger = extent.createTest("Test case 3: Footer check on login page");
+		loginPageObj.checkText();
 	}
 
 
 	@Test(priority = 3)
 	public void checkURL()
 	{
-		Log.info("Test Case 4: URL Check on Login Page");
-		ExtentLogger = Extent.createTest("Test Case 4: URL Check on Login Page");
-		LoginPageObj.checkURL();
+		log.info("Test case 4: URL check on login page");
+		extentLogger = extent.createTest("Test case 4: URL check on login page");
+		loginPageObj.checkURL();
 	}
 
 
 	@Test(priority = 4)
 	public void checkTextBox()
 	{
-		Log.info("Test Case 5: Check Login Page TextBox Enabled Or Not");
-		ExtentLogger = Extent.createTest("Test Case 5: Check Login Page TextBox Enabled Or Not");
-		LoginPageObj.checkTextBoxAssert();
+		log.info("Test case 5: Check login page textBox enabled or not");
+		extentLogger = extent.createTest("Test case 5: Check login page textBox enabled or not");
+		loginPageObj.checkTextBoxAssert();
 	}
 
 
 	@Test(priority = 5)
 	public void checkLabel()
 	{
-		Log.info("Test Case 6: Check Login Page TextBox Label");
-		ExtentLogger = Extent.createTest("Test Case 6: Check Login Page TextBox Label");
-		LoginPageObj.checktextBoxLabel();
+		log.info("Test case 6: Check login page textBox label");
+		extentLogger = extent.createTest("Test case 6: Check login page textBox label");
+		loginPageObj.checkTextBoxLabel();
+	}
+
+
+	@Test(priority = 6)
+	public void availableLinks()
+	{
+		log.info("Test case 7: Get all login URL");
+		extentLogger = extent.createTest("Test case 7: Get all login URL");
+		loginPageObj.availableLinks();
+	}
+
+
+	@Test(priority = 7)
+	public void getBrokenLink()
+	{
+		log.info("Test case 8: Get all broken URL");
+		extentLogger = extent.createTest("Test case 8: Get all broken URL");
+		loginPageObj.brokenLink();
 	}
 
 
@@ -125,26 +143,27 @@ public class LogInPage_TestCase
 	{
 		if (TestResult.getStatus() == ITestResult.FAILURE)
 		{
-			ExtentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Failed", ExtentColor.RED));
-			ExtentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(TestResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
+			extentLogger.log(Status.FAIL,
+					MarkupHelper.createLabel(TestResult.getName() + " - Test case failed", ExtentColor.RED));
+			extentLogger.log(Status.FAIL,
+					MarkupHelper.createLabel(TestResult.getThrowable() + " - Test case failed", ExtentColor.RED));
 			String dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
-			File scrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
-			ScreenshotPath = System.getProperty("user.dir") + "/LoginPage_errorScreenshots/" + TestResult.getName()
+			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			screenshotPath = System.getProperty("user.dir") + "/LoginPage_errorScreenshots/" + TestResult.getName()
 					+ dateName + "_" + Arrays.toString(TestResult.getParameters()) + ".png";
-			FileUtils.copyFile(scrFile, new File(ScreenshotPath));
-			ExtentLogger.fail("Test Case Failed Snapshot is below " + ExtentLogger.addScreenCaptureFromPath(ScreenshotPath));
+			FileUtils.copyFile(scrFile, new File(screenshotPath));
+			extentLogger.fail(
+					"Test case failed snapshot is below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
 		}
 		else if (TestResult.getStatus() == ITestResult.SKIP)
 		{
-			ExtentLogger.log(Status.SKIP,
-					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
+			extentLogger.log(Status.SKIP,
+					MarkupHelper.createLabel(TestResult.getName() + " - Test case skipped", ExtentColor.ORANGE));
 		}
 		else if (TestResult.getStatus() == ITestResult.SUCCESS)
 		{
-			ExtentLogger.log(Status.PASS,
-					MarkupHelper.createLabel(TestResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
+			extentLogger.log(Status.PASS,
+					MarkupHelper.createLabel(TestResult.getName() + " Test case passed", ExtentColor.GREEN));
 		}
 
 	}
@@ -153,8 +172,8 @@ public class LogInPage_TestCase
 	@AfterClass
 	public void closeBrowser()
 	{
-		Log.info("Login Page test case Ends Here");
-		Extent.flush();
-		LoginPageObj.closebrowser();
+		log.info("Login Page test case Ends Here");
+		extent.flush();
+		loginPageObj.closeBrowser();
 	}
 }

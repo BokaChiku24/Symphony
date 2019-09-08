@@ -18,8 +18,8 @@ public interface LoginPage_Interface
 	public abstract void checkTextBoxAssert();
 
 
-	public abstract void checktextBoxLabel();
+	public abstract void checkTextBoxLabel();
 
 
-	public abstract void closebrowser();
+	public abstract void closeBrowser();
 }
