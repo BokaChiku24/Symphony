@@ -31,14 +31,14 @@ import com.filta.qa.util.Global;
 
 public class UserPage_TestCase
 {
-	private UserPage UserPageObject;
+	private UserPage userPageObject;
 	private Global global;
 	private WebDriver driver;
 	private ExtentReports extent;
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentTest logger;
 	private String screenshotPath;
-	public static Logger log = Logger.getLogger("User Page Test Case");
+	public static Logger log = Logger.getLogger("User page test case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
@@ -50,8 +50,8 @@ public class UserPage_TestCase
 	{
 		global = new Global();
 		driver = global.driver();
-		UserPageObject = new UserPage(driver);
-		UserPageObject.login();
+		userPageObject = new UserPage(driver);
+		userPageObject.login();
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/UserPage_TestCase.html");
 		extent = new ExtentReports();
@@ -60,7 +60,7 @@ public class UserPage_TestCase
 		extent.setSystemInfo("Browser", "Google Chrome");
 		extent.setSystemInfo("Author:", "Kunal Chavan");
 		extent.setSystemInfo("Testing:", "Functional Testing");
-		htmlReporter.config().setReportName("User Page Functionality Test Case");
+		htmlReporter.config().setReportName("User page functionality test case");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
@@ -70,73 +70,73 @@ public class UserPage_TestCase
 	@Test(priority = 0)
 	public void checkURL()
 	{
-		log.info("Check URL Of User Page");
-		logger = extent.createTest("Test Case 0: Check URL Of User Page");
-		UserPageObject.urlCheck();
+		log.info("Check URL of user page");
+		logger = extent.createTest("Test case 0: Check URL of user page");
+		userPageObject.urlCheck();
 	}
 
 
 	@Test(priority = 1)
 	public void checkButtonName()
 	{
-		log.info("Test Case 1: Check Button Name On User Page");
-		logger = extent.createTest("Test Case 1: Check Button Name On User Page");
-		UserPageObject.buttonCheck();
+		log.info("Test case 1: Check button name on user page");
+		logger = extent.createTest("Test case 1: Check button name on user page");
+		userPageObject.buttonCheck();
 	}
 
 
 	@Test(priority = 1, dependsOnMethods = "checkButtonName")
 	public void buttonBackGroundWithoutMouseOverview()
 	{
-		log.info("Test Case 2: Check Button Color Without Mouse Overview On User Page");
-		logger = extent.createTest("Test Case 2: Check Button Color Without Mouse Overview On User Page");
-		UserPageObject.buttonBackGroundWithoutMouseOverview();
+		log.info("Test case 2: Check button color without mouse overview on user page");
+		logger = extent.createTest("Test Case 2: Check button color without mouse overview on user page");
+		userPageObject.buttonBackGroundWithoutMouseOverview();
 	}
 
 
 	@Test(priority = 1, dependsOnMethods = "buttonBackGroundWithoutMouseOverview")
 	public void buttonBackGroundWithMouseOverview()
 	{
-		log.info("Test Case 3: Check Button Color With Mouse Overview On User Page");
-		logger = extent.createTest("Test Case 3: Check Button Color With Mouse Overview On User Page");
-		UserPageObject.buttonBackGroundWithMouseOverview();
+		log.info("Test case 3: Check button color with mouse overview on user page");
+		logger = extent.createTest("Test case 3: Check button color with mouse overview on user page");
+		userPageObject.buttonBackGroundWithMouseOverview();
 	}
 
 
 	@Test(priority = 1, dependsOnMethods = "buttonBackGroundWithMouseOverview")
 	public void buttonToolTipCheck()
 	{
-		log.info("Test Case 4: Check Button ToolTip On User Page");
-		logger = extent.createTest("Test Case 4: Check Button ToolTip On User Page");
-		UserPageObject.buttonToolTipCheck();
+		log.info("Test case 4: Check button toolTip on user page");
+		logger = extent.createTest("Test case 4: Check button toolTip on user page");
+		userPageObject.buttonToolTipCheck();
 	}
 
 
 	@Test(priority = 2)
 	public void tabnamesCheck()
 	{
-		log.info("Test Case 5: Check Tab Name On User Page");
-		logger = extent.createTest("Test Case 5: Check Tab Name On User Page");
-		UserPageObject.tabnamesCheck();
+		log.info("Test case 5: Check tab name on user page");
+		logger = extent.createTest("Test case 5: Check tab name on user page");
+		userPageObject.tabnamesCheck();
 	}
 
 
 	@Test(priority = 3)
 	public void checkDataOfUserProfile()
 	{
-		log.info("Test Case 6: Check Data On User Page");
-		logger = extent.createTest("Test Case 6: Check Data On User Page");
-		UserPageObject.getDataFromEditPageUserProfile();
-		UserPageObject.verifyDataOfUserProfile();
+		log.info("Test case 6: Check data on user page");
+		logger = extent.createTest("Test case 6: Check data on user page");
+		userPageObject.getDataFromEditPageUserProfile();
+		userPageObject.verifyDataOfUserProfile();
 	}
 
 
 	@Test(priority = 4)
 	public void checkPasswordPageOnEdit()
 	{
-		log.info("Test Case 7: Check Password Field On Edit Page");
-		logger = extent.createTest("Test Case 7: Check Password Field On Edit Page");
-		UserPageObject.checkPasswordPage();
+		log.info("Test Case 7: Check password field on edit page");
+		logger = extent.createTest("Test Case 7: Check password field on edit page");
+		userPageObject.checkPasswordPage();
 	}
 
 
@@ -182,26 +182,26 @@ public class UserPage_TestCase
 			screenshotPath = System.getProperty("user.dir") + "/UserPage_errorScreenshots/" + testResult.getName()
 					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
-			logger.fail("Test Case Failed Snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
+			logger.fail("Test case failed snapshot is below " + logger.addScreenCaptureFromPath(screenshotPath));
 		}
 		else if (testResult.getStatus() == ITestResult.SKIP)
 		{
 			logger.log(Status.SKIP,
-					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
+					MarkupHelper.createLabel(testResult.getName() + " - Test case skipped", ExtentColor.ORANGE));
 		}
 		else if (testResult.getStatus() == ITestResult.SUCCESS)
 		{
 			logger.log(Status.PASS,
-					MarkupHelper.createLabel(testResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
+					MarkupHelper.createLabel(testResult.getName() + " Test case passed", ExtentColor.GREEN));
 		}
 	}
 
 
 	@AfterClass
-	public void afterMethod()
+	public void afterClass()
 	{
-		log.info("User Page Test Case Ends Here");
+		log.info("User page test case ends here");
 		extent.flush();
-		UserPageObject.closeBrowser();
+		userPageObject.closeBrowser();
 	}
 }

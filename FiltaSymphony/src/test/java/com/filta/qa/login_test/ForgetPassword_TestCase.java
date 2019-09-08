@@ -83,7 +83,16 @@ public class ForgetPassword_TestCase
 	}
 
 
-	@Test (dependsOnMethods = "checkLink")
+	@Test(priority = 0, dependsOnMethods = "checkLink")
+	public void brokenLink()
+	{
+		log.info("Test case 0: Get all URL names");
+		extentLogger = extent.createTest("Test case 0: Get all URL names");
+		forgotPassword.brokenLink();
+	}
+
+
+	@Test(dependsOnMethods = "checkLink")
 	public void forgotPassWord()
 	{
 		log.info("Test case 1: Forgot password check with valid username and email");

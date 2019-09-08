@@ -1,5 +1,8 @@
 package com.filta.qa.login_page;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -64,6 +67,105 @@ public class ForgetPassword implements ForgotPassword_Interface
 		{
 			System.out.println("URL => " + list.get(i).getText());
 		}
+	}
+
+
+	public List<WebElement> findAllLinks(WebDriver driver)
+
+	{
+
+		List<WebElement> elementList = driver.findElements(By.tagName("a"));
+
+		elementList.addAll(driver.findElements(By.tagName("img")));
+
+		List<WebElement> finalList = new ArrayList<WebElement>();
+
+		for (WebElement element : elementList)
+
+		{
+
+			if (element.getAttribute("href") != null)
+
+			{
+
+				finalList.add(element);
+
+			}
+
+		}
+
+		return finalList;
+
+	}
+
+
+	public static String isLinkBroken(URL url) throws Exception
+
+	{
+
+		// url = new URL("https://yahoo.com");
+
+		String response = "";
+
+		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+		try
+
+		{
+
+			connection.connect();
+
+			response = connection.getResponseMessage();
+
+			connection.disconnect();
+
+			return response;
+
+		}
+
+		catch (Exception exp)
+
+		{
+
+			return exp.getMessage();
+
+		}
+
+	}
+
+
+	public void brokenLink()
+	{
+		List<WebElement> allLinks = findAllLinks(driver);
+
+		System.out.println("Total number of elements found " + allLinks.size());
+
+		for (WebElement element : allLinks)
+		{
+
+			try
+
+			{
+
+				System.out.println("URL: " + element.getAttribute("href") + " returned "
+						+ isLinkBroken(new URL(element.getAttribute("href"))));
+
+				// System.out.println("URL: " + element.getAttribute("outerhtml")+ " returned "
+				// + isLinkBroken(new URL(element.getAttribute("href"))));
+
+			}
+
+			catch (Exception exp)
+
+			{
+
+				System.out.println("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; "
+						+ exp.getMessage());
+
+			}
+
+		}
+
 	}
 
 
