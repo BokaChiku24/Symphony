@@ -10,34 +10,34 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Login
 {
-	public WebDriver Driver;
-	private Global Global_Obj;
-	private Properties Prop;
+	public WebDriver driver;
+	private Global global_Obj;
+	private Properties prop;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
-	private WebElement UserName;
+	private WebElement userName;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='user_password']")
-	private WebElement Password;
+	private WebElement passWord;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
-	private WebElement Log_In;
+	private WebElement log_In;
 
 
-	public Login(WebDriver Driver)
+	public Login(WebDriver driver)
 	{
-		this.Driver = Driver;
-		Global_Obj = new Global();
-		Prop = Global_Obj.readProperties();
-		PageFactory.initElements(Driver, this);
+		this.driver = driver;
+		global_Obj = new Global();
+		prop = global_Obj.readProperties();
+		PageFactory.initElements(driver, this);
 
 	}
 
 
 	public void credentials()
 	{
-		UserName.sendKeys(Prop.getProperty("uname"));
-		Password.sendKeys(Prop.getProperty("password"));
-		Log_In.click();
+		userName.sendKeys(prop.getProperty("uname"));
+		passWord.sendKeys(prop.getProperty("password"));
+		log_In.click();
 	}
 }

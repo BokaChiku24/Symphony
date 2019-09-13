@@ -28,24 +28,24 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Global
 {
-	private WebDriver Driver;
-	private TakesScreenshot Screen;
-	private WebElement Element;
-	private JavascriptExecutor Js;
-	private Alert Alert_Obj;
-	private Select Select_Obj;
-	private Actions Action;
-	private WebDriverWait Wait;
-	private File F;
-	private File File_Obj;
-	private File File_;
-	private ChromeOptions Options;
-	private Properties Prop;
-	private FileInputStream Input;
-	private String Text;
-	private String Message;
-	private String URL;
-	private boolean Result;
+	private WebDriver driver;
+	private TakesScreenshot screen;
+	private WebElement element;
+	private JavascriptExecutor jS;
+	private Alert alert_Obj;
+	private Select select_Obj;
+	private Actions action;
+	private WebDriverWait wait;
+	private File f;
+	private File file_Obj;
+	private File file_;
+	private ChromeOptions options;
+	private Properties prop;
+	private FileInputStream input;
+	private String text;
+	private String message;
+	private String url;
+	private boolean result;
 	private static int count = 1;
 
 
@@ -53,187 +53,187 @@ public class Global
 	public WebDriver driver()
 	{
 		// ChromeOption will Disable Password Save Popup In Chrome
-		Prop = readProperties();
-		Options = new ChromeOptions();
-		Options.addArguments("--start-maximized");
-		Options.addArguments("--disable-web-security");
-		Options.addArguments("--no-proxy-server");
+		prop = readProperties();
+		options = new ChromeOptions();
+		options.addArguments("--start-maximized");
+		options.addArguments("--disable-web-security");
+		options.addArguments("--no-proxy-server");
 		Map<String, Object> prefs = new HashMap<String, Object>();
 		prefs.put("credentials_enable_service", false);
 		prefs.put("profile.password_manager_enabled", false);
-		Options.setExperimentalOption("prefs", prefs);
+		options.setExperimentalOption("prefs", prefs);
 		DesiredCapabilities capablities = new DesiredCapabilities();
-		capablities.setCapability(ChromeOptions.CAPABILITY, Options);
+		capablities.setCapability(ChromeOptions.CAPABILITY, options);
 		capablities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-		System.setProperty("webdriver.chrome.driver", Prop.getProperty("driver"));
-		Driver = new ChromeDriver(capablities);
-		Driver.get(Prop.getProperty("URL2"));
-		Driver.manage().window().maximize();
-		return Driver;
+		System.setProperty("webdriver.chrome.driver", prop.getProperty("driver"));
+		driver = new ChromeDriver(capablities);
+		driver.get(prop.getProperty("URL2"));
+		driver.manage().window().maximize();
+		return driver;
 	}
 
 
 	public Properties readProperties()
 	{
-		F = new File("E:\\Work\\Symphony\\FiltaSymphony\\configs\\Configuration.properties");
-		File_Obj = new File(
+		f = new File("E:\\Work\\Symphony\\FiltaSymphony\\configs\\Configuration.properties");
+		file_Obj = new File(
 				"C:\\Users\\kunal\\git\\Repository\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
-		File_ = new File(
+		file_ = new File(
 				"C:\\Users\\Boka_Chiku\\git\\Symphony\\FiltaSymphony\\configs\\HomePC_Configuration.properties");
-		if (F.exists() == true)
+		if (f.exists() == true)
 		{
 			try
 			{
-				Input = new FileInputStream(F);
+				input = new FileInputStream(f);
 
 			}
-			catch (FileNotFoundException E)
+			catch (FileNotFoundException e)
 			{
 				// TODO Auto-generated catch block
-				E.printStackTrace();
+				e.printStackTrace();
 			}
-			Prop = new Properties();
+			prop = new Properties();
 			try
 			{
-				Prop.load(Input);
+				prop.load(input);
 			}
-			catch (IOException E)
+			catch (IOException e)
 			{
-				E.printStackTrace();
+				e.printStackTrace();
 			}
-			return Prop;
+			return prop;
 		}
-		else if (File_Obj.exists() == true)
+		else if (file_Obj.exists() == true)
 		{
 
 			try
 			{
-				Input = new FileInputStream(File_Obj);
+				input = new FileInputStream(file_Obj);
 
 			}
-			catch (FileNotFoundException E)
+			catch (FileNotFoundException e)
 			{
 				// TODO Auto-generated catch block
-				E.printStackTrace();
+				e.printStackTrace();
 			}
-			Prop = new Properties();
+			prop = new Properties();
 			try
 			{
-				Prop.load(Input);
+				prop.load(input);
 			}
-			catch (IOException E)
+			catch (IOException e)
 			{
-				E.printStackTrace();
+				e.printStackTrace();
 			}
-			return Prop;
+			return prop;
 		}
-		else if (File_.exists() == true)
+		else if (file_.exists() == true)
 		{
 			try
 			{
-				Input = new FileInputStream(File_);
+				input = new FileInputStream(file_);
 
 			}
-			catch (FileNotFoundException E)
+			catch (FileNotFoundException e)
 			{
 				// TODO Auto-generated catch block
-				E.printStackTrace();
+				e.printStackTrace();
 			}
-			Prop = new Properties();
+			prop = new Properties();
 			try
 			{
-				Prop.load(Input);
+				prop.load(input);
 			}
-			catch (IOException E)
+			catch (IOException e)
 			{
-				E.printStackTrace();
+				e.printStackTrace();
 			}
 		}
-		return Prop;
+		return prop;
 
 	}
 
 
-	public void screenShot(WebDriver Driver)
+	public void screenShot(WebDriver driver)
 	{
-		Screen = (TakesScreenshot) Driver;
-		F = Screen.getScreenshotAs(OutputType.FILE);
+		screen = (TakesScreenshot) driver;
+		f = screen.getScreenshotAs(OutputType.FILE);
 		try
 		{
-			FileUtils.copyFile(F, new File("E:\\Msite\\MobileApp\\ScreenShots\\Screen" + count + ".png"));
+			FileUtils.copyFile(f, new File("E:\\Msite\\MobileApp\\ScreenShots\\Screen" + count + ".png"));
 			count++;
 		}
-		catch (IOException E)
+		catch (IOException e)
 		{
 			// TODO Auto-generated catch block
-			E.printStackTrace();
+			e.printStackTrace();
 		}
 	}
 
 
-	public WebElement driverWait(WebDriver Driver, String Xpath)
+	public WebElement driverWait(WebDriver driver, String xPath)
 	{
-		Wait = new WebDriverWait(Driver, 30);
-		Element = Wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Xpath)));
-		return Element;
+		wait = new WebDriverWait(driver, 30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath)));
+		return element;
 	}
 
 
-	public Select select(WebElement Element)
+	public Select select(WebElement element)
 	{
-		Select_Obj = new Select(Element);
-		return Select_Obj;
+		select_Obj = new Select(element);
+		return select_Obj;
 	}
 
 
-	public WebDriverWait wait(WebDriver Driver)
+	public WebDriverWait wait(WebDriver driver)
 	{
-	     Wait = new WebDriverWait(Driver, 2500);
-		return Wait;
+	     wait = new WebDriverWait(driver, 2500);
+		return wait;
 	}
 
 
-	public String getString(WebDriver Driver, String Xpath)
+	public String getString(WebDriver driver, String xPath)
 	{
-		Text = Driver.findElement(By.xpath(Xpath)).getText();
-		return Text;
+		text = driver.findElement(By.xpath(xPath)).getText();
+		return text;
 	}
 
 
-	public String getStringElement(WebElement Element)
+	public String getStringElement(WebElement element)
 	{
-		Text = Element.getText();
-		return Text;
+		text = element.getText();
+		return text;
 	}
 
 
-	public void click(WebDriver Driver, String Xpath)
+	public void click(WebDriver driver, String xPath)
 	{
-		Driver.findElement(By.xpath(Xpath)).click();
+		driver.findElement(By.xpath(xPath)).click();
 	}
 
 
-	public void send(WebDriver Driver, String Xpath, String Value)
+	public void send(WebDriver driver, String xPath, String value)
 	{
-		Driver.findElement(By.xpath(Xpath)).sendKeys(Value);
+		driver.findElement(By.xpath(xPath)).sendKeys(value);
 	}
 
 
-	public void clickElement(WebElement Element)
+	public void clickElement(WebElement element)
 	{
-		Element.click();
+		element.click();
 	}
 
 
-	public void sendElementKey(WebElement Element, String Text)
+	public void sendElementKey(WebElement element, String text)
 	{
-		Element.sendKeys(Text);
+		element.sendKeys(text);
 	}
 
 
-	public void sendElement(WebDriver Driver, String Xpath, String Text)
+	public void sendElement(WebDriver driver, String xPath, String text)
 	{
-		Driver.findElement(By.xpath(Xpath)).sendKeys(Text);
+		driver.findElement(By.xpath(xPath)).sendKeys(text);
 	}
 
 
@@ -251,92 +251,92 @@ public class Global
 	}
 
 
-	public void implicityWait(WebDriver Driver)
+	public void implicityWait(WebDriver driver)
 	{
-		Driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 	}
 
 
-	public String url(WebDriver Driver)
+	public String url(WebDriver driver)
 	{
-		URL = Driver.getCurrentUrl();
-		return URL;
+		url = driver.getCurrentUrl();
+		return url;
 	}
 
 
-	public boolean enabled(WebElement Element)
+	public boolean enabled(WebElement element)
 	{
-		Result = Element.isEnabled();
-		return Result;
+		result = element.isEnabled();
+		return result;
 	}
 
 
-	public void linkText(WebDriver Driver, String Text)
+	public void linkText(WebDriver driver, String text)
 	{
-		Driver.findElement(By.linkText(Text)).click();
+		driver.findElement(By.linkText(text)).click();
 	}
 
 
-	public WebElement webElementReturn(WebDriver Driver, String Xpath)
+	public WebElement webElementReturn(WebDriver driver, String xPath)
 	{
-		Element = Driver.findElement(By.xpath(Xpath));
-		return Element;
+		element = driver.findElement(By.xpath(xPath));
+		return element;
 	}
 
 
-	public String getAttributes(WebElement Element, String Value)
+	public String getAttributes(WebElement element, String value)
 	{
-		Text = Element.getAttribute(Value);
-		return Text;
+		text = element.getAttribute(value);
+		return text;
 	}
 
 
-	public void clearText(WebDriver Driver, String Xpath)
+	public void clearText(WebDriver driver, String xPath)
 	{
-		Driver.findElement(By.xpath(Xpath)).clear();
+		driver.findElement(By.xpath(xPath)).clear();
 	}
 
 
-	public String alert(WebDriver Driver)
+	public String alert(WebDriver driver)
 	{
-		Alert_Obj = Driver.switchTo().alert();
-		Message = Alert_Obj.getText();
-		Alert_Obj.accept();
-		return Message;
+		alert_Obj = driver.switchTo().alert();
+		message = alert_Obj.getText();
+		alert_Obj.accept();
+		return message;
 	}
 
 
-	public void alertAccept(WebDriver Driver)
+	public void alertAccept(WebDriver driver)
 	{
-		Alert_Obj = Driver.switchTo().alert();
-		Alert_Obj.accept();
+		alert_Obj = driver.switchTo().alert();
+		alert_Obj.accept();
 
 	}
 
 
-	public Actions action(WebDriver Driver)
+	public Actions action(WebDriver driver)
 	{
-		Action = new Actions(Driver);
-		return Action;
+		action = new Actions(driver);
+		return action;
 	}
 
 
-	public String alert(String Input, WebDriver Driver)
+	public String alert(String input, WebDriver driver)
 	{
-		Alert_Obj = Driver.switchTo().alert();
-		Message = Alert_Obj.getText();
-		if (Input.equalsIgnoreCase("accept"))
-			Alert_Obj.accept();
-		else if (Input.equalsIgnoreCase("dismiss"))
-			Alert_Obj.dismiss();
-		return Message;
+		alert_Obj = driver.switchTo().alert();
+		message = alert_Obj.getText();
+		if (input.equalsIgnoreCase("accept"))
+			alert_Obj.accept();
+		else if (input.equalsIgnoreCase("dismiss"))
+			alert_Obj.dismiss();
+		return message;
 	}
 
 
-	public JavascriptExecutor jsReturn(WebDriver Driver)
+	public JavascriptExecutor jsReturn(WebDriver driver)
 	{
-		Js = (JavascriptExecutor) Driver;
-		return Js;
+		jS = (JavascriptExecutor) driver;
+		return jS;
 	}
 
 
