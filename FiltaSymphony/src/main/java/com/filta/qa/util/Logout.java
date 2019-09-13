@@ -8,20 +8,20 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Logout
 {
-	public WebDriver Driver;
+	public WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='user']//a")
-	private WebElement Logout;
+	private WebElement log_Out;
 	
-	public Logout(WebDriver Driver)
+	public Logout(WebDriver driver)
 	{
-		this.Driver = Driver;
-		PageFactory.initElements(Driver, this);
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
 	}
 
 
 	public void logout()
 	{
-		Logout.click();
+		log_Out.click();
 	}
 }

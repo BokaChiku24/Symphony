@@ -11,22 +11,22 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadExcelData
 {
-	private Sheet Sheet1;
-	private Workbook Wb;
-	private File File_Obj;
-	private FileInputStream Input;
-	private int TotlaRows;
-	private int TotalCol;
+	private Sheet sheet1;
+	private Workbook wb;
+	private File file_Obj;
+	private FileInputStream input;
+	private int totlaRows;
+	private int totalCol;
 
-	public ReadExcelData(String Path, String SheetName)
+	public ReadExcelData(String path, String sheetName)
 	{
-		File_Obj = new File(Path);
+		file_Obj = new File(path);
 		try
 		{
-			Input = new FileInputStream(File_Obj);
-			Wb = new XSSFWorkbook(Input);
-			Sheet1 = Wb.getSheet(SheetName);
-			Wb.close();
+			input = new FileInputStream(file_Obj);
+			wb = new XSSFWorkbook(input);
+			sheet1 = wb.getSheet(sheetName);
+			wb.close();
 		}
 		catch (FileNotFoundException e)
 		{
@@ -41,15 +41,15 @@ public class ReadExcelData
 	}
 
 
-	public ReadExcelData(String Path, int Index)
+	public ReadExcelData(String path, int index)
 	{
-		File_Obj = new File(Path);
+		file_Obj = new File(path);
 		try
 		{
-			Input = new FileInputStream(File_Obj);
-		     Wb = new XSSFWorkbook(Input);
-			Sheet1 = Wb.getSheetAt(Index);
-			Wb.close();
+			input = new FileInputStream(file_Obj);
+		     wb = new XSSFWorkbook(input);
+			sheet1 = wb.getSheetAt(index);
+			wb.close();
 		}
 		catch (FileNotFoundException e)
 		{
@@ -68,26 +68,26 @@ public class ReadExcelData
 	public int getTotalRows()
 	{
 		// For Only One Row Use: int totlaRows = sheet1.getLastRowNum() + 1;
-		TotlaRows = Sheet1.getLastRowNum();
-		return TotlaRows;
+		totlaRows = sheet1.getLastRowNum();
+		return totlaRows;
 	}
 
 
 	public int getTotalColumns()
 	{
-		TotalCol = Sheet1.getRow(0).getLastCellNum();
-		return TotalCol;
+		totalCol = sheet1.getRow(0).getLastCellNum();
+		return totalCol;
 	}
 
 
-	public String getCellData(int RowNum, int ColNum)
+	public String getCellData(int rowNum, int colNum)
 	{
-		return Sheet1.getRow(RowNum).getCell(ColNum).getStringCellValue();
+		return sheet1.getRow(rowNum).getCell(colNum).getStringCellValue();
 	}
 
 
-	public double getCellDataInt(int RowNum, int ColNum)
+	public double getCellDataInt(int rowNum, int colNum)
 	{
-		return Sheet1.getRow(RowNum).getCell(ColNum).getNumericCellValue();
+		return sheet1.getRow(rowNum).getCell(colNum).getNumericCellValue();
 	}
 }
