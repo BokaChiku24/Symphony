@@ -31,7 +31,7 @@ public class LoginPage implements LoginPage_Interface
 	private WebElement footer;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='login']//tbody//tr[3]//td")
-	private WebElement textmessage;
+	private WebElement textMessage;
 
 	@FindBy(how = How.XPATH, using = ".//a[@href='LICENSE.txt' and text()='AGPLv3']")
 	private WebElement link1;
@@ -95,7 +95,7 @@ public class LoginPage implements LoginPage_Interface
 	public void checkText2()
 	{
 
-		Assert.assertEquals(textmessage.getText(), prop.getProperty("TextLoginPage"));
+		Assert.assertEquals(textMessage.getText(), prop.getProperty("TextLoginPage"));
 	}
 
 
