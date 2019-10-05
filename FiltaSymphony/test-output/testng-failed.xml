@@ -8,11 +8,7 @@
           <include name="afterMethod"/>
           <include name="checkWidget"/>
           <include name="property"/>
-          <include name="checkToolTip"/>
-          <include name="checkColor"/>
           <include name="checkUserNameOnHomePage"/>
-          <include name="checkText"/>
-          <include name="checkTable"/>
           <include name="takeScreenShotOnFailure"/>
         </methods>
       </class> <!-- com.filta.qa.home_franchisee_test.HomePage_TestCase -->
