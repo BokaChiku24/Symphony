@@ -29,7 +29,7 @@ public class HomePage implements HomePage_Interface
 	private ArrayList<String> array;
 	private List<WebElement> list;
 	private List<WebElement> list2;
-	
+
 	@FindBy(how = How.XPATH, using = ".//select[@name='login_language']")
 	private WebElement language;
 
@@ -326,9 +326,9 @@ public class HomePage implements HomePage_Interface
 
 	public void checkText()
 	{
-		Assert.assertEquals(email_Summary.getText(), prop.getProperty("HomeText1"));
-		Assert.assertEquals(email_Summary2.getText(), prop.getProperty("HomeText2"));
-		Assert.assertEquals(email_Summary3.getText(), prop.getProperty("HomeText3"));
+		// Assert.assertEquals(email_Summary.getText(), prop.getProperty("HomeText1"));
+		// Assert.assertEquals(email_Summary2.getText(), prop.getProperty("HomeText2"));
+		// Assert.assertEquals(email_Summary3.getText(), prop.getProperty("HomeText3"));
 		Assert.assertEquals(homeText.getText(), prop.getProperty("HomeText4"));
 		Assert.assertEquals(customerLabel.getText(), prop.getProperty("HomeCustomerLabel"));
 		Assert.assertEquals(NCALabel.getText(), prop.getProperty("HomeNCALabel"));
@@ -428,9 +428,9 @@ public class HomePage implements HomePage_Interface
 		Assert.assertEquals(tapNameWidget2.getText(), prop.getProperty("tapNameWidget2"));
 		list = driver.findElements(By.xpath(
 				".//div[@class='yui-panel-container yui-dialog shadow']//div[@id='moduleDashletsList']//tbody//tr//td"));
-		// for (int i = 0; i < list.size(); i++) {
-		// System.out.println(list.get(i).getText());
-		// }
+//		 for (int i = 0; i < list.size(); i++) {
+//		 System.out.println(list.get(i).getText());
+//		 }
 
 		for (int i = 0; i < list.size(); i++)
 		{

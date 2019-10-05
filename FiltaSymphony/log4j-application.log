@@ -6941,4 +6941,93 @@
  2019-09-16 23:45:18,465  INFO [main] Home Page Test Case:86 - Check Menu Screen On Home Page
  2019-09-16 23:45:23,873  INFO [main] Home Page Test Case:101 - Check Text On Home Page
  2019-09-16 23:45:24,437  INFO [main] Home Page Test Case:110 - Check Table On Home Page
+ 2019-10-05 19:16:04,216  INFO [main] Forget password test case:80 - Test case 0: Get all URL names
+ 2019-10-05 19:16:04,376  INFO [main] Forget password test case:89 - Test case 0: Get all URL names
+ 2019-10-05 19:16:06,770  INFO [main] Forget password test case:98 - Test case 1: Forgot password check with valid username and email
+ 2019-10-05 19:16:11,605  INFO [main] Forget password test case:109 - Test case 2: Forgot password check with invalid username and email
+ 2019-10-05 19:16:13,065  INFO [main] Forget password test case:119 - Test case 3: Forgot password check without username and email
+ 2019-10-05 19:16:14,392  INFO [main] Forget password test case:129 - Test case 4: Forgot password check without username and with email
+ 2019-10-05 19:16:14,717  INFO [main] Forget password test case:139 - Test case 5: Forgot password check with username and without email
+ 2019-10-05 19:16:14,976  INFO [main] Forget password test case:149 - Test case 6: Forgot password textbox check
+ 2019-10-05 19:16:15,019  INFO [main] Forget password test case:158 - Test case 7: Forgot password label check
+ 2019-10-05 19:16:15,854  INFO [main] Forget password test case:198 - Forgot password test case ends here
+ 2019-10-05 19:17:47,661  INFO [main] Sign in test case:98 - Test case 1: Check login functionality with valid credentials
+ 2019-10-05 19:18:19,409  INFO [main] Sign in test case:144 - Sign in test case ends here
+ 2019-10-05 19:19:35,055  INFO [main] Sign in with invalid credentials test case:77 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-10-05 19:19:36,880  INFO [main] Sign in with invalid credentials test case:89 - Test case 2: Check login functionality without credentials
+ 2019-10-05 19:19:38,659  INFO [main] Sign in with invalid credentials test case:102 - Test case 3: Check login functionality withInvalid credentials
+ 2019-10-05 19:19:40,446  INFO [main] Sign in with invalid credentials test case:115 - Test case 4: Check login functionality withInvalid credentials
+ 2019-10-05 19:19:42,222  INFO [main] Sign in with invalid credentials test case:128 - Test case 7: Get all login URL
+ 2019-10-05 19:19:42,317  INFO [main] Sign in with invalid credentials test case:137 - Test case 8: Get all broken URL
+ 2019-10-05 19:19:44,758  INFO [main] Sign in with invalid credentials test case:175 - Sign in test case ends here
+ 2019-10-05 19:24:30,131  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-10-05 19:24:30,191  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-10-05 19:24:30,360  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-10-05 19:24:30,419  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-10-05 19:24:38,807  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-10-05 19:24:38,880  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-10-05 19:24:39,012  INFO [main] LogInPage test case:126 - Test case 7: Get all login URL
+ 2019-10-05 19:24:39,110  INFO [main] LogInPage test case:135 - Test case 8: Get all broken URL
+ 2019-10-05 19:24:41,414  INFO [main] LogInPage test case:175 - Login Page test case Ends Here
+ 2019-10-05 19:25:41,628  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 19:25:41,845  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 19:25:45,773  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 19:25:46,191  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 20:07:27,127  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-05 20:07:27,259  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-05 20:07:30,712  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-05 20:07:31,069  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-05 20:07:31,456  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-05 20:56:27,347  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 20:56:27,890  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 20:56:33,020  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 20:56:33,684  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 20:57:50,698  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 20:57:51,182  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 20:57:56,478  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 20:57:57,163  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 21:02:51,628  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 21:02:52,025  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 21:02:56,747  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 21:02:58,071  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 21:03:52,175  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 21:03:52,648  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 21:03:57,915  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 21:03:57,923  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 21:05:06,001  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 21:05:06,545  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 21:05:11,649  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 21:05:11,660  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 21:05:11,671  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-05 21:05:11,987  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-05 21:05:25,083  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-05 21:05:25,611  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-05 21:05:26,343  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-05 21:07:49,391  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 21:07:49,881  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 21:07:54,653  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 21:07:54,659  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 21:07:54,665  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-05 21:07:54,977  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-05 21:08:02,998  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-05 21:08:03,514  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-05 21:08:04,186  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-05 21:11:00,779  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 21:11:01,271  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 21:11:08,190  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 21:11:08,197  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 21:11:08,203  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-05 21:11:08,473  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-05 21:11:16,382  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-05 21:11:16,822  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-05 21:11:17,552  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-05 21:14:27,875  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-05 21:14:28,404  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-05 21:14:33,198  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-05 21:14:33,206  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-05 21:14:33,213  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-05 21:14:33,573  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-05 21:14:51,375  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-05 21:14:51,862  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-05 21:15:03,092  INFO [main] Home page test case:185 - Home page test case ends here
  
