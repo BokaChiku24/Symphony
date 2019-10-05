@@ -6920,4 +6920,25 @@
  2019-09-08 12:44:57,841  INFO [main] User page test case:127 - Test case 6: Check data on user page
  2019-09-08 12:45:12,362  INFO [main] User page test case:137 - Test Case 7: Check password field on edit page
  2019-09-08 12:45:41,282  INFO [main] User page test case:203 - User page test case ends here
+ 2019-09-13 14:38:54,095  INFO [main] User page test case:73 - Check URL of user page
+ 2019-09-13 14:39:03,270  INFO [main] User page test case:82 - Test case 1: Check button name on user page
+ 2019-09-13 14:39:08,356  INFO [main] User page test case:91 - Test case 2: Check button color without mouse overview on user page
+ 2019-09-13 14:39:13,207  INFO [main] User page test case:100 - Test case 3: Check button color with mouse overview on user page
+ 2019-09-13 14:39:17,256  INFO [main] User page test case:109 - Test case 4: Check button toolTip on user page
+ 2019-09-13 14:39:20,652  INFO [main] User page test case:118 - Test case 5: Check tab name on user page
+ 2019-09-13 14:39:23,836  INFO [main] User page test case:127 - Test case 6: Check data on user page
+ 2019-09-13 14:39:37,186  INFO [main] User page test case:137 - Test Case 7: Check password field on edit page
+ 2019-09-13 14:39:53,669  INFO [main] User page test case:203 - User page test case ends here
+ 2019-09-16 23:35:43,990  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-09-16 23:35:44,677  INFO [main] Home Page Test Case:86 - Check Menu Screen On Home Page
+ 2019-09-16 23:35:50,648  INFO [main] Home Page Test Case:101 - Check Text On Home Page
+ 2019-09-16 23:35:51,314  INFO [main] Home Page Test Case:110 - Check Table On Home Page
+ 2019-09-16 23:38:58,355  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-09-16 23:38:58,829  INFO [main] Home Page Test Case:86 - Check Menu Screen On Home Page
+ 2019-09-16 23:39:05,174  INFO [main] Home Page Test Case:101 - Check Text On Home Page
+ 2019-09-16 23:39:05,871  INFO [main] Home Page Test Case:110 - Check Table On Home Page
+ 2019-09-16 23:45:18,076  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-09-16 23:45:18,465  INFO [main] Home Page Test Case:86 - Check Menu Screen On Home Page
+ 2019-09-16 23:45:23,873  INFO [main] Home Page Test Case:101 - Check Text On Home Page
+ 2019-09-16 23:45:24,437  INFO [main] Home Page Test Case:110 - Check Table On Home Page
  

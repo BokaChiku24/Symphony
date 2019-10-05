@@ -3,21 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.filta.qa.home_franchisee_test.UserPage_TestCase">
+      <class name="com.filta.qa.home_franchisee_test.HomePage_TestCase">
         <methods>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="afterClass"/>
-          <include name="checkPasswordPageOnEdit"/>
-          <include name="buttonBackGroundWithMouseOverview"/>
-          <include name="buttonToolTipCheck"/>
-          <include name="buttonBackGroundWithoutMouseOverview"/>
-          <include name="checkDataOfUserProfile"/>
-          <include name="checkButtonName"/>
+          <include name="afterMethod"/>
+          <include name="checkWidget"/>
           <include name="property"/>
-          <include name="tabnamesCheck"/>
-          <include name="checkURL"/>
+          <include name="checkToolTip"/>
+          <include name="checkColor"/>
+          <include name="checkUserNameOnHomePage"/>
+          <include name="checkText"/>
+          <include name="checkTable"/>
+          <include name="takeScreenShotOnFailure"/>
         </methods>
-      </class> <!-- com.filta.qa.home_franchisee_test.UserPage_TestCase -->
+      </class> <!-- com.filta.qa.home_franchisee_test.HomePage_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

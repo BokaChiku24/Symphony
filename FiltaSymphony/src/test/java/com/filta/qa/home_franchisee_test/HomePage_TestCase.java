@@ -32,17 +32,17 @@ import org.testng.ITestResult;
 public class HomePage_TestCase
 {
 
-	private WebDriver Driver;
-	private HomePage Homepage;
-	private Global Global_Obj;
-	private ExtentReports Extent;
-	private ExtentHtmlReporter HtmlReporter;
-	private ExtentTest ExtentLogger;
-	private String ScreenshotPath;
-	private String DateName;
-	private File ScrFile;
+	private WebDriver driver;
+	private HomePage homepage;
+	private Global global_Obj;
+	private ExtentReports extent;
+	private ExtentHtmlReporter htmlReporter;
+	private ExtentTest extentLogger;
+	private String screenshotPath;
+	private String dateName;
+	private File scrFile;
 	
-	public static Logger Log = Logger.getLogger("Home Page Test Case");
+	public static Logger log = Logger.getLogger("Home page test case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
@@ -52,129 +52,129 @@ public class HomePage_TestCase
 	@BeforeClass
 	public void property()
 	{
-		Global_Obj = new Global();
-		Driver = Global_Obj.driver();
-		Homepage = new HomePage(Driver);
-		Homepage.login();
-		HtmlReporter = new ExtentHtmlReporter(
+		global_Obj = new Global();
+		driver = global_Obj.driver();
+		homepage = new HomePage(driver);
+		homepage.login();
+		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/HomePage_TestCase.html");
-		Extent = new ExtentReports();
-		Extent.attachReporter(HtmlReporter);
-		Extent.setSystemInfo("OS", "Windows 7 64 Bit");
-		Extent.setSystemInfo("Browser", "Google Chrome");
-		Extent.setSystemInfo("Author:", "Kunal Chavan");
-		Extent.setSystemInfo("Testing:", "Functional Testing");
-		HtmlReporter.config().setReportName("Home Page Functionality Test Case");
-		HtmlReporter.config().setTheme(Theme.STANDARD);
-		HtmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
-		HtmlReporter.loadXMLConfig("./extent-config.xml");
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		extent.setSystemInfo("OS", "Windows 7 64 Bit");
+		extent.setSystemInfo("Browser", "Google Chrome");
+		extent.setSystemInfo("Author:", "Kunal Chavan");
+		extent.setSystemInfo("Testing:", "Functional Testing");
+		htmlReporter.config().setReportName("Home page functionality test case");
+		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
+		htmlReporter.loadXMLConfig("./extent-config.xml");
 	}
 
 
 	@Test(priority = 0)
 	public void checkMenubar()
 	{
-		Log.info("Check Menubar Of Home Page");
-		ExtentLogger = Extent.createTest("Test Case 1: Check Menubar Of Home Page");
-		Homepage.menuBar();
+		log.info("Check menubar of home page");
+		extentLogger = extent.createTest("Test case 1: Check menubar of home page");
+		homepage.menuBar();
 	}
 
 
 	@Test(priority = 1)
 	public void menuScreenCheck()
 	{
-		Log.info("Check Menu Screen On Home Page");
-		ExtentLogger = Extent.createTest("Test Case 2: Check Menu Screen On Home Page");
-		Homepage.customers();
-		Homepage.leads();
-		Homepage.nca();
-		Homepage.filtaBio();
-		Homepage.techHiring();
-		Homepage.myFranchisee();
-		Homepage.filtaGold();
+		log.info("Check menu screen on home page");
+		extentLogger = extent.createTest("Test case 2: Check menu screen on home page");
+		homepage.customers();
+		homepage.leads();
+		homepage.nca();
+		homepage.filtaBio();
+		homepage.techHiring();
+		homepage.myFranchisee();
+		homepage.filtaGold();
 	}
 
 
 	@Test(priority = 2)
 	public void checkText()
 	{
-		Log.info("Check Text On Home Page");
-		ExtentLogger = Extent.createTest("Test Case 3: Check Text On Home Page");
-		Homepage.checkText();
+		log.info("Check text on home page");
+		extentLogger = extent.createTest("Test case 3: Check text on home page");
+		homepage.checkText();
 	}
 
 
 	@Test(priority = 3)
 	public void checkTable()
 	{
-		Log.info("Check Table On Home Page");
-		ExtentLogger = Extent.createTest("Test Case 4: Check Table On Home Page");
-		Homepage.tableTest();
+		log.info("Check table on home page");
+		extentLogger = extent.createTest("Test case 4: Check table on home page");
+		homepage.tableTest();
 	}
 
 
 	@Test(priority = 4)
 	public void checkToolTip()
 	{
-		Log.info("Check Tooltip on Home Page");
-		ExtentLogger = Extent.createTest("Test Case 5: Check Tooltip on Home Page");
-		Homepage.toolTipCheck();
+		log.info("Check tooltip on home page");
+		extentLogger = extent.createTest("Test case 5: Check tooltip on home page");
+		homepage.toolTipCheck();
 	}
 
 
 	@Test(priority = 5)
 	public void checkWidget()
 	{
-		Log.info("Check Widget On Home Page");
-		ExtentLogger = Extent.createTest("Test Case 6: Check Widget On Home Page");
-		Homepage.widgetTesting();
+		log.info("Check widget on home page");
+		extentLogger = extent.createTest("Test case 6: Check widget on home page");
+		homepage.widgetTesting();
 	}
 
 
 	@Test(priority = 6)
 	public void checkColor()
 	{
-		Log.info("Check Color On Home Page");
-		ExtentLogger = Extent.createTest("Test Case 7: Check Color On Home Page");
-		Homepage.colorCheck();
+		log.info("Check color on home page");
+		extentLogger = extent.createTest("Test case 7: Check color on home page");
+		homepage.colorCheck();
 	}
 
 
 	@Test(priority = 7)
 	public void checkUserNameOnHomePage()
 	{
-		Log.info("Check User Name On Home Page");
-		ExtentLogger = Extent.createTest("Test Case 8: Check User Name On Home Page");
-		Homepage.checkUserNameOnHomePage();
+		log.info("Check user name on home page");
+		extentLogger = extent.createTest("Test case 8: Check user name on home page");
+		homepage.checkUserNameOnHomePage();
 	}
 
 
 	@AfterMethod
-	public void takeScreenShotOnFailure(ITestResult TestResult) throws IOException
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
 	{
-		if (TestResult.getStatus() == ITestResult.FAILURE)
+		if (testResult.getStatus() == ITestResult.FAILURE)
 		{
-			ExtentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Failed", ExtentColor.RED));
-			ExtentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(TestResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-			DateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
-			ScrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
-			ScreenshotPath = System.getProperty("user.dir") + "/HomePage_errorScreenshots/" + TestResult.getName()
-					+ DateName + "_" + Arrays.toString(TestResult.getParameters()) + ".png";
-			FileUtils.copyFile(ScrFile, new File(ScreenshotPath));
-			ExtentLogger.fail("Test Case Failed Snapshot is below " + ExtentLogger.addScreenCaptureFromPath(ScreenshotPath));
+			extentLogger.log(Status.FAIL,
+					MarkupHelper.createLabel(testResult.getName() + " - Test case failed", ExtentColor.RED));
+			extentLogger.log(Status.FAIL,
+					MarkupHelper.createLabel(testResult.getThrowable() + " - Test case failed", ExtentColor.RED));
+			dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
+			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			screenshotPath = System.getProperty("user.dir") + "/HomePage_errorScreenshots/" + testResult.getName()
+					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
+			FileUtils.copyFile(scrFile, new File(screenshotPath));
+			extentLogger.fail("Test Case Failed Snapshot is below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
 
 		}
-		else if (TestResult.getStatus() == ITestResult.SKIP)
+		else if (testResult.getStatus() == ITestResult.SKIP)
 		{
-			ExtentLogger.log(Status.SKIP,
-					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
+			extentLogger.log(Status.SKIP,
+					MarkupHelper.createLabel(testResult.getName() + " - Test case skipped", ExtentColor.ORANGE));
 		}
-		else if (TestResult.getStatus() == ITestResult.SUCCESS)
+		else if (testResult.getStatus() == ITestResult.SUCCESS)
 		{
-			ExtentLogger.log(Status.PASS,
-					MarkupHelper.createLabel(TestResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
+			extentLogger.log(Status.PASS,
+					MarkupHelper.createLabel(testResult.getName() + " Test case passed", ExtentColor.GREEN));
 		}
 	}
 
@@ -182,8 +182,8 @@ public class HomePage_TestCase
 	@AfterClass
 	public void afterMethod()
 	{
-		Log.info("Home Page Test Case Ends Here");
-		Extent.flush();
-		Homepage.closeBrowser();
+		log.info("Home page test case ends here");
+		extent.flush();
+		homepage.closeBrowser();
 	}
 }

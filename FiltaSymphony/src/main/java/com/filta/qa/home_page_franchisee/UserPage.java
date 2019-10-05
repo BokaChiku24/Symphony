@@ -8,7 +8,6 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.asserts.SoftAssert;
 
 import com.filta.qa.helper.UserPage_Interface;
 import com.filta.qa.util.Global;
@@ -89,7 +88,7 @@ public class UserPage implements UserPage_Interface
 	private String dateFormat;
 	private String timeFormat;
 	private String timeZone;
-	private String Currency;
+	private String currency;
 	private int currencySignificantDigit;
 	private String thousandsSeparator;
 	private String decimalSymbol;
@@ -1393,8 +1392,8 @@ public class UserPage implements UserPage_Interface
 		}
 		Assert.assertEquals(currencyLabel.getText(), localSettingData.getCellData(0, 2));
 		list = driver.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[4]//select//option"));
-		Currency = global_Obj.select(defaultCurrency).getFirstSelectedOption().getText();
-		Assert.assertEquals(Currency, localSettingData.getCellData(1, 2));
+		currency = global_Obj.select(defaultCurrency).getFirstSelectedOption().getText();
+		Assert.assertEquals(currency, localSettingData.getCellData(1, 2));
 		for (int i = 0; i < list.size(); i++)
 		{
 //			System.out.println(list6.get(i).getText());
