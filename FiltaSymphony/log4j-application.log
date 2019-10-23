@@ -7030,4 +7030,24 @@
  2019-10-05 21:14:51,375  INFO [main] Home page test case:137 - Check color on home page
  2019-10-05 21:14:51,862  INFO [main] Home page test case:146 - Check user name on home page
  2019-10-05 21:15:03,092  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-05 21:21:27,274  INFO [main] Fixed Cost Test Case:105 - Check Franchisee Default Pricing
+ 2019-10-05 21:21:27,277  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
+ 2019-10-05 21:24:33,488  INFO [main] Fixed Cost Test Case:105 - Check Franchisee Default Pricing
+ 2019-10-05 21:24:33,491  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
+ 2019-10-05 21:26:39,627  INFO [main] Fixed Cost Test Case:105 - Check Franchisee Default Pricing
+ 2019-10-05 21:26:39,632  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
+ 2019-10-05 21:27:07,918  INFO [main] Fixed Cost Test Case:176 - Fixed Cost Page Test Case Ends Here
+ 2019-10-05 21:27:08,542  INFO [main] Fixed Cost Test Case:90 - Fixed Cost Customer Test!!
+ 2019-10-05 21:30:57,679  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-10-05 21:30:57,684  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-10-05 21:31:23,472  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-10-05 21:31:24,079  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-10-05 21:32:32,110  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-05 21:32:32,115  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-05 21:32:56,979  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-05 21:33:01,848  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
+ 2019-10-23 21:54:10,903  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-23 21:54:10,955  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-23 21:54:35,329  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-23 21:54:40,064  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
  

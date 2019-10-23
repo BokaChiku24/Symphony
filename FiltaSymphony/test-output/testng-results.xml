@@ -1,141 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-05T21:13:20 IST" name="Default suite" finished-at="2019-10-05T21:15:07 IST" duration-ms="106898">
+  <suite started-at="2019-10-23T21:53:26 IST" name="Default suite" finished-at="2019-10-23T21:54:40 IST" duration-ms="73561">
     <groups>
     </groups>
-    <test started-at="2019-10-05T21:13:20 IST" name="Default test" finished-at="2019-10-05T21:15:07 IST" duration-ms="106898">
-      <class name="com.filta.qa.home_franchisee_test.HomePage_TestCase">
-        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:13:21 IST" name="property" finished-at="2019-10-05T21:14:27 IST" duration-ms="66851" status="PASS">
+    <test started-at="2019-10-23T21:53:26 IST" name="Default test" finished-at="2019-10-23T21:54:40 IST" duration-ms="73561">
+      <class name="com.filta.qa.customer_test.PerLb_TestCase">
+        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.customer_test.PerLb_TestCase@5ffead27]" started-at="2019-10-23T21:53:26 IST" name="property" finished-at="2019-10-23T21:54:40 IST" duration-ms="73482" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method signature="checkMenubar()[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:27 IST" name="checkMenubar" finished-at="2019-10-05T21:14:28 IST" duration-ms="504" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.filta.qa.customer_test.PerLb_TestCase@5ffead27]" started-at="2019-10-23T21:54:40 IST" name="test" finished-at="2019-10-23T21:54:40 IST" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkMenubar -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:28 IST" name="takeScreenShotOnFailure" finished-at="2019-10-05T21:14:28 IST" duration-ms="22" status="PASS">
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.PerLb_TestCase@5ffead27]" started-at="2019-10-23T21:54:40 IST" name="takeScreenShotOnFailure" finished-at="2019-10-23T21:54:40 IST" duration-ms="9" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkMenubar status=SUCCESS method=HomePage_TestCase.checkMenubar()[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=PerLb_TestCase.test()[pri:0, instance:com.filta.qa.customer_test.PerLb_TestCase@5ffead27] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method signature="menuScreenCheck()[pri:1, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:28 IST" name="menuScreenCheck" finished-at="2019-10-05T21:14:33 IST" duration-ms="4788" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- menuScreenCheck -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:33 IST" name="takeScreenShotOnFailure" finished-at="2019-10-05T21:14:33 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=menuScreenCheck status=SUCCESS method=HomePage_TestCase.menuScreenCheck()[pri:1, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method signature="checkText()[pri:2, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:33 IST" name="checkText" finished-at="2019-10-05T21:14:33 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkText -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:33 IST" name="takeScreenShotOnFailure" finished-at="2019-10-05T21:14:33 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkText status=SUCCESS method=HomePage_TestCase.checkText()[pri:2, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method signature="checkTable()[pri:3, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:33 IST" name="checkTable" finished-at="2019-10-05T21:14:33 IST" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkTable -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:33 IST" name="takeScreenShotOnFailure" finished-at="2019-10-05T21:14:33 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkTable status=SUCCESS method=HomePage_TestCase.checkTable()[pri:3, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method signature="checkToolTip()[pri:4, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:33 IST" name="checkToolTip" finished-at="2019-10-05T21:14:33 IST" duration-ms="351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkToolTip -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:33 IST" name="takeScreenShotOnFailure" finished-at="2019-10-05T21:14:33 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkToolTip status=SUCCESS method=HomePage_TestCase.checkToolTip()[pri:4, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method signature="checkWidget()[pri:5, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:33 IST" name="checkWidget" finished-at="2019-10-05T21:14:51 IST" duration-ms="17803" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkWidget -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:51 IST" name="takeScreenShotOnFailure" finished-at="2019-10-05T21:14:51 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkWidget status=SUCCESS method=HomePage_TestCase.checkWidget()[pri:5, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method signature="checkColor()[pri:6, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:51 IST" name="checkColor" finished-at="2019-10-05T21:14:51 IST" duration-ms="476" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkColor -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:51 IST" name="takeScreenShotOnFailure" finished-at="2019-10-05T21:14:51 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkColor status=SUCCESS method=HomePage_TestCase.checkColor()[pri:6, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method signature="checkUserNameOnHomePage()[pri:7, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:14:51 IST" name="checkUserNameOnHomePage" finished-at="2019-10-05T21:15:03 IST" duration-ms="11236" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkUserNameOnHomePage -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:15:03 IST" name="afterMethod" finished-at="2019-10-05T21:15:07 IST" duration-ms="4798" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4]" started-at="2019-10-05T21:15:03 IST" name="takeScreenShotOnFailure" finished-at="2019-10-05T21:15:03 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkUserNameOnHomePage status=SUCCESS method=HomePage_TestCase.checkUserNameOnHomePage()[pri:7, instance:com.filta.qa.home_franchisee_test.HomePage_TestCase@4a94ee4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-      </class> <!-- com.filta.qa.home_franchisee_test.HomePage_TestCase -->
+      </class> <!-- com.filta.qa.customer_test.PerLb_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
