@@ -17,6 +17,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -45,8 +46,8 @@ public class Create_CustomerFB_TestCase
 	private ExtentHtmlReporter HtmlReporter;
 	private ExtentTest ExtentLogger;
 	private String ScreenshotPath;
-	private Properties Prop;
-	private String ActualCustomer;
+	// private Properties Prop;
+	// private String ActualCustomer;
 	private String DateName;
 	private File ScrFile;
 
@@ -61,7 +62,7 @@ public class Create_CustomerFB_TestCase
 	{
 		Global_Obj = new Global();
 		Driver = Global_Obj.driver();
-		Prop = Global_Obj.readProperties();
+		// Prop = Global_Obj.readProperties();
 		create_customer_filtabio = new Create_CustomerFB(Driver);
 		create_customer_filtabio.login();
 		HtmlReporter = new ExtentHtmlReporter(
@@ -79,11 +80,23 @@ public class Create_CustomerFB_TestCase
 	}
 
 
-	@Test
+	@Test(priority = 0)
 	public void test()
 	{
-		Log.info("Fixed Cost Customer Test!!");
-		ExtentLogger = Extent.createTest("Test Case 1: Create Customer With Default Pricing No");
+		Log.info("Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!");
+		ExtentLogger = Extent.createTest(
+				"Test Case 1: Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not");
+		create_customer_filtabio.createCustomerDefaultPricingNo();
+	}
+
+
+	@Test(priority = 1)
+	public void testDefaultPricingYes()
+	{
+		Log.info("Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!");
+		ExtentLogger = Extent.createTest(
+				"Test Case 1: Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not");
+		create_customer_filtabio.createCustomerDefaultPricingYes();
 	}
 
 
@@ -118,6 +131,7 @@ public class Create_CustomerFB_TestCase
 	}
 
 
+	// @AfterClass
 	public void afterMethod()
 	{
 		Log.info("Create Customer FiltaBio Test Case Ends Here");
