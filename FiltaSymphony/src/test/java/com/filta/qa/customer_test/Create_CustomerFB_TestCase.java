@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package com.filta.qa.customer_test;
 
 import java.io.File;
@@ -25,13 +28,18 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.filta.qa.customer_page.FixedCostCustomerPage;
+import com.filta.qa.customer_page.Create_CustomerFB;
 import com.filta.qa.util.Global;
 
-public class FixedCost_TestCase
+/**
+ * @author kun24
+ * @implNote Customer Create Test Case With FB
+ */
+
+public class Create_CustomerFB_TestCase
 {
 	private WebDriver Driver;
-	private FixedCostCustomerPage FixedCost_Customer;
+	private Create_CustomerFB create_customer_filtabio;
 	private Global Global_Obj;
 	private ExtentReports Extent;
 	private ExtentHtmlReporter HtmlReporter;
@@ -41,23 +49,23 @@ public class FixedCost_TestCase
 	private String ActualCustomer;
 	private String DateName;
 	private File ScrFile;
-	
-	public static Logger Log = Logger.getLogger("Fixed Cost Test Case");
+
+	public static Logger Log = Logger.getLogger("Create Customer FiltaBio Scenarios");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
-	
+
 	@BeforeClass
 	public void property()
 	{
 		Global_Obj = new Global();
 		Driver = Global_Obj.driver();
 		Prop = Global_Obj.readProperties();
-		FixedCost_Customer = new FixedCostCustomerPage(Driver);
-		FixedCost_Customer.login();
+		create_customer_filtabio = new Create_CustomerFB(Driver);
+		create_customer_filtabio.login();
 		HtmlReporter = new ExtentHtmlReporter(
-				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/Fixed_Cost_TestCase.html");
+				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/Create_Customer_FB_TestCase.html");
 		Extent = new ExtentReports();
 		Extent.attachReporter(HtmlReporter);
 		Extent.setSystemInfo("OS", "Windows 7 64 Bit");
@@ -68,77 +76,14 @@ public class FixedCost_TestCase
 		HtmlReporter.config().setTheme(Theme.STANDARD);
 		HtmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		HtmlReporter.loadXMLConfig("./extent-config.xml");
-		ActualCustomer = checkDefaultPricingOfFranchisee();
-		if (ActualCustomer.equals(Prop.getProperty("Customer0")))
-		{
-			FixedCost_Customer.clickingWebElement();
-			FixedCost_Customer.location();
-			FixedCost_Customer.fryer();
-			afterMethod();
-		}
-		else
-		{
-			performTest();
-			afterMethod();
-		}
-
 	}
-	
+
+
 	@Test
 	public void test()
 	{
 		Log.info("Fixed Cost Customer Test!!");
-	}
-
-
-	public void performTest()
-	{
-		checkCustomerBasicInfo();
-		pricing_EstimatingInfo();
-		marketingInfo();
-		unitInfo();
-	}
-
-
-	public String checkDefaultPricingOfFranchisee()
-	{
-		Log.info("Check Franchisee Default Pricing");
-		Log.info("Test Case1: Check Customer Page URL");
-		ExtentLogger = Extent.createTest("Test Case 2: Check Customer Page URL");
-		ActualCustomer = FixedCost_Customer.defaultPricingFranchiseeLevel();
-		return ActualCustomer;
-	}
-
-
-	public void checkCustomerBasicInfo()
-	{
-		Log.info("Create Customer Basic info");
-		ExtentLogger = Extent.createTest("Test Case 3:Create Customer Basic info");
-		FixedCost_Customer.createCustomer();
-		FixedCost_Customer.basicInfo();
-	}
-
-
-	public void pricing_EstimatingInfo()
-	{
-		Log.info("Create Customer Pricing and Estimating Info");
-		ExtentLogger = Extent.createTest(
-				"Test Case 4: Check Customer Pricing and Estimating Checkboxes And Default Dropdown Values");
-		FixedCost_Customer.pricing();
-	}
-
-
-	public void marketingInfo()
-	{
-		Log.info("Create Customer Marketing Info");
-		FixedCost_Customer.marketing();
-	}
-
-
-	public void unitInfo()
-	{
-		Log.info("Create Customer Unit Info");
-		FixedCost_Customer.unit_Data();
+		ExtentLogger = Extent.createTest("Test Case 1: Create Customer With Default Pricing No");
 	}
 
 
@@ -153,10 +98,11 @@ public class FixedCost_TestCase
 					MarkupHelper.createLabel(TestResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			DateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			ScrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
-			ScreenshotPath = System.getProperty("user.dir") + "/FixedCost_TestCase/" + TestResult.getName() + DateName
-					+ "_" + Arrays.toString(TestResult.getParameters()) + ".png";
+			ScreenshotPath = System.getProperty("user.dir") + "/Create_Customer_FB_TestCase/" + TestResult.getName()
+					+ DateName + "_" + Arrays.toString(TestResult.getParameters()) + ".png";
 			FileUtils.copyFile(ScrFile, new File(ScreenshotPath));
-			ExtentLogger.fail("Test Case Failed Snapshot is below " + ExtentLogger.addScreenCaptureFromPath(ScreenshotPath));
+			ExtentLogger.fail(
+					"Test Case Failed Snapshot is below " + ExtentLogger.addScreenCaptureFromPath(ScreenshotPath));
 
 		}
 		else if (TestResult.getStatus() == ITestResult.SKIP)
@@ -171,10 +117,11 @@ public class FixedCost_TestCase
 		}
 	}
 
+
 	public void afterMethod()
 	{
-		Log.info("Fixed Cost Page Test Case Ends Here");
+		Log.info("Create Customer FiltaBio Test Case Ends Here");
 		Extent.flush();
-		FixedCost_Customer.closeBrowser();
+		create_customer_filtabio.closeBrowser();
 	}
 }
