@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-23T21:53:26 IST" name="Default suite" finished-at="2019-10-23T21:54:40 IST" duration-ms="73561">
+  <suite started-at="2019-10-23T22:16:50 IST" name="Default suite" finished-at="2019-10-23T22:17:31 IST" duration-ms="40908">
     <groups>
     </groups>
-    <test started-at="2019-10-23T21:53:26 IST" name="Default test" finished-at="2019-10-23T21:54:40 IST" duration-ms="73561">
-      <class name="com.filta.qa.customer_test.PerLb_TestCase">
-        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.customer_test.PerLb_TestCase@5ffead27]" started-at="2019-10-23T21:53:26 IST" name="property" finished-at="2019-10-23T21:54:40 IST" duration-ms="73482" status="PASS">
+    <test started-at="2019-10-23T22:16:50 IST" name="Default test" finished-at="2019-10-23T22:17:31 IST" duration-ms="40908">
+      <class name="com.filta.qa.customer_test.Create_CustomerFB_TestCase">
+        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@5af3afd9]" started-at="2019-10-23T22:16:50 IST" name="property" finished-at="2019-10-23T22:17:31 IST" duration-ms="40838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method signature="test()[pri:0, instance:com.filta.qa.customer_test.PerLb_TestCase@5ffead27]" started-at="2019-10-23T21:54:40 IST" name="test" finished-at="2019-10-23T21:54:40 IST" duration-ms="13" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@5af3afd9]" started-at="2019-10-23T22:17:31 IST" name="test" finished-at="2019-10-23T22:17:31 IST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.PerLb_TestCase@5ffead27]" started-at="2019-10-23T21:54:40 IST" name="takeScreenShotOnFailure" finished-at="2019-10-23T21:54:40 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@5af3afd9]" started-at="2019-10-23T22:17:31 IST" name="takeScreenShotOnFailure" finished-at="2019-10-23T22:17:31 IST" duration-ms="17" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=PerLb_TestCase.test()[pri:0, instance:com.filta.qa.customer_test.PerLb_TestCase@5ffead27] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=Create_CustomerFB_TestCase.test()[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@5af3afd9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-      </class> <!-- com.filta.qa.customer_test.PerLb_TestCase -->
+      </class> <!-- com.filta.qa.customer_test.Create_CustomerFB_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

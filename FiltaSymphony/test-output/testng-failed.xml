@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.filta.qa.customer_test.FixedCost_TestCase">
+      <class name="com.filta.qa.customer_test.Create_CustomerFB_TestCase">
         <methods>
           <include name="property"/>
           <include name="test"/>
           <include name="takeScreenShotOnFailure"/>
         </methods>
-      </class> <!-- com.filta.qa.customer_test.FixedCost_TestCase -->
+      </class> <!-- com.filta.qa.customer_test.Create_CustomerFB_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
