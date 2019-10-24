@@ -47,8 +47,9 @@ public class Global
 	private String url;
 	private boolean result;
 	private static int count = 1;
-
-
+	private Map<String, Object> prefs;
+	private DesiredCapabilities capablities;
+	
 	// Driver Initialization Method !!
 	public WebDriver driver()
 	{
@@ -58,11 +59,11 @@ public class Global
 		options.addArguments("--start-maximized");
 		options.addArguments("--disable-web-security");
 		options.addArguments("--no-proxy-server");
-		Map<String, Object> prefs = new HashMap<String, Object>();
+		prefs = new HashMap<String, Object>();
 		prefs.put("credentials_enable_service", false);
 		prefs.put("profile.password_manager_enabled", false);
 		options.setExperimentalOption("prefs", prefs);
-		DesiredCapabilities capablities = new DesiredCapabilities();
+		capablities = new DesiredCapabilities();
 		capablities.setCapability(ChromeOptions.CAPABILITY, options);
 		capablities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 		System.setProperty("webdriver.chrome.driver", prop.getProperty("driver"));
