@@ -76,7 +76,7 @@ public class HomePage implements HomePage_Interface
 	private WebElement customerLabel;
 
 	@FindBy(how = How.XPATH, using = ".//a[@href='index.php?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DIM_NCA%26action%3Dindex%26parentTab%3DNCA']")
-	private WebElement NCALabel;
+	private WebElement nCALabel;
 
 	@FindBy(how = How.XPATH, using = ".//a[@href='index.php?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DLeads%26action%3Ddashletlist%26parentTab%3DLeads']")
 	private WebElement leadLabel;
@@ -180,7 +180,6 @@ public class HomePage implements HomePage_Interface
 	@FindBy(how = How.XPATH, using = ".//div[@class='user']")
 	private WebElement getHomeUserName;
 
-
 	public HomePage(WebDriver driver)
 	{
 		global_Obj = new Global();
@@ -199,7 +198,7 @@ public class HomePage implements HomePage_Interface
 
 	public void menuBar()
 	{
-		List<WebElement> list = driver.findElements(By.xpath(
+		list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul[@class='last']/li//span/a"));
 
 		// for (int i = 0; i < list.size(); i++) {
@@ -331,7 +330,7 @@ public class HomePage implements HomePage_Interface
 		// Assert.assertEquals(email_Summary3.getText(), prop.getProperty("HomeText3"));
 		Assert.assertEquals(homeText.getText(), prop.getProperty("HomeText4"));
 		Assert.assertEquals(customerLabel.getText(), prop.getProperty("HomeCustomerLabel"));
-		Assert.assertEquals(NCALabel.getText(), prop.getProperty("HomeNCALabel"));
+		Assert.assertEquals(nCALabel.getText(), prop.getProperty("HomeNCALabel"));
 		Assert.assertEquals(leadLabel.getText(), prop.getProperty("HomeLeadLabel"));
 		Assert.assertEquals(filtaBioLabel.getText(), prop.getProperty("HomeFiltaBioLabel"));
 		Assert.assertEquals(techHiringLabel.getText(), prop.getProperty("HomeTechLabel"));

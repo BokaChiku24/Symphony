@@ -71,6 +71,7 @@ public class UserPage implements UserPage_Interface
 	private ReadExcelData accessData;
 	private List<WebElement> list;
 	private List<String> list2;
+	private List<String> list3;
 
 	private String alert1;
 	private String alert2;
@@ -103,6 +104,9 @@ public class UserPage implements UserPage_Interface
 	private String popupEditPage;
 	private String emailEditPage;
 	private Logout logout;
+	private List<WebElement> allLinks;
+	private List<WebElement> finalList;
+	private List<WebElement> elementList;
 
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
 	private WebElement containerClose;
@@ -806,7 +810,6 @@ public class UserPage implements UserPage_Interface
 	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//li//a")
 	private WebElement roles_ALL;
 
-
 	public UserPage(WebDriver driver)
 	{
 		global_Obj = new Global();
@@ -1307,7 +1310,7 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(hideModule.getText(), layoutData.getCellData(0, 4));
 		list = driver
 				.findElements(By.xpath(".//div[@id='layout']//table//tbody//tr[3]//tr[2]//td[2]//select//option"));
-		List<String> list3 = new ArrayList<String>();
+		list3 = new ArrayList<String>();
 		for (int i = 0; i < list.size(); i++)
 		{
 			if (list.get(i).getText().length() != 0)
@@ -2021,7 +2024,7 @@ public class UserPage implements UserPage_Interface
 
 	public void availableLinks()
 	{
-		List<WebElement> list = driver.findElements(By.tagName("a"));
+		list = driver.findElements(By.tagName("a"));
 		for (int i = 0; i < list.size(); i++)
 		{
 			System.out.println("URL name => " + list.get(i).getText());
@@ -2033,11 +2036,11 @@ public class UserPage implements UserPage_Interface
 
 	{
 
-		List<WebElement> elementList = driver.findElements(By.tagName("a"));
+		elementList = driver.findElements(By.tagName("a"));
 
 		elementList.addAll(driver.findElements(By.tagName("img")));
 
-		List<WebElement> finalList = new ArrayList<WebElement>();
+		finalList = new ArrayList<WebElement>();
 
 		for (WebElement element : elementList)
 
@@ -2095,7 +2098,7 @@ public class UserPage implements UserPage_Interface
 
 	public void brokenLink()
 	{
-		List<WebElement> allLinks = findAllLinks(driver);
+		allLinks = findAllLinks(driver);
 
 		System.out.println("Total number of elements found " + allLinks.size());
 
