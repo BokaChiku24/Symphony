@@ -7068,4 +7068,26 @@
  2019-10-24 00:46:16,863  INFO [main] Create Customer FiltaBio Scenarios:86 - Fixed Cost Customer Test!!
  2019-10-24 00:52:03,077  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
  2019-10-24 00:52:25,533  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-24 23:05:21,024  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-24 23:05:21,087  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-24 23:05:46,051  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-24 23:05:50,988  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
+ 2019-10-24 23:10:42,193  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-24 23:10:42,195  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-24 23:10:56,432  INFO [main] Per Fryer Test Case:117 - Create Customer Basic info
+ 2019-10-24 23:11:17,528  INFO [main] Per Fryer Test Case:126 - Create Customer Pricing and Estimating Info
+ 2019-10-24 23:11:26,433  INFO [main] Per Fryer Test Case:135 - Create Customer Marketing Info
+ 2019-10-24 23:11:37,968  INFO [main] Per Fryer Test Case:142 - Create Customer Unit Info
+ 2019-10-24 23:11:47,504  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-24 23:11:48,039  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
+ 2019-10-24 23:13:11,052  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-24 23:13:11,057  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-24 23:19:23,806  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-24 23:19:23,809  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-24 23:20:00,856  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-24 23:20:05,282  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
+ 2019-10-24 23:21:12,223  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-24 23:21:12,227  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-24 23:21:42,590  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-24 23:21:43,119  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
  

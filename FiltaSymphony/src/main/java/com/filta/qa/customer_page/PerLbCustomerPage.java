@@ -18,574 +18,574 @@ import com.filta.qa.util.ReadExcelData;
 
 public class PerLbCustomerPage
 {
-	private WebDriver Driver;
-	private WebElement WebEelement;
-	private Global Global_Obj;
-	private Properties Prop;
-	private Login Login;
-	private SoftAssert Sa;
-	private String Customer_URL;
-	private ReadExcelData PerLbData;
-	private ReadExcelData PricingData;
-	private ReadExcelData UnitDataExcel;
-	private ReadExcelData MarketingData;
-	private ReadExcelData DefaultPricingData;
-	private String Default_Level1Charge;
-	private String Default_AdditionalRate;
-	private String Default_First;
-	private String Default_FryerSize1;
-	private String Default_FryerChargeDefault;
-	private String Default_FryerCleanOnlyCharge;
-	private String Default_FryerSize2;
-	private String Default_FryerChargeDefault2;
-	private String Default_FryerCleanOnlyCharge0;
-	private String Default_FixedCostCharge;
-	private String Default_FCMonthly;
-	private String Default_FCWeekly;
-	private String Default_FiltaBioDefault;
-	private String Default_FGOilCharge;
-	private String Default_FGPerBox;
-	private String Default_FGTankRental;
-	private String Default_DrainFoamDefault;
-	private String Default_FCValue;
-	private String Default_EstPeriodValue;
-	private String Default_PaymentDefault;
-	private String ActualPayment;
-	private String ActualCustomer;
-	private ArrayList<String> Tabs;
-	
+	private WebDriver driver;
+	private WebElement webEelement;
+	private Global global_Obj;
+	private Properties prop;
+	private Login login;
+	private SoftAssert sa;
+	private String customer_URL;
+	private ReadExcelData perLbData;
+	private ReadExcelData pricingData;
+	private ReadExcelData unitDataExcel;
+	private ReadExcelData marketingData;
+	private ReadExcelData defaultPricingData;
+	private String default_Level1Charge;
+	private String default_AdditionalRate;
+	private String default_First;
+	private String default_FryerSize1;
+	private String default_FryerChargeDefault;
+	private String default_FryerCleanOnlyCharge;
+	private String default_FryerSize2;
+	private String default_FryerChargeDefault2;
+	private String default_FryerCleanOnlyCharge0;
+	private String default_FixedCostCharge;
+	private String default_FCMonthly;
+	private String default_FCWeekly;
+	private String default_FiltaBioDefault;
+	private String default_FGOilCharge;
+	private String default_FGPerBox;
+	private String default_FGTankRental;
+	private String default_DrainFoamDefault;
+	private String default_FCValue;
+	private String default_EstPeriodValue;
+	private String default_PaymentDefault;
+	private String actualPayment;
+	private String actualCustomer;
+	private ArrayList<String> tabs;
+
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
-	private WebElement ContainerClose;
+	private WebElement containerClose;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='admin_link']")
-	private WebElement Admin;
+	private WebElement admin;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='invoice_setting']")
-	private WebElement ManageInvoice;
+	private WebElement manageInvoice;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='tab2']")
-	private WebElement DefaultPricingTab;
+	private WebElement defaultPricingTab;
 
 	@FindBy(how = How.LINK_TEXT, using = "Customers")
-	public WebElement Customers;
+	public WebElement customers;
 
 	@FindBy(how = How.CSS, using = "#moduleTab_-1_Customers")
-	public WebElement Customer;
+	public WebElement customer;
 
 	@FindBy(how = How.LINK_TEXT, using = "Create")
-	private WebElement Create_Customer;
+	private WebElement create_Customer;
 
 	@FindBy(how = How.CSS, using = "#name")
-	private WebElement KeyContact;
+	private WebElement keyContact;
 
 	@FindBy(how = How.CSS, using = "#title")
-	private WebElement Title;
+	private WebElement title;
 
 	@FindBy(how = How.CSS, using = "#company_name")
-	private WebElement CompanyName;
+	private WebElement companyName;
 
 	@FindBy(how = How.CSS, using = "#nca_chain")
-	private WebElement NCAChain;
+	private WebElement nCAChain;
 
 	@FindBy(how = How.CSS, using = "#nca_unit_code")
-	private WebElement NcaUnitCode;
+	private WebElement ncaUnitCode;
 
 	@FindBy(how = How.CSS, using = "#account_number")
-	private WebElement Account;
+	private WebElement account;
 
 	@FindBy(how = How.CSS, using = "#Accounts0emailAddress0")
-	private WebElement PrimaryEmail;
+	private WebElement primaryEmail;
 
 	@FindBy(how = How.CSS, using = "#billing_address_street")
-	private WebElement Site_Street;
+	private WebElement site_Street;
 
 	@FindBy(how = How.CSS, using = "#billing_address_city")
-	private WebElement Site_City;
+	private WebElement site_City;
 
 	@FindBy(how = How.CSS, using = "#billing_address_state")
-	private WebElement Site_State;
+	private WebElement site_State;
 
 	@FindBy(how = How.CSS, using = "#billing_address_postalcode")
-	private WebElement Site_PostalCode;
+	private WebElement site_PostalCode;
 
 	@FindBy(how = How.CSS, using = "#billing_address_country")
-	private WebElement Site_Country;
+	private WebElement site_Country;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='phone_office']")
-	private WebElement Office_Phone;
+	private WebElement office_Phone;
 
 	@FindBy(how = How.CSS, using = "#ext_no")
-	private WebElement Ext;
+	private WebElement ext;
 
 	@FindBy(how = How.CSS, using = "#operations_notes")
-	private WebElement ArrivalNotes;
+	private WebElement arrivalNotes;
 
 	@FindBy(how = How.CSS, using = "#description")
-	private WebElement DepartureNotes;
+	private WebElement departureNotes;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='phone_mobile']")
-	private WebElement Mobile;
+	private WebElement mobile;
 
 	@FindBy(how = How.CSS, using = "#nca_supplier_number")
-	private WebElement Nca_Supplier;
+	private WebElement nca_Supplier;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_street")
-	private WebElement InvoiceStreet;
+	private WebElement invoiceStreet;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_city")
-	private WebElement InvoiceCity;
+	private WebElement invoiceCity;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_state")
-	private WebElement InvoiceState;
+	private WebElement invoiceState;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_postalcode")
-	private WebElement InvoicePostal;
+	private WebElement invoicePostal;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_country")
-	private WebElement InvoiceCountry;
+	private WebElement invoiceCountry;
 
 	@FindBy(how = How.CSS, using = "#survey_frequency")
-	private WebElement Service_Frequency;
+	private WebElement service_Frequency;
 
 	@FindBy(how = How.LINK_TEXT, using = "Pricing & Estimating Info")
-	private WebElement Pricing;
+	private WebElement pricing;
 
 	@FindBy(how = How.CSS, using = "#default_pricing")
-	private WebElement DefaultPricing;
+	private WebElement defaultPricing;
 
 	@FindBy(how = How.CSS, using = "#service_filtafry")
-	private WebElement FiltaFry;
+	private WebElement filtaFry;
 
 	@FindBy(how = How.CSS, using = "#charge_type")
-	private WebElement Pricing_Model;
+	private WebElement pricing_Model;
 
 	@FindBy(how = How.CSS, using = "#ajaxloading_mask")
-	private WebElement Lodar;
+	private WebElement lodar;
 
 	@FindBy(how = How.CSS, using = "#filtacool")
-	private WebElement FiltaCool;
+	private WebElement filtaCool;
 
 	@FindBy(how = How.CSS, using = "#filtacool_frequency")
-	private WebElement FiltaCool_Frequency;
+	private WebElement filtaCool_Frequency;
 
 	@FindBy(how = How.CSS, using = "#rental_rate")
-	private WebElement RentalRate;
+	private WebElement rentalRate;
 
 	@FindBy(how = How.CSS, using = "#filtabio")
-	private WebElement FiltaBio;
+	private WebElement filtaBio;
 
 	@FindBy(how = How.CSS, using = "#pay_customer")
-	private WebElement PayCustomer;
+	private WebElement payCustomer;
 
 	@FindBy(how = How.CSS, using = "#service_filtanewoil")
-	private WebElement FiltaGold;
+	private WebElement filtaGold;
 
 	@FindBy(how = How.CSS, using = "#number_of_tanks")
-	private WebElement NoOfTank;
+	private WebElement noOfTank;
 
 	@FindBy(how = How.CSS, using = "#tank_rental")
-	private WebElement TankRent;
+	private WebElement tankRent;
 
 	@FindBy(how = How.CSS, using = "#oil_charge")
-	private WebElement Oil_Charge;
+	private WebElement oil_Charge;
 
 	@FindBy(how = How.CSS, using = "#price_per_box")
-	private WebElement PriceperBox;
+	private WebElement priceperBox;
 
 	@FindBy(how = How.CSS, using = "#service_drainfoam")
-	private WebElement DrainFoam;
+	private WebElement drainFoam;
 
 	@FindBy(how = How.CSS, using = "#set_drainfoam")
-	private WebElement Charge;
+	private WebElement charge;
 
 	@FindBy(how = How.CSS, using = "#inv_period")
-	private WebElement Inv_Period;
+	private WebElement inv_Period;
 
 	@FindBy(how = How.XPATH, using = ".//td[@class='edit-table-row1']//label[1]//input[@type='radio' and @id='review_before_sending_inv']")
-	private WebElement PerJob_Yes;
+	private WebElement perJob_Yes;
 
 	@FindBy(how = How.XPATH, using = ".//td[@class='edit-table-row1']//label[2]//input[@type='radio' and @id='review_before_sending_inv']")
-	private WebElement PerJob_No;
+	private WebElement perJob_No;
 
 	@FindBy(how = How.CSS, using = "#payment_term")
-	private WebElement Payement;
+	private WebElement payement;
 
 	@FindBy(how = How.LINK_TEXT, using = "Marketing & Categories")
-	private WebElement Marketing_Categories;
+	private WebElement marketing_Categories;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='type-input']")
-	private WebElement TypeMarketing;
+	private WebElement typeMarketing;
 
 	@FindBy(how = How.XPATH, using = ".//li[@data-text='Amusement Park']")
-	private WebElement AmusementPark;
+	private WebElement amusementPark;
 
 	@FindBy(how = How.XPATH, using = ".//li[@data-text='Casinos']")
-	private WebElement Casinos;
+	private WebElement casinos;
 
 	@FindBy(how = How.XPATH, using = ".//li[@data-text='A&W Restaurants']")
-	private WebElement A_W;
+	private WebElement a_W;
 
 	@FindBy(how = How.CSS, using = "#sub_type")
-	private WebElement Sub_Type;
+	private WebElement sub_Type;
 
 	@FindBy(how = How.CSS, using = "#contract_caterers")
-	private WebElement Contract;
+	private WebElement contract;
 
 	@FindBy(how = How.CSS, using = "#btn_assigned_user_name")
-	private WebElement Salespersonselect;
+	private WebElement salespersonselect;
 
 	@FindBy(how = How.CSS, using = "#affiliation")
-	private WebElement Affiliation;
+	private WebElement affiliation;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='chain-input']")
-	private WebElement Chaininput;
+	private WebElement chaininput;
 
 	@FindBy(how = How.CSS, using = "#nca")
-	private WebElement NCASelection;
+	private WebElement nCASelection;
 
 	@FindBy(how = How.CSS, using = "#region_name")
-	private WebElement Region;
+	private WebElement region;
 
 	@FindBy(how = How.CSS, using = "#btn_territory")
-	private WebElement Territory;
+	private WebElement territory;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation_Sales")
-	private WebElement Automation_Sales;
+	private WebElement automation_Sales;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation")
-	private WebElement Automation;
+	private WebElement automation;
 
 	@FindBy(how = How.LINK_TEXT, using = "Unit Data")
-	private WebElement UnitData;
+	private WebElement unitData;
 
 	@FindBy(how = How.CSS, using = "#type_of_oil")
-	private WebElement TypeOfOil;
+	private WebElement typeOfOil;
 
 	@FindBy(how = How.CSS, using = "#dump_fre")
-	private WebElement QTY;
+	private WebElement qTY;
 
 	@FindBy(how = How.CSS, using = "#waste_oil")
-	private WebElement WasteOil;
+	private WebElement wasteOil;
 
 	@FindBy(how = How.CSS, using = "#rti")
-	private WebElement RTI;
+	private WebElement rTI;
 
 	@FindBy(how = How.CSS, using = "#available_service_times")
-	private WebElement AvailableServiceTime;
+	private WebElement availableServiceTime;
 
 	@FindBy(how = How.CSS, using = "#dump_fre_description")
-	private WebElement Dump_Fre_Description;
+	private WebElement dump_Fre_Description;
 
 	@FindBy(how = How.CSS, using = "#waste_oil_renewal_date_trigger")
-	private WebElement WasteOilRenewal;
+	private WebElement wasteOilRenewal;
 
 	@FindBy(how = How.LINK_TEXT, using = "Today")
-	private WebElement Today;
+	private WebElement today;
 
 	@FindBy(how = How.CSS, using = "#waste_oil_renewal_date")
-	private WebElement Renewaldate;
+	private WebElement renewaldate;
 
 	@FindBy(how = How.CSS, using = "#rti_renewal_date_trigger")
-	private WebElement RTIRenewalDate;
+	private WebElement rTIRenewalDate;
 
 	@FindBy(how = How.CSS, using = "#rti_renewal_date")
-	private WebElement RTIDate;
+	private WebElement rTIDate;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='buttons']//input[@id='SAVE_HEADER']")
-	private WebElement Save;
+	private WebElement save;
 
 	@FindBy(how = How.CSS, using = "#customers_fryer_locations_create_button")
-	private WebElement LocationCreate;
+	private WebElement locationCreate;
 
 	@FindBy(how = How.XPATH, using = ".//input[@type='text']")
-	private WebElement LocationName;
+	private WebElement locationName;
 
 	@FindBy(how = How.XPATH, using = ".//textarea[@name='description']")
-	private WebElement LocationDescription;
+	private WebElement locationDescription;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fryer_locations_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='FR_FryerLocation_subpanel_save_button']")
-	private WebElement LocationSave;
+	private WebElement locationSave;
 
 	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//li[4]")
-	private WebElement Fryers;
+	private WebElement fryers;
 
 	@FindBy(how = How.CSS, using = "#customers_fr_fryers_create_button")
-	private WebElement CreateFryer;
+	private WebElement createFryer;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='name']")
-	private WebElement Fryer;
+	private WebElement fryer;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='size']")
-	private WebElement FryerSize;
+	private WebElement fryerSize;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='sort_order']")
-	private WebElement FryerSort;
+	private WebElement fryerSort;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='charge']")
-	private WebElement FryerCharge;
+	private WebElement fryerCharge;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='dump_clean_charges']")
-	private WebElement FryerCleanOnly;
+	private WebElement fryerCleanOnly;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='location_name']")
-	private WebElement Fryer_Location;
+	private WebElement fryer_Location;
 
 	@FindBy(how = How.XPATH, using = ".//li[text()='Location1']")
-	private WebElement LocationNameSelect;
+	private WebElement locationNameSelect;
 
 	@FindBy(how = How.XPATH, using = ".//textarea[@id='description']")
-	private WebElement FryerDescription;
+	private WebElement fryerDescription;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fr_fryers_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='Fr_Fryers_subpanel_save_button']")
-	private WebElement FryerSave;
+	private WebElement fryerSave;
 
 	@FindBy(how = How.CSS, using = "#btn_location_name")
-	private WebElement LocationSelect;
+	private WebElement locationSelect;
 
 	@FindBy(how = How.LINK_TEXT, using = "Location1")
-	private WebElement Locationname;
+	private WebElement locationname;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='send_service_survey']")
-	private WebElement SendServiceSurvey;
+	private WebElement sendServiceSurvey;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='eir']")
-	private WebElement SendEIR;
+	private WebElement sendEIR;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='lavel1_charge']")
-	private WebElement Level1Charge;
+	private WebElement level1Charge;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='additional_charge']")
-	private WebElement AdditionalRate;
+	private WebElement additionalRate;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='lavel1']")
-	private WebElement First;
+	private WebElement first;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='fryer_custom']")
-	private WebElement FryerSize1;
+	private WebElement fryerSize1;
 
 	@FindBy(how = How.XPATH, using = ".//table[@class='tbl_fryer']//tr[3]//td[1]//input[2]")
-	private WebElement FryerSize2;
+	private WebElement fryerSize2;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='fryer_price_custom']")
-	private WebElement FryerChargeDefault;
+	private WebElement fryerChargeDefault;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='fryer_price_custom1']")
-	private WebElement FryerChargeDefault2;
+	private WebElement fryerChargeDefault2;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='fryer_dump_custom']")
-	private WebElement FryerCleanOnlyCharge;
+	private WebElement fryerCleanOnlyCharge;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='fryer_dump_custom0']")
-	private WebElement FryerCleanOnlyCharge0;
+	private WebElement fryerCleanOnlyCharge0;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='addmore']")
-	private WebElement AddMore;
+	private WebElement addMore;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='SAVE_HEADER']")
-	private WebElement SaveHeader;
+	private WebElement saveHeader;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='required validation-message']")
-	private WebElement ChargeValidation;
+	private WebElement chargeValidation;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='set_charge']")
-	private WebElement FixedCostCharge;
+	private WebElement fixedCostCharge;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='rental_rate']")
-	private WebElement FCMonthly;
+	private WebElement fCMonthly;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='rental_rate_weekly']")
-	private WebElement FCWeekly;
+	private WebElement fCWeekly;
 
 	@FindBy(how = How.XPATH, using = ".//select[@id='filtacool_frequency']")
-	private WebElement DefaultBillingPeriod;
+	private WebElement defaultBillingPeriod;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='pay_customer']")
-	private WebElement FiltaBioDefault;
+	private WebElement filtaBioDefault;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='oil_charge']")
-	private WebElement FGOilCharge;
+	private WebElement fGOilCharge;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='price_per_box']")
-	private WebElement FGPerBox;
+	private WebElement fGPerBox;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='tank_rental']")
-	private WebElement FGTankRental;
+	private WebElement fGTankRental;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='set_drainfoam']")
-	private WebElement DrainFoamDefault;
+	private WebElement drainFoamDefault;
 
 	@FindBy(how = How.XPATH, using = ".//select[@id='inv_period']")
-	private WebElement DefaultEstPeriod;
+	private WebElement defaultEstPeriod;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='review_before_sending_inv' and @value='Yes']")
-	private WebElement ReviewDefaultYes;
+	private WebElement reviewDefaultYes;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='review_before_sending_inv' and @value='No']")
-	private WebElement ReviewDefaultNo;
+	private WebElement reviewDefaultNo;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='edit_button']")
-	private WebElement EditButton;
+	private WebElement editButton;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='ajaxHeader']//div[@id='moduleList']//a[@id='grouptab_2']")
-	private WebElement CustomerTab;
+	private WebElement customerTab;
 
 	@FindBy(how = How.XPATH, using = ".//select[@id='payment_term']")
-	private WebElement DefaultPayment;
+	private WebElement defaultPayment;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='SAVE_HEADER']")
-	private WebElement Save_Header;
+	private WebElement save_Header;
 
 	@FindBy(how = How.XPATH, using = ".//table[@id='ListTable']//tr[3]//td[3]")
-	private WebElement Customername;
+	private WebElement customername;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='lavel1_charge']")
-	private WebElement ActualLevel1Charge;
+	private WebElement actualLevel1Charge;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='lavel1']")
-	private WebElement ActualFirst;
+	private WebElement actualFirst;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='additional_charge']")
-	private WebElement ActualAdditionalRate;
+	private WebElement actualAdditionalRate;
 
 	@FindBy(how = How.XPATH, using = ".//input[@title='Select all' and @id='massall_top']")
-	private WebElement SelectAll;
+	private WebElement selectAll;
 
-	@FindBy(how = How.CSS, using = "#customers_fryer_locations_create_button")
-	public WebElement locationCreate;
+	@FindBy(how = How.CSS, using = ".//input[@id='customers_fryer_locations_create_button']")
+	public WebElement locationCreate_2;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fryer_locations_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='FR_FryerLocation_subpanel_save_button']")
-	public WebElement locationSave;
+	public WebElement locationSave_2;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fryer_locations']//table[@class='list view']//tbody//tr//tbody//tr//td[2]//span")
-	public WebElement LocationCheck;
+	public WebElement locationCheck;
 
-	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[9]")
-	public WebElement Other;
+	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[4]")
+	public WebElement other;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fr_fryers']//table//table//tbody//tr//td[2]//span")
-	public WebElement FryersCheck;
-	
+	public WebElement fryersCheck;
+
 	public PerLbCustomerPage(WebDriver driver)
 	{
-		Global_Obj = new Global();
-		Prop = Global_Obj.readProperties();
-		this.Driver = driver;
-		Login = new Login(driver);
-		Sa = new SoftAssert();
-		PerLbData = new ReadExcelData(Prop.getProperty("Path2"), "PerLb");
-		PricingData = new ReadExcelData(Prop.getProperty("Path2"), "Pricing");
-		UnitDataExcel = new ReadExcelData(Prop.getProperty("Path2"), "UnitData");
-		MarketingData = new ReadExcelData(Prop.getProperty("Path2"), "Marketing");
-		DefaultPricingData = new ReadExcelData(Prop.getProperty("Path2"), "DefaultPricing");
+		global_Obj = new Global();
+		prop = global_Obj.readProperties();
+		this.driver = driver;
+		login = new Login(driver);
+		sa = new SoftAssert();
+		perLbData = new ReadExcelData(prop.getProperty("Path2"), "PerLb");
+		pricingData = new ReadExcelData(prop.getProperty("Path2"), "Pricing");
+		unitDataExcel = new ReadExcelData(prop.getProperty("Path2"), "UnitData");
+		marketingData = new ReadExcelData(prop.getProperty("Path2"), "Marketing");
+		defaultPricingData = new ReadExcelData(prop.getProperty("Path2"), "DefaultPricing");
 		PageFactory.initElements(driver, this);
 	}
 
 
 	public void login()
 	{
-		Login.credentials();
-		ContainerClose.click();
+		login.credentials();
+		containerClose.click();
 	}
 
 
 	public String defaultPricingFranchiseeLevel()
 	{
-		Admin.click();
-		ManageInvoice.click();
-		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOf(DefaultPricingTab));
-		DefaultPricingTab.click();
+		admin.click();
+		manageInvoice.click();
+		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(defaultPricingTab));
+		defaultPricingTab.click();
 		// FiltaFry Per Lb
-		if (Level1Charge.getAttribute("value").equals(""))
+		if (level1Charge.getAttribute("value").equals(""))
 		{
-			Level1Charge.sendKeys(DefaultPricingData.getCellDataInt(1, 0) + "");
+			level1Charge.sendKeys(defaultPricingData.getCellDataInt(1, 0) + "");
 		}
-		Default_Level1Charge = Level1Charge.getAttribute("value");
-		if (AdditionalRate.getAttribute("value").equals(""))
+		default_Level1Charge = level1Charge.getAttribute("value");
+		if (additionalRate.getAttribute("value").equals(""))
 		{
-			AdditionalRate.sendKeys(DefaultPricingData.getCellDataInt(2, 0) + "");
+			additionalRate.sendKeys(defaultPricingData.getCellDataInt(2, 0) + "");
 		}
-		Default_AdditionalRate = AdditionalRate.getAttribute("value");
-		if (First.getAttribute("value").equals("") || First.getText().equals("0"))
+		default_AdditionalRate = additionalRate.getAttribute("value");
+		if (first.getAttribute("value").equals("") || first.getText().equals("0"))
 		{
-			First.sendKeys((int) DefaultPricingData.getCellDataInt(2, 0) + "");
+			first.sendKeys((int) defaultPricingData.getCellDataInt(2, 0) + "");
 		}
-		Default_First = First.getAttribute("value");
+		default_First = first.getAttribute("value");
 
 		// FiltaFry Per Fryer
-		if (FryerSize1.getAttribute("value").equals(""))
+		if (fryerSize1.getAttribute("value").equals(""))
 		{
-			FryerSize1.sendKeys((int) DefaultPricingData.getCellDataInt(1, 1) + "");
+			fryerSize1.sendKeys((int) defaultPricingData.getCellDataInt(1, 1) + "");
 		}
-		Default_FryerSize1 = FryerSize1.getAttribute("value");
-		if (FryerChargeDefault.getAttribute("value").equals(""))
+		default_FryerSize1 = fryerSize1.getAttribute("value");
+		if (fryerChargeDefault.getAttribute("value").equals(""))
 		{
-			FryerChargeDefault.sendKeys(DefaultPricingData.getCellDataInt(2, 1) + "");
+			fryerChargeDefault.sendKeys(defaultPricingData.getCellDataInt(2, 1) + "");
 		}
-		Default_FryerChargeDefault = FryerChargeDefault.getAttribute("value");
-		if (FryerCleanOnlyCharge.getAttribute("value").equals(""))
+		default_FryerChargeDefault = fryerChargeDefault.getAttribute("value");
+		if (fryerCleanOnlyCharge.getAttribute("value").equals(""))
 		{
-			FryerCleanOnlyCharge.sendKeys(DefaultPricingData.getCellDataInt(3, 1) + "");
+			fryerCleanOnlyCharge.sendKeys(defaultPricingData.getCellDataInt(3, 1) + "");
 		}
-		Default_FryerCleanOnlyCharge = FryerCleanOnlyCharge.getAttribute("value");
+		default_FryerCleanOnlyCharge = fryerCleanOnlyCharge.getAttribute("value");
 
 		// Set/Fixed Charge
-		if (FixedCostCharge.getAttribute("value").equals(""))
+		if (fixedCostCharge.getAttribute("value").equals(""))
 		{
-			FixedCostCharge.sendKeys(DefaultPricingData.getCellDataInt(1, 2) + "");
+			fixedCostCharge.sendKeys(defaultPricingData.getCellDataInt(1, 2) + "");
 		}
-		Default_FixedCostCharge = FixedCostCharge.getAttribute("value");
+		default_FixedCostCharge = fixedCostCharge.getAttribute("value");
 
 		// FiltaCool
-		if (FCMonthly.getAttribute("value").equals(""))
+		if (fCMonthly.getAttribute("value").equals(""))
 		{
-			FCMonthly.sendKeys(DefaultPricingData.getCellDataInt(1, 3) + "");
+			fCMonthly.sendKeys(defaultPricingData.getCellDataInt(1, 3) + "");
 		}
-		Default_FCMonthly = FCMonthly.getAttribute("value");
-		if (FCWeekly.getAttribute("value").equals(""))
+		default_FCMonthly = fCMonthly.getAttribute("value");
+		if (fCWeekly.getAttribute("value").equals(""))
 		{
-			FCWeekly.sendKeys(DefaultPricingData.getCellDataInt(2, 3) + "");
+			fCWeekly.sendKeys(defaultPricingData.getCellDataInt(2, 3) + "");
 		}
-		Default_FCWeekly = FCWeekly.getAttribute("value");
+		default_FCWeekly = fCWeekly.getAttribute("value");
 
-		Default_FCValue = Global_Obj.select(DefaultBillingPeriod).getFirstSelectedOption().getText();
+		default_FCValue = global_Obj.select(defaultBillingPeriod).getFirstSelectedOption().getText();
 
 		// FiltaBio
 
-		if (FiltaBioDefault.getAttribute("value").equals(""))
+		if (filtaBioDefault.getAttribute("value").equals(""))
 		{
-			FiltaBioDefault.sendKeys(DefaultPricingData.getCellDataInt(1, 4) + "");
+			filtaBioDefault.sendKeys(defaultPricingData.getCellDataInt(1, 4) + "");
 		}
-		Default_FiltaBioDefault = FiltaBioDefault.getAttribute("value");
+		default_FiltaBioDefault = filtaBioDefault.getAttribute("value");
 
 		// FiltaGold
-		if (FGOilCharge.getAttribute("value").equals(""))
+		if (fGOilCharge.getAttribute("value").equals(""))
 		{
-			FGOilCharge.sendKeys(DefaultPricingData.getCellDataInt(1, 5) + "");
+			fGOilCharge.sendKeys(defaultPricingData.getCellDataInt(1, 5) + "");
 		}
-		Default_FGOilCharge = FGOilCharge.getAttribute("value");
-		if (FGPerBox.getAttribute("value").equals(""))
+		default_FGOilCharge = fGOilCharge.getAttribute("value");
+		if (fGPerBox.getAttribute("value").equals(""))
 		{
-			FGPerBox.sendKeys(DefaultPricingData.getCellDataInt(2, 5) + "");
+			fGPerBox.sendKeys(defaultPricingData.getCellDataInt(2, 5) + "");
 		}
-		Default_FGPerBox = FGPerBox.getAttribute("value");
-		if (FGTankRental.getAttribute("value").equals(""))
+		default_FGPerBox = fGPerBox.getAttribute("value");
+		if (fGTankRental.getAttribute("value").equals(""))
 		{
-			FGTankRental.sendKeys(DefaultPricingData.getCellDataInt(3, 5) + "");
+			fGTankRental.sendKeys(defaultPricingData.getCellDataInt(3, 5) + "");
 		}
-		Default_FGTankRental = FGTankRental.getAttribute("value");
+		default_FGTankRental = fGTankRental.getAttribute("value");
 
 		// DrainFoam
-		if (DrainFoamDefault.getAttribute("value").equals(""))
+		if (drainFoamDefault.getAttribute("value").equals(""))
 		{
-			DrainFoamDefault.sendKeys(DefaultPricingData.getCellDataInt(1, 6) + "");
+			drainFoamDefault.sendKeys(defaultPricingData.getCellDataInt(1, 6) + "");
 		}
-		Default_DrainFoamDefault = DrainFoamDefault.getAttribute("value");
+		default_DrainFoamDefault = drainFoamDefault.getAttribute("value");
 
 		// EstPeriod
-		Default_EstPeriodValue = Global_Obj.select(DefaultEstPeriod).getFirstSelectedOption().getText();
-		Default_PaymentDefault = Global_Obj.select(DefaultPayment).getFirstSelectedOption().getText();
-		Global_Obj.jsReturn(Driver).executeScript("arguments[0].scrollIntoView();", SaveHeader);
-		SaveHeader.click();
+		default_EstPeriodValue = global_Obj.select(defaultEstPeriod).getFirstSelectedOption().getText();
+		default_PaymentDefault = global_Obj.select(defaultPayment).getFirstSelectedOption().getText();
+		global_Obj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", saveHeader);
+		saveHeader.click();
 		String CustomerName = goToCustomer();
 		return CustomerName;
 	}
@@ -593,234 +593,235 @@ public class PerLbCustomerPage
 
 	public String goToCustomer()
 	{
-		Global_Obj.action(Driver).moveToElement(CustomerTab).build().perform();
-		Global_Obj.action(Driver).moveToElement(Customer).click().build().perform();
-		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
-		Customer_URL = Driver.getCurrentUrl();
-		Sa.assertEquals(Customer_URL, PerLbData.getCellData(1, 0));
-		SelectAll.click();
-		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
+		global_Obj.action(driver).moveToElement(customerTab).build().perform();
+		global_Obj.action(driver).moveToElement(customer).click().build().perform();
+		global_Obj.wait(driver)
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
+		customer_URL = driver.getCurrentUrl();
+		sa.assertEquals(customer_URL, perLbData.getCellData(1, 0));
+		selectAll.click();
+		global_Obj.wait(driver).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
 				".//table[@class='paginationTable']//td[@class='paginationActionButtons']//span[@id='selectedRecordsTop' and @class='show']")));
-		int count = Integer.parseInt(Driver.findElement(By.xpath(
+		int count = Integer.parseInt(driver.findElement(By.xpath(
 				".//table[@class='paginationTable']//td[@class='paginationActionButtons']//span[@id='selectedRecordsTop' and @class='show']//input"))
 				.getAttribute("value"));
 		String Array[] = new String[count];
 		for (int i = 0, j = 3; i < count; i++, j++)
 		{
-			Array[i] = Driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]")).getText();
-			if (Driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]")).getText()
-					.equals(Prop.getProperty("Customer1")))
+			Array[i] = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]")).getText();
+			if (driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]")).getText()
+					.equals(prop.getProperty("Customer1")))
 			{
-				WebEelement = Driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"));
+				webEelement = driver.findElement(By.xpath(".//table[@id='ListTable']//tr[" + j + "]//td[3]"));
 			}
 		}
 		for (int i = 0; i < Array.length; i++)
 		{
-			if (Array[i].equals(Prop.getProperty("Customer1")))
+			if (Array[i].equals(prop.getProperty("Customer1")))
 			{
-				ActualCustomer = Array[i];
+				actualCustomer = Array[i];
 				break;
 			}
 			else
 			{
-				ActualCustomer = Array[i];
+				actualCustomer = Array[i];
 			}
 		}
-		System.out.println(ActualCustomer);
-		return ActualCustomer;
+		System.out.println(actualCustomer);
+		return actualCustomer;
 	}
 
 
 	public void createCustomer()
 	{
-		Create_Customer.click();
+		create_Customer.click();
 	}
 
 
 	public void basicInfo()
 	{
-		KeyContact.sendKeys(PerLbData.getCellData(1, 1) + " " + PerLbData.getCellData(1, 2));
-		Title.sendKeys(PerLbData.getCellData(1, 3));
-		CompanyName.sendKeys(PerLbData.getCellData(1, 4));
-		NCAChain.sendKeys(PerLbData.getCellData(1, 5));
-		NcaUnitCode.sendKeys((int) PerLbData.getCellDataInt(1, 6) + "");
-		Account.sendKeys((int) PerLbData.getCellDataInt(1, 7) + "");
-		SendServiceSurvey.click();
-		SendEIR.click();
-		PrimaryEmail.sendKeys(PerLbData.getCellData(1, 8));
-		Site_Street.sendKeys(PerLbData.getCellData(1, 9));
-		Site_City.sendKeys(PerLbData.getCellData(1, 10));
-		Site_State.sendKeys(PerLbData.getCellData(1, 11));
-		Site_PostalCode.sendKeys((int) PerLbData.getCellDataInt(1, 12) + "");
-		Site_Country.sendKeys(PerLbData.getCellData(1, 13));
+		keyContact.sendKeys(perLbData.getCellData(1, 1) + " " + perLbData.getCellData(1, 2));
+		title.sendKeys(perLbData.getCellData(1, 3));
+		companyName.sendKeys(perLbData.getCellData(1, 4));
+		nCAChain.sendKeys(perLbData.getCellData(1, 5));
+		ncaUnitCode.sendKeys((int) perLbData.getCellDataInt(1, 6) + "");
+		account.sendKeys((int) perLbData.getCellDataInt(1, 7) + "");
+		sendServiceSurvey.click();
+		sendEIR.click();
+		primaryEmail.sendKeys(perLbData.getCellData(1, 8));
+		site_Street.sendKeys(perLbData.getCellData(1, 9));
+		site_City.sendKeys(perLbData.getCellData(1, 10));
+		site_State.sendKeys(perLbData.getCellData(1, 11));
+		site_PostalCode.sendKeys((int) perLbData.getCellDataInt(1, 12) + "");
+		site_Country.sendKeys(perLbData.getCellData(1, 13));
 //		Office_Phone.sendKeys(PerFryerData.getCellData(1, 14));
-		Ext.sendKeys((int) PerLbData.getCellDataInt(1, 15) + "");
-		ArrivalNotes.sendKeys(PerLbData.getCellData(1, 16));
-		DepartureNotes.sendKeys(PerLbData.getCellData(1, 17));
+		ext.sendKeys((int) perLbData.getCellDataInt(1, 15) + "");
+		arrivalNotes.sendKeys(perLbData.getCellData(1, 16));
+		departureNotes.sendKeys(perLbData.getCellData(1, 17));
 //		Mobile.sendKeys((int) PerFryerData.getCellDataInt(1, 18) + "");
-		Nca_Supplier.sendKeys((int) PerLbData.getCellDataInt(1, 19) + "");
-		InvoiceStreet.sendKeys(PerLbData.getCellData(1, 20));
-		InvoiceCity.sendKeys(PerLbData.getCellData(1, 21));
-		InvoiceState.sendKeys(PerLbData.getCellData(1, 22));
-		InvoicePostal.sendKeys((int) PerLbData.getCellDataInt(1, 23) + "");
-		InvoiceCountry.sendKeys(PerLbData.getCellData(1, 24));
-		Global_Obj.select(Service_Frequency).selectByVisibleText(PerLbData.getCellData(1, 25));
+		nca_Supplier.sendKeys((int) perLbData.getCellDataInt(1, 19) + "");
+		invoiceStreet.sendKeys(perLbData.getCellData(1, 20));
+		invoiceCity.sendKeys(perLbData.getCellData(1, 21));
+		invoiceState.sendKeys(perLbData.getCellData(1, 22));
+		invoicePostal.sendKeys((int) perLbData.getCellDataInt(1, 23) + "");
+		invoiceCountry.sendKeys(perLbData.getCellData(1, 24));
+		global_Obj.select(service_Frequency).selectByVisibleText(perLbData.getCellData(1, 25));
 	}
 
 
 	public void pricing()
 	{
-		Pricing.click();
-		Global_Obj.select(DefaultPricing).selectByVisibleText(PricingData.getCellData(1, 4));
+		pricing.click();
+		global_Obj.select(defaultPricing).selectByVisibleText(pricingData.getCellData(1, 4));
 
-		Sa.assertEquals(Prop.getProperty("FiltaFryCheckBox"), FiltaFry.isSelected());
-		if (FiltaFry.isSelected() == false)
+		sa.assertEquals(prop.getProperty("FiltaFryCheckBox"), filtaFry.isSelected());
+		if (filtaFry.isSelected() == false)
 		{
-			FiltaFry.click();
+			filtaFry.click();
 			lodar();
-			Global_Obj.select(Pricing_Model).selectByVisibleText("Per lb");
+			global_Obj.select(pricing_Model).selectByVisibleText("Per lb");
 			lodar();
-			Sa.assertEquals(ActualLevel1Charge.getAttribute("value"), Default_Level1Charge);
-			Sa.assertEquals(ActualFirst.getAttribute("value"), Default_First);
-			Sa.assertEquals(ActualAdditionalRate.getAttribute("value"), Default_AdditionalRate);
+			sa.assertEquals(actualLevel1Charge.getAttribute("value"), default_Level1Charge);
+			sa.assertEquals(actualFirst.getAttribute("value"), default_First);
+			sa.assertEquals(actualAdditionalRate.getAttribute("value"), default_AdditionalRate);
 		}
 		else
 		{
 			System.out.println("FiltaFry Already Checked");
 		}
 
-		Sa.assertEquals(Prop.getProperty("FiltaCoolCheckBox"), FiltaCool.isSelected());
-		if (FiltaCool.isSelected() == false)
+		sa.assertEquals(prop.getProperty("FiltaCoolCheckBox"), filtaCool.isSelected());
+		if (filtaCool.isSelected() == false)
 		{
-			FiltaCool.click();
-			Global_Obj.wait(Driver)
+			filtaCool.click();
+			global_Obj.wait(driver)
 					.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#rental_rate")));
 			lodar();
-			Global_Obj.select(FiltaCool_Frequency).selectByVisibleText(PricingData.getCellData(1, 1));
-			if (RentalRate.getAttribute("value").equals(""))
+			global_Obj.select(filtaCool_Frequency).selectByVisibleText(pricingData.getCellData(1, 1));
+			if (rentalRate.getAttribute("value").equals(""))
 			{
-				RentalRate.sendKeys((int) PricingData.getCellDataInt(2, 1) + "");
+				rentalRate.sendKeys((int) pricingData.getCellDataInt(2, 1) + "");
 			}
-			Sa.assertEquals(RentalRate, Default_FCWeekly);
+			sa.assertEquals(rentalRate, default_FCWeekly);
 		}
 
-		Sa.assertEquals(Prop.getProperty("FiltaBioCheckBox"), FiltaBio.isSelected());
-		if (FiltaBio.isSelected() == false)
+		sa.assertEquals(prop.getProperty("FiltaBioCheckBox"), filtaBio.isSelected());
+		if (filtaBio.isSelected() == false)
 		{
-			FiltaBio.click();
+			filtaBio.click();
 			lodar();
-			if (PayCustomer.getAttribute("value").equals(""))
+			if (payCustomer.getAttribute("value").equals(""))
 			{
-				PayCustomer.sendKeys((int) PricingData.getCellDataInt(1, 2) + "");
+				payCustomer.sendKeys((int) pricingData.getCellDataInt(1, 2) + "");
 			}
 		}
-		Sa.assertEquals(PayCustomer, Default_FiltaBioDefault);
+		sa.assertEquals(payCustomer, default_FiltaBioDefault);
 
-		Sa.assertEquals(Prop.getProperty("FiltaGoldCheckBox"), FiltaGold.isSelected());
-		if (FiltaGold.isSelected() == false)
+		sa.assertEquals(prop.getProperty("FiltaGoldCheckBox"), filtaGold.isSelected());
+		if (filtaGold.isSelected() == false)
 		{
-			FiltaGold.click();
+			filtaGold.click();
 			lodar();
-			if (NoOfTank.getAttribute("value").equals(""))
+			if (noOfTank.getAttribute("value").equals(""))
 			{
-				NoOfTank.sendKeys((int) PricingData.getCellDataInt(1, 3) + "");
+				noOfTank.sendKeys((int) pricingData.getCellDataInt(1, 3) + "");
 			}
-			if (TankRent.getAttribute("value").equals(""))
+			if (tankRent.getAttribute("value").equals(""))
 			{
-				TankRent.sendKeys((int) PricingData.getCellDataInt(2, 3) + "");
+				tankRent.sendKeys((int) pricingData.getCellDataInt(2, 3) + "");
 			}
-			Sa.assertEquals(TankRent, Default_FGTankRental);
-			if (Oil_Charge.getAttribute("value").equals(""))
+			sa.assertEquals(tankRent, default_FGTankRental);
+			if (oil_Charge.getAttribute("value").equals(""))
 			{
-				Oil_Charge.sendKeys((int) PricingData.getCellDataInt(3, 3) + "");
+				oil_Charge.sendKeys((int) pricingData.getCellDataInt(3, 3) + "");
 			}
 
-			Sa.assertEquals(Oil_Charge, Default_FGOilCharge);
-			if (PriceperBox.getAttribute("value").equals(""))
+			sa.assertEquals(oil_Charge, default_FGOilCharge);
+			if (priceperBox.getAttribute("value").equals(""))
 			{
-				PriceperBox.sendKeys((int) PricingData.getCellDataInt(4, 3) + "");
+				priceperBox.sendKeys((int) pricingData.getCellDataInt(4, 3) + "");
 			}
-			Sa.assertEquals(PriceperBox, Default_FGPerBox);
+			sa.assertEquals(priceperBox, default_FGPerBox);
 		}
 
-		Sa.assertEquals(Prop.getProperty("DrainFoamCheckBox"), DrainFoam.isSelected());
-		if (DrainFoam.isSelected() == false)
+		sa.assertEquals(prop.getProperty("DrainFoamCheckBox"), drainFoam.isSelected());
+		if (drainFoam.isSelected() == false)
 		{
-			DrainFoam.click();
+			drainFoam.click();
 			lodar();
-			if (Charge.getAttribute("value").equals(""))
+			if (charge.getAttribute("value").equals(""))
 			{
-				Charge.sendKeys((int) PricingData.getCellDataInt(1, 5) + "");
+				charge.sendKeys((int) pricingData.getCellDataInt(1, 5) + "");
 			}
 		}
-		Sa.assertEquals(Charge, Default_DrainFoamDefault);
-		Global_Obj.select(Inv_Period).selectByVisibleText(PricingData.getCellData(1, 6));
-		if (Global_Obj.select(Inv_Period).getFirstSelectedOption().getText().equals(PricingData.getCellData(1, 6)))
+		sa.assertEquals(charge, default_DrainFoamDefault);
+		global_Obj.select(inv_Period).selectByVisibleText(pricingData.getCellData(1, 6));
+		if (global_Obj.select(inv_Period).getFirstSelectedOption().getText().equals(pricingData.getCellData(1, 6)))
 		{
-			Sa.assertEquals(true, PerJob_Yes.isEnabled());
-			Sa.assertEquals(true, PerJob_No.isEnabled());
-			Sa.assertEquals(true, PerJob_Yes.isSelected());
+			sa.assertEquals(true, perJob_Yes.isEnabled());
+			sa.assertEquals(true, perJob_No.isEnabled());
+			sa.assertEquals(true, perJob_Yes.isSelected());
 		}
 		else
 		{
 			System.out.println("It's not Per Job");
 		}
-		Global_Obj.select(Payement).selectByVisibleText(PricingData.getCellData(1, 7));
-		ActualPayment = Driver.findElement(By.xpath(".//select[@id='payment_term']//option[1]")).getText();
-		Sa.assertEquals(ActualPayment, Default_PaymentDefault);
+		global_Obj.select(payement).selectByVisibleText(pricingData.getCellData(1, 7));
+		actualPayment = driver.findElement(By.xpath(".//select[@id='payment_term']//option[1]")).getText();
+		sa.assertEquals(actualPayment, default_PaymentDefault);
 	}
 
 
 	public void marketing()
 	{
-		Marketing_Categories.click();
-		TypeMarketing.click();
-		Global_Obj.action(Driver).moveToElement(AmusementPark).click().build().perform();
-		Global_Obj.action(Driver).moveToElement(Casinos).click().build().perform();
-		TypeMarketing.click();
-		Sub_Type.sendKeys(MarketingData.getCellData(1, 0));
-		Global_Obj.select(Contract).selectByVisibleText("American Food and Vending");
-		Salespersonselect.click();
-		Tabs = new ArrayList<String>(Driver.getWindowHandles());
-		Driver.switchTo().window(Tabs.get(1));
-		Automation_Sales.click();
-		Driver.switchTo().window(Tabs.get(0));
-		Affiliation.sendKeys(MarketingData.getCellData(1, 1));
-		Chaininput.sendKeys(MarketingData.getCellData(1, 2));
-		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOf(A_W));
-		Global_Obj.action(Driver).moveToElement(A_W).click().build().perform();
-		Global_Obj.select(NCASelection).selectByVisibleText(MarketingData.getCellData(1, 3));
-		Region.sendKeys(MarketingData.getCellData(1, 4));
-		Territory.click();
-		Tabs = new ArrayList<String>(Driver.getWindowHandles());
-		Driver.switchTo().window(Tabs.get(1));
-		Automation.click();
-		Driver.switchTo().window(Tabs.get(0));
+		marketing_Categories.click();
+		typeMarketing.click();
+		global_Obj.action(driver).moveToElement(amusementPark).click().build().perform();
+		global_Obj.action(driver).moveToElement(casinos).click().build().perform();
+		typeMarketing.click();
+		sub_Type.sendKeys(marketingData.getCellData(1, 0));
+		global_Obj.select(contract).selectByVisibleText("American Food and Vending");
+		salespersonselect.click();
+		tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		automation_Sales.click();
+		driver.switchTo().window(tabs.get(0));
+		affiliation.sendKeys(marketingData.getCellData(1, 1));
+		chaininput.sendKeys(marketingData.getCellData(1, 2));
+		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(a_W));
+		global_Obj.action(driver).moveToElement(a_W).click().build().perform();
+		global_Obj.select(nCASelection).selectByVisibleText(marketingData.getCellData(1, 3));
+		region.sendKeys(marketingData.getCellData(1, 4));
+		territory.click();
+		tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		automation.click();
+		driver.switchTo().window(tabs.get(0));
 	}
 
 
 	public void unit_Data()
 	{
-		UnitData.click();
-		TypeOfOil.sendKeys(UnitDataExcel.getCellData(1, 0));
-		QTY.sendKeys((int) UnitDataExcel.getCellDataInt(1, 1) + "");
-		WasteOil.sendKeys(UnitDataExcel.getCellData(1, 2));
-		RTI.sendKeys(UnitDataExcel.getCellData(1, 3));
-		AvailableServiceTime.sendKeys(UnitDataExcel.getCellData(1, 4));
-		Dump_Fre_Description.sendKeys(UnitDataExcel.getCellData(1, 5));
-		WasteOilRenewal.click();
-		Today.click();
-		Renewaldate.click();
-		RTIRenewalDate.click();
-		Today.click();
-		RTIDate.click();
-		Save_Header.click();
+		unitData.click();
+		typeOfOil.sendKeys(unitDataExcel.getCellData(1, 0));
+		qTY.sendKeys((int) unitDataExcel.getCellDataInt(1, 1) + "");
+		wasteOil.sendKeys(unitDataExcel.getCellData(1, 2));
+		rTI.sendKeys(unitDataExcel.getCellData(1, 3));
+		availableServiceTime.sendKeys(unitDataExcel.getCellData(1, 4));
+		dump_Fre_Description.sendKeys(unitDataExcel.getCellData(1, 5));
+		wasteOilRenewal.click();
+		today.click();
+		renewaldate.click();
+		rTIRenewalDate.click();
+		today.click();
+		rTIDate.click();
+		save_Header.click();
 	}
 
 
 	public void location()
 	{
-		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Other")));
+		global_Obj.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Other")));
 		try
 		{
 			Thread.sleep(2000);
@@ -830,16 +831,16 @@ public class PerLbCustomerPage
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Other.click();
+		other.click();
 		loadar2();
-		System.out.println(LocationCheck.getText());
+		System.out.println(locationCheck.getText());
 
-		if (LocationCheck.getText().contains("(0 - 0 of 0)"))
+		if (locationCheck.getText().contains("(0 - 0 of 0)"))
 		{
 			locationCreate.click();
 			loadar2();
-			LocationName.sendKeys("Location1");
-			LocationDescription.sendKeys("Location Added for the Customer..");
+			locationName.sendKeys("Location1");
+			locationDescription.sendKeys("Location Added for the Customer..");
 			locationSave.click();
 		}
 		else
@@ -849,84 +850,85 @@ public class PerLbCustomerPage
 
 	}
 
+
 	public void fryer()
 	{
-		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fryers")));
+		global_Obj.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fryers")));
 		// Fryers.click();
-		Global_Obj.action(Driver).moveToElement(Fryers).click().build().perform();
-		Global_Obj.jsReturn(Driver).executeScript("arguments[0].scrollIntoView();", CreateFryer);
-		if (FryersCheck.getText().contains("(0 - 0 of 0)"))
+		global_Obj.action(driver).moveToElement(fryers).click().build().perform();
+		global_Obj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", createFryer);
+		if (fryersCheck.getText().contains("(0 - 0 of 0)"))
 		{
-			CreateFryer.click();
+			createFryer.click();
 			loadar2();
 			lodar();
-			Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOf(Fryer));
-			Fryer.sendKeys("F1");
-			FryerSize.sendKeys("50");
-			FryerSort.click();
+			global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(fryer));
+			fryer.sendKeys("F1");
+			fryerSize.sendKeys("50");
+			fryerSort.click();
 			lodar();
-			FryerSort.sendKeys("1");
-			LocationSelect.click();
-			Tabs = new ArrayList<String>(Driver.getWindowHandles());
-			Driver.switchTo().window(Tabs.get(1));
-			Locationname.click();
-			Driver.switchTo().window(Tabs.get(0));
-			FryerDescription.sendKeys("Fryer One");
-			FryerSave.click();
+			fryerSort.sendKeys("1");
+			locationSelect.click();
+			tabs = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(1));
+			locationname.click();
+			driver.switchTo().window(tabs.get(0));
+			fryerDescription.sendKeys("Fryer One");
+			fryerSave.click();
 		}
-		else if (FryersCheck.getText().contains("(1 - 1 of 1)"))
+		else if (fryersCheck.getText().contains("(1 - 1 of 1)"))
 		{
-			CreateFryer.click();
+			createFryer.click();
 			loadar2();
 			lodar();
-			Fryer.sendKeys("F2");
-			FryerSize.sendKeys("100");
-			FryerSort.click();
+			fryer.sendKeys("F2");
+			fryerSize.sendKeys("100");
+			fryerSort.click();
 			lodar();
-			FryerSort.sendKeys("2");
-			LocationSelect.click();
-			Tabs = new ArrayList<String>(Driver.getWindowHandles());
-			Driver.switchTo().window(Tabs.get(1));
-			Locationname.click();
-			Driver.switchTo().window(Tabs.get(0));
-			FryerDescription.sendKeys("Fryer Two ");
-			FryerSave.click();
+			fryerSort.sendKeys("2");
+			locationSelect.click();
+			tabs = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(1));
+			locationname.click();
+			driver.switchTo().window(tabs.get(0));
+			fryerDescription.sendKeys("Fryer Two ");
+			fryerSave.click();
 		}
-		else if (FryersCheck.getText().contains("(1 - 2 of 2)"))
+		else if (fryersCheck.getText().contains("(1 - 2 of 2)"))
 		{
-			CreateFryer.click();
+			createFryer.click();
 			loadar2();
 			lodar();
-			Fryer.sendKeys("F3");
-			FryerSize.sendKeys("100");
-			FryerSort.click();
+			fryer.sendKeys("F3");
+			fryerSize.sendKeys("100");
+			fryerSort.click();
 			lodar();
-			FryerSort.sendKeys("3");
-			LocationSelect.click();
-			Tabs = new ArrayList<String>(Driver.getWindowHandles());
-			Driver.switchTo().window(Tabs.get(1));
-			Locationname.click();
-			Driver.switchTo().window(Tabs.get(0));
-			FryerDescription.sendKeys("Fryer Three");
-			FryerSave.click();
+			fryerSort.sendKeys("3");
+			locationSelect.click();
+			tabs = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(1));
+			locationName.click();
+			driver.switchTo().window(tabs.get(0));
+			fryerDescription.sendKeys("Fryer Three");
+			fryerSave.click();
 		}
-		else if (FryersCheck.getText().contains("(1 - 3 of 3)"))
+		else if (fryersCheck.getText().contains("(1 - 3 of 3)"))
 		{
-			CreateFryer.click();
+			createFryer.click();
 			loadar2();
 			lodar();
-			Fryer.sendKeys("F4");
-			FryerSize.sendKeys("150");
-			FryerSort.click();
+			fryer.sendKeys("F4");
+			fryerSize.sendKeys("150");
+			fryerSort.click();
 			lodar();
-			FryerSort.sendKeys("4");
-			LocationSelect.click();
-			Tabs = new ArrayList<String>(Driver.getWindowHandles());
-			Driver.switchTo().window(Tabs.get(1));
-			Locationname.click();
-			Driver.switchTo().window(Tabs.get(0));
-			FryerDescription.sendKeys("Fryer Four");
-			FryerSave.click();
+			fryerSort.sendKeys("4");
+			locationSelect.click();
+			tabs = new ArrayList<String>(driver.getWindowHandles());
+			driver.switchTo().window(tabs.get(1));
+			locationName.click();
+			driver.switchTo().window(tabs.get(0));
+			fryerDescription.sendKeys("Fryer Four");
+			fryerSave.click();
 		}
 		else
 		{
@@ -935,35 +937,37 @@ public class PerLbCustomerPage
 
 	}
 
+
 	public void save()
 	{
-		Save.click();
+		save.click();
 		lodar();
 	}
 
 
 	private void lodar()
 	{
-		Global_Obj.wait(Driver)
+		global_Obj.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxloading_mask")));
 	}
 
 
 	public void loadar2()
 	{
-		Global_Obj.wait(Driver).until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
+		global_Obj.wait(driver)
+				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
 	}
 
 
 	public void clickingWebElement()
 	{
-		WebEelement.click();
+		webEelement.click();
 	}
 
 
 	public void closeBrowser()
 	{
-		Driver.close();
+		driver.close();
 	}
 
 }
