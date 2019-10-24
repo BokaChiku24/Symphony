@@ -49,7 +49,7 @@ public class Global
 	private static int count = 1;
 	private Map<String, Object> prefs;
 	private DesiredCapabilities capablities;
-	
+
 	// Driver Initialization Method !!
 	public WebDriver driver()
 	{
@@ -189,7 +189,7 @@ public class Global
 
 	public WebDriverWait wait(WebDriver driver)
 	{
-	     wait = new WebDriverWait(driver, 2500);
+		wait = new WebDriverWait(driver, 2500);
 		return wait;
 	}
 
@@ -340,6 +340,4 @@ public class Global
 		return jS;
 	}
 
-
-	
 }

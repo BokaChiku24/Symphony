@@ -47,7 +47,7 @@ public class ReadExcelData
 		try
 		{
 			input = new FileInputStream(file_Obj);
-		     wb = new XSSFWorkbook(input);
+			wb = new XSSFWorkbook(input);
 			sheet1 = wb.getSheetAt(index);
 			wb.close();
 		}

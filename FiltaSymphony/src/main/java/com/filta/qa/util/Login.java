@@ -23,7 +23,6 @@ public class Login
 	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
 	private WebElement log_In;
 
-
 	public Login(WebDriver driver)
 	{
 		this.driver = driver;

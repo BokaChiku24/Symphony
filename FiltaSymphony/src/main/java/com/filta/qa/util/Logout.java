@@ -12,7 +12,7 @@ public class Logout
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='user']//a")
 	private WebElement log_Out;
-	
+
 	public Logout(WebDriver driver)
 	{
 		this.driver = driver;
