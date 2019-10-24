@@ -23,6 +23,12 @@ public class LoginPage implements LoginPage_Interface
 	private WebDriver driver;
 	private Properties prop;
 	private Global global_Obj;
+	private List<WebElement> list;
+	private ArrayList<String> handles;
+	private ArrayList<String> handles2;
+	private List<WebElement> elementList;
+	private List<WebElement> finalList;
+	private List<WebElement> allLinks;
 
 	@FindBy(how = How.XPATH, using = ".//select[@name='login_language']")
 	private WebElement language;
@@ -57,7 +63,6 @@ public class LoginPage implements LoginPage_Interface
 	@FindBy(how = How.XPATH, using = ".//input[@title='Log In']")
 	private WebElement login_Label;
 
-
 	public LoginPage(WebDriver driver)
 	{
 		global_Obj = new Global();
@@ -69,7 +74,7 @@ public class LoginPage implements LoginPage_Interface
 
 	public void dropDown()
 	{
-		List<WebElement> list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));
+		list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));
 		for (int i = 0; i < list.size(); i++)
 		{
 			System.out.println(list.get(i).getText());
@@ -102,13 +107,13 @@ public class LoginPage implements LoginPage_Interface
 	public void checkURL()
 	{
 		link1.click();
-		ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
+		handles = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(handles.get(1));
 		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("CheckURL1"));
 		closeBrowser();
 		driver.switchTo().window(handles.get(0));
 		link2.click();
-		ArrayList<String> handles2 = new ArrayList<String>(driver.getWindowHandles());
+		handles2 = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(handles2.get(1));
 		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("CheckURL2"));
 		closeBrowser();
@@ -119,22 +124,23 @@ public class LoginPage implements LoginPage_Interface
 
 	public void availableLinks()
 	{
-		List<WebElement> list = driver.findElements(By.tagName("a"));
+		list = driver.findElements(By.tagName("a"));
 		for (int i = 0; i < list.size(); i++)
 		{
 			System.out.println("URL name => " + list.get(i).getText());
 		}
 	}
 
+
 	public List<WebElement> findAllLinks(WebDriver driver)
 
 	{
 
-		List<WebElement> elementList = driver.findElements(By.tagName("a"));
+		elementList = driver.findElements(By.tagName("a"));
 
 		elementList.addAll(driver.findElements(By.tagName("img")));
 
-		List<WebElement> finalList = new ArrayList<WebElement>();
+		finalList = new ArrayList<WebElement>();
 
 		for (WebElement element : elementList)
 
@@ -192,7 +198,7 @@ public class LoginPage implements LoginPage_Interface
 
 	public void brokenLink()
 	{
-		List<WebElement> allLinks = findAllLinks(driver);
+		allLinks = findAllLinks(driver);
 
 		System.out.println("Total number of elements found " + allLinks.size());
 
@@ -223,7 +229,8 @@ public class LoginPage implements LoginPage_Interface
 		}
 
 	}
-	
+
+
 	public void checkTextBoxAssert()
 	{
 		Assert.assertEquals(uName.isEnabled(), true);

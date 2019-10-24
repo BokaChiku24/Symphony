@@ -25,6 +25,10 @@ public class ForgetPassword implements ForgotPassword_Interface
 	private Properties prop;
 	private boolean uName;
 	private boolean email;
+	private List<WebElement> list;
+	private List<WebElement> elementList;
+	private List<WebElement> finalList;
+	private List<WebElement> allLinks;
 
 	@FindBy(how = How.LINK_TEXT, using = "Forgot Password?")
 	private WebElement forgot_Password;
@@ -50,7 +54,6 @@ public class ForgetPassword implements ForgotPassword_Interface
 	@FindBy(how = How.XPATH, using = ".//input[@id='generate_pwd_button']")
 	private WebElement button;
 
-
 	public ForgetPassword(WebDriver driver)
 	{
 		global_Obj = new Global();
@@ -62,7 +65,7 @@ public class ForgetPassword implements ForgotPassword_Interface
 
 	public void getURL()
 	{
-		List<WebElement> list = driver.findElements(By.tagName("a"));
+		list = driver.findElements(By.tagName("a"));
 		for (int i = 0; i < list.size(); i++)
 		{
 			System.out.println("URL => " + list.get(i).getText());
@@ -74,11 +77,11 @@ public class ForgetPassword implements ForgotPassword_Interface
 
 	{
 
-		List<WebElement> elementList = driver.findElements(By.tagName("a"));
+		elementList = driver.findElements(By.tagName("a"));
 
 		elementList.addAll(driver.findElements(By.tagName("img")));
 
-		List<WebElement> finalList = new ArrayList<WebElement>();
+		finalList = new ArrayList<WebElement>();
 
 		for (WebElement element : elementList)
 
@@ -136,7 +139,7 @@ public class ForgetPassword implements ForgotPassword_Interface
 
 	public void brokenLink()
 	{
-		List<WebElement> allLinks = findAllLinks(driver);
+		allLinks = findAllLinks(driver);
 
 		System.out.println("Total number of elements found " + allLinks.size());
 
