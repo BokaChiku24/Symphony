@@ -246,8 +246,8 @@ public class FixedCostCustomerPage
 	@FindBy(how = How.CSS, using = "#region_name")
 	private WebElement Region;
 
-	@FindBy(how = How.CSS, using = "#btn_territory")
-	private WebElement Territory;
+//	@FindBy(how = How.CSS, using = "#btn_territory")
+//	private WebElement Territory;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation_Sales")
 	private WebElement Automation_Sales;
@@ -462,12 +462,11 @@ public class FixedCostCustomerPage
 	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fryer_locations']//table[@class='list view']//tbody//tr//tbody//tr//td[2]//span")
 	public WebElement LocationCheck;
 
-	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[9]")
+	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[4]")
 	public WebElement Other;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fr_fryers']//table//table//tbody//tr//td[2]//span")
 	public WebElement FryersCheck;
-
 
 	public FixedCostCustomerPage(WebDriver Driver)
 	{
@@ -599,7 +598,8 @@ public class FixedCostCustomerPage
 	{
 		Global_Obj.action(Driver).moveToElement(CustomerTab).build().perform();
 		Global_Obj.action(Driver).moveToElement(Customer).click().build().perform();
-		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
+		Global_Obj.wait(Driver)
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
 		Customer_URL = Driver.getCurrentUrl();
 		Sa.assertEquals(Customer_URL, FixedCostData.getCellData(1, 0));
 		SelectAll.click();
@@ -804,10 +804,10 @@ public class FixedCostCustomerPage
 		Global_Obj.action(Driver).moveToElement(A_W).click().build().perform();
 		Global_Obj.select(NCASelection).selectByVisibleText(MarketingData.getCellData(1, 3));
 		Region.sendKeys(MarketingData.getCellData(1, 4));
-		Territory.click();
+		// Territory.click();
 		Tabs = new ArrayList<String>(Driver.getWindowHandles());
-		Driver.switchTo().window(Tabs.get(1));
-		Automation.click();
+		// Driver.switchTo().window(Tabs.get(1));
+		// Automation.click();
 		Driver.switchTo().window(Tabs.get(0));
 	}
 
@@ -965,7 +965,8 @@ public class FixedCostCustomerPage
 
 	public void loadar2()
 	{
-		Global_Obj.wait(Driver).until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
+		Global_Obj.wait(Driver)
+				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
 	}
 
 

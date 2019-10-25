@@ -246,8 +246,8 @@ public class PerLbCustomerPage
 	@FindBy(how = How.CSS, using = "#region_name")
 	private WebElement region;
 
-	@FindBy(how = How.CSS, using = "#btn_territory")
-	private WebElement territory;
+//	@FindBy(how = How.CSS, using = "#btn_territory")
+//	private WebElement territory;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation_Sales")
 	private WebElement automation_Sales;
@@ -792,10 +792,10 @@ public class PerLbCustomerPage
 		global_Obj.action(driver).moveToElement(a_W).click().build().perform();
 		global_Obj.select(nCASelection).selectByVisibleText(marketingData.getCellData(1, 3));
 		region.sendKeys(marketingData.getCellData(1, 4));
-		territory.click();
+		// territory.click();
 		tabs = new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(tabs.get(1));
-		automation.click();
+		// driver.switchTo().window(tabs.get(1));
+		// automation.click();
 		driver.switchTo().window(tabs.get(0));
 	}
 

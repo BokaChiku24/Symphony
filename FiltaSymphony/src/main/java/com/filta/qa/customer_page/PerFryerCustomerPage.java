@@ -54,7 +54,7 @@ public class PerFryerCustomerPage
 	private String ActualPayment;
 	private String ActualCustomer;
 	private ArrayList<String> Tabs;
-	
+
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
 	private WebElement ContainerClose;
 
@@ -247,8 +247,8 @@ public class PerFryerCustomerPage
 	@FindBy(how = How.CSS, using = "#region_name")
 	private WebElement Region;
 
-	@FindBy(how = How.CSS, using = "#btn_territory")
-	private WebElement Territory;
+//	@FindBy(how = How.CSS, using = "#btn_territory")
+//	private WebElement Territory;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation_Sales")
 	private WebElement Automation_Sales;
@@ -448,7 +448,7 @@ public class PerFryerCustomerPage
 	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fryer_locations']//table[@class='list view']//tbody//tr//tbody//tr//td[2]//span")
 	public WebElement LocationCheck;
 
-	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[9]")
+	@FindBy(how = How.XPATH, using = ".//ul[@class='subpanelTablist']//li[4]")
 	public WebElement Other;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fr_fryers']//table//table//tbody//tr//td[2]//span")
@@ -459,13 +459,13 @@ public class PerFryerCustomerPage
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fryer_locations_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='FR_FryerLocation_subpanel_save_button']")
 	public WebElement locationSave;
-	
+
 	@FindBy(how = How.XPATH, using = ".//input[@id='charge']")
 	public WebElement FryerChargeWebElement;
-	
+
 	@FindBy(how = How.XPATH, using = ".//input[@id='dump_clean_charges']")
 	public WebElement FryerCleanOnlyChargeWebElement;
-	
+
 	public PerFryerCustomerPage(WebDriver driver)
 	{
 		Global_Obj = new Global();
@@ -596,7 +596,8 @@ public class PerFryerCustomerPage
 	{
 		Global_Obj.action(Driver).moveToElement(CustomerTab).build().perform();
 		Global_Obj.action(Driver).moveToElement(Customer).click().build().perform();
-		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
+		Global_Obj.wait(Driver)
+				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
 		Customer_URL = Driver.getCurrentUrl();
 		Sa.assertEquals(Customer_URL, PerFryerData.getCellData(1, 0));
 		SelectAll.click();
@@ -791,10 +792,10 @@ public class PerFryerCustomerPage
 		Global_Obj.action(Driver).moveToElement(A_W).click().build().perform();
 		Global_Obj.select(NCASelection).selectByVisibleText(MarketingData.getCellData(1, 3));
 		Region.sendKeys(MarketingData.getCellData(1, 4));
-		Territory.click();
+		// Territory.click();
 		Tabs = new ArrayList<String>(Driver.getWindowHandles());
-		Driver.switchTo().window(Tabs.get(1));
-		Automation.click();
+		//Driver.switchTo().window(Tabs.get(1));
+		//Automation.click();
 		Driver.switchTo().window(Tabs.get(0));
 	}
 
@@ -816,6 +817,7 @@ public class PerFryerCustomerPage
 		RTIDate.click();
 		Save_Header.click();
 	}
+
 
 	public void location()
 	{
@@ -847,7 +849,8 @@ public class PerFryerCustomerPage
 		}
 
 	}
-	
+
+
 	public void fryer()
 	{
 		Global_Obj.wait(Driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fryers")));
@@ -944,16 +947,20 @@ public class PerFryerCustomerPage
 
 	}
 
+
 	public void clickingWebElement()
 	{
 		WebEelement.click();
 	}
 
+
 	public void loadar2()
 	{
-		Global_Obj.wait(Driver).until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
+		Global_Obj.wait(Driver)
+				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
 	}
-	
+
+
 	public void save()
 	{
 		Save.click();
