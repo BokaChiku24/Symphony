@@ -95,7 +95,10 @@ public class PerLbCustomerPage
 
 	@FindBy(how = How.CSS, using = "#Accounts0emailAddress0")
 	private WebElement primaryEmail;
-
+	
+	@FindBy(how = How.XPATH, using = ".//div[@class='popup-table-overflow']//tbody[1]//tr[3]//td[1]//a")
+	private WebElement locationSelect2;
+	
 	@FindBy(how = How.CSS, using = "#billing_address_street")
 	private WebElement site_Street;
 
@@ -871,7 +874,7 @@ public class PerLbCustomerPage
 			locationSelect.click();
 			tabs = new ArrayList<String>(driver.getWindowHandles());
 			driver.switchTo().window(tabs.get(1));
-			locationname.click();
+			locationSelect2.click();
 			driver.switchTo().window(tabs.get(0));
 			fryerDescription.sendKeys("Fryer One");
 			fryerSave.click();
@@ -889,7 +892,7 @@ public class PerLbCustomerPage
 			locationSelect.click();
 			tabs = new ArrayList<String>(driver.getWindowHandles());
 			driver.switchTo().window(tabs.get(1));
-			locationname.click();
+			locationSelect2.click();
 			driver.switchTo().window(tabs.get(0));
 			fryerDescription.sendKeys("Fryer Two ");
 			fryerSave.click();
@@ -907,7 +910,7 @@ public class PerLbCustomerPage
 			locationSelect.click();
 			tabs = new ArrayList<String>(driver.getWindowHandles());
 			driver.switchTo().window(tabs.get(1));
-			locationName.click();
+			locationSelect2.click();
 			driver.switchTo().window(tabs.get(0));
 			fryerDescription.sendKeys("Fryer Three");
 			fryerSave.click();
@@ -925,7 +928,7 @@ public class PerLbCustomerPage
 			locationSelect.click();
 			tabs = new ArrayList<String>(driver.getWindowHandles());
 			driver.switchTo().window(tabs.get(1));
-			locationName.click();
+			locationSelect2.click();
 			driver.switchTo().window(tabs.get(0));
 			fryerDescription.sendKeys("Fryer Four");
 			fryerSave.click();

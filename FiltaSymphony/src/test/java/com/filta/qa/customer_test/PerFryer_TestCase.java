@@ -33,19 +33,19 @@ import org.testng.ITestResult;
 
 public class PerFryer_TestCase
 {
-	private WebDriver Driver;
-	private PerFryerCustomerPage PerFryer_Customer;
-	private Global Global_Obj;
-	private ExtentReports Extent;
-	private ExtentHtmlReporter HtmlReporter;
-	private ExtentTest ExtentLogger;
-	private String ScreenshotPath;
-	private Properties Prop;
-	private String ActualCustomer;
-	private String DateName;
-	private File ScrFile;
+	private WebDriver driver;
+	private PerFryerCustomerPage perFryer_Customer;
+	private Global global_Obj;
+	private ExtentReports extent;
+	private ExtentHtmlReporter htmlReporter;
+	private ExtentTest extentLogger;
+	private String screenshotPath;
+	private Properties prop;
+	private String actualCustomer;
+	private String dateName;
+	private File scrFile;
 
-	public static Logger Log = Logger.getLogger("Per Fryer Test Case");
+	public static Logger log = Logger.getLogger("Per Fryer Test Case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
@@ -55,29 +55,29 @@ public class PerFryer_TestCase
 	@BeforeClass
 	public void property()
 	{
-		Global_Obj = new Global();
-		Driver = Global_Obj.driver();
-		Prop = Global_Obj.readProperties();
-		PerFryer_Customer = new PerFryerCustomerPage(Driver);
-		PerFryer_Customer.login();
-		HtmlReporter = new ExtentHtmlReporter(
+		global_Obj = new Global();
+		driver = global_Obj.driver();
+		prop = global_Obj.readProperties();
+		perFryer_Customer = new PerFryerCustomerPage(driver);
+		perFryer_Customer.login();
+		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/PerFryer_TestCase.html");
-		Extent = new ExtentReports();
-		Extent.attachReporter(HtmlReporter);
-		Extent.setSystemInfo("OS", "Windows 7 64 Bit");
-		Extent.setSystemInfo("Browser", "Google Chrome");
-		Extent.setSystemInfo("Author:", "Kunal Chavan");
-		Extent.setSystemInfo("Testing:", "Functional Testing");
-		HtmlReporter.config().setReportName("Per Fryer Page Functionality Test Case");
-		HtmlReporter.config().setTheme(Theme.STANDARD);
-		HtmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
-		HtmlReporter.loadXMLConfig("./extent-config.xml");
-		ActualCustomer = checkDefaultPricingOfFranchisee();
-		if (ActualCustomer.equals(Prop.getProperty("Customer2")))
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		extent.setSystemInfo("OS", "Windows 7 64 Bit");
+		extent.setSystemInfo("Browser", "Google Chrome");
+		extent.setSystemInfo("Author:", "Kunal Chavan");
+		extent.setSystemInfo("Testing:", "Functional Testing");
+		htmlReporter.config().setReportName("Per Fryer Page Functionality Test Case");
+		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
+		htmlReporter.loadXMLConfig("./extent-config.xml");
+		actualCustomer = checkDefaultPricingOfFranchisee();
+		if (actualCustomer.equals(prop.getProperty("Customer2")))
 		{
-			PerFryer_Customer.clickingWebElement();
-			PerFryer_Customer.location();
-			PerFryer_Customer.fryer();
+			perFryer_Customer.clickingWebElement();
+			perFryer_Customer.location();
+			perFryer_Customer.fryer();
 			afterMethod();
 		}
 		else
@@ -92,7 +92,7 @@ public class PerFryer_TestCase
 	@Test
 	public void test()
 	{
-		Log.info("Per Fryer Customer Test!!");
+		log.info("Per Fryer Customer Test!!");
 	}
 
 
@@ -107,43 +107,43 @@ public class PerFryer_TestCase
 
 	public String checkDefaultPricingOfFranchisee()
 	{
-		Log.info("Check Franchisee Default Pricing");
-		Log.info("Test Case1: Check Customer Page URL");
-		ExtentLogger = Extent.createTest("Test Case 2: Check Customer Page URL");
-		ActualCustomer = PerFryer_Customer.defaultPricingFranchiseeLevel();
-		return ActualCustomer;
+		log.info("Check Franchisee Default Pricing");
+		log.info("Test Case1: Check Customer Page URL");
+		extentLogger = extent.createTest("Test Case 2: Check Customer Page URL");
+		actualCustomer = perFryer_Customer.defaultPricingFranchiseeLevel();
+		return actualCustomer;
 	}
 
 
 	public void checkCustomerBasicInfo()
 	{
-		Log.info("Create Customer Basic info");
-		ExtentLogger = Extent.createTest("Test Case 3:Create Customer Basic info");
-		PerFryer_Customer.createCustomer();
-		PerFryer_Customer.basicInfo();
+		log.info("Create Customer Basic info");
+		extentLogger = extent.createTest("Test Case 3:Create Customer Basic info");
+		perFryer_Customer.createCustomer();
+		perFryer_Customer.basicInfo();
 	}
 
 
 	public void pricing_EstimatingInfo()
 	{
-		Log.info("Create Customer Pricing and Estimating Info");
-		ExtentLogger = Extent.createTest(
+		log.info("Create Customer Pricing and Estimating Info");
+		extentLogger = extent.createTest(
 				"Test Case 4: Check Customer Pricing and Estimating Checkboxes And Default Dropdown Values");
-		PerFryer_Customer.pricing();
+		perFryer_Customer.pricing();
 	}
 
 
 	public void marketingInfo()
 	{
-		Log.info("Create Customer Marketing Info");
-		PerFryer_Customer.marketing();
+		log.info("Create Customer Marketing Info");
+		perFryer_Customer.marketing();
 	}
 
 
 	public void unitInfo()
 	{
-		Log.info("Create Customer Unit Info");
-		PerFryer_Customer.unit_Data();
+		log.info("Create Customer Unit Info");
+		perFryer_Customer.unit_Data();
 	}
 
 
@@ -152,26 +152,26 @@ public class PerFryer_TestCase
 	{
 		if (TestResult.getStatus() == ITestResult.FAILURE)
 		{
-			ExtentLogger.log(Status.FAIL,
+			extentLogger.log(Status.FAIL,
 					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Failed", ExtentColor.RED));
-			ExtentLogger.log(Status.FAIL,
+			extentLogger.log(Status.FAIL,
 					MarkupHelper.createLabel(TestResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-			DateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
-			ScrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
-			ScreenshotPath = System.getProperty("user.dir") + "/PerFryer_TestCase/" + TestResult.getName() + DateName
+			dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
+			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			screenshotPath = System.getProperty("user.dir") + "/PerFryer_TestCase/" + TestResult.getName() + dateName
 					+ "_" + Arrays.toString(TestResult.getParameters()) + ".png";
-			FileUtils.copyFile(ScrFile, new File(ScreenshotPath));
-			ExtentLogger.fail("Test Case Failed Snapshot is below " + ExtentLogger.addScreenCaptureFromPath(ScreenshotPath));
+			FileUtils.copyFile(scrFile, new File(screenshotPath));
+			extentLogger.fail("Test Case Failed Snapshot is below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
 
 		}
 		else if (TestResult.getStatus() == ITestResult.SKIP)
 		{
-			ExtentLogger.log(Status.SKIP,
+			extentLogger.log(Status.SKIP,
 					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
 		}
 		else if (TestResult.getStatus() == ITestResult.SUCCESS)
 		{
-			ExtentLogger.log(Status.PASS,
+			extentLogger.log(Status.PASS,
 					MarkupHelper.createLabel(TestResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
 		}
 	}
@@ -179,8 +179,8 @@ public class PerFryer_TestCase
 
 	public void afterMethod()
 	{
-		Log.info("Per Fryer Page Test Case Ends Here");
-		Extent.flush();
-		PerFryer_Customer.closeBrowser();
+		log.info("Per Fryer Page Test Case Ends Here");
+		extent.flush();
+		perFryer_Customer.closeBrowser();
 	}
 }
