@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-25T23:52:45 IST" name="Default suite" finished-at="2019-10-25T23:54:02 IST" duration-ms="76795">
+  <suite started-at="2019-10-26T12:46:47 IST" name="Default suite" finished-at="2019-10-26T12:48:14 IST" duration-ms="86950">
     <groups>
     </groups>
-    <test started-at="2019-10-25T23:52:45 IST" name="Default test" finished-at="2019-10-25T23:54:02 IST" duration-ms="76795">
+    <test started-at="2019-10-26T12:46:47 IST" name="Default test" finished-at="2019-10-26T12:48:14 IST" duration-ms="86950">
       <class name="com.filta.qa.customer_test.FixedCost_TestCase">
-        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-25T23:52:45 IST" name="property" finished-at="2019-10-25T23:54:02 IST" duration-ms="76728" status="PASS">
+        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-26T12:46:47 IST" name="property" finished-at="2019-10-26T12:48:14 IST" duration-ms="86875" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method signature="test()[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-25T23:54:02 IST" name="test" finished-at="2019-10-25T23:54:02 IST" duration-ms="14" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-26T12:48:14 IST" name="test" finished-at="2019-10-26T12:48:14 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-25T23:54:02 IST" name="takeScreenShotOnFailure" finished-at="2019-10-25T23:54:02 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-26T12:48:14 IST" name="takeScreenShotOnFailure" finished-at="2019-10-26T12:48:14 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
