@@ -178,6 +178,6 @@ public class PerLb_TestCase
 	{
 		log.info("Per Fryer Page Test Case Ends Here");
 		extent.flush();
-		//PerLb_Customer.closeBrowser();
+		perLb_Customer.closeBrowser();
 	}
 }

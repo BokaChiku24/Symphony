@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
@@ -45,9 +44,7 @@ public class Create_CustomerFB_TestCase
 	private ExtentReports Extent;
 	private ExtentHtmlReporter HtmlReporter;
 	private ExtentTest ExtentLogger;
-	private String ScreenshotPath;
-	// private Properties Prop;
-	// private String ActualCustomer;
+	private String ScreenshotPath;;
 	private String DateName;
 	private File ScrFile;
 
@@ -96,7 +93,27 @@ public class Create_CustomerFB_TestCase
 		Log.info("Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!");
 		ExtentLogger = Extent.createTest(
 				"Test Case 1: Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not");
-		create_customer_filtabio.createCustomerDefaultPricingYes();
+		create_customer_filtabio.createCustomerDefaultPricingYesFBPriceSet();
+	}
+
+
+	@Test(priority = 2)
+	public void testDefaultPricingYesPriceNotSet()
+	{
+		Log.info("Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!");
+		ExtentLogger = Extent.createTest(
+				"Test Case 1: Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!");
+		create_customer_filtabio.createCustomerDefaultPricingYesFBPriceNotSet();
+	}
+
+
+	@Test(priority = 3)
+	public void testLeadToCustomer()
+	{
+		Log.info("Create Customer With Converting Lead!!");
+		ExtentLogger = Extent.createTest(
+				"Test Case 1: Create Customer With Converting Lead!!");
+		create_customer_filtabio.leadToCustomer();
 	}
 
 
@@ -131,11 +148,11 @@ public class Create_CustomerFB_TestCase
 	}
 
 
-	// @AfterClass
+	@AfterClass
 	public void afterMethod()
 	{
 		Log.info("Create Customer FiltaBio Test Case Ends Here");
 		Extent.flush();
-		create_customer_filtabio.closeBrowser();
+	//	create_customer_filtabio.closeBrowser();
 	}
 }

@@ -1,32 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-26T12:46:47 IST" name="Default suite" finished-at="2019-10-26T12:48:14 IST" duration-ms="86950">
+  <suite started-at="2019-10-28T00:18:44 IST" name="Default suite" finished-at="2019-10-28T00:20:28 IST" duration-ms="103307">
     <groups>
     </groups>
-    <test started-at="2019-10-26T12:46:47 IST" name="Default test" finished-at="2019-10-26T12:48:14 IST" duration-ms="86950">
-      <class name="com.filta.qa.customer_test.FixedCost_TestCase">
-        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-26T12:46:47 IST" name="property" finished-at="2019-10-26T12:48:14 IST" duration-ms="86875" status="PASS">
+    <test started-at="2019-10-28T00:18:44 IST" name="Default test" finished-at="2019-10-28T00:20:28 IST" duration-ms="103307">
+      <class name="com.filta.qa.customer_test.Create_CustomerFB_TestCase">
+        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:18:44 IST" name="property" finished-at="2019-10-28T00:19:31 IST" duration-ms="46376" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method signature="test()[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-26T12:48:14 IST" name="test" finished-at="2019-10-26T12:48:14 IST" duration-ms="11" status="PASS">
+        <test-method signature="test()[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:19:31 IST" name="test" finished-at="2019-10-28T00:19:51 IST" duration-ms="20672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27]" started-at="2019-10-26T12:48:14 IST" name="takeScreenShotOnFailure" finished-at="2019-10-26T12:48:14 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:19:51 IST" name="takeScreenShotOnFailure" finished-at="2019-10-28T00:19:51 IST" duration-ms="15" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=FixedCost_TestCase.test()[pri:0, instance:com.filta.qa.customer_test.FixedCost_TestCase@5ffead27] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=Create_CustomerFB_TestCase.test()[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-      </class> <!-- com.filta.qa.customer_test.FixedCost_TestCase -->
+        <test-method signature="testDefaultPricingYes()[pri:1, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:19:51 IST" name="testDefaultPricingYes" finished-at="2019-10-28T00:20:09 IST" duration-ms="17242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDefaultPricingYes -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:20:09 IST" name="takeScreenShotOnFailure" finished-at="2019-10-28T00:20:09 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDefaultPricingYes status=SUCCESS method=Create_CustomerFB_TestCase.testDefaultPricingYes()[pri:1, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="testDefaultPricingYesPriceNotSet()[pri:2, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:20:09 IST" name="testDefaultPricingYesPriceNotSet" finished-at="2019-10-28T00:20:21 IST" duration-ms="12457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDefaultPricingYesPriceNotSet -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:20:21 IST" name="takeScreenShotOnFailure" finished-at="2019-10-28T00:20:21 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDefaultPricingYesPriceNotSet status=SUCCESS method=Create_CustomerFB_TestCase.testDefaultPricingYesPriceNotSet()[pri:2, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="testLeadToCustomer()[pri:3, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:20:21 IST" name="testLeadToCustomer" finished-at="2019-10-28T00:20:27 IST" duration-ms="6256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLeadToCustomer -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:20:27 IST" name="takeScreenShotOnFailure" finished-at="2019-10-28T00:20:27 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLeadToCustomer status=SUCCESS method=Create_CustomerFB_TestCase.testLeadToCustomer()[pri:3, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.filta.qa.customer_test.Create_CustomerFB_TestCase@2e005c4b]" started-at="2019-10-28T00:20:27 IST" name="afterMethod" finished-at="2019-10-28T00:20:28 IST" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.filta.qa.customer_test.Create_CustomerFB_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

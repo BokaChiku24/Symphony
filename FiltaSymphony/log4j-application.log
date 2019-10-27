@@ -7249,4 +7249,657 @@
  2019-10-26 12:47:32,492  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
  2019-10-26 12:48:09,661  INFO [main] Fixed Cost Test Case:176 - Fixed Cost Page Test Case Ends Here
  2019-10-26 12:48:14,282  INFO [main] Fixed Cost Test Case:90 - Fixed Cost Customer Test!!
+ 2019-10-27 12:18:03,071  INFO [main] Sign in test case:98 - Test case 1: Check login functionality with valid credentials
+ 2019-10-27 12:18:26,815  INFO [main] Sign in test case:144 - Sign in test case ends here
+ 2019-10-27 12:18:54,154  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-10-27 12:18:54,186  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-10-27 12:18:54,340  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-10-27 12:18:54,392  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-10-27 12:19:02,798  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-10-27 12:19:02,860  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-10-27 12:19:02,979  INFO [main] LogInPage test case:126 - Test case 7: Get all login URL
+ 2019-10-27 12:19:03,075  INFO [main] LogInPage test case:135 - Test case 8: Get all broken URL
+ 2019-10-27 12:19:04,987  INFO [main] LogInPage test case:175 - Login Page test case Ends Here
+ 2019-10-27 12:19:32,095  INFO [main] Sign in with invalid credentials test case:77 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-10-27 12:19:33,857  INFO [main] Sign in with invalid credentials test case:89 - Test case 2: Check login functionality without credentials
+ 2019-10-27 12:19:35,603  INFO [main] Sign in with invalid credentials test case:115 - Test case 4: Check login functionality withInvalid credentials
+ 2019-10-27 12:19:38,749  INFO [main] Sign in with invalid credentials test case:102 - Test case 3: Check login functionality withInvalid credentials
+ 2019-10-27 12:19:40,748  INFO [main] Sign in with invalid credentials test case:128 - Test case 7: Get all login URL
+ 2019-10-27 12:19:40,841  INFO [main] Sign in with invalid credentials test case:137 - Test case 8: Get all broken URL
+ 2019-10-27 12:19:42,658  INFO [main] Sign in with invalid credentials test case:175 - Sign in test case ends here
+ 2019-10-27 12:20:06,507  INFO [main] Forget password test case:80 - Test case 0: Get all URL names
+ 2019-10-27 12:20:06,599  INFO [main] Forget password test case:109 - Test case 2: Forgot password check with invalid username and email
+ 2019-10-27 12:20:07,089  INFO [main] Forget password test case:119 - Test case 3: Forgot password check without username and email
+ 2019-10-27 12:20:07,470  INFO [main] Forget password test case:129 - Test case 4: Forgot password check without username and with email
+ 2019-10-27 12:20:07,877  INFO [main] Forget password test case:139 - Test case 5: Forgot password check with username and without email
+ 2019-10-27 12:20:08,234  INFO [main] Forget password test case:149 - Test case 6: Forgot password textbox check
+ 2019-10-27 12:20:08,279  INFO [main] Forget password test case:158 - Test case 7: Forgot password label check
+ 2019-10-27 12:20:08,674  INFO [main] Forget password test case:89 - Test case 0: Get all URL names
+ 2019-10-27 12:20:10,502  INFO [main] Forget password test case:98 - Test case 1: Forgot password check with valid username and email
+ 2019-10-27 12:20:14,595  INFO [main] Forget password test case:198 - Forgot password test case ends here
+ 2019-10-27 12:21:04,065  INFO [main] Fixed Cost Test Case:105 - Check Franchisee Default Pricing
+ 2019-10-27 12:21:04,066  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
+ 2019-10-27 12:21:31,070  INFO [main] Fixed Cost Test Case:176 - Fixed Cost Page Test Case Ends Here
+ 2019-10-27 12:21:35,198  INFO [main] Fixed Cost Test Case:90 - Fixed Cost Customer Test!!
+ 2019-10-27 12:22:21,758  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-10-27 12:22:21,758  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-10-27 12:22:47,965  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-10-27 12:22:52,088  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-10-27 12:23:39,929  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-27 12:23:39,930  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-27 12:24:05,499  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-27 12:24:05,534  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
+ 2019-10-27 12:24:50,870  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-27 12:24:51,088  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-27 12:24:55,027  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-27 12:24:55,029  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-27 12:24:55,029  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-27 12:24:55,150  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-27 12:25:09,488  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-27 12:25:09,749  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-27 12:25:20,035  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-27 12:26:04,103  INFO [main] User page test case:73 - Check URL of user page
+ 2019-10-27 12:26:13,787  INFO [main] User page test case:82 - Test case 1: Check button name on user page
+ 2019-10-27 12:26:16,638  INFO [main] User page test case:118 - Test case 5: Check tab name on user page
+ 2019-10-27 12:26:17,073  INFO [main] User page test case:127 - Test case 6: Check data on user page
+ 2019-10-27 12:26:23,433  INFO [main] User page test case:137 - Test Case 7: Check password field on edit page
+ 2019-10-27 12:26:34,954  INFO [main] User page test case:91 - Test case 2: Check button color without mouse overview on user page
+ 2019-10-27 12:26:37,561  INFO [main] User page test case:100 - Test case 3: Check button color with mouse overview on user page
+ 2019-10-27 12:26:39,879  INFO [main] User page test case:109 - Test case 4: Check button toolTip on user page
+ 2019-10-27 12:26:42,213  INFO [main] User page test case:203 - User page test case ends here
+ 2019-10-27 12:34:16,369  INFO [main] Sign in test case:98 - Test case 1: Check login functionality with valid credentials
+ 2019-10-27 12:34:39,498  INFO [main] Sign in test case:144 - Sign in test case ends here
+ 2019-10-27 12:35:06,760  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-10-27 12:35:06,806  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-10-27 12:35:06,964  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-10-27 12:35:07,019  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-10-27 12:35:15,420  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-10-27 12:35:15,486  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-10-27 12:35:15,597  INFO [main] LogInPage test case:126 - Test case 7: Get all login URL
+ 2019-10-27 12:35:15,696  INFO [main] LogInPage test case:135 - Test case 8: Get all broken URL
+ 2019-10-27 12:35:17,584  INFO [main] LogInPage test case:175 - Login Page test case Ends Here
+ 2019-10-27 12:35:44,948  INFO [main] Sign in with invalid credentials test case:77 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-10-27 12:35:46,704  INFO [main] Sign in with invalid credentials test case:89 - Test case 2: Check login functionality without credentials
+ 2019-10-27 12:35:48,420  INFO [main] Sign in with invalid credentials test case:115 - Test case 4: Check login functionality withInvalid credentials
+ 2019-10-27 12:35:50,139  INFO [main] Sign in with invalid credentials test case:102 - Test case 3: Check login functionality withInvalid credentials
+ 2019-10-27 12:35:51,813  INFO [main] Sign in with invalid credentials test case:128 - Test case 7: Get all login URL
+ 2019-10-27 12:35:51,908  INFO [main] Sign in with invalid credentials test case:137 - Test case 8: Get all broken URL
+ 2019-10-27 12:35:53,834  INFO [main] Sign in with invalid credentials test case:175 - Sign in test case ends here
+ 2019-10-27 12:36:17,572  INFO [main] Forget password test case:80 - Test case 0: Get all URL names
+ 2019-10-27 12:36:17,665  INFO [main] Forget password test case:109 - Test case 2: Forgot password check with invalid username and email
+ 2019-10-27 12:36:18,108  INFO [main] Forget password test case:119 - Test case 3: Forgot password check without username and email
+ 2019-10-27 12:36:18,517  INFO [main] Forget password test case:129 - Test case 4: Forgot password check without username and with email
+ 2019-10-27 12:36:18,940  INFO [main] Forget password test case:139 - Test case 5: Forgot password check with username and without email
+ 2019-10-27 12:36:19,386  INFO [main] Forget password test case:149 - Test case 6: Forgot password textbox check
+ 2019-10-27 12:36:19,481  INFO [main] Forget password test case:158 - Test case 7: Forgot password label check
+ 2019-10-27 12:36:19,880  INFO [main] Forget password test case:89 - Test case 0: Get all URL names
+ 2019-10-27 12:36:21,880  INFO [main] Forget password test case:98 - Test case 1: Forgot password check with valid username and email
+ 2019-10-27 12:36:25,625  INFO [main] Forget password test case:198 - Forgot password test case ends here
+ 2019-10-27 12:37:18,007  INFO [main] Fixed Cost Test Case:105 - Check Franchisee Default Pricing
+ 2019-10-27 12:37:18,010  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
+ 2019-10-27 12:37:48,869  INFO [main] Fixed Cost Test Case:176 - Fixed Cost Page Test Case Ends Here
+ 2019-10-27 12:37:53,000  INFO [main] Fixed Cost Test Case:90 - Fixed Cost Customer Test!!
+ 2019-10-27 12:38:39,130  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-10-27 12:38:39,130  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-10-27 12:38:58,784  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-10-27 12:39:02,918  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-10-27 12:39:45,372  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-27 12:39:45,372  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-27 12:40:16,174  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-27 12:40:20,311  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
+ 2019-10-27 12:41:09,801  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-27 12:41:10,020  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-27 12:41:14,730  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-27 12:41:14,731  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-27 12:41:14,731  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-27 12:41:14,841  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-27 12:41:28,255  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-27 12:41:28,465  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-27 12:41:38,345  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-27 12:42:23,073  INFO [main] User page test case:73 - Check URL of user page
+ 2019-10-27 12:42:33,492  INFO [main] User page test case:82 - Test case 1: Check button name on user page
+ 2019-10-27 12:42:36,434  INFO [main] User page test case:118 - Test case 5: Check tab name on user page
+ 2019-10-27 12:42:36,846  INFO [main] User page test case:127 - Test case 6: Check data on user page
+ 2019-10-27 12:42:43,956  INFO [main] User page test case:137 - Test Case 7: Check password field on edit page
+ 2019-10-27 12:42:56,011  INFO [main] User page test case:91 - Test case 2: Check button color without mouse overview on user page
+ 2019-10-27 12:42:58,581  INFO [main] User page test case:100 - Test case 3: Check button color with mouse overview on user page
+ 2019-10-27 12:43:00,909  INFO [main] User page test case:109 - Test case 4: Check button toolTip on user page
+ 2019-10-27 12:43:04,112  INFO [main] User page test case:203 - User page test case ends here
+ 2019-10-27 12:45:27,997  INFO [main] Forget password test case:80 - Test case 0: Get all URL names
+ 2019-10-27 12:45:28,117  INFO [main] Forget password test case:89 - Test case 0: Get all URL names
+ 2019-10-27 12:45:30,438  INFO [main] Forget password test case:98 - Test case 1: Forgot password check with valid username and email
+ 2019-10-27 12:45:34,246  INFO [main] Forget password test case:109 - Test case 2: Forgot password check with invalid username and email
+ 2019-10-27 12:45:35,634  INFO [main] Forget password test case:119 - Test case 3: Forgot password check without username and email
+ 2019-10-27 12:45:36,939  INFO [main] Forget password test case:129 - Test case 4: Forgot password check without username and with email
+ 2019-10-27 12:45:37,321  INFO [main] Forget password test case:139 - Test case 5: Forgot password check with username and without email
+ 2019-10-27 12:45:37,596  INFO [main] Forget password test case:149 - Test case 6: Forgot password textbox check
+ 2019-10-27 12:45:37,639  INFO [main] Forget password test case:158 - Test case 7: Forgot password label check
+ 2019-10-27 12:45:38,321  INFO [main] Forget password test case:198 - Forgot password test case ends here
+ 2019-10-27 12:46:46,889  INFO [main] Forget password test case:80 - Test case 0: Get all URL names
+ 2019-10-27 12:46:47,008  INFO [main] Forget password test case:89 - Test case 0: Get all URL names
+ 2019-10-27 12:46:49,474  INFO [main] Forget password test case:98 - Test case 1: Forgot password check with valid username and email
+ 2019-10-27 12:46:53,189  INFO [main] Forget password test case:109 - Test case 2: Forgot password check with invalid username and email
+ 2019-10-27 12:46:54,650  INFO [main] Forget password test case:119 - Test case 3: Forgot password check without username and email
+ 2019-10-27 12:46:56,024  INFO [main] Forget password test case:129 - Test case 4: Forgot password check without username and with email
+ 2019-10-27 12:46:56,473  INFO [main] Forget password test case:139 - Test case 5: Forgot password check with username and without email
+ 2019-10-27 12:46:56,794  INFO [main] Forget password test case:149 - Test case 6: Forgot password textbox check
+ 2019-10-27 12:46:56,861  INFO [main] Forget password test case:158 - Test case 7: Forgot password label check
+ 2019-10-27 12:46:57,586  INFO [main] Forget password test case:198 - Forgot password test case ends here
+ 2019-10-27 12:47:25,879  INFO [main] Sign in with invalid credentials test case:77 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-10-27 12:47:27,594  INFO [main] Sign in with invalid credentials test case:89 - Test case 2: Check login functionality without credentials
+ 2019-10-27 12:47:29,319  INFO [main] Sign in with invalid credentials test case:102 - Test case 3: Check login functionality withInvalid credentials
+ 2019-10-27 12:47:32,395  INFO [main] Sign in with invalid credentials test case:115 - Test case 4: Check login functionality withInvalid credentials
+ 2019-10-27 12:47:34,407  INFO [main] Sign in with invalid credentials test case:128 - Test case 7: Get all login URL
+ 2019-10-27 12:47:34,500  INFO [main] Sign in with invalid credentials test case:137 - Test case 8: Get all broken URL
+ 2019-10-27 12:47:36,362  INFO [main] Sign in with invalid credentials test case:175 - Sign in test case ends here
+ 2019-10-27 12:48:04,937  INFO [main] Sign in test case:98 - Test case 1: Check login functionality with valid credentials
+ 2019-10-27 12:48:32,598  INFO [main] Sign in test case:144 - Sign in test case ends here
+ 2019-10-27 12:48:59,816  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-10-27 12:48:59,851  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-10-27 12:49:00,002  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-10-27 12:49:00,057  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-10-27 12:49:08,486  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-10-27 12:49:08,546  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-10-27 12:49:08,662  INFO [main] LogInPage test case:126 - Test case 7: Get all login URL
+ 2019-10-27 12:49:08,753  INFO [main] LogInPage test case:135 - Test case 8: Get all broken URL
+ 2019-10-27 12:49:10,582  INFO [main] LogInPage test case:175 - Login Page test case Ends Here
+ 2019-10-27 13:00:35,762  INFO [main] Sign in test case:98 - Test case 1: Check login functionality with valid credentials
+ 2019-10-27 13:00:59,470  INFO [main] Sign in test case:144 - Sign in test case ends here
+ 2019-10-27 13:01:35,747  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-10-27 13:01:35,815  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-10-27 13:01:35,972  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-10-27 13:01:36,025  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-10-27 13:01:44,497  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-10-27 13:01:44,569  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-10-27 13:01:44,690  INFO [main] LogInPage test case:126 - Test case 7: Get all login URL
+ 2019-10-27 13:01:44,800  INFO [main] LogInPage test case:135 - Test case 8: Get all broken URL
+ 2019-10-27 13:01:46,652  INFO [main] LogInPage test case:175 - Login Page test case Ends Here
+ 2019-10-27 13:02:28,106  INFO [main] Sign in with invalid credentials test case:77 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-10-27 13:02:30,985  INFO [main] Sign in with invalid credentials test case:89 - Test case 2: Check login functionality without credentials
+ 2019-10-27 13:02:33,043  INFO [main] Sign in with invalid credentials test case:115 - Test case 4: Check login functionality withInvalid credentials
+ 2019-10-27 13:02:35,055  INFO [main] Sign in with invalid credentials test case:102 - Test case 3: Check login functionality withInvalid credentials
+ 2019-10-27 13:02:37,040  INFO [main] Sign in with invalid credentials test case:128 - Test case 7: Get all login URL
+ 2019-10-27 13:02:37,127  INFO [main] Sign in with invalid credentials test case:137 - Test case 8: Get all broken URL
+ 2019-10-27 13:02:38,996  INFO [main] Sign in with invalid credentials test case:175 - Sign in test case ends here
+ 2019-10-27 13:03:06,898  INFO [main] Forget password test case:80 - Test case 0: Get all URL names
+ 2019-10-27 13:03:06,994  INFO [main] Forget password test case:109 - Test case 2: Forgot password check with invalid username and email
+ 2019-10-27 13:03:07,502  INFO [main] Forget password test case:119 - Test case 3: Forgot password check without username and email
+ 2019-10-27 13:03:07,935  INFO [main] Forget password test case:129 - Test case 4: Forgot password check without username and with email
+ 2019-10-27 13:03:08,327  INFO [main] Forget password test case:139 - Test case 5: Forgot password check with username and without email
+ 2019-10-27 13:03:08,715  INFO [main] Forget password test case:149 - Test case 6: Forgot password textbox check
+ 2019-10-27 13:03:08,766  INFO [main] Forget password test case:158 - Test case 7: Forgot password label check
+ 2019-10-27 13:03:09,213  INFO [main] Forget password test case:89 - Test case 0: Get all URL names
+ 2019-10-27 13:03:11,042  INFO [main] Forget password test case:98 - Test case 1: Forgot password check with valid username and email
+ 2019-10-27 13:03:14,595  INFO [main] Forget password test case:198 - Forgot password test case ends here
+ 2019-10-27 13:09:05,215  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-10-27 13:09:05,216  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-10-27 13:09:23,340  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-10-27 13:09:27,696  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-10-27 13:10:12,257  INFO [main] Per Fryer Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-27 13:10:12,258  INFO [main] Per Fryer Test Case:108 - Test Case1: Check Customer Page URL
+ 2019-10-27 13:10:33,505  INFO [main] Per Fryer Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-27 13:10:37,922  INFO [main] Per Fryer Test Case:93 - Per Lb Customer Test!!
+ 2019-10-27 13:11:22,333  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-27 13:11:22,650  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-27 13:11:27,051  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-27 13:11:27,053  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-27 13:11:27,054  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-27 13:11:27,272  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-27 13:11:43,162  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-27 13:11:43,734  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-27 13:11:53,304  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-27 13:12:44,585  INFO [main] User page test case:73 - Check URL of user page
+ 2019-10-27 13:12:52,445  INFO [main] User page test case:82 - Test case 1: Check button name on user page
+ 2019-10-27 13:12:55,948  INFO [main] User page test case:118 - Test case 5: Check tab name on user page
+ 2019-10-27 13:12:56,692  INFO [main] User page test case:127 - Test case 6: Check data on user page
+ 2019-10-27 13:13:05,513  INFO [main] User page test case:137 - Test Case 7: Check password field on edit page
+ 2019-10-27 13:13:18,921  INFO [main] User page test case:91 - Test case 2: Check button color without mouse overview on user page
+ 2019-10-27 13:13:22,383  INFO [main] User page test case:100 - Test case 3: Check button color with mouse overview on user page
+ 2019-10-27 13:13:25,483  INFO [main] User page test case:109 - Test case 4: Check button toolTip on user page
+ 2019-10-27 13:13:28,432  INFO [main] User page test case:203 - User page test case ends here
+ 2019-10-27 13:15:47,574  INFO [main] Forget password test case:80 - Test case 0: Get all URL names
+ 2019-10-27 13:15:47,850  INFO [main] Forget password test case:89 - Test case 0: Get all URL names
+ 2019-10-27 13:15:50,684  INFO [main] Forget password test case:98 - Test case 1: Forgot password check with valid username and email
+ 2019-10-27 13:15:54,820  INFO [main] Forget password test case:109 - Test case 2: Forgot password check with invalid username and email
+ 2019-10-27 13:15:56,697  INFO [main] Forget password test case:119 - Test case 3: Forgot password check without username and email
+ 2019-10-27 13:15:58,204  INFO [main] Forget password test case:129 - Test case 4: Forgot password check without username and with email
+ 2019-10-27 13:15:58,658  INFO [main] Forget password test case:139 - Test case 5: Forgot password check with username and without email
+ 2019-10-27 13:15:59,111  INFO [main] Forget password test case:149 - Test case 6: Forgot password textbox check
+ 2019-10-27 13:15:59,200  INFO [main] Forget password test case:158 - Test case 7: Forgot password label check
+ 2019-10-27 13:15:59,640  INFO [main] Forget password test case:198 - Forgot password test case ends here
+ 2019-10-27 13:16:27,796  INFO [main] Sign in with invalid credentials test case:77 - Test Case 1: Check Login functionality with invalid credentials
+ 2019-10-27 13:16:30,863  INFO [main] Sign in with invalid credentials test case:89 - Test case 2: Check login functionality without credentials
+ 2019-10-27 13:16:33,018  INFO [main] Sign in with invalid credentials test case:102 - Test case 3: Check login functionality withInvalid credentials
+ 2019-10-27 13:16:35,167  INFO [main] Sign in with invalid credentials test case:115 - Test case 4: Check login functionality withInvalid credentials
+ 2019-10-27 13:16:37,188  INFO [main] Sign in with invalid credentials test case:128 - Test case 7: Get all login URL
+ 2019-10-27 13:16:37,500  INFO [main] Sign in with invalid credentials test case:137 - Test case 8: Get all broken URL
+ 2019-10-27 13:16:39,501  INFO [main] Sign in with invalid credentials test case:175 - Sign in test case ends here
+ 2019-10-27 13:17:02,784  INFO [main] Sign in test case:98 - Test case 1: Check login functionality with valid credentials
+ 2019-10-27 13:17:24,397  INFO [main] Sign in test case:144 - Sign in test case ends here
+ 2019-10-27 13:17:50,150  INFO [main] LogInPage test case:72 - Test case 1: Text check on login page
+ 2019-10-27 13:17:50,242  INFO [main] LogInPage test case:81 - Test case 2: Drop down check on login page
+ 2019-10-27 13:17:50,572  INFO [main] LogInPage test case:90 - Test case 3: Footer check on login page
+ 2019-10-27 13:17:50,702  INFO [main] LogInPage test case:99 - Test case 4: URL check on login page
+ 2019-10-27 13:17:59,516  INFO [main] LogInPage test case:108 - Test case 5: Check login page textBox enabled or not
+ 2019-10-27 13:17:59,656  INFO [main] LogInPage test case:117 - Test case 6: Check login page textBox label
+ 2019-10-27 13:17:59,899  INFO [main] LogInPage test case:126 - Test case 7: Get all login URL
+ 2019-10-27 13:18:00,040  INFO [main] LogInPage test case:135 - Test case 8: Get all broken URL
+ 2019-10-27 13:18:02,213  INFO [main] LogInPage test case:175 - Login Page test case Ends Here
+ 2019-10-27 13:21:12,627  INFO [main] User page test case:73 - Check URL of user page
+ 2019-10-27 13:21:18,677  INFO [main] User page test case:82 - Test case 1: Check button name on user page
+ 2019-10-27 13:21:21,950  INFO [main] User page test case:91 - Test case 2: Check button color without mouse overview on user page
+ 2019-10-27 13:21:25,526  INFO [main] User page test case:100 - Test case 3: Check button color with mouse overview on user page
+ 2019-10-27 13:21:28,501  INFO [main] User page test case:109 - Test case 4: Check button toolTip on user page
+ 2019-10-27 13:21:31,538  INFO [main] User page test case:118 - Test case 5: Check tab name on user page
+ 2019-10-27 13:21:33,684  INFO [main] User page test case:127 - Test case 6: Check data on user page
+ 2019-10-27 13:21:42,821  INFO [main] User page test case:137 - Test Case 7: Check password field on edit page
+ 2019-10-27 13:21:55,980  INFO [main] User page test case:203 - User page test case ends here
+ 2019-10-27 13:22:42,938  INFO [main] Home page test case:77 - Check menubar of home page
+ 2019-10-27 13:22:43,212  INFO [main] Home page test case:86 - Check menu screen on home page
+ 2019-10-27 13:22:48,079  INFO [main] Home page test case:101 - Check text on home page
+ 2019-10-27 13:22:48,084  INFO [main] Home page test case:110 - Check table on home page
+ 2019-10-27 13:22:48,089  INFO [main] Home page test case:119 - Check tooltip on home page
+ 2019-10-27 13:22:48,376  INFO [main] Home page test case:128 - Check widget on home page
+ 2019-10-27 13:23:04,300  INFO [main] Home page test case:137 - Check color on home page
+ 2019-10-27 13:23:04,631  INFO [main] Home page test case:146 - Check user name on home page
+ 2019-10-27 13:23:13,766  INFO [main] Home page test case:185 - Home page test case ends here
+ 2019-10-27 13:25:22,117  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:25:45,066  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:28:37,744  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:29:01,236  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:34:19,043  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:34:42,556  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:39:42,377  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:40:04,571  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:42:21,667  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:42:46,961  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:45:44,380  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:46:09,716  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:56:13,606  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:56:35,664  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:59:27,327  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 13:59:50,028  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:01:10,784  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:01:35,890  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:04:49,122  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:05:10,303  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:06:59,236  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:07:20,748  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:10:05,208  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:10:28,111  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:12:17,560  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:12:40,332  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:14:18,872  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:14:39,842  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:17:45,800  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:18:07,585  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:22:05,324  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:22:30,469  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:24:58,420  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:25:22,159  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:27:16,354  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:27:38,097  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:29:09,604  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:29:31,392  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:31:52,185  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 14:32:18,295  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:27:54,369  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:28:16,129  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:30:13,182  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:30:32,660  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:32:54,750  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:33:15,506  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:39:12,972  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:39:32,684  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:41:45,710  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:42:06,393  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:48:26,488  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:48:47,007  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:56:21,946  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 15:56:45,025  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:07:14,779  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:07:36,466  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:07:49,113  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:12:04,403  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:12:28,425  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:12:44,111  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:16:48,055  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:17:11,860  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:17:25,870  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:19:37,147  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:20:02,328  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:23:47,227  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:24:09,078  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:26:10,416  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:26:32,421  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:26:46,690  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:30:35,802  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:30:59,179  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:32:18,537  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:32:42,937  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:34:14,196  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:34:38,418  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:36:31,048  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:36:51,328  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:36:51,336  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:38:09,903  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:38:32,170  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:38:32,176  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:42:01,854  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:42:26,331  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:42:26,338  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:44:32,693  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:44:55,275  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:44:55,281  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:54:01,277  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:54:24,896  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:54:24,905  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:56:39,279  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:57:00,173  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 16:57:12,305  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:01:07,615  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:01:29,586  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:03:09,518  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:03:31,075  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:06:03,194  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:06:24,174  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:06:38,452  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:08:28,838  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:08:51,971  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:09:09,522  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:12:07,246  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:12:28,405  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:12:44,496  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:14:40,225  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:15:01,852  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:15:16,356  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:17:22,705  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:17:43,789  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:17:58,273  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:20:26,709  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:20:51,058  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:21:07,863  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:22:14,187  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:22:38,937  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:22:55,793  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:24:56,660  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:25:18,775  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:25:35,330  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:28:04,152  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:28:26,071  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:28:43,310  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:30:38,287  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:31:00,722  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:31:17,868  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:34:38,895  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:35:02,062  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:35:19,206  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:37:14,872  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:37:36,775  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:37:53,887  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:46:33,075  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:46:57,963  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:47:15,980  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:47:28,786  INFO [main] Create Customer FiltaBio Scenarios:116 - Create Customer With Converting Lead!!
+ 2019-10-27 17:47:31,190  INFO [main] Create Customer FiltaBio Scenarios:157 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 17:49:45,543  INFO [main] Create Customer FiltaBio Scenarios:157 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 17:50:47,906  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:51:09,098  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:51:26,189  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:51:39,667  INFO [main] Create Customer FiltaBio Scenarios:116 - Create Customer With Converting Lead!!
+ 2019-10-27 17:51:42,101  INFO [main] Create Customer FiltaBio Scenarios:157 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 17:56:06,510  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:56:29,358  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:56:46,596  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 17:57:00,314  INFO [main] Create Customer FiltaBio Scenarios:116 - Create Customer With Converting Lead!!
+ 2019-10-27 17:57:05,225  INFO [main] Create Customer FiltaBio Scenarios:157 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 18:13:45,243  INFO [main] Create Customer FiltaBio Scenarios:86 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:14:08,218  INFO [main] Create Customer FiltaBio Scenarios:96 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:14:24,183  INFO [main] Create Customer FiltaBio Scenarios:106 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:14:37,164  INFO [main] Create Customer FiltaBio Scenarios:116 - Create Customer With Converting Lead!!
+ 2019-10-27 18:14:43,687  INFO [main] Create Customer FiltaBio Scenarios:157 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 18:38:38,262  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:38:59,608  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:39:14,470  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:39:25,946  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 18:39:32,781  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 18:46:23,623  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:46:44,810  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:46:59,090  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:47:10,875  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 18:47:27,709  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 18:58:00,786  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:58:23,209  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:58:38,762  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 18:58:51,289  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 18:59:02,139  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 19:04:26,882  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:04:48,901  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:05:04,091  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:05:15,883  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 19:05:20,328  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 19:09:42,339  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:10:12,688  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:10:34,322  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:10:47,820  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 19:10:52,564  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 19:14:48,090  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:15:08,344  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:15:23,624  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:15:35,777  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 19:20:09,455  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:20:31,800  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:20:46,907  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:20:58,239  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 19:21:13,282  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 19:41:34,709  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:41:55,421  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:42:09,808  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:42:21,677  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 19:42:26,351  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 19:51:40,313  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:52:01,398  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:52:18,260  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:52:31,884  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 19:52:36,958  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 19:56:41,210  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:57:02,244  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:57:20,164  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 19:57:33,234  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 19:57:39,183  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:02:00,683  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:02:29,257  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:02:45,979  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:02:58,645  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:03:19,014  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:05:03,534  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:05:27,465  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:05:45,273  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:05:58,326  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:06:18,260  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:09:25,328  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:09:46,434  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:10:03,664  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:10:17,256  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:10:31,506  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:14:01,539  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:14:25,142  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:14:41,568  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:14:54,164  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:15:06,544  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:17:46,111  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:18:08,043  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:18:25,914  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:18:39,101  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:19:02,787  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:21:24,996  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:21:47,830  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:22:04,496  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:22:17,840  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:22:30,336  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:24:38,109  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:25:00,617  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:25:18,139  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:25:31,106  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:25:37,292  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:27:11,095  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:27:33,411  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:27:51,482  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:28:04,756  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:28:11,923  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:33:01,308  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:33:25,597  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:33:42,544  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:33:55,756  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:34:19,327  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:36:13,942  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:36:34,835  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:36:51,233  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:37:04,812  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:37:18,102  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:42:48,432  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:43:09,774  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:43:26,820  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:43:39,499  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:44:03,167  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:47:03,661  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:47:25,016  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:47:42,696  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:47:56,069  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:48:09,599  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:52:42,108  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:53:03,885  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:53:20,878  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:53:33,552  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:53:39,662  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 20:57:00,431  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:57:22,590  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:57:41,006  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 20:57:54,405  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 20:58:00,726  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 21:00:24,693  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:00:47,550  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:01:03,687  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:01:16,787  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 21:01:34,231  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 21:03:28,640  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:03:50,665  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:04:07,211  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:04:21,133  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 21:04:33,998  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 21:14:10,139  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:14:32,693  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:14:49,584  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:15:02,510  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 21:15:16,440  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 21:17:35,213  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:17:55,768  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:18:12,395  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:18:25,026  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 21:18:46,426  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 21:27:34,447  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:27:56,022  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:28:13,748  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:28:26,927  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 21:28:46,469  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 21:31:27,702  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:31:52,374  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:32:09,580  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 21:32:23,351  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 21:32:45,224  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 22:00:28,041  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:00:50,247  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:01:08,197  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:01:21,535  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 22:01:42,981  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 22:12:19,084  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:12:41,798  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:13:02,127  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:13:15,537  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 22:13:21,905  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 22:16:38,279  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:17:01,389  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:17:17,767  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:17:31,341  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 22:17:37,690  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 22:42:44,198  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:43:06,664  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:43:22,481  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:43:33,745  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 22:43:49,392  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 22:49:16,957  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:49:38,048  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:49:52,923  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 22:50:04,780  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 22:50:20,939  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:15:58,719  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:16:22,603  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:16:37,898  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:16:49,985  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:17:00,308  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:20:41,140  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:21:02,709  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:21:17,714  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:21:29,403  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:21:41,558  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:32:44,995  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:33:04,935  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:33:19,693  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:33:32,338  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:33:38,264  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:35:48,845  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:36:11,472  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:36:27,052  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:36:38,885  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:36:44,507  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:41:25,292  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:41:47,136  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:42:04,875  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:42:16,499  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:42:21,547  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:45:34,611  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:45:54,645  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:46:09,828  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:46:21,693  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:46:26,596  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:49:08,545  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:49:29,151  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:49:44,501  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:49:55,945  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:50:01,507  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:52:50,677  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:53:12,738  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:53:29,229  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:53:41,727  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:53:47,657  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-27 23:57:41,850  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:58:01,050  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:58:17,113  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-27 23:58:28,494  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-27 23:58:33,444  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-28 00:02:36,362  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:02:57,290  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:03:12,848  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:03:25,293  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-28 00:03:30,951  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-28 00:08:58,016  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:09:18,337  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:09:34,950  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:09:47,019  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-28 00:09:52,224  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-28 00:11:47,899  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:12:08,115  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:12:23,505  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:12:35,533  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-28 00:12:41,188  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-28 00:16:03,282  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:16:24,756  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:16:40,245  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:16:53,018  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-28 00:17:13,520  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
+ 2019-10-28 00:19:31,097  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:19:51,789  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:20:09,035  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-10-28 00:20:21,495  INFO [main] Create Customer FiltaBio Scenarios:113 - Create Customer With Converting Lead!!
+ 2019-10-28 00:20:27,751  INFO [main] Create Customer FiltaBio Scenarios:154 - Create Customer FiltaBio Test Case Ends Here
  
