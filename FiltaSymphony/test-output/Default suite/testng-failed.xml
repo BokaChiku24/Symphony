@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.filta.qa.customer_test.PerLb_TestCase">
+      <class name="com.filta.qa.customer_test.Create_CustomerFB_TestCase">
         <methods>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="test"/>
+          <include name="testLeadToCustomer"/>
+          <include name="afterMethod"/>
           <include name="property"/>
+          <include name="takeScreenShotOnFailure"/>
         </methods>
-      </class> <!-- com.filta.qa.customer_test.PerLb_TestCase -->
+      </class> <!-- com.filta.qa.customer_test.Create_CustomerFB_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
