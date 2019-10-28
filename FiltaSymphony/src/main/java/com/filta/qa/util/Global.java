@@ -18,7 +18,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -49,27 +52,54 @@ public class Global
 	private static int count = 1;
 	private Map<String, Object> prefs;
 	private DesiredCapabilities capablities;
+	private String browser = "chrome";
 
 	// Driver Initialization Method !!
 	public WebDriver driver()
 	{
-		// ChromeOption will Disable Password Save Popup In Chrome
 		prop = readProperties();
-		options = new ChromeOptions();
-		options.addArguments("--start-maximized");
-		options.addArguments("--disable-web-security");
-		options.addArguments("--no-proxy-server");
-		prefs = new HashMap<String, Object>();
-		prefs.put("credentials_enable_service", false);
-		prefs.put("profile.password_manager_enabled", false);
-		options.setExperimentalOption("prefs", prefs);
-		capablities = new DesiredCapabilities();
-		capablities.setCapability(ChromeOptions.CAPABILITY, options);
-		capablities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-		System.setProperty("webdriver.chrome.driver", prop.getProperty("driver"));
-		driver = new ChromeDriver(capablities);
-		driver.get(prop.getProperty("URL2"));
-		driver.manage().window().maximize();
+		if (browser.equalsIgnoreCase(prop.getProperty("browserChrome")))
+		{
+			options = new ChromeOptions();
+			options.addArguments("--start-maximized");
+			options.addArguments("--disable-web-security");
+			options.addArguments("--no-proxy-server");
+			prefs = new HashMap<String, Object>();
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_enabled", false);
+			options.setExperimentalOption("prefs", prefs);
+			capablities = DesiredCapabilities.chrome();
+			capablities.setCapability(ChromeOptions.CAPABILITY, options);
+			capablities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+			ChromeDriverService service = new ChromeDriverService.Builder()
+					.usingDriverExecutable(new File(prop.getProperty("driverChrome"))).usingAnyFreePort().build();
+			options.merge(capablities);
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverChrome"));
+			driver = new ChromeDriver(service, options);
+			driver.get(prop.getProperty("URL2"));
+			driver.manage().window().maximize();
+		}
+		else
+		{
+			FirefoxProfile profile = new FirefoxProfile();
+			DesiredCapabilities dc = DesiredCapabilities.firefox();
+			profile.setAcceptUntrustedCertificates(false);
+			profile.setAssumeUntrustedCertificateIssuer(false);
+			profile.setPreference("browser.download.folderList", 2);
+			profile.setPreference("browser.helperApps.alwaysAsk.force", false);
+			profile.setPreference("browser.download.manager.showWhenStarting", false);
+			profile.setPreference("browser.download.dir", "C:\\Downloads");
+			profile.setPreference("browser.download.downloadDir", "C:\\Downloads");
+			profile.setPreference("browser.download.defaultFolder", "C:\\Downloads");
+			profile.setPreference("browser.helperApps.neverAsk.saveToDisk",
+					"text/anytext ,text/plain,text/html,application/plain");
+			dc = DesiredCapabilities.firefox();
+			dc.setCapability(FirefoxDriver.PROFILE, profile);
+			System.setProperty("webdriver.gecko.driver", prop.getProperty("driverFirefox"));
+			driver = new FirefoxDriver();
+			driver.get(prop.getProperty("URL2"));
+			driver.manage().window().maximize();
+		}
 		return driver;
 	}
 

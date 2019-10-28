@@ -38,7 +38,7 @@ public class ForgetPassword_TestCase
 {
 	private WebDriver driver;
 	private ForgetPassword forgotPassword;
-	private Global global_Obj;
+	private Global globalObj;
 	private ExtentReports extent;
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentTest extentLogger;
@@ -46,18 +46,17 @@ public class ForgetPassword_TestCase
 	private String dateName;
 	private File scrFile;
 
-	public static Logger log = Logger.getLogger("Forget password test case");
+	public static Logger log = Logger.getLogger("Forget Password Test Case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
-
 	@BeforeClass
 	public void beforeClass()
 	{
-		global_Obj = new Global();
-		driver = global_Obj.driver();
+		globalObj = new Global();
+		driver = globalObj.driver();
 		forgotPassword = new ForgetPassword(driver);
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/HomePage/ForgetPassword_TestCase.html");
@@ -67,7 +66,7 @@ public class ForgetPassword_TestCase
 		extent.setSystemInfo("Browser", "Google Chrome");
 		extent.setSystemInfo("Author:", "Kunal Chavan");
 		extent.setSystemInfo("Testing:", "Functional Testing");
-		htmlReporter.config().setReportName("Forgot password functionality test case");
+		htmlReporter.config().setReportName("Forgot Password Functionality Test case");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
@@ -77,8 +76,8 @@ public class ForgetPassword_TestCase
 	@Test(priority = 0)
 	public void checkLink()
 	{
-		log.info("Test case 0: Get all URL names");
-		extentLogger = extent.createTest("Test case 0: Get all URL names");
+		log.info("Test Case 0: Get All URL Names");
+		extentLogger = extent.createTest("Test Case 0: Get All URL Names");
 		forgotPassword.getURL();
 	}
 
@@ -86,8 +85,8 @@ public class ForgetPassword_TestCase
 	@Test(priority = 0, dependsOnMethods = "checkLink")
 	public void brokenLink()
 	{
-		log.info("Test case 0: Get all URL names");
-		extentLogger = extent.createTest("Test case 0: Get all URL names");
+		log.info("Test Case 0: Get All Broken URL Names");
+		extentLogger = extent.createTest("Test Case 0: Get All Broken URL Names");
 		forgotPassword.brokenLink();
 	}
 
@@ -95,8 +94,8 @@ public class ForgetPassword_TestCase
 	@Test(dependsOnMethods = "checkLink")
 	public void forgotPassWord()
 	{
-		log.info("Test case 1: Forgot password check with valid username and email");
-		extentLogger = extent.createTest("Test case 1: Forgot password check with valid username and email");
+		log.info("Test Case 1: Forgot Password Check With Valid Username And Email");
+		extentLogger = extent.createTest("Test Case 1: Forgot Password Check With Valid Username And Email");
 		forgotPassword.clickForgotPassword();
 		forgotPassword.forgotPassword();
 		forgotPassword.assertCheckValid();
@@ -106,8 +105,8 @@ public class ForgetPassword_TestCase
 	@Test(priority = 1)
 	public void forgotPassWordInvalid()
 	{
-		log.info("Test case 2: Forgot password check with invalid username and email");
-		extentLogger = extent.createTest("Test case 2: Forgot password check with invalid username and email");
+		log.info("Test Case 2: Forgot Password Check With Invalid Username And Email");
+		extentLogger = extent.createTest("Test Case 2: Forgot Password Check With Invalid Username And Email");
 		forgotPassword.forgotPasswordInvalid();
 		forgotPassword.assertCheckValid2();
 	}
@@ -116,8 +115,8 @@ public class ForgetPassword_TestCase
 	@Test(priority = 2)
 	public void forgotPassWordInvalid2()
 	{
-		log.info("Test case 3: Forgot password check without username and email");
-		extentLogger = extent.createTest("Test case 3: Forgot password check without username and email");
+		log.info("Test Case 3: Forgot Password Check Without Username And Email");
+		extentLogger = extent.createTest("Test Case 3: Forgot Password Check Without Username And Email");
 		forgotPassword.forgotPasswordInvalid2();
 		forgotPassword.assertCheckValid3();
 	}
@@ -126,8 +125,8 @@ public class ForgetPassword_TestCase
 	@Test(priority = 3)
 	public void forgotPassWordInvalid3()
 	{
-		log.info("Test case 4: Forgot password check without username and with email");
-		extentLogger = extent.createTest("Test case 4: Forgot password check without username and with email");
+		log.info("Test Case 4: Forgot Password Check Without Username And With Email");
+		extentLogger = extent.createTest("Test Case 4: Forgot Password Check Without Username And With Email");
 		forgotPassword.forgotPasswordInvalid3();
 		forgotPassword.assertCheckValid4();
 	}
@@ -136,8 +135,8 @@ public class ForgetPassword_TestCase
 	@Test(priority = 4)
 	public void forgotPassWordInvalid4()
 	{
-		log.info("Test case 5: Forgot password check with username and without email");
-		extentLogger = extent.createTest("Test case 5: Forgot password check with username and without email");
+		log.info("Test Case 5: Forgot Password Check With Username And Without Email");
+		extentLogger = extent.createTest("Test Case 5: Forgot Password Check With Username And Without Email");
 		forgotPassword.forgotPasswordInvalid4();
 		forgotPassword.assertCheckValid5();
 	}
@@ -146,8 +145,8 @@ public class ForgetPassword_TestCase
 	@Test(priority = 5)
 	public void textboxCheck()
 	{
-		log.info("Test case 6: Forgot password textbox check");
-		extentLogger = extent.createTest("Test case 6: Forgot password textbox check");
+		log.info("Test Case 6: Forgot Password Textbox Check");
+		extentLogger = extent.createTest("Test Case 6: Forgot Password Textbox Check");
 		forgotPassword.assertCheckboxCheck();
 	}
 
@@ -155,8 +154,8 @@ public class ForgetPassword_TestCase
 	@Test(priority = 6)
 	public void labelCheck()
 	{
-		log.info("Test case 7: Forgot password label check");
-		extentLogger = extent.createTest("Test case 7: Forgot password label check");
+		log.info("Test Case 7: Forgot Password Label Check");
+		extentLogger = extent.createTest("Test Case 7: Forgot Password Label Check");
 		forgotPassword.labelCheck();
 	}
 
@@ -167,27 +166,27 @@ public class ForgetPassword_TestCase
 		if (testResult.getStatus() == ITestResult.FAILURE)
 		{
 			extentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(testResult.getName() + " - Test case failed", ExtentColor.RED));
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
 			extentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(testResult.getThrowable() + " - Test case failed", ExtentColor.RED));
+					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			screenshotPath = System.getProperty("user.dir") + "/ForgotPassword_errorScreenshots/"
 					+ testResult.getName() + dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			extentLogger.fail(
-					"Test case failed snapshot is below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
+					"Test Case Failed Snapshot Is Below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
 
 		}
 		else if (testResult.getStatus() == ITestResult.SKIP)
 		{
 			extentLogger.log(Status.SKIP,
-					MarkupHelper.createLabel(testResult.getName() + " - Test case skipped", ExtentColor.ORANGE));
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
 		}
 		else if (testResult.getStatus() == ITestResult.SUCCESS)
 		{
 			extentLogger.log(Status.PASS,
-					MarkupHelper.createLabel(testResult.getName() + " - Test case passed", ExtentColor.GREEN));
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Passed", ExtentColor.GREEN));
 		}
 	}
 
@@ -195,7 +194,7 @@ public class ForgetPassword_TestCase
 	@AfterClass
 	public void afterClass()
 	{
-		log.info("Forgot password test case ends here");
+		log.info("Forgot Password Test Case Ends Here");
 		extent.flush();
 		forgotPassword.closeBrowser();
 	}

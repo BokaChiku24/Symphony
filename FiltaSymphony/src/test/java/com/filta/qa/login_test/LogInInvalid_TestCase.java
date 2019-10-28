@@ -33,7 +33,7 @@ public class LogInInvalid_TestCase
 {
 	private WebDriver driver;
 	private Login login;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentReports extent;
@@ -42,19 +42,18 @@ public class LogInInvalid_TestCase
 	private String dateName;
 	private File scrFile;
 
-	public static Logger log = Logger.getLogger("Sign in with invalid credentials test case");
+	public static Logger log = Logger.getLogger("Sign In With Invalid Credentials Test Case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
-
 	@BeforeClass
 	public void property()
 	{
-		global_Obj = new Global();
-		driver = global_Obj.driver();
-		prop = global_Obj.readProperties();
+		globalObj = new Global();
+		driver = globalObj.driver();
+		prop = globalObj.readProperties();
 		login = new Login(driver);
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/HomePage/LoginInvalid_TestCase.html");
@@ -64,7 +63,7 @@ public class LogInInvalid_TestCase
 		extent.setSystemInfo("Browser", "Google Chrome");
 		extent.setSystemInfo("Author:", "Kunal Chavan");
 		extent.setSystemInfo("Testing:", "Functional Testing");
-		htmlReporter.config().setReportName("Login invalid functionality test case");
+		htmlReporter.config().setReportName("Login Invalid Functionality Test Case");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
@@ -74,8 +73,8 @@ public class LogInInvalid_TestCase
 	@Test(priority = 0)
 	public void signInWithInvalidCredentails()
 	{
-		log.info("Test Case 1: Check Login functionality with invalid credentials");
-		extentLogger = extent.createTest("Test Case 1: Check Login functionality with invalid credentials");
+		log.info("Test Case 1: Check Login Functionality With Invalid Credentials");
+		extentLogger = extent.createTest("Test Case 1: Check Login Functionality With Invalid Credentials");
 		login.enterUserName(prop.getProperty("InvalidUname1"));
 		login.enterPassword(prop.getProperty("InvalidPassword1"));
 		login.clickSubmit();
@@ -86,8 +85,8 @@ public class LogInInvalid_TestCase
 	@Test(priority = 1)
 	public void signInWithInvalidCredentails2()
 	{
-		log.info("Test case 2: Check login functionality without credentials");
-		extentLogger = extent.createTest("Test case 2: Check login functionality without credentials");
+		log.info("Test Case 2: Check Login Functionality Without Credentials");
+		extentLogger = extent.createTest("Test Case 2: Check Login Functionality Without Credentials");
 		login.clearText();
 		login.enterUserName("");
 		login.enterPassword("");
@@ -99,8 +98,8 @@ public class LogInInvalid_TestCase
 	@Test(priority = 2)
 	public void signInWithInvalidCredentails3()
 	{
-		log.info("Test case 3: Check login functionality withInvalid credentials");
-		extentLogger = extent.createTest("Test case 3: Check login functionality withInvalid credentials");
+		log.info("Test Case 3: Check Login Functionality WithInvalid Credentials");
+		extentLogger = extent.createTest("Test Case 3: Check Login Functionality WithInvalid Credentials");
 		login.clearText();
 		login.enterUserName(prop.getProperty("InvalidUname1"));
 		login.enterPassword("");
@@ -112,8 +111,8 @@ public class LogInInvalid_TestCase
 	@Test(priority = 2)
 	public void signInWithInvalidCredentails4()
 	{
-		log.info("Test case 4: Check login functionality withInvalid credentials");
-		extentLogger = extent.createTest("Test case 4: Check login functionality withInvalid credentials");
+		log.info("Test Case 4: Check Login Functionality WithInvalid Credentials");
+		extentLogger = extent.createTest("Test Case 4: Check Login Functionality WithInvalid Credentials");
 		login.clearText();
 		login.enterUserName("");
 		login.enterPassword(prop.getProperty("InvalidPassword1"));
@@ -125,8 +124,8 @@ public class LogInInvalid_TestCase
 	@Test(priority = 3)
 	public void availableLinks()
 	{
-		log.info("Test case 7: Get all login URL");
-		extentLogger = extent.createTest("Test case 7: Get all login URL");
+		log.info("Test Case 5: Get All Login URL");
+		extentLogger = extent.createTest("Test Case 5: Get All Login URL");
 		login.availableLinks();
 	}
 
@@ -134,37 +133,39 @@ public class LogInInvalid_TestCase
 	@Test(priority = 4)
 	public void getBrokenLink()
 	{
-		log.info("Test case 8: Get all broken URL");
-		extentLogger = extent.createTest("Test case 8: Get all broken URL");
+		log.info("Test Case 6: Get All Broken URL");
+		extentLogger = extent.createTest("Test Case 6: Get All Broken URL");
 		login.brokenLink();
 	}
-	
+
+
 	@AfterMethod
 	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
 	{
 		if (testResult.getStatus() == ITestResult.FAILURE)
 		{
 			extentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(testResult.getName() + " - Test case failed", ExtentColor.RED));
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
 			extentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(testResult.getThrowable() + " - Test case failed", ExtentColor.RED));
+					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			screenshotPath = System.getProperty("user.dir") + "/LoginInValid_errorScreenshots/"
 					+ testResult.getName() + dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
-			extentLogger.fail("Test case failed snapshot is below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
+			extentLogger.fail(
+					"Test Case Failed Snapshot Is Below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
 
 		}
 		else if (testResult.getStatus() == ITestResult.SKIP)
 		{
 			extentLogger.log(Status.SKIP,
-					MarkupHelper.createLabel(testResult.getName() + " - Test case skipped", ExtentColor.ORANGE));
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
 		}
 		else if (testResult.getStatus() == ITestResult.SUCCESS)
 		{
 			extentLogger.log(Status.PASS,
-					MarkupHelper.createLabel(testResult.getName() + " Test case passed", ExtentColor.GREEN));
+					MarkupHelper.createLabel(testResult.getName() + " Test Case Passed", ExtentColor.GREEN));
 		}
 	}
 
@@ -172,7 +173,7 @@ public class LogInInvalid_TestCase
 	@AfterClass
 	public void afterClass()
 	{
-		log.info("Sign in test case ends here");
+		log.info("Sign In Test Case Ends Here");
 		extent.flush();
 		login.driverClose();
 	}

@@ -250,9 +250,6 @@ public class PerFryerCustomerPage
 	@FindBy(how = How.CSS, using = "#region_name")
 	private WebElement region;
 
-//	@FindBy(how = How.CSS, using = "#btn_territory")
-//	private WebElement territory;
-
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation_Sales")
 	private WebElement automation_Sales;
 
@@ -298,17 +295,11 @@ public class PerFryerCustomerPage
 	@FindBy(how = How.XPATH, using = ".//div[@class='buttons']//input[@id='SAVE_HEADER']")
 	private WebElement save;
 
-//	@FindBy(how = How.CSS, using = "#customers_fryer_locations_create_button")
-//	private WebElement locationCreate;
-
 	@FindBy(how = How.XPATH, using = ".//input[@type='text']")
 	private WebElement locationName;
 
 	@FindBy(how = How.XPATH, using = ".//textarea[@name='description']")
 	private WebElement locationDescription;
-
-//	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fryer_locations_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='FR_FryerLocation_subpanel_save_button']")
-//	private WebElement locationSave;
 
 	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//li[4]")
 	private WebElement fryers;

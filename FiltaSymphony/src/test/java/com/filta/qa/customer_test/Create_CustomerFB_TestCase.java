@@ -106,17 +106,6 @@ public class Create_CustomerFB_TestCase
 		create_customer_filtabio.createCustomerDefaultPricingYesFBPriceNotSet();
 	}
 
-
-	@Test(priority = 3)
-	public void testLeadToCustomer()
-	{
-		Log.info("Create Customer With Converting Lead!!");
-		ExtentLogger = Extent.createTest(
-				"Test Case 1: Create Customer With Converting Lead!!");
-		create_customer_filtabio.leadToCustomer();
-	}
-
-
 	@AfterMethod
 	public void takeScreenShotOnFailure(ITestResult TestResult) throws IOException
 	{
@@ -153,6 +142,6 @@ public class Create_CustomerFB_TestCase
 	{
 		Log.info("Create Customer FiltaBio Test Case Ends Here");
 		Extent.flush();
-	//	create_customer_filtabio.closeBrowser();
+		create_customer_filtabio.closeBrowser();
 	}
 }

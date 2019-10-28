@@ -9,7 +9,6 @@ import static org.testng.Assert.assertTrue;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,7 +27,6 @@ import com.filta.qa.util.ReadExcelData;
 public class Create_CustomerFB
 {
 	private WebDriver driver;
-	// private WebElement webEelement;
 	private Global global_Obj;
 	private Properties prop;
 	private Login login;
@@ -38,11 +36,6 @@ public class Create_CustomerFB
 	private ReadExcelData pricingData;
 	private String defaultFBValue;
 	private double fb;
-	private ReadExcelData leadData;
-	private static int countCompany = 1;
-	private static int countFirstName = 1;
-	private static int countLastName = 1;
-	private static int countTitle = 1;
 
 	@FindBy(how = How.XPATH, using = ".//a[@class='container-close']")
 	private WebElement containerClose;
@@ -157,7 +150,6 @@ public class Create_CustomerFB
 		login = new Login(driver);
 		defaultPricingData = new ReadExcelData(prop.getProperty("Path2"), "DefaultPricing");
 		pricingData = new ReadExcelData(prop.getProperty("Path2"), "Pricing");
-		leadData = new ReadExcelData(prop.getProperty("Path2"), "Lead");
 		fb = new ReadExcelData(prop.getProperty("Path2"), "Pricing").getCellDataInt(1, 2);
 		PageFactory.initElements(driver, this);
 	}
@@ -263,87 +255,6 @@ public class Create_CustomerFB
 		global_Obj.jsReturn(driver).executeScript("arguments[0].click();", cancel);
 		global_Obj.alertAccept(driver);
 	}
-
-
-	public void leadToCustomer()
-	{
-		global_Obj.action(driver).moveToElement(lead_module).build().perform();
-		lead.click();
-		global_Obj.sleepMethod();
-		try
-		{
-			if (message.getText().equals("You currently have no records saved. Create or Import one now."))
-			{
-				System.out.println("No Lead Right Now !!");
-			}
-		}
-		catch (NoSuchElementException e)
-		{
-			System.out.println("Element Not Found !!");
-		}
-		try
-		{
-			if (existingLeadCompanyName.getText().equals(leadData.getCellData(1, 3)))
-			{
-				if (driver.findElement(
-						By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]")).getText()
-						.equals("Lead")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Wish List")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Wish List Target-Active")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Wish List Target-Inactive")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Qualified Lead")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Hot Lead")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Scheduled Site-Evaluation")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Completed Site-Evaluation")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Won")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Lost")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Non-Qualified")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Chain Decision")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Multi-Unit Site")
-						|| driver.findElement(
-								By.xpath(".//table[@id='ListTable']//tbody//tr[@class='oddListRowS1']//td[10]"))
-								.getText().equals("Qualified-Not Interested"))
-				{
-					existingLeadCompanyName.click();
-					leadToCustomerConvert.click();
-					leadToCustomerConvertSave.click();
-					global_Obj.alertAccept(driver);
-					driver.findElement(By.xpath(".//tr[@class='oddListRowS1']//td[2]")).click();
-				}
-			}
-
-		}
-		catch (NoSuchElementException e)
-		{
-			System.out.println("Element Not Found !!");
-		}
-
-	}
-
 
 	private void lodar()
 	{

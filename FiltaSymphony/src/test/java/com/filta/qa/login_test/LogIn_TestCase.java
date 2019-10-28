@@ -36,7 +36,7 @@ public class LogIn_TestCase
 
 	private WebDriver driver;
 	private Login login;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 	private ExtentReports extent;
 	private ExtentHtmlReporter htmlReporter;
@@ -49,19 +49,18 @@ public class LogIn_TestCase
 	private int totalRows;
 	private int totalColumn;
 
-	public static Logger log = Logger.getLogger("Sign in test case");
+	public static Logger log = Logger.getLogger("Sign In Test Case");
 	static
 	{
 		PropertyConfigurator.configure(".//Log4j.properties");
 	}
 
-
 	@BeforeClass
 	public void beforeClass()
 	{
-		global_Obj = new Global();
-		driver = global_Obj.driver();
-		prop = global_Obj.readProperties();
+		globalObj = new Global();
+		driver = globalObj.driver();
+		prop = globalObj.readProperties();
 		login = new Login(driver);
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/HomePage/Login_TestCase.html");
@@ -71,7 +70,7 @@ public class LogIn_TestCase
 		extent.setSystemInfo("Browser", "Google Chrome");
 		extent.setSystemInfo("Author:", "Kunal Chavan");
 		extent.setSystemInfo("Testing:", "Functional Testing");
-		htmlReporter.config().setReportName("Login functionality test case");
+		htmlReporter.config().setReportName("Login Functionality Test Case");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
 		htmlReporter.loadXMLConfig("./extent-config.xml");
@@ -95,9 +94,9 @@ public class LogIn_TestCase
 	@Test(dataProvider = "getData")
 	public void signInTesting(String uName, String passWord)
 	{
-		log.info("Test case 1: Check login functionality with valid credentials");
+		log.info("Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name");
 		extentLogger = extent.createTest(
-				"Test case 1: Check login functionality with valid credentials and Avaliable links name");
+				"Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name");
 		login.availableLinks();
 		login.brokenLink();
 		login.enterUserName(uName);
@@ -113,26 +112,26 @@ public class LogIn_TestCase
 		if (testResult.getStatus() == ITestResult.FAILURE)
 		{
 			extentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(testResult.getName() + " - Test case failed", ExtentColor.RED));
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
 			extentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(testResult.getThrowable() + " - Test case failed", ExtentColor.RED));
+					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
 			dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
 			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			screenshotPath = System.getProperty("user.dir") + "/Login_errorScreenshots/" + testResult.getName()
 					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
 			FileUtils.copyFile(scrFile, new File(screenshotPath));
 			extentLogger.fail(
-					"Test case failed snapshot is below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
+					"Test Case Failed Snapshot Is Below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
 		}
 		else if (testResult.getStatus() == ITestResult.SKIP)
 		{
 			extentLogger.log(Status.SKIP,
-					MarkupHelper.createLabel(testResult.getName() + " - Test case skipped", ExtentColor.ORANGE));
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
 		}
 		else if (testResult.getStatus() == ITestResult.SUCCESS)
 		{
 			extentLogger.log(Status.PASS,
-					MarkupHelper.createLabel(testResult.getName() + " Test case passed", ExtentColor.GREEN));
+					MarkupHelper.createLabel(testResult.getName() + " Test Case Passed", ExtentColor.GREEN));
 		}
 
 	}
@@ -141,7 +140,7 @@ public class LogIn_TestCase
 	@AfterClass
 	public void afterClass()
 	{
-		log.info("Sign in test case ends here");
+		log.info("Sign In Test Case Ends Here");
 		extent.flush();
 		login.driverClose();
 	}

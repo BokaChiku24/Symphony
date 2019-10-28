@@ -246,9 +246,6 @@ public class FixedCostCustomerPage
 	@FindBy(how = How.CSS, using = "#region_name")
 	private WebElement region;
 
-//	@FindBy(how = How.CSS, using = "#btn_territory")
-//	private WebElement territory;
-
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation_Sales")
 	private WebElement automation_Sales;
 

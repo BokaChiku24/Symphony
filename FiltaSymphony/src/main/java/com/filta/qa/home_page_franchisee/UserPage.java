@@ -1104,6 +1104,7 @@ public class UserPage implements UserPage_Interface
 			emailClient[i] = list.get(i).getText();
 		}
 		defaultEmailClient = global_Obj.select(editDefaultEmailClient).getFirstSelectedOption().getText();
+		System.out.println("Email is: " + defaultEmailClient);
 		// To Verify Edit Page Data From "UserPage.xlsx" sheet
 		Assert.assertEquals(first_Name + " " + last_Name, userData.getCellData(1, 0));
 		Assert.assertEquals(user_Name, userData.getCellData(1, 1));
