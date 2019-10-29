@@ -21,7 +21,7 @@ import com.filta.qa.util.Global;
 public class Login implements Login_Interface
 {
 	private WebDriver driver;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 	private String actualMsg;
 	private List<WebElement> list;
@@ -36,17 +36,17 @@ public class Login implements Login_Interface
 	private WebElement passWord;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
-	private WebElement log_In;
+	private WebElement logIn;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='login']//tbody//tr[2]")
 	private WebElement errorMessage;
 
 	public Login(WebDriver driver)
 	{
-		global_Obj = new Global();
+		globalObj = new Global();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		prop = global_Obj.readProperties();
+		prop = globalObj.readProperties();
 	}
 
 
@@ -55,7 +55,7 @@ public class Login implements Login_Interface
 		list = driver.findElements(By.tagName("a"));
 		for (int i = 0; i < list.size(); i++)
 		{
-			System.out.println("URL name => " + list.get(i).getText());
+			System.out.println("URL Name => " + list.get(i).getText());
 		}
 	}
 
@@ -128,7 +128,7 @@ public class Login implements Login_Interface
 	{
 		allLinks = findAllLinks(driver);
 
-		System.out.println("Total number of elements found " + allLinks.size());
+		System.out.println("Total Number Of Elements Found " + allLinks.size());
 
 		for (WebElement element : allLinks)
 		{
@@ -137,7 +137,7 @@ public class Login implements Login_Interface
 
 			{
 
-				System.out.println("URL: " + element.getAttribute("href") + " returned "
+				System.out.println("URL: " + element.getAttribute("href") + " Returned "
 						+ isLinkBroken(new URL(element.getAttribute("href"))));
 
 				// System.out.println("URL: " + element.getAttribute("outerhtml")+ " returned "
@@ -149,7 +149,7 @@ public class Login implements Login_Interface
 
 			{
 
-				System.out.println("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; "
+				System.out.println("At " + element.getAttribute("innerHTML") + " Exception Occured -&gt; "
 						+ exp.getMessage());
 
 			}
@@ -173,7 +173,7 @@ public class Login implements Login_Interface
 
 	public void clickSubmit()
 	{
-		log_In.click();
+		logIn.click();
 	}
 
 
@@ -186,7 +186,7 @@ public class Login implements Login_Interface
 
 	public void assertCheck2()
 	{
-		global_Obj.wait(driver).until(
+		globalObj.wait(driver).until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@class='login']//tbody//tr[2]")));
 		actualMsg = errorMessage.getText();
 		Assert.assertEquals(actualMsg, prop.getProperty("Validation1"));

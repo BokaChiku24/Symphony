@@ -22,16 +22,16 @@ import com.filta.qa.util.ReadExcelData;
 
 /**
  * @author kun24
- *
+ * @implNote Create Customer FiltaBio Check Testing
  */
 public class Create_CustomerFB
 {
 	private WebDriver driver;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 	private Login login;
-	private String default_pricing_current;
-	private String default_FiltaBioDefault;
+	private String defaultPricingCurrent;
+	private String defaultFiltaBioDefault;
 	private ReadExcelData defaultPricingData;
 	private ReadExcelData pricingData;
 	private String defaultFBValue;
@@ -41,28 +41,28 @@ public class Create_CustomerFB
 	private WebElement containerClose;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul[@class='last']//li[@class='last-li'][2]")
-	private WebElement customer_module;
+	private WebElement customerModule;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='moduleTab_-1_Customers']")
 	private WebElement customer;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='create_image']")
-	private WebElement customer_create;
+	private WebElement customerCreate;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='tab1']")
-	private WebElement pricing_estimating_info;
+	private WebElement pricingEstimatingInfo;
 
 	@FindBy(how = How.XPATH, using = ".//select[@id='default_pricing']")
-	private WebElement default_pricing;
+	private WebElement defaultPricing;
 
 	@FindBy(how = How.XPATH, using = ".//select[@id='default_pricing']//option")
-	private WebElement default_pricing_options;
+	private WebElement defaultPricingOptions;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='filtabio']")
-	private WebElement filtabio_check;
+	private WebElement filtabioCheck;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='pay_customer']")
-	private WebElement filtabio_price;
+	private WebElement filtabioPrice;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='CANCEL_HEADER']")
 	private WebElement cancel;
@@ -83,13 +83,13 @@ public class Create_CustomerFB
 	private WebElement adminSave;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul[@class='last']//li[@class='last-li']//a[@id='grouptab_1']")
-	private WebElement lead_module;
+	private WebElement leadModule;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='moduleTab_-1_Leads']")
 	private WebElement lead;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='create_image']")
-	private WebElement lead_create;
+	private WebElement leadCreate;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='last_name']")
 	private WebElement leadLastName;
@@ -144,8 +144,8 @@ public class Create_CustomerFB
 
 	public Create_CustomerFB(WebDriver driver)
 	{
-		global_Obj = new Global();
-		prop = global_Obj.readProperties();
+		globalObj = new Global();
+		prop = globalObj.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
 		defaultPricingData = new ReadExcelData(prop.getProperty("Path2"), "DefaultPricing");
@@ -164,14 +164,14 @@ public class Create_CustomerFB
 
 	public void createCustomerDefaultPricingNo()
 	{
-		global_Obj.action(driver).moveToElement(customer_module).build().perform();
+		globalObj.action(driver).moveToElement(customerModule).build().perform();
 		customer.click();
-		customer_create.click();
-		pricing_estimating_info.click();
-		default_pricing_current = global_Obj.select(default_pricing).getFirstSelectedOption().getText();
-		assertEquals(default_pricing_current, prop.getProperty("DefaultNo"));
-		assertTrue(filtabio_check.isSelected());
-		assertEquals(filtabio_price.getAttribute("value"), prop.getProperty("FB_PayPrice"));
+		customerCreate.click();
+		pricingEstimatingInfo.click();
+		defaultPricingCurrent = globalObj.select(defaultPricing).getFirstSelectedOption().getText();
+		assertEquals(defaultPricingCurrent, prop.getProperty("DefaultNo"));
+		assertTrue(filtabioCheck.isSelected());
+		assertEquals(filtabioPrice.getAttribute("value"), prop.getProperty("FB_PayPrice"));
 		cancel.click();
 	}
 
@@ -180,7 +180,7 @@ public class Create_CustomerFB
 	{
 		admin.click();
 		manageInvoice.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(defaultPricingTab));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(defaultPricingTab));
 		defaultPricingTab.click();
 		// FiltaBio
 
@@ -188,33 +188,33 @@ public class Create_CustomerFB
 		{
 			filtaBioDefault.sendKeys(defaultPricingData.getCellDataInt(1, 4) + "");
 		}
-		default_FiltaBioDefault = filtaBioDefault.getAttribute("value");
+		defaultFiltaBioDefault = filtaBioDefault.getAttribute("value");
 		adminSave.click();
-		return default_FiltaBioDefault;
+		return defaultFiltaBioDefault;
 	}
 
 
 	public void createCustomerDefaultPricingYesFBPriceSet()
 	{
 		defaultFBValue = defaultPricingFranchiseeLevel();
-		global_Obj.action(driver).moveToElement(customer_module).build().perform();
+		globalObj.action(driver).moveToElement(customerModule).build().perform();
 		customer.click();
-		customer_create.click();
-		global_Obj.jsReturn(driver).executeScript("arguments[0].click();", pricing_estimating_info);
-		global_Obj.jsReturn(driver).executeScript("arguments[0].click();", default_pricing);
-		global_Obj.select(default_pricing).selectByVisibleText(pricingData.getCellData(2, 4));
-		global_Obj.alertAccept(driver);
+		customerCreate.click();
+		globalObj.jsReturn(driver).executeScript("arguments[0].click();", pricingEstimatingInfo);
+		globalObj.jsReturn(driver).executeScript("arguments[0].click();", defaultPricing);
+		globalObj.select(defaultPricing).selectByVisibleText(pricingData.getCellData(2, 4));
+		globalObj.alertAccept(driver);
 		lodar();
-		assertTrue(filtabio_check.isSelected());
-		if (filtabio_price.getAttribute("value").equals("0.00"))
+		assertTrue(filtabioCheck.isSelected());
+		if (filtabioPrice.getAttribute("value").equals("0.00"))
 		{
-			assertEquals(filtabio_price.getAttribute("value").replace("0.00", fb + ""), defaultFBValue);
+			assertEquals(filtabioPrice.getAttribute("value").replace("0.00", fb + ""), defaultFBValue);
 		}
 		else
 		{
-			assertEquals(filtabio_price.getAttribute("value"), defaultFBValue);
+			assertEquals(filtabioPrice.getAttribute("value"), defaultFBValue);
 		}
-		global_Obj.jsReturn(driver).executeScript("arguments[0].click();", cancel);
+		globalObj.jsReturn(driver).executeScript("arguments[0].click();", cancel);
 		// global_Obj.alertAccept(driver);
 	}
 
@@ -223,7 +223,7 @@ public class Create_CustomerFB
 	{
 		admin.click();
 		manageInvoice.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(defaultPricingTab));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(defaultPricingTab));
 		defaultPricingTab.click();
 		// FiltaBio
 
@@ -236,36 +236,37 @@ public class Create_CustomerFB
 			filtaBioDefault.clear();
 		}
 		adminSave.click();
-		global_Obj.action(driver).moveToElement(customer_module).build().perform();
+		globalObj.action(driver).moveToElement(customerModule).build().perform();
 		customer.click();
-		customer_create.click();
+		customerCreate.click();
 		lodar();
-		global_Obj.jsReturn(driver).executeScript("arguments[0].click();", pricing_estimating_info);
-		default_pricing.click();
-		global_Obj.select(default_pricing).selectByVisibleText(pricingData.getCellData(2, 4));
-		global_Obj.alertAccept(driver);
+		globalObj.jsReturn(driver).executeScript("arguments[0].click();", pricingEstimatingInfo);
+		defaultPricing.click();
+		globalObj.select(defaultPricing).selectByVisibleText(pricingData.getCellData(2, 4));
+		globalObj.alertAccept(driver);
 		lodar();
-		if (filtabio_check.isSelected() && filtabio_price.isDisplayed())
+		if (filtabioCheck.isSelected() && filtabioPrice.isDisplayed())
 		{
-			assertTrue(filtabio_check.isSelected());
-			assertEquals(filtabio_price.getAttribute("value"), prop.getProperty("FB_PayPrice"));
+			assertTrue(filtabioCheck.isSelected());
+			assertEquals(filtabioPrice.getAttribute("value"), prop.getProperty("FB_PayPrice"));
 		}
-		assertEquals(filtabio_check.isSelected(), false);
-		assertEquals(filtabio_price.isDisplayed(), false);
-		global_Obj.jsReturn(driver).executeScript("arguments[0].click();", cancel);
-		global_Obj.alertAccept(driver);
+		assertEquals(filtabioCheck.isSelected(), false);
+		assertEquals(filtabioPrice.isDisplayed(), false);
+		globalObj.jsReturn(driver).executeScript("arguments[0].click();", cancel);
+		globalObj.alertAccept(driver);
 	}
+
 
 	private void lodar()
 	{
-		global_Obj.wait(driver)
+		globalObj.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxloading_mask")));
 	}
 
 
 	public void loadar2()
 	{
-		global_Obj.wait(driver)
+		globalObj.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
 	}
 

@@ -13,17 +13,17 @@ public class ReadExcelData
 {
 	private Sheet sheet1;
 	private Workbook wb;
-	private File file_Obj;
+	private File fileObj;
 	private FileInputStream input;
 	private int totlaRows;
 	private int totalCol;
 
 	public ReadExcelData(String path, String sheetName)
 	{
-		file_Obj = new File(path);
+		fileObj = new File(path);
 		try
 		{
-			input = new FileInputStream(file_Obj);
+			input = new FileInputStream(fileObj);
 			wb = new XSSFWorkbook(input);
 			sheet1 = wb.getSheet(sheetName);
 			wb.close();
@@ -43,10 +43,10 @@ public class ReadExcelData
 
 	public ReadExcelData(String path, int index)
 	{
-		file_Obj = new File(path);
+		fileObj = new File(path);
 		try
 		{
-			input = new FileInputStream(file_Obj);
+			input = new FileInputStream(fileObj);
 			wb = new XSSFWorkbook(input);
 			sheet1 = wb.getSheetAt(index);
 			wb.close();

@@ -11,7 +11,7 @@ public class Logout
 	public WebDriver driver;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='user']//a")
-	private WebElement log_Out;
+	private WebElement logOut;
 
 	public Logout(WebDriver driver)
 	{
@@ -22,6 +22,6 @@ public class Logout
 
 	public void logout()
 	{
-		log_Out.click();
+		logOut.click();
 	}
 }

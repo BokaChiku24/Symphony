@@ -21,7 +21,7 @@ public class HomePage implements HomePage_Interface
 {
 
 	private WebDriver driver;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 	private Login login;
 	private StringBuffer bottomTextReplace;
@@ -43,13 +43,13 @@ public class HomePage implements HomePage_Interface
 	private WebElement filtaGold;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_marketing_summery']//h1")
-	private WebElement email_Summary;
+	private WebElement emailSummary;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_marketing_summery']//div[@style='font-style: italic;']")
-	private WebElement email_Summary2;
+	private WebElement emailSummary2;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_marketing_summery']//span[@id='last-updated']")
-	private WebElement email_Summary3;
+	private WebElement emailSummary3;
 
 	@FindBy(how = How.XPATH, using = ".//a[@href='https://sites.google.com/a/filta.com/opsmanual/filta-symphony']")
 	private WebElement homeText;
@@ -182,8 +182,8 @@ public class HomePage implements HomePage_Interface
 
 	public HomePage(WebDriver driver)
 	{
-		global_Obj = new Global();
-		prop = global_Obj.readProperties();
+		globalObj = new Global();
+		prop = globalObj.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
 		PageFactory.initElements(driver, this);
@@ -351,7 +351,7 @@ public class HomePage implements HomePage_Interface
 	{
 		list = driver.findElements(By.xpath(".//table[@id='campaignerData']//tbody//tr"));
 		list2 = driver.findElements(By.xpath(".//table[@id='campaignerData']//tbody//tr[1]//th"));
-		global_Obj.wait(driver).until(ExpectedConditions
+		globalObj.wait(driver).until(ExpectedConditions
 				.visibilityOfElementLocated(By.xpath(".//table[@id='campaignerData']//tbody//tr")));
 		Assert.assertEquals(list.size(), Integer.parseInt(prop.getProperty("HomeTable1Rows")));
 		Assert.assertEquals(list2.size(), Integer.parseInt(prop.getProperty("HomeTable1Column")));
@@ -417,7 +417,7 @@ public class HomePage implements HomePage_Interface
 		Assert.assertEquals(homeDashletLabel3.getText(), prop.getProperty("HomeDashletlabel3"));
 		Assert.assertEquals(homeDashletLabel3.isDisplayed(), true);
 		homeDashletLabel2.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(dashletDialog));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(dashletDialog));
 		Assert.assertEquals(searchWidet.isEnabled(), true);
 		Assert.assertEquals(searchButton.getAttribute("value"), prop.getProperty("HomeDashletSearchButtonLabel"));
 		Assert.assertEquals(clearButton.getAttribute("value"), prop.getProperty("HomeDashletClearButtonLabel"));
@@ -437,17 +437,17 @@ public class HomePage implements HomePage_Interface
 		}
 		Assert.assertEquals(list.size(), Integer.parseInt(prop.getProperty("Modules")));
 		searchButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(searchResult));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(searchResult));
 
 		// To scroll till any element
-		global_Obj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
+		globalObj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
 		Assert.assertEquals(searchResult.getText(), prop.getProperty("SearchResult"));
-		global_Obj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchWidet);
+		globalObj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchWidet);
 		searchWidet.sendKeys(prop.getProperty("SearchModule"));
 		searchButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(searchResult));
-		global_Obj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
-		global_Obj.wait(driver).until(
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(searchResult));
+		globalObj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", searchResult);
+		globalObj.wait(driver).until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath(".//div[@id='searchResults']//h4//i")));
 		Assert.assertEquals(searchResult.getText(), prop.getProperty("SearchResult2"));
 		Assert.assertEquals(searchResult2.getText(), prop.getProperty("SearchModule"));
@@ -461,7 +461,7 @@ public class HomePage implements HomePage_Interface
 		}
 
 		tapNameWidget2.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(basicChartlabel));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicChartlabel));
 		Assert.assertEquals(basicChartlabel.getText().replaceFirst(" ", ""), prop.getProperty("BasicChartlabel"));
 		list = driver.findElements(By.xpath(".//div[@id='basicChartDashletsList']//tr//td//a[2]"));
 		// for (int i = 0; i < list.size(); i++) {
@@ -473,12 +473,12 @@ public class HomePage implements HomePage_Interface
 		}
 		Assert.assertEquals(list.size(), Integer.parseInt(prop.getProperty("BasicChartSize")));
 		searchButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(basicChartSearchResult));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicChartSearchResult));
 		Assert.assertEquals(basicChartSearchResult.getText(), prop.getProperty("SearchResultChart"));
 		tapNameWidget2.click();
 		searchWidet.sendKeys(prop.getProperty("SearchBasicChart"));
 		searchButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(basicChartSearchResult2));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicChartSearchResult2));
 		Assert.assertEquals(basicChartSearchResult.getText(), prop.getProperty("SearchBasicChartResult"));
 		if (searchWidet.getAttribute("value").isEmpty() == false)
 		{
@@ -505,10 +505,10 @@ public class HomePage implements HomePage_Interface
 	public void checkUserNameOnHomePage()
 	{
 		topText1.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		userNameOnUserPage = getUserName.getText();
 		driver.navigate().back();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(getHomeUserName));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(getHomeUserName));
 		// System.out.println(getHomeUserName.getText());
 		// System.out.println(Prop.getProperty("Welcome") + " " + UserNameOnUserPage + "
 		// ! " + Prop.getProperty("Logout"));
@@ -519,7 +519,7 @@ public class HomePage implements HomePage_Interface
 
 	public void waitLoader()
 	{
-		global_Obj.wait(driver)
+		globalObj.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(".//div[@id='ajaxloading_mask']")));
 	}
 

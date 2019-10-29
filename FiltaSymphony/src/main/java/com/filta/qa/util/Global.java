@@ -35,13 +35,13 @@ public class Global
 	private TakesScreenshot screen;
 	private WebElement element;
 	private JavascriptExecutor jS;
-	private Alert alert_Obj;
-	private Select select_Obj;
+	private Alert alertObj;
+	private Select selectObj;
 	private Actions action;
 	private WebDriverWait wait;
 	private File f;
-	private File file_Obj;
-	private File file_;
+	private File fileObj;
+	private File file;
 	private ChromeOptions options;
 	private Properties prop;
 	private FileInputStream input;
@@ -107,9 +107,9 @@ public class Global
 	public Properties readProperties()
 	{
 		f = new File("E:\\Work\\Symphony\\FiltaSymphony\\configs\\Configuration.properties");
-		file_Obj = new File(
+		fileObj = new File(
 				"C:\\Users\\kunal\\git\\Repository\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
-		file_ = new File(
+		file = new File(
 				"C:\\Users\\Boka_Chiku\\git\\Symphony\\FiltaSymphony\\configs\\HomePC_Configuration.properties");
 		if (f.exists() == true)
 		{
@@ -134,12 +134,12 @@ public class Global
 			}
 			return prop;
 		}
-		else if (file_Obj.exists() == true)
+		else if (fileObj.exists() == true)
 		{
 
 			try
 			{
-				input = new FileInputStream(file_Obj);
+				input = new FileInputStream(fileObj);
 
 			}
 			catch (FileNotFoundException e)
@@ -158,11 +158,11 @@ public class Global
 			}
 			return prop;
 		}
-		else if (file_.exists() == true)
+		else if (file.exists() == true)
 		{
 			try
 			{
-				input = new FileInputStream(file_);
+				input = new FileInputStream(file);
 
 			}
 			catch (FileNotFoundException e)
@@ -212,8 +212,8 @@ public class Global
 
 	public Select select(WebElement element)
 	{
-		select_Obj = new Select(element);
-		return select_Obj;
+		selectObj = new Select(element);
+		return selectObj;
 	}
 
 
@@ -330,17 +330,17 @@ public class Global
 
 	public String alert(WebDriver driver)
 	{
-		alert_Obj = driver.switchTo().alert();
-		message = alert_Obj.getText();
-		alert_Obj.accept();
+		alertObj = driver.switchTo().alert();
+		message = alertObj.getText();
+		alertObj.accept();
 		return message;
 	}
 
 
 	public void alertAccept(WebDriver driver)
 	{
-		alert_Obj = driver.switchTo().alert();
-		alert_Obj.accept();
+		alertObj = driver.switchTo().alert();
+		alertObj.accept();
 
 	}
 
@@ -354,12 +354,12 @@ public class Global
 
 	public String alert(String input, WebDriver driver)
 	{
-		alert_Obj = driver.switchTo().alert();
-		message = alert_Obj.getText();
+		alertObj = driver.switchTo().alert();
+		message = alertObj.getText();
 		if (input.equalsIgnoreCase("accept"))
-			alert_Obj.accept();
+			alertObj.accept();
 		else if (input.equalsIgnoreCase("dismiss"))
-			alert_Obj.dismiss();
+			alertObj.dismiss();
 		return message;
 	}
 

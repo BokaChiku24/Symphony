@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 public class Login
 {
 	public WebDriver driver;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='user_name']")
@@ -21,13 +21,13 @@ public class Login
 	private WebElement passWord;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
-	private WebElement log_In;
+	private WebElement logIn;
 
 	public Login(WebDriver driver)
 	{
 		this.driver = driver;
-		global_Obj = new Global();
-		prop = global_Obj.readProperties();
+		globalObj = new Global();
+		prop = globalObj.readProperties();
 		PageFactory.initElements(driver, this);
 
 	}
@@ -37,6 +37,6 @@ public class Login
 	{
 		userName.sendKeys(prop.getProperty("uname"));
 		passWord.sendKeys(prop.getProperty("password"));
-		log_In.click();
+		logIn.click();
 	}
 }

@@ -24,33 +24,33 @@ import java.util.Properties;
 public class UserPage implements UserPage_Interface
 {
 	private WebDriver driver;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 	private Login login;
-	private String user_Name;
-	private String first_Name;
-	private String last_Name;
-	private String filta_User_Type;
+	private String userName;
+	private String firstName;
+	private String lastName;
+	private String filtaUserType;
 	private String status;
-	private String user_Type;
-	private boolean send_Remainder;
-	private String employee_Status;
+	private String userType;
+	private boolean sendRemainder;
+	private String employeeStatus;
 	private String title;
 	private String department;
-	private String[] iM_Type;
-	private String default_IM_Type;
-	private String address_Street;
-	private String address_State;
-	private String address_Country;
+	private String[] iMType;
+	private String defaultIMType;
+	private String addressStreet;
+	private String addressState;
+	private String addressCountry;
 	private String standardRate;
 	private String description;
-	private boolean display_Employee_Record;
-	private String work_Phone;
+	private boolean displayEmployeeRecord;
+	private String workPhone;
 	private String mobile;
-	private String other_Phone;
+	private String otherPhone;
 	private String fax;
-	private String iM_Name;
-	private String address_City;
+	private String iMName;
+	private String addressCity;
 	private String addressPostalZipCodel;
 	private String weeklyStandardHours;
 	private String[] weeklyStandardHoursMin;
@@ -238,124 +238,124 @@ public class UserPage implements UserPage_Interface
 	private WebElement editDefaultEmailClient;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[1]//td[2]//span")
-	private WebElement userProfile_Fullname;
+	private WebElement userProfileFullname;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[1]//td[4]//span")
-	private WebElement userProfile_Username;
+	private WebElement userProfileUsername;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[2]//td[2]")
-	private WebElement userProfile_Status;
+	private WebElement userProfileStatus;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[2]//td[4]//span")
-	private WebElement userProfile_UserType;
+	private WebElement userProfileUserType;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[3]//td[2]")
-	private WebElement userProfile_FiltaUserType;
+	private WebElement userProfileFiltaUserType;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[4]//td[2]")
-	private WebElement userProfile_StoreAccess;
+	private WebElement userProfileStoreAccess;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//tr[5]//td[2]//input")
-	private WebElement userProfile_SendRemainder;
+	private WebElement userProfileSendRemainder;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[1]//td[2]//span")
-	private WebElement userProfile_EmployeeStatus;
+	private WebElement userProfileEmployeeStatus;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[1]//td[4]")
-	private WebElement userProfile_DisplayEmployeeRecord;
+	private WebElement userProfileDisplayEmployeeRecord;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[2]//td[2]//span")
-	private WebElement userProfile_Title;
+	private WebElement userProfileTitle;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[2]//td[4]")
-	private WebElement userProfile_WorkPhone;
+	private WebElement userProfileWorkPhone;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[3]//td[2]")
-	private WebElement userProfile_Department;
+	private WebElement userProfileDepartment;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[3]//td[4]")
-	private WebElement userProfile_Mobile;
+	private WebElement userProfileMobile;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[4]//td[2]//span")
-	private WebElement userProfile_ReportsTo;
+	private WebElement userProfileReportsTo;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[4]//td[4]")
-	private WebElement userProfile_OtherPhone;
+	private WebElement userProfileOtherPhone;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[5]//td[4]")
-	private WebElement userProfile_Fax;
+	private WebElement userProfileFax;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[6]//td[2]")
-	private WebElement userProfile_IMType;
+	private WebElement userProfileIMType;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][6]//td[@class='edit-table-row1'][2]//select")
 	private WebElement editDefaultIMType;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[6]//td[4]//span")
-	private WebElement userProfile_IMName;
+	private WebElement userProfileIMName;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[7]//td[2]//span")
-	private WebElement userPRofile_AddressStreet;
+	private WebElement userProfileAddressStreet;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[7]//td[4]//span")
-	private WebElement userProfile_AddressCity;
+	private WebElement userProfileAddressCity;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[8]//td[2]//span")
-	private WebElement userProfile_AddressState;
+	private WebElement userProfileAddressState;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[9]//td[2]//span")
-	private WebElement userProfile_AddressCounty;
+	private WebElement userProfileAddressCounty;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[9]//td[4]//span")
-	private WebElement userProfile_WeeklyStandardHours;
+	private WebElement userProfileWeeklyStandardHours;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[8]//td[4]//span")
-	private WebElement userProfile_AddressPostalZipCode;
+	private WebElement userProfileAddressPostalZipCode;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[10]//td[2]//span")
-	private WebElement userProfile_StandardRate;
+	private WebElement userProfileStandardRate;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[10]//td[4]//span")
-	private WebElement userProfile_OverTimeRate;
+	private WebElement userProfileOverTimeRate;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//tr[11]//td[2]//span")
-	private WebElement userPRofile_Description;
+	private WebElement userProfileDescription;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//tbody//tr[2]//a")
-	private WebElement userProfile_PrimaryEmail;
+	private WebElement userProfilePrimaryEmail;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//tbody//tr[3]//td[2]")
-	private WebElement userProfile_SugarClient;
+	private WebElement userProfileSugarClient;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_USER_INFORMATION']//h4")
-	private WebElement userProfile_UserLabel;
+	private WebElement userProfileUserLabel;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='LBL_EMPLOYEE_INFORMATION']//h4")
-	private WebElement userProfile_EmployeeLabel;
+	private WebElement userProfileEmployeeLabel;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='email_options']//h4")
-	private WebElement userProfile_EmailLabel;
+	private WebElement userProfileEmailLabel;
 
 	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//a")
-	private WebElement userProfile_AllLabel;
+	private WebElement userProfileAllLabel;
 
 	@FindBy(how = How.XPATH, using = ".//a[@id='tab2']//em")
 	private WebElement tab2OnEditPage;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='generate_password']//h4")
-	private WebElement passwordPage_PasswordLabel;
+	private WebElement passwordPagePasswordLabel;
 
 	@FindBy(how = How.CSS, using = "#generate_password_old_password > table > tbody > tr > td:nth-child(1)")
-	private WebElement passwordPage_CurrentPasswordLabel;
+	private WebElement passwordPageCurrentPasswordLabel;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='generate_password']//table[2]//tbody//tr[1]//td[1]")
-	private WebElement passwordPage_NewPasswordLabel;
+	private WebElement passwordPageNewPasswordLabel;
 
 	@FindBy(how = How.CSS, using = "#generate_password > table > tbody > tr > td > table:nth-child(3) > tbody > tr:nth-child(2) > td:nth-child(1)")
-	private WebElement passwordPage_ConfirmPassword;
+	private WebElement passwordPageConfirmPassword;
 
 	@FindBy(how = How.CSS, using = "#generate_password > table > tbody > tr > td > table:nth-child(3) > tbody > tr:nth-child(3) > td")
-	private WebElement passwordPage_Note;
+	private WebElement passwordPageNote;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='old_password']")
 	private WebElement currentpasswordInput;
@@ -439,7 +439,7 @@ public class UserPage implements UserPage_Interface
 	private WebElement defaultMailMergeCheckBox;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//tbody[1]//tr//th//h4")
-	private WebElement layoutOption;
+	private WebElement layoutOptionn;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='layout']//tbody[1]//tr[@id='use_group_tabs_row']//span")
 	private WebElement moduleMenuLabel;
@@ -724,55 +724,55 @@ public class UserPage implements UserPage_Interface
 	private WebElement calendarOption;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[2]//td[1]//slot")
-	private WebElement publish_Key;
+	private WebElement publishKey;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[2]//td[2]//slot")
-	private WebElement publish_Key_Text;
+	private WebElement publishKeyText;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[3]//td[1]//slot")
-	private WebElement publish_at_my_location;
+	private WebElement publishatmylocation;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[3]//td[2]//slot")
-	private WebElement publish_at_my_location_text;
+	private WebElement publishatmylocationtext;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[4]//td[1]//slot")
-	private WebElement search_Location;
+	private WebElement searchLocationn;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[4]//td[2]//slot")
-	private WebElement search_Location_Text;
+	private WebElement searchLocationTextt;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[5]//td[1]//slot")
 	private WebElement iCal;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[5]//td[2]//slot")
-	private WebElement iCal_Text;
+	private WebElement iCalText;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[6]//td[1]//slot")
-	private WebElement first_Day_Of_Week;
+	private WebElement firstDayOfWeekk;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='calendar_options']//tr[6]//td[2]//slot")
-	private WebElement first_Day_Of_Week_Text;
+	private WebElement firstDayOfWeekText;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//h4//slot")
-	private WebElement layout_Option;
+	private WebElement layoutOption;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[2]//td[1]//slot")
-	private WebElement module_Menu_Filter;
+	private WebElement moduleMenuFilter;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[2]//td[2]//slot")
-	private WebElement module_Menu_Filter_Checkbox;
+	private WebElement moduleMenuFilterCheckbox;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[2]//td[3]//slot")
-	private WebElement module_Menu_Filter_text;
+	private WebElement moduleMenuFiltertext;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[3]//td[1]//slot")
-	private WebElement subPanel_Tab;
+	private WebElement subPanelTabb;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[3]//td[2]//slot")
-	private WebElement subPanel_Tab_Checkbox;
+	private WebElement subPanelTabCheckbox;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='edit_tabs']//tr[3]//td[3]//slot")
-	private WebElement subPanel_Tab_Text;
+	private WebElement subPanelTabText;
 
 	@FindBy(how = How.XPATH, using = ".//li[@id='All_sp_tab']//a")
 	private WebElement all;
@@ -796,24 +796,24 @@ public class UserPage implements UserPage_Interface
 	private WebElement roles;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='detail-table-overflow']//table//tr[2]//th[1]//a")
-	private WebElement roles_Name;
+	private WebElement rolesName;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='detail-table-overflow']//table//tr[2]//th[2]//span")
-	private WebElement roles_Description;
+	private WebElement rolesDescription;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='detail-table-overflow']//table//tr[3]//td[1]//span")
-	private WebElement roles_Franchisee;
+	private WebElement rolesFranchisee;
 
 	@FindBy(how = How.XPATH, using = ".//div[@class='detail-table-overflow']//table//tr[3]//td[2]//span")
-	private WebElement roles_Not_Delete;
+	private WebElement rolesNotDelete;
 
 	@FindBy(how = How.XPATH, using = ".//ul[@id='groupTabs']//li//a")
-	private WebElement roles_ALL;
+	private WebElement rolesALL;
 
 	public UserPage(WebDriver driver)
 	{
-		global_Obj = new Global();
-		prop = global_Obj.readProperties();
+		globalObj = new Global();
+		prop = globalObj.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
 		logout = new Logout(driver);
@@ -837,10 +837,10 @@ public class UserPage implements UserPage_Interface
 
 	public void urlCheck()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(containerClose));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(containerClose));
 		containerClose.click();
 		topText1.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("UserPageURL"));
 //		Sa.assertAll();
 	}
@@ -863,7 +863,7 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(resetHomePageButtonFooter.getAttribute("value"),
 				prop.getProperty("UserPageResetHomepageButtonFooter"));
 		cancelButtonHeader.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(editButton));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(editButton));
 		Assert.assertEquals(editButton.getAttribute("value"), prop.getProperty("UserPageEditButton"));
 		Assert.assertEquals(resetUserPreferencesButtonHeader.getAttribute("value"),
 				prop.getProperty("UserPageResetUserPreferencesButtonHeader"));
@@ -888,7 +888,7 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(resetHomePageButtonHeader.getCssValue("color"),
 				prop.getProperty("UserPageResetHomePageButtonTextWhite"));
 		editButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		Assert.assertEquals(saveButtonHeader.getCssValue("background"),
 				prop.getProperty("UserPageSaveButtonHeaderBackGroundColorBlue"));
 		Assert.assertEquals(cancelButtonHeader.getCssValue("background"),
@@ -928,39 +928,39 @@ public class UserPage implements UserPage_Interface
 
 	public void buttonBackGroundWithMouseOverview()
 	{
-		global_Obj.action(driver).moveToElement(saveButtonHeader).build().perform();
+		globalObj.action(driver).moveToElement(saveButtonHeader).build().perform();
 		Assert.assertEquals(saveButtonHeader.getCssValue("border-color"),
 				prop.getProperty("UserPageSaveButtonHeaderBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(cancelButtonHeader).build().perform();
+		globalObj.action(driver).moveToElement(cancelButtonHeader).build().perform();
 		Assert.assertEquals(cancelButtonHeader.getCssValue("border-color"),
 				prop.getProperty("UserPageCancelButtonHeaderBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(resetUserPreferencesButtonHeader).build().perform();
+		globalObj.action(driver).moveToElement(resetUserPreferencesButtonHeader).build().perform();
 		Assert.assertEquals(resetUserPreferencesButtonHeader.getCssValue("border-color"),
 				prop.getProperty("UserPageResetUserPreferencesButtonHeaderBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(resetHomePageButtonHeader).build().perform();
+		globalObj.action(driver).moveToElement(resetHomePageButtonHeader).build().perform();
 		Assert.assertEquals(resetHomePageButtonHeader.getCssValue("border-color"),
 				prop.getProperty("UserPageResetHomePageButtonHeaderBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(saveButtonFooter).build().perform();
+		globalObj.action(driver).moveToElement(saveButtonFooter).build().perform();
 		Assert.assertEquals(saveButtonFooter.getCssValue("border-color"),
 				prop.getProperty("UserPageSaveButtonFooterBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(cancelButtonFooter).build().perform();
+		globalObj.action(driver).moveToElement(cancelButtonFooter).build().perform();
 		Assert.assertEquals(cancelButtonFooter.getCssValue("border-color"),
 				prop.getProperty("UserPageCancelButtonFooterBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(resetUserPreferencesButtonFooter).build().perform();
+		globalObj.action(driver).moveToElement(resetUserPreferencesButtonFooter).build().perform();
 		Assert.assertEquals(resetUserPreferencesButtonFooter.getCssValue("border-color"),
 				prop.getProperty("UserPageResetUserPreferencesButtonFooterBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(resetHomePageButtonFooter).build().perform();
+		globalObj.action(driver).moveToElement(resetHomePageButtonFooter).build().perform();
 		Assert.assertEquals(resetHomePageButtonFooter.getCssValue("border-color"),
 				prop.getProperty("UserPageResetHomePageButtonFooterBackGroundColorGreen"));
 		cancelButtonFooter.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(editButton));
-		global_Obj.action(driver).moveToElement(editButton).build().perform();
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(editButton));
+		globalObj.action(driver).moveToElement(editButton).build().perform();
 		Assert.assertEquals(editButton.getCssValue("border-color"),
 				prop.getProperty("UserPageEditButtonBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(resetUserPreferencesButtonHeader).build().perform();
+		globalObj.action(driver).moveToElement(resetUserPreferencesButtonHeader).build().perform();
 		Assert.assertEquals(resetUserPreferencesButtonHeader.getCssValue("border-color"),
 				prop.getProperty("UserPageResetUserPreferencesButtonBackGroundColorGreen"));
-		global_Obj.action(driver).moveToElement(resetHomePageButtonHeader).build().perform();
+		globalObj.action(driver).moveToElement(resetHomePageButtonHeader).build().perform();
 		Assert.assertEquals(resetHomePageButtonHeader.getCssValue("border-color"),
 				prop.getProperty("UserPageResetHomePageButtonBackGroundColorGreen"));
 //		Sa.assertAll();
@@ -975,7 +975,7 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(resetHomePageButtonHeader.getAttribute("title"),
 				prop.getProperty("UserPageResetHomePageButtonToolTip"));
 		editButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		Assert.assertEquals(saveButtonHeader.getAttribute("title"),
 				prop.getProperty("UserPageSaveButtonHeaderToolTip"));
 		Assert.assertEquals(cancelButtonHeader.getAttribute("title"),
@@ -1022,7 +1022,7 @@ public class UserPage implements UserPage_Interface
 		}
 		// Count of tabs Assertion
 		cancelButtonHeader.click();
-		global_Obj.wait(driver).until(ExpectedConditions
+		globalObj.wait(driver).until(ExpectedConditions
 				.visibilityOfAllElementsLocatedBy(By.xpath(".//ul[@class='yui-nav']//li[1]//em")));
 		list = driver.findElements(By.xpath(".//ul[@class='yui-nav']//li//em"));
 		for (int i = 0; i < list.size(); i++)
@@ -1043,46 +1043,46 @@ public class UserPage implements UserPage_Interface
 	public void getDataFromEditPageUserProfile()
 	{
 		editButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		// To Check Label on User Profile Page
-		Assert.assertEquals(userProfile_UserLabel.getText(), prop.getProperty("UserProfileLabel1"));
-		Assert.assertEquals(userProfile_UserLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(userProfile_EmployeeLabel.getText(), prop.getProperty("UserProfileLabel2"));
-		Assert.assertEquals(userProfile_EmployeeLabel.getCssValue("color"),
+		Assert.assertEquals(userProfileUserLabel.getText(), prop.getProperty("UserProfileLabel1"));
+		Assert.assertEquals(userProfileUserLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(userProfileEmployeeLabel.getText(), prop.getProperty("UserProfileLabel2"));
+		Assert.assertEquals(userProfileEmployeeLabel.getCssValue("color"),
 				prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(userProfile_EmailLabel.getText(), prop.getProperty("UserProfileLabel3"));
-		Assert.assertEquals(userProfile_EmailLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(userProfileEmailLabel.getText(), prop.getProperty("UserProfileLabel3"));
+		Assert.assertEquals(userProfileEmailLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
 		// To Get Data From Edit User Page
-		user_Name = editUname.getAttribute("value");
-		first_Name = editFirstName.getAttribute("value");
-		last_Name = editLastName.getAttribute("value");
-		filta_User_Type = editFiltaUserType.getText();
+		userName = editUname.getAttribute("value");
+		firstName = editFirstName.getAttribute("value");
+		lastName = editLastName.getAttribute("value");
+		filtaUserType = editFiltaUserType.getText();
 		status = editStatus.getText();
-		user_Type = editUserType.getText();
-		send_Remainder = editSendRemainder.isSelected();
-		employee_Status = editEmployeeStatus.getText();
+		userType = editUserType.getText();
+		sendRemainder = editSendRemainder.isSelected();
+		employeeStatus = editEmployeeStatus.getText();
 		title = editTitle.getText();
 		department = editDepartment.getText();
 		list = driver.findElements(By.xpath(
 				".//div[@id='LBL_EMPLOYEE_INFORMATION']//table[@class='yui3-skin-sam edit view dcQuickEdit edit508'][1]//tr[@class='edit-table1'][6]//td[@class='edit-table-row1'][2]//select//option"));
-		iM_Type = new String[list.size()];
+		iMType = new String[list.size()];
 		for (int i = 0; i < list.size(); i++)
 		{
-			iM_Type[i] = list.get(i).getText();
+			iMType[i] = list.get(i).getText();
 		}
-		default_IM_Type = global_Obj.select(editDefaultIMType).getFirstSelectedOption().getText();
-		address_Street = editAddressStreet.getAttribute("value");
-		address_State = editAddressState.getAttribute("value");
-		address_Country = editAddressCountry.getAttribute("value");
+		defaultIMType = globalObj.select(editDefaultIMType).getFirstSelectedOption().getText();
+		addressStreet = editAddressStreet.getAttribute("value");
+		addressState = editAddressState.getAttribute("value");
+		addressCountry = editAddressCountry.getAttribute("value");
 		standardRate = editStandardRate.getAttribute("value");
 		description = editDescription.getAttribute("value");
-		display_Employee_Record = editDisplayEmployeeRecord.isSelected();
-		work_Phone = editWorkPhone.getAttribute("value");
+		displayEmployeeRecord = editDisplayEmployeeRecord.isSelected();
+		workPhone = editWorkPhone.getAttribute("value");
 		mobile = editMobile.getAttribute("value");
-		other_Phone = editOtherPhone.getAttribute("value");
+		otherPhone = editOtherPhone.getAttribute("value");
 		fax = editFax.getAttribute("value");
-		iM_Name = editIMName.getAttribute("value");
-		address_City = editAddressCity.getAttribute("value");
+		iMName = editIMName.getAttribute("value");
+		addressCity = editAddressCity.getAttribute("value");
 		addressPostalZipCodel = editAddressPostalZipCode.getAttribute("value");
 		weeklyStandardHours = editWeeklyStandardHours.getAttribute("value");
 		list = driver.findElements(By.xpath(
@@ -1092,7 +1092,7 @@ public class UserPage implements UserPage_Interface
 		{
 			weeklyStandardHoursMin[i] = list.get(i).getText();
 		}
-		defaultWeeklyStandardHoursMin = global_Obj.select(editDefaultMin).getFirstSelectedOption().getText();
+		defaultWeeklyStandardHoursMin = globalObj.select(editDefaultMin).getFirstSelectedOption().getText();
 		overTimeRate = editOverTimeRate.getAttribute("value");
 		emailAddress1 = editEmailAddress1.getAttribute("value");
 		primaryRadio1 = editPrimaryRadio.isSelected();
@@ -1103,30 +1103,30 @@ public class UserPage implements UserPage_Interface
 		{
 			emailClient[i] = list.get(i).getText();
 		}
-		defaultEmailClient = global_Obj.select(editDefaultEmailClient).getFirstSelectedOption().getText();
+		defaultEmailClient = globalObj.select(editDefaultEmailClient).getFirstSelectedOption().getText();
 		System.out.println("Email is: " + defaultEmailClient);
 		// To Verify Edit Page Data From "UserPage.xlsx" sheet
-		Assert.assertEquals(first_Name + " " + last_Name, userData.getCellData(1, 0));
-		Assert.assertEquals(user_Name, userData.getCellData(1, 1));
+		Assert.assertEquals(firstName + " " + lastName, userData.getCellData(1, 0));
+		Assert.assertEquals(userName, userData.getCellData(1, 1));
 		Assert.assertEquals(status, userData.getCellData(1, 2));
-		Assert.assertEquals(user_Type.substring(0, 12), userData.getCellData(1, 3));
-		Assert.assertEquals(filta_User_Type, userData.getCellData(1, 4));
-		Assert.assertEquals(send_Remainder, false);
-		Assert.assertEquals(employee_Status, userData.getCellData(1, 5));
-		Assert.assertEquals(display_Employee_Record, false);
+		Assert.assertEquals(userType.substring(0, 12), userData.getCellData(1, 3));
+		Assert.assertEquals(filtaUserType, userData.getCellData(1, 4));
+		Assert.assertEquals(sendRemainder, false);
+		Assert.assertEquals(employeeStatus, userData.getCellData(1, 5));
+		Assert.assertEquals(displayEmployeeRecord, false);
 		Assert.assertEquals(title, userData.getCellData(1, 6));
-		Assert.assertEquals(work_Phone, userData.getCellData(1, 7));
+		Assert.assertEquals(workPhone, userData.getCellData(1, 7));
 		Assert.assertEquals(mobile, userData.getCellData(1, 8));
 		Assert.assertEquals(userData.getCellData(1, 9), prop.getProperty("Reports_To"));
-		Assert.assertEquals(other_Phone, userData.getCellData(1, 10));
+		Assert.assertEquals(otherPhone, userData.getCellData(1, 10));
 		Assert.assertEquals(fax, userData.getCellData(1, 11));
-		Assert.assertEquals(default_IM_Type, userData.getCellData(1, 12));
-		Assert.assertEquals(iM_Name, userData.getCellData(1, 13));
-		Assert.assertEquals(address_Street, userData.getCellData(1, 14));
-		Assert.assertEquals(address_City, userData.getCellData(1, 15));
-		Assert.assertEquals(address_State, userData.getCellData(1, 16));
+		Assert.assertEquals(defaultIMType, userData.getCellData(1, 12));
+		Assert.assertEquals(iMName, userData.getCellData(1, 13));
+		Assert.assertEquals(addressStreet, userData.getCellData(1, 14));
+		Assert.assertEquals(addressCity, userData.getCellData(1, 15));
+		Assert.assertEquals(addressState, userData.getCellData(1, 16));
 		Assert.assertEquals(addressPostalZipCodel, userData.getCellData(1, 17));
-		Assert.assertEquals(address_Country, userData.getCellData(1, 18));
+		Assert.assertEquals(addressCountry, userData.getCellData(1, 18));
 		Assert.assertEquals(standardRate, String.valueOf(userData.getCellDataInt(1, 19)));
 		Assert.assertEquals(overTimeRate, String.valueOf(userData.getCellDataInt(1, 20)));
 		Assert.assertEquals(description, userData.getCellData(1, 21));
@@ -1140,83 +1140,83 @@ public class UserPage implements UserPage_Interface
 	public void verifyDataOfUserProfile()
 	{
 		cancelButtonHeader.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(editButton));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(editButton));
 		// To Check Label on User Profile Page
-		Assert.assertEquals(userProfile_UserLabel.getText(), prop.getProperty("UserProfileLabel1"));
-		Assert.assertEquals(userProfile_UserLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(userProfile_EmployeeLabel.getText(), prop.getProperty("UserProfileLabel2"));
-		Assert.assertEquals(userProfile_EmployeeLabel.getCssValue("color"),
+		Assert.assertEquals(userProfileUserLabel.getText(), prop.getProperty("UserProfileLabel1"));
+		Assert.assertEquals(userProfileUserLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(userProfileEmployeeLabel.getText(), prop.getProperty("UserProfileLabel2"));
+		Assert.assertEquals(userProfileEmployeeLabel.getCssValue("color"),
 				prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(userProfile_EmailLabel.getText(), prop.getProperty("UserProfileLabel3"));
-		Assert.assertEquals(userProfile_EmailLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
-		Assert.assertEquals(userProfile_AllLabel.getText(), prop.getProperty("UserProfileLabel4"));
-		Assert.assertEquals(userProfile_AllLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(userProfileEmailLabel.getText(), prop.getProperty("UserProfileLabel3"));
+		Assert.assertEquals(userProfileEmailLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
+		Assert.assertEquals(userProfileAllLabel.getText(), prop.getProperty("UserProfileLabel4"));
+		Assert.assertEquals(userProfileAllLabel.getCssValue("color"), prop.getProperty("UserProfileLabelColor"));
 		// Verify Data On User profile Page
-		Assert.assertEquals(userProfile_Fullname.getText(), first_Name + " " + last_Name);
-		Assert.assertEquals(userProfile_Username.getText(), user_Name);
-		Assert.assertEquals(userProfile_Status.getText(), status);
-		Assert.assertTrue(userProfile_UserType.getText().startsWith(user_Type.substring(0, 12)));
-		Assert.assertEquals(userProfile_FiltaUserType.getText(), filta_User_Type);
-		Assert.assertEquals(userProfile_StoreAccess.isSelected(),
+		Assert.assertEquals(userProfileFullname.getText(), firstName + " " + lastName);
+		Assert.assertEquals(userProfileUsername.getText(), userName);
+		Assert.assertEquals(userProfileStatus.getText(), status);
+		Assert.assertTrue(userProfileUserType.getText().startsWith(userType.substring(0, 12)));
+		Assert.assertEquals(userProfileFiltaUserType.getText(), filtaUserType);
+		Assert.assertEquals(userProfileStoreAccess.isSelected(),
 				Boolean.parseBoolean(prop.getProperty("StoreAccess")));
-		Assert.assertTrue(userProfile_SendRemainder.isSelected());
-		Assert.assertEquals(userProfile_EmployeeStatus.getText(), employee_Status);
-		Assert.assertEquals(userProfile_DisplayEmployeeRecord.isSelected(),
+		Assert.assertTrue(userProfileSendRemainder.isSelected());
+		Assert.assertEquals(userProfileEmployeeStatus.getText(), employeeStatus);
+		Assert.assertEquals(userProfileDisplayEmployeeRecord.isSelected(),
 				Boolean.parseBoolean("DisplayEmployeeRecords"));
-		Assert.assertEquals(userProfile_Title.getText(), title);
-		Assert.assertEquals(userProfile_WorkPhone.getText().replace("  ", ""), work_Phone);
-		Assert.assertEquals(userProfile_Department.getText(), department);
-		Assert.assertEquals(userProfile_Mobile.getText().replace("  ", ""), mobile);
-		Assert.assertEquals(userProfile_ReportsTo.getText().replace(" ", ""), prop.getProperty("Reports_To"));
-		Assert.assertEquals(userProfile_OtherPhone.getText().replace("  ", ""), other_Phone);
-		Assert.assertEquals(userProfile_Fax.getText().replace("  ", ""), fax);
-		Assert.assertEquals(userProfile_IMType.getText(), default_IM_Type);
-		Assert.assertEquals(userProfile_IMName.getText(), iM_Name);
-		Assert.assertEquals(userPRofile_AddressStreet.getText(), address_Street);
-		Assert.assertEquals(userProfile_AddressCity.getText(), address_City);
-		Assert.assertEquals(userProfile_AddressState.getText(), address_State);
-		Assert.assertEquals(userProfile_AddressCounty.getText(), address_Country);
-		Assert.assertEquals(userProfile_WeeklyStandardHours.getText(),
+		Assert.assertEquals(userProfileTitle.getText(), title);
+		Assert.assertEquals(userProfileWorkPhone.getText().replace("  ", ""), workPhone);
+		Assert.assertEquals(userProfileDepartment.getText(), department);
+		Assert.assertEquals(userProfileMobile.getText().replace("  ", ""), mobile);
+		Assert.assertEquals(userProfileReportsTo.getText().replace(" ", ""), prop.getProperty("Reports_To"));
+		Assert.assertEquals(userProfileOtherPhone.getText().replace("  ", ""), otherPhone);
+		Assert.assertEquals(userProfileFax.getText().replace("  ", ""), fax);
+		Assert.assertEquals(userProfileIMType.getText(), defaultIMType);
+		Assert.assertEquals(userProfileIMName.getText(), iMName);
+		Assert.assertEquals(userProfileAddressStreet.getText(), addressStreet);
+		Assert.assertEquals(userProfileAddressCity.getText(), addressCity);
+		Assert.assertEquals(userProfileAddressState.getText(), addressState);
+		Assert.assertEquals(userProfileAddressCounty.getText(), addressCountry);
+		Assert.assertEquals(userProfileWeeklyStandardHours.getText(),
 				weeklyStandardHours + " : " + defaultWeeklyStandardHoursMin);
-		Assert.assertEquals(userProfile_AddressPostalZipCode.getText(), addressPostalZipCodel);
-		Assert.assertEquals(userProfile_StandardRate.getText(), standardRate);
-		Assert.assertEquals(userProfile_OverTimeRate.getText(), overTimeRate);
-		Assert.assertEquals(userPRofile_Description.getText(), description);
-		Assert.assertEquals(userProfile_PrimaryEmail.getText(), emailAddress1);
+		Assert.assertEquals(userProfileAddressPostalZipCode.getText(), addressPostalZipCodel);
+		Assert.assertEquals(userProfileStandardRate.getText(), standardRate);
+		Assert.assertEquals(userProfileOverTimeRate.getText(), overTimeRate);
+		Assert.assertEquals(userProfileDescription.getText(), description);
+		Assert.assertEquals(userProfilePrimaryEmail.getText(), emailAddress1);
 	}
 
 
 	public void checkPasswordPage()
 	{
 		editButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		// Click On Password Tab
 		tab2OnEditPage.click();
 		Assert.assertEquals(tab2OnEditPage.getCssValue("color"), prop.getProperty("EditPagePasswordColor"));
 		// Verify Password Data With The Help Of "UserPage.xlsx" sheet
-		Assert.assertEquals(passwordPage_PasswordLabel.getText(), passwordData.getCellData(0, 4));
-		Assert.assertEquals(passwordPage_PasswordLabel.getCssValue("color"), passwordData.getCellData(1, 4));
-		Assert.assertEquals(passwordPage_CurrentPasswordLabel.getText(), passwordData.getCellData(0, 0));
-		Assert.assertEquals(passwordPage_NewPasswordLabel.getText(), passwordData.getCellData(0, 1));
-		Assert.assertEquals(passwordPage_ConfirmPassword.getText(), passwordData.getCellData(0, 2));
-		Assert.assertEquals(passwordPage_Note.getText(),
+		Assert.assertEquals(passwordPagePasswordLabel.getText(), passwordData.getCellData(0, 4));
+		Assert.assertEquals(passwordPagePasswordLabel.getCssValue("color"), passwordData.getCellData(1, 4));
+		Assert.assertEquals(passwordPageCurrentPasswordLabel.getText(), passwordData.getCellData(0, 0));
+		Assert.assertEquals(passwordPageNewPasswordLabel.getText(), passwordData.getCellData(0, 1));
+		Assert.assertEquals(passwordPageConfirmPassword.getText(), passwordData.getCellData(0, 2));
+		Assert.assertEquals(passwordPageNote.getText(),
 				passwordData.getCellData(0, 3) + " " + passwordData.getCellData(1, 3));
 		// verify Alert and Validation Message On Alert
 		currentpasswordInput.sendKeys(passwordData.getCellData(0, 1));
 		saveButtonHeader.click();
 		// Handling Alert1
-		alert1 = global_Obj.alert(driver);
+		alert1 = globalObj.alert(driver);
 		Assert.assertEquals(alert1, passwordData.getCellData(1, 5));
 		newPasswordInput.sendKeys(passwordData.getCellData(0, 2));
 		saveButtonHeader.click();
 		// Handling Alert2
-		alert2 = global_Obj.alert(driver);
+		alert2 = globalObj.alert(driver);
 		Assert.assertEquals(alert2, passwordData.getCellData(1, 6));
 		saveButtonHeader.click();
-		global_Obj.alertAccept(driver);
+		globalObj.alertAccept(driver);
 		// Check Validation Message At Confirmation Message
 		confirmPasswordInput.sendKeys("KC");
-		global_Obj.wait(driver).until(
+		globalObj.wait(driver).until(
 				ExpectedConditions.textToBePresentInElement(passwordValidation, "The passwords do not match."));
 		Assert.assertEquals(passwordValidation.getText(), passwordData.getCellData(2, 2));
 		// Clear Text For NewPasswordInput And ConfirmPasswordInput And Pass Valid
@@ -1227,15 +1227,15 @@ public class UserPage implements UserPage_Interface
 		confirmPasswordInput.sendKeys(passwordData.getCellData(1, 2));
 		saveButtonHeader.click();
 		tab2OnEditPage.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(passwordErrorMessage));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(passwordErrorMessage));
 		Assert.assertEquals(passwordErrorMessage.getText(),
-				passwordData.getCellData(1, 9) + " " + user_Name + passwordData.getCellData(1, 10));
+				passwordData.getCellData(1, 9) + " " + userName + passwordData.getCellData(1, 10));
 		// Check Sugar Dashlet Message
 		currentpasswordInput.sendKeys(passwordData.getCellData(1, 0));
 		newPasswordInput.sendKeys(passwordData.getCellData(1, 1));
 		confirmPasswordInput.sendKeys(passwordData.getCellData(1, 2));
 		saveButtonHeader.click();
-		global_Obj.wait(driver)
+		globalObj.wait(driver)
 				.until(ExpectedConditions.textToBePresentInElement(passwordUpdatedLabel, "Password Updated"));
 		Assert.assertEquals(passwordUpdatedLabel.getText(), passwordData.getCellData(1, 7));
 		Assert.assertEquals(passwordUpdatedLabel2.getText(), passwordData.getCellData(1, 8));
@@ -1247,7 +1247,7 @@ public class UserPage implements UserPage_Interface
 	public void checkThemesPage()
 	{
 		editButton.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(getUserName));
 		tab3OnEditPage.click();
 		Assert.assertEquals(tab3OnEditPage.getCssValue("color"), prop.getProperty("EditPageThemeColor"));
 		Assert.assertEquals(themeLabel.getText(), prop.getProperty("ThemeLabel"));
@@ -1258,7 +1258,7 @@ public class UserPage implements UserPage_Interface
 			Assert.assertEquals(list.get(i).getText(), themeData.getCellData(1, i));
 		}
 		Assert.assertEquals(list.size(), (int) (themeData.getCellDataInt(1, 2)));
-		Assert.assertEquals(global_Obj.select(defaultTheme).getFirstSelectedOption().getText(),
+		Assert.assertEquals(globalObj.select(defaultTheme).getFirstSelectedOption().getText(),
 				themeData.getCellData(1, 1));
 //		Sa.assertAll();
 	}
@@ -1278,7 +1278,7 @@ public class UserPage implements UserPage_Interface
 		notifyOnAssignmentvalue = notifyOnAssignmentCheckBox.isSelected();
 		Assert.assertTrue(notifyOnAssignmentvalue);
 		Assert.assertTrue(importExportLabel.getText().startsWith(advancedData.getCellData(0, 1)));
-		importExportCharSet = global_Obj.select(defaultSelectedImportExport).getFirstSelectedOption().getText();
+		importExportCharSet = globalObj.select(defaultSelectedImportExport).getFirstSelectedOption().getText();
 		Assert.assertEquals(importExportCharSet, advancedData.getCellData(2, 1));
 		list = driver.findElements(By.xpath(".//div[@id='settings']//tr[3]//td[2]//select//option"));
 		for (int i = 0; i < list.size(); i++)
@@ -1387,7 +1387,7 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(localSetting.getText(), localSettingData.getCellData(0, 0));
 		Assert.assertEquals(dataFormatLabel.getText(), localSettingData.getCellData(0, 1));
 		list = driver.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[2]//select//option"));
-		dateFormat = global_Obj.select(defaultDateFormat).getFirstSelectedOption().getText();
+		dateFormat = globalObj.select(defaultDateFormat).getFirstSelectedOption().getText();
 		Assert.assertEquals("\"" + dateFormat + "\"", localSettingData.getCellData(5, 1));
 		for (int i = 0; i < list.size(); i++)
 		{
@@ -1396,7 +1396,7 @@ public class UserPage implements UserPage_Interface
 		}
 		Assert.assertEquals(currencyLabel.getText(), localSettingData.getCellData(0, 2));
 		list = driver.findElements(By.xpath(".//div[@id='locale']//tbody//tr[2]//td[4]//select//option"));
-		currency = global_Obj.select(defaultCurrency).getFirstSelectedOption().getText();
+		currency = globalObj.select(defaultCurrency).getFirstSelectedOption().getText();
 		Assert.assertEquals(currency, localSettingData.getCellData(1, 2));
 		for (int i = 0; i < list.size(); i++)
 		{
@@ -1428,7 +1428,7 @@ public class UserPage implements UserPage_Interface
 		list2.add("11.00PM");
 		list2.add("11.00 pm");
 		list2.add("11.00 PM");
-		timeFormat = global_Obj.select(defaultTimeFormat).getFirstSelectedOption().getText();
+		timeFormat = globalObj.select(defaultTimeFormat).getFirstSelectedOption().getText();
 		Assert.assertEquals(timeFormat, list2.get(0));
 		Assert.assertTrue(list2.containsAll(list2));
 		Assert.assertEquals(currencySignificantDigitsLabel.getText(), localSettingData.getCellData(0, 4));
@@ -1440,13 +1440,13 @@ public class UserPage implements UserPage_Interface
 					(int) localSettingData.getCellDataInt(i + 1, 4));
 		}
 		currencySignificantDigit = Integer
-				.parseInt(global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText());
+				.parseInt(globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText());
 		Assert.assertEquals(currencySignificantDigitsLabel, (int) localSettingData.getCellDataInt(3, 4));
 
 		Assert.assertEquals(timeZoneLabel.getText(), localSettingData.getCellData(0, 5));
 //		List = driver
 //				.findElements(By.xpath(".//div[@id='locale']//tbody//tr[4]//td[2]//select//option"));
-		timeZone = global_Obj.select(defaultTimeZone).getFirstSelectedOption().getText();
+		timeZone = globalObj.select(defaultTimeZone).getFirstSelectedOption().getText();
 		Assert.assertEquals(timeZone, localSettingData.getCellData(327 + 1, 5));
 //		for (int i = 0; i < List.size(); i++)
 //		{
@@ -1456,7 +1456,7 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(exampleLabel.getText(), localSettingData.getCellData(0, 6));
 		Assert.assertEquals(exampleTextbox.isEnabled(), false);
 		if (Integer.parseInt(
-				global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 2)
+				globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 2)
 		{
 //			System.out.println(ExampleTextbox.getAttribute("value"));
 			number = exampleTextbox.getAttribute("value");
@@ -1491,15 +1491,15 @@ public class UserPage implements UserPage_Interface
 				}
 			}
 			Assert.assertEquals(countZero, Integer.parseInt(
-					global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+					globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
 			Assert.assertEquals(countDollar, (int) localSettingData.getCellDataInt(1, 7));
 			Assert.assertEquals(countComma, (int) localSettingData.getCellDataInt(1, 8));
 			Assert.assertEquals(countDecimal, (int) localSettingData.getCellDataInt(2, 9));
 			Assert.assertEquals(countNumber, (int) localSettingData.getCellDataInt(1, 10));
 		}
-		global_Obj.select(defaultCurrencySignificantDigits).selectByVisibleText("0");
+		globalObj.select(defaultCurrencySignificantDigits).selectByVisibleText("0");
 		if (Integer.parseInt(
-				global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 0)
+				globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 0)
 		{
 			number = exampleTextbox.getAttribute("value");
 			countZero = 0;
@@ -1533,16 +1533,16 @@ public class UserPage implements UserPage_Interface
 				}
 			}
 			Assert.assertEquals(countZero, Integer.parseInt(
-					global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+					globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
 			Assert.assertEquals(countDollar, (int) localSettingData.getCellDataInt(1, 7));
 			Assert.assertEquals(countComma, (int) localSettingData.getCellDataInt(1, 8));
 			Assert.assertEquals(countDecimal, (int) localSettingData.getCellDataInt(1, 9));
 			Assert.assertEquals(countNumber, (int) localSettingData.getCellDataInt(1, 10));
 
 		}
-		global_Obj.select(defaultCurrencySignificantDigits).selectByVisibleText("1");
+		globalObj.select(defaultCurrencySignificantDigits).selectByVisibleText("1");
 		if (Integer.parseInt(
-				global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 1)
+				globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 1)
 		{
 			number = exampleTextbox.getAttribute("value");
 			countZero = 0;
@@ -1576,15 +1576,15 @@ public class UserPage implements UserPage_Interface
 				}
 			}
 			Assert.assertEquals(countZero, Integer.parseInt(
-					global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+					globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
 			Assert.assertEquals(countDollar, (int) localSettingData.getCellDataInt(1, 7));
 			Assert.assertEquals(countComma, (int) localSettingData.getCellDataInt(1, 8));
 			Assert.assertEquals(countDecimal, (int) localSettingData.getCellDataInt(2, 9));
 			Assert.assertEquals(countNumber, (int) localSettingData.getCellDataInt(1, 10));
 		}
-		global_Obj.select(defaultCurrencySignificantDigits).selectByVisibleText("3");
+		globalObj.select(defaultCurrencySignificantDigits).selectByVisibleText("3");
 		if (Integer.parseInt(
-				global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 3)
+				globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 3)
 		{
 			number = exampleTextbox.getAttribute("value");
 			countZero = 0;
@@ -1618,15 +1618,15 @@ public class UserPage implements UserPage_Interface
 				}
 			}
 			Assert.assertEquals(countZero, Integer.parseInt(
-					global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+					globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
 			Assert.assertEquals(countDollar, (int) localSettingData.getCellDataInt(1, 7));
 			Assert.assertEquals(countComma, (int) localSettingData.getCellDataInt(1, 8));
 			Assert.assertEquals(countDecimal, (int) localSettingData.getCellDataInt(2, 9));
 			Assert.assertEquals(countNumber, (int) localSettingData.getCellDataInt(1, 10));
 		}
-		global_Obj.select(defaultCurrencySignificantDigits).selectByVisibleText("4");
+		globalObj.select(defaultCurrencySignificantDigits).selectByVisibleText("4");
 		if (Integer.parseInt(
-				global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 4)
+				globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 4)
 		{
 			number = exampleTextbox.getAttribute("value");
 			countZero = 0;
@@ -1660,15 +1660,15 @@ public class UserPage implements UserPage_Interface
 				}
 			}
 			Assert.assertEquals(countZero, Integer.parseInt(
-					global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+					globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
 			Assert.assertEquals(countDollar, (int) localSettingData.getCellDataInt(1, 7));
 			Assert.assertEquals(countComma, (int) localSettingData.getCellDataInt(1, 8));
 			Assert.assertEquals(countDecimal, (int) localSettingData.getCellDataInt(2, 9));
 			Assert.assertEquals(countNumber, (int) localSettingData.getCellDataInt(1, 10));
 		}
-		global_Obj.select(defaultCurrencySignificantDigits).selectByVisibleText("5");
+		globalObj.select(defaultCurrencySignificantDigits).selectByVisibleText("5");
 		if (Integer.parseInt(
-				global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 5)
+				globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 5)
 		{
 			number = exampleTextbox.getAttribute("value");
 			countZero = 0;
@@ -1702,15 +1702,15 @@ public class UserPage implements UserPage_Interface
 				}
 			}
 			Assert.assertEquals(countZero, Integer.parseInt(
-					global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+					globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
 			Assert.assertEquals(countDollar, (int) localSettingData.getCellDataInt(1, 7));
 			Assert.assertEquals(countComma, (int) localSettingData.getCellDataInt(1, 8));
 			Assert.assertEquals(countDecimal, (int) localSettingData.getCellDataInt(2, 9));
 			Assert.assertEquals(countNumber, (int) localSettingData.getCellDataInt(1, 10));
 		}
-		global_Obj.select(defaultCurrencySignificantDigits).selectByVisibleText("6");
+		globalObj.select(defaultCurrencySignificantDigits).selectByVisibleText("6");
 		if (Integer.parseInt(
-				global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 6)
+				globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()) == 6)
 		{
 			number = exampleTextbox.getAttribute("value");
 			countZero = 0;
@@ -1744,7 +1744,7 @@ public class UserPage implements UserPage_Interface
 				}
 			}
 			Assert.assertEquals(countZero, Integer.parseInt(
-					global_Obj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
+					globalObj.select(defaultCurrencySignificantDigits).getFirstSelectedOption().getText()));
 			Assert.assertEquals(countDollar, (int) localSettingData.getCellDataInt(1, 7));
 			Assert.assertEquals(countComma, (int) localSettingData.getCellDataInt(1, 8));
 			Assert.assertEquals(countDecimal, (int) localSettingData.getCellDataInt(2, 9));
@@ -1755,7 +1755,7 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(thousandsSeparator, localSettingData.getCellData(1, 11));
 		Assert.assertEquals(nameDisplayFormatLabel.getText(), localSettingData.getCellData(0, 12) + " ");
 		list = driver.findElements(By.xpath(".//div[@id='locale']//tbody//tr[6]//td[2]//select//option"));
-		name = global_Obj.select(defaultName).getFirstSelectedOption().getText();
+		name = globalObj.select(defaultName).getFirstSelectedOption().getText();
 		Assert.assertEquals(name, localSettingData.getCellData(1, 13));
 		for (int i = 0; i < list.size(); i++)
 		{
@@ -1794,9 +1794,9 @@ public class UserPage implements UserPage_Interface
 //			System.out.println(list13.get(i).getText());
 			Assert.assertEquals(list.get(i).getText(), calendarOptionData.getCellData(i + 1, 5));
 		}
-		firstDayOfWeek = global_Obj.select(defaultFirstdayOfWeek).getFirstSelectedOption().getText();
+		firstDayOfWeek = globalObj.select(defaultFirstdayOfWeek).getFirstSelectedOption().getText();
 		Assert.assertEquals(firstDayOfWeek, calendarOptionData.getCellData(1, 5));
-		global_Obj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", cancelButtonFooter);
+		globalObj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", cancelButtonFooter);
 		cancelButtonFooter.click();
 //		Sa.assertAll();
 	}
@@ -1804,7 +1804,7 @@ public class UserPage implements UserPage_Interface
 
 	public void verifyDataOfAdvanced()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(editButton));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(editButton));
 		advancedTab.click();
 		Assert.assertEquals(advancedTabLabel.getText(), advancedData.getCellData(0, 7));
 		Assert.assertEquals(advancedTabLabel.getCssValue("color"), advancedData.getCellData(1, 7));
@@ -1870,31 +1870,31 @@ public class UserPage implements UserPage_Interface
 		Assert.assertEquals(nameDisplayTextUserPage.getText(), localSettingData.getCellData(7, 12) + " ");
 		Assert.assertEquals(calendarOption.getText(), calendarOptionData.getCellData(0, 0));
 		Assert.assertEquals(calendarOption.getCssValue("color"), calendarOptionData.getCellData(1, 0));
-		Assert.assertEquals(publish_Key.getText(), calendarOptionData.getCellData(0, 1));
-		Assert.assertEquals(publish_Key_Text.getText(), calendarOptionData.getCellData(1, 1) + " ");
-		Assert.assertEquals(publish_at_my_location.getText(), calendarOptionData.getCellData(0, 2));
-		if (publish_at_my_location_text.getText().contains("&email="))
+		Assert.assertEquals(publishKey.getText(), calendarOptionData.getCellData(0, 1));
+		Assert.assertEquals(publishKeyText.getText(), calendarOptionData.getCellData(1, 1) + " ");
+		Assert.assertEquals(publishatmylocation.getText(), calendarOptionData.getCellData(0, 2));
+		if (publishatmylocationtext.getText().contains("&email="))
 		{
-			Assert.assertEquals(publish_at_my_location_text.getText(),
+			Assert.assertEquals(publishatmylocationtext.getText(),
 					calendarOptionData.getCellData(2, 2) + emailAddress1);
 		}
 		else
 		{
-			Assert.assertEquals(publish_at_my_location_text.getText(), calendarOptionData.getCellData(1, 2));
+			Assert.assertEquals(publishatmylocationtext.getText(), calendarOptionData.getCellData(1, 2));
 		}
-		Assert.assertEquals(search_Location.getText(), calendarOptionData.getCellData(0, 3));
-		Assert.assertEquals(search_Location_Text.getText(), calendarOptionData.getCellData(1, 3));
+		Assert.assertEquals(searchLocationn.getText(), calendarOptionData.getCellData(0, 3));
+		Assert.assertEquals(searchLocationText.getText(), calendarOptionData.getCellData(1, 3));
 		Assert.assertEquals(iCal.getText(), calendarOptionData.getCellData(0, 4));
-		Assert.assertEquals(iCal_Text.getText(), calendarOptionData.getCellData(1, 4));
-		Assert.assertEquals(first_Day_Of_Week.getText(), calendarOptionData.getCellData(0, 5));
-		Assert.assertTrue(first_Day_Of_Week_Text.getText().contains(firstDayOfWeek));
-		Assert.assertTrue(first_Day_Of_Week_Text.getText().contains(calendarOptionData.getCellData(8, 5)));
-		Assert.assertEquals(layout_Option.getText(), layoutData.getCellData(0, 0));
-		Assert.assertEquals(layout_Option.getCssValue("color"), layoutData.getCellData(1, 0));
-		Assert.assertEquals(module_Menu_Filter.getText(), layoutData.getCellData(0, 1));
-		Assert.assertEquals(module_Menu_Filter_text.getText(), layoutData.getCellData(1, 1) + " ");
-		Assert.assertEquals(subPanel_Tab.getText(), layoutData.getCellData(0, 5));
-		Assert.assertEquals(subPanel_Tab_Text.getText(), layoutData.getCellData(1, 5) + " ");
+		Assert.assertEquals(iCalText.getText(), calendarOptionData.getCellData(1, 4));
+		Assert.assertEquals(firstDayOfWeekk.getText(), calendarOptionData.getCellData(0, 5));
+		Assert.assertTrue(firstDayOfWeekText.getText().contains(firstDayOfWeek));
+		Assert.assertTrue(firstDayOfWeekText.getText().contains(calendarOptionData.getCellData(8, 5)));
+		Assert.assertEquals(layoutOption.getText(), layoutData.getCellData(0, 0));
+		Assert.assertEquals(layoutOption.getCssValue("color"), layoutData.getCellData(1, 0));
+		Assert.assertEquals(moduleMenuFilter.getText(), layoutData.getCellData(0, 1));
+		Assert.assertEquals(moduleMenuFiltertext.getText(), layoutData.getCellData(1, 1) + " ");
+		Assert.assertEquals(subPanelTab.getText(), layoutData.getCellData(0, 5));
+		Assert.assertEquals(subPanelTabText.getText(), layoutData.getCellData(1, 5) + " ");
 		Assert.assertEquals(all.getText(), layoutData.getCellData(0, 8));
 		Assert.assertEquals(all.getCssValue("color"), layoutData.getCellData(1, 8));
 	}
@@ -1902,7 +1902,7 @@ public class UserPage implements UserPage_Interface
 
 	public void accessCheck()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(access));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(access));
 		access.click();
 		list = driver.findElements(By.xpath(".//div[@class='table-responsive-edit']//table//tbody//tr"));
 //		System.out.println(List.size());
@@ -2014,11 +2014,11 @@ public class UserPage implements UserPage_Interface
 //				driver.findElement(By.xpath(".//div[@id='subpanel_title_aclroles']//table//tbody//h3/span[1]"))
 //						.getText());
 		Assert.assertEquals(roles.getText(), accessData.getCellData(0, 13));
-		Assert.assertEquals(roles_Name.getText(), accessData.getCellData(0, 14));
-		Assert.assertEquals(roles_Description.getText(), accessData.getCellData(0, 15));
-		Assert.assertEquals(roles_Franchisee.getText(), accessData.getCellData(0, 16));
-		Assert.assertEquals(roles_Not_Delete.getText(), accessData.getCellData(0, 17));
-		Assert.assertEquals(roles_ALL.getText(), accessData.getCellData(0, 18));
+		Assert.assertEquals(rolesName.getText(), accessData.getCellData(0, 14));
+		Assert.assertEquals(rolesDescription.getText(), accessData.getCellData(0, 15));
+		Assert.assertEquals(rolesFranchisee.getText(), accessData.getCellData(0, 16));
+		Assert.assertEquals(rolesNotDelete.getText(), accessData.getCellData(0, 17));
+		Assert.assertEquals(rolesALL.getText(), accessData.getCellData(0, 18));
 //		Sa.assertAll();
 	}
 
@@ -2028,7 +2028,7 @@ public class UserPage implements UserPage_Interface
 		list = driver.findElements(By.tagName("a"));
 		for (int i = 0; i < list.size(); i++)
 		{
-			System.out.println("URL name => " + list.get(i).getText());
+			System.out.println("URL Name => " + list.get(i).getText());
 		}
 	}
 
@@ -2101,7 +2101,7 @@ public class UserPage implements UserPage_Interface
 	{
 		allLinks = findAllLinks(driver);
 
-		System.out.println("Total number of elements found " + allLinks.size());
+		System.out.println("Total Number Of Elements Found " + allLinks.size());
 
 		for (WebElement element : allLinks)
 		{
@@ -2110,7 +2110,7 @@ public class UserPage implements UserPage_Interface
 
 			{
 
-				System.out.println("URL: " + element.getAttribute("href") + " returned "
+				System.out.println("URL: " + element.getAttribute("href") + " Returned "
 						+ isLinkBroken(new URL(element.getAttribute("href"))));
 
 				// System.out.println("URL: " + element.getAttribute("outerhtml")+ " returned "
@@ -2122,7 +2122,7 @@ public class UserPage implements UserPage_Interface
 
 			{
 
-				System.out.println("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; "
+				System.out.println("At " + element.getAttribute("innerHTML") + " Exception Occured -&gt; "
 						+ exp.getMessage());
 
 			}

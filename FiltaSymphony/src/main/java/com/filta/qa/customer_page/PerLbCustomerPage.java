@@ -20,35 +20,35 @@ public class PerLbCustomerPage
 {
 	private WebDriver driver;
 	private WebElement webEelement;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 	private Login login;
 	private SoftAssert sa;
-	private String customer_URL;
+	private String customerURL;
 	private ReadExcelData perLbData;
 	private ReadExcelData pricingData;
 	private ReadExcelData unitDataExcel;
 	private ReadExcelData marketingData;
 	private ReadExcelData defaultPricingData;
-	private String default_Level1Charge;
-	private String default_AdditionalRate;
-	private String default_First;
-	private String default_FryerSize1;
-	private String default_FryerChargeDefault;
-	private String default_FryerCleanOnlyCharge;
-	private String default_FryerSize2;
-	private String default_FryerChargeDefault2;
-	private String default_FryerCleanOnlyCharge0;
-	private String default_FixedCostCharge;
-	private String default_FCMonthly;
-	private String default_FCWeekly;
-	private String default_FiltaBioDefault;
-	private String default_FGOilCharge;
-	private String default_FGPerBox;
-	private String default_FGTankRental;
-	private String default_DrainFoamDefault;
-	private String default_FCValue;
-	private String default_EstPeriodValue;
+	private String defaultLevel1Charge;
+	private String defaultAdditionalRate;
+	private String defaultFirst;
+	private String defaultFryerSize1;
+	private String defaultFryerChargeDefault;
+	private String defaultFryerCleanOnlyCharge;
+	private String defaultFryerSize2;
+	private String defaultFryerChargeDefault2;
+	private String defaultFryerCleanOnlyCharge0;
+	private String defaultFixedCostCharge;
+	private String defaultFCMonthly;
+	private String defaultFCWeekly;
+	private String defaultFiltaBioDefault;
+	private String defaultFGOilCharge;
+	private String defaultFGPerBox;
+	private String defaultFGTankRental;
+	private String defaultDrainFoamDefault;
+	private String defaultFCValue;
+	private String defaultEstPeriodValue;
 	private String default_PaymentDefault;
 	private String actualPayment;
 	private String actualCustomer;
@@ -73,7 +73,7 @@ public class PerLbCustomerPage
 	public WebElement customer;
 
 	@FindBy(how = How.LINK_TEXT, using = "Create")
-	private WebElement create_Customer;
+	private WebElement createCustomer;
 
 	@FindBy(how = How.CSS, using = "#name")
 	private WebElement keyContact;
@@ -95,27 +95,27 @@ public class PerLbCustomerPage
 
 	@FindBy(how = How.CSS, using = "#Accounts0emailAddress0")
 	private WebElement primaryEmail;
-	
+
 	@FindBy(how = How.XPATH, using = ".//div[@class='popup-table-overflow']//tbody[1]//tr[3]//td[1]//a")
 	private WebElement locationSelect2;
-	
+
 	@FindBy(how = How.CSS, using = "#billing_address_street")
-	private WebElement site_Street;
+	private WebElement siteStreet;
 
 	@FindBy(how = How.CSS, using = "#billing_address_city")
-	private WebElement site_City;
+	private WebElement siteCity;
 
 	@FindBy(how = How.CSS, using = "#billing_address_state")
-	private WebElement site_State;
+	private WebElement siteState;
 
 	@FindBy(how = How.CSS, using = "#billing_address_postalcode")
-	private WebElement site_PostalCode;
+	private WebElement sitePostalCode;
 
 	@FindBy(how = How.CSS, using = "#billing_address_country")
-	private WebElement site_Country;
+	private WebElement siteCountry;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='phone_office']")
-	private WebElement office_Phone;
+	private WebElement officePhone;
 
 	@FindBy(how = How.CSS, using = "#ext_no")
 	private WebElement ext;
@@ -130,7 +130,7 @@ public class PerLbCustomerPage
 	private WebElement mobile;
 
 	@FindBy(how = How.CSS, using = "#nca_supplier_number")
-	private WebElement nca_Supplier;
+	private WebElement ncaSupplier;
 
 	@FindBy(how = How.CSS, using = "#shipping_address_street")
 	private WebElement invoiceStreet;
@@ -148,7 +148,7 @@ public class PerLbCustomerPage
 	private WebElement invoiceCountry;
 
 	@FindBy(how = How.CSS, using = "#survey_frequency")
-	private WebElement service_Frequency;
+	private WebElement serviceFrequency;
 
 	@FindBy(how = How.LINK_TEXT, using = "Pricing & Estimating Info")
 	private WebElement pricing;
@@ -160,7 +160,7 @@ public class PerLbCustomerPage
 	private WebElement filtaFry;
 
 	@FindBy(how = How.CSS, using = "#charge_type")
-	private WebElement pricing_Model;
+	private WebElement pricingModel;
 
 	@FindBy(how = How.CSS, using = "#ajaxloading_mask")
 	private WebElement lodar;
@@ -169,7 +169,7 @@ public class PerLbCustomerPage
 	private WebElement filtaCool;
 
 	@FindBy(how = How.CSS, using = "#filtacool_frequency")
-	private WebElement filtaCool_Frequency;
+	private WebElement filtaCoolFrequency;
 
 	@FindBy(how = How.CSS, using = "#rental_rate")
 	private WebElement rentalRate;
@@ -190,7 +190,7 @@ public class PerLbCustomerPage
 	private WebElement tankRent;
 
 	@FindBy(how = How.CSS, using = "#oil_charge")
-	private WebElement oil_Charge;
+	private WebElement oilCharge;
 
 	@FindBy(how = How.CSS, using = "#price_per_box")
 	private WebElement priceperBox;
@@ -202,19 +202,19 @@ public class PerLbCustomerPage
 	private WebElement charge;
 
 	@FindBy(how = How.CSS, using = "#inv_period")
-	private WebElement inv_Period;
+	private WebElement invPeriod;
 
 	@FindBy(how = How.XPATH, using = ".//td[@class='edit-table-row1']//label[1]//input[@type='radio' and @id='review_before_sending_inv']")
-	private WebElement perJob_Yes;
+	private WebElement perJobYes;
 
 	@FindBy(how = How.XPATH, using = ".//td[@class='edit-table-row1']//label[2]//input[@type='radio' and @id='review_before_sending_inv']")
-	private WebElement perJob_No;
+	private WebElement perJobNo;
 
 	@FindBy(how = How.CSS, using = "#payment_term")
 	private WebElement payement;
 
 	@FindBy(how = How.LINK_TEXT, using = "Marketing & Categories")
-	private WebElement marketing_Categories;
+	private WebElement marketingCategories;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='type-input']")
 	private WebElement typeMarketing;
@@ -226,22 +226,22 @@ public class PerLbCustomerPage
 	private WebElement casinos;
 
 	@FindBy(how = How.XPATH, using = ".//li[@data-text='A&W Restaurants']")
-	private WebElement a_W;
+	private WebElement aW;
 
 	@FindBy(how = How.CSS, using = "#sub_type")
-	private WebElement sub_Type;
+	private WebElement subType;
 
 	@FindBy(how = How.CSS, using = "#contract_caterers")
 	private WebElement contract;
 
 	@FindBy(how = How.CSS, using = "#btn_assigned_user_name")
-	private WebElement salespersonselect;
+	private WebElement salesPersonSelect;
 
 	@FindBy(how = How.CSS, using = "#affiliation")
 	private WebElement affiliation;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='chain-input']")
-	private WebElement chaininput;
+	private WebElement chainInput;
 
 	@FindBy(how = How.CSS, using = "#nca")
 	private WebElement nCASelection;
@@ -250,7 +250,7 @@ public class PerLbCustomerPage
 	private WebElement region;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation_Sales")
-	private WebElement automation_Sales;
+	private WebElement automationSales;
 
 	@FindBy(how = How.PARTIAL_LINK_TEXT, using = "Automation")
 	private WebElement automation;
@@ -274,7 +274,7 @@ public class PerLbCustomerPage
 	private WebElement availableServiceTime;
 
 	@FindBy(how = How.CSS, using = "#dump_fre_description")
-	private WebElement dump_Fre_Description;
+	private WebElement dumpFryerDescription;
 
 	@FindBy(how = How.CSS, using = "#waste_oil_renewal_date_trigger")
 	private WebElement wasteOilRenewal;
@@ -328,7 +328,7 @@ public class PerLbCustomerPage
 	private WebElement fryerCleanOnly;
 
 	@FindBy(how = How.XPATH, using = ".//input[@name='location_name']")
-	private WebElement fryer_Location;
+	private WebElement fryerLocation;
 
 	@FindBy(how = How.XPATH, using = ".//li[text()='Location1']")
 	private WebElement locationNameSelect;
@@ -343,7 +343,7 @@ public class PerLbCustomerPage
 	private WebElement locationSelect;
 
 	@FindBy(how = How.LINK_TEXT, using = "Location1")
-	private WebElement locationname;
+	private WebElement locationNamee;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='send_service_survey']")
 	private WebElement sendServiceSurvey;
@@ -433,7 +433,7 @@ public class PerLbCustomerPage
 	private WebElement defaultPayment;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='SAVE_HEADER']")
-	private WebElement save_Header;
+	private WebElement saveHeaderr;
 
 	@FindBy(how = How.XPATH, using = ".//table[@id='ListTable']//tr[3]//td[3]")
 	private WebElement customername;
@@ -451,10 +451,10 @@ public class PerLbCustomerPage
 	private WebElement selectAll;
 
 	@FindBy(how = How.CSS, using = ".//input[@id='customers_fryer_locations_create_button']")
-	public WebElement locationCreate_2;
+	public WebElement locationCreate2;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='subpanel_customers_fryer_locations_newDiv']//table[@class='dcQuickEdit']//div[@class='action_buttons action-rows']//input[@type='submit' and @id='FR_FryerLocation_subpanel_save_button']")
-	public WebElement locationSave_2;
+	public WebElement locationSave2;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='list_subpanel_customers_fryer_locations']//table[@class='list view']//tbody//tr//tbody//tr//td[2]//span")
 	public WebElement locationCheck;
@@ -467,8 +467,8 @@ public class PerLbCustomerPage
 
 	public PerLbCustomerPage(WebDriver driver)
 	{
-		global_Obj = new Global();
-		prop = global_Obj.readProperties();
+		globalObj = new Global();
+		prop = globalObj.readProperties();
 		this.driver = driver;
 		login = new Login(driver);
 		sa = new SoftAssert();
@@ -492,62 +492,62 @@ public class PerLbCustomerPage
 	{
 		admin.click();
 		manageInvoice.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(defaultPricingTab));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(defaultPricingTab));
 		defaultPricingTab.click();
 		// FiltaFry Per Lb
 		if (level1Charge.getAttribute("value").equals(""))
 		{
 			level1Charge.sendKeys(defaultPricingData.getCellDataInt(1, 0) + "");
 		}
-		default_Level1Charge = level1Charge.getAttribute("value");
+		defaultLevel1Charge = level1Charge.getAttribute("value");
 		if (additionalRate.getAttribute("value").equals(""))
 		{
 			additionalRate.sendKeys(defaultPricingData.getCellDataInt(2, 0) + "");
 		}
-		default_AdditionalRate = additionalRate.getAttribute("value");
+		defaultAdditionalRate = additionalRate.getAttribute("value");
 		if (first.getAttribute("value").equals("") || first.getText().equals("0"))
 		{
 			first.sendKeys((int) defaultPricingData.getCellDataInt(2, 0) + "");
 		}
-		default_First = first.getAttribute("value");
+		defaultFirst = first.getAttribute("value");
 
 		// FiltaFry Per Fryer
 		if (fryerSize1.getAttribute("value").equals(""))
 		{
 			fryerSize1.sendKeys((int) defaultPricingData.getCellDataInt(1, 1) + "");
 		}
-		default_FryerSize1 = fryerSize1.getAttribute("value");
+		defaultFryerSize1 = fryerSize1.getAttribute("value");
 		if (fryerChargeDefault.getAttribute("value").equals(""))
 		{
 			fryerChargeDefault.sendKeys(defaultPricingData.getCellDataInt(2, 1) + "");
 		}
-		default_FryerChargeDefault = fryerChargeDefault.getAttribute("value");
+		defaultFryerChargeDefault = fryerChargeDefault.getAttribute("value");
 		if (fryerCleanOnlyCharge.getAttribute("value").equals(""))
 		{
 			fryerCleanOnlyCharge.sendKeys(defaultPricingData.getCellDataInt(3, 1) + "");
 		}
-		default_FryerCleanOnlyCharge = fryerCleanOnlyCharge.getAttribute("value");
+		defaultFryerCleanOnlyCharge = fryerCleanOnlyCharge.getAttribute("value");
 
 		// Set/Fixed Charge
 		if (fixedCostCharge.getAttribute("value").equals(""))
 		{
 			fixedCostCharge.sendKeys(defaultPricingData.getCellDataInt(1, 2) + "");
 		}
-		default_FixedCostCharge = fixedCostCharge.getAttribute("value");
+		defaultFixedCostCharge = fixedCostCharge.getAttribute("value");
 
 		// FiltaCool
 		if (fCMonthly.getAttribute("value").equals(""))
 		{
 			fCMonthly.sendKeys(defaultPricingData.getCellDataInt(1, 3) + "");
 		}
-		default_FCMonthly = fCMonthly.getAttribute("value");
+		defaultFCMonthly = fCMonthly.getAttribute("value");
 		if (fCWeekly.getAttribute("value").equals(""))
 		{
 			fCWeekly.sendKeys(defaultPricingData.getCellDataInt(2, 3) + "");
 		}
-		default_FCWeekly = fCWeekly.getAttribute("value");
+		defaultFCWeekly = fCWeekly.getAttribute("value");
 
-		default_FCValue = global_Obj.select(defaultBillingPeriod).getFirstSelectedOption().getText();
+		defaultFCValue = globalObj.select(defaultBillingPeriod).getFirstSelectedOption().getText();
 
 		// FiltaBio
 
@@ -555,36 +555,36 @@ public class PerLbCustomerPage
 		{
 			filtaBioDefault.sendKeys(defaultPricingData.getCellDataInt(1, 4) + "");
 		}
-		default_FiltaBioDefault = filtaBioDefault.getAttribute("value");
+		defaultFiltaBioDefault = filtaBioDefault.getAttribute("value");
 
 		// FiltaGold
 		if (fGOilCharge.getAttribute("value").equals(""))
 		{
 			fGOilCharge.sendKeys(defaultPricingData.getCellDataInt(1, 5) + "");
 		}
-		default_FGOilCharge = fGOilCharge.getAttribute("value");
+		defaultFGOilCharge = fGOilCharge.getAttribute("value");
 		if (fGPerBox.getAttribute("value").equals(""))
 		{
 			fGPerBox.sendKeys(defaultPricingData.getCellDataInt(2, 5) + "");
 		}
-		default_FGPerBox = fGPerBox.getAttribute("value");
+		defaultFGPerBox = fGPerBox.getAttribute("value");
 		if (fGTankRental.getAttribute("value").equals(""))
 		{
 			fGTankRental.sendKeys(defaultPricingData.getCellDataInt(3, 5) + "");
 		}
-		default_FGTankRental = fGTankRental.getAttribute("value");
+		defaultFGTankRental = fGTankRental.getAttribute("value");
 
 		// DrainFoam
 		if (drainFoamDefault.getAttribute("value").equals(""))
 		{
 			drainFoamDefault.sendKeys(defaultPricingData.getCellDataInt(1, 6) + "");
 		}
-		default_DrainFoamDefault = drainFoamDefault.getAttribute("value");
+		defaultDrainFoamDefault = drainFoamDefault.getAttribute("value");
 
 		// EstPeriod
-		default_EstPeriodValue = global_Obj.select(defaultEstPeriod).getFirstSelectedOption().getText();
-		default_PaymentDefault = global_Obj.select(defaultPayment).getFirstSelectedOption().getText();
-		global_Obj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", saveHeader);
+		defaultEstPeriodValue = globalObj.select(defaultEstPeriod).getFirstSelectedOption().getText();
+		default_PaymentDefault = globalObj.select(defaultPayment).getFirstSelectedOption().getText();
+		globalObj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", saveHeader);
 		saveHeader.click();
 		String CustomerName = goToCustomer();
 		return CustomerName;
@@ -593,14 +593,14 @@ public class PerLbCustomerPage
 
 	public String goToCustomer()
 	{
-		global_Obj.action(driver).moveToElement(customerTab).build().perform();
-		global_Obj.action(driver).moveToElement(customer).click().build().perform();
-		global_Obj.wait(driver)
+		globalObj.action(driver).moveToElement(customerTab).build().perform();
+		globalObj.action(driver).moveToElement(customer).click().build().perform();
+		globalObj.wait(driver)
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//a[@id='create_link']")));
-		customer_URL = driver.getCurrentUrl();
-		sa.assertEquals(customer_URL, perLbData.getCellData(1, 0));
+		customerURL = driver.getCurrentUrl();
+		sa.assertEquals(customerURL, perLbData.getCellData(1, 0));
 		selectAll.click();
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(
 				".//table[@class='paginationTable']//td[@class='paginationActionButtons']//span[@id='selectedRecordsTop' and @class='show']")));
 		int count = Integer.parseInt(driver.findElement(By.xpath(
 				".//table[@class='paginationTable']//td[@class='paginationActionButtons']//span[@id='selectedRecordsTop' and @class='show']//input"))
@@ -634,7 +634,7 @@ public class PerLbCustomerPage
 
 	public void createCustomer()
 	{
-		create_Customer.click();
+		createCustomer.click();
 	}
 
 
@@ -649,41 +649,41 @@ public class PerLbCustomerPage
 		sendServiceSurvey.click();
 		sendEIR.click();
 		primaryEmail.sendKeys(perLbData.getCellData(1, 8));
-		site_Street.sendKeys(perLbData.getCellData(1, 9));
-		site_City.sendKeys(perLbData.getCellData(1, 10));
-		site_State.sendKeys(perLbData.getCellData(1, 11));
-		site_PostalCode.sendKeys((int) perLbData.getCellDataInt(1, 12) + "");
-		site_Country.sendKeys(perLbData.getCellData(1, 13));
+		siteStreet.sendKeys(perLbData.getCellData(1, 9));
+		siteCity.sendKeys(perLbData.getCellData(1, 10));
+		siteState.sendKeys(perLbData.getCellData(1, 11));
+		sitePostalCode.sendKeys((int) perLbData.getCellDataInt(1, 12) + "");
+		siteCountry.sendKeys(perLbData.getCellData(1, 13));
 //		Office_Phone.sendKeys(PerFryerData.getCellData(1, 14));
 		ext.sendKeys((int) perLbData.getCellDataInt(1, 15) + "");
 		arrivalNotes.sendKeys(perLbData.getCellData(1, 16));
 		departureNotes.sendKeys(perLbData.getCellData(1, 17));
 //		Mobile.sendKeys((int) PerFryerData.getCellDataInt(1, 18) + "");
-		nca_Supplier.sendKeys((int) perLbData.getCellDataInt(1, 19) + "");
+		ncaSupplier.sendKeys((int) perLbData.getCellDataInt(1, 19) + "");
 		invoiceStreet.sendKeys(perLbData.getCellData(1, 20));
 		invoiceCity.sendKeys(perLbData.getCellData(1, 21));
 		invoiceState.sendKeys(perLbData.getCellData(1, 22));
 		invoicePostal.sendKeys((int) perLbData.getCellDataInt(1, 23) + "");
 		invoiceCountry.sendKeys(perLbData.getCellData(1, 24));
-		global_Obj.select(service_Frequency).selectByVisibleText(perLbData.getCellData(1, 25));
+		globalObj.select(serviceFrequency).selectByVisibleText(perLbData.getCellData(1, 25));
 	}
 
 
 	public void pricing()
 	{
 		pricing.click();
-		global_Obj.select(defaultPricing).selectByVisibleText(pricingData.getCellData(1, 4));
+		globalObj.select(defaultPricing).selectByVisibleText(pricingData.getCellData(1, 4));
 
 		sa.assertEquals(prop.getProperty("FiltaFryCheckBox"), filtaFry.isSelected());
 		if (filtaFry.isSelected() == false)
 		{
 			filtaFry.click();
 			lodar();
-			global_Obj.select(pricing_Model).selectByVisibleText("Per lb");
+			globalObj.select(pricingModel).selectByVisibleText("Per lb");
 			lodar();
-			sa.assertEquals(actualLevel1Charge.getAttribute("value"), default_Level1Charge);
-			sa.assertEquals(actualFirst.getAttribute("value"), default_First);
-			sa.assertEquals(actualAdditionalRate.getAttribute("value"), default_AdditionalRate);
+			sa.assertEquals(actualLevel1Charge.getAttribute("value"), defaultLevel1Charge);
+			sa.assertEquals(actualFirst.getAttribute("value"), defaultFirst);
+			sa.assertEquals(actualAdditionalRate.getAttribute("value"), defaultAdditionalRate);
 		}
 		else
 		{
@@ -694,15 +694,15 @@ public class PerLbCustomerPage
 		if (filtaCool.isSelected() == false)
 		{
 			filtaCool.click();
-			global_Obj.wait(driver)
+			globalObj.wait(driver)
 					.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.cssSelector("#rental_rate")));
 			lodar();
-			global_Obj.select(filtaCool_Frequency).selectByVisibleText(pricingData.getCellData(1, 1));
+			globalObj.select(filtaCoolFrequency).selectByVisibleText(pricingData.getCellData(1, 1));
 			if (rentalRate.getAttribute("value").equals(""))
 			{
 				rentalRate.sendKeys((int) pricingData.getCellDataInt(2, 1) + "");
 			}
-			sa.assertEquals(rentalRate, default_FCWeekly);
+			sa.assertEquals(rentalRate, defaultFCWeekly);
 		}
 
 		sa.assertEquals(prop.getProperty("FiltaBioCheckBox"), filtaBio.isSelected());
@@ -715,7 +715,7 @@ public class PerLbCustomerPage
 				payCustomer.sendKeys((int) pricingData.getCellDataInt(1, 2) + "");
 			}
 		}
-		sa.assertEquals(payCustomer, default_FiltaBioDefault);
+		sa.assertEquals(payCustomer, defaultFiltaBioDefault);
 
 		sa.assertEquals(prop.getProperty("FiltaGoldCheckBox"), filtaGold.isSelected());
 		if (filtaGold.isSelected() == false)
@@ -730,18 +730,18 @@ public class PerLbCustomerPage
 			{
 				tankRent.sendKeys((int) pricingData.getCellDataInt(2, 3) + "");
 			}
-			sa.assertEquals(tankRent, default_FGTankRental);
-			if (oil_Charge.getAttribute("value").equals(""))
+			sa.assertEquals(tankRent, defaultFGTankRental);
+			if (oilCharge.getAttribute("value").equals(""))
 			{
-				oil_Charge.sendKeys((int) pricingData.getCellDataInt(3, 3) + "");
+				oilCharge.sendKeys((int) pricingData.getCellDataInt(3, 3) + "");
 			}
 
-			sa.assertEquals(oil_Charge, default_FGOilCharge);
+			sa.assertEquals(oilCharge, defaultFGOilCharge);
 			if (priceperBox.getAttribute("value").equals(""))
 			{
 				priceperBox.sendKeys((int) pricingData.getCellDataInt(4, 3) + "");
 			}
-			sa.assertEquals(priceperBox, default_FGPerBox);
+			sa.assertEquals(priceperBox, defaultFGPerBox);
 		}
 
 		sa.assertEquals(prop.getProperty("DrainFoamCheckBox"), drainFoam.isSelected());
@@ -754,19 +754,19 @@ public class PerLbCustomerPage
 				charge.sendKeys((int) pricingData.getCellDataInt(1, 5) + "");
 			}
 		}
-		sa.assertEquals(charge, default_DrainFoamDefault);
-		global_Obj.select(inv_Period).selectByVisibleText(pricingData.getCellData(1, 6));
-		if (global_Obj.select(inv_Period).getFirstSelectedOption().getText().equals(pricingData.getCellData(1, 6)))
+		sa.assertEquals(charge, defaultDrainFoamDefault);
+		globalObj.select(invPeriod).selectByVisibleText(pricingData.getCellData(1, 6));
+		if (globalObj.select(invPeriod).getFirstSelectedOption().getText().equals(pricingData.getCellData(1, 6)))
 		{
-			sa.assertEquals(true, perJob_Yes.isEnabled());
-			sa.assertEquals(true, perJob_No.isEnabled());
-			sa.assertEquals(true, perJob_Yes.isSelected());
+			sa.assertEquals(true, perJobYes.isEnabled());
+			sa.assertEquals(true, perJobNo.isEnabled());
+			sa.assertEquals(true, perJobYes.isSelected());
 		}
 		else
 		{
 			System.out.println("It's not Per Job");
 		}
-		global_Obj.select(payement).selectByVisibleText(pricingData.getCellData(1, 7));
+		globalObj.select(payement).selectByVisibleText(pricingData.getCellData(1, 7));
 		actualPayment = driver.findElement(By.xpath(".//select[@id='payment_term']//option[1]")).getText();
 		sa.assertEquals(actualPayment, default_PaymentDefault);
 	}
@@ -774,23 +774,23 @@ public class PerLbCustomerPage
 
 	public void marketing()
 	{
-		marketing_Categories.click();
+		marketingCategories.click();
 		typeMarketing.click();
-		global_Obj.action(driver).moveToElement(amusementPark).click().build().perform();
-		global_Obj.action(driver).moveToElement(casinos).click().build().perform();
+		globalObj.action(driver).moveToElement(amusementPark).click().build().perform();
+		globalObj.action(driver).moveToElement(casinos).click().build().perform();
 		typeMarketing.click();
-		sub_Type.sendKeys(marketingData.getCellData(1, 0));
-		global_Obj.select(contract).selectByVisibleText("American Food and Vending");
-		salespersonselect.click();
+		subType.sendKeys(marketingData.getCellData(1, 0));
+		globalObj.select(contract).selectByVisibleText("American Food and Vending");
+		salesPersonSelect.click();
 		tabs = new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tabs.get(1));
-		automation_Sales.click();
+		automationSales.click();
 		driver.switchTo().window(tabs.get(0));
 		affiliation.sendKeys(marketingData.getCellData(1, 1));
-		chaininput.sendKeys(marketingData.getCellData(1, 2));
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(a_W));
-		global_Obj.action(driver).moveToElement(a_W).click().build().perform();
-		global_Obj.select(nCASelection).selectByVisibleText(marketingData.getCellData(1, 3));
+		chainInput.sendKeys(marketingData.getCellData(1, 2));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(aW));
+		globalObj.action(driver).moveToElement(aW).click().build().perform();
+		globalObj.select(nCASelection).selectByVisibleText(marketingData.getCellData(1, 3));
 		region.sendKeys(marketingData.getCellData(1, 4));
 		// territory.click();
 		tabs = new ArrayList<String>(driver.getWindowHandles());
@@ -808,20 +808,20 @@ public class PerLbCustomerPage
 		wasteOil.sendKeys(unitDataExcel.getCellData(1, 2));
 		rTI.sendKeys(unitDataExcel.getCellData(1, 3));
 		availableServiceTime.sendKeys(unitDataExcel.getCellData(1, 4));
-		dump_Fre_Description.sendKeys(unitDataExcel.getCellData(1, 5));
+		dumpFryerDescription.sendKeys(unitDataExcel.getCellData(1, 5));
 		wasteOilRenewal.click();
 		today.click();
 		renewaldate.click();
 		rTIRenewalDate.click();
 		today.click();
 		rTIDate.click();
-		save_Header.click();
+		saveHeaderr.click();
 	}
 
 
 	public void location()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Other")));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Other")));
 		try
 		{
 			Thread.sleep(2000);
@@ -853,16 +853,16 @@ public class PerLbCustomerPage
 
 	public void fryer()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fryers")));
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Fryers")));
 		// Fryers.click();
-		global_Obj.action(driver).moveToElement(fryers).click().build().perform();
-		global_Obj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", createFryer);
+		globalObj.action(driver).moveToElement(fryers).click().build().perform();
+		globalObj.jsReturn(driver).executeScript("arguments[0].scrollIntoView();", createFryer);
 		if (fryersCheck.getText().contains("(0 - 0 of 0)"))
 		{
 			createFryer.click();
 			loadar2();
 			lodar();
-			global_Obj.wait(driver).until(ExpectedConditions.visibilityOf(fryer));
+			globalObj.wait(driver).until(ExpectedConditions.visibilityOf(fryer));
 			fryer.sendKeys("F1");
 			fryerSize.sendKeys("50");
 			fryerSort.click();
@@ -947,14 +947,14 @@ public class PerLbCustomerPage
 
 	private void lodar()
 	{
-		global_Obj.wait(driver)
+		globalObj.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxloading_mask")));
 	}
 
 
 	public void loadar2()
 	{
-		global_Obj.wait(driver)
+		globalObj.wait(driver)
 				.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("#ajaxStatusDiv")));
 	}
 

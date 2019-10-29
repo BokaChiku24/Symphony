@@ -22,7 +22,7 @@ public class LoginPage implements LoginPage_Interface
 {
 	private WebDriver driver;
 	private Properties prop;
-	private Global global_Obj;
+	private Global globalObj;
 	private List<WebElement> list;
 	private ArrayList<String> handles;
 	private ArrayList<String> handles2;
@@ -52,22 +52,22 @@ public class LoginPage implements LoginPage_Interface
 	private WebElement pWord;
 
 	@FindBy(how = How.XPATH, using = ".//label[@for='user_name']")
-	private WebElement uName_Label;
+	private WebElement uNameLabel;
 
 	@FindBy(how = How.XPATH, using = ".//label[@for='user_password']")
-	private WebElement pWord_Label;
+	private WebElement pWordLabel;
 
 	@FindBy(how = How.XPATH, using = ".//tbody//tr[7]//td[@scope='row']")
-	private WebElement language_Label;
+	private WebElement languageLabel;
 
 	@FindBy(how = How.XPATH, using = ".//input[@title='Log In']")
-	private WebElement login_Label;
+	private WebElement loginLabel;
 
 	public LoginPage(WebDriver driver)
 	{
-		global_Obj = new Global();
+		globalObj = new Global();
 		this.driver = driver;
-		prop = global_Obj.readProperties();
+		prop = globalObj.readProperties();
 		PageFactory.initElements(driver, this);
 	}
 
@@ -82,7 +82,7 @@ public class LoginPage implements LoginPage_Interface
 		Assert.assertEquals(list.get(0).getText(), prop.getProperty("english"));
 		Assert.assertEquals(list.get(1).getText(), prop.getProperty("german"));
 		Assert.assertEquals(list.size(), Integer.parseInt(prop.getProperty("LanguageSize")));
-		Assert.assertEquals(global_Obj.select(language).getFirstSelectedOption().getText(),
+		Assert.assertEquals(globalObj.select(language).getFirstSelectedOption().getText(),
 				prop.getProperty("english"));
 	}
 
@@ -92,7 +92,7 @@ public class LoginPage implements LoginPage_Interface
 		if (footer.getText().startsWith("Server response time") && footer.getText().endsWith(
 				"All other company and product names may be trademarks of the respective companies with which they are associated."))
 		{
-			System.out.println("Footer test pass");
+			System.out.println("Footer Test Pass");
 		}
 	}
 
@@ -127,7 +127,7 @@ public class LoginPage implements LoginPage_Interface
 		list = driver.findElements(By.tagName("a"));
 		for (int i = 0; i < list.size(); i++)
 		{
-			System.out.println("URL name => " + list.get(i).getText());
+			System.out.println("URL Name => " + list.get(i).getText());
 		}
 	}
 
@@ -200,7 +200,7 @@ public class LoginPage implements LoginPage_Interface
 	{
 		allLinks = findAllLinks(driver);
 
-		System.out.println("Total number of elements found " + allLinks.size());
+		System.out.println("Total Number Of Elements Found " + allLinks.size());
 
 		for (WebElement element : allLinks)
 		{
@@ -209,7 +209,7 @@ public class LoginPage implements LoginPage_Interface
 
 			{
 
-				System.out.println("URL: " + element.getAttribute("href") + " returned "
+				System.out.println("URL: " + element.getAttribute("href") + " Returned "
 						+ isLinkBroken(new URL(element.getAttribute("href"))));
 
 				// System.out.println("URL: " + element.getAttribute("outerhtml")+ " returned "
@@ -221,7 +221,7 @@ public class LoginPage implements LoginPage_Interface
 
 			{
 
-				System.out.println("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; "
+				System.out.println("At " + element.getAttribute("innerHTML") + " Exception Occured -&gt; "
 						+ exp.getMessage());
 
 			}
@@ -240,10 +240,10 @@ public class LoginPage implements LoginPage_Interface
 
 	public void checkTextBoxLabel()
 	{
-		Assert.assertEquals(uName_Label.getText(), prop.getProperty("LoginUnameLabel"));
-		Assert.assertEquals(pWord_Label.getText(), prop.getProperty("LoginPwordLabel"));
-		Assert.assertEquals(language_Label.getText(), prop.getProperty("LoginLanguageLabel"));
-		Assert.assertEquals(login_Label.getAttribute("value"), prop.getProperty("LoginLabel"));
+		Assert.assertEquals(uNameLabel.getText(), prop.getProperty("LoginUnameLabel"));
+		Assert.assertEquals(pWordLabel.getText(), prop.getProperty("LoginPwordLabel"));
+		Assert.assertEquals(languageLabel.getText(), prop.getProperty("LoginLanguageLabel"));
+		Assert.assertEquals(loginLabel.getAttribute("value"), prop.getProperty("LoginLabel"));
 	}
 
 

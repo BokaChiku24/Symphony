@@ -21,7 +21,7 @@ import com.filta.qa.util.Global;
 public class ForgetPassword implements ForgotPassword_Interface
 {
 	private WebDriver driver;
-	private Global global_Obj;
+	private Global globalObj;
 	private Properties prop;
 	private boolean uName;
 	private boolean email;
@@ -31,35 +31,35 @@ public class ForgetPassword implements ForgotPassword_Interface
 	private List<WebElement> allLinks;
 
 	@FindBy(how = How.LINK_TEXT, using = "Forgot Password?")
-	private WebElement forgot_Password;
+	private WebElement forgotPassword;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='forgot_password_dialog']//input[@id='fp_user_name']")
-	private WebElement forgot_Password_Username;
+	private WebElement forgotPasswordUsername;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='forgot_password_dialog']//input[@id='fp_user_mail']")
-	private WebElement forgot_Password_Email;
+	private WebElement forgotPasswordEmail;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='forgot_password_dialog']//input[@id='generate_pwd_button']")
-	private WebElement forgot_Password_Submit;
+	private WebElement forgotPasswordSubmit;
 
 	@FindBy(how = How.XPATH, using = ".//div[@id='generate_success']")
-	private WebElement success_Message;
+	private WebElement successMessage;
 
 	@FindBy(how = How.XPATH, using = ".//label[@for='fp_user_name']")
-	private WebElement uName_Label;
+	private WebElement uNameLabel;
 
 	@FindBy(how = How.XPATH, using = ".//label[@for='fp_user_mail']")
-	private WebElement email_Label;
+	private WebElement emailLabel;
 
 	@FindBy(how = How.XPATH, using = ".//input[@id='generate_pwd_button']")
 	private WebElement button;
 
 	public ForgetPassword(WebDriver driver)
 	{
-		global_Obj = new Global();
+		globalObj = new Global();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		prop = global_Obj.readProperties();
+		prop = globalObj.readProperties();
 	}
 
 
@@ -141,7 +141,7 @@ public class ForgetPassword implements ForgotPassword_Interface
 	{
 		allLinks = findAllLinks(driver);
 
-		System.out.println("Total number of elements found " + allLinks.size());
+		System.out.println("Total Number Of Elements Found " + allLinks.size());
 
 		for (WebElement element : allLinks)
 		{
@@ -150,7 +150,7 @@ public class ForgetPassword implements ForgotPassword_Interface
 
 			{
 
-				System.out.println("URL: " + element.getAttribute("href") + " returned "
+				System.out.println("URL: " + element.getAttribute("href") + " Returned "
 						+ isLinkBroken(new URL(element.getAttribute("href"))));
 
 				// System.out.println("URL: " + element.getAttribute("outerhtml")+ " returned "
@@ -162,7 +162,7 @@ public class ForgetPassword implements ForgotPassword_Interface
 
 			{
 
-				System.out.println("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; "
+				System.out.println("At " + element.getAttribute("innerHTML") + " Exception Occured -&gt; "
 						+ exp.getMessage());
 
 			}
@@ -174,105 +174,105 @@ public class ForgetPassword implements ForgotPassword_Interface
 
 	public void clickForgotPassword()
 	{
-		forgot_Password.click();
+		forgotPassword.click();
 	}
 
 
 	public void forgotPassword()
 	{
-		forgot_Password_Username.sendKeys(prop.getProperty("uname"));
-		forgot_Password_Email.sendKeys(prop.getProperty("Email"));
-		forgot_Password_Submit.click();
+		forgotPasswordUsername.sendKeys(prop.getProperty("uname"));
+		forgotPasswordEmail.sendKeys(prop.getProperty("Email"));
+		forgotPasswordSubmit.click();
 	}
 
 
 	public void forgotPasswordInvalid()
 	{
-		forgot_Password_Username.clear();
-		forgot_Password_Email.clear();
-		forgot_Password_Username.sendKeys(prop.getProperty("uname"));
-		forgot_Password_Email.sendKeys(prop.getProperty("Email2"));
-		forgot_Password_Submit.click();
+		forgotPasswordUsername.clear();
+		forgotPasswordEmail.clear();
+		forgotPasswordUsername.sendKeys(prop.getProperty("uname"));
+		forgotPasswordEmail.sendKeys(prop.getProperty("Email2"));
+		forgotPasswordSubmit.click();
 	}
 
 
 	public void forgotPasswordInvalid2()
 	{
-		forgot_Password_Username.clear();
-		forgot_Password_Email.clear();
-		forgot_Password_Username.sendKeys("");
-		forgot_Password_Email.sendKeys("");
-		forgot_Password_Submit.click();
+		forgotPasswordUsername.clear();
+		forgotPasswordEmail.clear();
+		forgotPasswordUsername.sendKeys("");
+		forgotPasswordEmail.sendKeys("");
+		forgotPasswordSubmit.click();
 	}
 
 
 	public void forgotPasswordInvalid3()
 	{
-		forgot_Password_Username.clear();
-		forgot_Password_Email.clear();
-		forgot_Password_Username.sendKeys("");
-		forgot_Password_Email.sendKeys(prop.getProperty("Email"));
-		forgot_Password_Submit.click();
+		forgotPasswordUsername.clear();
+		forgotPasswordEmail.clear();
+		forgotPasswordUsername.sendKeys("");
+		forgotPasswordEmail.sendKeys(prop.getProperty("Email"));
+		forgotPasswordSubmit.click();
 
 	}
 
 
 	public void forgotPasswordInvalid4()
 	{
-		forgot_Password_Username.clear();
-		forgot_Password_Email.clear();
-		forgot_Password_Username.sendKeys(prop.getProperty("uname"));
-		forgot_Password_Email.sendKeys("");
-		forgot_Password_Submit.click();
+		forgotPasswordUsername.clear();
+		forgotPasswordEmail.clear();
+		forgotPasswordUsername.sendKeys(prop.getProperty("uname"));
+		forgotPasswordEmail.sendKeys("");
+		forgotPasswordSubmit.click();
 	}
 
 
 	public void assertCheckValid()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
+		globalObj.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Your request has been submitted."));
-		Assert.assertEquals(success_Message.getText(), prop.getProperty("Message"));
+		Assert.assertEquals(successMessage.getText(), prop.getProperty("Message"));
 	}
 
 
 	public void assertCheckValid2()
 	{
-		global_Obj.wait(driver)
+		globalObj.wait(driver)
 				.until(ExpectedConditions.textToBePresentInElementLocated(
 						By.xpath(".//div[@id='generate_success']"),
 						"You must specify a valid User Name and Email Address."));
-		Assert.assertEquals(success_Message.getText(), prop.getProperty("Message2"));
+		Assert.assertEquals(successMessage.getText(), prop.getProperty("Message2"));
 	}
 
 
 	public void assertCheckValid3()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
+		globalObj.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
-		Assert.assertEquals(success_Message.getText(), prop.getProperty("Message3"));
+		Assert.assertEquals(successMessage.getText(), prop.getProperty("Message3"));
 	}
 
 
 	public void assertCheckValid4()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
+		globalObj.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
-		Assert.assertEquals(success_Message.getText(), prop.getProperty("Message3"));
+		Assert.assertEquals(successMessage.getText(), prop.getProperty("Message3"));
 	}
 
 
 	public void assertCheckValid5()
 	{
-		global_Obj.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
+		globalObj.wait(driver).until(ExpectedConditions.textToBePresentInElementLocated(
 				By.xpath(".//div[@id='generate_success']"), "Provide both a User Name and an Email Address."));
-		Assert.assertEquals(success_Message.getText(), prop.getProperty("Message3"));
+		Assert.assertEquals(successMessage.getText(), prop.getProperty("Message3"));
 	}
 
 
 	public void assertCheckboxCheck()
 	{
-		uName = forgot_Password_Username.isEnabled();
-		email = forgot_Password_Email.isEnabled();
+		uName = forgotPasswordUsername.isEnabled();
+		email = forgotPasswordEmail.isEnabled();
 		Assert.assertEquals(uName, true);
 		Assert.assertEquals(email, true);
 
@@ -281,11 +281,11 @@ public class ForgetPassword implements ForgotPassword_Interface
 
 	public void labelCheck()
 	{
-		Assert.assertEquals(uName_Label.getText(), prop.getProperty("Label1"));
-		Assert.assertEquals(email_Label.getText(), prop.getProperty("Label2"));
-		global_Obj.wait(driver).until(ExpectedConditions.textToBePresentInElementValue(button, "Submit"));
+		Assert.assertEquals(uNameLabel.getText(), prop.getProperty("Label1"));
+		Assert.assertEquals(emailLabel.getText(), prop.getProperty("Label2"));
+		globalObj.wait(driver).until(ExpectedConditions.textToBePresentInElementValue(button, "Submit"));
 		Assert.assertEquals(button.getAttribute("value"), prop.getProperty("Label4"));
-		forgot_Password_Submit.click();
+		forgotPasswordSubmit.click();
 		Assert.assertEquals(button.getAttribute("value"), prop.getProperty("Label3"));
 	}
 
