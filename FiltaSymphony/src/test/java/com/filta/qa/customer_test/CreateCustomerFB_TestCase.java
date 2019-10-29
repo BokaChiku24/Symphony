@@ -38,15 +38,15 @@ import com.filta.qa.util.Global;
 
 public class CreateCustomerFB_TestCase
 {
-	private WebDriver Driver;
-	private Create_CustomerFB create_customer_filtabio;
-	private Global Global_Obj;
-	private ExtentReports Extent;
-	private ExtentHtmlReporter HtmlReporter;
-	private ExtentTest ExtentLogger;
-	private String ScreenshotPath;;
-	private String DateName;
-	private File ScrFile;
+	private WebDriver driver;
+	private Create_CustomerFB createCustomerFiltabio;
+	private Global globalObj;
+	private ExtentReports extent;
+	private ExtentHtmlReporter htmlReporter;
+	private ExtentTest extentLogger;
+	private String screenshotPath;;
+	private String dateName;
+	private File scrFile;
 
 	public static Logger Log = Logger.getLogger("Create Customer FiltaBio Scenarios");
 	static
@@ -57,23 +57,23 @@ public class CreateCustomerFB_TestCase
 	@BeforeClass
 	public void property()
 	{
-		Global_Obj = new Global();
-		Driver = Global_Obj.driver();
+		globalObj = new Global();
+		driver = globalObj.driver();
 		// Prop = Global_Obj.readProperties();
-		create_customer_filtabio = new Create_CustomerFB(Driver);
-		create_customer_filtabio.login();
-		HtmlReporter = new ExtentHtmlReporter(
+		createCustomerFiltabio = new Create_CustomerFB(driver);
+		createCustomerFiltabio.login();
+		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/Create_Customer_FB_TestCase.html");
-		Extent = new ExtentReports();
-		Extent.attachReporter(HtmlReporter);
-		Extent.setSystemInfo("OS", "Windows 7 64 Bit");
-		Extent.setSystemInfo("Browser", "Google Chrome");
-		Extent.setSystemInfo("H", "Kunal Chavan");
-		Extent.setSystemInfo("Testing:", "Functional Testing");
-		HtmlReporter.config().setReportName("Per Fryer Page Functionality Test Case");
-		HtmlReporter.config().setTheme(Theme.STANDARD);
-		HtmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
-		HtmlReporter.loadXMLConfig("./extent-config.xml");
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+		extent.setSystemInfo("OS", "Windows 7 64 Bit");
+		extent.setSystemInfo("Browser", "Google Chrome");
+		extent.setSystemInfo("H", "Kunal Chavan");
+		extent.setSystemInfo("Testing:", "Functional Testing");
+		htmlReporter.config().setReportName("FiltaBio Checked While Creating Customer Test Case");
+		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a'('zzz')'");
+		htmlReporter.loadXMLConfig("./extent-config.xml");
 	}
 
 
@@ -81,9 +81,9 @@ public class CreateCustomerFB_TestCase
 	public void test()
 	{
 		Log.info("Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!");
-		ExtentLogger = Extent.createTest(
+		extentLogger = extent.createTest(
 				"Test Case 1: Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not");
-		create_customer_filtabio.createCustomerDefaultPricingNo();
+		createCustomerFiltabio.createCustomerDefaultPricingNo();
 	}
 
 
@@ -91,9 +91,9 @@ public class CreateCustomerFB_TestCase
 	public void testDefaultPricingYes()
 	{
 		Log.info("Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!");
-		ExtentLogger = Extent.createTest(
-				"Test Case 1: Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not");
-		create_customer_filtabio.createCustomerDefaultPricingYesFBPriceSet();
+		extentLogger = extent.createTest(
+				"Test Case 2: Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not");
+		createCustomerFiltabio.createCustomerDefaultPricingYesFBPriceSet();
 	}
 
 
@@ -101,38 +101,39 @@ public class CreateCustomerFB_TestCase
 	public void testDefaultPricingYesPriceNotSet()
 	{
 		Log.info("Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!");
-		ExtentLogger = Extent.createTest(
-				"Test Case 1: Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!");
-		create_customer_filtabio.createCustomerDefaultPricingYesFBPriceNotSet();
+		extentLogger = extent.createTest(
+				"Test Case 3: Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!");
+		createCustomerFiltabio.createCustomerDefaultPricingYesFBPriceNotSet();
 	}
 
+
 	@AfterMethod
-	public void takeScreenShotOnFailure(ITestResult TestResult) throws IOException
+	public void takeScreenShotOnFailure(ITestResult testResult) throws IOException
 	{
-		if (TestResult.getStatus() == ITestResult.FAILURE)
+		if (testResult.getStatus() == ITestResult.FAILURE)
 		{
-			ExtentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Failed", ExtentColor.RED));
-			ExtentLogger.log(Status.FAIL,
-					MarkupHelper.createLabel(TestResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
-			DateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
-			ScrFile = ((TakesScreenshot) Driver).getScreenshotAs(OutputType.FILE);
-			ScreenshotPath = System.getProperty("user.dir") + "/Create_Customer_FB_TestCase/" + TestResult.getName()
-					+ DateName + "_" + Arrays.toString(TestResult.getParameters()) + ".png";
-			FileUtils.copyFile(ScrFile, new File(ScreenshotPath));
-			ExtentLogger.fail(
-					"Test Case Failed Snapshot is below " + ExtentLogger.addScreenCaptureFromPath(ScreenshotPath));
+			extentLogger.log(Status.FAIL,
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Failed", ExtentColor.RED));
+			extentLogger.log(Status.FAIL,
+					MarkupHelper.createLabel(testResult.getThrowable() + " - Test Case Failed", ExtentColor.RED));
+			dateName = new SimpleDateFormat("dd MMMM yyyy zzzz").format(new Date());
+			scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			screenshotPath = System.getProperty("user.dir") + "/Create_Customer_FB_TestCase/" + testResult.getName()
+					+ dateName + "_" + Arrays.toString(testResult.getParameters()) + ".png";
+			FileUtils.copyFile(scrFile, new File(screenshotPath));
+			extentLogger.fail(
+					"Test Case Failed Snapshot is below " + extentLogger.addScreenCaptureFromPath(screenshotPath));
 
 		}
-		else if (TestResult.getStatus() == ITestResult.SKIP)
+		else if (testResult.getStatus() == ITestResult.SKIP)
 		{
-			ExtentLogger.log(Status.SKIP,
-					MarkupHelper.createLabel(TestResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
+			extentLogger.log(Status.SKIP,
+					MarkupHelper.createLabel(testResult.getName() + " - Test Case Skipped", ExtentColor.ORANGE));
 		}
-		else if (TestResult.getStatus() == ITestResult.SUCCESS)
+		else if (testResult.getStatus() == ITestResult.SUCCESS)
 		{
-			ExtentLogger.log(Status.PASS,
-					MarkupHelper.createLabel(TestResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
+			extentLogger.log(Status.PASS,
+					MarkupHelper.createLabel(testResult.getName() + " Test Case PASSED", ExtentColor.GREEN));
 		}
 	}
 
@@ -141,7 +142,7 @@ public class CreateCustomerFB_TestCase
 	public void afterMethod()
 	{
 		Log.info("Create Customer FiltaBio Test Case Ends Here");
-		Extent.flush();
-		create_customer_filtabio.closeBrowser();
+		extent.flush();
+		createCustomerFiltabio.closeBrowser();
 	}
 }
