@@ -36,7 +36,7 @@ import com.filta.qa.util.Global;
  * @implNote Customer Create Test Case With FB
  */
 
-public class Create_CustomerFB_TestCase
+public class CreateCustomerFB_TestCase
 {
 	private WebDriver Driver;
 	private Create_CustomerFB create_customer_filtabio;
