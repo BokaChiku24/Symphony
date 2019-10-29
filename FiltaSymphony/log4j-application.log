@@ -8055,4 +8055,42 @@
  2019-10-28 14:12:19,133  INFO [main] Fixed Cost Test Case:106 - Test Case1: Check Customer Page URL
  2019-10-28 14:12:47,158  INFO [main] Fixed Cost Test Case:176 - Fixed Cost Page Test Case Ends Here
  2019-10-28 14:12:51,524  INFO [main] Fixed Cost Test Case:90 - Fixed Cost Customer Test!!
+ 2019-10-29 13:05:37,128  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2019-10-29 13:06:03,818  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2019-10-29 13:06:33,379  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2019-10-29 13:07:02,601  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login Functionality With Invalid Credentials
+ 2019-10-29 13:07:29,336  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2019-10-29 13:08:22,515  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-10-29 13:08:22,516  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-10-29 13:08:46,340  INFO [main] Fixed Cost Test Case:179 - Fixed Cost Page Test Case Ends Here
+ 2019-10-29 13:08:50,517  INFO [main] Fixed Cost Test Case:91 - Fixed Cost Customer Test!!
+ 2019-10-29 13:09:38,424  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-10-29 13:09:38,424  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-10-29 13:10:00,919  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-10-29 13:10:05,074  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-10-29 13:10:49,985  INFO [main] Per Lb Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-29 13:10:49,986  INFO [main] Per Lb Test Case:108 - Test Case1: Check Franchisee Default Pricing
+ 2019-10-29 13:11:12,182  INFO [main] Per Lb Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-29 13:11:16,336  INFO [main] Per Lb Test Case:93 - Per Lb Customer Test!!
+ 2019-10-29 13:11:57,271  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-10-29 13:12:43,139  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-10-29 13:18:36,579  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2019-10-29 13:19:01,246  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2019-10-29 13:19:29,861  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2019-10-29 13:19:51,750  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login Functionality With Invalid Credentials
+ 2019-10-29 13:20:19,535  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2019-10-29 13:21:07,883  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-10-29 13:21:07,884  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-10-29 13:21:35,001  INFO [main] Fixed Cost Test Case:179 - Fixed Cost Page Test Case Ends Here
+ 2019-10-29 13:21:39,211  INFO [main] Fixed Cost Test Case:91 - Fixed Cost Customer Test!!
+ 2019-10-29 13:22:27,120  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-10-29 13:22:27,121  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-10-29 13:22:50,322  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-10-29 13:22:54,481  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-10-29 13:23:44,187  INFO [main] Per Lb Test Case:107 - Check Franchisee Default Pricing
+ 2019-10-29 13:23:44,188  INFO [main] Per Lb Test Case:108 - Test Case1: Check Franchisee Default Pricing
+ 2019-10-29 13:24:09,544  INFO [main] Per Lb Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-10-29 13:24:13,941  INFO [main] Per Lb Test Case:93 - Per Lb Customer Test!!
+ 2019-10-29 13:25:01,136  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-10-29 13:25:47,342  INFO [main] User Page Test Case:73 - Check URL Of User Page
  
