@@ -108,7 +108,7 @@ public class Global
 	{
 		f = new File("E:\\Work\\Symphony\\FiltaSymphony\\configs\\Configuration.properties");
 		fileObj = new File(
-				"C:\\Users\\kunal\\git\\Repository\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
+				"C:\\Users\\kunal\\git\\Symphony\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
 		file = new File(
 				"C:\\Users\\Boka_Chiku\\git\\Symphony\\FiltaSymphony\\configs\\HomePC_Configuration.properties");
 		if (f.exists() == true)

@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.filta.qa.login_test.ForgetPassword_TestCase">
+      <class name="com.filta.qa.login_test.LogIn_TestCase">
         <methods>
-          <include name="forgotPassWord"/>
-          <include name="forgotPassWordInvalid2"/>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="forgotPassWordInvalid"/>
-          <include name="forgotPassWordInvalid3"/>
-          <include name="brokenLink"/>
-          <include name="beforeClass"/>
-          <include name="labelCheck"/>
-          <include name="forgotPassWordInvalid4"/>
-          <include name="checkLink"/>
-          <include name="textboxCheck"/>
           <include name="afterClass"/>
+          <include name="signInTesting"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.filta.qa.login_test.ForgetPassword_TestCase -->
+      </class> <!-- com.filta.qa.login_test.LogIn_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
