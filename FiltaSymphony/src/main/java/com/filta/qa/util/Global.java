@@ -54,6 +54,7 @@ public class Global
 	private DesiredCapabilities capablities;
 	private String browser = "chrome";
 
+
 	// Driver Initialization Method !!
 	public WebDriver driver()
 	{
@@ -77,6 +78,7 @@ public class Global
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("driverChrome"));
 			driver = new ChromeDriver(service, options);
 			driver.get(prop.getProperty("URL2"));
+			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
 		}
 		else
@@ -107,8 +109,7 @@ public class Global
 	public Properties readProperties()
 	{
 		f = new File("E:\\Work\\Symphony\\FiltaSymphony\\configs\\Configuration.properties");
-		fileObj = new File(
-				"C:\\Users\\kunal\\git\\Symphony\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
+		fileObj = new File("C:\\Users\\kunal\\git\\Symphony\\FiltaSymphony\\configs\\OfficeConfiguration.properties");
 		file = new File(
 				"C:\\Users\\Boka_Chiku\\git\\Symphony\\FiltaSymphony\\configs\\HomePC_Configuration.properties");
 		if (f.exists() == true)

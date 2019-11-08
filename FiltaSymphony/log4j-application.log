@@ -8097,4 +8097,206 @@
  2019-11-08 11:23:12,737  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
  2019-11-08 11:24:28,345  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
  2019-11-08 11:24:40,999  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2019-11-08 11:25:51,815  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2019-11-08 11:26:07,348  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2019-11-08 11:26:19,394  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2019-11-08 11:26:28,898  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login Functionality With Invalid Credentials
+ 2019-11-08 11:26:39,626  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2019-11-08 11:26:57,975  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-11-08 11:26:57,975  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-11-08 11:27:14,486  INFO [main] Fixed Cost Test Case:179 - Fixed Cost Page Test Case Ends Here
+ 2019-11-08 11:27:16,861  INFO [main] Fixed Cost Test Case:91 - Fixed Cost Customer Test!!
+ 2019-11-08 11:27:34,174  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-11-08 11:27:34,174  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-11-08 11:27:50,407  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-11-08 11:27:52,559  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-11-08 11:28:11,144  INFO [main] Per Lb Test Case:107 - Check Franchisee Default Pricing
+ 2019-11-08 11:28:11,145  INFO [main] Per Lb Test Case:108 - Test Case1: Check Franchisee Default Pricing
+ 2019-11-08 11:28:27,396  INFO [main] Per Lb Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-11-08 11:28:29,528  INFO [main] Per Lb Test Case:93 - Per Lb Customer Test!!
+ 2019-11-08 11:28:47,200  INFO [main] Home Page Test Case:77 - Check Menubar Of Home Page
+ 2019-11-08 11:29:07,065  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-11-08 11:31:01,851  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2019-11-08 11:31:01,968  INFO [main] Forget Password Test Case:88 - Test Case 0: Get All Broken URL Names
+ 2019-11-08 11:31:05,647  INFO [main] Forget Password Test Case:97 - Test Case 1: Forgot Password Check With Valid Username And Email
+ 2019-11-08 11:31:09,240  INFO [main] Forget Password Test Case:108 - Test Case 2: Forgot Password Check With Invalid Username And Email
+ 2019-11-08 11:31:10,629  INFO [main] Forget Password Test Case:118 - Test Case 3: Forgot Password Check Without Username And Email
+ 2019-11-08 11:31:11,895  INFO [main] Forget Password Test Case:128 - Test Case 4: Forgot Password Check Without Username And With Email
+ 2019-11-08 11:31:12,169  INFO [main] Forget Password Test Case:138 - Test Case 5: Forgot Password Check With Username And Without Email
+ 2019-11-08 11:31:12,391  INFO [main] Forget Password Test Case:148 - Test Case 6: Forgot Password Textbox Check
+ 2019-11-08 11:31:12,426  INFO [main] Forget Password Test Case:157 - Test Case 7: Forgot Password Label Check
+ 2019-11-08 11:31:13,104  INFO [main] Forget Password Test Case:197 - Forgot Password Test Case Ends Here
+ 2019-11-08 11:31:24,036  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2019-11-08 11:31:24,087  INFO [main] LogInPage Test Case:80 - Test Case 2: Drop Down Check On Login Page
+ 2019-11-08 11:31:24,239  INFO [main] LogInPage Test Case:89 - Test Case 3: Footer Check On Login Page
+ 2019-11-08 11:31:24,291  INFO [main] LogInPage Test Case:98 - Test Case 4: URL Check On Login Page
+ 2019-11-08 11:31:24,944  INFO [main] LogInPage Test Case:107 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2019-11-08 11:31:25,022  INFO [main] LogInPage Test Case:116 - Test Case 6: Check Login Page TextBox Label
+ 2019-11-08 11:31:25,144  INFO [main] LogInPage Test Case:125 - Test Case 7: Get All Login URL
+ 2019-11-08 11:31:25,243  INFO [main] LogInPage Test Case:134 - Test Case 8: Get All Broken URL
+ 2019-11-08 11:31:28,627  INFO [main] LogInPage Test Case:174 - Login Page Test Case Ends Here
+ 2019-11-08 11:31:41,617  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2019-11-08 11:31:53,326  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2019-11-08 11:32:04,699  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login Functionality With Invalid Credentials
+ 2019-11-08 11:32:06,279  INFO [main] Sign In With Invalid Credentials Test Case:88 - Test Case 2: Check Login Functionality Without Credentials
+ 2019-11-08 11:32:07,744  INFO [main] Sign In With Invalid Credentials Test Case:101 - Test Case 3: Check Login Functionality WithInvalid Credentials
+ 2019-11-08 11:32:09,303  INFO [main] Sign In With Invalid Credentials Test Case:114 - Test Case 4: Check Login Functionality WithInvalid Credentials
+ 2019-11-08 11:32:10,850  INFO [main] Sign In With Invalid Credentials Test Case:127 - Test Case 5: Get All Login URL
+ 2019-11-08 11:32:10,936  INFO [main] Sign In With Invalid Credentials Test Case:136 - Test Case 6: Get All Broken URL
+ 2019-11-08 11:32:14,200  INFO [main] Sign In With Invalid Credentials Test Case:176 - Sign In Test Case Ends Here
+ 2019-11-08 11:32:31,972  INFO [main] Create Customer FiltaBio Scenarios:83 - Create Customer With Default Pricing No And Check FiltaBio Is Checked Or Not!!
+ 2019-11-08 11:32:47,809  INFO [main] Create Customer FiltaBio Scenarios:93 - Create Customer With Default Pricing Yes And Check FiltaBio Is Checked Or Not!!
+ 2019-11-08 11:33:00,908  INFO [main] Create Customer FiltaBio Scenarios:103 - Create Customer With Default Pricing Yes But Fb Price Not Set And Check FiltaBio Is Checked Or Not!!
+ 2019-11-08 11:33:10,804  INFO [main] Create Customer FiltaBio Scenarios:144 - Create Customer FiltaBio Test Case Ends Here
+ 2019-11-08 11:33:31,767  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2019-11-08 11:33:35,734  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2019-11-08 11:33:38,495  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2019-11-08 11:33:40,723  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Coluor With Mouse Overview On User Page
+ 2019-11-08 11:33:43,148  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2019-11-08 11:33:45,107  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2019-11-08 11:33:47,046  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2019-11-08 11:33:52,533  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2019-11-08 11:34:03,499  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2019-11-08 11:34:30,028  INFO [main] Per Lb Test Case:107 - Check Franchisee Default Pricing
+ 2019-11-08 11:34:30,029  INFO [main] Per Lb Test Case:108 - Test Case1: Check Franchisee Default Pricing
+ 2019-11-08 11:34:48,857  INFO [main] Per Lb Test Case:179 - Per Fryer Page Test Case Ends Here
+ 2019-11-08 11:34:51,209  INFO [main] Per Lb Test Case:93 - Per Lb Customer Test!!
+ 2019-11-08 11:35:01,756  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module Without OPS Checkbox
+ 2019-11-08 11:35:14,714  INFO [main] Operations Module Test Cases:120 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 11:35:38,790  INFO [main] Fixed Cost Test Case:106 - Check Franchisee Default Pricing
+ 2019-11-08 11:35:38,790  INFO [main] Fixed Cost Test Case:107 - Test Case1: Check Customer Page URL
+ 2019-11-08 11:35:55,019  INFO [main] Fixed Cost Test Case:179 - Fixed Cost Page Test Case Ends Here
+ 2019-11-08 11:35:57,374  INFO [main] Fixed Cost Test Case:91 - Fixed Cost Customer Test!!
+ 2019-11-08 11:36:30,116  INFO [main] Per Fryer Test Case:110 - Check Franchisee Default Pricing
+ 2019-11-08 11:36:30,117  INFO [main] Per Fryer Test Case:111 - Test Case1: Check Customer Page URL
+ 2019-11-08 11:36:46,240  INFO [main] Per Fryer Test Case:182 - Per Fryer Page Test Case Ends Here
+ 2019-11-08 11:36:48,615  INFO [main] Per Fryer Test Case:95 - Per Fryer Customer Test!!
+ 2019-11-08 11:39:24,120  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module Without OPS Checkbox
+ 2019-11-08 11:39:35,708  INFO [main] Operations Module Test Cases:120 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 11:40:20,806  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module Without OPS Checkbox
+ 2019-11-08 11:40:37,389  INFO [main] Operations Module Test Cases:120 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 11:46:45,283  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module Without OPS Checkbox
+ 2019-11-08 11:47:00,209  INFO [main] Operations Module Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:09:26,953  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:11:00,712  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:11:35,724  INFO [main] Operations Module Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:12:48,813  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:13:24,421  INFO [main] Operations Module Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:23:07,477  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:23:44,744  INFO [main] Operations Module Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:24:35,637  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:25:11,303  INFO [main] Operations Module Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:32:17,474  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:32:55,376  INFO [main] Operations Module Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:37:59,978  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:38:40,046  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 12:38:51,742  INFO [main] Operations Module Test Cases:131 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:51:40,141  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:54:01,158  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:54:37,266  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 12:54:56,348  INFO [main] Operations Module Test Cases:131 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:56:18,794  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:56:49,710  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 12:58:10,651  INFO [main] Operations Module Test Cases:131 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 12:58:59,486  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 12:59:34,741  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 13:00:06,077  INFO [main] Operations Module Test Cases:131 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 13:03:23,571  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 13:04:33,746  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 13:05:04,642  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 13:06:30,736  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 13:07:03,085  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 13:07:35,098  INFO [main] Operations Module Test Cases:131 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 13:09:05,392  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 13:09:36,176  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 13:10:26,568  INFO [main] Operations Module Test Cases:131 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 13:33:33,434  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 13:34:04,714  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 13:34:38,166  INFO [main] Operations Module Test Cases:131 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 14:03:42,934  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 14:04:13,352  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 14:04:56,303  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 14:05:28,976  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 14:06:02,557  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 14:06:21,390  INFO [main] Operations Module Test Cases:141 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 14:07:55,229  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 14:08:34,245  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 14:09:08,572  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 14:11:41,836  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 14:12:14,258  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 14:12:50,043  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 14:14:03,190  INFO [main] Operations Module Test Cases:141 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 14:24:40,496  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 14:25:14,139  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 14:25:48,207  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 14:26:25,048  INFO [main] Operations Module Test Cases:141 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 14:29:49,466  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 14:30:22,681  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 14:30:56,718  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 14:31:35,213  INFO [main] Operations Module Test Cases:141 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 14:56:50,795  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 14:57:29,764  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 14:58:13,565  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 14:58:51,271  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 14:59:26,090  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 15:00:07,615  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 15:00:42,619  INFO [main] Operations Module Test Cases:151 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 15:04:42,329  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 15:05:30,451  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 15:06:05,706  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 15:06:50,152  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 15:07:29,688  INFO [main] Operations Module Test Cases:151 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 15:14:58,251  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 15:15:48,331  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 15:16:24,779  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 15:17:09,770  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 15:17:51,658  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2019-11-08 15:18:25,833  INFO [main] Operations Module Test Cases:161 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 15:25:37,260  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 15:26:26,304  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 15:27:16,700  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 15:28:07,127  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 15:28:57,520  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2019-11-08 15:29:47,982  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2019-11-08 15:30:38,359  INFO [main] Operations Module Test Cases:171 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 15:32:59,239  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 15:33:39,147  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 15:34:09,656  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 15:34:53,349  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 15:35:31,145  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2019-11-08 15:36:05,736  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2019-11-08 15:36:37,494  INFO [main] Operations Module Test Cases:171 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 15:41:54,036  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 15:42:38,213  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 15:43:17,582  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 15:43:56,649  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 15:44:33,698  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2019-11-08 15:45:11,128  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2019-11-08 15:45:46,185  INFO [main] Operations Module Test Cases:171 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 16:01:51,221  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 16:02:26,091  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 16:03:04,655  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 16:03:44,084  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 16:04:21,895  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2019-11-08 16:04:59,661  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2019-11-08 16:05:35,569  INFO [main] Operations Module Test Cases:140 - Check Operations Sub Module With WC Issues FiltaBio
+ 2019-11-08 16:06:09,277  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 16:14:08,118  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 16:14:40,456  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 16:15:30,162  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 16:16:07,279  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 16:16:42,183  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 16:17:20,984  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 16:17:59,096  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2019-11-08 16:18:36,049  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2019-11-08 16:19:11,196  INFO [main] Operations Module Test Cases:140 - Check Operations Sub Module With WC Issues FiltaBio
+ 2019-11-08 16:19:44,406  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 16:21:12,623  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2019-11-08 16:21:43,914  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2019-11-08 16:22:20,994  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2019-11-08 16:22:59,492  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2019-11-08 16:23:36,919  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2019-11-08 16:24:13,492  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2019-11-08 16:24:48,069  INFO [main] Operations Module Test Cases:140 - Check Operations Sub Module With WC Issues FiltaBio
+ 2019-11-08 16:25:50,760  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
  
