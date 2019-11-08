@@ -23,6 +23,7 @@ public class Login
 	@FindBy(how = How.XPATH, using = ".//input[@id='login_button']")
 	private WebElement logIn;
 
+
 	public Login(WebDriver driver)
 	{
 		this.driver = driver;
@@ -37,6 +38,14 @@ public class Login
 	{
 		userName.sendKeys(prop.getProperty("uname"));
 		passWord.sendKeys(prop.getProperty("password"));
+		logIn.click();
+	}
+
+
+	public void adminCredentials()
+	{
+		userName.sendKeys(prop.getProperty("adminuname"));
+		passWord.sendKeys(prop.getProperty("adminpassword"));
 		logIn.click();
 	}
 }

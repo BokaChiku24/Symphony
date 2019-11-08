@@ -24,7 +24,7 @@ import com.filta.qa.util.ReadExcelData;
  * @author kun24
  * @implNote Create Customer FiltaBio Check Testing
  */
-public class Create_CustomerFB
+public class CreateCustomerFB
 {
 	private WebDriver driver;
 	private Global globalObj;
@@ -142,7 +142,7 @@ public class Create_CustomerFB
 	@FindBy(how = How.XPATH, using = "//*[@id=\"MassUpdate\"]/div[1]/p[1]")
 	private WebElement message;
 
-	public Create_CustomerFB(WebDriver driver)
+	public CreateCustomerFB(WebDriver driver)
 	{
 		globalObj = new Global();
 		prop = globalObj.readProperties();

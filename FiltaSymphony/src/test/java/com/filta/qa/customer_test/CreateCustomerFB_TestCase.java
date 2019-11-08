@@ -28,7 +28,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.filta.qa.customer_page.Create_CustomerFB;
+import com.filta.qa.customer_page.CreateCustomerFB;
 import com.filta.qa.util.Global;
 
 /**
@@ -39,7 +39,7 @@ import com.filta.qa.util.Global;
 public class CreateCustomerFB_TestCase
 {
 	private WebDriver driver;
-	private Create_CustomerFB createCustomerFiltabio;
+	private CreateCustomerFB createCustomerFiltabio;
 	private Global globalObj;
 	private ExtentReports extent;
 	private ExtentHtmlReporter htmlReporter;
@@ -60,7 +60,7 @@ public class CreateCustomerFB_TestCase
 		globalObj = new Global();
 		driver = globalObj.driver();
 		// Prop = Global_Obj.readProperties();
-		createCustomerFiltabio = new Create_CustomerFB(driver);
+		createCustomerFiltabio = new CreateCustomerFB(driver);
 		createCustomerFiltabio.login();
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/Create_Customer_FB_TestCase.html");
