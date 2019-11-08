@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase">
+      <class name="com.filta.qa.operations_test.OperationCycle_TestCase">
         <methods>
-          <include name="takeScreenShotOnFailure"/>
-          <include name="test6"/>
-          <include name="property"/>
           <include name="afterMethod"/>
+          <include name="property"/>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase -->
+      </class> <!-- com.filta.qa.operations_test.OperationCycle_TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

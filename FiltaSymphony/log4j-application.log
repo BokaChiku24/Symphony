@@ -8299,4 +8299,46 @@
  2019-11-08 16:24:13,492  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
  2019-11-08 16:24:48,069  INFO [main] Operations Module Test Cases:140 - Check Operations Sub Module With WC Issues FiltaBio
  2019-11-08 16:25:50,760  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 17:30:54,566  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 17:30:54,590  INFO [main] Operations Cycle Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 17:36:19,515  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 17:36:22,361  INFO [main] Operations Cycle Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 17:41:24,020  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 17:41:43,118  INFO [main] Operations Cycle Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 17:48:28,816  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 17:49:22,352  INFO [main] Operations Cycle Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 17:50:44,518  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 17:51:37,673  INFO [main] Operations Cycle Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 17:56:44,293  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:00:55,035  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:01:52,083  INFO [main] Operations Cycle Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:02:35,511  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:03:32,269  INFO [main] Operations Cycle Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:05:55,849  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:06:54,127  INFO [main] Operations Cycle Test Cases:121 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:13:43,447  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:14:41,908  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2019-11-08 18:14:42,476  INFO [main] Operations Cycle Test Cases:130 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:20:21,283  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:21:19,773  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2019-11-08 18:21:20,226  INFO [main] Operations Cycle Test Cases:130 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:25:27,521  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:28:36,957  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:29:35,051  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2019-11-08 18:29:35,515  INFO [main] Operations Cycle Test Cases:130 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:31:17,079  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:32:15,485  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2019-11-08 18:32:18,475  INFO [main] Operations Cycle Test Cases:130 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:38:20,851  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:39:21,134  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2019-11-08 18:39:37,351  INFO [main] Operations Cycle Test Cases:130 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:40:52,418  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:41:02,945  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2019-11-08 18:41:08,145  INFO [main] Operations Cycle Test Cases:130 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:41:40,576  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:41:50,466  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2019-11-08 18:41:55,599  INFO [main] Operations Cycle Test Cases:130 - Operations Sub Module Test Case Ends Here
+ 2019-11-08 18:42:39,966  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2019-11-08 18:42:49,643  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2019-11-08 18:42:54,897  INFO [main] Operations Cycle Test Cases:130 - Operations Sub Module Test Case Ends Here
  

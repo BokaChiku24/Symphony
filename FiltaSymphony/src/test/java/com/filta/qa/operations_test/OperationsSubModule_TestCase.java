@@ -1,4 +1,4 @@
-package com.filta.qa.operations.scheduledjobcalendar_test;
+package com.filta.qa.operations_test;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,7 +37,7 @@ public class OperationsSubModule_TestCase
 {
 	private WebDriver driver;
 	private Global globalObj;
-	private OperationsSubModule Obj;
+	private OperationsSubModule obj;
 	private ExtentReports extent;
 	private ExtentHtmlReporter htmlReporter;
 	private ExtentTest extentLogger;
@@ -58,7 +58,7 @@ public class OperationsSubModule_TestCase
 		globalObj = new Global();
 		driver = globalObj.driver();
 		// Prop = Global_Obj.readProperties();
-		Obj = new OperationsSubModule(driver);
+		obj = new OperationsSubModule(driver);
 		htmlReporter = new ExtentHtmlReporter(
 				System.getProperty("user.dir") + "/Symphony_Reports/UserPage/Operations Submodule.html");
 		extent = new ExtentReports();
@@ -79,8 +79,8 @@ public class OperationsSubModule_TestCase
 	{
 		Log.info("Check Operations Sub Module With Active Percent FiltaBio");
 		extentLogger = extent.createTest("Test Case 0: Check Operations Sub Module With Active Percent FiltaBio");
-		Obj.loginAdmin();
-		Obj.opsActivePercent();
+		obj.loginAdmin();
+		obj.opsActivePercent();
 	}
 
 
@@ -89,8 +89,8 @@ public class OperationsSubModule_TestCase
 	{
 		Log.info("Check Operations Sub Module Without FiltaBio");
 		extentLogger = extent.createTest("Test Case 1: Check Operations Sub Module Without FiltaBio");
-		Obj.loginAdmin();
-		Obj.opsOnly();
+		obj.loginAdmin();
+		obj.opsOnly();
 	}
 
 
@@ -99,8 +99,8 @@ public class OperationsSubModule_TestCase
 	{
 		Log.info("Check Operations Sub Module With 1K FiltaBio");
 		extentLogger = extent.createTest("Test Case 2: Check Operations Sub Module With 1K FiltaBio");
-		Obj.loginAdmin();
-		Obj.opsActive1KProgram();
+		obj.loginAdmin();
+		obj.opsActive1KProgram();
 	}
 
 
@@ -109,8 +109,8 @@ public class OperationsSubModule_TestCase
 	{
 		Log.info("Check Operations Sub Module With 6K FiltaBio");
 		extentLogger = extent.createTest("Test Case 3: Check Operations Sub Module With 6K FiltaBio");
-		Obj.loginAdmin();
-		Obj.opsActive6KProgram();
+		obj.loginAdmin();
+		obj.opsActive6KProgram();
 	}
 
 
@@ -119,8 +119,8 @@ public class OperationsSubModule_TestCase
 	{
 		Log.info("Check Operations Sub Module With Active Collector FiltaBio");
 		extentLogger = extent.createTest("Test Case 4: Check Operations Sub Module With Active Collector FiltaBio");
-		Obj.loginAdmin();
-		Obj.opsActiveCollector();
+		obj.loginAdmin();
+		obj.opsActiveCollector();
 	}
 
 
@@ -129,8 +129,8 @@ public class OperationsSubModule_TestCase
 	{
 		Log.info("Check Operations Sub Module With Signed Waiting FiltaBio");
 		extentLogger = extent.createTest("Test Case 5: Check Operations Sub Module With Signed Waiting FiltaBio");
-		Obj.loginAdmin();
-		Obj.opsSignedWaiting();
+		obj.loginAdmin();
+		obj.opsSignedWaiting();
 	}
 
 
@@ -139,8 +139,8 @@ public class OperationsSubModule_TestCase
 	{
 		Log.info("Check Operations Sub Module With WC Issues FiltaBio");
 		extentLogger = extent.createTest("Test Case 5: Check Operations Sub Module With WC Issues FiltaBio");
-		Obj.loginAdmin();
-		Obj.opsWCIssues();
+		obj.loginAdmin();
+		obj.opsWCIssues();
 
 	}
 
@@ -181,6 +181,6 @@ public class OperationsSubModule_TestCase
 	{
 		Log.info("Operations Sub Module Test Case Ends Here");
 		extent.flush();
-		Obj.closeBrowser();
+		obj.closeBrowser();
 	}
 }

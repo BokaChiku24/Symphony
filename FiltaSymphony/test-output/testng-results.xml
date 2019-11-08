@@ -1,126 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="293233" started-at="2019-11-08T10:51:00Z" finished-at="2019-11-08T10:55:53Z">
+  <suite name="Default suite" duration-ms="34740" started-at="2019-11-08T13:12:20Z" finished-at="2019-11-08T13:12:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="293233" started-at="2019-11-08T10:51:00Z" finished-at="2019-11-08T10:55:53Z">
-      <class name="com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="property" is-config="true" duration-ms="12558" started-at="2019-11-08T16:21:00Z" finished-at="2019-11-08T16:21:12Z">
+    <test name="Default test" duration-ms="34740" started-at="2019-11-08T13:12:20Z" finished-at="2019-11-08T13:12:55Z">
+      <class name="com.filta.qa.operations_test.OperationCycle_TestCase">
+        <test-method status="PASS" signature="property()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="property" is-config="true" duration-ms="19376" started-at="2019-11-08T18:42:20Z" finished-at="2019-11-08T18:42:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="test" duration-ms="31281" started-at="2019-11-08T16:21:12Z" finished-at="2019-11-08T16:21:43Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="test" duration-ms="9657" started-at="2019-11-08T18:42:39Z" finished-at="2019-11-08T18:42:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="9" started-at="2019-11-08T16:21:43Z" finished-at="2019-11-08T16:21:43Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="15" started-at="2019-11-08T18:42:49Z" finished-at="2019-11-08T18:42:49Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=OperationsSubModule_TestCase.test()[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=OperationCycle_TestCase.test()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="test1()[pri:1, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="test1" duration-ms="37077" started-at="2019-11-08T16:21:43Z" finished-at="2019-11-08T16:22:20Z">
+        <test-method status="PASS" signature="test1()[pri:1, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="test1" duration-ms="5256" started-at="2019-11-08T18:42:49Z" finished-at="2019-11-08T18:42:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-11-08T16:22:20Z" finished-at="2019-11-08T16:22:20Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-11-08T18:42:54Z" finished-at="2019-11-08T18:42:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test1 status=SUCCESS method=OperationsSubModule_TestCase.test1()[pri:1, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426] output={null}]]]>
+                <![CDATA[[TestResult name=test1 status=SUCCESS method=OperationCycle_TestCase.test1()[pri:1, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="test2()[pri:2, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="test2" duration-ms="38497" started-at="2019-11-08T16:22:20Z" finished-at="2019-11-08T16:22:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2019-11-08T16:22:59Z" finished-at="2019-11-08T16:22:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test2 status=SUCCESS method=OperationsSubModule_TestCase.test2()[pri:2, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="test3()[pri:3, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="test3" duration-ms="37418" started-at="2019-11-08T16:22:59Z" finished-at="2019-11-08T16:23:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test3 -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-11-08T16:23:36Z" finished-at="2019-11-08T16:23:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test3 status=SUCCESS method=OperationsSubModule_TestCase.test3()[pri:3, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="test4()[pri:4, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="test4" duration-ms="36569" started-at="2019-11-08T16:23:36Z" finished-at="2019-11-08T16:24:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test4 -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="2" started-at="2019-11-08T16:24:13Z" finished-at="2019-11-08T16:24:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test4 status=SUCCESS method=OperationsSubModule_TestCase.test4()[pri:4, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="test5()[pri:5, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="test5" duration-ms="34574" started-at="2019-11-08T16:24:13Z" finished-at="2019-11-08T16:24:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test5 -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-11-08T16:24:48Z" finished-at="2019-11-08T16:24:48Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test5 status=SUCCESS method=OperationsSubModule_TestCase.test5()[pri:5, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="test6()[pri:6, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="test6" duration-ms="62688" started-at="2019-11-08T16:24:48Z" finished-at="2019-11-08T16:25:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test6 -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-11-08T16:25:50Z" finished-at="2019-11-08T16:25:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=test6 status=SUCCESS method=OperationsSubModule_TestCase.test6()[pri:6, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase@520a3426]" name="afterMethod" is-config="true" duration-ms="2518" started-at="2019-11-08T16:25:50Z" finished-at="2019-11-08T16:25:53Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="afterMethod" is-config="true" duration-ms="409" started-at="2019-11-08T18:42:54Z" finished-at="2019-11-08T18:42:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- com.filta.qa.operations.scheduledjobcalendar_test.OperationsSubModule_TestCase -->
+      </class> <!-- com.filta.qa.operations_test.OperationCycle_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
