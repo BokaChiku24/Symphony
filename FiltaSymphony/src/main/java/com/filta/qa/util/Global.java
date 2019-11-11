@@ -353,6 +353,13 @@ public class Global
 	}
 
 
+	public Alert alertFunction(WebDriver driver)
+	{
+		alertObj = driver.switchTo().alert();
+		return alertObj;
+	}
+
+
 	public String alert(String input, WebDriver driver)
 	{
 		alertObj = driver.switchTo().alert();

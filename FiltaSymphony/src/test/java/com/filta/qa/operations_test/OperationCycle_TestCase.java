@@ -90,6 +90,12 @@ public class OperationCycle_TestCase
 		Log.info("Check Scheduled Jobs");
 		extentLogger = extent.createTest("Test Case 0: Create One Job From Scheduled Job Calendar");
 		obj.scheduledJobs();
+		obj.jobOverview();
+		obj.addWorksheet();
+		obj.additionalService();
+		obj.moreInformation();
+		obj.saveCancel();
+		obj.crossCheckJobOverview();
 	}
 
 

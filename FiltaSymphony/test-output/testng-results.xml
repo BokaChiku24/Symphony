@@ -2,46 +2,46 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="34740" started-at="2019-11-08T13:12:20Z" finished-at="2019-11-08T13:12:55Z">
+  <suite name="Default suite" duration-ms="47672" started-at="2019-11-11T13:38:10Z" finished-at="2019-11-11T13:38:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="34740" started-at="2019-11-08T13:12:20Z" finished-at="2019-11-08T13:12:55Z">
+    <test name="Default test" duration-ms="47672" started-at="2019-11-11T13:38:10Z" finished-at="2019-11-11T13:38:58Z">
       <class name="com.filta.qa.operations_test.OperationCycle_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="property" is-config="true" duration-ms="19376" started-at="2019-11-08T18:42:20Z" finished-at="2019-11-08T18:42:39Z">
+        <test-method status="PASS" signature="property()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="property" is-config="true" duration-ms="18698" started-at="2019-11-11T19:08:10Z" finished-at="2019-11-11T19:08:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="test" duration-ms="9657" started-at="2019-11-08T18:42:39Z" finished-at="2019-11-08T18:42:49Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="test" duration-ms="9801" started-at="2019-11-11T19:08:29Z" finished-at="2019-11-11T19:08:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="15" started-at="2019-11-08T18:42:49Z" finished-at="2019-11-08T18:42:49Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="takeScreenShotOnFailure" is-config="true" duration-ms="16" started-at="2019-11-11T19:08:39Z" finished-at="2019-11-11T19:08:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=OperationCycle_TestCase.test()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=OperationCycle_TestCase.test()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="test1()[pri:1, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="test1" duration-ms="5256" started-at="2019-11-08T18:42:49Z" finished-at="2019-11-08T18:42:54Z">
+        <test-method status="PASS" signature="test1()[pri:1, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="test1" duration-ms="18673" started-at="2019-11-11T19:08:39Z" finished-at="2019-11-11T19:08:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-11-08T18:42:54Z" finished-at="2019-11-08T18:42:54Z">
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2019-11-11T19:08:57Z" finished-at="2019-11-11T19:08:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test1 status=SUCCESS method=OperationCycle_TestCase.test1()[pri:1, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426] output={null}]]]>
+                <![CDATA[[TestResult name=test1 status=SUCCESS method=OperationCycle_TestCase.test1()[pri:1, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@520a3426]" name="afterMethod" is-config="true" duration-ms="409" started-at="2019-11-08T18:42:54Z" finished-at="2019-11-08T18:42:55Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="afterMethod" is-config="true" duration-ms="461" started-at="2019-11-11T19:08:57Z" finished-at="2019-11-11T19:08:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
