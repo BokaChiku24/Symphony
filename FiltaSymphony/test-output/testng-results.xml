@@ -1,48 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-02-07T00:23:22 IST" name="Default suite" finished-at="2020-02-07T00:24:14 IST" duration-ms="51556">
+  <suite started-at="2020-02-07T02:44:19 IST" name="Default suite" finished-at="2020-02-07T02:55:31 IST" duration-ms="671995">
     <groups>
     </groups>
-    <test started-at="2020-02-07T00:23:22 IST" name="Default test" finished-at="2020-02-07T00:24:14 IST" duration-ms="51556">
-      <class name="com.filta.qa.login_test.LogIn_TestCase">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.filta.qa.login_test.LogIn_TestCase@7ec7ffd3]" started-at="2020-02-07T00:23:22 IST" name="beforeClass" finished-at="2020-02-07T00:23:45 IST" duration-ms="22966" status="PASS">
+    <test started-at="2020-02-07T02:44:19 IST" name="Default test" finished-at="2020-02-07T02:55:31 IST" duration-ms="671995">
+      <class name="com.filta.qa.operations_test.OperationsSubModule_TestCase">
+        <test-method is-config="true" signature="property()[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:44:19 IST" name="property" finished-at="2020-02-07T02:44:44 IST" duration-ms="24550" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="signInTesting(java.lang.String, java.lang.String)[pri:0, instance:com.filta.qa.login_test.LogIn_TestCase@7ec7ffd3]" started-at="2020-02-07T00:23:46 IST" name="signInTesting" data-provider="getData" finished-at="2020-02-07T00:24:09 IST" duration-ms="23088" status="PASS">
+        </test-method> <!-- property -->
+        <test-method signature="test()[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:44:44 IST" name="test" finished-at="2020-02-07T02:46:15 IST" duration-ms="91041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:46:15 IST" name="takeScreenShotOnFailure" finished-at="2020-02-07T02:46:15 IST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[KCAutomation]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Filtademo1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signInTesting -->
-        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.login_test.LogIn_TestCase@7ec7ffd3]" started-at="2020-02-07T00:24:09 IST" name="takeScreenShotOnFailure" finished-at="2020-02-07T00:24:09 IST" duration-ms="13" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=signInTesting status=SUCCESS method=LogIn_TestCase.signInTesting(java.lang.String, java.lang.String)[pri:0, instance:com.filta.qa.login_test.LogIn_TestCase@7ec7ffd3] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=OperationsSubModule_TestCase.test()[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.filta.qa.login_test.LogIn_TestCase@7ec7ffd3]" started-at="2020-02-07T00:24:09 IST" name="afterClass" finished-at="2020-02-07T00:24:14 IST" duration-ms="4652" status="PASS">
+        <test-method signature="test1()[pri:1, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:46:15 IST" name="test1" finished-at="2020-02-07T02:47:39 IST" duration-ms="84186" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.filta.qa.login_test.LogIn_TestCase -->
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:47:39 IST" name="takeScreenShotOnFailure" finished-at="2020-02-07T02:47:39 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test1 status=SUCCESS method=OperationsSubModule_TestCase.test1()[pri:1, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="test2()[pri:2, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:47:39 IST" name="test2" finished-at="2020-02-07T02:49:09 IST" duration-ms="89915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:49:09 IST" name="takeScreenShotOnFailure" finished-at="2020-02-07T02:49:09 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test2 status=SUCCESS method=OperationsSubModule_TestCase.test2()[pri:2, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="test3()[pri:3, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:49:09 IST" name="test3" finished-at="2020-02-07T02:50:38 IST" duration-ms="88491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:50:38 IST" name="takeScreenShotOnFailure" finished-at="2020-02-07T02:50:38 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test3 status=SUCCESS method=OperationsSubModule_TestCase.test3()[pri:3, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="test4()[pri:4, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:50:38 IST" name="test4" finished-at="2020-02-07T02:52:07 IST" duration-ms="88825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test4 -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:52:07 IST" name="takeScreenShotOnFailure" finished-at="2020-02-07T02:52:07 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test4 status=SUCCESS method=OperationsSubModule_TestCase.test4()[pri:4, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="test5()[pri:5, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:52:07 IST" name="test5" finished-at="2020-02-07T02:53:37 IST" duration-ms="90174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test5 -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:53:37 IST" name="takeScreenShotOnFailure" finished-at="2020-02-07T02:53:37 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test5 status=SUCCESS method=OperationsSubModule_TestCase.test5()[pri:5, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method signature="test6()[pri:6, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:53:37 IST" name="test6" finished-at="2020-02-07T02:55:27 IST" duration-ms="110333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test6 -->
+        <test-method is-config="true" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:55:27 IST" name="takeScreenShotOnFailure" finished-at="2020-02-07T02:55:27 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test6 status=SUCCESS method=OperationsSubModule_TestCase.test6()[pri:6, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.filta.qa.operations_test.OperationsSubModule_TestCase@7ec7ffd3]" started-at="2020-02-07T02:55:27 IST" name="afterMethod" finished-at="2020-02-07T02:55:31 IST" duration-ms="4404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.filta.qa.operations_test.OperationsSubModule_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

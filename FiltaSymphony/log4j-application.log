@@ -8439,4 +8439,221 @@
  2020-02-07 00:18:20,964  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
  2020-02-07 00:23:46,340  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
  2020-02-07 00:24:09,437  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:26:30,936  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2020-02-07 00:26:31,051  INFO [main] Forget Password Test Case:88 - Test Case 0: Get All Broken URL Names
+ 2020-02-07 00:27:02,678  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2020-02-07 00:29:21,270  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2020-02-07 00:29:21,459  INFO [main] Forget Password Test Case:88 - Test Case 0: Get All Broken URL Names
+ 2020-02-07 00:29:23,902  INFO [main] Forget Password Test Case:97 - Test Case 1: Forgot Password Check With Valid Username And Email
+ 2020-02-07 00:31:38,206  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2020-02-07 00:31:38,301  INFO [main] LogInPage Test Case:80 - Test Case 2: Drop Down Check On Login Page
+ 2020-02-07 00:32:28,823  INFO [main] LogInPage Test Case:89 - Test Case 3: Footer Check On Login Page
+ 2020-02-07 00:32:28,994  INFO [main] LogInPage Test Case:98 - Test Case 4: URL Check On Login Page
+ 2020-02-07 00:32:37,730  INFO [main] LogInPage Test Case:107 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2020-02-07 00:32:37,849  INFO [main] LogInPage Test Case:116 - Test Case 6: Check Login Page TextBox Label
+ 2020-02-07 00:33:28,445  INFO [main] LogInPage Test Case:125 - Test Case 7: Get All Login URL
+ 2020-02-07 00:33:28,698  INFO [main] LogInPage Test Case:134 - Test Case 8: Get All Broken URL
+ 2020-02-07 00:33:31,179  INFO [main] LogInPage Test Case:174 - Login Page Test Case Ends Here
+ 2020-02-07 00:34:37,905  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:35:00,206  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:36:29,758  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2020-02-07 00:36:29,845  INFO [main] LogInPage Test Case:80 - Test Case 2: Drop Down Check On Login Page
+ 2020-02-07 00:36:29,851  INFO [main] LogInPage Test Case:89 - Test Case 3: Footer Check On Login Page
+ 2020-02-07 00:36:29,946  INFO [main] LogInPage Test Case:98 - Test Case 4: URL Check On Login Page
+ 2020-02-07 00:36:38,605  INFO [main] LogInPage Test Case:107 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2020-02-07 00:36:38,739  INFO [main] LogInPage Test Case:116 - Test Case 6: Check Login Page TextBox Label
+ 2020-02-07 00:37:29,351  INFO [main] LogInPage Test Case:125 - Test Case 7: Get All Login URL
+ 2020-02-07 00:37:29,444  INFO [main] LogInPage Test Case:134 - Test Case 8: Get All Broken URL
+ 2020-02-07 00:37:31,785  INFO [main] LogInPage Test Case:174 - Login Page Test Case Ends Here
+ 2020-02-07 00:39:34,440  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2020-02-07 00:39:34,522  INFO [main] LogInPage Test Case:80 - Test Case 2: Drop Down Check On Login Page
+ 2020-02-07 00:39:34,526  INFO [main] LogInPage Test Case:89 - Test Case 3: Footer Check On Login Page
+ 2020-02-07 00:39:34,615  INFO [main] LogInPage Test Case:98 - Test Case 4: URL Check On Login Page
+ 2020-02-07 00:39:43,559  INFO [main] LogInPage Test Case:107 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2020-02-07 00:39:43,663  INFO [main] LogInPage Test Case:116 - Test Case 6: Check Login Page TextBox Label
+ 2020-02-07 00:39:43,896  INFO [main] LogInPage Test Case:125 - Test Case 7: Get All Login URL
+ 2020-02-07 00:39:44,114  INFO [main] LogInPage Test Case:134 - Test Case 8: Get All Broken URL
+ 2020-02-07 00:39:46,556  INFO [main] LogInPage Test Case:174 - Login Page Test Case Ends Here
+ 2020-02-07 00:40:33,775  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2020-02-07 00:40:33,870  INFO [main] LogInPage Test Case:80 - Test Case 2: Drop Down Check On Login Page
+ 2020-02-07 00:40:33,877  INFO [main] LogInPage Test Case:89 - Test Case 3: Footer Check On Login Page
+ 2020-02-07 00:40:33,953  INFO [main] LogInPage Test Case:98 - Test Case 4: URL Check On Login Page
+ 2020-02-07 00:40:42,607  INFO [main] LogInPage Test Case:107 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2020-02-07 00:40:42,728  INFO [main] LogInPage Test Case:116 - Test Case 6: Check Login Page TextBox Label
+ 2020-02-07 00:40:42,958  INFO [main] LogInPage Test Case:125 - Test Case 7: Get All Login URL
+ 2020-02-07 00:40:43,139  INFO [main] LogInPage Test Case:134 - Test Case 8: Get All Broken URL
+ 2020-02-07 00:40:45,422  INFO [main] LogInPage Test Case:174 - Login Page Test Case Ends Here
+ 2020-02-07 00:41:22,965  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login Functionality With Invalid Credentials
+ 2020-02-07 00:41:25,359  INFO [main] Sign In With Invalid Credentials Test Case:88 - Test Case 2: Check Login Functionality Without Credentials
+ 2020-02-07 00:41:27,439  INFO [main] Sign In With Invalid Credentials Test Case:101 - Test Case 3: Check Login Functionality WithInvalid Credentials
+ 2020-02-07 00:41:29,460  INFO [main] Sign In With Invalid Credentials Test Case:114 - Test Case 4: Check Login Functionality WithInvalid Credentials
+ 2020-02-07 00:41:31,797  INFO [main] Sign In With Invalid Credentials Test Case:127 - Test Case 5: Get All Login URL
+ 2020-02-07 00:41:32,076  INFO [main] Sign In With Invalid Credentials Test Case:136 - Test Case 6: Get All Broken URL
+ 2020-02-07 00:41:34,515  INFO [main] Sign In With Invalid Credentials Test Case:176 - Sign In Test Case Ends Here
+ 2020-02-07 00:42:19,360  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:42:40,116  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:43:23,195  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2020-02-07 00:43:23,387  INFO [main] Forget Password Test Case:88 - Test Case 0: Get All Broken URL Names
+ 2020-02-07 00:43:25,798  INFO [main] Forget Password Test Case:97 - Test Case 1: Forgot Password Check With Valid Username And Email
+ 2020-02-07 00:48:22,175  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2020-02-07 00:48:22,366  INFO [main] Forget Password Test Case:88 - Test Case 0: Get All Broken URL Names
+ 2020-02-07 00:48:24,706  INFO [main] Forget Password Test Case:97 - Test Case 1: Forgot Password Check With Valid Username And Email
+ 2020-02-07 00:48:29,924  INFO [main] Forget Password Test Case:108 - Test Case 2: Forgot Password Check With Invalid Username And Email
+ 2020-02-07 00:48:31,856  INFO [main] Forget Password Test Case:118 - Test Case 3: Forgot Password Check Without Username And Email
+ 2020-02-07 00:48:33,442  INFO [main] Forget Password Test Case:128 - Test Case 4: Forgot Password Check Without Username And With Email
+ 2020-02-07 00:48:34,345  INFO [main] Forget Password Test Case:138 - Test Case 5: Forgot Password Check With Username And Without Email
+ 2020-02-07 00:48:35,106  INFO [main] Forget Password Test Case:148 - Test Case 6: Forgot Password Textbox Check
+ 2020-02-07 00:48:35,201  INFO [main] Forget Password Test Case:157 - Test Case 7: Forgot Password Label Check
+ 2020-02-07 00:48:36,199  INFO [main] Forget Password Test Case:197 - Forgot Password Test Case Ends Here
+ 2020-02-07 00:49:35,820  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2020-02-07 00:49:36,082  INFO [main] Forget Password Test Case:88 - Test Case 0: Get All Broken URL Names
+ 2020-02-07 00:49:38,436  INFO [main] Forget Password Test Case:97 - Test Case 1: Forgot Password Check With Valid Username And Email
+ 2020-02-07 00:49:42,585  INFO [main] Forget Password Test Case:108 - Test Case 2: Forgot Password Check With Invalid Username And Email
+ 2020-02-07 00:49:44,576  INFO [main] Forget Password Test Case:118 - Test Case 3: Forgot Password Check Without Username And Email
+ 2020-02-07 00:49:46,363  INFO [main] Forget Password Test Case:128 - Test Case 4: Forgot Password Check Without Username And With Email
+ 2020-02-07 00:49:47,189  INFO [main] Forget Password Test Case:138 - Test Case 5: Forgot Password Check With Username And Without Email
+ 2020-02-07 00:49:47,866  INFO [main] Forget Password Test Case:148 - Test Case 6: Forgot Password Textbox Check
+ 2020-02-07 00:49:47,949  INFO [main] Forget Password Test Case:157 - Test Case 7: Forgot Password Label Check
+ 2020-02-07 00:49:48,945  INFO [main] Forget Password Test Case:197 - Forgot Password Test Case Ends Here
+ 2020-02-07 00:50:16,347  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login Functionality With Invalid Credentials
+ 2020-02-07 00:50:18,600  INFO [main] Sign In With Invalid Credentials Test Case:88 - Test Case 2: Check Login Functionality Without Credentials
+ 2020-02-07 00:50:20,748  INFO [main] Sign In With Invalid Credentials Test Case:101 - Test Case 3: Check Login Functionality WithInvalid Credentials
+ 2020-02-07 00:50:23,087  INFO [main] Sign In With Invalid Credentials Test Case:114 - Test Case 4: Check Login Functionality WithInvalid Credentials
+ 2020-02-07 00:50:25,442  INFO [main] Sign In With Invalid Credentials Test Case:127 - Test Case 5: Get All Login URL
+ 2020-02-07 00:50:25,703  INFO [main] Sign In With Invalid Credentials Test Case:136 - Test Case 6: Get All Broken URL
+ 2020-02-07 00:50:27,639  INFO [main] Sign In With Invalid Credentials Test Case:176 - Sign In Test Case Ends Here
+ 2020-02-07 00:50:49,312  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:51:13,595  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:51:38,571  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2020-02-07 00:51:38,684  INFO [main] LogInPage Test Case:80 - Test Case 2: Drop Down Check On Login Page
+ 2020-02-07 00:51:38,692  INFO [main] LogInPage Test Case:89 - Test Case 3: Footer Check On Login Page
+ 2020-02-07 00:51:38,821  INFO [main] LogInPage Test Case:98 - Test Case 4: URL Check On Login Page
+ 2020-02-07 00:51:47,502  INFO [main] LogInPage Test Case:107 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2020-02-07 00:51:47,667  INFO [main] LogInPage Test Case:116 - Test Case 6: Check Login Page TextBox Label
+ 2020-02-07 00:51:47,894  INFO [main] LogInPage Test Case:125 - Test Case 7: Get All Login URL
+ 2020-02-07 00:51:48,143  INFO [main] LogInPage Test Case:134 - Test Case 8: Get All Broken URL
+ 2020-02-07 00:51:49,896  INFO [main] LogInPage Test Case:174 - Login Page Test Case Ends Here
+ 2020-02-07 00:53:02,612  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2020-02-07 00:53:20,034  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2020-02-07 00:53:52,672  INFO [main] Operations Cycle Test Cases:136 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 00:57:25,988  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2020-02-07 00:57:43,174  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2020-02-07 00:58:08,441  INFO [main] Operations Cycle Test Cases:136 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 00:59:06,858  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:00:17,017  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 01:01:07,508  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2020-02-07 01:01:57,991  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2020-02-07 01:02:48,447  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2020-02-07 01:03:39,023  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2020-02-07 01:04:29,640  INFO [main] Operations Module Test Cases:140 - Check Operations Sub Module With WC Issues FiltaBio
+ 2020-02-07 01:05:20,480  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:10:31,765  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:11:47,142  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 01:16:06,164  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:17:18,207  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 01:21:07,774  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:22:33,432  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:25:29,948  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:26:22,404  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:27:27,292  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:28:17,745  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:29:28,534  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:31:06,736  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:32:22,071  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:33:58,093  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:35:52,500  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:37:31,480  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:40:22,654  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:41:26,222  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:43:59,727  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:45:56,807  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:52:12,597  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:54:05,498  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:54:57,564  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:55:42,494  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:57:55,783  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 01:58:32,678  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 01:59:32,062  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:01:18,397  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:05:59,015  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:07:21,048  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:07:56,680  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 02:08:30,845  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:10:10,727  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 02:12:44,765  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:14:20,803  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 02:16:30,704  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 02:18:24,463  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2020-02-07 02:18:24,574  INFO [main] Forget Password Test Case:88 - Test Case 0: Get All Broken URL Names
+ 2020-02-07 02:18:26,689  INFO [main] Forget Password Test Case:97 - Test Case 1: Forgot Password Check With Valid Username And Email
+ 2020-02-07 02:18:31,037  INFO [main] Forget Password Test Case:108 - Test Case 2: Forgot Password Check With Invalid Username And Email
+ 2020-02-07 02:18:32,539  INFO [main] Forget Password Test Case:118 - Test Case 3: Forgot Password Check Without Username And Email
+ 2020-02-07 02:18:33,950  INFO [main] Forget Password Test Case:128 - Test Case 4: Forgot Password Check Without Username And With Email
+ 2020-02-07 02:18:34,342  INFO [main] Forget Password Test Case:138 - Test Case 5: Forgot Password Check With Username And Without Email
+ 2020-02-07 02:18:34,631  INFO [main] Forget Password Test Case:148 - Test Case 6: Forgot Password Textbox Check
+ 2020-02-07 02:18:34,675  INFO [main] Forget Password Test Case:157 - Test Case 7: Forgot Password Label Check
+ 2020-02-07 02:18:35,451  INFO [main] Forget Password Test Case:197 - Forgot Password Test Case Ends Here
+ 2020-02-07 02:18:59,349  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login Functionality With Invalid Credentials
+ 2020-02-07 02:19:01,154  INFO [main] Sign In With Invalid Credentials Test Case:88 - Test Case 2: Check Login Functionality Without Credentials
+ 2020-02-07 02:19:02,920  INFO [main] Sign In With Invalid Credentials Test Case:101 - Test Case 3: Check Login Functionality WithInvalid Credentials
+ 2020-02-07 02:19:04,712  INFO [main] Sign In With Invalid Credentials Test Case:114 - Test Case 4: Check Login Functionality WithInvalid Credentials
+ 2020-02-07 02:19:06,475  INFO [main] Sign In With Invalid Credentials Test Case:127 - Test Case 5: Get All Login URL
+ 2020-02-07 02:19:06,564  INFO [main] Sign In With Invalid Credentials Test Case:136 - Test Case 6: Get All Broken URL
+ 2020-02-07 02:19:08,184  INFO [main] Sign In With Invalid Credentials Test Case:176 - Sign In Test Case Ends Here
+ 2020-02-07 02:19:32,500  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 02:19:36,467  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 02:19:58,406  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2020-02-07 02:19:58,469  INFO [main] LogInPage Test Case:80 - Test Case 2: Drop Down Check On Login Page
+ 2020-02-07 02:19:58,473  INFO [main] LogInPage Test Case:89 - Test Case 3: Footer Check On Login Page
+ 2020-02-07 02:19:58,540  INFO [main] LogInPage Test Case:98 - Test Case 4: URL Check On Login Page
+ 2020-02-07 02:20:06,933  INFO [main] LogInPage Test Case:107 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2020-02-07 02:20:06,999  INFO [main] LogInPage Test Case:116 - Test Case 6: Check Login Page TextBox Label
+ 2020-02-07 02:20:07,097  INFO [main] LogInPage Test Case:125 - Test Case 7: Get All Login URL
+ 2020-02-07 02:20:07,199  INFO [main] LogInPage Test Case:134 - Test Case 8: Get All Broken URL
+ 2020-02-07 02:20:08,804  INFO [main] LogInPage Test Case:174 - Login Page Test Case Ends Here
+ 2020-02-07 02:23:06,281  INFO [main] Forget Password Test Case:79 - Test Case 0: Get All URL Names
+ 2020-02-07 02:23:06,392  INFO [main] Forget Password Test Case:88 - Test Case 0: Get All Broken URL Names
+ 2020-02-07 02:23:08,497  INFO [main] Forget Password Test Case:97 - Test Case 1: Forgot Password Check With Valid Username And Email
+ 2020-02-07 02:23:12,241  INFO [main] Forget Password Test Case:108 - Test Case 2: Forgot Password Check With Invalid Username And Email
+ 2020-02-07 02:23:13,746  INFO [main] Forget Password Test Case:118 - Test Case 3: Forgot Password Check Without Username And Email
+ 2020-02-07 02:23:15,136  INFO [main] Forget Password Test Case:128 - Test Case 4: Forgot Password Check Without Username And With Email
+ 2020-02-07 02:23:15,417  INFO [main] Forget Password Test Case:138 - Test Case 5: Forgot Password Check With Username And Without Email
+ 2020-02-07 02:23:15,691  INFO [main] Forget Password Test Case:148 - Test Case 6: Forgot Password Textbox Check
+ 2020-02-07 02:23:15,728  INFO [main] Forget Password Test Case:157 - Test Case 7: Forgot Password Label Check
+ 2020-02-07 02:23:16,465  INFO [main] Forget Password Test Case:197 - Forgot Password Test Case Ends Here
+ 2020-02-07 02:23:39,438  INFO [main] Sign In With Invalid Credentials Test Case:76 - Test Case 1: Check Login Functionality With Invalid Credentials
+ 2020-02-07 02:23:41,210  INFO [main] Sign In With Invalid Credentials Test Case:88 - Test Case 2: Check Login Functionality Without Credentials
+ 2020-02-07 02:23:42,961  INFO [main] Sign In With Invalid Credentials Test Case:101 - Test Case 3: Check Login Functionality WithInvalid Credentials
+ 2020-02-07 02:23:44,754  INFO [main] Sign In With Invalid Credentials Test Case:114 - Test Case 4: Check Login Functionality WithInvalid Credentials
+ 2020-02-07 02:23:46,509  INFO [main] Sign In With Invalid Credentials Test Case:127 - Test Case 5: Get All Login URL
+ 2020-02-07 02:23:46,601  INFO [main] Sign In With Invalid Credentials Test Case:136 - Test Case 6: Get All Broken URL
+ 2020-02-07 02:23:48,236  INFO [main] Sign In With Invalid Credentials Test Case:176 - Sign In Test Case Ends Here
+ 2020-02-07 02:24:09,826  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 02:24:28,749  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 02:24:56,264  INFO [main] LogInPage Test Case:71 - Test Case 1: Text Check On Login Page
+ 2020-02-07 02:24:56,312  INFO [main] LogInPage Test Case:80 - Test Case 2: Drop Down Check On Login Page
+ 2020-02-07 02:24:56,314  INFO [main] LogInPage Test Case:89 - Test Case 3: Footer Check On Login Page
+ 2020-02-07 02:24:56,366  INFO [main] LogInPage Test Case:98 - Test Case 4: URL Check On Login Page
+ 2020-02-07 02:25:04,801  INFO [main] LogInPage Test Case:107 - Test Case 5: Check Login Page TextBox Enabled Or Not
+ 2020-02-07 02:25:04,864  INFO [main] LogInPage Test Case:116 - Test Case 6: Check Login Page TextBox Label
+ 2020-02-07 02:25:04,956  INFO [main] LogInPage Test Case:125 - Test Case 7: Get All Login URL
+ 2020-02-07 02:25:05,051  INFO [main] LogInPage Test Case:134 - Test Case 8: Get All Broken URL
+ 2020-02-07 02:25:06,654  INFO [main] LogInPage Test Case:174 - Login Page Test Case Ends Here
+ 2020-02-07 02:26:16,368  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:27:47,147  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 02:28:37,604  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 02:33:25,466  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:34:54,411  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 02:35:44,896  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 02:38:04,027  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:39:38,202  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 02:41:04,685  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 02:44:44,511  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 02:46:15,574  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 02:47:39,766  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2020-02-07 02:49:09,686  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2020-02-07 02:50:38,182  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2020-02-07 02:52:07,008  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2020-02-07 02:53:37,188  INFO [main] Operations Module Test Cases:140 - Check Operations Sub Module With WC Issues FiltaBio
+ 2020-02-07 02:55:27,527  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
  

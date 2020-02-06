@@ -3,11 +3,13 @@ package com.filta.qa.operations;
 import static org.testng.Assert.assertEquals;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 //import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -42,8 +44,14 @@ public class OperationsSubModule
 	@FindBy(how = How.XPATH, using = ".//input[@id='search_name_basic']")
 	private WebElement nameFranchiseeSearch;
 
+	@FindBy(how = How.XPATH, using = ".//input[@id='first_name_advanced']")
+	private WebElement advancedNameFranchiseeSearch;
+
 	@FindBy(how = How.XPATH, using = ".//input[@type='submit']")
 	private WebElement nameFranchiseeSearchClick;
+
+	@FindBy(how = How.XPATH, using = ".//a[@id='basic_search_link']")
+	private WebElement basicSearch;
 
 	@FindBy(how = How.XPATH, using = ".//table[@id='ListTable']//tbody//tr[3]//td[3]//a")
 	private WebElement franchiseeIDClick;
@@ -111,7 +119,6 @@ public class OperationsSubModule
 	@FindBy(how = How.XPATH, using = ".//input[@id='filta_perc']")
 	private WebElement filtapercentage;
 
-
 	public OperationsSubModule(WebDriver driver)
 	{
 		globalObj = new Global();
@@ -125,12 +132,31 @@ public class OperationsSubModule
 
 	public void opsActivePercent()
 	{
+
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchisee));
 		globalObj.action(driver).moveToElement(franchisee).build().perform();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeClick));
 		franchiseeClick.click();
-		nameFranchiseeSearch.clear();
-		nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
-		nameFranchiseeSearchClick.click();
+		try
+		{
+			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			basicSearch.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
+		try
+		{
+			nameFranchiseeSearch.clear();
+			nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
+			nameFranchiseeSearchClick.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
+
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeIDClick));
 		franchiseeIDClick.click();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(oPSCheckbox));
@@ -148,11 +174,11 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(operationTab).build().perform();
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul//li[@class='last-li'][3]//li//a"));
-//		Iterator<WebElement> itr = list.iterator();
-//		while (itr.hasNext())
-//		{
-//			System.out.println(itr.next().getText());
-//		}
+		Iterator<WebElement> itr = list.iterator();
+		while (itr.hasNext())
+		{
+			System.out.println(itr.next().getText());
+		}
 
 		for (int i = 0; i < list.size(); i++)
 		{
@@ -164,12 +190,29 @@ public class OperationsSubModule
 
 	public void opsOnly()
 	{
+		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchisee));
 		globalObj.action(driver).moveToElement(franchisee).build().perform();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeClick));
 		franchiseeClick.click();
-		nameFranchiseeSearch.clear();
-		nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
-		nameFranchiseeSearchClick.click();
+		try
+		{
+			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			basicSearch.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
+		try
+		{
+			nameFranchiseeSearch.clear();
+			nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
+			nameFranchiseeSearchClick.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeIDClick));
 		franchiseeIDClick.click();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(oPSCheckbox));
@@ -196,12 +239,12 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(operationTab).build().perform();
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul//li[@class='last-li'][3]//li//a"));
-//		Iterator<WebElement> itr = list.iterator();
-//		while (itr.hasNext())
-//		{
-//			System.out.println(itr.next().getText());
-//		}
-//		
+		Iterator<WebElement> itr = list.iterator();
+		while (itr.hasNext())
+		{
+			System.out.println(itr.next().getText());
+		}
+		
 		for (int i = 0; i < list.size(); i++)
 		{
 			assertEquals(list.get(i).getText(), operations.getCellData(i + 1, 1));
@@ -215,9 +258,25 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(franchisee).build().perform();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeClick));
 		franchiseeClick.click();
-		nameFranchiseeSearch.clear();
-		nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
-		nameFranchiseeSearchClick.click();
+		try
+		{
+			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			basicSearch.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
+		try
+		{
+			nameFranchiseeSearch.clear();
+			nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
+			nameFranchiseeSearchClick.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeIDClick));
 		franchiseeIDClick.click();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(oPSCheckbox));
@@ -256,11 +315,11 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(operationTab).build().perform();
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul//li[@class='last-li'][3]//li//a"));
-//		Iterator<WebElement> itr = list.iterator();
-//		while (itr.hasNext())
-//		{
-//			System.out.println(itr.next().getText());
-//		}
+		Iterator<WebElement> itr = list.iterator();
+		while (itr.hasNext())
+		{
+			System.out.println(itr.next().getText());
+		}
 
 		for (int i = 0; i < list.size(); i++)
 		{
@@ -276,9 +335,25 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(franchisee).build().perform();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeClick));
 		franchiseeClick.click();
-		nameFranchiseeSearch.clear();
-		nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
-		nameFranchiseeSearchClick.click();
+		try
+		{
+			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			basicSearch.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
+		try
+		{
+			nameFranchiseeSearch.clear();
+			nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
+			nameFranchiseeSearchClick.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeIDClick));
 		franchiseeIDClick.click();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(oPSCheckbox));
@@ -312,11 +387,11 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(operationTab).build().perform();
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul//li[@class='last-li'][3]//li//a"));
-//		Iterator<WebElement> itr = list.iterator();
-//		while (itr.hasNext())
-//		{
-//			System.out.println(itr.next().getText());
-//		}
+		Iterator<WebElement> itr = list.iterator();
+		while (itr.hasNext())
+		{
+			System.out.println(itr.next().getText());
+		}
 
 		for (int i = 0; i < list.size(); i++)
 		{
@@ -331,9 +406,25 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(franchisee).build().perform();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeClick));
 		franchiseeClick.click();
-		nameFranchiseeSearch.clear();
-		nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
-		nameFranchiseeSearchClick.click();
+		try
+		{
+			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			basicSearch.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
+		try
+		{
+			nameFranchiseeSearch.clear();
+			nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
+			nameFranchiseeSearchClick.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeIDClick));
 		franchiseeIDClick.click();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(oPSCheckbox));
@@ -371,11 +462,11 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(operationTab).build().perform();
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul//li[@class='last-li'][3]//li//a"));
-//		Iterator<WebElement> itr = list.iterator();
-//		while (itr.hasNext())
-//		{
-//			System.out.println(itr.next().getText());
-//		}
+		Iterator<WebElement> itr = list.iterator();
+		while (itr.hasNext())
+		{
+			System.out.println(itr.next().getText());
+		}
 		for (int i = 0; i < list.size(); i++)
 		{
 			assertEquals(list.get(i).getText(), operations.getCellData(i + 1, 4));
@@ -389,9 +480,25 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(franchisee).build().perform();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeClick));
 		franchiseeClick.click();
-		nameFranchiseeSearch.clear();
-		nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
-		nameFranchiseeSearchClick.click();
+		try
+		{
+			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			basicSearch.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
+		try
+		{
+			nameFranchiseeSearch.clear();
+			nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
+			nameFranchiseeSearchClick.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeIDClick));
 		franchiseeIDClick.click();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(oPSCheckbox));
@@ -419,11 +526,11 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(operationTab).build().perform();
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul//li[@class='last-li'][3]//li//a"));
-//		Iterator<WebElement> itr = list.iterator();
-//		while (itr.hasNext())
-//		{
-//			System.out.println(itr.next().getText());
-//		}
+		Iterator<WebElement> itr = list.iterator();
+		while (itr.hasNext())
+		{
+			System.out.println(itr.next().getText());
+		}
 		for (int i = 0; i < list.size(); i++)
 		{
 			assertEquals(list.get(i).getText(), operations.getCellData(i + 1, 5));
@@ -437,9 +544,25 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(franchisee).build().perform();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeClick));
 		franchiseeClick.click();
-		nameFranchiseeSearch.clear();
-		nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
-		nameFranchiseeSearchClick.click();
+		try
+		{
+			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			basicSearch.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
+		try
+		{
+			nameFranchiseeSearch.clear();
+			nameFranchiseeSearch.sendKeys(prop.getProperty("Franchisee_Name"));
+			nameFranchiseeSearchClick.click();
+		}
+		catch (NoSuchElementException e)
+		{
+			System.out.println(e);
+		}
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(franchiseeIDClick));
 		franchiseeIDClick.click();
 		globalObj.wait(driver).until(ExpectedConditions.visibilityOf(oPSCheckbox));
@@ -466,11 +589,11 @@ public class OperationsSubModule
 		globalObj.action(driver).moveToElement(operationTab).build().perform();
 		List<WebElement> list = driver.findElements(By.xpath(
 				".//div[@id='ajaxHeader']//div[@class='menubar']//div[@id='moduleList']//ul//li[@class='last-li'][3]//li//a"));
-//		Iterator<WebElement> itr = list.iterator();
-//		while (itr.hasNext())
-//		{
-//			System.out.println(itr.next().getText());
-//		}
+		Iterator<WebElement> itr = list.iterator();
+		while (itr.hasNext())
+		{
+			System.out.println(itr.next().getText());
+		}
 		for (int i = 0; i < list.size(); i++)
 		{
 			assertEquals(list.get(i).getText(), operations.getCellData(i + 1, 6));

@@ -135,6 +135,6 @@ public class OperationCycle_TestCase
 	{
 		Log.info("Operations Sub Module Test Case Ends Here");
 		extent.flush();
-		// obj.closeBrowser();
+		obj.closeBrowser();
 	}
 }

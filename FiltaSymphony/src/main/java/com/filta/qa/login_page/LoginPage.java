@@ -57,8 +57,8 @@ public class LoginPage implements LoginPage_Interface
 	@FindBy(how = How.XPATH, using = ".//label[@for='user_password']")
 	private WebElement pWordLabel;
 
-	@FindBy(how = How.XPATH, using = ".//tbody//tr[7]//td[@scope='row']")
-	private WebElement languageLabel;
+//	@FindBy(how = How.XPATH, using = ".//tbody//tr[7]//td[@scope='row']")
+//	private WebElement languageLabel;
 
 	@FindBy(how = How.XPATH, using = ".//input[@title='Log In']")
 	private WebElement loginLabel;
@@ -74,17 +74,21 @@ public class LoginPage implements LoginPage_Interface
 
 	public void dropDown()
 	{
-		list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));
-		for (int i = 0; i < list.size(); i++)
-		{
-			System.out.println(list.get(i).getText());
-		}
-		Assert.assertEquals(list.get(0).getText(), prop.getProperty("english"));
-		Assert.assertEquals(list.get(1).getText(), prop.getProperty("german"));
-		Assert.assertEquals(list.size(), Integer.parseInt(prop.getProperty("LanguageSize")));
-		Assert.assertEquals(globalObj.select(language).getFirstSelectedOption().getText(),
-				prop.getProperty("english"));
+
 	}
+//	public void dropDown()
+//	{
+//		list = driver.findElements(By.xpath(".//select[@name='login_language']//option"));
+//		for (int i = 0; i < list.size(); i++)
+//		{
+//			System.out.println(list.get(i).getText());
+//		}
+//		Assert.assertEquals(list.get(0).getText(), prop.getProperty("english"));
+//		Assert.assertEquals(list.get(1).getText(), prop.getProperty("german"));
+//		Assert.assertEquals(list.size(), Integer.parseInt(prop.getProperty("LanguageSize")));
+//		Assert.assertEquals(globalObj.select(language).getFirstSelectedOption().getText(),
+//				prop.getProperty("english"));
+//	}
 
 
 	public void checkText()
@@ -242,7 +246,7 @@ public class LoginPage implements LoginPage_Interface
 	{
 		Assert.assertEquals(uNameLabel.getText(), prop.getProperty("LoginUnameLabel"));
 		Assert.assertEquals(pWordLabel.getText(), prop.getProperty("LoginPwordLabel"));
-		Assert.assertEquals(languageLabel.getText(), prop.getProperty("LoginLanguageLabel"));
+	//	Assert.assertEquals(languageLabel.getText(), prop.getProperty("LoginLanguageLabel"));
 		Assert.assertEquals(loginLabel.getAttribute("value"), prop.getProperty("LoginLabel"));
 	}
 
