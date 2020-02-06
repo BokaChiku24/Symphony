@@ -14,7 +14,9 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -54,7 +56,6 @@ public class Global
 	private DesiredCapabilities capablities;
 	private String browser = "chrome";
 
-
 	// Driver Initialization Method !!
 	public WebDriver driver()
 	{
@@ -62,9 +63,30 @@ public class Global
 		if (browser.equalsIgnoreCase(prop.getProperty("browserChrome")))
 		{
 			options = new ChromeOptions();
+			options.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 			options.addArguments("--start-maximized");
 			options.addArguments("--disable-web-security");
 			options.addArguments("--no-proxy-server");
+			options.addArguments("disable-infobars");
+			options.addArguments("--log-level=3");
+			options.addArguments("--disable-gpu");
+			options.addArguments("--disable-browser-side-navigation");
+			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("enable-automation");
+			options.addArguments("--disable-extensions");
+			options.addArguments("--dns-prefetch-disable");
+			options.addArguments("--aggressive-cache-discard"); 
+			options.addArguments("--disable-cache"); 
+			options.addArguments("--disable-application-cache"); 
+			options.addArguments("--disable-offline-load-stale-cache"); 
+			options.addArguments("--disk-cache-size=0");
+			options.addArguments("--window-size=1920,1080");
+			options.addArguments("--incognito");
+			options.addArguments("--disable-features=VizDisplayCompositor");
+			options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+			options.addArguments("enable-features=NetworkServiceInProcess");
+			options.addArguments("disable-features=NetworkService");
+			options.addArguments("--force-device-scale-factor=1");
 			prefs = new HashMap<String, Object>();
 			prefs.put("credentials_enable_service", false);
 			prefs.put("profile.password_manager_enabled", false);

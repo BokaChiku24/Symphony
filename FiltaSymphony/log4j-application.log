@@ -8416,4 +8416,27 @@
  2019-11-11 19:08:29,437  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
  2019-11-11 19:08:39,261  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
  2019-11-11 19:08:57,935  INFO [main] Operations Cycle Test Cases:136 - Operations Sub Module Test Case Ends Here
+ 2020-02-06 23:10:54,191  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-06 23:10:59,404  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-06 23:15:18,394  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-06 23:15:41,721  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-06 23:23:12,899  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-06 23:23:43,110  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-06 23:33:44,805  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-06 23:34:22,762  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-06 23:38:43,266  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-06 23:53:32,778  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-06 23:53:56,866  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:00:28,912  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:00:53,466  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:05:24,166  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:05:46,842  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:08:47,302  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:09:10,355  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:15:51,351  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:16:13,228  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:18:00,009  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:18:20,964  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
+ 2020-02-07 00:23:46,340  INFO [main] Sign In Test Case:97 - Test Case 1: Check Login Functionality With Valid Credentials And Avaliable Links Name
+ 2020-02-07 00:24:09,437  INFO [main] Sign In Test Case:143 - Sign In Test Case Ends Here
  
