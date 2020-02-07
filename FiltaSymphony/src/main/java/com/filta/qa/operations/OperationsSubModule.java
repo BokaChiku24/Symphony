@@ -119,6 +119,7 @@ public class OperationsSubModule
 	@FindBy(how = How.XPATH, using = ".//input[@id='filta_perc']")
 	private WebElement filtapercentage;
 
+
 	public OperationsSubModule(WebDriver driver)
 	{
 		globalObj = new Global();
@@ -139,7 +140,7 @@ public class OperationsSubModule
 		franchiseeClick.click();
 		try
 		{
-			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			//globalObj.waitFast(driver).until(ExpectedConditions.visibilityOf(basicSearch));
 			basicSearch.click();
 		}
 		catch (NoSuchElementException e)
@@ -196,7 +197,7 @@ public class OperationsSubModule
 		franchiseeClick.click();
 		try
 		{
-			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			//globalObj.waitFast(driver).until(ExpectedConditions.visibilityOf(basicSearch));
 			basicSearch.click();
 		}
 		catch (NoSuchElementException e)
@@ -244,7 +245,7 @@ public class OperationsSubModule
 		{
 			System.out.println(itr.next().getText());
 		}
-		
+
 		for (int i = 0; i < list.size(); i++)
 		{
 			assertEquals(list.get(i).getText(), operations.getCellData(i + 1, 1));
@@ -260,7 +261,7 @@ public class OperationsSubModule
 		franchiseeClick.click();
 		try
 		{
-			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			//globalObj.waitFast(driver).until(ExpectedConditions.visibilityOf(basicSearch));
 			basicSearch.click();
 		}
 		catch (NoSuchElementException e)
@@ -337,7 +338,7 @@ public class OperationsSubModule
 		franchiseeClick.click();
 		try
 		{
-			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			//globalObj.waitFast(driver).until(ExpectedConditions.visibilityOf(basicSearch));
 			basicSearch.click();
 		}
 		catch (NoSuchElementException e)
@@ -408,7 +409,7 @@ public class OperationsSubModule
 		franchiseeClick.click();
 		try
 		{
-			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			//globalObj.waitFast(driver).until(ExpectedConditions.visibilityOf(basicSearch));
 			basicSearch.click();
 		}
 		catch (NoSuchElementException e)
@@ -482,7 +483,7 @@ public class OperationsSubModule
 		franchiseeClick.click();
 		try
 		{
-			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			//globalObj.waitFast(driver).until(ExpectedConditions.visibilityOf(basicSearch));
 			basicSearch.click();
 		}
 		catch (NoSuchElementException e)
@@ -546,7 +547,7 @@ public class OperationsSubModule
 		franchiseeClick.click();
 		try
 		{
-			// globalObj.wait(driver).until(ExpectedConditions.visibilityOf(basicSearch));
+			//globalObj.waitFast(driver).until(ExpectedConditions.visibilityOf(basicSearch));
 			basicSearch.click();
 		}
 		catch (NoSuchElementException e)

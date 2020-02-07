@@ -246,6 +246,11 @@ public class Global
 		return wait;
 	}
 
+	public WebDriverWait waitFast(WebDriver driver)
+	{
+		wait = new WebDriverWait(driver, 50);
+		return wait;
+	}
 
 	public String getString(WebDriver driver, String xPath)
 	{

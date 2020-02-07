@@ -8656,4 +8656,20 @@
  2020-02-07 02:52:07,008  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
  2020-02-07 02:53:37,188  INFO [main] Operations Module Test Cases:140 - Check Operations Sub Module With WC Issues FiltaBio
  2020-02-07 02:55:27,527  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 10:17:01,163  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 10:23:58,291  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 10:27:23,585  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 10:29:13,107  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 10:30:44,872  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 10:33:41,390  INFO [main] Operations Module Test Cases:80 - Check Operations Sub Module With Active Percent FiltaBio
+ 2020-02-07 10:35:06,283  INFO [main] Operations Module Test Cases:90 - Check Operations Sub Module Without FiltaBio
+ 2020-02-07 10:36:27,602  INFO [main] Operations Module Test Cases:100 - Check Operations Sub Module With 1K FiltaBio
+ 2020-02-07 10:37:52,669  INFO [main] Operations Module Test Cases:110 - Check Operations Sub Module With 6K FiltaBio
+ 2020-02-07 10:39:17,237  INFO [main] Operations Module Test Cases:120 - Check Operations Sub Module With Active Collector FiltaBio
+ 2020-02-07 10:40:40,281  INFO [main] Operations Module Test Cases:130 - Check Operations Sub Module With Signed Waiting FiltaBio
+ 2020-02-07 10:42:01,150  INFO [main] Operations Module Test Cases:140 - Check Operations Sub Module With WC Issues FiltaBio
+ 2020-02-07 10:43:50,291  INFO [main] Operations Module Test Cases:182 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 10:44:51,823  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
+ 2020-02-07 10:45:02,694  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
+ 2020-02-07 10:45:24,054  INFO [main] Operations Cycle Test Cases:136 - Operations Sub Module Test Case Ends Here
  
