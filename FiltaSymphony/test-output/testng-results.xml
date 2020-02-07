@@ -1,51 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="2" total="8" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="57044" started-at="2020-02-07T05:14:29Z" finished-at="2020-02-07T05:15:26Z">
+  <suite name="Default suite" duration-ms="95831" started-at="2020-02-07T08:26:44Z" finished-at="2020-02-07T08:28:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="57044" started-at="2020-02-07T05:14:29Z" finished-at="2020-02-07T05:15:26Z">
-      <class name="com.filta.qa.operations_test.OperationCycle_TestCase">
-        <test-method status="PASS" signature="property()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="property" is-config="true" duration-ms="22107" started-at="2020-02-07T10:44:29Z" finished-at="2020-02-07T10:44:51Z">
+    <test name="Default test" duration-ms="95831" started-at="2020-02-07T08:26:44Z" finished-at="2020-02-07T08:28:20Z">
+      <class name="com.filta.qa.home_franchisee_test.UserPage_TestCase">
+        <test-method status="PASS" signature="property()[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="property" is-config="true" duration-ms="21741" started-at="2020-02-07T13:56:44Z" finished-at="2020-02-07T13:57:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- property -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="test" duration-ms="10849" started-at="2020-02-07T10:44:51Z" finished-at="2020-02-07T10:45:02Z">
+        <test-method status="PASS" signature="checkURL()[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="checkURL" duration-ms="4379" started-at="2020-02-07T13:57:06Z" finished-at="2020-02-07T13:57:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="takeScreenShotOnFailure" is-config="true" duration-ms="23" started-at="2020-02-07T10:45:02Z" finished-at="2020-02-07T10:45:02Z">
+        </test-method> <!-- checkURL -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="takeScreenShotOnFailure" is-config="true" duration-ms="8" started-at="2020-02-07T13:57:10Z" finished-at="2020-02-07T13:57:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test status=SUCCESS method=OperationCycle_TestCase.test()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd] output={null}]]]>
+                <![CDATA[[TestResult name=checkURL status=SUCCESS method=UserPage_TestCase.checkURL()[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="test1()[pri:1, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="test1" duration-ms="21359" started-at="2020-02-07T10:45:02Z" finished-at="2020-02-07T10:45:24Z">
+        <test-method status="PASS" signature="checkButtonName()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="checkButtonName" duration-ms="2656" started-at="2020-02-07T13:57:10Z" finished-at="2020-02-07T13:57:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2020-02-07T10:45:24Z" finished-at="2020-02-07T10:45:24Z">
+        </test-method> <!-- checkButtonName -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2020-02-07T13:57:13Z" finished-at="2020-02-07T13:57:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test1 status=SUCCESS method=OperationCycle_TestCase.test1()[pri:1, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd] output={null}]]]>
+                <![CDATA[[TestResult name=checkButtonName status=SUCCESS method=UserPage_TestCase.checkButtonName()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShotOnFailure -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.filta.qa.operations_test.OperationCycle_TestCase@3dd3bcd]" name="afterMethod" is-config="true" duration-ms="2690" started-at="2020-02-07T10:45:24Z" finished-at="2020-02-07T10:45:26Z">
+        <test-method status="PASS" signature="buttonBackGroundWithoutMouseOverview()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="buttonBackGroundWithoutMouseOverview" duration-ms="2128" started-at="2020-02-07T13:57:13Z" depends-on-methods="com.filta.qa.home_franchisee_test.UserPage_TestCase.checkButtonName" finished-at="2020-02-07T13:57:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.filta.qa.operations_test.OperationCycle_TestCase -->
+        </test-method> <!-- buttonBackGroundWithoutMouseOverview -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2020-02-07T13:57:15Z" finished-at="2020-02-07T13:57:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buttonBackGroundWithoutMouseOverview status=SUCCESS method=UserPage_TestCase.buttonBackGroundWithoutMouseOverview()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="buttonBackGroundWithMouseOverview()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="buttonBackGroundWithMouseOverview" duration-ms="3562" started-at="2020-02-07T13:57:15Z" depends-on-methods="com.filta.qa.home_franchisee_test.UserPage_TestCase.buttonBackGroundWithoutMouseOverview" finished-at="2020-02-07T13:57:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buttonBackGroundWithMouseOverview -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2020-02-07T13:57:19Z" finished-at="2020-02-07T13:57:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buttonBackGroundWithMouseOverview status=SUCCESS method=UserPage_TestCase.buttonBackGroundWithMouseOverview()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="buttonToolTipCheck()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="buttonToolTipCheck" duration-ms="1855" started-at="2020-02-07T13:57:19Z" depends-on-methods="com.filta.qa.home_franchisee_test.UserPage_TestCase.buttonBackGroundWithMouseOverview" finished-at="2020-02-07T13:57:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buttonToolTipCheck -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="takeScreenShotOnFailure" is-config="true" duration-ms="1" started-at="2020-02-07T13:57:21Z" finished-at="2020-02-07T13:57:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=buttonToolTipCheck status=SUCCESS method=UserPage_TestCase.buttonToolTipCheck()[pri:1, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="tabnamesCheck()[pri:2, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="tabnamesCheck" duration-ms="1976" started-at="2020-02-07T13:57:21Z" finished-at="2020-02-07T13:57:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tabnamesCheck -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="takeScreenShotOnFailure" is-config="true" duration-ms="0" started-at="2020-02-07T13:57:23Z" finished-at="2020-02-07T13:57:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tabnamesCheck status=SUCCESS method=UserPage_TestCase.tabnamesCheck()[pri:2, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="FAIL" signature="checkDataOfUserProfile()[pri:3, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="checkDataOfUserProfile" duration-ms="3337" started-at="2020-02-07T13:57:23Z" finished-at="2020-02-07T13:57:26Z">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[Cannot get a STRING value from a NUMERIC cell]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: Cannot get a STRING value from a NUMERIC cell
+	at org.apache.poi.xssf.usermodel.XSSFCell.typeMismatch(XSSFCell.java:1077)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getRichStringCellValue(XSSFCell.java:395)
+	at org.apache.poi.xssf.usermodel.XSSFCell.getStringCellValue(XSSFCell.java:347)
+	at com.filta.qa.util.ReadExcelData.getCellData(ReadExcelData.java:85)
+	at com.filta.qa.home_page_franchisee.UserPage.getDataFromEditPageUserProfile(UserPage.java:1128)
+	at com.filta.qa.home_franchisee_test.UserPage_TestCase.checkDataOfUserProfile(UserPage_TestCase.java:129)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDataOfUserProfile -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="takeScreenShotOnFailure" is-config="true" duration-ms="332" started-at="2020-02-07T13:57:26Z" finished-at="2020-02-07T13:57:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkDataOfUserProfile status=FAILURE method=UserPage_TestCase.checkDataOfUserProfile()[pri:3, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="FAIL" signature="checkPasswordPageOnEdit()[pri:4, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="checkPasswordPageOnEdit" duration-ms="50056" started-at="2020-02-07T13:57:26Z" finished-at="2020-02-07T13:58:16Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":".//input[@id='edit_button']"}
+  (Session info: chrome=80.0.3987.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QA020', ip: '192.168.1.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.87, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\kunal\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51631}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 1e3bef6b9e59a6f4759645fa33b17186
+*** Element info: {Using=xpath, value=.//input[@id='edit_button']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//input[@id='edit_button']"}
+  (Session info: chrome=80.0.3987.87)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QA020', ip: '192.168.1.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.87, chrome: {chromedriverVersion: 80.0.3987.16 (320f6526c1632..., userDataDir: C:\Users\kunal\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51631}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore}
+Session ID: 1e3bef6b9e59a6f4759645fa33b17186
+*** Element info: {Using=xpath, value=.//input[@id='edit_button']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.filta.qa.home_page_franchisee.UserPage.checkPasswordPage(UserPage.java:1191)
+	at com.filta.qa.home_franchisee_test.UserPage_TestCase.checkPasswordPageOnEdit(UserPage_TestCase.java:139)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkPasswordPageOnEdit -->
+        <test-method status="PASS" signature="takeScreenShotOnFailure(org.testng.ITestResult)[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="takeScreenShotOnFailure" is-config="true" duration-ms="383" started-at="2020-02-07T13:58:16Z" finished-at="2020-02-07T13:58:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkPasswordPageOnEdit status=FAILURE method=UserPage_TestCase.checkPasswordPageOnEdit()[pri:4, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenShotOnFailure -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.filta.qa.home_franchisee_test.UserPage_TestCase@97e1986]" name="afterClass" is-config="true" duration-ms="3386" started-at="2020-02-07T13:58:17Z" finished-at="2020-02-07T13:58:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.filta.qa.home_franchisee_test.UserPage_TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

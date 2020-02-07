@@ -8672,4 +8672,31 @@
  2020-02-07 10:44:51,823  INFO [main] Operations Cycle Test Cases:81 - Create One Job From Scheduled Job Calendar
  2020-02-07 10:45:02,694  INFO [main] Operations Cycle Test Cases:90 - Check Scheduled Jobs
  2020-02-07 10:45:24,054  INFO [main] Operations Cycle Test Cases:136 - Operations Sub Module Test Case Ends Here
+ 2020-02-07 13:51:07,984  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2020-02-07 13:51:12,660  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2020-02-07 13:51:15,490  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2020-02-07 13:51:17,761  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Coluor With Mouse Overview On User Page
+ 2020-02-07 13:51:21,270  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2020-02-07 13:51:23,172  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2020-02-07 13:51:25,025  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2020-02-07 13:51:28,447  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2020-02-07 13:52:18,783  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2020-02-07 13:54:11,014  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2020-02-07 13:54:15,140  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2020-02-07 13:54:17,861  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2020-02-07 13:54:20,087  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Coluor With Mouse Overview On User Page
+ 2020-02-07 13:54:23,619  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2020-02-07 13:54:25,621  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2020-02-07 13:54:27,505  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2020-02-07 13:54:31,011  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2020-02-07 13:55:21,395  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
+ 2020-02-07 13:57:06,467  INFO [main] User Page Test Case:73 - Check URL Of User Page
+ 2020-02-07 13:57:10,850  INFO [main] User Page Test Case:82 - Test Case 1: Check Button Name On User Page
+ 2020-02-07 13:57:13,510  INFO [main] User Page Test Case:91 - Test Case 2: Check Button Color Without Mouse Overview On User Page
+ 2020-02-07 13:57:15,639  INFO [main] User Page Test Case:100 - Test Case 3: Check Button Coluor With Mouse Overview On User Page
+ 2020-02-07 13:57:19,204  INFO [main] User Page Test Case:109 - Test Case 4: Check Button ToolTip On User Page
+ 2020-02-07 13:57:21,060  INFO [main] User Page Test Case:118 - Test Case 5: Check Tab Name On User Page
+ 2020-02-07 13:57:23,037  INFO [main] User Page Test Case:127 - Test Case 6: Check Data On User Page
+ 2020-02-07 13:57:26,709  INFO [main] User Page Test Case:137 - Test Case 7: Check Password Field On Edit Page
+ 2020-02-07 13:58:17,149  INFO [main] User Page Test Case:203 - User Page Test Case Ends Here
  

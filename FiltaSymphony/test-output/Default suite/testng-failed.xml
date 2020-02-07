@@ -3,7 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.filta.qa.operations_test.OperationCycle_TestCase"/>
+      <class name="com.filta.qa.home_franchisee_test.UserPage_TestCase"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.filta.qa.home_franchisee_test.UserPage_TestCase">
+        <methods>
+          <include name="takeScreenShotOnFailure"/>
+          <include name="afterClass"/>
+          <include name="checkPasswordPageOnEdit"/>
+          <include name="checkDataOfUserProfile"/>
+          <include name="property"/>
+        </methods>
+      </class> <!-- com.filta.qa.home_franchisee_test.UserPage_TestCase -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
